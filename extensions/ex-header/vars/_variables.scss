@@ -1,0 +1,115 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+$header-navbar-button-width: 85px !default;
+$header-navbar-text-color: $grey-900 !default;
+$header-navbar-links-padding : 15px !default;
+$header-navbar-lang-switch-color: $header-navbar-text-color !default;
+$header-navbar-lang-switch-hover-color: $primary-color !default;
+$header-navbar-background-color: $white-color !default;
+$header-navbar-buttons-number : 1 !default;
+$header-search-icon-color: $header-navbar-text-color !default;
+$header-search-icon-sidemenu-color: $grey-900 !default;
+$header-search-dismiss-icon-color: $grey-900 !default;
+$header-search-icon-scrolled-color: $grey-900 !default;
+$header-search-icon-background: transparent !default;
+$header-search-icon-hover-color: $grey-900!default;
+$header-search-icon-focus-color: $grey-900!default;
+$header-search-icon-scrolled-hover-color: $grey-900 !default;
+$header-search-icon-scrolled-focus-color: $grey-900 !default;
+$header-sidebar-background: $white-color !default;
+$header-sidebar-links-color: $grey-900!default;
+$header-sidebar-links-hover-color: $primary-color !default;
+$header-sidebar-links-font-weight:700 !default;
+$header-sidebar-links-children-font-weight:400 !default;
+$header-sidebar-header-color: $grey-900!default;
+$header-sidebar-link-border: $grey-100 !default;
+$header-sidebar-box-shadow: $grey-900!default;
+$header-sidebar-header-background: transparent !default;
+$header-overlay-color: $grey-900!default;
+$header-small-lang-switch-color: $white-color !default;
+$header-small-lang-switch-hover-color: $grey-900 !default;
+$header-logo-seprator-boder-color: $grey-300 !default;
+$header-search-seprator-boder-color: $grey-200 !default;
+$header-side-menu-nav-background: transparent !default;
+$header-side-menu-nav-color: $grey-900!default;
+$header-side-menu-nav-hover-background: $grey-100 !default;
+$header-side-menu-nav-hover-color: $grey-900!default;
+$header-search-icon-hover-background: $grey-100 !default;
+$header-search-box-input-color:$grey-100;
+$header-search-box-input-font-weight: 700 !default;
+$header-small-lang-switch-background: $primary-color !default;
+$header-header-height: 110px !default;
+$header-logo-height: 55px !default;
+$header-sidemenu-width: 375px !default;
+$header-logo-seprator-boder-width: 1px !default;
+$header-search-seprator-border-width: 1px !default;
+$header-logo-menu-height: 100% !default;
+$header-upper-navigation-menu-height: 100% !default;
+$header-upper-navigation-menu-font-size: 14px !default;
+$header-upper-navigation-menu-font-weight: bold !default;
+$header-search-icon-font-size: 25px !default;
+$header-icon-height: 100% !default;
+$header-icon-width: 85px !default;
+$header-icon-small-width: 50px !default;
+$header-header-navigation-marker-height: 5px !default;
+$header-header-navigation-marker-bg: $primary-color !default;
+$header-header-border : 1px solid $grey-200 !default; 
+$header-lang-switch-ar-font: $font_ar !default;
+$header-lang-switch-en-font: $font_en !default;
+$header-sidemenu-x-padding : 30px !default;
+$header-transition-time:0.8s !default;
+
+$header-scrolled-navbar-text-color:$grey-900 !default;
+$header-scrolled-navbar-background-color:$white-color !default;
+$header-scrolled-header-height:90px !default;
+$header-scrolled-border-color:$grey-100 !default;
+$header-scrolled-logo-menu-height:$header-logo-menu-height !default;
+$header-scrolled-logo-height:$header-logo-height !default;
+$header-scrolled-lnavbar-text-color:$grey-900 !default;
+
+$header-navbar-buttons-sm-number: 1 !default;
+$header-settings-wrp-width: 280px !default;
+$header-settings-wrp-bg-color: $white-color !default;
+$header-settings-close-btn-size: 14px !default;
+$header-settings-label-color: $grey-700  !default;
+$header-settings-btn-color : $grey-900 !default;
+$header-settings-btn-border : 2px solid $grey-900 !default;
+$header-settings-btn-height : 28px !default;
+$header-settings-header-color: $grey-900 !default;
+$header-settings-close-btn-color : $grey-900!default;
+$header-settings-btn-active-bg: $grey-900 !default;
+$header-settings-btn-active-color: $white-color !default;
+$header-settings-icon-size: 24px !default;
+$header-settings-overlay-bg: color-opacity(#000 , 0.5);
+$header-settings-disclaimer-color: $grey-700 !default;
+
+$header-announcement-height : 105 !default;
+
+
+// language switcher 
+$header-switcher-color : $white-color !default;
+$header-switcher-bg : transparent !default;
+$header-switcher-border-color: $header-switcher-color !default;
+$header-switcher-border-width : 1px !default;
+$header-switcher-height : 30px !default;
+$header-switcher-min-width : 130px !default;
+$header-switcher-ml : 25px !default;
+$header-switcher-links-color : $header-switcher-color !default;
+$header-switcher-links-padding-right : 30px !default;
+$header-switcher-links-padding-left : 15px  !default;
+$header-switcher-dropdown-bg : $white-color !default;
+$header-switcher-dropdown-item-hover-bg : $grey-100 !default;
+$header-switcher-dropdown-item-color: $grey-900 !default;
+$header-switcher-dropdown-item-padding : 10px !default;
+
+$header-switcher-dark-color : $grey-900 !default;
+$header-switcher-dark-bg : transparent !default;
+$header-switcher-border-dark-color: $header-switcher-dark-color !default;
+$header-switcher-dropdown-dark-bg : $grey-200 !default;
+$header-switcher-dropdown-item-hover-dark-bg : $grey-100 !default;
+$header-switcher-links-dark-color : $header-switcher-dark-color !default;
+$header-switcher-dropdown-item-dark-color: $grey-900 !default;

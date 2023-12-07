@@ -1,0 +1,283 @@
+/***************************************************************************************************
+Extension Name: ex-history-timeline 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-history-timeline 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-history-timeline 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-history-timeline {
+  position: relative;
+}
+
+.ex-history-timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  left: 15px;
+  border-left: 1px dashed #FBB815;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-history-timeline:before {
+    display: none;
+  }
+}
+
+html[lang*='ar'] .ex-history-timeline:before,
+html[class*='translated-rtl'] .ex-history-timeline:before {
+  left: auto;
+  right: 15px;
+}
+
+.ex-history-timeline__journey {
+  position: relative;
+}
+
+.ex-history-timeline__journey + .ex-history-timeline__journey a {
+  margin-top: 20px;
+}
+
+.ex-history-timeline__journey:last-child .ex-history-timeline__card-content:last-child:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  height: -webkit-calc(100% - 50px + 27px);
+  height: calc(100% - 50px + 27px);
+  z-index: 1;
+  background: #fff;
+  width: 5px;
+  left: 13px;
+}
+
+html[lang*='ar'] .ex-history-timeline__journey:last-child .ex-history-timeline__card-content:last-child:before,
+html[class*='translated-rtl'] .ex-history-timeline__journey:last-child .ex-history-timeline__card-content:last-child:before {
+  left: auto;
+  right: 13px;
+}
+
+.ex-history-timeline__year {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+  left: 0;
+  color: #000;
+  margin: 0;
+  padding: 14px 15px 14px 15px;
+  margin-bottom: 20px;
+  margin-left: -0.25rem;
+  background-color: #FB7415;
+  z-index: 2;
+}
+
+.scrolled .ex-history-timeline__year {
+  top: 120px;
+}
+
+.ex-history-timeline__year:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+html[lang*='ar'] .ex-history-timeline__year,
+html[class*='translated-rtl'] .ex-history-timeline__year {
+  margin-right: -0.25rem;
+  margin-left: 0;
+  left: auto;
+  right: 0;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-history-timeline__year {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.ex-history-timeline__card-content {
+  position: relative;
+  padding: 20px;
+  padding-right: 0;
+  min-height: 351px;
+}
+
+html[lang*='ar'] .ex-history-timeline__card-content,
+html[class*='translated-rtl'] .ex-history-timeline__card-content {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-history-timeline__card-content {
+    padding: 0;
+  }
+}
+
+.ex-history-timeline__card-content:after {
+  content: "";
+  width: 5px;
+  height: 30px;
+  background-color: #FB7415;
+  position: absolute;
+  left: 13px;
+  z-index: 2;
+}
+
+html[lang*='ar'] .ex-history-timeline__card-content:after,
+html[class*='translated-rtl'] .ex-history-timeline__card-content:after {
+  left: auto;
+  right: 13px;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-history-timeline__card-content:after {
+    display: none;
+  }
+}
+
+.ex-history-timeline__card-content h3,
+.ex-history-timeline__card-content p {
+  padding: 10px;
+}
+
+.ex-history-timeline__card-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 230px;
+  height: 100%;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-history-timeline__card-image {
+    width: 100%;
+  }
+}
+
+.ex-history-timeline__card__text-content {
+  background-color: #F5F5F7;
+  height: 100%;
+}
+
+.ex-history-timeline__nav {
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  -webkit-transition: top 0.4s ease;
+  transition: top 0.4s ease;
+  right: 0;
+  width: 100px;
+  list-style-type: none;
+}
+
+html[lang*='ar'] .ex-history-timeline__nav,
+html[class*='translated-rtl'] .ex-history-timeline__nav {
+  right: auto;
+  left: 0;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-history-timeline__nav {
+    display: none;
+  }
+}
+
+.ex-history-timeline__nav--hidden {
+  display: none;
+}
+
+.ex-history-timeline__nav a {
+  display: block;
+  width: 3px;
+  height: 3px;
+  padding: 3px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: #FB7415;
+  text-decoration: none;
+  background-color: #ffffff;
+}
+
+.ex-history-timeline__nav a.active {
+  border-radius: 50%;
+  background-color: #FB7415;
+  text-decoration: none;
+}
+
+.ex-history-timeline__nav a:after {
+  content: "";
+  position: relative;
+  pointer-events: none;
+  top: 8px;
+  bottom: 0;
+  left: 0px;
+  height: 19px;
+  display: inline-block;
+  width: 1px;
+  z-index: 0;
+  border-left: 1px dashed #FBB815;
+}
+
+html[lang*='ar'] .ex-history-timeline__nav a:after,
+html[class*='translated-rtl'] .ex-history-timeline__nav a:after {
+  right: 0px;
+  left: auto;
+}
+
+.ex-history-timeline__nav a:after:last-child {
+  display: none;
+}
+
+.ex-history-timeline__nav a:hover {
+  border-radius: 50%;
+  background-color: #FB7415;
+  text-decoration: none;
+}
+
+.ex-history-timeline__nav ul {
+  padding-left: 35%;
+}
+
+.ex-history-timeline__nav ul li {
+  padding: 10px;
+}
+
+.ex-history-timeline__nav ul li:last-child a::after {
+  display: none;
+}

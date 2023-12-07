@@ -1,0 +1,178 @@
+/***************************************************************************************************
+Extension Name: ex-polls 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-polls 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-polls 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-polls .question-title, .ex-polls__popup .question-title {
+  font-size: 26px;
+  font-weight: normal;
+  padding-bottom: 20px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #D6D6D6;
+  display: inline-block;
+}
+
+.ex-polls .question-title span, .ex-polls__popup .question-title span {
+  font-size: 36px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+html[lang*='ar'] .ex-polls .question-title span,
+html[class*='translated-rtl'] .ex-polls .question-title span, html[lang*='ar'] .ex-polls__popup .question-title span,
+html[class*='translated-rtl'] .ex-polls__popup .question-title span {
+  margin-right: 0px;
+  margin-left: 8px;
+}
+
+.ex-polls .progress-item, .ex-polls__popup .progress-item {
+  border-bottom: 1px solid #F5F5F7;
+}
+
+.ex-polls .progress-item .progress-bar, .ex-polls__popup .progress-item .progress-bar {
+  width: 0%;
+  border-radius: 0 25px 25px 0;
+  height: 52px;
+  overflow: visible;
+  background: transparent;
+}
+
+html[lang*='ar'] .ex-polls .progress-item .progress-bar,
+html[class*='translated-rtl'] .ex-polls .progress-item .progress-bar, html[lang*='ar'] .ex-polls__popup .progress-item .progress-bar,
+html[class*='translated-rtl'] .ex-polls__popup .progress-item .progress-bar {
+  border-radius: 25px 0 0 25px;
+}
+
+.ex-polls .progress-item .progress-bar h4, .ex-polls__popup .progress-item .progress-bar h4 {
+  font-size: 16px;
+  padding: 0 25px;
+  text-align: left;
+  min-width: 330px;
+}
+
+html[lang*='ar'] .ex-polls .progress-item .progress-bar h4,
+html[class*='translated-rtl'] .ex-polls .progress-item .progress-bar h4, html[lang*='ar'] .ex-polls__popup .progress-item .progress-bar h4,
+html[class*='translated-rtl'] .ex-polls__popup .progress-item .progress-bar h4 {
+  text-align: right;
+  right: 0;
+}
+
+.ex-polls .progress-item .progress-bar h4 span, .ex-polls__popup .progress-item .progress-bar h4 span {
+  font-size: 16px;
+  padding: 0 25px;
+  display: block;
+}
+
+.ex-polls .progress-item .progress-bar h4 strong, .ex-polls__popup .progress-item .progress-bar h4 strong {
+  font-size: 24px;
+}
+
+html[lang*='en'] .ex-polls .progress-item .progress-bar h4 strong,
+html[class*='translated-ltr'] .ex-polls .progress-item .progress-bar h4 strong, html[lang*='en'] .ex-polls__popup .progress-item .progress-bar h4 strong,
+html[class*='translated-ltr'] .ex-polls__popup .progress-item .progress-bar h4 strong {
+  padding-right: 40px;
+}
+
+html[lang*='ar'] .ex-polls .progress-item .progress-bar h4 strong,
+html[class*='translated-rtl'] .ex-polls .progress-item .progress-bar h4 strong, html[lang*='ar'] .ex-polls__popup .progress-item .progress-bar h4 strong,
+html[class*='translated-rtl'] .ex-polls__popup .progress-item .progress-bar h4 strong {
+  padding-left: 40px;
+}
+
+.ex-polls .progress-item .progress-bar--verygood, .ex-polls__popup .progress-item .progress-bar--verygood {
+  background-color: #86C083;
+  color: #000;
+}
+
+.ex-polls .progress-item .progress-bar--good, .ex-polls__popup .progress-item .progress-bar--good {
+  background-color: #e6ae74;
+  color: #000;
+}
+
+.ex-polls .progress-item .progress-bar--verybad, .ex-polls__popup .progress-item .progress-bar--verybad {
+  background-color: #FF5F60;
+  color: #000;
+}
+
+.ex-polls .polls-steps .steps,
+.ex-polls .polls-steps .actions, .ex-polls__popup .polls-steps .steps,
+.ex-polls__popup .polls-steps .actions {
+  display: none;
+}
+
+.ex-polls .message-block, .ex-polls__popup .message-block {
+  display: none;
+}
+
+.ex-polls .ex-sitecore-form__input label, .ex-polls__popup .ex-sitecore-form__input label {
+  opacity: 1;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+html[lang*='ar'] .ex-polls .ex-sitecore-form__input label,
+html[class*='translated-rtl'] .ex-polls .ex-sitecore-form__input label, html[lang*='ar'] .ex-polls__popup .ex-sitecore-form__input label,
+html[class*='translated-rtl'] .ex-polls__popup .ex-sitecore-form__input label {
+  letter-spacing: 0;
+}
+
+.ex-polls .polls-results .vote-wrap .icon-vote, .ex-polls__popup .polls-results .vote-wrap .icon-vote {
+  font-size: 50px;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-polls .polls-results .vote-wrap, .ex-polls__popup .polls-results .vote-wrap {
+    -webkit-box-pack: end !important;
+    -ms-flex-pack: end !important;
+    justify-content: flex-end !important;
+  }
+}
+
+.ex-polls__popup {
+  width: 950px;
+}
+
+.ex-polls__popup .fancybox-button:hover,
+.ex-polls__popup .fancybox-close-small:hover {
+  color: #000;
+}
+
+.ex-polls .button, .ex-polls a.button {
+  cursor: pointer;
+}

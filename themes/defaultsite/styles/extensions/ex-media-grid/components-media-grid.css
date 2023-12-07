@@ -1,0 +1,230 @@
+/***************************************************************************************************
+Extension Name: ex-media-grid 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-media-grid 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-media-grid 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-media-grid 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-media-grid__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-media-grid__header__title {
+    margin-bottom: 20px;
+  }
+}
+
+.ex-media-grid__header__filters {
+  height: 40px;
+  border: 1px solid #3F3E45;
+  overflow: hidden;
+  background: #3F3E45;
+}
+
+.ex-media-grid__header__filters .filter-button {
+  min-width: 50px;
+  outline: 0;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  background-color: transparent;
+  border-right: 1px solid rgba(0, 0, 0, 0.19);
+  color: #ffffff;
+}
+
+html[lang*='ar'] .ex-media-grid__header__filters .filter-button,
+html[class*='translated-rtl'] .ex-media-grid__header__filters .filter-button {
+  border-left: 1px solid rgba(0, 0, 0, 0.19);
+  border-right: none;
+}
+
+.ex-media-grid__header__filters .filter-button:last-child {
+  border: none;
+}
+
+html[lang*='ar'] .ex-media-grid__header__filters .filter-button:last-child,
+html[class*='translated-rtl'] .ex-media-grid__header__filters .filter-button:last-child {
+  border: none;
+}
+
+.ex-media-grid__header__filters .filter-button:hover {
+  outline: 0;
+  color: #ffffff;
+}
+
+.ex-media-grid__header__filters .filter-button:hover span, .ex-media-grid__header__filters .filter-button:hover i {
+  background-color: #FF8D00;
+}
+
+.ex-media-grid__header__filters .filter-button span, .ex-media-grid__header__filters .filter-button i {
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  margin: 3px 3px 3px 3px;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+.ex-media-grid__header__filters .filter-button--active {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.ex-media-grid__header__filters .filter-button--active span, .ex-media-grid__header__filters .filter-button--active i {
+  background: #FF8D00;
+}
+
+.ex-media-grid__body .media-grid-item {
+  background-color: #ffffff;
+  display: inline-block;
+  width: 33.33333%;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-media-grid__body .media-grid-item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-media-grid__body .media-grid-item {
+    width: 100%;
+  }
+}
+
+.ex-media-grid__body--w-gutter.ex-media-grid__body .media-grid-item {
+  margin: 0 0 1%;
+  width: 32.66667%;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-media-grid__body--w-gutter.ex-media-grid__body .media-grid-item {
+    width: 49.33333%;
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-media-grid__body--w-gutter.ex-media-grid__body .media-grid-item {
+    width: 100%;
+  }
+}
+
+.ex-media-grid__body .media-grid-item img {
+  width: 100%;
+}
+
+.high-contrast .ex-media-grid__body .media-grid-item img {
+  -webkit-filter: grayscale(1) invert(100%) !important;
+  filter: grayscale(1) invert(100%) !important;
+}
+
+.ex-media-grid__body .media-grid-item__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40px;
+  height: 50px;
+  font-size: 50px;
+  cursor: pointer;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.ex-media-grid__body .media-grid-item a {
+  color: #ffffff;
+}
+
+.ex-media-grid__body .media-grid-item:after {
+  content: "";
+  background: #000;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: block;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.ex-media-grid__body .media-grid-item:hover:hover, .ex-media-grid__body .media-grid-item:hover:focus, .ex-media-grid__body .media-grid-item:hover a:hover, .ex-media-grid__body .media-grid-item:hover a:focus, .ex-media-grid__body .media-grid-item:hover .ex-media-grid__body .media-grid-item__icon:hover, .ex-media-grid__body .media-grid-item:hover .ex-media-grid__body .media-grid-item__icon:focus {
+  color: #FF8D00;
+}
+
+.ex-media-grid__body .media-grid-item:hover:after {
+  display: none;
+}
+
+.ex-media-grid__body__gutter {
+  width: 0%;
+}
+
+.ex-media-grid__body--w-gutter .ex-media-grid__body__gutter {
+  width: 1%;
+}
+
+.ex-media-grid__message {
+  display: none;
+}
+
+.ex-media-grid--without-filter .ex-media-grid__header__filters {
+  display: none !important;
+}
+
+.ex-media-grid--without-header .ex-media-grid__header {
+  display: none !important;
+}
+
+.ex-media-grid__loadmore {
+  margin-bottom: 50px;
+}

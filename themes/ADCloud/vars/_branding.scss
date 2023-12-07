@@ -1,0 +1,159 @@
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// Palette colors 
+$primary-color: #0091C7 !default;
+$primary-color2: #45DDB4 !default;
+$primary-color3: #FAA317 !default;
+$primary-color4: #3F3E45 !default;
+$primary-color5: #454262 !default;
+
+$secondary-color: #FAA317 !default;
+$secondary-color2: #9C25B0 !default;
+$secondary-color3: #E92063 !default;
+$secondary-color4: #F44236 !default;
+$secondary-color5: #0091C7 !default;
+ 
+$ADGE-500: #FAA317 !default;
+$ADGE-300: #fcbf5d !default;
+$ADGE-900: #F67707 !default; 
+
+$grey-900: #3F3E45 !default;
+$grey-800: #6C6B70 !default;
+$grey-700: #89888C !default;
+$grey-600: #9F9FA2 !default;
+$grey-500: #b2b2b5 !default;
+$grey-400: #AFAFAF !default;
+$grey-300: #C4C4C4 !default;
+$grey-200: #D6D6D6 !default;
+$grey-100: #F5F5F7 !default;
+$grey-50: #FAFAFA !default;
+
+$black-color: #000 !default;
+$white-color: #ffffff !default;
+
+
+$danger-color: #FF5F60 !default;
+$danger-border: #FF6060 !default;
+$success-color: #86C083 !default;
+$success-border: #87C084 !default;
+$warning-color : #FDE3B9 !default;
+$warning-border : #FAA317 !default;
+
+
+
+
+// Globals 
+$layout-body-color : $grey-900 !default;
+$layout-border-radius : 3px !default;
+
+$body-bg: $white-color !default;
+$body-color: $layout-body-color !default;
+
+
+// Buttons 
+/* Primary */
+$layout-button-border-radius : $layout-border-radius !default;
+
+$layout-button-bg : $primary-color !default;
+$layout-button-color : $white-color !default;
+$layout-button-hover-bg: $primary-color3 !default;
+$layout-button-hover-color : $white-color !default;
+$layout-button-focus-bg: $primary-color2 !default;
+$layout-button-focus-color : $white-color !default;
+$layout-button-disabled-bg: $grey-200 !default;
+$layout-button-disabled-color : $white-color !default;
+
+/* Secondary */
+$layout-button-secondary-bg : transparent !default;
+$layout-button-secondary-border-color : $grey-900 !default;
+$layout-button-secondary-border-width : 2px !default;
+$layout-button-secondary-color : $grey-900 !default;
+$layout-button-secondary-hover-bg: $primary-color !default;
+$layout-button-secondary-hover-border-color: $primary-color !default;
+$layout-button-secondary-hover-color : $white-color !default;
+$layout-button-secondary-focus-bg: $black-color !default;
+$layout-button-secondary-focus-color : $white-color !default;
+$layout-button-secondary-focus-border-color : $white-color !default;
+$layout-button-secondary-disabled-border-color: $grey-200 !default;
+$layout-button-secondary-disabled-bg: transparent !default;
+$layout-button-secondary-disabled-color : $grey-500 !default;
+
+/* Inverted */
+$layout-button-inverted-bg : transparent !default;
+$layout-button-inverted-border-color : $primary-color4 !default;
+$layout-button-inverted-border-width : 1px !default;
+$layout-button-inverted-color : $primary-color4 !default;
+$layout-button-inverted-hover-bg: transparent !default;
+$layout-button-inverted-hover-color : $primary-color !default;
+$layout-button-inverted-hover-border-color : $primary-color !default;
+$layout-button-inverted-focus-bg: $black-color !default;
+$layout-button-inverted-focus-color : $white-color !default;
+$layout-button-inverted-disabled-border-color: $grey-200 !default;
+$layout-button-inverted-disabled-bg: transparent !default;
+$layout-button-inverted-disabled-color : $grey-500 !default;
+
+/* Teritary */
+$layout-button-tertiary-bg : $grey-800 !default;
+$layout-button-tertiary-color : $white-color !default;
+$layout-button-tertiary-hover-bg: $grey-500 !default;
+$layout-button-tertiary-hover-color : $primary-color4 !default;
+$layout-button-tertiary-focus-bg: $grey-900 !default;
+$layout-button-tertiary-focus-color : $white-color !default;
+$layout-button-tertiary-disabled-bg: $grey-200 !default;
+$layout-button-tertiary-disabled-color : $grey-500 !default;
+
+
+/* highlight */
+$layout-button-quaternary-bg : transparent !default;
+$layout-button-quaternary-border-color : $grey-900 !default;
+$layout-button-quaternary-border-width : 2px !default;
+$layout-button-quaternary-color : $grey-900 !default;
+$layout-button-quaternary-hover-bg: $primary-color4 !default;
+$layout-button-quaternary-hover-border-color: $primary-color4 !default;
+$layout-button-quaternary-hover-color : $white-color !default;
+$layout-button-quaternary-focus-bg: $black-color !default;
+$layout-button-quaternary-focus-color : $white-color !default;
+$layout-button-quaternary-focus-border-color : $white-color !default;
+$layout-button-quaternary-disabled-border-color: $grey-200 !default;
+$layout-button-quaternary-disabled-bg: transparent !default;
+$layout-button-quaternary-disabled-color : $grey-500 !default;
+$layout-button-quaternary-inverted-color : $primary-color4 !default;
+$layout-button-quaternary-border-radius : 3px !default;
+
+
+/* Label */
+$layout-label-default-color : $grey-700 !default;
+
+/* Links */
+$layout-link-default-color : $secondary-color5 !default;
+$layout-link-default-hover-color : $primary-color !default;
+$layout-link-default-focus-color : $primary-color !default;
+$layout-link-default-disabled-color : $grey-500 !default;
+
+/* Separators colors */
+$layout-hr-color :  $grey-200 !default;
+
+
+/* Section title */
+$layout-titleblock-primary-color : $primary-color !default;
+$layout-titleblock-secondary-color : $secondary-color !default;
+
+
+// Carousels 
+$layout-carousel-arrow-primary-color : transparent !default;
+$layout-carousel-arrow-font-primary-color : $black-color !default;
+$layout-carousel-arrow-bg-hover-color: $primary-color !default;
+$layout-carousel-arrow-font-hover-color : $black-color !default;
+$layout-carousel-border-color:$grey-200 !default;
+$layout-carousel-border-width:2px !default;
+$layout-carousel-hover-border-color:$primary-color !default;
+$layout-carousel-button-color: $grey-200 !default;
+
+
+// go to top
+$layout-gototop-bg-color : $primary-color !default;
+$layout-gototop-color : $white-color !default;
+

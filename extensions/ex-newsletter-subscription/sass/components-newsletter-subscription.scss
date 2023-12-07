@@ -1,0 +1,18 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    // Your code goes here
+    color: $news-letter-font-color;
+   &__container{
+       
+   }
+}

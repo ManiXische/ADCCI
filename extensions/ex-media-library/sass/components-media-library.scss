@@ -1,0 +1,113 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+
+  // Your code goes here
+  a {
+    color: $media-library-anchor-color;
+  }
+
+  &__container {
+    height: $media-library-container-height;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__desc {
+      bottom: $media-library-description-bottom-val;
+      background-color:  $media-library-description-bg;
+      color : $media-library-description-color ; 
+      width: $media-library-description-width;
+      padding: $media-library-description-padding;
+
+      @include ltr {
+        left: $media-library-description-pos;
+      }
+
+      @include rtl {
+        right: $media-library-description-pos;
+      }
+
+      .album-name {
+
+        // width: 60%;
+        p {
+          font-size: $media-library-album-name-fs;
+        }
+      }
+
+      .album-date {
+
+        //  width: 40%;
+        @include ltr {
+          margin-left: auto;
+        }
+
+        @include rtl {
+          margin-right: auto;
+        }
+
+        p {
+          font-size: $media-library-album-name-fs;
+        }
+
+      }
+    }
+
+    .icon {
+      background-color: $media-library-icon-color;
+      padding: $media-library-icon-padding;
+      border-radius: $media-library-icon-border-radius;
+
+      i {
+        font-size: $media-library-icon-fs;
+        color: $media-library-icon-bg;
+      }
+    }
+  }
+
+  &:hover {
+    .icon {
+      background-color: $media-library-icon-hover-color;
+    }
+  }
+}
+
+.#{$ProjectName}-feature-video {
+  &__img {
+    height: $media-library-featured-video-height;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .icon {
+      .fas {
+        font-size: $media-library-featured-video-icon-fs;
+        color: $media-library-featured-video-icon-color;
+      }
+    }
+
+  }
+
+  &__content {
+    background-color: $media-library-featured-video-icon-conent-bg;
+    height: $media-library-featured-video-icon-conent-height;
+    position: relative;
+
+    > p { 
+      overflow: hidden;
+      height: 100%;
+
+      &:hover{
+        
+      }
+    }
+  }
+}

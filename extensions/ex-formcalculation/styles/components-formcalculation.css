@@ -1,0 +1,78 @@
+/***************************************************************************************************
+Extension Name: ex-formcalculation 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-formcalculation 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-formcalculation 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+html[lang*='ar'] .ex-formcalculation *,
+html[class*='translated-rtl'] .ex-formcalculation * {
+  text-align: right;
+}
+
+.ex-formcalculation__image img {
+  height: auto;
+  width: 100%;
+}
+
+.ex-formcalculation__tip {
+  color: #ffffff;
+  background: #9F9FA2;
+}
+
+.ex-formcalculation__table__active {
+  font-weight: bold;
+  background: #D6D6D6;
+}
+
+.ex-formcalculation__table__head {
+  background: #F5F5F7;
+}
+
+.ex-formcalculation__calculate {
+  background: #FF8D00;
+  color: #2B2849;
+  min-width: auto;
+  font-size: 16px;
+}
+
+.ex-formcalculation table {
+  line-height: 30px;
+}
+
+.ex-formcalculation .button {
+  border-width: 2px;
+}

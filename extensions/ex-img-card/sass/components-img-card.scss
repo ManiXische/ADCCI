@@ -1,0 +1,226 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+.#{$ProjectName} {
+    overflow: hidden;
+    height: $img-card-img-height;
+
+    &--small{
+        height: $img-card-img-small-height;
+    }
+    &--shadow{
+        box-shadow: $img-card-box-shadow;
+    }
+    &__container {
+        $container: &;
+        height: $img-card-height;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &__content {
+            @include transition(all $img-card-container-after-hover-transition ease);
+            width: $img-card-container-after-hover-width;
+
+            @include ltr {
+                left: $img-card-container-content-align;
+            }
+
+            @include rtl {
+                right: $img-card-container-content-align;
+            }
+
+            bottom: $img-card-container-content-bottom;
+            height:$img-card-text-cont-height;
+            background: $img-text-cont-bg;
+            &:before {
+                content: '';
+                background: $img-card-strip-color;
+                width: $img-card-strip-width;
+                position: absolute;
+                top: $img-card-strip-top;
+
+                @include ltr {
+                    left: $img-card-container-align;
+                }
+
+                @include rtl {
+                    right: $img-card-container-align;
+                    left: $img-card-container-content-before-left-rtl;
+                }
+
+                height: $img-card-strip-height;
+            }
+
+            .imgcard-title {
+                @include transition(all $img-card-container-after-hover-transition ease);
+                margin-top: $img-card-container-padding;
+                margin-bottom: $img-card-container-padding;
+                
+                // overflow: hidden;
+                // display: -webkit-box;
+                // -webkit-box-orient: vertical;
+                // -webkit-line-clamp: 1;
+                // height: $img-card-header-height;
+
+                @include ltr {
+                    padding-left: calc(13% + #{$img-card-container-padding * 2});
+                    padding-right:$img-card-container-padding;
+                }
+
+                @include rtl {
+                    padding-right: calc(13% + #{$img-card-container-padding * 2});
+                    padding-left:$img-card-container-padding;
+                }
+            }
+
+            .imgcard-description {
+                @include transition(all $img-card-container-after-hover-transition ease);
+                margin: $img-card-container-margin;
+                display: none;
+            }
+
+            .imgcard-link {
+                @include transition(all $img-card-container-after-hover-transition ease);
+                padding: $img-card-container-image-icon-padding calc(13% + #{$img-card-container-padding * 2});
+                color: $img-card-icon-color;
+
+                i {
+                    @include ltr {
+                        padding-right: $img-card-icon-padding;
+                    }
+
+                    @include rtl {
+                        padding-right: $img-card-icon-padding;
+                        transform: $img-card-scale;
+                    }
+                }
+
+                span {
+                    font-size: $img-card-read-mor-fs;
+                    line-height: calc(#{$img-card-read-mor-fs} + 2px);
+                    text-transform: uppercase;
+                }
+            }
+
+            &--border-radius {
+                @include ltr{
+                    border-radius: $img-card-container-add-border-radius 0px 0px 0px;
+                }
+                @include rtl {
+                    border-radius: $img-card-container-add-border-radius 0px 0px 0px;
+                }
+                
+            }
+          
+            &--switch {
+                @include ltr {
+                    right: $img-card-container-content-align;
+                    left: auto;
+                }
+
+                @include rtl {
+                    left: $img-card-container-content-align;
+                    right: auto;
+                }
+
+                .imgcard-title {
+                    @include ltr {
+                        padding-left: $img-card-container-reset-img-card-title-padding;
+                    }
+
+                    @include rtl {
+                        padding-right: $img-card-container-reset-img-card-title-padding;
+                    }
+                }
+
+                .imgcard-link {
+                    @include ltr {
+                        padding-left: $img-card-container-reset-img-card-title-padding;
+                    }
+
+                    @include rtl {
+                        padding-right: $img-card-container-reset-img-card-title-padding;
+                    }
+                }
+
+                &:before {
+                    @include ltr {
+                        right: $img-card-container-align;
+                        left: auto;
+                    }
+
+                    @include rtl {
+                        left: $img-card-container-align;
+                        right: $img-card-container-content-before-left-rtl;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: $img-card-box-shadow;
+    }
+
+    &:hover & {
+
+        &__container {
+            &__content {
+                bottom: $img-card-container-content-bottom;
+                overflow: hidden;
+                height: $img-card-container-after-hover-height;
+                border-radius: $img-card-container-add-border-radius-after-hover;
+                margin: auto;
+                @include ltr {
+                    left: $img-card-container-after-hover-aligmnet;
+
+                }
+
+                @include rtl {
+                    right: $img-card-container-after-hover-aligmnet;
+
+                }
+
+                .imgcard-title {
+                    @include ltr {
+                        padding-left: $img-card-container-padding;
+                    }
+
+                    @include rtl {
+                        padding-right: $img-card-container-padding;
+                    }
+
+                    display: block;
+                    -webkit-box-orient: vertical;
+                    height: auto;
+                    -webkit-line-clamp: 5;
+                }
+
+                .imgcard-description {
+                    display: block;
+                    display: -webkit-box;
+                }
+
+                .imgcard-link {
+                    @include ltr {
+                        padding-left: $img-card-container-padding;
+                    }
+
+                    @include rtl {
+                        
+                        padding-right: $img-card-container-padding;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

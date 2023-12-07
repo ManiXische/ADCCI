@@ -1,0 +1,504 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: Buttons
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+.button,
+a.button {
+  & , > .component-content{
+    $btn : &;
+
+    border-radius: $layout-button-border-radius;
+
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    height: $layout-button-height;
+    font-size: $layout-button-fontsize;
+    font-weight: $layout-button-fontweight;
+    min-width: $layout-button-minwidth;
+    @media #{$sm}{
+      width:100%
+    }
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: $layout-button-padding;
+
+    background-color: $layout-button-bg;
+
+    [class*="icon-"] { 
+      @include rtl {
+        margin-right: 10px;
+      }
+      @include ltr{
+        margin-left: 10px;
+      }
+    }
+
+    & , a , input {
+      color: $layout-button-color;
+      &:hover{
+        & , [class*=" icon-"]{
+          color: $layout-button-color;
+        }
+      }
+    }
+    &:hover {
+      & , a , input , [class*=" icon-"]{
+        color : $layout-button-hover-color;
+      }
+      background: $layout-button-hover-bg;
+    }
+
+    a {
+      &:focus {
+        color : $layout-button-focus-color;
+      }
+    }
+    &:focus{
+      & , a , input , [class*=" icon-"]{
+        color : $layout-button-focus-color;
+      }
+      background: $layout-button-focus-bg;
+    }
+
+    // Modifiers 
+    &--icononly {
+        >span {
+          display: none !important;
+        }
+    }
+
+    &--withouticon {
+      >i {
+        display: none !important;
+      }
+    }
+
+    &--sharp {
+      border-radius: 0;
+    }
+
+    &--uppercase {
+      text-transform: uppercase;
+    }
+
+
+    &--reverse {
+      background-color: $layout-button-reverse-bg;
+
+      &:hover {
+        background: $layout-button-reverse-hover-bg;
+      }
+    }
+
+    &--invert {
+      border-width: 1px;
+      border-style: solid;
+      background-color: $layout-button-invert-bg;
+      color: $layout-button-invert-color;
+      border-color: $layout-button-invert-border-color;
+
+      &:hover {
+        background: $layout-button-invert-hover-bg;
+        color: $layout-button-invert-hover-color;
+        border-color: $layout-button-invert-hover-border-color;
+      }
+
+
+      &--reverse {
+        color: $layout-button-invert-reverse-color;
+        border-color: $layout-button-invert-reverse-border-color;
+
+        &:hover {
+          color: $layout-button-invert-reverse-hover-color;
+          border-color: $layout-button-invert-reverse-border-hover-border-color;
+        }
+      }
+      &--white-bg {
+        background-color: #fff;
+      }
+      &--white {
+        color: #fff;
+        border-color: #fff;
+
+        &:hover {
+          color: $layout-button-invert-white-hover-color;
+          border-color: $layout-button-invert-white-hover-border-color;
+        }
+      }
+    }
+
+    &--normal{
+      &, &:hover{
+        background-color: $layout-button-normal-bg-color;
+        color: $layout-button-normal-text-color;
+        border: $layout-button-normal-border;
+      }
+    }
+
+    &--borderless{
+      border: none;
+      font-size: $layout-button-border-less-fs;
+      text-transform: uppercase;
+      //color: $layout-button-border-less-color;
+      border: none;
+    }
+    &--reset{
+      background: transparent;
+      border: none;
+      color: inherit;
+    }
+    &--hoverline{
+      &:hover{
+        &:after{
+          content: '';
+          width:$layout-button-border-hover-width;
+          height: $layout-button-border-hover-height;
+          background: $layout-button-border-hover-color;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+
+    &--large {
+      $btnlarge : &;
+      min-width: 200px;
+
+      // this fix from QCC
+      @media #{$md}{
+        #{$btnlarge}{
+          &--xs{
+            width: 200px;
+          }
+        }
+      }
+    }
+         
+
+    &--sitecore {
+      a{
+        color: inherit;
+        // padding: $layout-button-padding;
+        padding-right: 13px;
+        @include rtl{
+          padding-left: 13px;
+          padding-right: 0;
+        }
+
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+        text-transform: inherit;
+        background: transparent;
+
+        &:hover{
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+      &__icon{
+        right: 10px;
+        top: calc(50% - 8px);
+        pointer-events: none;
+        font-size: 13px;
+
+        @include rtl {
+          right: auto;
+          left: 10px;
+        }
+
+      }
+
+      &.justify-content{
+        &-start{
+          a { 
+            justify-content: flex-start;
+          }
+        }
+        &-end{
+          a { 
+            justify-content: flex-end;
+          }
+        }
+        &-center{
+          a { 
+            justify-content: center;
+          }
+        }
+        &-between{
+          a { 
+            justify-content: space-between;
+          }
+        }
+      }
+      &.align-items{
+        &-start{
+          a { 
+            align-items: flex-start;
+          }
+        }
+        &-end{
+          a { 
+            align-items: flex-end;
+          }
+        }
+        &-center{
+          a { 
+            align-items: center;
+          }
+        }
+      }
+
+      &.font-weight-bold{
+        a {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &--white {
+      background-color: $layout-button-white-bg;
+      color: $layout-button-white-color;
+
+      &:hover {
+        color: $layout-button-white-hover-color;
+        background: $layout-button-white-hover-bg;
+      }
+    }
+
+    &__loadingicon {
+      display: none;
+    }
+
+    &--loader{
+      #{$btn}{
+        &__loadingicon {
+          display: inline-block;
+        }
+      }
+    }
+
+    &--reset-height{
+      height: auto;
+      min-height: auto;
+    }
+
+    &--disabled  , &:disabled{
+      pointer-events: none;
+      cursor: pointer;
+      color: $layout-button-disabled-color;
+      background: $layout-button-disabled-bg;
+    }
+    &--sign{
+       &, &:hover{
+      background-color: $layout-button-sign-bg-color;
+      span {
+        color: $layout-button-sign-txt-color;
+        font-size: $layout-button-sign-txt-size;
+    }
+   
+    .circle{
+      padding: $layout-button-sign-circle-padding;
+      background: $layout-button-sign-circle-color;
+      border-radius: $layout-button-sign-circle-brdr-rdis;
+    }
+      i {
+        color: $layout-button-sign-icon-color;
+      }
+    }
+    }
+
+    &--direction{
+        border: $layout-button-direction-border;
+        font-size: $layout-button-direction-font-sie;
+    }
+
+
+    // new modifiers 
+    &--secondary {  
+      & , & > .component-content{
+      background-color: $layout-button-secondary-bg;
+      border: $layout-button-secondary-border-width solid $layout-button-secondary-border-color;
+      border-radius:  $layout-button-border-radius;
+  
+      & , a , input, [class*=" icon-"] {
+        color: $layout-button-secondary-color;
+        &:hover{
+            color: $layout-button-inverted-color;
+        }
+        &:focus{
+          color: $layout-button-secondary-color;
+        }
+      }
+      &:hover {
+        & , a , input, [class*=" icon-"]{
+          color : $layout-button-secondary-hover-color;
+        }
+        border-color: $layout-button-secondary-hover-border-color;
+        background: $layout-button-secondary-hover-bg;
+      }
+  
+      &:focus{
+        & , a , input, [class*=" icon-"]{
+          color : $layout-button-secondary-focus-color;
+        }
+        border-color:$layout-button-secondary-focus-border-color;
+        background: $layout-button-secondary-focus-bg;
+      }
+      &.button--disabled , &:disabled {
+        border-color: $layout-button-secondary-disabled-border-color;
+        background: $layout-button-secondary-disabled-bg;
+        & , a , input, [class*=" icon-"] {
+          color : $layout-button-secondary-disabled-color ; 
+        }
+      }
+    
+      }
+    }
+
+    &--tertiary{  
+      & , & > .component-content{
+      background-color: $layout-button-tertiary-bg;
+      color: $layout-button-tertiary-color;
+      & , a , input, [class*=" icon-"] {
+        color: $layout-button-tertiary-color;
+        &:hover{
+          color: $layout-button-inverted-color;
+        }
+      }
+      &:hover {
+        & , a , input, [class*=" icon-"]{
+          color : $layout-button-tertiary-hover-color;
+        }
+        background: $layout-button-tertiary-hover-bg;
+      }
+  
+      &:focus{
+        & , a , input, [class*=" icon-"]{
+          color : $layout-button-tertiary-focus-color;
+        }
+        background: $layout-button-tertiary-focus-bg;
+      }
+      &.button--disabled , &:disabled{
+        background: $layout-button-tertiary-disabled-bg;
+        & , a , input, [class*=" icon-"]{
+          color : $layout-button-tertiary-disabled-color ;
+        }
+      }
+    }
+    }
+
+    &--quaternary {  
+      & , & > .component-content{
+      background-color: $layout-button-quaternary-bg;
+      border: $layout-button-quaternary-border-width solid $layout-button-quaternary-border-color;
+      border-radius: $layout-button-quaternary-border-radius;
+  
+      & , a , input, [class*=" icon-"] {
+        color: $layout-button-quaternary-color;
+        &:hover{
+            color: $layout-button-quaternary-inverted-color;
+        }
+        &:focus{
+          color: $layout-button-quaternary-color;
+        }
+      }
+      &:hover {
+        & , a , input, [class*=" icon-"]{
+          color : $layout-button-quaternary-hover-color;
+        }
+        border-color: $layout-button-quaternary-hover-border-color;
+        background: $layout-button-quaternary-hover-bg;
+      }
+  
+      &:focus{
+        & , a , input, [class*=" icon-"]{
+          color : $layout-button-quaternary-focus-color;
+        }
+        border-color:$layout-button-quaternary-focus-border-color;
+        background: $layout-button-quaternary-focus-bg;
+      }
+      &.button--disabled , &:disabled {
+        border-color: $layout-button-quaternary-disabled-border-color;
+        background: $layout-button-quaternary-disabled-bg;
+        & , a , input, [class*=" icon-"] {
+          color : $layout-button-quaternary-disabled-color ; 
+        }
+      }
+    
+      }
+    }
+
+    &--medium {  
+      & , & > .component-content{
+      height: $layout-button-medium-height;
+    }
+   }
+    &--small {  
+      & , & > .component-content{
+      height: $layout-button-small-height;
+      font-size: $layout-button-small-fontsize;
+      padding: $layout-button-small-padding;
+      width : auto;
+      min-width: auto;
+
+      i {
+        &:first-child{
+          @include ltr{
+            margin-right:$layout-button-small-icon-padding;
+          }
+          @include rtl{
+            margin-left: $layout-button-small-icon-padding;
+          }
+        }
+        &:last-child{
+          @include ltr{
+            margin-left: $layout-button-small-icon-padding;
+          }
+          @include rtl{
+            margin-right: $layout-button-small-icon-padding;
+          }
+        }
+      }
+    }}
+
+    &--inverted{  
+      & , & > .component-content{
+      background-color: $layout-button-inverted-bg;
+      border:$layout-button-inverted-border-width solid $layout-button-inverted-border-color;
+      border-radius:  $layout-button-border-radius;
+      & , a , input, [class*=" icon-"]{
+        color: $layout-button-inverted-color;
+        &:hover{
+          color: $layout-button-inverted-color;
+        }
+      }
+      &:hover , &:focus{
+        & , a , input, [class*=" icon-"]{
+          color : $layout-button-inverted-hover-color;
+        }
+        border-color: $layout-button-inverted-hover-border-color;
+        background: $layout-button-inverted-hover-bg;
+      }
+      
+      &.button--disabled , &:disabled {
+        border-color: $layout-button-inverted-disabled-border-color;
+        background: $layout-button-inverted-disabled-bg;
+        & , a , input, [class*=" icon-"]{
+          color : $layout-button-inverted-disabled-color ;
+        }
+      }
+    }
+
+}
+}
+}

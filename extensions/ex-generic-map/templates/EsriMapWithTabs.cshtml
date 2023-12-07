@@ -1,0 +1,84 @@
+﻿@using Sitecore.Data.Items;
+@using System;
+@using Newtonsoft.Json;
+@using Sitecore.Diagnostics;
+@{
+    Sitecore.Data.Items.Item datasourceitem = null;
+    var DataSourcelist = new List<Dictionary<string, object>>();
+    try
+    {
+        var renderingcontext = Sitecore.Mvc.Presentation.RenderingContext.CurrentOrNull;
+        if (renderingcontext!=null)
+        {
+            var datasource = renderingcontext.Rendering.DataSource;
+            datasourceitem = Sitecore.Context.Database.GetItem(datasource);
+            if (datasourceitem!=null)
+            {
+                foreach (Item item in datasourceitem.Children)
+                {
+                    if (item!=null)
+                    {
+                        var Title = item.Fields["Title"].Value;
+                        var Basemap = item.Fields["Basemap"].Value;
+                        var CenterLat = !string.IsNullOrEmpty(item.Fields["CenterLat"].Value) ? Convert.ToDouble(item.Fields["CenterLat"].Value.ToString()) : 0;
+                        var CenterLong = !string.IsNullOrEmpty(item.Fields["CenterLong"].Value) ? Convert.ToDouble(item.Fields["CenterLong"].Value.ToString()) : 0;
+                        var Scale = !string.IsNullOrEmpty(item.Fields["Scale"].Value) ? Convert.ToInt32(item.Fields["Scale"].Value.ToString()) : 0;
+                        var LayerUrl = item.Fields["LayerUrl"].Value;
+                        var SubLayerIds = item.Fields["SubLayerIds"].Value;
+                        DataSourcelist.Add(new Dictionary<string, object> { {"Title",Title}, { "Basemap", Basemap},
+                        { "CenterLat", CenterLat }, { "CenterLong", CenterLong }, { "Scale", Scale }, { "LayerUrl", LayerUrl }
+                        , { "SubLayerIds", SubLayerIds }});
+                    }
+                }
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        Log.Error("Function Error", ex, this);
+    }
+}
+@{
+    if (datasourceitem !=null && datasourceitem.HasChildren)
+    {
+
+        <div class="ex-generic-map">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="ex-generic-map__tabs mb-5">
+                            @{
+                                var index = 0;
+                                foreach (Item item in datasourceitem.Children)
+                                {
+                                    if (item != null)
+                                    {
+                                        <li class="@(index == 0?"":"")" data-index="@index">
+                                            @item.Fields["Title"].Value
+                                        </li>
+                                        index++;
+                                    }
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ex-generic-map__container position-relative">
+                <div id="genericMapDiv" class="map-box">
+                    <div class="map-loader position-absolute spinner-grow"></div>
+                </div>
+                <div class="ex-generic-map__container__warning position-absolute w-100"></div>
+            </div>
+        </div>
+    }
+}
+
+
+<script>
+    var esriMaplist = @Html.Raw(JsonConvert.SerializeObject(DataSourcelist));
+</script>
+
+
+
+

@@ -1,0 +1,65 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+$happiness-meter-width : 720px !default;
+$happiness-meter-height : 500px !default;
+$happiness-meter-content-heading-color: $white-color !default;
+$happiness-meter-content-heading-padding : 1rem !default;
+$happiness-meter-padding : 0 !default;
+$happiness-meter-firstbg : rgb(190,84,69) !default;
+$happiness-meter-secondbg : rgba(82,127,197,1) !default;
+$happiness-meter-initbg : #5B4C81 !default;
+$happiness-meter-content-padding : 0 3rem 2rem 3rem !default;
+$happiness-meter-form-padding : 15px 3rem !default;
+$happiness-meter-header-border : 10px solid $white-color !default;
+$happiness-meter-logo-padding : 20px !default;
+$happiness-meter-logo-margin : 0 35px !default;
+$happiness-meter-logo-max-width : 175px !default;
+$happiness-meter-logo-background : $white-color !default;
+$happiness-meter-logo-border-radius : 0px 0px 15px 15px !default;
+$happiness-meter-face-size  : 234px !default; 
+$happiness-meter-notice-color : $white-color !default;
+$happiness-meter-notice-value : $white-color !default;
+$happiness-meter-label-color : $white-color !default;
+$happiness-meter-label-text-transform: uppercase !default;
+$happiness-meter-icon-font-size : 55px !default; 
+$happiness-meter-logo-height : 55px !default;
+$happiness-meter-error-color : #fdc8cc !default;
+$happiness-meter-error-font-size: 12px !default;
+$happiness-meter-input-bg: #534475 !default;
+$happiness-meter-input-color:  $white-color !default;
+$happiness-meter-input-border : 1px solid #B1A5CC !default;
+$happiness-meter-input-border-radius:  3px !default;
+$happiness-meter-input-height : 40px !default;
+$happiness-meter-input-padding: 15px !default;
+$happiness-meter-textarea-height: 70px !default;
+$happiness-meter-checkbox-label-color :  $white-color !default;
+$happiness-meter-checkbox-label-shadow-color1: $black-color;
+$happiness-meter-checkbox-label-shadow-color2: $white-color;
+$happiness-meter-checkbox-border : 3px solid  #5B4C81 !default;
+$happiness-meter-label-color :  $white-color !default;
+$happiness-meter-label-margin-bottom : 5px !default;
+$happiness-meter-label-font-size :12px !default;
+$happiness-meter-label-line-height : 20px !default;
+$happiness-meter-slider-firstbg : #FC962B !default;
+$happiness-meter-slider-secondbg : #26C6CA !default;
+$happiness-meter-slider-horizontal-height: 15px !default;
+$happiness-meter-slider-horizontal-width : 100% !default;
+$happiness-meter-slider-horizontal-shadow-bg : color-opacity($white-color,0.1) !default;
+$happiness-meter-slider-vertical-width : 15px !default;
+$happiness-meter-slider-vertical-min-height : 150px !default;
+$happiness-meter-slider-vertical-max-height : 100% !default;
+$happiness-meter-slider-inactive-color: #e6e6e6 !default;
+$happiness-meter-counter-color: $white-color !default;
+$happiness-meter-counter-fontsize: 12px !default;
+$happiness-meter-close-btn-color: color-opacity($white-color,0.6) !default;
+$happiness-meter-close-btn-padding: 18px 20px !default;
+$happiness-meter-close-btn-size: 16px !default;
+$happiness-meter-slider-box-Shadow:$black-color !default;
+$happiness-meter-slider-box-Shadow-fill:$black-color !default;
+$happiness-meter-handle-bg-grdiant1:$white-color !default;
+$happiness-meter-handle-bg-grdiant2:$black-color !default;
+$happiness-meter-footer-padding: 40px 0 0 0 !default;

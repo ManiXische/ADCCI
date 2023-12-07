@@ -1,0 +1,238 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName}
+Extension Version: #{$ProjectVersion}
+File: base file
+Owner: #{$ProjectOwner}
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+.#{$ProjectName} {
+    top:0;
+    @include transition(top .2s ease);
+    
+    @media #{$md} {
+        margin: 20px 0;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        // margin-left: -50vw;
+        // left: 50%;
+
+        @include rtl{
+            // margin-right: -50vw;
+            // right: 50%;
+            // margin-left:0;
+            // left: 0;
+        }
+
+        &--fixedtop {
+            position: fixed;
+            top: 80px;
+        }
+    }
+
+    @media #{$sm} {
+        &--fixedtop {
+            top: 50px;
+        }
+    }
+
+    nav {
+        background: 0 0;
+        margin-left: 0;
+        margin-right: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        @media #{$md} {
+            background-color: $smallscreen-trackbg;
+        }
+
+        @media #{$md} {
+            width: 100%;
+            height: 58px;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                width: 0px;
+                height: 0px;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            white-space: nowrap;
+            @media #{$md}{
+                flex-direction: row;
+            }
+            // margin: 0 0 40px;
+            padding: 0;
+            font-size: 0;
+            width: 100%;
+
+            @include ltr {
+                padding-left: 2px;
+            }
+
+            @include rtl {
+                padding-right: 2px;
+                text-align: right;
+            }
+
+            li {
+                list-style: none;
+
+                @media #{$md} {
+                    list-style: none;
+                    display: inline;
+                    padding: 0;
+                }
+
+                &.active {
+                    a {
+                        position: relative;
+                        font-weight: $leftnavtrackcolor_active-font-weight;
+                        color: $leftnavtrackcolor_active-hover;
+
+                        &:after {
+                            content: "";
+                            width: 4px;
+                            position: absolute;
+                            top: 0;
+                            height: 100%;
+                            background-color: $leftnavtrackcolor_active-hover;
+
+                            @media #{$md} {
+                                background-color: $leftnavtrackcolor_active-hover;
+                                color: $leftnavtrackcolor;
+                            }
+
+                            @include ltr {
+                                left: -2px;
+                            }
+
+                            @include rtl {
+                                right: -2px;
+                            }
+
+                            z-index: 2;
+
+                        }
+
+                        @media #{$md} {
+                            &:after {
+                                content: "";
+                                width: 100%;
+                                position: absolute;
+                                top: inherit;
+                                height: 2px;
+                                z-index: 2;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                a {
+                    font-size: 16px;
+                    line-height: 1.63;
+                    letter-spacing: 1px;
+                    border-bottom: none;
+                    outline: none;
+                    color: $leftnavtrackcolor;
+
+                    @include ltr {
+                        border-left: 1px solid $leftnavtrackcolor;
+                    }
+
+                    @include rtl {
+                        border-right: 1px solid $leftnavtrackcolor;
+                        letter-spacing: initial;
+                    }
+
+                    padding: 15px 20px;
+                    display: block;
+                    white-space: normal;
+
+                    @media #{$md} {
+                        height: 58px;
+                        display: inline-block;
+                        font-size: 14px;
+                        letter-spacing: 0.47px;
+                        border-bottom: 1px solid;
+                        white-space: nowrap;
+
+                        @include ltr {
+                            border-left: none;
+                        }
+
+                        @include rtl {
+                            border-right: none;
+                        }
+                    }
+
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: $leftnavtrackcolor_active-hover;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    &--fixed {
+        &__left {
+            position: fixed;
+            padding: 0 15px;
+
+            @include ltr {
+                margin-left: -15px;
+            }
+
+            @include rtl {
+                margin-right: -15px;
+            }
+
+            top: 205px;
+
+            nav {
+                ul {
+                    li {
+                        &.active {
+                            a {
+
+                                &:after {
+                                    @include ltr {
+                                        left: -2px;
+                                    }
+
+                                    @include rtl {
+                                        right: -2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &--fixedbottom {
+            &__left {
+                position: absolute !important;
+                bottom: 0;
+                top: inherit !important;
+            }
+        }
+    }
+
+
+}
+
+// Your files goes here

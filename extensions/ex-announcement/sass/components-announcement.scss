@@ -1,0 +1,112 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {     // Your code goes here
+    background: $ex-announcement-background;
+    padding: $ex-announcement-padding;
+    position: relative;
+    @include transition(all 0.4s);
+
+    &--primary{
+        background: $ex-announcement-primary-background;
+        .#{$ProjectName}__close{
+            color: $ex-announcement-primary-close-color;
+            &:hover{
+                color: $ex-announcement-primary-close-hover-color;
+            }
+        }
+        .#{$ProjectName}__title{
+            color: $ex-announcement-primary-title-color;
+            &:hover{
+                color: $ex-announcement-primary-title-hover-color;
+            }
+        }
+        .#{$ProjectName}__desc{
+            color: $ex-announcement-primary-desc-color;
+                &:hover{
+                    color: $ex-announcement-primary-desc-hover-color;
+                }
+        }
+    }
+    &--secondary{
+        background: $ex-announcement-secondery-background;
+
+        .#{$ProjectName}__close{
+            color: $ex-announcement-secondary-close-color;
+            &:hover{
+                color: $ex-announcement-secondary-close-hover-color;
+            }
+        }
+        .#{$ProjectName}__title{
+            color: $ex-announcement-secondary-title-color;
+            &:hover{
+                color: $ex-announcement-secondary-title-hover-color;
+            }
+        }
+        .#{$ProjectName}__desc{
+            color: $ex-announcement-secondary-desc-color;
+                &:hover{
+                    color: $ex-announcement-secondary-desc-hover-color;
+                }
+        }
+    }
+    &.remove{
+        overflow: hidden;
+        padding: 0px;
+        margin: 0px !important;
+        height : 0px;
+        opacity: 0;
+        @include transition($ex-announcement-remove-transition);
+    }
+    &__close{
+        color: $ex-announcement-defualt-close-color;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        opacity: 1;
+        font-size: 28px;
+        line-height: 15px;  
+        cursor: pointer;  
+        @include transition(all 0.4s);
+        @include rtl{
+            right: auto;
+            left: 20px;
+        }
+       @media #{$sm}{
+            top: 10px;
+            right: 10px;
+        }
+        &:hover{
+            color: $ex-announcement-defualt-title-color;
+        }
+    }
+    &__title{
+        font-size: $ex-announcement-title-font-size;
+        font-weight: $ex-announcement-title-font-weight;
+        color: $ex-announcement-defualt-title-color;
+        line-height: $ex-announcement-title-line-height;
+        @media #{$sm} {
+            font-size: $ex-announcement-title-font-size-mobi;
+            line-height: $ex-announcement-title-line-height-mobi;
+        }
+        &:hover{
+            color: $ex-announcement-defualt-title-hover-color;
+            text-decoration: none;
+        }
+    }
+    &__desc{
+        font-size: $ex-announcement-desc-font-size;
+        color: $ex-announcement-defualt-desc-color;
+    }
+    &__link{
+        text-decoration: underline;
+    }
+    }

@@ -1,0 +1,180 @@
+<html lang="en" class="">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Don't remove Section -->
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- ex-main-theme -->
+  <link rel="stylesheet" href="../../ex-main-theme/styles/bootstrap.css" />
+  <link rel="stylesheet" href="../../ex-main-theme/styles/fontawesome.css" />
+  <link rel="stylesheet" href="../../ex-main-theme/styles/icomoon.css" />
+  <link rel="stylesheet" href="../../ex-main-theme/styles/smooth-scrollbar.css" />
+
+  <!-- ex-layout  -->
+  <link rel="stylesheet" href="../../ex-layout/styles/components-layout.css" />
+  <!-- End don't remove Section -->
+
+  <!-- Your css files goes here -->
+  <link rel="stylesheet" href="../../ex-sxa-collection/styles/components-sitecore-form.css" />
+  <link rel="stylesheet" href="../../ex-sxa-collection/styles/components-sxa-components.css" />
+  <!-- Your css files goes here -->
+</head>
+
+<body>
+
+  <div class="ex-download-form ">
+    <form id="downloadForm" action="https://5d05e7e18ae69e00148dea67.mockapi.io/proxy/feedback" method="POST" data-success-message="We have recieved your message"
+      data-error-message="We could not recieve this, Please try again later" data-ok-button="OK">
+
+
+      <section class="container">
+        <div class="row ex-sitecore-form w-100 mb-7">
+          <div class="col-12">
+            <h4 class="ex-sitecore-form__title mb-4 text-capitalize">Custom Download Form</h4>
+          </div>
+          <div class="col-lg-4">
+            <div class="ex-sitecore-form__input ex-sitecore-form__input--disabledx position-relative mb-4">
+              <label class="ex-sitecore-form__label" for="name"> Name</label>
+              <input name="name" id="name" type="text" placeholder="Name" required 
+                data-msg-required="Name is required" class="ex-sitecore-form__input" />
+              <div class="field-validation-error error-block mt-2"></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="ex-sitecore-form__input position-relative mb-4">
+
+              <label class="ex-sitecore-form__label" for="email">Email</label>
+              <input name="email" id="email" type="email" placeholder="Email" required
+                data-msg-required="Email is required" class="ex-sitecore-form__input" />
+              <div class="field-validation-error error-block mt-2"></div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="captcha-wrapper" 
+            data-name="recaptcha" 
+            data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
+            data-msg-required="reCAPTCHA is mandatory"></div>
+          </div>
+
+          <div class="col-12">
+            <button class="button floated-element-left mt-3" type="submit" id="submit"  disabled>
+              Submit
+            </button>
+          </div>
+        </div>
+        <div class="ex-download-form__content">
+          <!-- <div class="ex-download-form__title__message ex-download-form__title__message--success">
+          <div class="d-inline-flex my-3 align-items-center">
+            <span class="icon-check-circle mx-1"></span>
+            <div class="mx-2">
+              Thank you for submitting your feedback.
+            </div>
+          </div>
+        </div>
+        <div class="ex-download-form__title__message ex-download-form__title__message--error">
+          <div class="d-inline-flex my-3 align-items-center">
+            <span class="icon-remove-circle mx-1"></span>
+            <div class="mx-2">
+              Error has been occured, please try again later.
+            </div>
+          </div>
+        </div> -->
+        </div>
+      </section>
+
+
+    </form>
+
+  </div>
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- ex-main-theme : uncomment needed files -->
+  <!-- Lib -->
+    <script src="../../ex-main-theme/scripts/prototypes/prototypeextensions.js"></script>
+    <script src="../../ex-main-theme/scripts/prototypes/extendextensions.js"></script>
+
+  <!-- <script src="../../ex-main-theme/scripts/lib/smooth-scrollbar-min.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/fontawesome-min.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/jquery-fancybox-min.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/owl-carousel-min.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/slick-min.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/isotope-pkgd-min.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/lazysizes-min.js"></script> -->
+
+  <!-- <script src="../../ex-main-theme/scripts/lib/jquery.txtTruncate.min.js"></script> -->
+  <!-- init  -->
+  <!-- <script src="../../ex-main-theme/scripts/fancybox-init.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/isotope-init.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/owl-init.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/scrollbar-init.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/slick-init.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/truncate-init.js"></script> -->
+
+  <!-- ex-main-theme : uncomment needed files -->
+  <script type="text/javascript">
+    var onloadCallback = function () {
+      var event = new Event('grecaptcha-loaded');
+      document.dispatchEvent(event);
+    };
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&lang=en" async defer>
+  </script>
+
+  <script src="../../ex-sxa-collection/scripts/component.sitecore.form.plugin.source.code.js"></script>
+  <script src="../../ex-sxa-collection/scripts/components-sitecore-form.js"></script>
+  <script src="../../ex-main-theme/scripts/lib/jquery-validate-min.js"></script>
+  <script src="../../ex-sxa-collection/scripts/lib/custom-dropdown.js"></script>
+
+  <!-- Your js files goes here -->
+  <!-- <script src="../../ex-sxa-collection/scripts/component-sitecore-form-plugin.js"></script> -->
+  <script src="../../ex-sxa-collection/scripts/components-sitecore-download-form.js"></script>
+
+
+  <!-- <script>
+    var downloadForm = $("#downloadForm");
+    downloadForm.validate({
+      wrapper: "ex-sitecore-form__input",
+
+      submitHandler: function (form) { // <- pass 'form' argument in
+        $("#submit").attr("disabled", true);
+        form.submit(); // <- use 'form' argument here.
+      }
+    });
+    downloadForm.submit(function (e) {
+
+      e.preventDefault(); // avoid to execute the actual submit of the form.
+
+      var form = $(this);
+      var url = form.attr('action');
+
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: form.serialize(), // serializes the form's elements.
+        success: function (data) {
+          alert(data); // show response from the php script.
+        }
+      });
+
+
+    });
+
+    downloadForm.find('input').on('blur keyup', function () {
+      if (downloadForm.valid()) {
+        $('#submit').prop('disabled', false);
+      } else {
+        $('#submit').prop('disabled', 'disabled');
+      }
+    });
+  </script> -->
+  <!-- Your js files goes here -->
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-sxa-components, .ex-page-content {
+  line-height: 24px;
+  word-break: break-word;
+}
+
+.ex-sxa-components ul, .ex-page-content ul {
+  list-style-type: disc;
+  margin-bottom: 20px;
+  list-style-position: outside;
+}
+
+html:not([dir='rtl']) .ex-sxa-components ul, .translated-ltr .ex-sxa-components ul, html:not([dir='rtl']) .ex-page-content ul, .translated-ltr .ex-page-content ul {
+  padding-left: 18px;
+}
+
+html[dir='rtl'] .ex-sxa-components ul, .translated-rtl .ex-sxa-components ul, html[dir='rtl'] .ex-page-content ul, .translated-rtl .ex-page-content ul {
+  padding-right: 18px;
+}
+
+.ex-sxa-components ul li,
+.ex-sxa-components ol li, .ex-page-content ul li,
+.ex-page-content ol li {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+html[dir='rtl'] .ex-sxa-components ul li, .translated-rtl .ex-sxa-components ul li, html[dir='rtl']
+.ex-sxa-components ol li, .translated-rtl
+.ex-sxa-components ol li, html[dir='rtl'] .ex-page-content ul li, .translated-rtl .ex-page-content ul li, html[dir='rtl']
+.ex-page-content ol li, .translated-rtl
+.ex-page-content ol li {
+  text-align: right;
+}
+
+.ex-sxa-components ol, .ex-page-content ol {
+  list-style-type: decimal;
+}
+
+html[dir='rtl'] .ex-sxa-components ol, .translated-rtl .ex-sxa-components ol, html[dir='rtl'] .ex-page-content ol, .translated-rtl .ex-page-content ol {
+  list-style-type: arabic-indic;
+}
+
+.ex-sxa-components a, .ex-page-content a {
+  color: #0091C7;
+}
+
+.ex-sxa-components em, .ex-page-content em {
+  font-style: italic;
+}
+
+.ex-sxa-components table, .ex-page-content table {
+  min-width: 100%;
+  margin-bottom: 1rem;
+  color: #000;
+  /*tbody > tr:first-child td {
+      background-color: $content-editor-table-head-background-color;
+      color: $content-editor-table-head-color;
+    }
+  
+    thead + tbody > tr:first-child td {
+      background-color: $content-editor-table-default-background-color;
+      color: $content-editor-table-default-color;
+    }*/
+}
+
+.ex-sxa-components table th,
+.ex-sxa-components table td, .ex-page-content table th,
+.ex-page-content table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #0091C7;
+}
+
+.ex-sxa-components table thead tr th, .ex-page-content table thead tr th {
+  background-color: #0091C7;
+  color: #ffffff;
+}
+
+.ex-sxa-components h1,
+.ex-sxa-components h2,
+.ex-sxa-components h3,
+.ex-sxa-components h4,
+.ex-sxa-components h5, .ex-page-content h1,
+.ex-page-content h2,
+.ex-page-content h3,
+.ex-page-content h4,
+.ex-page-content h5 {
+  padding-bottom: 10px;
+}
+
+html:not([dir='rtl']) .ex-sxa-components h1, .translated-ltr .ex-sxa-components h1, html:not([dir='rtl'])
+.ex-sxa-components h2, .translated-ltr
+.ex-sxa-components h2, html:not([dir='rtl'])
+.ex-sxa-components h3, .translated-ltr
+.ex-sxa-components h3, html:not([dir='rtl'])
+.ex-sxa-components h4, .translated-ltr
+.ex-sxa-components h4, html:not([dir='rtl'])
+.ex-sxa-components h5, .translated-ltr
+.ex-sxa-components h5, html:not([dir='rtl']) .ex-page-content h1, .translated-ltr .ex-page-content h1, html:not([dir='rtl'])
+.ex-page-content h2, .translated-ltr
+.ex-page-content h2, html:not([dir='rtl'])
+.ex-page-content h3, .translated-ltr
+.ex-page-content h3, html:not([dir='rtl'])
+.ex-page-content h4, .translated-ltr
+.ex-page-content h4, html:not([dir='rtl'])
+.ex-page-content h5, .translated-ltr
+.ex-page-content h5 {
+  font-weight: bold;
+}
+
+.ex-sxa-components p, .ex-page-content p {
+  margin-bottom: 20px;
+}
+
+.ex-sxa-components img, .ex-page-content img {
+  max-width: 100% !important;
+}
+
+.high-contrast .ex-sxa-components img, .high-contrast .ex-page-content img {
+  -webkit-filter: grayscale(1) invert(100%) !important;
+  filter: grayscale(1) invert(100%) !important;
+}
+
+.ex-sxa-components .img-shadow, .ex-page-content .img-shadow {
+  padding: 10px 10px 10px 0px;
+  position: relative;
+  display: inline-block;
+}
+
+.ex-sxa-components .img-shadow:after, .ex-page-content .img-shadow:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -webkit-calc( 100% - 85%);
+  left: calc( 100% - 85%);
+  background: #0091C7;
+  z-index: -1;
+}
+
+html[dir='rtl'] .ex-sxa-components .img-shadow:after, .translated-rtl .ex-sxa-components .img-shadow:after, html[dir='rtl'] .ex-page-content .img-shadow:after, .translated-rtl .ex-page-content .img-shadow:after {
+  right: -webkit-calc( 100% - 85%);
+  right: calc( 100% - 85%);
+  left: 0;
+}
+
+.ex-sxa-components .source-img img, .ex-page-content .source-img img {
+  max-width: 150px !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .ex-sxa-components img, .ex-page-content img {
+    height: auto !important;
+  }
+}
+
+.ex-sxa-components a:hover, .ex-page-content a:hover {
+  text-decoration: underline;
+}
+
+.preview #scWebEditRibbon,
+.preview #scCrossPiece {
+  display: none;
+}
+
+.sxa-link-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sxa-search-result ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  padding: 0.55em;
+  background: none;
+  color: #000;
+  border-radius: 4px;
+  border-color: transparent;
+}
+
+.ui-state-default.ui-state-highlight {
+  color: #000;
+  border: 1px solid #000;
+}
+
+.ui-state-default.ui-state-active {
+  background-color: #000;
+  color: #ffffff;
+  border: 1px solid #0091C7;
+}
+
+.ui-state-default.ui-state-hover {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #3F3E45;
+}
+
+.ui-datepicker-today .ui-state-default.ui-state-hover {
+  background-color: #000;
+  color: #ffffff;
+  border: 1px solid #000;
+}
+
+.ui-widget-header {
+  border: 0;
+  background: transparent url("../media/ui-icons_ffffff_256x240.png") 50% 50% repeat-x;
+}
+
+.ui-widget-header .ui-icon {
+  background-image: url("../media/ui-icons_ffffff_256x240.png");
+}
+
+.ui-icon-circle-triangle-w {
+  background-position: -79px -190px;
+}
+
+.ui-datepicker-header .ui-state-hover,
+.ui-datepicker-header .ui-widget-content .ui-state-hover,
+.ui-datepicker-header .ui-widget-header .ui-state-hover,
+.ui-datepicker-header .ui-state-focus,
+.ui-datepicker-header .ui-widget-content .ui-state-focus,
+.ui-datepicker-header .ui-widget-header .ui-state-focus {
+  border: 0;
+  background: transparent;
+}
+
+.ui-icon-circle-triangle-e {
+  background-position: -48px -190px;
+}
+
+.ex-sxa-filter__input .bottom-remove-filter button,
+.ex-sxa-filter__input .bottom-remove-filter-custom button {
+  overflow: hidden;
+  line-height: 1;
+}
+
+.color-primary {
+  color: #0091C7;
+}
+
+.color-secondary {
+  color: #FAA317;
+}
+
+[href^="tel"] {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+.ui-widget-content {
+  background: none;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px #3F3E45;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+  cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    box-shadow: inset 0 0 5px 0 #dcdcdc;
+  }
+  .table-responsive-sm table {
+    word-break: initial;
+  }
+}

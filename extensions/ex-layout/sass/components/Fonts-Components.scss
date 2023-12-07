@@ -1,0 +1,22 @@
+
+
+@function font-src($folder, $fontname){
+  $src : '';
+  @each $ext , $format in $supported-fonts-exts  {
+      // @if($ext == 'svg'){
+      //    $ext : $ext + '###{$fontname}'
+      // }
+      $src: unquote($src + url('#{unquote("#{$fontsPath}#{$folder}/#{$fontname}#{$ext}" + "." + "#{$ext}")}') + ' '+  $format + ",");
+  }
+  
+  @return str-slice($src, 1, str-length($src ) - 1) ;
+}
+
+@each $folder, $fontfile, $fontname  ,$fontweight in $supported-fonts {
+  @font-face {
+      font-family: quote($fontname);
+      src: url('#{$fontsPath}#{$folder}/#{$fontfile}eot.eot');
+      src : font-src($folder , $fontfile);
+      font-weight: $fontweight;
+  }
+}

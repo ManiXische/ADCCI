@@ -1,0 +1,38 @@
+/***************************************************************************************************
+File: Variables
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// bootstrap breakpoints
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+$grid-row-columns: 6;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 360px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+$breadcrumb-bg : transparent;
+
+//Media Query
+$xs: "screen and (max-device-width:576px), screen and (max-width:576px)";
+$sm: "screen and (max-device-width:767px), screen and (max-width:767px)";  
+$md: "screen and (max-device-width:922px), screen and (max-width:922px)";
+$lg: "screen and (max-device-width:1200px), screen and (max-width:1200px)";
+$xxl: "screen and (min-device-width:1200px), screen and (min-width:1200px)";
+
+//ie
+$ie11: "all and (-ms-high-contrast: none), (-ms-high-contrast: active)";
+
+$skipmobile: "only screen and (min-width: 767px)";
+
+
+$font_en : 'Roboto',Arial, sans-serif;
+$font_ar: 'NotoKufiArabic', Arial, sans-serif;
+
+
+$font_awesome_brands : 'Font Awesome 5 Brands';
+$font_awesome_regular : 'Font Awesome 5 Free';
+$font_awesome_solid : 'Font Awesome 5 Free';

@@ -1,0 +1,449 @@
+<html lang="en" class="">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Don't remove Section -->
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- ex-main-theme -->
+  <link rel="stylesheet" href="../../ex-main-theme/styles/bootstrap.css" />
+  <link rel="stylesheet" href="../../ex-main-theme/styles/fontawesome.css" />
+  <link rel="stylesheet" href="../../ex-main-theme/styles/icomoon.css" />
+  <link rel="stylesheet" href="../../ex-main-theme/styles/animate.css" />
+  <link rel="stylesheet" href="../../ex-main-theme/styles/jquery-fancybox.css" />
+  <link rel="stylesheet" href="../../ex-main-theme/styles/owl-carousel.css" />
+  <link rel="stylesheet" href="../../ex-main-theme/styles/slick.css" />
+  <link rel="stylesheet" href="../../ex-main-theme/styles/smooth-scrollbar.css" />
+
+  <!-- ex-layout  -->
+  <link rel="stylesheet" href="../../ex-layout/styles/components-layout.css" />
+  <!-- End don't remove Section -->
+
+  <!-- Your css files goes here -->
+  <link rel="stylesheet" href="../../ex-sxa-collection/styles/components-sitecore-form.css" />
+  <link rel="stylesheet" href="../../ex-sxa-collection/styles/components-sxa-components.css" />
+  <!-- Your css files goes here -->
+</head>
+
+<body>
+  <form action="https://5d05e7e18ae69e00148dea67.mockapi.io/proxy/feedback" method="POST">
+
+    <section class="container">
+      <div class="row ex-sitecore-form">
+        <div class="col-12">
+          <h4 class="ex-sitecore-form__title mb-4 text-capitalize">Mass Wedding Application Form</h4>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input ex-sitecore-form__input--disabled position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="firstname">First Name</label>
+            <input type="text" placeholder="Enter your first name here…" name="firstname" data-msg-required="First name is required" value="name" />
+            <div class="error-block mt-2"></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="lastname">Last Name</label>
+            <input type="text" placeholder="Enter your last name here…" name="lastname" data-msg-required="Last name is required"  />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input ex-sitecore-form__input--custom-dropdown position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="nationality">Nationality</label>
+            <div class="position-relative">
+              <i class="position-absolute icon icon-arrow-small-right"></i>
+              <select name="nationality" data-msg-required="Nationality is required" class="visually-hidden">
+                <option value="">Select your nationality</option>
+                <option value="Egypt">Egypt</option>
+                <option value="UAE">UAE</option>
+                <option value="USA" disabled>USA</option>
+                <option value="USA">USA</option>
+                <option value="USA">USA</option>
+                <option value="USA">USA</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="eidnumber">EID No.</label>
+            <input type="tel" placeholder="784 - xxxx - xxxxxxx - x" name="eidnumber" data-msg-required="EID no. is required"  />
+          </div>
+        </div>
+          <div class="col-lg-6">
+          <div class="ex-sitecore-form__input ex-sitecore-form__input--tel position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="telephone">Telephone No. (Optional)</label>
+            <div class="position-relative">
+              <i class="position-absolute icon icon-earth"></i>
+              <div class="position-relative ex-sitecore-form__input--custom-dropdown disable-pointer">
+                <select class="visually-hidden">
+                  <option value="+20">Egypt +20&nbsp;</option>
+                  <option value="+971">United Arab Emirates +971&nbsp;</option>
+                  <option value="+966">Saudia Arabia +966&nbsp;</option>
+                  <option value="+44">United Kingdom +44&nbsp;</option>
+                  <option value="+966">Saudia Arabia +966&nbsp;</option>
+                  <option value="+966">Saudia Arabia +966&nbsp;</option>
+                  <option value="+966">Saudia Arabia +966&nbsp;</option>
+                </select>
+              </div>
+              <input type="tel" placeholder="+971   - -   - -   - - - -" name="telephone" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="employer">Job / Employer</label>
+            <input type="text" placeholder="Enter your Job / Employer" name="employer" data-msg-required="Employer is required"  />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input ex-sitecore-form__input--datepicker position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="contractdate">Contract Date</label>
+            <div class="position-relative">
+              <i class="trigger-calendar-icon position-absolute icon-calendar-alt"></i>
+              <input type="text" placeholder="Select Contract Date" name="contractdate" data-msg-required="Contract is required"  />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="maritalstatus">Marital Status (Optional)</label>
+            <input type="text" placeholder="Enter your marital status" name="maritalstatus">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container py-4">
+      <div class="row ex-sitecore-form">
+        <div class="col-12">
+          <h4 class="ex-sitecore-form__title mb-4 text-capitalize">Residential Address</h4>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="city">City</label>
+            <input type="text" placeholder="Enter your Area/ District" name="city" data-msg-required="City is required"  />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="district">Area / District  (Optional)</label>
+            <input type="text" placeholder="Enter your City" name="district"/>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="buildingnumber" >Building No. (Optional)</label>
+            <input type="text" placeholder="Enter your Building No." name="buildingnumber" />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="street">Street (Optional)</label>
+            <input type="tel" placeholder="Enter your Street" name="street" />
+          </div>
+        </div>
+        <div class="col-lg-12 mt-5">
+          <div class="ex-sitecore-form__input d-flex mb-4">
+            <label class="ex-sitecore-form__label" for="phone">Joint Spouse Application</label>
+            
+            <div class="d-flex mx-4">
+              <div class="ex-sitecore-form__input__radiobox">
+                <input type="radio" id="spouse-container" name="spouse-container" checked data-toggler=".spouse-container" data-value="show" />
+                <label for="spouse-container"></label>
+            </div>
+            <label class="ex-sitecore-form__input__label" for="spouse-container" >Yes</label>
+            </div>
+            <div class="d-flex mx-4">
+              <div class="ex-sitecore-form__input__radiobox">
+                <input type="radio" id="spouse-container2" name="spouse-container" data-toggler=".spouse-container" data-value="hide"/>
+                <label for="spouse-container2"></label>
+            </div>
+            <label class="ex-sitecore-form__input__label" for="spouse-container2" >No</label>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container ex-sitecore-form spouse-container">
+      <div class="row py-4">
+        <div class="col-12">
+          <h4 class="ex-sitecore-form__title mb-4 text-capitalize">Spouse Details</h4>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="spousefirstname">First Name</label>
+            <input type="text" placeholder="Enter your first name here…" name="spousefirstname" data-msg-required="Spouse first name is required" />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="spouselastname">Last Name</label>
+            <input type="text" placeholder="Enter your last name here…" name="spouselastname" data-msg-required="Spouse last name is required" />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input ex-sitecore-form__input--custom-dropdown position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="nationality">Nationality</label>
+            <div class="position-relative">
+              <i class="position-absolute icon icon-arrow-small-right"></i>
+              <select name="nationality" data-msg-required="Nationality is required" class="visually-hidden">
+                <option value="">Select your nationality</option>
+                <option value="Egypt">Egypt</option>
+                <option value="UAE">UAE</option>
+                <option value="USA" disabled>USA</option>
+                <option value="USA">USA</option>
+                <option value="USA">USA</option>
+                <option value="USA">USA</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="spouseeidnumber">EID No.</label>
+            <input type="tel" placeholder="784 - xxxx - xxxxxxx - x" name="spouseeidnumber" data-msg-required="Spouse EID No. is required"/>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="spousetelephone">Telephone No. (Optional)</label>
+            <input type="tel" placeholder="+971   - -   - -   - - - -" name="spousetelephone" />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input ex-sitecore-form__input--datepicker position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="spousedob">DOB (Optional)</label>
+            <div class="position-relative">
+              <i class="trigger-calendar-icon position-absolute icon-calendar-alt"></i>
+              <input type="text" placeholder="Select Date of Birth" name="spousedob">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row py-4">
+        <div class="col-12">
+          <h4 class="ex-sitecore-form__title mb-4 text-capitalize">Spouse Residential Address</h4>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="spousecity">City</label>
+            <input type="text" placeholder="Enter your Area/ District" name="spousecity" data-msg-required="Spouse city is required"/>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="spousedistrict">Area / District  (Optional)</label>
+            <input type="text" placeholder="Enter your City" name="spousedistrict" />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="spousebuildingnumber">Building No. (Optional)</label>
+            <input type="text" placeholder="Enter your Building No." name="spousebuildingnumber" />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ex-sitecore-form__input position-relative mb-4">
+            <label class="ex-sitecore-form__label" for="spousestreet">Street (Optional)</label>
+            <input type="tel" placeholder="Enter your Street" name="spousestreet" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container py-4">
+      <div class="row ex-sxa-components ex-sitecore-form">
+        <div class="col-12">
+          <h4 class="ex-sitecore-form__title mb-2 text-capitalize">Attachments</h4>
+        </div>
+        <div class="col-lg-12">          
+          <div class="ex-sitecore-form__input position-relative">
+            <label class="ex-sitecore-form__label" for="fname">Required Attachments</label>
+          </div>
+        </div>
+        <div class="col-lg-6">
+            <ol class="small-text">
+              <li>
+                Copy of Passport (yours and your wife)
+              </li>
+              <li>
+                Copy of Emirates ID (yours and your wife)
+              </li>
+              <li>
+                Marriage Agreement (Issued from Court within 3 Months)
+              </li>
+            </ol>
+        </div>
+        <div class="col-lg-6">
+          <ol class="small-text" start="4">
+            <li>
+              Site plan of home in Al Dhafrah Region
+            </li>
+            <li>
+              Family Book (Optional)
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="row ex-sitecore-form mt-4">
+        <div class="col-lg-12">
+          <div class="ex-sitecore-form__input ex-sitecore-form__input--file d-flex">
+            <div class="dropzone-previews d-flex flex-wrap justify-content-between w-100">
+              <div class="input-file-trigger position-relative">
+                <label for="multipart-file-input" class="input-file-trigger__label dropzone-file">
+                  <i class="icon icon-add"></i>
+                </label>
+                <input id="multipart-file-input" class="visually-hidden multipart-file-input"  name="file" type="file"  />
+              </div>
+              <div class="input-file-trigger position-relative">
+                <label for="multipart-file-input1" class="input-file-trigger__label dropzone-file">
+                  <i class="icon icon-add"></i>
+                </label>
+                <input id="multipart-file-input1" class="visually-hidden multipart-file-input"  name="file" type="file"  />
+              </div>
+              <div class="input-file-trigger position-relative">
+                <label for="multipart-file-input2" class="input-file-trigger__label dropzone-file">
+                  <i class="icon icon-add"></i>
+                </label>
+                <input id="multipart-file-input2" class="visually-hidden multipart-file-input"  name="file" type="file"  />
+              </div>
+              <div class="input-file-trigger position-relative">
+                <label for="multipart-file-input3" class="input-file-trigger__label dropzone-file">
+                  <i class="icon icon-add"></i>
+                </label>
+                <input id="multipart-file-input3" class="visually-hidden multipart-file-input"  name="file" type="file"  />
+              </div>
+              <div class="input-file-trigger position-relative">
+                <label for="multipart-file-input4" class="input-file-trigger__label dropzone-file">
+                  <i class="icon icon-add"></i>
+                </label>
+                <input id="multipart-file-input4" class="visually-hidden multipart-file-input"  name="file" type="file"  />
+              </div>
+              <div class="input-file-trigger position-relative">
+                <label for="multipart-file-input5" class="input-file-trigger__label dropzone-file">
+                  <i class="icon icon-add"></i>
+                </label>
+                <input id="multipart-file-input5" class="visually-hidden multipart-file-input"  name="file" type="file"  />
+              </div>
+              <div class="input-file-trigger position-relative">
+                <label for="multipart-file-input6" class="input-file-trigger__label dropzone-file">
+                  <i class="icon icon-add"></i>
+                </label>
+                <input id="multipart-file-input6" class="visually-hidden multipart-file-input"  name="file" type="file"  />
+              </div>
+            </div>
+            <div class="preview-template" style="display: none;">
+              <div class="dz-preview position-absolute dz-file-preview">
+                <div class="dz-image"><img data-dz-thumbnail=""></div>
+                <div class="dz-details">
+  
+                  <div class="dz-filename"><span data-dz-name=""></span></div>
+                  <div class="dz-size"><span data-dz-size=""><strong>9.2 </strong> </span>MB</div>
+                </div>
+                <div class="dz-error-message"><span data-dz-errormessage=""></span></div>
+                <div class="dz-success-mark">
+                  <i class="icon-check-circle-filled"></i>
+                </div>
+                <div class="dz-error-mark">
+                  <i class="icon-delete-filled"></i>
+                </div>
+                <a class="dz-remove" href="javascript:undefined;" data-dz-remove=""><i class="icon-delete-filled"></i></a>
+                <div class="dz-ext"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="ex-sitecore-form__label ex-sitecore-form__label--normal">
+            Each file size should not exceed 1MB. File name can contain characters, numbers and some special characters like ( '@', '&' , '.' , '-' ) only
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container py-4">
+      <div class="row ex-sitecore-form">
+        <div class="col-12">
+          <h4 class="ex-sitecore-form__title mb-4 text-capitalize">I hereby pledge that:</h4>
+        </div>
+        <div class="col-lg-12">
+          <div class="ex-sitecore-form__input position-relative d-flex mb-3">
+            <div class="ex-sitecore-form__input__checkbox ex-sitecore-form__input__checkbox--dark">
+                <input type="checkbox" id="celebrateagainconfirmation" name="celebrateagainconfirmation" checked />
+                <label for="celebrateagainconfirmation"></label>
+            </div>
+            <label class="ex-sitecore-form__input__label" for="celebrateagainconfirmation">I will not celebrate again this wedding by myself, if my application is approved under this Mass Wedding program</label>
+        </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="ex-sitecore-form__input position-relative d-flex mb-3">
+            <div class="ex-sitecore-form__input__checkbox ex-sitecore-form__input__checkbox--dark">
+                <input type="checkbox" id="officialmarriagecertificate" name="officialmarriagecertificate" checked />
+                <label for="officialmarriagecertificate"></label>
+            </div>
+            <label class="ex-sitecore-form__input__label" for="officialmarriagecertificate">I will apply and submit my official marriage certificate upon completion of my marriage.</label>
+        </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="ex-sitecore-form__input position-relative d-flex mb-3">
+            <div class="ex-sitecore-form__input__checkbox ex-sitecore-form__input__checkbox--dark">
+                <input type="checkbox" id="weddingcelebration" name="weddingcelebration" checked />
+                <label for="weddingcelebration"></label>
+            </div>
+            <label class="ex-sitecore-form__input__label" for="weddingcelebration">No wedding celebration will be held separately for the wife.</label>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="captcha-wrapper" 
+        data-name="recaptcha" 
+        data-size="invisible" 
+        data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
+        data-msg-required="reCAPTCHA is mandatory"></div>
+      <button class="button floated-element-right mt-3" type="submit">
+        Submit
+    </button>
+    </section>
+
+
+
+    
+  </form>
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- ex-main-theme : uncomment needed files -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/smooth-scrollbar-min.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/fontawesome-min.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/jquery-fancybox-min.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/owl-carousel-min.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/slick-min.js"></script> -->
+  <!-- init  -->
+  <!-- <script src="../../ex-main-theme/scripts/fancybox-init.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/owl-init.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/scrollbar-init.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/lib/letteranimation-min.js"></script> -->
+  <!-- <script src="../../ex-main-theme/scripts/slick-init.js"></script> -->
+  <!-- ex-main-theme : uncomment needed files -->
+
+
+  <!-- Your js files goes here -->
+  <script src="../../ex-sxa-collection/scripts/lib/jquery-ui.js"></script>
+  <script src="../../ex-sxa-collection/scripts/lib/dropzone.js"></script>
+  <script src="../../ex-sxa-collection/scripts/lib/custom-dropdown.js"></script>
+  
+  <script src="../../ex-sxa-collection/scripts/components-sitecore-form.js"></script>
+  <script src="../../ex-sxa-collection/scripts/components-sitecore-form-fileinput.js"></script>
+  <script src="../../ex-sxa-collection/scripts/components-datepicker.js"></script>
+
+  <!-- Your js files goes here -->
+</body>
+
+</html>

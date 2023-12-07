@@ -1,0 +1,422 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    &__popup{
+        &--overlay{
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: 99999;
+            top: 0;
+            left: 0;
+            background: rgba(0,0, 0, 0.9);
+        }
+        &--form{
+            position: fixed;
+            height: 95%;
+            width: 95%;
+            z-index: 99999;
+            top: 50%;
+            left: 50%;
+            background: #fff;
+            transform: translate(-50%, -50%);
+            max-width: 600px;
+            max-height: 681px;
+            border-radius: 4px;
+            overflow: hidden;
+            &--header{
+                display: flex;
+                justify-content: space-between;
+                height: 70px;
+                border-bottom: 1px solid #d6d6d6;
+                &-title{
+                    font-size: 24px;
+                    font-weight: 900;
+                    color: #3f3e45;
+                    padding: 20px;
+                }
+                &-icon{
+                    padding: 20px;
+                }
+            }
+            &--body{
+                display: flex;
+                flex-direction: column;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                max-height: calc(100% - 70px - 81px);
+                padding: 20px;
+                .ex-listing-page__sort{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    margin-bottom: 40px;
+                    align-items: stretch;
+                    &--label{
+                        margin: 0;
+                    }
+                }
+
+                .ex-listing-page_search{
+                    margin-bottom: 40px;
+                }
+                .ex-listing-page__sort--dropdown .dropdown-link{
+                    width: 100%;
+                    height: 50px;
+                }
+                .ex-listing-page_group{
+                    margin-bottom: 35px;
+                }
+            }
+            &--footer{
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                height: 81px;
+                border-top: 1px solid #d6d6d6;
+            }
+        }
+    }
+    [template-container]{
+        margin-top: $listing-page-templateContainer-marginTop;
+    }
+    &--label{
+        font-size: $listing-page-label-fontSize;
+        color: $listing-page-label-color;
+        letter-spacing: $listing-page-label-letterSpacing;
+        @include ltr {
+            line-height: $listing-page-label-lineHeight-en;
+        }
+
+        @include rtl {
+            line-height: $listing-page-label-lineHeight-ar;
+        }
+
+    }
+    &--cta{
+        cursor: pointer;
+        font-size: $listing-page-cta-fontSize;
+        color: $listing-page-cta-color;
+        letter-spacing: $listing-page-cta-letterSpacing;
+        @include ltr {
+            line-height: $listing-page-cta-lineHeight-en;
+        }
+
+        @include rtl {
+            line-height: $listing-page-cta-lineHeight-ar;
+        }
+        &[show]{
+            display: none;
+        }
+    }
+    &_search{
+            &--input{
+                border: $listing-page-input-border;
+                height: $listing-page-input-height;
+                color: $listing-page-input-input-color;
+                @include ltr {
+                    padding-left: $listing-page-input-paddingForIcon-en;
+                }
+        
+                @include rtl {
+                    padding-right: $listing-page-input-paddingForIcon-ar;
+                }
+                
+            }
+            i{
+                font-size: $listing-page-i-fontSize;
+                top: $listing-page-i-top;
+
+                @include ltr {
+                    left: $listing-page-i-startPosition-en;
+                }
+        
+                @include rtl {
+                    right: $listing-page-i-startPosition-ar;
+                }
+            }
+            [listing_search__btn]{
+                cursor: pointer;
+            }
+        
+
+    }
+    &_group{
+        &.mt-lg-8{
+            margin-top: 40px !important;
+        }
+        .checkbox{
+            &__wrapper{
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                user-select: none;
+                text-transform:none;
+                font-size: $listing-page-checkbox-label-fontSize;
+                color: $listing-page-checkbox-label-color;
+                margin-bottom: $listing-page-checkbox-marginBottom;
+
+                @include ltr {
+                    padding-left: $listing-page-checkbox-spaceBetweenLabelAndCheckbox-en;
+                    //padding-top: $listing-page-checkbox-spaceBetweenLabelAndTopBorder-en;
+                }
+        
+                @include rtl {
+                    padding-right: $listing-page-checkbox-spaceBetweenLabelAndCheckbox-ar;
+                    //padding-top: $listing-page-checkbox-spaceBetweenLabelAndTopBorder-ar;
+                }
+
+                /* Hide the browser's default checkbox */
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+                  /* Create a custom checkbox */
+                .checkmark {
+                    position: absolute;
+                    // top: 0; //- commented and center it vertically instead because some cases check box not aligned with the label 
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: $listing-page-checkbox-checkmark-height;
+                    width: $listing-page-checkbox-checkmark-width;
+                    background-color: $listing-page-checkbox-checkmark-backgroundColor;
+                    border-radius: $listing-page-checkbox-checkmark-borderRadius;
+                    border: $listing-page-checkbox-checkmark-border;
+                    @include ltr {
+                        left: 0;
+                    }
+            
+                    @include rtl {
+                        right: 0;
+                    }
+                }
+                /* When the checkbox is checked, add a blue background */
+                input:checked ~ .checkmark {
+                    background-color: $listing-page-checkbox-checkmark-checked-backgroundColor;
+                    border: $listing-page-checkbox-checkmark-checked-border;
+                }
+  
+                /* Create the checkmark/indicator (hidden when not checked) */
+                .checkmark:before {
+                    display: none;
+                }  
+
+                /* Show the checkmark when checked */
+                input:checked ~ .checkmark:before {
+                    display: block;
+                    position: absolute;
+                    top: $listing-page-checkbox-checkmark-checked-icon-top;
+                    left: $listing-page-checkbox-checkmark-checked-icon-left;
+                    color: $listing-page-checkbox-checkmark-checked-icon-color;
+                    font-size: $listing-page-checkbox-checkmark-checked-icon-fontSize;
+                }
+                &:last-child{
+                    margin-bottom: $listing-page-spaceTopShowMore;
+                }
+    
+            }//end of wrapper
+        }
+    }//end of group
+    &__results-count{
+        font-size: $listing-page-results-count-fontSize;
+        color: $listing-page-results-count-color;
+        line-height: $listing-page-results-count-lineHeight;
+    }
+    &__sort{
+        justify-content: center;
+        align-items: center;
+        @media #{$md}{
+            display: none;
+        }
+        &--label{
+            margin: 0 10px 0 10px;
+            font-size: $listing-page-sort-label-font-size;
+            color: $listing-page-sort-label-color;
+            @include ltr {
+                line-height: $listing-page-sort-label-line-height-en;
+            }
+
+            @include rtl {
+                line-height: $listing-page-sort-label-line-height-ar;
+            }
+        }
+        &--dropdown{
+            z-index: 1;
+            select{
+                display: none;
+            }
+            .dropdown-link{
+                border: $listing-page-sort-dropdown-border;
+                padding: $listing-page-sort-dropdown-padding;
+                position: relative;
+                width: $listing-page-sort-dropdown-width;
+            }
+            &--text{
+                font-size: $listing-page-sort-dropdown-text-fontSize;
+                color: $listing-page-sort-dropdown-text-color;
+            }
+            &--arrow{
+                display: flex;
+                align-items: center;
+                font-weight: $listing-page-sort-dropdown-arrow-fontWeight;
+                color: $listing-page-sort-dropdown-arrow-color;
+                font-size: $listing-page-sort-dropdown-arrow-fontSize;
+                margin-top: $listing-page-sort-dropdown-arrow-marginTop;
+            }
+            &:hover{
+                cursor: pointer;                
+                .dropdown-link{
+                    background:  $listing-page-sort-dropdown-background-hover;
+                }
+
+                .ex-listing-page__sort--dropdown--text ,
+                .ex-listing-page__sort--dropdown--arrow{
+                    color: $listing-page-sort-dropdown-color-hover;
+                }
+            }
+            &--list{
+                position: absolute;
+                display: none;
+                overflow: auto;
+                border: $listing-page-sort-dropdown-sortlist-border;
+                background: $listing-page-sort-dropdown-sortlist-background;
+                &-item{
+                     padding: $listing-page-sort-dropdown-sortlist-item-padding;
+                     border: $listing-page-sort-dropdown-sortlist-item-border;
+
+                    &-text{
+                        font-size: $listing-page-sort-dropdown-sortlist-item-text-fontSize;
+                        color: $listing-page-sort-dropdown-sortlist-item-text-color;
+                    }
+                }
+            }
+        }
+
+
+    }//end sort
+    &__loadmore{
+        border: $listing-page-loadmore-border;
+        padding: $listing-page-loadmore-padding;
+        position: relative;
+        min-width: 160px;
+        a.ex-listing-page__loadmore--link{
+            color: $listing-page-loadmore-link-color;
+        }
+        &--link{
+            font-size: $listing-page-loadmore-link-fontSize;
+            
+            @include ltr {
+                padding-right: $listing-page-loadmore-link-spaceBetweenTextAndArrow-en;
+            }
+    
+            @include rtl {
+                padding-left: $listing-page-loadmore-link-spaceBetweenTextAndArrow-ar;
+            }
+      
+        }
+        &--icon{
+            color: $listing-page-loadmore-arrow-color;
+        }
+
+        &:hover{
+            background: $listing-page-loadmore-hover-background;
+            
+            .ex-listing-page__loadmore--link,
+            .ex-listing-page__loadmore--icon{
+                color: $listing-page-loadmore-hover-color;
+            }
+        }
+
+    }
+    #loaderDiv{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        display: flex;
+        justify-content: flex-start;
+        //padding-top: 130px;
+        // align-items: center;
+        padding: 0 40px;
+        font-weight: 700;
+    }
+    &__filters{
+        &--buttons{
+            margin: 0 0 15px 0;
+            .button{
+                border: 2px solid #3f3e45;
+                border-radius: 3px;
+                background: #fff;
+                height: 28px;
+                width: auto;
+                min-width: 0;
+                padding: 0 10px;
+                span{
+                    color: #3f3e45;
+                }
+                &:hover{
+                    background: #3f3e45;
+                    span{
+                        color: #fff;
+                    }
+                    
+                }
+            }
+            .filter-button{
+                &--text{
+                    margin: 10px ;
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+                &--icon{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    // @media only screen 
+    // and (max-device-width : 1280px) 
+    // and (orientation : landscape){
+
+        @media only screen 
+        and (max-device-width : 1280px) {
+            .ex-listing-page__filters--buttons.d-lg-none{
+                display: block !important;
+            }
+            > .col-lg-9{
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+            > .col-lg-3{
+                display: none !important;
+            }
+    
+        }
+    
+
+  
+}
+
+
+
+  
+
+  
+
+  
+

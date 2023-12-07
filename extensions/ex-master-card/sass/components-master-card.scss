@@ -1,0 +1,216 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    border: $master-card-border;
+
+
+    > .component-content{ 
+        width:100%;
+        height:100%;
+    }
+    &__wrapper {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+    }
+    &__link{
+        display: none;
+    }
+    &__icon {
+        img {
+            max-width: $master-card-icon-width;
+            min-width:  $master-card-icon-width;
+        }
+    }
+    &__title { 
+        @at-root{
+            & + .#{$ProjectName}__description{
+                margin-top: $master-card-description-margin-top;
+            }
+        }
+    }
+    &__details {
+        > div {
+            margin-top: $master-card-details-margin-top;
+            @at-root{
+                .#{$ProjectName}__meta {
+                    + .#{$ProjectName}__details{
+                        > div:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__image {
+        .sitecore-image{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center;
+            
+            img {
+                opacity: 0;
+                min-width: $master-card-img-min-width;
+                @at-root{
+                    .on-page-editor &{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &__image-icon{
+        display: none;
+
+        img {
+            min-width: $master-card-img-icon-width;
+            max-width: $master-card-img-icon-width;
+        }
+    }
+    &__meta {
+        .type{
+            img { 
+                max-width: $master-card-type-icon-width;
+            }
+        }
+    }
+
+    &--horizontal {
+        .#{$ProjectName} {
+            &__wrapper {
+                display: flex;
+
+                @media #{$sm}{
+                    display: block;
+                }
+            }
+            &__image {
+                flex-grow: 1;
+                margin: $master-card-img-margin;
+                @media #{$sm}{
+                    @include ltr{
+                        margin: 0;
+                    }
+                    @include rtl{
+                        margin: 0;
+                    }
+                }
+                @media #{$md}{
+                    @include ltr{
+                        margin-right: 0;
+                    }
+                    @include rtl{
+                        margin-left:0;
+                    }
+                }
+                .sitecore-image{
+                    img {
+                        max-width: $master-card-img-max-width;
+                        @media #{$md}{
+                            max-width: $master-card-img-md-max-width;
+                            min-width: $master-card-img-md-min-width;
+                        }
+                        @media #{$sm}{
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+            &__image-icon{
+                display: block;
+                @media #{$sm}{
+                    display: none;
+                }
+            }
+            &__icon { 
+                display: none;
+                @media #{$sm}{
+                    display: block;
+                }
+            }
+            &__details { 
+                display: flex;
+                flex-wrap: wrap;
+                @media #{$sm}{
+                    flex-direction: column;
+                }
+                > div {  
+                    width: calc(100% * (1/#{$master-card-details-columns}) - 5px);
+                   
+                    @include ltr{
+                        padding-right: $master-card-details-column-padding;
+                        &:last-child {
+                            padding-right: 0;
+                        }
+                    }
+                    @include rtl{
+                        padding-left: $master-card-details-column-padding;
+                        &:last-child {
+                            padding-left: 0;
+                        }
+                    }
+                    @media #{$sm}{
+                        width: 100%;
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    @media #{$md}{
+                        width: calc(100% * (1/#{$master-card-details-md-columns}) - 5px);
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+            }
+            &__meta {
+                + .#{$ProjectName}__details{
+                    > div {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &--with-hover{
+        .#{$ProjectName} {
+            @include transition(all $master-card-hover-transiton ease);
+
+            &:after {
+                content: '';
+                pointer-events: none;
+                height: $master-card-hover-border-bottom-width;
+                width: 100%;
+                bottom: -$master-card-hover-border-bottom-width;
+                display: block;
+            }
+            
+            &:hover{
+              border-color: $master-card-hover-border-color;
+              box-shadow:  0px $master-card-hover-border-bottom-width 0px 0px $master-card-hover-border-color;
+              transform: $master-card-hover-transform;
+
+              &:after {
+                pointer-events: visible;
+              }
+            }
+
+            &__link{
+                display: block;
+            }
+            &__cta {
+                display: none;
+            }
+        }
+    }
+}

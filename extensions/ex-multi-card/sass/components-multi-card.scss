@@ -1,0 +1,281 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+// extenstions 
+$multicard : multi-card;
+
+@mixin multicard($width : 40% , $scale : 1.5) {
+    max-width: $width;
+    transform: scale($scale);
+    @include rtl {
+        transform-origin: top right;
+    }
+
+    @include ltr {
+        transform-origin: top left;
+    }
+}
+@mixin content-font($size : 16px) {
+    font-size: $size;
+    line-height: #{$size + 4px};
+} 
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    min-height: 250px;
+    > .component-content{
+        height: 100%;
+    }
+    .#{$multicard}{
+        &__image {
+            width: calc(100% - #{$multi-cards-padding});
+            height: calc(100% - #{$multi-cards-padding});
+            img {
+                max-height:100%;
+                width: 100%;
+                opacity: 0;
+            }
+
+            .image-background {
+                @include transition(all 0.5s ease);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                background-position-x: center;
+            }
+        } 
+        
+        &__content{
+            @include rtl {
+                margin-right: $multi-cards-border-width;
+            }
+            @include ltr{
+                margin-left: $multi-cards-border-width;
+            }
+            top: $multi-cards-content-top;
+            background-color: $multi-cards-content-bg-color;
+            z-index: 1;
+
+
+            // default styles for card font sizes 
+            width:$multi-cards-content-default-width;
+            &__title{
+                @include content-font($multi-cards-content-title-font-size);
+            }
+            &__description{
+                @include content-font($multi-cards-content-description-font-size);
+                color : $multi-cards-content-description-color;
+            }
+            // end default styles for card font sizes 
+
+
+            .small-truncate{
+                display: block;
+            }
+            .large-truncate{
+                display: none;
+            }
+            .tags {
+                color: $multi-cards-content-tag-color;
+
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width:$multi-cards-content-tag-bullet-width;
+                    height:$multi-cards-content-tag-bullet-width;
+                    border-radius: $multi-cards-content-tag-bullet-radius;
+                    background-color: $multi-cards-content-tag-color;
+                    @include ltr{
+                        margin-right: $multi-cards-content-tag-bullet-margin;
+                    }
+
+                    @include rtl{
+                        margin-left: $multi-cards-content-tag-bullet-margin;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        z-index: 1;
+        border: $multi-cards-border-width solid $primary-color;
+        width:calc(100% - #{$multi-cards-padding});
+        height:calc(100% - #{$multi-cards-padding});
+        top:0;
+        @include ltr{
+            left:0;
+        }
+        @include rtl{
+            right : 0;
+        }
+
+    }
+    
+    &:hover{
+        .image-background {
+            transform:$multi-cards-image-hover-transform;
+            opacity: $multi-cards-image-hover-opacity;
+        }
+    }
+    
+    &--multi-view{
+        .#{$ProjectName}{ 
+            // small card 
+            margin-bottom: $multi-cards-item-col-margin;
+            flex: 0 0 calc(25% - #{$multi-cards-item-col-margin});
+
+            @media #{$md}{
+                flex: 0 0 calc(50% - #{$multi-cards-item-col-margin / 2});
+            }
+
+            height:240px;
+            
+            @media #{$sm}{
+                height:auto;
+                min-height:$multi-cards-item-min-height;
+                flex: 0 0 100%;
+            }
+            @include rtl{
+                margin-left: $multi-cards-item-col-margin;
+                @media #{$sm}{
+                    margin-left: 0;
+                }
+            }
+            @include ltr{
+                margin-right: $multi-cards-item-col-margin;
+                @media #{$sm}{
+                    margin-right: 0;
+                }
+            }
+            .small-truncate{
+                display: block;
+            }
+            .large-truncate{
+                display: none;
+            }
+
+        }
+        .#{$ProjectName}{
+            &:nth-child(5n+1){ 
+                // large ones 
+                flex: 0 0 calc(50% - #{$multi-cards-item-col-margin});
+                height:$multi-cards-large-item-height;
+
+             
+                .small-truncate{
+                    display: none;
+                }
+                .large-truncate{
+                    display: block;
+                }
+                @media #{$md}{
+                    height:$multi-cards-large-item-height;
+                    
+                    flex: 0 0 100%;
+                    .small-truncate{
+                        display: block;
+                    }
+                    .large-truncate{
+                        display: none;
+                    }
+                    @include rtl{
+                        margin-left: 0;
+                    }
+                    @include ltr{
+                        margin-right: 0;
+                    }
+                }
+                @media #{$sm}{
+                    height:auto;
+                    min-height:$multi-cards-item-min-height;
+                    flex: 0 0 100%;
+                    @include rtl{
+                        margin-left: 0;
+                    }
+                    @include ltr{
+                        margin-right: 0;
+                    }
+                }
+
+                .#{$multicard}{
+                    &__content{
+                        @include multicard(40%);
+                        .tags {
+                            transform: scale(0.67);
+                            @include rtl {
+                                transform-origin: top right;
+                            }
+                            @include ltr {
+                                transform-origin: top left;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media #{$lg}{
+                &:nth-child(3n){ 
+                    @include rtl{
+                        margin-left: 0;
+                    }
+                    @include ltr{
+                        margin-right: 0;
+                    }
+                }
+            }
+            @media #{$md}{
+                &:nth-child(3n), &:nth-child(5n){ 
+                    @include rtl{
+                        margin-left: 0;
+                    }
+                    @include ltr{
+                        margin-right: 0;
+                    }
+                }
+            }
+           
+            &:nth-child(6n){ 
+                margin-top: -#{($multi-cards-large-item-height / 2) + ($multi-cards-item-col-margin / 2)};
+                @media #{$md}{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+
+    &--large {
+        .#{$multicard}{
+            &__content{
+                @include multicard(40%);
+
+                .tags {
+                    transform: scale(0.67);
+                    @include rtl {
+                        transform-origin: top right;
+                    }
+                    @include ltr {
+                        transform-origin: top left;
+                    }
+                }
+            }
+        }
+    }
+    &--medium {
+        .#{$multicard}{
+            &__content{
+                @include multicard(50%, 1.2);
+            }
+        }
+    }
+
+}

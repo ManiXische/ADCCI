@@ -1,0 +1,171 @@
+/***************************************************************************************************
+Extension Name: ex-announcement 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-announcement 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-announcement 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-announcement {
+  background: #6C6B70;
+  padding: 20px;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.ex-announcement--primary {
+  background: #FF8D00;
+}
+
+.ex-announcement--primary .ex-announcement__close {
+  color: #ffffff;
+}
+
+.ex-announcement--primary .ex-announcement__close:hover {
+  color: #ffffff;
+}
+
+.ex-announcement--primary .ex-announcement__title {
+  color: #ffffff;
+}
+
+.ex-announcement--primary .ex-announcement__title:hover {
+  color: #ffffff;
+}
+
+.ex-announcement--primary .ex-announcement__desc {
+  color: #ffffff;
+}
+
+.ex-announcement--primary .ex-announcement__desc:hover {
+  color: #ffffff;
+}
+
+.ex-announcement--secondary {
+  background: #673AB7;
+}
+
+.ex-announcement--secondary .ex-announcement__close {
+  color: #ffffff;
+}
+
+.ex-announcement--secondary .ex-announcement__close:hover {
+  color: #ffffff;
+}
+
+.ex-announcement--secondary .ex-announcement__title {
+  color: #ffffff;
+}
+
+.ex-announcement--secondary .ex-announcement__title:hover {
+  color: #ffffff;
+}
+
+.ex-announcement--secondary .ex-announcement__desc {
+  color: #ffffff;
+}
+
+.ex-announcement--secondary .ex-announcement__desc:hover {
+  color: #ffffff;
+}
+
+.ex-announcement.remove {
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px !important;
+  height: 0px;
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.ex-announcement__close {
+  color: #ffffff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 1;
+  font-size: 28px;
+  line-height: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+html[lang*='ar'] .ex-announcement__close,
+html[class*='translated-rtl'] .ex-announcement__close {
+  right: auto;
+  left: 20px;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-announcement__close {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.ex-announcement__close:hover {
+  color: #ffffff;
+}
+
+.ex-announcement__title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 30px;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-announcement__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.ex-announcement__title:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ex-announcement__desc {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.ex-announcement__link {
+  text-decoration: underline;
+}

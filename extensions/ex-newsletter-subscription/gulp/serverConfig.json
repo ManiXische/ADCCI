@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-newsletter-subscription",
+        "version" : "1.0.0",
+        "owner" :  "Mahmoud"
+    }
+}

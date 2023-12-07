@@ -1,0 +1,18 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Mixins
+Author: TAMM
+***************************************************************************************************/
+
+// slick mixins
+@function slick-image-url($url) {
+    @if function-exists(image-url) {
+        @return image-url($url);
+    }
+    @else {
+        @return url($slick-loader-path + $url);
+    }
+}
+
+
+

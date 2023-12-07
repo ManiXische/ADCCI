@@ -1,0 +1,90 @@
+/***************************************************************************************************
+Extension Name: ex-service-card 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-service-card 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-service-card 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-service-card {
+  width: 100%;
+}
+
+.ex-service-card .ui-lib-start-login {
+  background-color: #F5F5F7 !important;
+  border-color: #D6D6D6 !important;
+}
+
+.ex-service-card .ui-lib-button {
+  background-color: #FF8D00 !important;
+  color: #3F3E45 !important;
+}
+
+.ex-service-card .ui-lib-button:hover {
+  background-color: #2B2849 !important;
+}
+
+.ex-service-card h1, .ex-service-card h2, .ex-service-card h3, .ex-service-card h4, .ex-service-card h5, .ex-service-card h6 {
+  color: #3F3E45 !important;
+}
+
+.ex-service-card p, .ex-service-card span {
+  color: #3F3E45 !important;
+}
+
+.ex-service-card .ui-lib-start-login__properties span, .ex-service-card .ui-lib-start-login__title span {
+  color: #3F3E45 !important;
+}
+
+.ex-service-card .ui-lib-start-login__properties svg path, .ex-service-card .ui-lib-start-login__title svg path {
+  fill: #3F3E45 !important;
+}
+
+.ex-service-card .ui-lib-process-step__content-title {
+  color: #3F3E45 !important;
+}
+
+.ex-service-card .ui-lib-table-cell {
+  color: #3F3E45 !important;
+}
+
+.ex-service-card .ui-lib-process-step__order-value {
+  color: #3F3E45 !important;
+  background-color: #F5F5F7 !important;
+}
+
+.ex-service-card .ui-lib-table__title {
+  background-color: #F5F5F7 !important;
+}

@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-floating-action-button",
+        "version" : "1.0.0",
+        "owner" :  "ahmedalaaezzt"
+    }
+}

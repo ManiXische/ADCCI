@@ -1,0 +1,35 @@
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@{
+    string ChatURL = string.Empty, ChatIcon = string.Empty;
+    Sitecore.Data.Fields.ImageField ChatImageField = null;
+    Sitecore.Data.Fields.LinkField ChatFieldURL = null;
+    var renderingcontext = Sitecore.Mvc.Presentation.RenderingContext.CurrentOrNull;
+    var datasource = renderingcontext.Rendering.DataSource;
+    Sitecore.Data.Items.Item datasourceitem = Sitecore.Context.Database.GetItem(datasource);
+    if (datasourceitem != null && datasourceitem.Fields != null && datasourceitem.Fields.Count > 0)
+    {
+        ChatImageField = (Sitecore.Data.Fields.ImageField)(datasourceitem.Fields["ChatIcon"]);
+        ChatFieldURL = (Sitecore.Data.Fields.LinkField)(datasourceitem.Fields["ChatURL"]);
+
+    }
+}
+
+<div class="ex-live-chat">
+    <div class="ex-live-chat__img cursor-pointer position-fixed d-flex flex-column justify-content-center align-items-center" data-live-chat>
+        @if (ChatImageField != null && ChatImageField.MediaItem != null)
+        {
+            @Html.Sitecore().Field("ChatIcon", Sitecore.Context.Database.GetItem(datasource))
+
+        }
+    </div>
+    <div class="ex-live-chat__popup position-fixed">
+        <div class="ex-live-chat__popup__header position-absolute">
+            <div class="live-chat-close-button cursor-pointer" data-live-chat> <i class="icon-remove"></i> </div>
+        </div>
+        <div class="ex-live-chat__popup__content h-100 position-relative">
+            <iframe src="@ChatFieldURL.Url" frameborder="0" scrolling="no" height="100%" width="380px"></iframe>
+        </div>
+        <div class="live-chat-overlay" data-live-chat></div>
+    </div>
+</div>

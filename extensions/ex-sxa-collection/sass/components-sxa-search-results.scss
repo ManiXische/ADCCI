@@ -1,0 +1,102 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.ex-sxa-search-result {
+  $parentClass : &;
+
+  border-top: $ex-sxa-search-result-border-top;
+  margin: $ex-sxa-search-result-card-margin;
+  padding: $ex-sxa-search-result-card-padding;
+  background-color: $ex-sxa-search-result-background-color;
+ 
+
+  &--pointer{
+    cursor: pointer;
+  }
+  
+  &__card-title {
+    font-size: $ex-sxa-search-result-card-title-font-size;
+    line-height: $ex-sxa-search-result-card-title-line-height;
+    color: $ex-sxa-search-result-card-title-color;
+  }
+
+  &__card-description {
+    font-size: $ex-sxa-search-result-card-description-font-size;
+    line-height: $ex-sxa-search-result-card-description-line-height;
+    color: $ex-sxa-search-result-card-description-color;
+  }
+
+  &__card-date {
+    span {
+      font-size: $ex-sxa-search-result-card-date-font-size;
+      line-height: $ex-sxa-search-result-card-date-line-height;
+      font-weight: $ex-sxa-search-result-card-date-font-weight;
+      color: $ex-sxa-search-result-card-date-color;
+      @include ltr {
+        margin-right: $ex-sxa-search-result-card-date-margin-right;
+      }
+      @include rtl {
+        margin-left: $ex-sxa-search-result-card-date-margin-right;
+        font-size: $ex-sxa-search-result-card-date-icon-size;
+      }
+    }
+    i {
+      color: $ex-sxa-search-result-card-date-icon-color;
+      font-size: $ex-sxa-search-result-card-date-icon-size;
+
+      @include ltr {
+        margin-right: 10px;
+      }
+      @include rtl {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__card-tag {
+    span {
+      font-size: $ex-sxa-search-result-card-tag-font-size;
+      line-height: $ex-sxa-search-result-card-tag-line-height;
+      font-weight: $ex-sxa-search-result-card-tag-font-weight;
+      color: $ex-sxa-search-result-card-tag-color;
+      &::before {
+        content: "";
+        position: relative;
+        width: $ex-sxa-search-result-card-tag-seprator-width;
+        height: $ex-sxa-search-result-card-tag-seprator-height;
+        background-color: $ex-sxa-search-result-card-tag-seprator-color;
+        display: inline-block;
+        top: -1px;
+        vertical-align: middle;
+        @include ltr {
+          margin-right: 10px;
+        }
+        @include rtl {
+          margin-left: 10px;
+        }
+      }
+      @include ltr {
+        margin-right: 10px;
+      }
+      @include rtl {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &:hover {
+    #{$parentClass}{
+      &__card-title:not(.no-hover){
+        text-decoration: underline;
+      }
+    }
+  }
+
+}

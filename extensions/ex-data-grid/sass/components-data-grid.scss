@@ -1,0 +1,123 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+  &__search-box input,
+  &__search-button a,
+  &__dropdown select {
+    height: $ex-data-grid-search-button-a-height;
+    border-radius: $ex-data-grid-search-button-a-border-radius;
+    border: $ex-data-grid-search-button-a-border;
+    background-color: $ex-data-grid-search-button-a-background-color;
+  }
+
+  &__search-box input {
+    padding: $ex-data-grid-search-box-input-padding;
+    font-size: $ex-data-grid-search-box-input-font-size;
+    font-weight: $ex-data-grid-search-box-input-font-weight;
+    line-height: $ex-data-grid-search-box-input-line-height;
+    letter-spacing: $ex-data-grid-search-box-input-letter-spacing;
+    color: $ex-data-grid-search-box-input-color;
+    @include ltr {
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    @include rtl {
+      border-left: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &__search-button a {
+    padding: $ex-data-grid-search-button-a-padding;
+    font-size: $ex-data-grid-search-button-a-font-size;
+    cursor: pointer;
+    @include rtl {
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    @include ltr {
+      border-left: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &__dropdown select {
+    padding: $ex-data-grid-dropdown-select-padding;
+  }
+
+  label {
+    opacity: $ex-data-grid-label-opacity;
+    font-size: $ex-data-grid-label-font-size;
+    color: $ex-data-grid-label-color;
+    letter-spacing: $ex-data-grid-label-letter-spacing;
+    @include rtl {
+      letter-spacing: 0;
+    }
+  }
+
+  &__total-results {
+    font-size: $ex-data-grid-total-results-text-font-size;
+    color: $ex-data-grid-total-results-text-font-size-color;
+    font-weight: $ex-data-grid-total-results-text-font-size-font-weight;
+    line-height: $ex-data-grid-total-results-text-font-size-line-height;
+    letter-spacing: $ex-data-grid-total-results-text-font-size-letter-spacing;
+  }
+
+  .table-responsive {
+    min-height: 300px;
+    thead th {
+      color: $ex-data-grid-table-responsive-thead-th-color;
+      font-size: $ex-data-grid-table-responsive-thead-th-font-size;
+      line-height: $ex-data-grid-table-responsive-thead-th-line-height;
+      font-weight: $ex-data-grid-table-responsive-thead-th-font-weight;
+      letter-spacing: $ex-data-grid-table-responsive-thead-th-letter-spacing;
+      border-top: $ex-data-grid-table-responsive-thead-th-border-top;
+      border-bottom: $ex-data-grid-table-responsive-thead-th-border-bottom;
+    }
+    td {
+      line-height: $ex-data-grid-table-responsive-td-line-height;
+      font-size: $ex-data-grid-table-responsive-td-font-size;
+      @include rtl {
+        text-align: right;
+      }
+    }
+  }
+
+  .grid-load-more {
+    display: none;
+  }
+
+  @media #{$ie11} {
+    table.table tr {
+      display: table-row !important;
+    }
+    table {
+      table-layout: fixed;
+    }
+    .grid-load-more-wrapper {
+      display: block !important;
+    }
+  }
+
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: Configurational classes
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+.config {
+    &__color{
+        &-text{
+            background-color : $layout-body-color;
+        }
+        &-link{
+            background-color : $layout-link-default-color;
+        }
+        &-label{
+            background-color :  $layout-label-default-color;
+        }
+    }
+    
+    &__button{
+        &--hover{
+            color : $layout-button-hover-color;
+            background: $layout-button-hover-bg;  
+        }
+        &--focus{
+            color : $layout-button-focus-color;
+            background: $layout-button-focus-bg;  
+        }
+        &--secondary-hover{
+            color : $layout-button-secondary-hover-color;
+            background: $layout-button-secondary-hover-bg;  
+        }
+        &--secondary-focus{
+            color : $layout-button-secondary-focus-color;
+            background: $layout-button-secondary-focus-bg;  
+        }
+        &--tertiary-hover{
+            color : $layout-button-tertiary-hover-color;
+            background: $layout-button-tertiary-hover-bg;  
+        }
+        &--tertiary-focus{
+            color : $layout-button-tertiary-focus-color;
+            background: $layout-button-tertiary-focus-bg;  
+        }
+    }
+
+    &__spacer{
+        background : $primary-color;
+        color : $white-color;
+        * {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &--5{
+            height:5px;
+            width:5px;
+            font-size: 4px;
+        }
+        &--10{
+            height:10px;
+            width:10px;
+            font-size: 8px;
+        }
+        &--15{
+            height:15px;
+            width:15px;
+            font-size: 13px;
+
+        }
+        &--20{
+            height:20px;
+            width:20px;
+            font-size: 16px;
+            
+        }
+        &--30{
+            height:30px;
+            width:30px;
+            font-size: 24px;
+            
+        }
+        &--40{
+            height:40px;
+            width:40px;
+            font-size: 32px;
+            
+        }
+        &--50{
+            height:50px;
+            width:50px;
+            font-size: 41px;
+            
+        }
+        &--60{
+            height:60px;
+            width:60px;
+            font-size: 50px;
+            
+        }
+        &--80{
+            height:80px;
+            width:80px;
+            font-size:71px;
+        }
+    }
+}

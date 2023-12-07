@@ -1,0 +1,393 @@
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Don't remove Section -->
+
+    <!-- ex-main-theme -->
+    <link rel="stylesheet" href="../../ex-main-theme/styles/bootstrap.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/icomoon.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/icons.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/jquery-fancybox.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/slick.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/smooth-scrollbar.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/components-main-theme.css">
+
+    <!-- ex-layout  -->
+    <link rel="stylesheet" href="../../ex-layout/styles/components-layout.css">
+    <link rel="stylesheet" href="../../ex-icon-card/styles/components-icon-card.css">
+    <link rel="stylesheet" href="../../ex-news-cards/styles/components-news-cards.css">
+    <link rel="stylesheet" href="../../ex-parallax/styles/components-parallax.css">
+    <link rel="stylesheet" href="../../ex-sxa-collection/styles/components-sxa-load-more.css">
+    <link rel="stylesheet" href="../../ex-sxa-collection/styles/components-sitecore-form.css">
+    <link rel="stylesheet" href="../../ex-loader/styles/components-loader.css">
+    <!-- End don't remove Section -->
+
+
+    <!-- Your css files goes here -->
+    <link rel="stylesheet" href="../..\\ex-tenders/styles/components-ex-tenders.css">
+
+
+    <!-- Your css files goes here -->
+
+
+</head>
+
+<body>
+    <div class="container mt-9">
+        <div class="row ex-tenders">
+            <div class="col-lg-3 ">
+                <!-- Your code goes here -->
+                <div class="nav-status">
+                    <ul class="nav-filter mb-7">
+                        <li>
+                            <a data-tenderFilter="OPEN" class="active" href="#" data-fancybox-close><span
+                                    class="icon rotated-element icon-arrow-small-right disable-pointer mx-1"></span><span>Open
+                                    Tenders</span></a>
+                        </li>
+
+                        <li>
+                            <a data-tenderFilter="COMPL" href="#" data-fancybox-close><span
+                                    class="icon rotated-element icon-arrow-small-right disable-pointer mx-1"></span><span>Completed
+                                    Tenders</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="row ex-sitecore-form">
+                    <div class="col-md-12">
+                        <div class="search-filters">
+                            <div class="ex-sitecore-form__input">
+                                <div class="d-flex  align-items-center mb-2">
+                                    <div>
+                                        <label class="ex-sitecore-form__label">
+                                            Search
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="ex-sitecore-form__link mx-4 clearSearch">Clear</a>
+                                    </div>
+                                </div>
+                                <div id="tender-search" class="position-relative">
+                                    <input type="text">
+                                    <i class="icon-search"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="sorting-filters">
+                            <div class="ex-sitecore-form__input mt-7  pr-5">
+                                <div class="d-flex  align-items-center mb-2">
+                                    <div>
+                                        <label class="ex-sitecore-form__label">
+                                            Due Date
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="ex-sitecore-form__link mx-4 clearDuedate">Clear All</a>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div>
+                                        <div class="ex-sitecore-form__input__radiobox ">
+                                            <input type="radio" name="dueDate" id="CLOSE_IN_0D" checked="" value="">
+                                            <label for="CLOSE_IN_0D"></label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="ex-sitecore-form__input__label" for="CLOSE_IN_0D">All</label>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div>
+                                        <div class="ex-sitecore-form__input__radiobox ">
+                                            <input type="radio" name="dueDate" id="CLOSE_IN_5D" value="CLOSE_IN_5D">
+                                            <label for="CLOSE_IN_5D"></label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="ex-sitecore-form__input__label" for="CLOSE_IN_5D">Closing in 5
+                                            days</label>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div>
+                                        <div class="ex-sitecore-form__input__radiobox ">
+                                            <input type="radio" name="dueDate" id="CLOSE_IN_15D" value="CLOSE_IN_15D">
+                                            <label for="CLOSE_IN_15D"></label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="ex-sitecore-form__input__label" for="CLOSE_IN_15D">Closing in 15
+                                            days</label>
+                                    </div>
+                                </div>
+                                <div class="d-flex  align-items-center mb-2">
+                                    <div>
+                                        <div class="ex-sitecore-form__input__radiobox ">
+                                            <input type="radio" name="dueDate" id="CLOSE_IN_30D" value="CLOSE_IN_30D">
+                                            <label for="CLOSE_IN_30D"></label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="ex-sitecore-form__input__label" for="CLOSE_IN_30D">Closing in 30
+                                            days</label>
+                                    </div>
+                                </div>
+                                <div class="d-flex  align-items-center mb-2">
+                                    <div>
+                                        <div class="ex-sitecore-form__input__radiobox ">
+                                            <input type="radio" name="dueDate" id="CLOSE_AFT_30D" value="CLOSE_AFT_30D">
+                                            <label for="CLOSE_AFT_30D"></label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="ex-sitecore-form__input__label" for="CLOSE_AFT_30D">Closing after
+                                            30
+                                            days</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ex-sitecore-form__input mt-7  pr-5 ">
+                                <div class="d-flex  align-items-center mb-4">
+                                    <div>
+                                        <label class="ex-sitecore-form__label">
+                                            Category
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="ex-sitecore-form__link mx-4 clearALLLnk">Clear All</a>
+                                    </div>
+                                </div>
+                                <div class="listCategories"></div>
+
+                                <div class="d-flex  align-items-top ">
+                                    <a href="#" class="ex-sitecore-form__link showmoreLnk">Show More</a>
+                                    <a href="#" class="ex-sitecore-form__link showlessLnk">Show Less</a>
+                                </div>
+                            </div>
+                            <div class="ex-sitecore-form__input mt-7  pr-5 ">
+                                <div class="d-flex  align-items-center mb-4">
+                                    <div>
+                                        <label class="ex-sitecore-form__label">
+                                            Entities
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="ex-sitecore-form__link mx-4 clearALLLnk">Clear All</a>
+                                    </div>
+                                </div>
+                                <div class="listEntities"></div>
+
+
+                                <div class="d-flex  align-items-top ">
+                                    <a href="#" class="ex-sitecore-form__link showmoreLnk">Show More</a>
+                                    <a href="#" class="ex-sitecore-form__link showlessLnk">Show Less</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 component-tender-wrap">
+                <div class="d-none">
+                    <div id="tender-list-API">https://tammdevcm1.tamm.abudhabi/SCAPI/ADGEs/AlMaqtaa/Tender/List</div>
+                </div>
+                <div class="row mb-lg-8 mt-lg-0 mb-sm-4 mt-sm-4">
+                    <div class="col-md-12">
+                        <div class=" align-content-start d-flex  d-flex flex-wrap">
+                            <a data-fancybox data-src="#dialog-status" href="javascript:;"
+                                class="button button--secondary button--small my-2 button-status align-self-center align-items-center"><span
+                                    class="icon-picture-polaroid"></span> <span class="mx-2">Browse Status</span>
+                            </a>
+                            <a data-fancybox data-src="#dialog-filter" href="javascript:;"
+                                class="mx-2 button button--secondary button--small my-2 button-filter align-self-center align-items-center"><span
+                                    class="icon-filter"></span> <span class="mx-2">Filters</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-between flex-lg-row flex-md-column flex-sm-column">
+
+                            <div class="">
+                                <p class="caption  text-black-50 hide-print" id="resultIndicator">
+                                    SHOWN {%size%} FROM {%count%}
+                                </p>
+                            </div>
+                            <div class="ex-sitecore-form">
+                                <div class="sorting-filters-sort-filter sorting-filters--select   hide-print">
+                                    <p class="caption  text-black-50 m-0 mx-2 d-flex align-items-center">
+                                        Sort by
+                                    </p>
+                                    <div class="dropdown-list-arrow position-relative">
+
+                                        <select class="sortingFilters" data-val="true">
+                                            <option label=" "></option>
+                                            <option value="LAST_CREATED" selected>Latest Tenders</option>
+                                            <option value="FIRST_CREATED">Oldest Tenders</option>
+                                            <option value="FIRST_DUEDATE">Farthest due date</option>
+                                            <option value="LAST_DUEDATE">Earliest due date</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-7" style="display: none;">
+                    <div class="col-md-12">
+                        <p class="small-text text-black-50">showing <span id="current-count"></span> of <span
+                                id="total-count"></span></p>
+                    </div>
+                </div>
+                <div id="loaderDiv" class="">loading ... </div>
+                <div id="no-result">
+                    no result ...
+                </div>
+                <div id="no-listing-result">
+                    no listing result
+                </div>
+                <div id="call-error">
+                    error calling ...
+                </div>
+                <div class="ex-tenders--listing">
+
+
+                </div>
+
+                <div class="row hide-print">
+                    <div class="col-12 ">
+                        <div class="d-flex justify-content-center">
+                            <a href="javascript:;" id="load-more-tender"
+                                class="button button--secondary button--medium mt-9">
+                                LOAD MORE
+                                <span class="icon icon-loadmore"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="display: none;" class="filter_template">
+        <div class="d-flex  align-items-top mb-2">
+            <div>
+                <div class=" ex-sitecore-form__input__checkbox ex-sitecore-form__input__checkbox--dark">
+                    <input type="checkbox" {%_filter_checked%} id="{%_filter_id%}" value="{%_filter_value%}">
+                    <label for="{%_filter_id%}"></label>
+                </div>
+            </div>
+            <div>
+                <label class="ex-sitecore-form__input__label" for="{%_filter_id%}">{%_filter_Title%}</label>
+            </div>
+        </div>
+    </div>
+    <div class="d-none">
+        <div class="dialog-component  d-inline-flex flex-column p-0 rounded" id="dialog-filter">
+            <header class="dialog-component__header d-flex align-items-center p-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="">
+                            <h4 class="text-capitalize  font-weight-boldest">Filters</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+            <div class="dialog-component__message">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="ex-tenders px-1 py-4 ex-sitecore-form"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div
+                class="dialog-component__footer d-flex justify-content-start align-items-center border-top mt-0 p-4 mx-0 mb-0">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex  align-items-center">
+                            <div>
+                                <a class="button button--primary button--medium" id="applyFilters" href="javascript:;">
+                                    Apply
+                                </a>
+                            </div>
+                            <div>
+                                <a class="grey-900 mx-7 " data-fancybox-close href="javascript:;">
+                                    <u>
+                                        Cancel
+                                    </u>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog-component  d-inline-flex flex-column p-0 rounded" id="dialog-status">
+            <header class="dialog-component__header d-flex align-items-center p-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="">
+                            <h4 class="text-capitalize  font-weight-boldest">Browse Status</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+            <div class="dialog-component__message">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 ">
+                            <div class="ex-tenders px-1 py-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-component__footer d-flex justify-content-start align-items-center">
+
+            </div>
+        </div>
+    </div>
+    <!-- Lib -->
+    <script
+        src="https://portalqa.elab.abudhabi.ae/almaqtaa/-/media/Extension-Themes/ex-core/scripts/Core/xaquery.js"></script>
+
+    <!-- <script src="../../ex-main-theme/scripts/lib/smooth-scrollbar-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/fontawesome-min.js"></script> -->
+    <script src="../../ex-main-theme/scripts/prototypes/prototypeextensions.js"></script>
+    <script src="../../ex-main-theme/scripts/lib/jquery-fancybox-min.js"></script>
+    <!-- <script src="../../ex-main-theme/scripts/lib/owl-carousel-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/slick-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/isotope-pkgd-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/lazysizes-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/jquery-validate-min.js"></script> -->
+    <!-- init  -->
+    <script src="../../ex-main-theme/scripts/fancybox-init.js"></script>
+    <!-- <script src="../../ex-main-theme/scripts/isotope-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/owl-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/scrollbar-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/slick-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/truncate-init.js"></script> -->
+
+    <!-- ex-main-theme : uncomment needed files -->
+
+
+    <!-- Your js files goes here -->
+    <script src="../..\\ex-tenders/scripts/components-ex-tenders.js"></script>
+
+    <!-- Your js files goes here -->
+</body>
+
+</html>

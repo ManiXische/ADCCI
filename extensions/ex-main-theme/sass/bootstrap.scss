@@ -1,0 +1,13 @@
+
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: Bootstrap
+Source: https://getbootstrap.com
+Owner: #{$ProjectOwner} 
+Version: 4.3.1
+***************************************************************************************************/
+
+@import '../vars/_all';
+
+@import "plugins/bootstrap/bootstrap";

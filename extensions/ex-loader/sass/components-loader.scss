@@ -1,0 +1,83 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    // Your code goes here
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $loader-fade-backgroun-color;
+    z-index: 100000;
+
+    img {
+        display: none;
+    }
+    @at-root{
+        .on-page-editor & {
+            z-index: 1;
+            top: auto;
+            bottom: 0;
+            left: auto;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background-color: $loader-oneditor-backgroun-color;
+            padding: 10px;
+
+            img {
+                display: block;
+            }
+        }
+    }
+    &--fixed{
+        position: fixed;
+    }
+    &--static{
+        position: static;
+    }
+    svg * {
+        fill: none;
+        stroke: currentColor;
+    }
+    &__loader{
+        width:50px;
+        height:50px;
+        display:inline-block;
+        padding:0px;
+        text-align:left;
+        position: relative;
+        span {
+            position:absolute;
+            left:0;
+            display:inline-block;
+            width:50px;
+            height:50px;
+            border-radius:100%;
+            background:$loader-first-loader-color;
+            -webkit-animation:loader 1.5s linear infinite;
+            animation:loader 1.5s linear infinite;
+            &:last-child {
+                animation-delay:-0.9s;
+                -webkit-animation-delay:-0.9s;
+            }
+            @keyframes loader {
+                0% {transform: scale(0, 0);opacity:0.8;}
+                100% {transform: scale(1, 1);opacity:0;}
+            }
+            @-webkit-keyframes loader {
+                0% {-webkit-transform: scale(0, 0);opacity:0.8;}
+                100% {-webkit-transform: scale(1, 1);opacity:0;}
+            }
+         }
+    }
+}

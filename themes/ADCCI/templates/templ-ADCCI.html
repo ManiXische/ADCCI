@@ -1,0 +1,2669 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Don't remove Section -->
+    <link rel="stylesheet" href="../styles/ext-components-styles-min.css" />
+    <!-- Your css files goes here -->
+    <link rel="stylesheet" href="../styles/components-ADCCI-fonts.css" />
+    <link rel="stylesheet" href="../styles/components-ADCCI.css" />
+    <link
+      rel="stylesheet"
+      href="../styles/components-ADCCI-scrollAnimation.css"
+    />
+    <!-- Your css files goes here -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <title></title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div id="header" class="">
+        <div class="component content ex-header d-flex">
+          <div class="component-content">
+            <div class="ex-header__wrapper d-flex flex-row p-0 w-100">
+              <div
+                class="ex-header__left-section position-relative d-flex flex-row align-items-center justify-content-start"
+              >
+                <button
+                  type="button"
+                  id="sidebarCollapse"
+                  class="ex-header__left-section__side-menu-nav d-flex align-items-center justify-content-center"
+                >
+                  <!-- <i class="icon-navigation-menu-filled"></i> -->
+                  <div class="menu-icon hamburger hamburger--collapse">
+                    <div class="hamburger-box">
+                      <div class="hamburger-inner"></div>
+                    </div>
+                  </div>
+                </button>
+                <div>
+                  <!-- Sidebar -->
+                  <nav
+                    id="sidebar"
+                    class="sidemenu position-fixed"
+                    data-scrollbar="true"
+                  >
+                    <div
+                      class="sidemenu__header d-flex justify-content-end align-items-center"
+                    >
+                      <!-- <div class="sidemenu__dismiss-menu">
+                         <i class="icon-remove"></i>
+                       </div> -->
+                      <span
+                        class="lang-switch lang-switch--small-screen d-md-block d-lg-none"
+                      >
+                        <div class="language-switcher">
+                          <a href="#"> عربي </a>
+                        </div>
+                      </span>
+                      <span class="d-md-block d-lg-none">
+                        <a
+                          class="ex-header__right-section__icon-wrp ex-header__right-section__icon-wrp--small d-flex align-items-center justify-content-center position-relative"
+                          data-settings="true"
+                        >
+                          <i class="icon-cog"></i>
+                          <div
+                            class="ex-header__right-section__icon-wrp__overlay position-fixed"
+                          ></div>
+                        </a>
+                      </span>
+                    </div>
+                    <ul>
+                      <li class="active"><a href="#">Home</a></li>
+                      <li class="level1 submenu item0 odd first rel-level1">
+                        <div class="navigation-title field-navigationtitle">
+                          <a title="About" tabindex="3">About</a>
+                        </div>
+                        <ul class="clearfix">
+                          <li class="level1 submenu item3 even rel-level1">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Economic Overview"
+                                href="/Why-Abu-Dhabi/Economic-Overview"
+                                tabindex="3"
+                                >Economic Overview</a
+                              >
+                            </div>
+                            <ul class="clearfix">
+                              <li class="level2 item0 odd first rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="LP test of news details"
+                                    href="/master-site/News/LP-test-of-news-details?sc_site=Master+Site"
+                                    >LP test of news details</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item1 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 1"
+                                    href="/master-site/News/News-Details-1?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item2 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test date"
+                                    href="/master-site/News/Test-date?sc_site=Master+Site"
+                                    >Test date</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item3 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 10"
+                                    href="/master-site/News/News-Details-10?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item4 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 11"
+                                    href="/master-site/News/News-Details-11?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item5 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 2"
+                                    href="/master-site/News/News-Details-2?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item6 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 3"
+                                    href="/master-site/News/News-Details-3?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item7 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 4"
+                                    href="/master-site/News/News-Details-4?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item8 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 5"
+                                    href="/master-site/News/News-Details-5?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item9 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 6"
+                                    href="/master-site/News/News-Details-6?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item10 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 7"
+                                    href="/master-site/News/News-Details-7?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item11 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 8"
+                                    href="/master-site/News/News-Details-8?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item12 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 9"
+                                    href="/master-site/News/News-Details-9?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item13 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test News"
+                                    href="/master-site/News/Test-News?sc_site=Master+Site"
+                                    >Test News</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item14 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test news details"
+                                    href="/master-site/News/Test-news-details?sc_site=Master+Site"
+                                    >Test news details</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item15 even last rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="test shaimaa"
+                                    href="/master-site/News/test-shaimaa?sc_site=Master+Site"
+                                    >test shaimaa</a
+                                  >
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="level2 item1 even rel-level2">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Quality of Life"
+                                href="/Why-Abu-Dhabi/Quality-of-Life"
+                                tabindex="3"
+                                >Quality of Life</a
+                              >
+                            </div>
+                          </li>
+                          <li class="level2 item2 odd last rel-level2">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Reasons to Invest"
+                                href="/Why-Abu-Dhabi/Reason-To-Invest"
+                                tabindex="3"
+                                >Reasons to Invest</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a>Portfolio</a></li>
+                      <li><a>Contact</a></li>
+                    </ul>
+                    <ul>
+                      <li class="active"><a>Home</a></li>
+                      <li class="level1 submenu item0 odd first rel-level1">
+                        <div class="navigation-title field-navigationtitle">
+                          <a title="About" tabindex="3">About</a>
+                        </div>
+                        <ul class="clearfix">
+                          <li class="level1 submenu item3 even rel-level1">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Economic Overview"
+                                href="/Why-Abu-Dhabi/Economic-Overview"
+                                tabindex="3"
+                                >Economic Overview</a
+                              >
+                            </div>
+                            <ul class="clearfix">
+                              <li class="level2 item0 odd first rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="LP test of news details"
+                                    href="/master-site/News/LP-test-of-news-details?sc_site=Master+Site"
+                                    >LP test of news details</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item1 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 1"
+                                    href="/master-site/News/News-Details-1?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item2 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test date"
+                                    href="/master-site/News/Test-date?sc_site=Master+Site"
+                                    >Test date</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item3 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 10"
+                                    href="/master-site/News/News-Details-10?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item4 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 11"
+                                    href="/master-site/News/News-Details-11?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item5 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 2"
+                                    href="/master-site/News/News-Details-2?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item6 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 3"
+                                    href="/master-site/News/News-Details-3?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item7 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 4"
+                                    href="/master-site/News/News-Details-4?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item8 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 5"
+                                    href="/master-site/News/News-Details-5?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item9 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 6"
+                                    href="/master-site/News/News-Details-6?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item10 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 7"
+                                    href="/master-site/News/News-Details-7?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item11 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 8"
+                                    href="/master-site/News/News-Details-8?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item12 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 9"
+                                    href="/master-site/News/News-Details-9?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item13 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test News"
+                                    href="/master-site/News/Test-News?sc_site=Master+Site"
+                                    >Test News</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item14 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test news details"
+                                    href="/master-site/News/Test-news-details?sc_site=Master+Site"
+                                    >Test news details</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item15 even last rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="test shaimaa"
+                                    href="/master-site/News/test-shaimaa?sc_site=Master+Site"
+                                    >test shaimaa</a
+                                  >
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="level2 item1 even rel-level2">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Quality of Life"
+                                href="/Why-Abu-Dhabi/Quality-of-Life"
+                                tabindex="3"
+                                >Quality of Life</a
+                              >
+                            </div>
+                          </li>
+                          <li class="level2 item2 odd last rel-level2">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Reasons to Invest"
+                                href="/Why-Abu-Dhabi/Reason-To-Invest"
+                                tabindex="3"
+                                >Reasons to Invest</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a>Portfolio</a></li>
+                      <li><a>Contact</a></li>
+                    </ul>
+                    <ul>
+                      <li class="active"><a>Home</a></li>
+                      <li class="level1 submenu item0 odd first rel-level1">
+                        <div class="navigation-title field-navigationtitle">
+                          <a title="About" tabindex="3">About</a>
+                        </div>
+                        <ul class="clearfix">
+                          <li class="level1 submenu item3 even rel-level1">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Economic Overview"
+                                href="/Why-Abu-Dhabi/Economic-Overview"
+                                tabindex="3"
+                                >Economic Overview</a
+                              >
+                            </div>
+                            <ul class="clearfix">
+                              <li class="level2 item0 odd first rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="LP test of news details"
+                                    href="/master-site/News/LP-test-of-news-details?sc_site=Master+Site"
+                                    >LP test of news details</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item1 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 1"
+                                    href="/master-site/News/News-Details-1?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item2 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test date"
+                                    href="/master-site/News/Test-date?sc_site=Master+Site"
+                                    >Test date</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item3 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 10"
+                                    href="/master-site/News/News-Details-10?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item4 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 11"
+                                    href="/master-site/News/News-Details-11?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item5 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 2"
+                                    href="/master-site/News/News-Details-2?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item6 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 3"
+                                    href="/master-site/News/News-Details-3?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item7 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 4"
+                                    href="/master-site/News/News-Details-4?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item8 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 5"
+                                    href="/master-site/News/News-Details-5?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item9 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 6"
+                                    href="/master-site/News/News-Details-6?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item10 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 7"
+                                    href="/master-site/News/News-Details-7?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item11 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 8"
+                                    href="/master-site/News/News-Details-8?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item12 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 9"
+                                    href="/master-site/News/News-Details-9?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item13 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test News"
+                                    href="/master-site/News/Test-News?sc_site=Master+Site"
+                                    >Test News</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item14 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test news details"
+                                    href="/master-site/News/Test-news-details?sc_site=Master+Site"
+                                    >Test news details</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item15 even last rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="test shaimaa"
+                                    href="/master-site/News/test-shaimaa?sc_site=Master+Site"
+                                    >test shaimaa</a
+                                  >
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="level2 item1 even rel-level2">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Quality of Life"
+                                href="/Why-Abu-Dhabi/Quality-of-Life"
+                                tabindex="3"
+                                >Quality of Life</a
+                              >
+                            </div>
+                          </li>
+                          <li class="level2 item2 odd last rel-level2">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Reasons to Invest"
+                                href="/Why-Abu-Dhabi/Reason-To-Invest"
+                                tabindex="3"
+                                >Reasons to Invest</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a>Portfolio</a></li>
+                      <li><a>Contact</a></li>
+                    </ul>
+                    <ul>
+                      <li class="active"><a>Home</a></li>
+                      <li class="level1 submenu item0 odd first rel-level1">
+                        <div class="navigation-title field-navigationtitle">
+                          <a title="About" tabindex="3">About</a>
+                        </div>
+                        <ul class="clearfix">
+                          <li class="level1 submenu item3 even rel-level1">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Economic Overview"
+                                href="/Why-Abu-Dhabi/Economic-Overview"
+                                tabindex="3"
+                                >Economic Overview</a
+                              >
+                            </div>
+                            <ul class="clearfix">
+                              <li class="level2 item0 odd first rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="LP test of news details"
+                                    href="/master-site/News/LP-test-of-news-details?sc_site=Master+Site"
+                                    >LP test of news details</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item1 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 1"
+                                    href="/master-site/News/News-Details-1?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item2 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test date"
+                                    href="/master-site/News/Test-date?sc_site=Master+Site"
+                                    >Test date</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item3 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 10"
+                                    href="/master-site/News/News-Details-10?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item4 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 11"
+                                    href="/master-site/News/News-Details-11?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item5 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 2"
+                                    href="/master-site/News/News-Details-2?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item6 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 3"
+                                    href="/master-site/News/News-Details-3?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item7 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 4"
+                                    href="/master-site/News/News-Details-4?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item8 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 5"
+                                    href="/master-site/News/News-Details-5?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item9 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 6"
+                                    href="/master-site/News/News-Details-6?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item10 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 7"
+                                    href="/master-site/News/News-Details-7?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item11 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 8"
+                                    href="/master-site/News/News-Details-8?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item12 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="News Details 9"
+                                    href="/master-site/News/News-Details-9?sc_site=Master+Site"
+                                    >News Details 1</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item13 even rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test News"
+                                    href="/master-site/News/Test-News?sc_site=Master+Site"
+                                    >Test News</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item14 odd rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="Test news details"
+                                    href="/master-site/News/Test-news-details?sc_site=Master+Site"
+                                    >Test news details</a
+                                  >
+                                </div>
+                              </li>
+                              <li class="level2 item15 even last rel-level2">
+                                <div
+                                  class="navigation-title field-navigationtitle"
+                                >
+                                  <a
+                                    title="test shaimaa"
+                                    href="/master-site/News/test-shaimaa?sc_site=Master+Site"
+                                    >test shaimaa</a
+                                  >
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="level2 item1 even rel-level2">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Quality of Life"
+                                href="/Why-Abu-Dhabi/Quality-of-Life"
+                                tabindex="3"
+                                >Quality of Life</a
+                              >
+                            </div>
+                          </li>
+                          <li class="level2 item2 odd last rel-level2">
+                            <div class="navigation-title field-navigationtitle">
+                              <a
+                                title="Reasons to Invest"
+                                href="/Why-Abu-Dhabi/Reason-To-Invest"
+                                tabindex="3"
+                                >Reasons to Invest</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a>Portfolio</a></li>
+                      <li><a>Contact</a></li>
+                    </ul>
+
+                    <ul class="d-md-block d-lg-none">
+                      <li><a>Eservice</a></li>
+                      <li><a>Stackholders</a></li>
+                      <li><a>Activities</a></li>
+                    </ul>
+                  </nav>
+                  <div class="overlay"></div>
+                </div>
+                <ul
+                  class="ex-header__left-section__logo-menu ex-header__nav-primary d-flex"
+                >
+                  <li>
+                    <img src="../images/logo@2x.png" />
+                  </li>
+                </ul>
+                <ul
+                  class="ex-header__left-section__logo-menu ex-header__nav-primary d-none"
+                >
+                  <li>
+                    <img src="http://via.placeholder.com/155x40" />
+                  </li>
+                  <li>
+                    <img src="http://via.placeholder.com/155x40" />
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="ex-header__center d-none align-items-center flex-grow-1 justify-content-center"
+              >
+                <ul class="ex-header__left-section__logo-menu">
+                  <li>
+                    <img src="http://via.placeholder.com/155x40" />
+                  </li>
+                  <li>
+                    <img src="http://via.placeholder.com/155x40" />
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="ex-header__right-section flex-grow-1 d-flex flex-row align-items-center justify-content-end"
+              >
+                <ul
+                  class="ex-header__right-section__upper-navigation-menu d-none d-lg-flex align-items-center text-uppercase"
+                >
+                  <li class="">
+                    <div><a href="#">Eservice</a></div>
+                  </li>
+                  <li>
+                    <div><a href="#">Stackholders</a></div>
+                  </li>
+                  <li>
+                    <div><a href="#">Activities</a></div>
+                  </li>
+                  <div class="navigation-marker"></div>
+                </ul>
+                <span
+                  class="ex-header__right-section__icon-wrp ex-header__right-section__icon-wrp--sep ex-header__right-section__lang-switch d-none d-lg-flex align-items-center justify-content-center position-relative"
+                >
+                  <div class="component language-switcher-wrapper">
+                    <div class="component-content">
+                      <div
+                        class="link clearfix language-switcher"
+                        data-language-code="ar"
+                        data-country-code=""
+                      >
+                        <a
+                          href="/ar-AE/master-site/Inner-Page-Test"
+                          title="عربي"
+                          tabindex="0"
+                          >عربي</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </span>
+                <a
+                  href="javascript:void(0);"
+                  class="search ex-header__right-section__icon-wrp ex-header__right-section__icon-wrp--sep ex-header__right-section__search-icon search-bar d-flex align-items-center justify-content-center position-relative"
+                >
+                  <i class="icon-search"></i>
+                </a>
+                <!-- out of the box search input  -->
+                <div class="ex-header__right-section__search-dismiss">
+                  <i class="icon-remove"></i>
+                </div>
+                <div
+                  class="component search-box horizontal initialized"
+                  data-properties='{"endpoint":"/master-site/sxa/search/results/","suggestionEndpoint":"/master-site/sxa/search/suggestions/","suggestionsMode":"ShowSearchResults","resultPage":"","targetSignature":"searchresult","v":"{EBA38A29-CA15-40C5-BF8C-90915BD1BB18}","s":"{C69EB2DE-B532-4FA9-BA69-254BA62EE1C6}","p":5,"l":"en","languageSource":"CurrentLanguage","searchResultsSignature":"searchresult","itemid":"{654679CB-6B52-4052-B406-B58AE89DF18D}"}'
+                >
+                  <div class="component-content">
+                    <label for="textBoxSearch"> </label>
+                    <span
+                      class="twitter-typeahead"
+                      style="position: relative; display: inline-block"
+                      ><input
+                        type="text"
+                        class="search-box-input tt-hint"
+                        autocomplete="off"
+                        readonly=""
+                        spellcheck="false"
+                        tabindex="-1"
+                        dir="ltr"
+                        style="
+                          position: absolute;
+                          top: 0px;
+                          left: 0px;
+                          border-color: transparent;
+                          box-shadow: none;
+                          opacity: 1;
+                          background: none 0% 0% / auto repeat scroll
+                            padding-box border-box rgb(255, 255, 255);
+                        "
+                      /><input
+                        type="text"
+                        class="search-box-input tt-input"
+                        autocomplete="off"
+                        name="textBoxSearch"
+                        placeholder=""
+                        spellcheck="false"
+                        dir="auto"
+                        style="
+                          position: relative;
+                          vertical-align: top;
+                          background-color: transparent;
+                        "
+                      />
+                      <pre
+                        aria-hidden="true"
+                        style="
+                          position: absolute;
+                          visibility: hidden;
+                          white-space: pre;
+                          font-family: roboto-Regular, Arial, sans-serif;
+                          font-size: 16px;
+                          font-style: normal;
+                          font-variant: normal;
+                          font-weight: 400;
+                          word-spacing: 0px;
+                          letter-spacing: 0px;
+                          text-indent: 0px;
+                          text-rendering: auto;
+                          text-transform: none;
+                        "
+                      ></pre>
+                      <div
+                        class="tt-menu"
+                        style="
+                          position: absolute;
+                          top: 100%;
+                          left: 0px;
+                          z-index: 100;
+                          display: none;
+                        "
+                      >
+                        <div class="tt-dataset tt-dataset-0"></div>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <a
+                  href="javascript:void(0);"
+                  class="ex-header__right-section__icon-wrp d-none d-lg-flex align-items-center justify-content-center position-relative"
+                  data-settings="true"
+                >
+                  <i class="icon-cog"></i>
+                  <div
+                    class="ex-header__right-section__icon-wrp__overlay position-fixed"
+                  ></div>
+                </a>
+                <div class="settings-wrp position-fixed py-6 px-4">
+                  <i
+                    class="settings-wrp__close icon-remove position-absolute"
+                    data-settings="true"
+                  ></i>
+                  <div class="settings-wrp__section">
+                    <header class="d-flex align-items-center mb-6">
+                      <i class="icon-accessibility-circle"></i>
+                      <h5 class="mx-4">Accessibility</h5>
+                    </header>
+                    <main>
+                      <div class="settings-wrp__section__block mb-4">
+                        <div
+                          class="settings-wrp__section__block__label mb-2 text-uppercase tiny-text"
+                        >
+                          Contrast settings
+                        </div>
+                        <div
+                          class="settings-wrp__section__block__wrp rounded d-flex"
+                        >
+                          <span
+                            class="settings-wrp__section__block__btn settings-wrp__section__block__btn--active font-weight-boldest w-100 d-flex align-items-center justify-content-center text-uppercase tiny-text"
+                            data-contrast="color"
+                            data-activeclass="settings-wrp__section__block__btn--active"
+                          >
+                            Color
+                          </span>
+                          <span
+                            class="settings-wrp__section__block__btn font-weight-boldest w-100 d-flex align-items-center justify-content-center text-uppercase tiny-text"
+                            data-contrast="high"
+                            data-activeclass="settings-wrp__section__block__btn--active"
+                          >
+                            High Contrast
+                          </span>
+                        </div>
+                      </div>
+                      <div class="settings-wrp__section__block mb-7">
+                        <div
+                          class="settings-wrp__section__block__label mb-2 text-uppercase tiny-text"
+                        >
+                          Text Settings
+                        </div>
+                        <div
+                          class="settings-wrp__section__block__wrp rounded d-flex"
+                        >
+                          <span
+                            class="settings-wrp__section__block__btn font-weight-boldest w-100 d-flex align-items-center justify-content-center text-uppercase tiny-text"
+                            data-zoom="out"
+                            data-activeclass="settings-wrp__section__block__btn--current"
+                          >
+                            Smaller
+                          </span>
+                          <span
+                            class="settings-wrp__section__block__btn font-weight-boldest settings-wrp__section__block__btn--current w-100 d-flex align-items-center justify-content-center text-uppercase tiny-text"
+                            data-zoom="origin"
+                            data-activeclass="settings-wrp__section__block__btn--current"
+                          >
+                            Default
+                          </span>
+                          <span
+                            class="settings-wrp__section__block__btn font-weight-boldest w-100 d-flex align-items-center justify-content-center text-uppercase tiny-text"
+                            data-zoom="in"
+                            data-activeclass="settings-wrp__section__block__btn--current"
+                          >
+                            Bigger
+                          </span>
+                        </div>
+                      </div>
+                    </main>
+                  </div>
+                  <hr class="" />
+                  <div class="settings-wrp__section">
+                    <header class="d-flex align-items-center mb-6">
+                      <i class="icon-sphere"></i>
+                      <h5 class="mx-4">Language</h5>
+                    </header>
+                    <main>
+                      <div class="settings-wrp__section__block">
+                        <div
+                          class="settings-wrp__section__block__label mb-2 text-uppercase tiny-text"
+                        >
+                          Google Translate
+                        </div>
+                        <div id="google_translate_element_1"></div>
+                      </div>
+                    </main>
+                  </div>
+                </div>
+                <!-- out of the box search end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Image Highlight -->
+    <div
+      class="ex-image-highlights ex-image-highlights--overlay"
+      rv="VariantField"
+    >
+      <div
+        class="ex-image-highlights__slides"
+        data-slick="true"
+        data-loader
+        data-fade="true"
+        data-infinite="true"
+        data-autoplay="true"
+        data-autoplayspeed="17000"
+        data-enablearrows="true"
+        data-prev-arrow="highlights-prev-arrow"
+        data-next-arrow="highlights-next-arrow"
+        rv="VariantField"
+      >
+        <div
+          class="slide d-flex"
+          style="background-image: url(../images/ad2.jpg)"
+          rv="VariantField"
+        >
+          <video
+            muted=""
+            playsinline=""
+            autoplay=""
+            style="
+              object-fit: cover;
+              background-size: cover;
+              width: 100%;
+              height: 298.754%;
+              visibility: inherit;
+              opacity: 1;
+              display: block;
+              position: absolute;
+              left: 0px;
+              top: -99.3772%;
+            "
+            class="resizelistener"
+            preload="preload"
+            loop=""
+          >
+            <source src="../images/adcci7.mp4" type="video/mp4" />
+          </video>
+          <div class="container" rv="VariantField">
+            <div class="row" rv="VariantField">
+              <div class="col-lg-7" rv="VariantField">
+                <div
+                  class="slide__content d-flex justify-content-between align-items-center"
+                  rv="VariantField"
+                >
+                  <div class="slide__content__title" rv="VariantField">
+                    <h1
+                      class="slide-title animated fadeInUp mb-4"
+                      rv="VariantField"
+                    >
+                      Ensuring that Abu Dhabi remains a safe and secure society
+                      1
+                    </h1>
+                    <p class="animated fadeInUp delay-025s" rv="VariantField">
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout.
+                    </p>
+                    <div
+                      class="position-relative my-4 animated fadeInUp button d-inline-flex align-items-center justify-content-center"
+                    >
+                      <a
+                        class="stretched-link mx-1"
+                        href="javascript:void(0);"
+                        rv="VariantField"
+                        >Start Tour</a
+                      >
+                    </div>
+                    <div
+                      class="position-relative my-4 animated fadeInUp button d-inline-flex align-items-center justify-content-center"
+                    >
+                      <a
+                        class="stretched-link mx-1"
+                        href="javascript:void(0);"
+                        rv="VariantField"
+                        >View More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-5 d-none d-lg-block d-xl-block"
+                rv="VariantField"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="slide d-flex"
+          style="background-image: url(../images/ad5.jpg)"
+          rv="VariantField"
+        >
+          <img src="../images/ad5.jpg" rv="Responsive Image" alt="ad5" />
+          <div class="container" rv="VariantField">
+            <div class="row" rv="VariantField">
+              <div class="col-lg-7" rv="VariantField">
+                <div
+                  class="slide__content d-flex justify-content-between align-items-center"
+                  rv="VariantField"
+                >
+                  <div class="slide__content__title" rv="VariantField">
+                    <h1
+                      class="slide-title animated fadeInUp mb-4"
+                      rv="VariantField"
+                    >
+                      Ensuring that Abu Dhabi remains a safe and secure society
+                      2
+                    </h1>
+                    <p class="animated fadeInUp delay-025s" rv="VariantField">
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout.
+                    </p>
+                    <div
+                      class="position-relative my-4 animated fadeInUp button d-inline-flex align-items-center justify-content-center"
+                    >
+                      <a
+                        class="stretched-link mx-1"
+                        href="javascript:void(0);"
+                        rv="VariantField"
+                        >READ MORE</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-5 d-none d-lg-block d-xl-block"
+                rv="VariantField"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="slide d-flex"
+          style="background-image: url(../images/ad10.jpg)"
+          rv="VariantField"
+        >
+          <img src="../images/ad10.jpg" rv="Responsive Image" alt="ad10" />
+          <div class="container" rv="VariantField">
+            <div class="row" rv="VariantField">
+              <div class="col-lg-7" rv="VariantField">
+                <div
+                  class="slide__content d-flex justify-content-between align-items-center"
+                  rv="VariantField"
+                >
+                  <div class="slide__content__title" rv="VariantField">
+                    <h1
+                      class="slide-title animated fadeInUp mb-4"
+                      rv="VariantField"
+                    >
+                      Ensuring that Abu Dhabi remains a safe and secure society
+                      3
+                    </h1>
+                    <p class="animated fadeInUp delay-025s" rv="VariantField">
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout.
+                    </p>
+                    <div
+                      class="position-relative my-4 animated fadeInUp button d-inline-flex align-items-center justify-content-center"
+                    >
+                      <a
+                        class="stretched-link mx-1"
+                        href="javascript:void(0);"
+                        rv="VariantField"
+                        >READ MORE</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-5 d-none d-lg-block d-xl-block"
+                rv="VariantField"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="slide d-flex"
+          style="background-image: url(../images/ad9.jpg)"
+          rv="VariantField"
+        >
+          <img src="../images/ad9.jpg" rv="Responsive Image" alt="ad9" />
+          <div class="container" rv="VariantField">
+            <div class="row" rv="VariantField">
+              <div class="col-lg-7" rv="VariantField">
+                <div
+                  class="slide__content d-flex justify-content-between align-items-center"
+                  rv="VariantField"
+                >
+                  <div class="slide__content__title" rv="VariantField">
+                    <h1
+                      class="slide-title animated fadeInUp mb-4"
+                      rv="VariantField"
+                    >
+                      Ensuring that Abu Dhabi remains a safe and secure society
+                      4
+                    </h1>
+                    <p class="animated fadeInUp delay-025s" rv="VariantField">
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout.
+                    </p>
+                    <div
+                      class="position-relative my-4 animated fadeInUp button d-inline-flex align-items-center justify-content-center"
+                    >
+                      <a
+                        class="stretched-link mx-1"
+                        href="javascript:void(0);"
+                        rv="VariantField"
+                        >READ MORE</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-5 d-none d-lg-block d-xl-block"
+                rv="VariantField"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ex-image-highlights__navigation" rv="VariantField">
+        <div class="navigation_arrow_wrapper" rv="VariantField">
+          <div class="arrows d-inline-flex" rv="VariantField">
+            <div
+              class="icon highlights-prev-arrow mx-1 d-inline-flex justify-content-center align-items-center"
+            >
+              <span class="icon-arrow-left arrowIcon" rv="VariantField"></span>
+              <div class="hover_image d-none"><img src="" alt="" /></div>
+            </div>
+            <div
+              class="icon highlights-next-arrow mx-1 d-inline-flex justify-content-center align-items-center"
+            >
+              <span class="icon-arrow-right arrowIcon" rv="VariantField"></span>
+              <div class="hover_image d-none"><img src="" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Image Highlight -->
+    <!-- Info Banner Component -->
+    <section class="section py-7 info_banner">
+      <div class="container container-medium">
+        <div class="row">
+          <div class="col-12">
+            <h4>
+              We strive to empower businesses in Abu Dhabi enabling the private
+              sector to reach its full potential within a competitive
+              state-of-the-art ecosystem.
+            </h4>
+            <p>
+              The Abu Dhabi Chamber provides all the means necessary to support
+              its members, investors, entrepreneurs and businessmen, including
+              facilitating access to trade requirements and smart services. The
+              Chamber undertakes six main tasks that go beyond providing
+              services to other dimensions that contribute to sponsoring and
+              supporting national economic development.
+            </p>
+            <div
+              class="button button--secondary button--medium my-5 d-inline-flex d-inline-flex justify-content-between position-relative no-wrap"
+            >
+              <div class="stretched-link-field text-uppercase mx-1">
+                <a
+                  href="/en/media-centre/News"
+                  data-variantitemid="{654F76F6-D0AF-43F0-A780-D7D5EFD1D9C3}"
+                  title="About Us"
+                  data-variantfieldname="About Us Link"
+                  >About Us</a
+                >
+              </div>
+              <i
+                class="icon-chevron-right rotated-element d-inline-block mx-1"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Info Banner Component -->
+
+    <!-- Parallex Component -->
+    <div class="component-content pb-7">
+      <div class="d-flex flex-cloumn">
+        <div
+          class="section section--parallax section--parallax__slider py-7 d-flex align-items-center section--min-height w-100"
+          style="background-image: url(../images/ad9.jpg)"
+        >
+          <div class="container py-6 text-white">
+            <div class="heading-block text-center block animatable moveUp">
+              <h2>Facts</h2>
+              <p>Facts about Abu Dhabi Chamber in the last month</p>
+            </div>
+            <div class="row col-mb-50">
+              <div
+                class="col-sm-6 col-lg-3 text-center block animatable bounceIn pb-6 pb-lg-0"
+                data-delay="300"
+              >
+                <div class="counter counter-lined">
+                  <div class="icon-calendar-book icon"></div>
+                  <span
+                    data-from="1"
+                    data-to="55"
+                    data-refresh-interval="50"
+                    data-speed="6000"
+                    >55</span
+                  >+
+                </div>
+
+                <p>Years</p>
+              </div>
+              <div
+                class="col-sm-6 col-lg-3 text-center block animatable bounceIn pb-6 pb-lg-0"
+                data-delay="100"
+              >
+                <div class="counter counter-lined">
+                  <div class="icon-paragraph-image-right icon"></div>
+                  <span
+                    data-from="1"
+                    data-to="25"
+                    data-refresh-interval="50"
+                    data-speed="6000"
+                    >25</span
+                  >+
+                </div>
+
+                <p>Economic Reports</p>
+              </div>
+              <div
+                class="col-sm-6 col-lg-3 text-center block animatable bounceIn pb-6 pb-lg-0"
+                data-delay="150"
+              >
+                <div class="counter counter-lined">
+                  <div class="icon-library icon"></div>
+                  <span
+                    data-from="1"
+                    data-to="75"
+                    data-refresh-interval="30"
+                    data-speed="6000"
+                    >75</span
+                  >+
+                </div>
+
+                <p>Legal Consultations</p>
+              </div>
+              <div
+                class="col-sm-6 col-lg-3 text-center bounceIn animated pb-6 pb-lg-0"
+                data-animate="bounceIn"
+                data-delay="200"
+              >
+                <div class="counter counter-lined counter-2x">
+                  <div class="icon-profile icon"></div>
+                  <span
+                    data-from="100"
+                    data-to="156"
+                    data-refresh-interval="50"
+                    data-speed="6000"
+                    >156</span
+                  >+
+                </div>
+
+                <p>Certificates Issued</p>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center mt-6">
+              <div
+                class="button button--medium my-5 d-inline-flex d-inline-flex justify-content-between position-relative no-wrap"
+              >
+                <div
+                  class="stretched-link-field text-uppercase mx-1 field-view-all-link"
+                >
+                  <a
+                    href="/en/media-centre/News"
+                    data-variantitemid="{654F76F6-D0AF-43F0-A780-D7D5EFD1D9C3}"
+                    title="View All"
+                    data-variantfieldname="View All Link"
+                    >View All</a
+                  >
+                </div>
+                <i
+                  class="icon-arrow-next rotated-element d-inline-block mx-1"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Parallex Component -->
+
+    <!-- Business Opportunities -->
+    <section class="business_opportunities section--white mb-7">
+      <div class="portfolio_wrapper">
+        <div class="title_wrapper text-center pb-9">
+          <h5>Business Opportunities</h5>
+          <p>Discover a World of Business Opportunities Awaiting You</p>
+        </div>
+        <div
+          data-enablearrows="true"
+          data-next-arrow="portfolio-next"
+          data-rows-md="1"
+          data-slides-sm="1"
+          data-centerpadding-sm="50px"
+          class="row js-slick-mobile-disabled"
+          data-slidestoshow="4"
+          data-rowstoshow="1"
+          data-centerpadding-md="220px"
+          data-rows-sm="1"
+          data-rows-lg="1"
+          data-slides-md="3"
+          data-slides-lg="4"
+          data-slick-editor="false"
+          data-slides-xs="1"
+          data-slick="true"
+          data-prev-arrow="portfolio-prev"
+          data-autoplay="false"
+        >
+          <div class="portfolio_item">
+            <div class="imgportfolio_item">
+              <img
+                src="../images/bus4.jpg"
+                alt="nu-dien-vien-phu-phim-Ve-nha-di-con-8"
+              />
+            </div>
+            <div class="content">
+              <h2>6th Volta Trade and Investment Fair</h2>
+              <div class="desc">
+                <a href="#" class=" "
+                  ><i class="uil uil-schedule"></i> 9 Nov 2023-15 Nov 2023</a
+                >
+                <a href="#" class=" "
+                  ><i class="uil uil-map-marker"></i> Pune, India</a
+                >
+
+                <div class="icon_wrapper">
+                  <span class="icon-sphere icon"></span>
+                  <span class="icon-email-action-unread icon"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio_item">
+            <div class="imgportfolio_item">
+              <img src="../images/bus2.jpg" alt="hinh-anh-gai-xinh-sexy-161" />
+            </div>
+            <div class="content">
+              <h2>6th Volta Trade and Investment Fair</h2>
+              <div class="desc">
+                <a href="#" class=" "
+                  ><i class="uil uil-schedule"></i> 9 Nov 2023-15 Nov 2023</a
+                >
+                <a href="#" class=" "
+                  ><i class="uil uil-map-marker"></i> Pune, India</a
+                >
+
+                <div class="icon_wrapper">
+                  <span class="icon-sphere icon"></span>
+                  <span class="icon-email-action-unread icon"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio_item">
+            <div class="imgportfolio_item">
+              <img
+                src="../images/bus3.jpg"
+                alt="11001837_1801483650076739_7051692907800569880_n"
+              />
+            </div>
+            <div class="content">
+              <h2>6th Volta Trade and Investment Fair</h2>
+              <div class="desc">
+                <a href="#" class=" "
+                  ><i class="uil uil-schedule"></i> 9 Nov 2023-15 Nov 2023</a
+                >
+                <a href="#" class=" "
+                  ><i class="uil uil-map-marker"></i> Pune, India</a
+                >
+
+                <div class="icon_wrapper">
+                  <span class="icon-sphere icon"></span>
+                  <span class="icon-email-action-unread icon"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio_item">
+            <div class="imgportfolio_item">
+              <img
+                src="../images/bus1.jpg"
+                alt="gai-xinh-mac-vay-dai-xinh-dep-7-1024x660"
+              />
+            </div>
+            <div class="content">
+              <h2>6th Volta Trade and Investment Fair</h2>
+              <div class="desc">
+                <a href="#" class=" "
+                  ><i class="uil uil-schedule"></i> 9 Nov 2023-15 Nov 2023</a
+                >
+                <a href="#" class=" "
+                  ><i class="uil uil-map-marker"></i> Pune, India</a
+                >
+
+                <div class="icon_wrapper">
+                  <span class="icon-sphere icon"></span>
+                  <span class="icon-email-action-unread icon"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div
+            class="button button--secondary button--medium my-5 d-inline-flex d-inline-flex justify-content-between position-relative no-wrap"
+          >
+            <div
+              class="stretched-link-field text-uppercase mx-1 field-view-all-link"
+            >
+              <a
+                href="/en/media-centre/News"
+                data-variantitemid="{654F76F6-D0AF-43F0-A780-D7D5EFD1D9C3}"
+                title="View All"
+                data-variantfieldname="View All Link"
+                >View All</a
+              >
+            </div>
+            <i class="icon-arrow-next rotated-element d-inline-block mx-1"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Business Opportunities -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- News -->
+          <section class="news_section section--white mb-7">
+            <div class="title_wrapper text-center pb-9">
+              <h5>News</h5>
+              <p>Stay Ahead with the Latest Industry News and Developments</p>
+            </div>
+            <div class="news_wrapper">
+              <div class="row">
+                <div class="col-12 col-lg-8 block animatable bounceInLeft">
+                  <div
+                    class="ex-img-card-v2 d-block position-relative rounded mb-4 ex-img-card--shadow-v2"
+                    style="width: 100%; display: inline-block"
+                  >
+                    <div
+                      class="ex-img-card-v2__container d-flex align-items-start high-contrast--reset"
+                      style="background-image: url(../images/news0.jpg)"
+                    ></div>
+
+                    <div
+                      class="ex-img-card-v2__container__content position-absolute ex-img-card-v2__container__content--shadow dis-scroll"
+                    >
+                      <div class="news_badge">
+                        <div class="badge_date badge_content mb-1">18</div>
+                        <div class="badge_month badge_content">Sep</div>
+                      </div>
+                      <h5
+                        class="op-07 imgcard-title truncate truncate-1 font-weight-boldest truncateless-on-editor mt-6 field-title"
+                      >
+                        Economic
+                      </h5>
+                      <h3
+                        class="imgcard-title truncate truncate-1 font-weight-boldest truncateless-on-editor mb-2 field-title"
+                        title="Infrastructure Standards "
+                      >
+                        Emirates News Agency and Abu Dhabi Chamber sign MoU
+                      </h3>
+                      <i
+                        class="imgcard-link d-inline-flex position-relative field-url"
+                        ><span
+                          ><i
+                            class="icon-arrow-right font-weight-bold rotated-element"
+                          ></i></span
+                        ><a
+                          customdata="{
+"
+                          title="READ MORE"
+                          data-variantitemid="{A9AADF1E-5E1A-4EEE-8ED6-5F29A38219BA}"
+                          class="font-weight-bold text-indent stretched-link"
+                          href="#"
+                          data-variantfieldname="URL"
+                          tabindex="0"
+                          >READ MORE</a
+                        ></i
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 block animatable bounceInRight">
+                  <div
+                    class="ex-img-card-v2 d-block position-relative rounded mb-4 ex-img-card--shadow-v2"
+                    style="width: 100%; display: inline-block"
+                  >
+                    <div
+                      class="ex-img-card-v2__container d-flex align-items-start high-contrast--reset"
+                      style="background-image: url(../images/news4.jpg)"
+                    ></div>
+
+                    <div
+                      class="ex-img-card-v2__container__content position-absolute ex-img-card-v2__container__content--shadow dis-scroll"
+                    >
+                      <div class="news_badge">
+                        <div class="badge_date badge_content mb-1">18</div>
+                        <div class="badge_month badge_content">Sep</div>
+                      </div>
+                      <h5
+                        class="op-07 imgcard-title truncate truncate-1 font-weight-boldest truncateless-on-editor mt-6 field-title"
+                      >
+                        Economic
+                      </h5>
+                      <h3
+                        class="imgcard-title truncate truncate-1 font-weight-boldest truncateless-on-editor mb-2 field-title"
+                        title="Infrastructure Standards "
+                      >
+                        Emirates News Agency and Abu Dhabi Chamber sign MoU
+                      </h3>
+                      <i
+                        class="imgcard-link d-inline-flex position-relative field-url"
+                        ><span
+                          ><i
+                            class="icon-arrow-right font-weight-bold rotated-element"
+                          ></i></span
+                        ><a
+                          customdata="{
+"
+                          title="READ MORE"
+                          data-variantitemid="{A9AADF1E-5E1A-4EEE-8ED6-5F29A38219BA}"
+                          class="font-weight-bold text-indent stretched-link"
+                          href="#"
+                          data-variantfieldname="URL"
+                          tabindex="0"
+                          >READ MORE</a
+                        ></i
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 block animatable bounceInLeft">
+                  <div
+                    class="ex-img-card-v2 d-block position-relative rounded mb-4 ex-img-card--shadow-v2"
+                    style="width: 100%; display: inline-block"
+                  >
+                    <div
+                      class="ex-img-card-v2__container d-flex align-items-start high-contrast--reset"
+                      style="background-image: url(../images/news4.jpg)"
+                    ></div>
+
+                    <div
+                      class="ex-img-card-v2__container__content position-absolute ex-img-card-v2__container__content--shadow dis-scroll"
+                    >
+                      <div class="news_badge">
+                        <div class="badge_date badge_content mb-1">18</div>
+                        <div class="badge_month badge_content">Sep</div>
+                      </div>
+                      <h5
+                        class="op-07 imgcard-title truncate truncate-1 font-weight-boldest truncateless-on-editor mt-6 field-title"
+                      >
+                        Economic
+                      </h5>
+                      <h3
+                        class="imgcard-title truncate truncate-1 font-weight-boldest truncateless-on-editor mb-2 field-title"
+                        title="Infrastructure Standards "
+                      >
+                        Emirates News Agency and Abu Dhabi Chamber sign MoU
+                      </h3>
+                      <i
+                        class="imgcard-link d-inline-flex position-relative field-url"
+                        ><span
+                          ><i
+                            class="icon-arrow-right font-weight-bold rotated-element"
+                          ></i></span
+                        ><a
+                          customdata="{
+  "
+                          title="READ MORE"
+                          data-variantitemid="{A9AADF1E-5E1A-4EEE-8ED6-5F29A38219BA}"
+                          class="font-weight-bold text-indent stretched-link"
+                          href="#"
+                          data-variantfieldname="URL"
+                          tabindex="0"
+                          >READ MORE</a
+                        ></i
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 block animatable moveUp">
+                  <div
+                    class="ex-img-card-v2 d-block position-relative rounded mb-4 ex-img-card--shadow-v2"
+                    style="width: 100%; display: inline-block"
+                  >
+                    <div
+                      class="ex-img-card-v2__container d-flex align-items-start high-contrast--reset"
+                      style="background-image: url(../images/news0.jpg)"
+                    ></div>
+
+                    <div
+                      class="ex-img-card-v2__container__content position-absolute ex-img-card-v2__container__content--shadow dis-scroll"
+                    >
+                      <div class="news_badge">
+                        <div class="badge_date badge_content mb-1">18</div>
+                        <div class="badge_month badge_content">Sep</div>
+                      </div>
+                      <h5
+                        class="op-07 imgcard-title truncate truncate-1 font-weight-boldest truncateless-on-editor mt-6 field-title"
+                      >
+                        Economic
+                      </h5>
+                      <h3
+                        class="imgcard-title truncate truncate-1 font-weight-boldest truncateless-on-editor mb-2 field-title"
+                        title="Infrastructure Standards "
+                      >
+                        Emirates News Agency and Abu Dhabi Chamber sign MoU
+                      </h3>
+                      <i
+                        class="imgcard-link d-inline-flex position-relative field-url"
+                        ><span
+                          ><i
+                            class="icon-arrow-right font-weight-bold rotated-element"
+                          ></i></span
+                        ><a
+                          customdata="{
+  "
+                          title="READ MORE"
+                          data-variantitemid="{A9AADF1E-5E1A-4EEE-8ED6-5F29A38219BA}"
+                          class="font-weight-bold text-indent stretched-link"
+                          href="#"
+                          data-variantfieldname="URL"
+                          tabindex="0"
+                          >READ MORE</a
+                        ></i
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4 block animatable bounceInRight">
+                  <div
+                    class="ex-img-card-v2 d-block position-relative rounded mb-4 ex-img-card--shadow-v2"
+                    style="width: 100%; display: inline-block"
+                  >
+                    <div
+                      class="ex-img-card-v2__container d-flex align-items-start high-contrast--reset"
+                      style="background-image: url(../images/news4.jpg)"
+                    ></div>
+
+                    <div
+                      class="ex-img-card-v2__container__content position-absolute ex-img-card-v2__container__content--shadow dis-scroll"
+                    >
+                      <div class="news_badge">
+                        <div class="badge_date badge_content mb-1">18</div>
+                        <div class="badge_month badge_content">Sep</div>
+                      </div>
+                      <h5
+                        class="op-07 imgcard-title truncate truncate-1 font-weight-boldest truncateless-on-editor mt-6 field-title"
+                      >
+                        Economic
+                      </h5>
+                      <h3
+                        class="imgcard-title truncate truncate-1 font-weight-boldest truncateless-on-editor mb-2 field-title"
+                        title="Infrastructure Standards "
+                      >
+                        Emirates News Agency and Abu Dhabi Chamber sign MoU
+                      </h3>
+                      <i
+                        class="imgcard-link d-inline-flex position-relative field-url"
+                        ><span
+                          ><i
+                            class="icon-arrow-right font-weight-bold rotated-element"
+                          ></i></span
+                        ><a
+                          customdata="{
+    "
+                          title="READ MORE"
+                          data-variantitemid="{A9AADF1E-5E1A-4EEE-8ED6-5F29A38219BA}"
+                          class="font-weight-bold text-indent stretched-link"
+                          href="#"
+                          data-variantfieldname="URL"
+                          tabindex="0"
+                          >READ MORE</a
+                        ></i
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- End News -->
+          <!-- Events -->
+          <section class="event_listing section--white mb-7">
+            <div class="title_wrapper text-center pb-9">
+              <h5>Events</h5>
+              <p>Stay Ahead with the Latest Industry News and Developments</p>
+            </div>
+            <div class="events_wrapper">
+              <div class="row">
+                <div class="col-12 col-lg-6 block animatable bounceInLeft">
+                  <div
+                    class="ex-icon-card mb-3 p-3 d-flex justify-content-start align-items-start"
+                  >
+                    <div
+                      class="ex-icon-card__wrapper w-100 d-flex flex-column flex-md-row"
+                    >
+                      <div
+                        class="ex-icon-card__wrapper__content d-flex flex-column align-items-start justify-content-center"
+                      >
+                        <div
+                          class="card-img d-flex align-items-center justify-content-center pb-4 pb-md-0"
+                        >
+                          <img src=" ../images/event1.jpeg" alt="Logo" />
+                        </div>
+                      </div>
+                      <div
+                        class="ex-icon-card__wrapper__content d-flex px-4 flex-column align-items-start justify-content-center"
+                      >
+                        <div class="card-type-label text-uppercase">
+                          <div>
+                            <span class="icon-calendar-book pr-1"></span>
+                            16/08/2023
+
+                            <span class="icon-time-clock-circle pr-1"></span>
+                            5:30 PM
+                          </div>
+                        </div>
+                        <div
+                          class="card-title w-100 my-2 font-weight-bold truncate truncate-2"
+                        >
+                          Investment and Trade Opportunities in Ethiopia
+                        </div>
+                        <div class="card-type-label">
+                          <div>
+                            <span class="icon-location-alt pr-1"></span> Online
+                            via Webex
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 block animatable bounceInRight">
+                  <div
+                    class="ex-icon-card mb-3 p-3 d-flex justify-content-start align-items-start"
+                  >
+                    <div
+                      class="ex-icon-card__wrapper w-100 d-flex flex-column flex-md-row"
+                    >
+                      <div
+                        class="ex-icon-card__wrapper__content d-flex flex-column align-items-start justify-content-center"
+                      >
+                        <div
+                          class="card-img d-flex align-items-center justify-content-center pb-4 pb-md-0"
+                        >
+                          <img src=" ../images/event2.jpg" alt="Logo" />
+                        </div>
+                      </div>
+                      <div
+                        class="ex-icon-card__wrapper__content d-flex px-4 flex-column align-items-start justify-content-center"
+                      >
+                        <div class="card-type-label text-uppercase">
+                          <div>
+                            <span class="icon-calendar-book pr-1"></span>
+                            16/08/2023
+
+                            <span class="icon-time-clock-circle pr-1"></span>
+                            5:30 PM
+                          </div>
+                        </div>
+                        <div
+                          class="card-title w-100 my-2 font-weight-bold truncate truncate-2"
+                        >
+                          Investment and Trade Opportunities in Ethiopia
+                        </div>
+                        <div class="card-type-label">
+                          <div>
+                            <span class="icon-location-alt pr-1"></span> Online
+                            via Webex
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 block animatable bounceInLeft">
+                  <div
+                    class="ex-icon-card mb-3 p-3 d-flex justify-content-start align-items-start"
+                  >
+                    <div
+                      class="ex-icon-card__wrapper w-100 d-flex flex-column flex-md-row"
+                    >
+                      <div
+                        class="ex-icon-card__wrapper__content d-flex flex-column align-items-start justify-content-center"
+                      >
+                        <div
+                          class="card-img d-flex align-items-center justify-content-center pb-4 pb-md-0"
+                        >
+                          <img src=" ../images/event1.jpeg" alt="Logo" />
+                        </div>
+                      </div>
+                      <div
+                        class="ex-icon-card__wrapper__content d-flex px-4 flex-column align-items-start justify-content-center"
+                      >
+                        <div class="card-type-label text-uppercase">
+                          <div>
+                            <span class="icon-calendar-book pr-1"></span>
+                            16/08/2023
+
+                            <span class="icon-time-clock-circle pr-1"></span>
+                            5:30 PM
+                          </div>
+                        </div>
+                        <div
+                          class="card-title w-100 my-2 font-weight-bold truncate truncate-2"
+                        >
+                          Investment and Trade Opportunities in Ethiopia
+                        </div>
+                        <div class="card-type-label">
+                          <div>
+                            <span class="icon-location-alt pr-1"></span> Online
+                            via Webex
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 block animatable bounceInRight">
+                  <div
+                    class="ex-icon-card mb-3 p-3 d-flex justify-content-start align-items-start"
+                  >
+                    <div
+                      class="ex-icon-card__wrapper w-100 d-flex flex-column flex-md-row"
+                    >
+                      <div
+                        class="ex-icon-card__wrapper__content d-flex flex-column align-items-start justify-content-center"
+                      >
+                        <div
+                          class="card-img d-flex align-items-center justify-content-center pb-4 pb-md-0"
+                        >
+                          <img src=" ../images/event2.jpg" alt="Logo" />
+                        </div>
+                      </div>
+                      <div
+                        class="ex-icon-card__wrapper__content d-flex px-4 flex-column align-items-start justify-content-center"
+                      >
+                        <div class="card-type-label text-uppercase">
+                          <div>
+                            <span class="icon-calendar-book pr-1"></span>
+                            16/08/2023
+
+                            <span class="icon-time-clock-circle pr-1"></span>
+                            5:30 PM
+                          </div>
+                        </div>
+                        <div
+                          class="card-title w-100 my-2 font-weight-bold truncate truncate-2"
+                        >
+                          Investment and Trade Opportunities in Ethiopia
+                        </div>
+                        <div class="card-type-label">
+                          <div>
+                            <span class="icon-location-alt pr-1"></span> Online
+                            via Webex
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Events -->
+          <!-- Our Initatives -->
+          <section class="Our_Initatives section--white mb-9">
+            <div class="title_wrapper text-center pb-9">
+              <h5>Initiatives</h5>
+              <p>Stay Ahead with the Latest Industry News and Developments</p>
+            </div>
+            <div class="carousel-wrapper">
+              <div
+                data-enablearrows="true"
+                data-next-arrow="initiatives-next"
+                data-rows-md="1"
+                data-slides-sm="1"
+                data-centerpadding-sm="50px"
+                class="row js-slick-mobile-disabled"
+                data-slidestoshow="5"
+                data-rowstoshow="1"
+                data-centerpadding-md="120px"
+                data-rows-sm="1"
+                data-rows-lg="1"
+                data-slides-md="2"
+                data-slides-lg="1"
+                data-slick-editor="false"
+                data-slides-xs="1"
+                data-slick="true"
+                data-prev-arrow="initiatives-prev"
+                data-autoplay="false"
+                data-infinite="true"
+              >
+                <div>
+                  <div class="ex-image-onlycard position-relative rounded">
+                    <a href="javascript:void(0);">
+                      <img src="../images/adbwc.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="ex-image-onlycard position-relative rounded">
+                    <a href="javascript:void(0);">
+                      <img src="../images/arbitratead.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="ex-image-onlycard position-relative rounded">
+                    <a href="javascript:void(0);">
+                      <img src="../images/adsm.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="ex-image-onlycard position-relative rounded">
+                    <a href="javascript:void(0);">
+                      <img src="../images/skea.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="ex-image-onlycard position-relative rounded">
+                    <a href="javascript:void(0);">
+                      <img src="../images/uae_academy.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="ex-image-onlycard position-relative rounded">
+                    <a href="javascript:void(0);">
+                      <img src="../images/adbwc.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="ex-image-onlycard position-relative rounded">
+                    <a href="javascript:void(0);">
+                      <img src="../images/arbitratead.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="ex-image-onlycard position-relative rounded">
+                    <a href="javascript:void(0);">
+                      <img src="../images/adsm.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="ex-image-onlycard position-relative rounded">
+                    <a href="javascript:void(0);">
+                      <img src="../images/skea.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="ex-image-onlycard position-relative rounded">
+                    <a href="javascript:void(0);">
+                      <img src="../images/uae_academy.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-navigation-wrapper no-wrap d-lg-flex d-none">
+                <div
+                  class="carousel-navigation__prev initiatives-prev slick-arrow d-inline-flex align-items-center justify-content-center cursor-pointer"
+                  aria-label="initiatives-prev"
+                  aria-disabled="true"
+                  style=""
+                >
+                  <i
+                    class="icon-arrow-small-left rotated-element d-inline-block"
+                  ></i>
+                </div>
+                <div
+                  class="carousel-navigation__next initiatives-next d-inline-flex align-items-center justify-content-center cursor-pointer slick-arrow"
+                  aria-label="initiatives-next"
+                  style=""
+                  aria-disabled="false"
+                >
+                  <i
+                    class="icon-arrow-small-right rotated-element d-inline-block"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Our Initatives -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+      <div id="footer">
+        <div class="component">
+          <div class="component-content">
+            <div
+              class="ex-footer-v2 ex-footer-v2--compact ex-footer-v2--black pt-5"
+            >
+              <div class="ex-footer-v2__usefullinks">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12">
+                      <div
+                        class="d-flex justify-content-between flex-wrap flex-lg-nowrap"
+                      >
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <div
+                            class="tags font-weight-bold text-uppercase mb-4"
+                          >
+                            Discover Abu Dhabi
+                          </div>
+                          <ul>
+                            <li><a href="javascript:void(0);">About Us</a></li>
+                            <li>
+                              <a href="javascript:void(0);">Media Center</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);"
+                                >Strategic Partnership</a
+                              >
+                            </li>
+                            <li><a href="javascript:void(0);">Careers</a></li>
+                            <li>
+                              <a href="javascript:void(0);"
+                                >Supplier Registration
+                              </a>
+                            </li>
+                            <li><a href="javascript:void(0);">Tenders </a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="">
+                <div class="container">
+                  <div class="row flex-row-reverse justify-content-end">
+                    <div class="col-12">
+                      <div class="hr-1 my-6"></div>
+                    </div>
+                    <!-- follow us -->
+                    <div class="col-lg-2 col-md-5 col-sm-12">
+                      <div class="ex-footer-v2__sociallinks">
+                        <label class="text-uppercase mb-3">Follow us </label>
+                        <ul>
+                          <li class="">
+                            <div class="">
+                              <a
+                                href="javascript:void(0);"
+                                title="linkedin"
+                                class=" "
+                                target="_blank"
+                              >
+                                <img
+                                  rv="Responsive Image"
+                                  src="https://via.placeholder.com/24x24"
+                                  alt="linkedin"
+                                />
+                              </a>
+                            </div>
+                          </li>
+                          <li class="">
+                            <div class="">
+                              <a
+                                href="javascript:void(0);"
+                                title="linkedin"
+                                class=" "
+                                target="_blank"
+                              >
+                                <img
+                                  rv="Responsive Image"
+                                  src="https://via.placeholder.com/24x24"
+                                  alt="linkedin"
+                                />
+                              </a>
+                            </div>
+                          </li>
+                          <li class="">
+                            <div class="">
+                              <a
+                                href="javascript:void(0);"
+                                title="linkedin"
+                                class=" "
+                                target="_blank"
+                              >
+                                <img
+                                  rv="Responsive Image"
+                                  src="https://via.placeholder.com/24x24"
+                                  alt="linkedin"
+                                />
+                              </a>
+                            </div>
+                          </li>
+                          <li class="">
+                            <div class="">
+                              <a
+                                href="javascript:void(0);"
+                                title="linkedin"
+                                class=" "
+                                target="_blank"
+                              >
+                                <img
+                                  rv="Responsive Image"
+                                  src="https://via.placeholder.com/24x24"
+                                  alt="linkedin"
+                                />
+                              </a>
+                            </div>
+                          </li>
+                          <li class="">
+                            <div class="">
+                              <a
+                                href="javascript:void(0);"
+                                title="linkedin"
+                                class=" "
+                                target="_blank"
+                              >
+                                <img
+                                  rv="Responsive Image"
+                                  src="https://via.placeholder.com/24x24"
+                                  alt="linkedin"
+                                />
+                              </a>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 d-lg-none d-md-none d-sm-block">
+                      <div class="hr-1 my-6"></div>
+                    </div>
+
+                    <div class="col-lg-1 col-md-2 col-sm-2">
+                      <div
+                        class="d-flex justify-content-center align-items-center h-100"
+                      >
+                        <div class="hr-1 hr-1-v h-75"></div>
+                      </div>
+                    </div>
+                    <!-- apps -->
+                    <div class="col-lg-3 col-md-5 col-sm-12">
+                      <label class="text-uppercase mb-3 mx-lg-2 mx-md-2 mx-sm-0"
+                        >Download our APP’s</label
+                      >
+                      <div class="d-flex">
+                        <div class="position-relative mx-lg-2 mx-md-2 mx-sm-0">
+                          <img src="https://via.placeholder.com/120x35" />
+                          <a
+                            href="javascript:void(0);"
+                            target="_blank"
+                            class="stretched-link"
+                          ></a>
+                        </div>
+                        <div class="position-relative mx-lg-2 mx-md-2 mx-sm-0">
+                          <img src="https://via.placeholder.com/120x35" />
+                          <a
+                            href="javascript:void(0);"
+                            target="_blank"
+                            class="stretched-link"
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 d-lg-none d-md-block d-sm-block">
+                      <div class="hr-1 my-6"></div>
+                    </div>
+                    <section class="col-lg-1 col-md-2 col-sm-2">
+                      <div
+                        class="d-flex justify-content-center align-items-center h-100"
+                      >
+                        <div class="hr-1 hr-1-v h-75"></div>
+                      </div>
+                    </section>
+
+                    <!-- powered by -->
+
+                    <div class="col-lg-2 col-md-5 col-sm-5">
+                      <div class="d-flex flex-wrap flex-lg-nowrap">
+                        <div class="d-flex flex-column">
+                          <label class="text-uppercase mb-3">Powered By </label>
+                          <div>
+                            <div class="d-inline-block position-relative">
+                              <img
+                                rv="Responsive Image"
+                                src="https://via.placeholder.com/120x32"
+                                alt="Emirates Logo Image"
+                              />
+                              <div class="field-targeturl">
+                                <a
+                                  data-variantitemid="{EC751D53-CC33-4694-AB92-24F9F4C7B516}"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="text-indent overflow-hidden stretched-link d-block"
+                                  href="#"
+                                  data-variantfieldname="TargetUrl"
+                                  >powered by</a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <section class="col-lg-1 col-md-2 col-sm-2">
+                      <div
+                        class="d-flex justify-content-center align-items-center h-100"
+                      >
+                        <div class="hr-1 hr-1-v h-75"></div>
+                      </div>
+                    </section>
+                    <!-- logo -->
+                    <div class="col-lg-2 col-md-5 col-sm-5">
+                      <div class="d-flex flex-wrap flex-lg-nowrap">
+                        <div class="d-flex flex-column">
+                          <div>
+                            <div class="d-inline-block position-relative">
+                              <img
+                                rv="Responsive Image"
+                                src="https://via.placeholder.com/175x60"
+                                alt="Emirates Logo Image"
+                              />
+                              <div class="field-targeturl">
+                                <a
+                                  data-variantitemid="{EC751D53-CC33-4694-AB92-24F9F4C7B516}"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="text-indent overflow-hidden stretched-link d-block"
+                                  href="#"
+                                  data-variantfieldname="TargetUrl"
+                                  >powered by</a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="hr-1 my-6"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="ex-footer-v2__copyrights d-flex align-items-center pb-7"
+              >
+                <div class="container">
+                  <div class="row flex-row-reverse justify-content-end">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                      <div
+                        class="d-flex justify-content-end caption text-lg-right text-md-left text-sm-left"
+                      >
+                        Best viewed in 1366 x 768, IE 9.0+, Firefox 2.0+, Safari
+                        4.0+, Chrome
+                      </div>
+                      <div class="caption text-lg-right mt-3">
+                        <span class="font-weight-bold"
+                          >Website last updated at</span
+                        >
+                        - 18-05-2020 Time 10:08 am
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                      <div class="mb-4 mt-lg-0 mt-md-0 mt-sm-4">
+                        <ul class="d-flex">
+                          <li>
+                            <a href="javascript:void(0);">Privacy policy</a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);">Copyright</a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);"
+                              >Terms &amp; Conditions</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="caption mt-4 d-lg-block d-md-none d-sm-none">
+                        © 2018 abudhabi.ae All rights reserved
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                      <div class="caption d-lg-none d-md-block d-sm-block">
+                        © 2018 abudhabi.ae All rights reserved
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End Footer -->
+    <script src="../scripts/ext-components-scripts-min.js"></script>
+    <script src="../scripts/components-ADCCI.js"></script>
+    <script src="../scripts/components-ADCCI-scrollAnimation.js"></script>
+
+    <!-- Your js files goes here -->
+    <!-- Your js files goes here -->
+  </body>
+</html>

@@ -1,0 +1,64 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+  top: $floating-action-button-top;
+  width: $floating-action-button-width;
+  height: $floating-action-button-height;
+  background: $floating-action-button-top-corner-color;
+  border-radius: $floating-action-button-border-radius;
+  transition: $floating-action-button-transition;
+  z-index: $floating-action-button-z-index;
+  @include ltr {
+    right: $floating-action-button-start-space;
+  }
+
+  @include rtl {
+    left: $floating-action-button-start-space;
+  }
+  &__elements-container {
+    height: $floating-action-button-elements-container-height;
+    top: $floating-action-button-elements-container-top;
+    background: $floating-action-button-background-color;
+    @include ltr {
+      border-top-left-radius: $floating-action-button-elements-container-corner-border-radius;
+    }
+
+    @include rtl {
+      border-top-right-radius: $floating-action-button-elements-container-corner-border-radius;
+    }
+    img {
+      width: $floating-action-button-img-width;
+      height: $floating-action-button-img-height;
+      margin: $floating-action-button-img-margin;
+    }
+    &__label {
+      color: $floating-action-button-label-color;
+      font-size: $floating-action-button-label-font-size;
+      line-height: $floating-action-button-label-line-height;
+      padding: $floating-action-button-label-padding;
+      margin: $floating-action-button-label-margin;
+    }
+  }
+  &:hover {
+    transition: $floating-action-button-transition;
+    @include ltr {
+      width: $floating-action-button-ltr-extended-width;
+    }
+    @include rtl {
+      width: $floating-action-button-rtl-extended-width;
+    }
+    .#{$ProjectName} {
+      &__elements-container {
+        background: $floating-action-button-background-color-hover;
+      }
+    }
+  }
+}

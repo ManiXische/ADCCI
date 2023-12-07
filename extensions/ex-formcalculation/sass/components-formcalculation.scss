@@ -1,0 +1,54 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+
+    * { 
+        @include rtl{
+            text-align: right;
+        }
+    }
+    &__image{
+        img { 
+            height:auto;
+            width:100%;
+        }
+    }
+    &__tip{
+        color:$formcalculation-table-header-color;
+        background: $formcalculation-table-header-bg;
+    }
+    
+    &__table{
+        &__active{
+            font-weight: $formcalculation-table-active-fw;
+            background: $formcalculation-table-active-bg;
+        }
+        &__head{
+            background: $formcalculation-table-head-bg;
+        }
+    }
+
+    &__calculate{
+        background: $formcalculation-button-bg;
+        color : $formcalculation-button-color;
+        min-width: auto;
+        font-size: $formcalculation-button-fs;
+    }
+
+    table {
+        line-height: $formcalculation-table-lh;
+    }
+    
+    .button { 
+        border-width: $formcalculation-buttons-border-width;;
+    }
+}

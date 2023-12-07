@@ -1,0 +1,218 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    background-color: $socialgrid-section-background-color;
+    padding: $socialgrid-section-padding;
+    &__title{
+        color : $socialgrid-section-title-color;
+    } 
+    &__description{
+        color : $socialgrid-section-description-color;
+        font-size: $socialgrid-section-description-font-size;
+        font-weight: $socialgrid-section-description-font-weight;
+        text-transform: $socialgrid-section-description-txt-transform;
+    }
+
+    &__header{
+        @media #{$sm}{
+            // flex-direction: column;
+            flex-direction: row;
+        }
+
+        &__title{
+            @media #{$sm}{
+                margin-bottom: 20px;
+            }
+        }
+        &__filters{
+            height: 47px;
+            border: $socialgrid-filters-wrapper-border;
+            overflow: hidden;
+            background: $socialgrid-filters-button-container-bg;
+            .filter-button{
+                min-width: 50px;
+                outline: 0;
+                border: none;
+                padding: 0;
+                background-color: transparent;
+                cursor: pointer;
+                background-color: transparent;
+                border-right: $socialgrid-filters-button-border;
+
+                @include rtl{
+                    border-left: $socialgrid-filters-button-border;
+                    border-right: none;
+                }
+
+                color: $socialgrid-filters-button-color;
+                
+                &:last-child{
+                    border: none;
+                    @include rtl{
+                        border: none;
+                    }
+                }
+                &:hover{
+                    outline: 0;
+                    color: $socialgrid-filters-button-color-hover;
+                    span, i{
+                        background-color: $socialgrid-filters-button-bg-hover;
+                    }
+                }
+                span, i{
+                    display: inline-block;
+                    width: 47px;
+                    height: 37px;
+                    margin: 3px 3px 3px 3px;
+                    font-weight: bold;
+                    line-height: 37px;
+                    font-size: 16px;
+                    border-radius: 2px;
+                }
+                &--active{
+                    font-weight: bold;
+                    color: $socialgrid-filters-button-color-active;   
+                    span,i{
+                        background: $socialgrid-filters-button-bg-active;
+                    } 
+                }
+            }
+        }
+    }
+    &__body{
+        
+        $gridBody : &;
+        // column-count:3;
+        // column-gap: 1em;
+        .social-grid-item{
+            $socialGridItem : &;
+            $socialGridItemClass : '.social-grid-item';
+            
+            border: $socialgrid-grid-item-border;
+            background-color: $socialgrid-grid-item-background;
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+
+            margin: 0 0 $socialgrid-grid-gutter;
+
+            width: ((100% / 3) - $socialgrid-grid-gutter) + 0.33333333333 ; //32.66666666666%;
+            @media #{$md} {
+                width:  ((100% / 2) - $socialgrid-grid-gutter) + 0.33333333333;//49.333333333%;
+            }
+            @media #{$sm} {
+                width: 100%;
+            }
+
+            img{
+                width:100%;
+            }
+
+            &__text{
+                $titlWrap : &;
+                line-height: $socialgrid-text-line-height;
+                font-size: $socialgrid-text-font-size;
+                margin: $socialgrid-text-padding;
+                margin-bottom: 90px;
+                    
+                // @at-root{
+                //     .high-contrast{
+                //         #{$titlWrap}{
+                //             -webkit-filter: grayscale(0) invert(100%) !important;
+                //             filter: grayscale(0) invert(100%) !important;
+                //         }
+                //     }
+                // }
+            }
+            &__details{
+                padding: $socialgrid-text-padding;
+                bottom: 0;
+                &__author{
+                    .date{
+                        $dateWrap : &;
+                        font-size: $socialgrid-date-font-size;
+                        text-transform: uppercase;
+                        
+                        // @at-root{
+                        //     .high-contrast{
+                        //         #{$dateWrap}{
+                        //             -webkit-filter: grayscale(0) invert(100%) !important;
+                        //             filter: grayscale(0) invert(100%) !important;
+                        //         }
+                        //     }
+                        // }
+                    }
+                    .author{
+                        color: $socialgrid-author-color;
+
+                        &:hover{
+                            color : $socialgrid-author-hover-color;
+                        }
+                    }
+                }
+                &__icon{
+                    color:$socialgrid-icon-color;
+                    font-size: 24px;
+                }
+            }
+
+
+            &.instagram{
+
+                #{$socialGridItemClass}__details{
+                    &__author{
+                        .date, .author{
+                            color: $socialgrid-author-revert-color;
+    
+                            &:hover{
+                                color : $socialgrid-author-revert-hover-color;
+                            }
+                        }
+                    }
+                    &__icon{
+                        color: $socialgrid-icon-revert-color;
+                    }
+                }
+            }
+
+            &.youtube , &.instagram{
+                .icon {
+                    position: absolute;
+                    top:0;
+                    right:0;
+                    left:0;
+                    bottom:0;
+                    margin:auto;
+                    font-size: 68px;
+                    width: 68px;
+                    height: 68px;
+                    cursor: pointer;
+                    opacity: 0.7;
+                    z-index: 1; 
+                }
+            }
+        }
+        &__gutter{
+            width: $socialgrid-grid-gutter; 
+        }
+    }
+    &--v5{
+        .ex-social-grid__body__item{
+            &.social-grid-item.youtube {
+                .social-grid-item__details {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

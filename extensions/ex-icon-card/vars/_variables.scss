@@ -1,0 +1,72 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+$icon-card-max-height: 175px !default;
+$icon-card-fixed-height: 175px !default;
+$icon-card-min-height: 140px !default;
+$icon-card-large-min-height: 290px !default;
+$icon-card-larger-min-height: 370px !default;
+$icon-card-medium-min-height: 250px !default;
+$icon-card-height-md-screen: 140px !default;
+$icon-card-title-lines: 2 !default;
+$icon-card-bg-color: $white-color !default;
+$icon-card-border-color: $grey-200 !default;
+$icon-card-border-hover-color: $primary-color !default;
+$icon-card-border-size: 1px !default;
+$icon-card-border-radius: 0px !default;
+$icon-card-b4-bg-color: $primary-color !default;
+$icon-card-b4-height: 4px !default;
+$icon-card-b4-width : 98px !default;
+$icon-card-icon-color: $primary-color !default;
+$icon-card-icon-color-secondary: $secondary-color5 !default;
+$icon-card-title-color-secondary: $secondary-color5 !default;
+$icon-card-title-color: $grey-900 !default;
+$icon-card-title-fontsize: 22px !default;
+$icon-card-description-fontsize: 14px !default;
+$icon-card-description-lineheight: 22px !default;
+$icon-card-description-color: $black-color !default;
+$icon-card-link-color:  $secondary-color5 !default;
+$icon-card-link-font-size : 13px !default;
+$icon-card-link-hover-color: $black-color !default;
+$icon-card-alt-bg-color: $grey-100 !default;
+$icon-card-alt-color: $black-color !default;
+$icon-card-alt-bg-hover-color: $grey-900 !default;
+$icon-card-alt-color-hover-color: $white-color !default;
+$icon-card-hover-shadow: $black-color !default;
+$icon-card-white-color: $white-color !default;
+$icon-card-title-lineheight: 26px !default;
+$icon-card-img-height: 50px !default;
+$icon-card-tag-color: $grey-700 !default;
+$icon-card-tag-icon-color : $grey-700 !default;
+$icon-card-alt-border-color-hover: $black-color !default; 
+$icon-card-tag-font-size : 14px !default;
+$icon-card-meta-link-font-size: 14px !default;
+$icon-card-meta-link-font-weight : bold !default;
+$icon-card-meta-link-icon-wh : 25px !default;
+$icon-card-meta-link-after-bg:transparent;
+
+// Number Card
+$icon-card-numbercard-icon-padding: 10px !default; 
+$icon-card-numbercard-icon-circle-color: #008090 !default; 
+$icon-card-numbercard-icon-font-color: #008090 !default;
+$icon-card-numbercard-icon-font-weight: 900 !default;
+$icon-card-numbercard-icon-font-size: 36px !default;
+$icon-card-numbercard-icon-wh: 45px !default;
+$icon-card-numbercard-icon-border-color: $grey-300 !default;
+
+//Border hover effect
+$icon-card-hover-effect-boxshadow-bottom:10px;
+$icon-card-hover-effect-boxshadow-color : $primary-color;
+$icon-card-hover-effect-boxshadow: 0px $icon-card-hover-effect-boxshadow-bottom 0px 0px $icon-card-hover-effect-boxshadow-color !default;
+$icon-card-hover-effect-transition: 0.2s !default;
+$icon-card-hover-effect-translateY:-7px !default;
+$icon-card-hover-effect-scale : 1.02 !default;
+
+
+$icon-card-icon-margin-side:20px !default;
+$icon-card-icon-font-size:40px !default;
+$icon-card-icon-text-align:center !default;
+$icon-card-icon-min-width:50px !default;

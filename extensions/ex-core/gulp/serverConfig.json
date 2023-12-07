@@ -1,0 +1,25 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-core",
+        "version" : "1.0.0",
+        "owner" :  "null"
+    },
+    "order" : 1,
+    "jsOrders"  : [
+        "core/xaquery.js",
+        "core/xa.js",
+        "core/typeahead10142019.js",
+        "core/lo-dash.js",
+        "core/backbone-min.js",
+        "search/component-search.js",
+        "search/component-search-ajax.js",
+        "search/component-search-base-model.js",
+        "search/component-search-base-view.js",
+        "search/component-search-box-14102019.js",
+        "search/component-search-query-1407.js",
+        "search/component-search-results.js",
+        "search/component-search-url-001.js"
+    ]
+}

@@ -1,0 +1,17 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-leftnav",
+        "version" : "1.0.0",
+        "owner" : "Manikandan"
+    },
+    "dependencies" : [
+        {
+            "adge" : "QCC",
+            "tenant" : "\\Themes\\ADGE",
+            "dest": "styles/extensions",
+            "path":"\\QCC"
+        }
+    ]
+}

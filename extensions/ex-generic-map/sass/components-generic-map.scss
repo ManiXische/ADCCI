@@ -1,0 +1,104 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    &__tabs{
+        li {
+            position: relative;
+            display: inline-block;
+            font-size: $map-tab-title-font-size;
+            line-height: $map-tab-title-line-height;
+            color: $map-tab-title-color;
+            padding: $map-tab-title-padding;
+            cursor: pointer;
+            &.active{
+                color: $map-tab-title-color-active;
+                font-weight: $map-tab-title-active-weight;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left:0;
+                    height:$map-tab-title-active-line-height;
+                    width:100%;
+                    background-color: $map-tab-title-active-line-color ;
+                }
+            }
+        }
+    }
+
+    &__container{
+        .map-box{
+            background: $map-map-box-bg;
+            height:$map-map-box-height;
+            
+            .esri-ui {
+                .esri-popup{
+                    & , &__main-container{
+                        border-radius: $map-map-box-popup-radius;
+                    }
+
+                    &__content{
+                        text-align: $map-map-box-popup-text-align;
+                        font-size: $map-map-box-popup-font-size;
+                        line-height: $map-map-box-popup-line-height;
+                        padding:$map-map-box-popup-padding;
+                    }
+                }
+                .esri-attribution{
+                    background-color: transparent;
+                }
+                &-corner {
+                    .esri-component{
+                        &.esri-widget--panel{
+                            width: 245px;
+                        }
+                    }
+                }
+            }
+            .esri-zoom {
+                .esri-widget{
+                    &--button {
+                        border-top: solid 1px $map-esri-zoom-esri-widget-border-color;
+                    }
+                }
+            }
+            .map-marker{
+                color : $map-map-box-marker-color;
+            }
+        }
+        
+        .map-loader {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: 35px;
+            width: 35px;
+            font-size: 35px;
+        }
+
+        &__warning{
+            bottom: 0;
+            z-index: 11;
+            pointer-events: none;
+            & > div {
+                color: #fff;
+                background: #242424;
+            }
+        }
+    }
+
+    .esri-basemap-toggle {
+        display: none;
+    }
+}

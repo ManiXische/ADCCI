@@ -1,0 +1,359 @@
+/***************************************************************************************************
+Extension Name: ex-happiness-meter
+Extension Version: 
+File: base file
+Owner: 
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-happiness-meter 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-happiness-meter 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-happiness-meter {
+  width: 720px;
+  height: 500px;
+  display: none;
+  padding: 0;
+  position: relative;
+  background: #be5445;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #be5445 1%, #527fc5 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(315deg, #be5445 1%, #527fc5 100%);
+  background: linear-gradient(135deg, #be5445 1%, #527fc5 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#be5445, endColorstr= #527fc5 ,GradientType=0 );
+  /* IE6-9 */
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-happiness-meter {
+    width: auto;
+  }
+}
+
+.ex-happiness-meter form {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.ex-happiness-meter > div {
+  cursor: default;
+}
+
+.ex-happiness-meter--singlecolor-view {
+  background: #5B4C81;
+}
+
+.ex-happiness-meter:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url("../images/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ex-happiness-meter__header {
+  border-top: 10px solid #ffffff;
+}
+
+.ex-happiness-meter__header .happiness-logo {
+  margin: 0 35px;
+  max-width: 175px;
+}
+
+.ex-happiness-meter__header .happiness-logo__wrapper {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.ex-happiness-meter__header .happiness-logo__wrapper img {
+  width: 100%;
+}
+
+.ex-happiness-meter__header .happiness-close-btn {
+  color: rgba(255, 255, 255, 0.6);
+  padding: 18px 20px;
+  font-size: 16px;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.ex-happiness-meter__header .happiness-close-btn:hover, .ex-happiness-meter__header .happiness-close-btn:active {
+  opacity: 0.6;
+}
+
+.ex-happiness-meter__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 3rem 2rem 3rem;
+  height: 100%;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-happiness-meter__content {
+    height: auto;
+  }
+}
+
+.ex-happiness-meter__content__main .happiness-meter-heading {
+  padding: 1rem;
+  color: #ffffff;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-happiness-meter__content__main .happiness-meter-heading {
+    text-align: center;
+  }
+}
+
+.ex-happiness-meter__content__main .happiness-meter-face__image {
+  background: url("../images/faces.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  width: 234px;
+  height: 234px;
+}
+
+.ex-happiness-meter__content__footer {
+  padding: 40px 0 0 0;
+}
+
+.ex-happiness-meter__content__footer .happiness-meter-notice {
+  color: #ffffff;
+}
+
+.ex-happiness-meter__content__footer .happiness-meter-value {
+  color: #ffffff;
+  display: none;
+}
+
+.ex-happiness-meter__content #dvHiddenCaptcha {
+  display: none;
+}
+
+.ex-happiness-meter__form {
+  display: none;
+  padding: 15px 3rem;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-message {
+  width: 100%;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-message__label {
+  width: 100%;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-message__label, .ex-happiness-meter__form__content .happiness-meter-message__icon {
+  color: #ffffff;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-message__icon {
+  font-size: 55px;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-message__icon img {
+  height: 55px;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-error {
+  display: none;
+  width: 100%;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-error__text {
+  color: #fdc8cc;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form.hidden {
+  display: none !important;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .error-block {
+  display: none;
+  color: #fdc8cc;
+  font-size: 12px;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-input--hide {
+  display: none;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-input label[for] {
+  cursor: pointer;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-input input[type="text"], .ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-input input[type="tel"], .ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-input textarea {
+  background: #534475;
+  color: #ffffff;
+  resize: none;
+  border: 1px solid #B1A5CC;
+  border-radius: 3px;
+  height: 40px;
+  padding: 15px;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-input textarea {
+  height: 70px;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-input.is-invalid .error-block {
+  display: block;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-input.is-valid .error-block {
+  display: none;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-input__count {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-input__count .error {
+  color: #fdc8cc;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-checkbox__wrapper {
+  width: 20px;
+  position: relative;
+  margin-right: 10px;
+}
+
+html[lang*='ar'] .ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-checkbox__wrapper,
+html[class*='translated-rtl'] .ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-checkbox__wrapper {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-checkbox__wrapper + label {
+  cursor: pointer;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-checkbox__wrapper label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.4);
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-checkbox__wrapper label:after {
+  content: '';
+  width: 12px;
+  height: 8px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  border: 3px solid #5B4C81;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-checkbox__wrapper label:hover::after {
+  opacity: 0.3;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-checkbox__wrapper input[type=checkbox] {
+  visibility: hidden;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-checkbox__wrapper input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-label {
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.ex-happiness-meter__form__content .happiness-meter-form__wrapper .happiness-meter-submit[disabled] {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+html[lang*='ar'] .ex-happiness-meter__form__content .happiness-meter-form__wrapper button i,
+html[class*='translated-rtl'] .ex-happiness-meter__form__content .happiness-meter-form__wrapper button i {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.ex-happiness-meter .fancybox-button {
+  color: #b7b7b7;
+}
+
+.ex-happiness-meter .fancybox-close-small {
+  display: none;
+}

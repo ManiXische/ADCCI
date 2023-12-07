@@ -1,0 +1,485 @@
+/***************************************************************************************************
+Extension Name: ex-notifications
+Extension Version: 
+File: base file
+Owner: 
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-notifications
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-notifications
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-notifications
+Extension Version: 
+File: base file
+Owner: 
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-notifications
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-notifications
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-notifications-v3-breaking-news {
+  display: block;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  text-align: auto;
+  font-size: 14px;
+}
+
+.on-page-editor .ex-notifications-v3-breaking-news {
+  height: 175px !important;
+}
+
+.ex-notifications-v3-breaking-news * {
+  box-sizing: border-box;
+}
+
+.ex-notifications-v3-breaking-news.ex-notifications-fixed-top {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.ex-notifications-v3-breaking-news.ex-notifications-fixed-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.ex-notifications-v3-breaking-loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 5;
+  padding: 0 10px;
+}
+
+.ex-notifications-v3-label {
+  top: 0;
+  position: absolute;
+  background-color: #673AB7;
+  text-align: center;
+  color: #ffffff;
+  z-index: 3;
+  padding: 0 15px;
+  white-space: nowrap;
+}
+
+html[lang*='ar'] .ex-notifications-v3-label,
+html[class*='translated-rtl'] .ex-notifications-v3-label {
+  left: auto;
+  right: 0;
+}
+
+.ex-notifications-v3-news {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  right: 0;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  html[lang*='en'] .ex-notifications-v3-news,
+  html[class*='translated-ltr'] .ex-notifications-v3-news {
+    left: 0 !important;
+  }
+  html[lang*='ar'] .ex-notifications-v3-news,
+  html[class*='translated-rtl'] .ex-notifications-v3-news {
+    right: 0 !important;
+  }
+}
+
+.ex-notifications-v3-news ul {
+  display: block;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.ex-notifications-v3-news ul li {
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  -webkit-transition: color .2s linear;
+  transition: color .2s linear;
+  position: absolute;
+  width: 100%;
+  display: none;
+  height: 100%;
+}
+
+.on-page-editor .ex-notifications-v3-news ul li p {
+  white-space: initial;
+}
+
+.ex-notifications-v3-loader-text {
+  padding: 0 10px;
+}
+
+.ex-notifications-v3-seperator {
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+  width: 30px;
+  height: 40px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ex-notifications-v3-seperator.ex-notifications-news-dot {
+  margin-right: 0;
+}
+
+.ex-notifications-v3-seperator.ex-notifications-news-dot:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -4px;
+  left: 50%;
+  margin-left: -4px;
+}
+
+html[lang*='ar'] .ex-notifications-v3-seperator,
+html[class*='translated-rtl'] .ex-notifications-v3-seperator {
+  margin-left: 15px;
+  margin-right: 0;
+  float: right;
+}
+
+.ex-notifications-v3-prefix {
+  margin-right: 15px;
+  padding-left: 10px;
+}
+
+html[lang*='ar'] .ex-notifications-v3-prefix,
+html[class*='translated-rtl'] .ex-notifications-v3-prefix {
+  margin-left: 15px;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.ex-notifications-v3-positive, .ex-notifications-v3-negative {
+  font-weight: 700;
+}
+
+.ex-notifications-v3-controls {
+  width: auto;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-notifications-v3-controls {
+    display: none !important;
+  }
+}
+
+.ex-notifications-v3-controls button {
+  width: 30px;
+  float: left;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  outline: none;
+  background-color: transparent;
+}
+
+html[lang*='ar'] .ex-notifications-v3-controls,
+html[class*='translated-rtl'] .ex-notifications-v3-controls {
+  right: auto;
+  left: 0;
+}
+
+.ex-notifications-v3-arrow {
+  margin: 0;
+  display: inline-block;
+  height: 8px;
+  position: relative;
+  width: 8px;
+  top: -2px;
+}
+
+.ex-notifications-v3-arrow::after {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-right-style: solid;
+  border-right-width: 2px;
+  content: '';
+  display: inline-block;
+  height: 8px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 8px;
+}
+
+.ex-notifications-v3-arrow.ex-notifications-next {
+  -ms-transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+  left: -3px;
+}
+
+.ex-notifications-v3-arrow.ex-notifications-prev {
+  -ms-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  left: 3px;
+}
+
+.ex-notifications-v3-direction-rtl {
+  direction: rtl;
+}
+
+.ex-notifications-v3-effect-scroll-news ul {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.ex-notifications-v3-effect-scroll-news ul li {
+  display: list-item;
+  float: left;
+  position: relative;
+  width: auto;
+}
+
+.ex-notifications-v3-effect-scroll.ex-notifications-direction-rtl .ex-notifications-news ul li {
+  float: right;
+}
+
+.ex-notifications-v3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #673AB7;
+  border-top: 1px solid #FF5F60;
+  border-bottom: 1px solid #FF5F60;
+  max-height: 75px;
+  height: 75px;
+}
+
+@media only screen and (max-width: 992px) {
+  .ex-notifications-v3 {
+    max-height: none;
+  }
+}
+
+.on-page-editor .ex-notifications-v3 {
+  height: 175px !important;
+  max-height: 175px !important;
+}
+
+.ex-notifications-v3__item {
+  height: 75px;
+}
+
+.ex-notifications-v3 h6 {
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+  height: 45px;
+  line-height: 43px;
+  background-color: #673AB7;
+  z-index: 1;
+}
+
+.ex-notifications-v3 h6.ex-notifications-v3__label {
+  color: #FF5F60;
+  padding-right: 30px;
+  padding-left: 5px;
+  overflow: hidden;
+  text-transform: uppercase;
+  min-width: 80px;
+}
+
+html[lang*='ar'] .ex-notifications-v3 h6.ex-notifications-v3__label,
+html[class*='translated-rtl'] .ex-notifications-v3 h6.ex-notifications-v3__label {
+  padding-left: 30px;
+  margin-right: 0;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-notifications-v3 h6.ex-notifications-v3__label {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-notifications-v3 h6.ex-notifications-v3__label {
+    display: none !important;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-notifications-v3 h6 {
+    font-weight: normal;
+  }
+}
+
+.ex-notifications-v3 p {
+  color: #ffffff;
+}
+
+.ex-notifications-v3 h6, .ex-notifications-v3 small, .ex-notifications-v3 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ex-notifications-v3 h6:hover, .ex-notifications-v3 small:hover, .ex-notifications-v3 a:hover {
+  text-decoration: none;
+}
+
+.ex-notifications-v3 .news-notify-item {
+  height: 26px;
+}
+
+.ex-notifications-v3 .news-notify-item > p {
+  white-space: nowrap;
+}
+
+.ex-notifications-v3 .news-notify-item__date {
+  padding: 5px 10px 5px 0;
+  margin: 0 10px 0 0;
+  border-right: 1px solid #ffffff;
+  font-size: 16px;
+  color: #89888C;
+}
+
+html[lang*='ar'] .ex-notifications-v3 .news-notify-item__date,
+html[class*='translated-rtl'] .ex-notifications-v3 .news-notify-item__date {
+  padding: 5px 10px 5px 10px;
+  margin: 0 0 0 10px;
+  border-left: 1px solid #ffffff;
+  border-right: none;
+}
+
+.ex-notifications-v3__prev, .ex-notifications-v3__next {
+  margin: 0;
+  box-shadow: none;
+}
+
+.ex-notifications-v3__prev {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.ex-notifications-v3__next {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+html[lang*='ar'] .ex-notifications-v3__next,
+html[class*='translated-rtl'] .ex-notifications-v3__next {
+  margin-right: 0;
+}
+
+.ex-notifications-v3__action {
+  background-color: transparent;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #FF5F60;
+  display: inline-block;
+  padding: 0;
+}
+
+.ex-notifications-v3__action--play {
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 13px solid #FF5F60;
+  border-radius: 0;
+}

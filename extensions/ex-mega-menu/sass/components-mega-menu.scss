@@ -1,0 +1,342 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    // Your code goes here
+    background: $white-color;
+      
+    &__logo{
+        display: inline-block;
+        @include transition(0.3s);
+        
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+
+    &__logo-img{
+        width: 100%;
+        max-width: $mega-menu-logo-image-max-weight;    
+    }
+
+    .nav{
+        margin-top: $mega-menu-nav-mt;
+        &__main-item{
+            display: block;         
+        }
+        &__main-list{
+            display: inline-block;
+            font-size: $mega-menu-nav-list-fontsize;
+            font-weight: $mega-menu-nav-list-fontweight;
+            list-style-type: none;
+            margin-right: $mega-menu-nav-list-mr;
+            &:last-child{
+                margin-right: 0;
+            }
+            &:hover{                
+                > a{
+                    color: $text-color-sea-green;
+                    &:after{
+                        width: 100%;
+                    }
+                }
+                .sub-menu{
+                    display: block;
+                }
+            }
+        }
+        &__main-link{
+            position: relative;
+            display: block;
+            color: $text-color-dark-blue;
+            padding-bottom: $mega-menu-nav-link-pb;
+            @include transition(0.3s);
+            &:after{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                content: "";
+                width: 0%;
+                height: $mega-menu-nav-link-after-height;
+                background-color: $border-color-sea-green;
+                @include transition(0.3s);
+            }
+            > i{
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .sub-menu{
+        display: none;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: $mega-menu-sub-menu-top;
+        border-top: solid $border-color-light-grey $mega-menu-sub-menu-border-t;
+        background: $white-color;        
+    }
+
+    .featured{
+        position: relative;
+        &__heading{
+            font-size: $mega-menu-whats-news-main-heading-fontsize;
+            font-weight: normal;
+        }
+        &__image{
+            width: 100%;
+            height: $mega-menu-featured-image-height;
+            background-size: cover;
+            background-position: center;
+        }
+        &__content{
+            position: absolute;
+            width: $mega-menu-featured-content-width;
+            left: $mega-menu-featured-content-left;
+            bottom: $mega-menu-featured-content-bottom;
+        }
+        &__content-heading{
+            font-size: $mega-menu-featured-content-heading-fontsize;
+            font-weight: $mega-menu-featured-content-heading-weight;
+            line-height: $mega-menu-featured-content-heading-lineheight;
+            color: $white-color;
+        }
+        &__content-text{
+            font-size: $mega-menu-featured-content-text-fontsize;
+            color: $white-color;
+            line-height: $mega-menu-featured-content-text-lineheight;
+        }
+    }
+
+    .whats-news{
+        background-color: $mega-menu-whats-news-bg;
+        border-left: solid 1px $border-color-light-grey;
+        padding: 0 30px;
+        &__main-heading{
+            font-size: $mega-menu-whats-news-main-heading-fontsize;
+            font-weight: normal;
+        }
+        &__img{
+            width: 100%;
+            max-width: $mega-menu-whats-news-img-maxwidth;
+            height: $mega-menu-whats-news-img-height;
+            border-radius: $mega-menu-whats-news-img-radious;
+            background-size: cover;
+            background-position: center;
+        }
+        &__heading{
+            font-size: $mega-menu-whats-news-heading-fontsize;
+            font-weight: $mega-menu-whats-news-heading-fontweight;
+            line-height: $mega-menu-whats-news-heading-lineheight;
+        }
+        &__text{
+            font-size: $mega-menu-whats-news-text-fontsize;
+        }
+        &__link{
+            font-size: $mega-menu-whats-news-link-fontsize;
+            font-weight: $mega-menu-whats-news-link-fontweight;
+            color: $text-color-sea-green;
+            i{
+                @include transition(0.3s);
+                margin-right: 5px;
+            }
+            &:hover{
+                i{
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+
+    .language-switcher{
+        float: right;   
+        font-family: $font_ar;
+        font-size: $mega-menu-lang-fontsize;
+        font-weight: bold;
+        padding-top: $mega-menu-lang-link-pt;
+        padding-right: $mega-menu-lang-link-pr;
+        padding-bottom: $mega-menu-lang-link-pb;
+        padding-left: $mega-menu-lang-link-pl;        
+        @include transition(0.3s);
+        &:hover{
+            color: $white-color;
+            background: $bg-color-sea-green;
+        }
+    }
+
+    .phone-btn{
+        float: right;       
+        @include transition(0.3s);    
+        &__link{
+            display: block;
+            padding-top: $mega-menu-phone-link-pt;        
+            padding-right: $mega-menu-phone-link-pr;
+            padding-bottom: $mega-menu-phone-link-pb;
+            padding-left: $mega-menu-phone-link-pl;
+        }
+        &__img{
+            max-width: $mega-menu-phone-max-width;
+            width: 100%;            
+        }
+        &:hover{
+            background: $bg-color-sea-green;
+            img{
+                -webkit-filter: brightness(0) invert(1);
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    .search-btn{
+        float: right;
+        @include transition(0.3s);
+        > i{
+            position: relative;
+            display: inline-block;
+            font-size: $mega-menu-search-icon-i-fontsize;
+            cursor: pointer;
+            padding-top: $mega-menu-search-icon-i-pt;
+            padding-right: $mega-menu-search-icon-i-pr;
+            padding-bottom: $mega-menu-search-icon-i-pb;
+            padding-left: $mega-menu-search-icon-i-pl;
+            &:after{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: $mega-menu-search-icon-i-after-top;
+                height: $mega-menu-search-icon-i-after-height;
+                width: $mega-menu-search-icon-i-after-width;
+                background: $bg-color-light-grey;
+            }
+        }
+        &:hover{
+            background: $bg-color-sea-green;
+            > i{
+                color: $white-color;                
+            }
+        }
+
+    }
+
+    .search-overlay{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: $mega-menu-search-overlay-top;
+        width: $mega-menu-search-overlay-width;
+        height: 100%;        
+        background: $grey-300;
+        padding: $mega-menu-search-overlay-padding;
+        @include transition(0.3s);
+
+        &--append{
+            top: $mega-menu-search-overlay-top-append;
+        }
+
+        &__close{
+            position: absolute;
+            right: $mega-menu-search-overlay-close-right;
+            top: $mega-menu-search-overlay-global-top;
+            transform: translateY($mega-menu-search-overlay-global-transform);
+        }
+
+        &__search-icon{
+            position: absolute;
+            left: $mega-menu-search-overlay-search-icon-left;
+            top: $mega-menu-search-overlay-global-top;
+            font-size: $mega-menu-search-overlay-search-icon-fontsize;
+            transform: translateY($mega-menu-search-overlay-global-transform);
+            padding: 0;
+            background: none;
+        }
+
+        &__input{
+            font-size: $mega-menu-search-overlay-input-fontsize;
+            width: 100%;
+            font-weight: bold;
+            padding-left: $mega-menu-search-overlay-input-pl;
+            padding-right: $mega-menu-search-overlay-input-pr;
+            background: none;
+        }
+    }
+
+    .accordion-menu{
+        .card{
+            border-radius: 0;
+            background-color: $grey-200;
+            &:first-child{
+                border-top: none;                
+            }
+            .card-header{
+                background-color: $white-color;
+                .btn-link{
+                    display: block;
+                    color: $grey-900;
+                    text-align: left;
+                    text-decoration: none;
+                    font-size: $sub-menu-link-fontsize;
+                    font-weight: $mega-menu-nav-list-fontweight;
+                    padding: 0;
+                    i{
+                        float: right;
+                        font-size: $sub-menu-accordion-btn-fontsize;
+                        margin-top: $sub-menu-accordion-btn-mt;
+                        @include transform(rotate(90deg));
+                        @include transition($sub-menu-transition-time);
+                    }
+                    &.collapsed{
+                        i{
+                            @include transform(rotate(0deg));
+                        }
+                    }
+                }
+                                
+            }
+        }
+        &__list{
+            margin-bottom: $sub-menu-list-mb;
+            font-weight: normal;
+        }
+        &__list-link{
+            font-size: $sub-menu-list-link-fontsize;
+            color: $text-color-mid-blue;
+            @include transition($sub-menu-transition-time);
+            &:hover{
+                color: $text-color-sea-green;
+            }
+        }
+        &__link{
+            font-size: $sub-menu-link-fontsize;
+            font-weight: normal;
+            text-decoration: underline;
+            color: $text-color-sea-green;
+            @include transition($sub-menu-transition-time);
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        &__list-link-news{
+            font-size: $sub-menu-list-link-news-fontsize;
+            color: $white-color;
+            background: $orange-color;
+            border-radius: $sub-menu-list-link-news-radius;
+            padding: $sub-menu-list-link-news-py $sub-menu-list-link-news-px;
+            margin-left: $sub-menu-list-link-news-ml;
+        }
+    }
+
+    &--switch{
+        nav{
+            justify-content: flex-end;
+        }
+    }
+}
+

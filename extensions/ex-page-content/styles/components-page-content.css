@@ -1,0 +1,182 @@
+/***************************************************************************************************
+Extension Name: ex-page-content 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-page-content 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-page-content 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-page-content__event-details__detail-icon {
+  margin-bottom: 40px;
+}
+
+html[lang*='en'] .ex-page-content__event-details__detail-icon,
+html[class*='translated-ltr'] .ex-page-content__event-details__detail-icon {
+  margin-right: 20px;
+}
+
+html[lang*='ar'] .ex-page-content__event-details__detail-icon,
+html[class*='translated-rtl'] .ex-page-content__event-details__detail-icon {
+  margin-left: 20px;
+}
+
+.ex-page-content__event-details__detail-icon i {
+  color: #673AB7;
+  font-size: 20px;
+}
+
+html[lang*='en'] .ex-page-content__event-details__detail-icon i,
+html[class*='translated-ltr'] .ex-page-content__event-details__detail-icon i {
+  margin-right: 10px;
+}
+
+html[lang*='ar'] .ex-page-content__event-details__detail-icon i,
+html[class*='translated-rtl'] .ex-page-content__event-details__detail-icon i {
+  margin-left: 10px;
+}
+
+.ex-page-content__event-details__detail-icon span {
+  color: #3F3E45;
+  font-size: 12px;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-page-content__event-details__detail-icon {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-page-content__event-details {
+    margin-bottom: 30px;
+  }
+}
+
+.ex-page-content__event-title {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1.17;
+  margin-bottom: 55px;
+}
+
+.ex-page-content__event-banner {
+  height: 480px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ex-page-content__event-banner img {
+  display: none;
+}
+
+.ex-page-content__event-card {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  margin-bottom: 40px;
+  width: 280px;
+}
+
+.ex-page-content__event-card--shadow {
+  box-shadow: 0px, 0px, 5px, #D6D6D6;
+}
+
+.ex-page-content__event-card--pull-up {
+  margin-top: -70px;
+}
+
+.ex-page-content__event-card__card-date {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.ex-page-content__event-card__icon-info {
+  margin-bottom: 10px;
+}
+
+.ex-page-content__event-card__icon-info i {
+  color: #673AB7;
+}
+
+html[lang*='en'] .ex-page-content__event-card__icon-info i,
+html[class*='translated-ltr'] .ex-page-content__event-card__icon-info i {
+  margin-right: 10px;
+}
+
+html[lang*='ar'] .ex-page-content__event-card__icon-info i,
+html[class*='translated-rtl'] .ex-page-content__event-card__icon-info i {
+  margin-left: 10px;
+}
+
+.ex-page-content__event-card__icon-info span {
+  font-size: 12px;
+}
+
+.ex-page-content__event-card__card-link {
+  color: #673AB7;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ex-page-content__small-heading {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.ex-page-content__small-heading--blue {
+  color: #673AB7;
+}
+
+.ex-page-content__event-content {
+  line-height: 1.5;
+}
+
+.inner-page p {
+  font-size: 25px;
+}
+
+.inner-page p.field-content {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body.on-page-editor div.ex-page-content__event-banner img {
+  display: block;
+}

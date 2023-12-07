@@ -1,0 +1,210 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName}  , .section {
+
+        position: relative;
+        background-color: $parallax-section-default-bg-color;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        &--parallax {
+            background-attachment: fixed;
+           
+           
+            
+        
+            @media #{$sm} {
+                background-attachment: initial;
+            }
+
+            // for safari
+            @include safari{
+                background-attachment: scroll;
+            }
+            @media #{$ie11} {
+                background-attachment: scroll;
+            }
+
+            &__slider {
+                &__tabs{
+                    &__title{
+                        margin: $parallax-tabs-inactive-title-margin;
+                        .slick-slide{
+                            opacity: $parallax-tabs-inactive-slide-opactiy;
+                        }
+                        .slick-current{
+                           opacity: $parallax-tabs-active-slide-opactiy;
+                        }
+                    }
+                }
+            }
+
+            &__Links-numbers{
+                img{
+                    width: $parallax-Links-numbers-img-width;
+                    max-width: none;
+                }
+                a {
+                    color: $parallax-Links-numbers-links-colors;
+                     &:hover
+                    {
+                        color: $parallax-Links-numbers-links-hover-colors;
+                    }
+                }
+                &__separator{
+                    opacity: $parallax-Links-numbers-separator-opacity;
+                    height: $parallax-Links-numbers-separator-height;
+                    border-left: $parallax-Links-numbers-separator-border;
+                }
+            }
+
+        }
+
+        &--bg-contain {
+            background-size: contain;
+        }
+
+        &--min-height {
+            min-height: $parallax-section-min-height;
+        }
+
+        &--left {
+            background-size: initial;
+            background-position-x: left;
+
+            @include rtl {
+                background-position-x: right;
+            }
+        }
+
+        &--repeat-x {
+            background-repeat: repeat-x;
+        }
+
+        &--repeat-y {
+            background-repeat: repeat-y;
+        }
+
+        &--repeat {
+            background-repeat: repeat;
+        }
+
+        &--right {
+            background-size: initial;
+            background-position-x: right;
+
+            @include rtl {
+                background-position-x: left;
+            }
+        }
+
+        &--bottom {
+            background-size: initial;
+            background-position-y: bottom;
+        }
+
+        &--top {
+            background-size: initial;
+            background-position-y: top;
+        }
+
+        &--white {
+            background-color: $parallax-section-white-bg-color;
+        }
+
+        &--bg-effect {
+
+            background-color: $parallax-section-bg-effect-background-color;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            &--cover{
+                background-size: cover;
+            }
+            &__cms-img{
+                img{
+                    display: none;
+                }
+            }
+            @include ltr {
+                background-position: right bottom;
+            }
+
+            @include rtl {
+                background-position: left bottom;
+            }
+        }
+
+        &--before {
+            &::before {
+                content: '';
+                position: absolute;
+                display: inline-block;
+                top:0;
+                left:0;
+                right: 0;
+                margin: auto;
+                z-index: 1;
+                width: $parallax-section-before-width;
+                height:$parallax-section-before-height;
+                background-color: $parallax-section-before-background-color;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                display: inline-block;
+                top:$parallax-section-before-height;
+                left:0;
+                right: 0;
+                margin: auto;
+                width:$parallax-section-before-circle-width;
+                height:$parallax-section-before-circle-width;
+                border-radius: 50%;
+                background-color: $parallax-section-before-background-color;
+            }
+
+        }
+
+        &--animation{
+            > div {
+                position: absolute;
+                left: 0;
+                right: 0;
+            }
+        }
+
+        &--overlay{
+            .parallax-overlay{
+                position: absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background: $parallax-section-overlay-bg-color;
+                transform: none !important; // to ignore animation 
+            }
+        }
+
+    
+}
+
+.on-page-editor{
+    .ex-parallax--bg-effect__cms-img {
+        img{
+        display: block;
+    }
+}
+}

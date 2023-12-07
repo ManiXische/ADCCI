@@ -1,0 +1,42 @@
+@using TAMM.Project.LiveService.Models;
+@using System.Web.Script.Serialization;
+@{
+
+    var renderingcontext = Sitecore.Mvc.Presentation.RenderingContext.CurrentOrNull;
+    var datasource = renderingcontext.Rendering.DataSource;
+    Sitecore.Data.Items.Item datasourceitem = Sitecore.Context.Database.GetItem(datasource);
+    var ListingApiUrl = datasourceitem.Fields["ListingApiUrl"].Value;
+    var DetailApiUrl = datasourceitem.Fields["DetailApiUrl"].Value;
+    var ServiceTitle = datasourceitem.Fields["ServiceTitle"].Value;
+    
+    Sitecore.Data.Fields.ImageField BuoyPinpointField = ((Sitecore.Data.Fields.ImageField)datasourceitem.Fields["BuoyPinpoint"]);
+    string BuoyPinpoint = Sitecore.Resources.Media.MediaManager.GetMediaUrl(BuoyPinpointField.MediaItem);
+
+
+    Sitecore.Data.Fields.ImageField TidePinpointField = ((Sitecore.Data.Fields.ImageField)datasourceitem.Fields["TidePinpoint"]);
+    string TidePinpoint = Sitecore.Resources.Media.MediaManager.GetMediaUrl(TidePinpointField.MediaItem);
+
+    Sitecore.Data.Fields.ImageField DefaultPinpointField = ((Sitecore.Data.Fields.ImageField)datasourceitem.Fields["DefaultPinpoint"]);
+    string DefaultPinpoint = Sitecore.Resources.Media.MediaManager.GetMediaUrl(DefaultPinpointField.MediaItem);
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="ex-live-monitoring">
+                <div class="ex-live-monitoring__map">
+                    <h2 class="ex-live-monitoring__title">@ServiceTitle</h2>
+                    <div class="live-monitoring-map" id="live-monitoring-map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+        var listingApiURL = '@ListingApiUrl',
+        detailsApiURL = '@DetailApiUrl';
+        var BuoyPinpoint ='@BuoyPinpoint';
+        var TidePinpoint ='@TidePinpoint';
+        var DefaultPinpoint ='@DefaultPinpoint';
+</script>

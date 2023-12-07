@@ -1,0 +1,13 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-icon-card",
+        "version" : "1.0.0",
+        "owner" :  "wael"
+    },
+    "prerequisites" : [
+        "ex-main-theme",
+        "ex-layout"
+    ]
+}

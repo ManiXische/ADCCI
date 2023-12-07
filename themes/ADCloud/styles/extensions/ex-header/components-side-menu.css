@@ -1,0 +1,328 @@
+/***************************************************************************************************
+Extension Name: ex-header 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-header 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-header 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***Sidebar style******/
+.sidemenu {
+  top: 0;
+  height: 100vh;
+  z-index: 999;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  box-shadow: 3px 3px 3px rgba(63, 62, 69, 0.2);
+  width: 375px;
+  background-color: #ffffff;
+}
+
+html:not([dir='rtl']) .sidemenu, .translated-ltr .sidemenu {
+  left: -385px;
+}
+
+html[dir='rtl'] .sidemenu, .translated-rtl .sidemenu {
+  right: -385px;
+}
+
+.sidemenu:after {
+  content: '';
+  background: #ffffff;
+  position: fixed;
+  width: 375px;
+  height: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+html:not([dir='rtl']) .sidemenu:after, .translated-ltr .sidemenu:after {
+  left: -375px;
+}
+
+html[dir='rtl'] .sidemenu:after, .translated-rtl .sidemenu:after {
+  right: -375px;
+}
+
+html:not([dir='rtl']) .sidemenu--active, .translated-ltr .sidemenu--active {
+  left: 0;
+}
+
+html[dir='rtl'] .sidemenu--active, .translated-rtl .sidemenu--active {
+  right: 0;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .sidemenu--active {
+    overflow: auto;
+  }
+}
+
+.sidemenu__header {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.sidemenu__dismiss-menu {
+  cursor: pointer;
+}
+
+.sidemenu ul {
+  padding: 0 30px;
+  color: #3F3E45;
+}
+
+.sidemenu ul li {
+  border-bottom: 1px solid #F5F5F7;
+}
+
+html[dir='rtl'] .sidemenu ul li, .translated-rtl .sidemenu ul li {
+  text-align: right;
+}
+
+.sidemenu ul li a {
+  text-decoration: none;
+  color: #3F3E45;
+  font-size: 12px;
+  display: block;
+  padding: 16px 0;
+  line-height: 23px;
+}
+
+.sidemenu ul li a:hover {
+  color: #0091C7;
+}
+
+.sidemenu ul li.submenu .navigation-title {
+  position: relative;
+}
+
+.expanding-navigation.sidemenu ul li + .expanded-menu {
+  margin-top: 0px;
+}
+
+.sidemenu ul li.submenu > .navigation-title > a {
+  pointer-events: none;
+}
+
+.sidemenu ul li.submenu ul {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  border: none;
+  height: 0;
+  padding: 0;
+}
+
+.sidemenu ul li.submenu ul.expanded-menu {
+  margin-bottom: 10px;
+}
+
+html:not([dir='rtl']) .sidemenu ul li.submenu ul, .translated-ltr .sidemenu ul li.submenu ul {
+  margin-left: 10px;
+}
+
+html[dir='rtl'] .sidemenu ul li.submenu ul, .translated-rtl .sidemenu ul li.submenu ul {
+  margin-right: 10px;
+}
+
+.sidemenu ul li.submenu ul li {
+  border-bottom: none;
+}
+
+.sidemenu ul li.submenu ul li a {
+  padding: 10px 0;
+}
+
+.sidemenu ul li.submenu ul .expanded {
+  height: 100px;
+}
+
+.sidemenu ul li.submenu .expand-icon {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  top: 11px;
+  border-radius: 50%;
+  padding-right: 5px;
+  text-align: right;
+  top: 0;
+  right: 0;
+}
+
+html[dir='rtl'] .sidemenu ul li.submenu .expand-icon, .translated-rtl .sidemenu ul li.submenu .expand-icon {
+  right: initial;
+  left: 0;
+  text-align: left;
+  padding-right: initial;
+  padding-left: 5px;
+}
+
+.sidemenu ul li.submenu .expand-icon::before {
+  display: inline-block;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 10px;
+  height: 10px;
+}
+
+html[dir='rtl'] .sidemenu ul li.submenu .expand-icon::before, .translated-rtl .sidemenu ul li.submenu .expand-icon::before {
+  left: 5px;
+  right: auto;
+}
+
+.sidemenu ul li.submenu .expand-icon.toggled::before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.sidemenu__sidebar-header {
+  padding: 20px;
+  margin-bottom: 40px;
+  color: #3F3E45;
+  background-color: transparent;
+}
+
+.sidemenu .lang-switch--small-screen {
+  border-radius: 2px;
+  background-color: #0091C7;
+}
+
+.sidemenu .lang-switch--small-screen .language-switcher a {
+  display: block;
+  padding: 6px 18px;
+  color: #ffffff;
+}
+
+html[dir='rtl'] .sidemenu .lang-switch--small-screen .language-switcher a, .translated-rtl .sidemenu .lang-switch--small-screen .language-switcher a {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.sidemenu .lang-switch--small-screen .language-switcher a:hover {
+  color: #3F3E45;
+  text-decoration: none;
+}
+
+.sidemenu .lang-switch--small-screen .language-switcher[data-language-code] a {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.sidemenu .lang-switch--small-screen .language-switcher[data-language-code='ar'] a {
+  font-family: "NotoKufiArabic", Arial, sans-serif;
+}
+
+.sidemenu .settings-icon {
+  width: auto;
+  padding-left: 20px;
+}
+
+html[dir='rtl'] .sidemenu .settings-icon, .translated-rtl .sidemenu .settings-icon {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+
+.sidemenu--first-level ul li.submenu > .navigation-title {
+  font-weight: bold;
+}
+
+.sidemenu--first-level ul li.submenu > .navigation-title > a {
+  pointer-events: visible;
+}
+
+.sidemenu--first-level ul li.submenu .expanded-menu li a {
+  padding-left: 0px;
+  padding-right: 0px;
+  font-weight: 400;
+}
+
+html:not([dir='rtl']) .sidemenu--first-level ul li.submenu .expanded-menu, .translated-ltr .sidemenu--first-level ul li.submenu .expanded-menu {
+  margin-left: 0px;
+}
+
+html[dir='rtl'] .sidemenu--first-level ul li.submenu .expanded-menu, .translated-rtl .sidemenu--first-level ul li.submenu .expanded-menu {
+  margin-right: 0px;
+}
+
+.sidemenu--first-level ul li.submenu .expand-icon {
+  width: 55px;
+  padding: 0;
+}
+
+.sidemenu--first-level ul li.submenu .expand-icon:before {
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+html[dir='rtl'] .sidemenu--first-level ul li.submenu .expand-icon:before, .translated-rtl .sidemenu--first-level ul li.submenu .expand-icon:before {
+  right: 0;
+  left: 0;
+}
+
+html[dir='rtl'] .sidemenu--first-level ul li.submenu .expand-icon, .translated-rtl .sidemenu--first-level ul li.submenu .expand-icon {
+  padding: 0;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(63, 62, 69, 0.7);
+  z-index: 998;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.overlay--active {
+  display: block;
+  opacity: 1;
+  top: 0;
+}

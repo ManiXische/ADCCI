@@ -1,0 +1,57 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    // Your code goes here
+    width:100%;
+
+    .ui-lib-start-login{
+        background-color : $service-card-start-bg-color !important;
+        border-color : $service-card-start-border-color !important;
+    }
+    .ui-lib-button{
+        background-color: $service-card-start-button-bg-color !important;
+        color: $service-card-start-button-color !important;
+        &:hover{
+            background-color: $service-card-start-button-hover-bg-color !important;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $service-card-start-font-color !important;
+    }
+    p , span{
+        color : $service-card-start-text-color !important;
+    }
+    .ui-lib-start-login__properties, .ui-lib-start-login__title{
+        span{
+            color: $service-card-properties-title-font-color !important;
+        }
+        svg path {
+            fill: $service-card-properties-title-font-color !important;
+        }
+
+    }
+    .ui-lib-process-step__content-title{
+        color : $service-card-start-content-title-color !important;
+    }
+
+    .ui-lib-table-cell{
+        color: $service-card-start-content-title-color !important;
+    }
+    .ui-lib-process-step__order-value { 
+        color : $service-card-start-order-color !important;
+        background-color : $service-card-start-order-bg-color !important;
+    }
+    .ui-lib-table__title{
+        background-color: $service-card-start-table-title-bg-color !important;
+    }
+}

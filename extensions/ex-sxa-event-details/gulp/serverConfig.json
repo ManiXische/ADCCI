@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-sxa-event-details",
+        "version" : "1.0.0",
+        "owner" :  "tawfik"
+    }
+}

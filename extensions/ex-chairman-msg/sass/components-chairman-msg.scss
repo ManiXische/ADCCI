@@ -1,0 +1,51 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    padding-bottom: $chairman-msg-padding;
+    &__content{
+        &__text{
+            line-height: 25px;
+            h4{
+                text-transform: $chairman-msg-text-transform;
+            }
+        }
+
+        &__image{
+            $imgelement : &;
+            img {
+                width:100%;
+            }
+            @at-root {
+                .high-contrast{
+                  #{$imgelement}{
+                      img{
+                          -webkit-filter: grayscale(1) invert(100%) !important;
+                          filter: grayscale(1) invert(100%) !important;
+                      }
+                  }
+                }
+              }
+        }
+    }
+
+    &__title{
+        color: $chairman-msg-field-title-color;
+    }
+    &__subtitle{
+        color: $chairman-msg-field-subtitle-color;
+    }
+
+    & + .#{$ProjectName}{
+        border-top: $chairman-msg-border-size solid $chairman-msg-border-color;
+        padding-top:$chairman-msg-padding;
+    }
+}

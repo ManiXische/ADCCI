@@ -1,0 +1,26 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+$media-library-anchor-color:$black-color!default;
+$media-library-container-height:360px!default;
+$media-library-description-bottom-val:0!default;
+$media-library-description-bg: color-opacity($white-color, 0.8) !default;
+$media-library-description-color :$grey-900 !default;
+$media-library-description-width:100%!default;
+$media-library-description-padding:16px 20px 10px 20px!default;
+$media-library-description-pos:0!default;
+$media-library-album-name-fs:12px!default;
+$media-library-icon-color:color-opacity($black-color, 0.5)!default;
+$media-library-icon-padding:10px!default;
+$media-library-icon-border-radius:10px!default;
+$media-library-icon-fs:3rem!default;
+$media-library-icon-bg:$white-color!default;
+$media-library-icon-hover-color:$primary-color !default;
+
+$media-library-featured-video-height:500px!default;
+$media-library-featured-video-icon-fs:5rem!default;
+$media-library-featured-video-icon-color:$white-color!default;
+$media-library-featured-video-icon-conent-bg:$grey-100!default;
+$media-library-featured-video-icon-conent-height:500px!default;

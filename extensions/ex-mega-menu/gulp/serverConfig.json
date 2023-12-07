@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-mega-menu",
+        "version" : "1.0.0",
+        "owner" :  "waqas-khan-omnia"
+    }
+}

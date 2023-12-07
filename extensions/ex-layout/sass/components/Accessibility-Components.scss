@@ -1,0 +1,94 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: Accessibility styles
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+.high-contrast {
+  iframe[title="recaptcha challenge"] ,
+  .fancybox-video,
+  .fancybox-iframe{
+    filter: grayscale(1) invert(100%);
+  }
+  & , & &--forced {
+    -webkit-filter: grayscale(0) invert(100%);
+    filter: grayscale(0) invert(100%);
+    // overflow-x: hidden;
+
+    [style^="background-image:"] {
+      -webkit-filter: grayscale(1) invert(1);
+      filter: grayscale(1) invert(1);
+    }
+    img {
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+    }
+  }
+
+  #wrapper { 
+    background-color: #fff;
+  }
+  .section {
+    & , &--white {
+        // background-color: #000;
+        // color: #fff;
+    }
+  }
+  &--revert{
+    color :#fff;
+  }
+
+  &--reset{
+    -webkit-filter: grayscale(0) !important;
+    filter: grayscale(0) !important;
+  }
+}
+
+body.zoom {
+  @each $class, $value in $zoom-values {
+    &-#{$class} {
+      zoom: #{$value};
+      @media #{$ie11}{
+        zoom: 0 !important;
+        -ms-transform: scale(#{$value}, #{$value});
+        /* IE 9 */
+        -webkit-transform: scale(#{$value}, #{$value});
+        /* Safari, Opera */
+        transform: scale(#{$value}, #{$value});
+      }
+     
+      @include firefox{
+        -moz-transform: scale(#{$value},#{$value});
+      }
+      @at-root{
+        > & {
+        @include firefox{
+            @include ltr{
+              @if(str-index($class, "out-")){
+                -moz-transform-origin: top center;
+              }@else {
+                -moz-transform-origin: top left;
+              }
+            }
+            @include rtl{
+              @if(str-index($class, "out-")){
+                -moz-transform-origin: top center;
+              }@else {
+                -moz-transform-origin: top right;
+              }
+            }
+        }
+    }
+    }
+
+    }
+  }
+}
+
+.on-page-editor{
+  & &--reset-height{
+      height: auto !important;
+  }
+}
+

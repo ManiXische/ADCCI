@@ -1,0 +1,680 @@
+<!-- <html lang="ar-AE" dir="rtl"> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Don't remove Section -->
+
+    <!-- ex-main-theme -->
+    <link rel="stylesheet" href="../../ex-main-theme/styles/bootstrap.css" />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/icomoon.css" />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/icons.css" />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/animate.css" />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/jquery-fancybox.css" />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/owl-carousel.css" />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/slick.css" />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/smooth-scrollbar.css" />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/components-main-theme.css" />
+
+    <!-- ex-layout  -->
+    <link rel="stylesheet" href="../../ex-layout/styles/components-layout.css" />
+    <!-- End don't remove Section -->
+
+    <!-- Your css files goes here -->
+    <link rel="stylesheet" href="../..\\ex-listing-page/styles/components-ex-listing-page.css" />
+
+    <!-- Your css files goes here -->
+<style>
+  .ex-publications-v2-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e1;
+  height: 100%;
+}
+
+.ex-publications-v2-card--img img {
+  width: 100%;
+  min-height: 164px;
+}
+
+.ex-publications-v2-card__content-wrapper {
+  height: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.ex-publications-v2-card--details--caategory {
+  margin-bottom: 5px;
+}
+
+.ex-publications-v2-card--details--caategory::after {
+  content: ',';
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--details--caategory::after, .translated-ltr .ex-publications-v2-card--details--caategory::after {
+  padding-right: 5px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--details--caategory::after, .translated-rtl .ex-publications-v2-card--details--caategory::after {
+  padding-left: 5px;
+}
+
+.ex-publications-v2-card--details--caategory:last-child {
+  margin-bottom: 0;
+}
+
+.ex-publications-v2-card--details--caategory:last-child::after {
+  content: '';
+}
+
+.ex-publications-v2-card--details--caategory__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ex-publications-v2-card--details--caategory-title {
+  color: #3F3E45;
+  font-size: 12px;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--details--caategory-title, .translated-ltr .ex-publications-v2-card--details--caategory-title {
+  margin-left: 5px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--details--caategory-title, .translated-rtl .ex-publications-v2-card--details--caategory-title {
+  margin-right: 5px;
+}
+
+.ex-publications-v2-card--details--caategory img {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.ex-publications-v2-card--details--caategory i {
+  color: #3F3E45;
+  font-size: 16;
+}
+
+.ex-publications-v2-card--details--heading {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #3F3E45;
+}
+
+.ex-publications-v2-card--details--description {
+  margin-top: 13px;
+  font-size: 14px;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--details--description, .translated-ltr .ex-publications-v2-card--details--description {
+  line-height: 20px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--details--description, .translated-rtl .ex-publications-v2-card--details--description {
+  line-height: 20px;
+}
+
+.ex-publications-v2-card--details--data {
+  margin-top: 15px;
+}
+
+.ex-publications-v2-card--details--data_title {
+  font-size: 12px;
+}
+
+.ex-publications-v2-card--details--data .types-value-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ex-publications-v2-card--details--data_value {
+  font-size: 14px;
+}
+
+.ex-publications-v2-card--details--data_value::after {
+  content: ',';
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--details--data_value::after, .translated-ltr .ex-publications-v2-card--details--data_value::after {
+  padding-right: 5px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--details--data_value::after, .translated-rtl .ex-publications-v2-card--details--data_value::after {
+  padding-left: 5px;
+}
+
+.ex-publications-v2-card--details--data_value:last-child {
+  margin-bottom: 0;
+}
+
+.ex-publications-v2-card--details--data_value:last-child::after {
+  content: '';
+}
+
+.ex-publications-v2-card--buttons {
+  margin-top: 17px;
+}
+
+.ex-publications-v2-card--buttons_button {
+  position: relative;
+  border: 2px solid #3F3E45;
+  padding: 7px 8px;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--buttons_button, .translated-ltr .ex-publications-v2-card--buttons_button {
+  margin-right: 15px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--buttons_button, .translated-rtl .ex-publications-v2-card--buttons_button {
+  margin-left: 15px;
+}
+
+.ex-publications-v2-card--buttons_button--text {
+  font-size: 12px;
+  color: #3F3E45;
+}
+
+.ex-publications-v2-card--buttons_button--text:focus {
+  color: #3F3E45;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--buttons_button--text, .translated-ltr .ex-publications-v2-card--buttons_button--text {
+  line-height: 12px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--buttons_button--text, .translated-rtl .ex-publications-v2-card--buttons_button--text {
+  line-height: 12px;
+}
+
+.ex-publications-v2-card--buttons_button--arrow {
+  font-weight: 900;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--buttons_button--arrow, .translated-ltr .ex-publications-v2-card--buttons_button--arrow {
+  margin-left: 20px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--buttons_button--arrow, .translated-rtl .ex-publications-v2-card--buttons_button--arrow {
+  margin-right: 20px;
+}
+
+.ex-publications-v2-card--buttons_button:hover {
+  cursor: pointer;
+  background: #3F3E45;
+}
+
+.ex-publications-v2-card--buttons_button:hover .ex-publications-v2-card--buttons_button--text,
+.ex-publications-v2-card--buttons_button:hover .ex-publications-v2-card--buttons_button--arrow {
+  color: #ffffff;
+}
+
+.ex-publications-v2-card--dropdown {
+  margin-top: 17px;
+  z-index: 1;
+}
+
+.ex-publications-v2-card--dropdown select {
+  display: none;
+}
+
+.ex-publications-v2-card--dropdown .dropdown-link {
+  border: 2px solid #3F3E45;
+  padding: 7px 8px;
+  position: relative;
+}
+
+.ex-publications-v2-card--dropdown--text {
+  font-size: 12px;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--dropdown--text, .translated-ltr .ex-publications-v2-card--dropdown--text {
+  line-height: 12px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--dropdown--text, .translated-rtl .ex-publications-v2-card--dropdown--text {
+  line-height: 12px;
+}
+
+.ex-publications-v2-card--dropdown--arrow {
+  font-weight: 900;
+}
+
+.ex-publications-v2-card--dropdown:hover {
+  cursor: pointer;
+}
+
+.ex-publications-v2-card--dropdown:hover .dropdown-link {
+  background: #3F3E45;
+}
+
+.ex-publications-v2-card--dropdown:hover .ex-publications-v2-card--dropdown--text,
+.ex-publications-v2-card--dropdown:hover .ex-publications-v2-card--dropdown--arrow {
+  color: #ffffff;
+}
+
+.ex-publications-v2-card--dropdown--list {
+  position: absolute;
+  display: none;
+  overflow: auto;
+  border: 1px solid #e0e0e1;
+  background: #ffffff;
+  max-height: 162px;
+}
+
+.ex-publications-v2-card--dropdown--list-item {
+  padding: 7px 9px;
+  border: 1px solid #e0e0e1;
+}
+
+.ex-publications-v2-card--dropdown--list-item-text {
+  font-size: 16px;
+  color: #3F3E45;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--dropdown--list-item-text, .translated-ltr .ex-publications-v2-card--dropdown--list-item-text {
+  line-height: 24px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--dropdown--list-item-text, .translated-rtl .ex-publications-v2-card--dropdown--list-item-text {
+  line-height: 24px;
+}
+
+.ex-publications-v2-card--background {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  min-height: 520px;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-publications-v2-card--background {
+    height: 100%;
+    min-height: 0;
+  }
+}
+
+.ex-publications-v2-card--background .ex-publications-v2-card--img {
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-publications-v2-card--background .ex-publications-v2-card--img {
+    position: relative;
+    width: 128px;
+    height: auto;
+    margin: 20px 20px 1px 20px;
+  }
+}
+
+.ex-publications-v2-card--background .ex-publications-v2-card__content-wrapper {
+  height: auto;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+</style>
+</head>
+
+<body>
+    <div class="container mt-8">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Your code goes here -->
+                <h1>Publications</h1>
+                <div class="ex-listing-page row mt-9">
+                    <div class="ex-listing-page__popup--overlay d-none" ex-listing-page-overlay></div>
+                    <div class="ex-listing-page__popup--form d-none" ex-listing-page-form>
+                        <div class="ex-listing-page__popup--form--header">
+                            <span class="ex-listing-page__popup--form--header-title">Filter</span>
+                            <span class="ex-listing-page__popup--form--header-icon icon-remove" form-close></span>
+                        </div>
+                        <div class="ex-listing-page__popup--form--body" ex-listing-page-form-body></div>
+                        <div class="ex-listing-page__popup--form--footer">
+                            <div class="ex-listing-page__popup--form--apply button button--primary button--medium" form-apply>Apply</div>
+                            <div class="ex-listing-page__popup--form--close"> <a class="mx-7" href="javascript:void(0)" form-close>Close</a> </div>
+                        </div>
+                    </div>
+                    <div class="col-12 ex-listing-page__filters--buttons d-lg-none d-block">
+                        <div class="button filter-button" filter-button>
+                            <a href="javascript:void(0)" form-open>
+                                <span class="filter-button--icon icon-filter-filled"></span>
+                                <span class="filter-button--text">Filter</span>
+                                
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-lg-block  d-none" >
+                        <div class="ex-listing-page_search" ex-listing-search>
+                            <div class="ex-listing-page--label text-uppercase mb-3">
+                                Search
+                            </div>
+                            <div class="position-relative" listing_search__wrap>
+                                <input class="ex-listing-page_search--input rounded w-100" type="text"
+                                    listing_search__input />
+                                <i class="icon-search-alt position-absolute" listing_search__btn></i>
+                            </div>
+                        </div>
+                        <div listing_filters__wrap>
+                            <!-- Publications -->
+                            <div class="ex-listing-page_group mt-lg-8" group="PublicationType" data-filter="PublicationType" has_showmore>
+                                <div class="ex-listing-page--label d-inline-block text-uppercase mb-3">
+                                    Publications
+                                </div>
+                                <span class="ex-listing-page--cta" clear>Clear All</span>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper" check-all group="PublicationType">All
+                                        <input type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">Water
+                                        <input  data-id="{11}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">Electricity
+                                        <input  data-id="{12}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">Wastewater
+                                        <input  data-id="{13}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">District Cooling
+                                        <input  data-id="{14}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">Other
+                                        <input  data-id="{15}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <span class="ex-listing-page--cta" show="more">Show more</span>
+                                <span class="ex-listing-page--cta" show="less">Show less</span>
+                            </div>
+                            <!-- Categories -->
+                            <div class="ex-listing-page_group mt-lg-5" group="PublicationCategory" data-filter="PublicationCategory" has_showmore>
+                                <div class="ex-listing-page--label d-inline-block text-uppercase mb-3">
+                                    Categories
+                                </div>
+                                <span class="ex-listing-page--cta" clear>Clear All</span>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper" check-all group="PublicationCategory">All
+                                        <input type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">Licenses
+                                        <input data-id="{12}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">Guidelines
+                                        <input data-id="{13}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">Regulations
+                                        <input  data-id="{14}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">Notices
+                                        <input  data-id="{15}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">Other 01
+                                        <input  data-id="{16}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">Other 02
+                                        <input  data-id="{17}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <div custom-checkbox>
+                                    <label class="checkbox__wrapper">Other 03
+                                        <input  data-id="{18}" type="checkbox" />
+                                        <span class="icon-check-filled checkmark"></span>
+                                    </label>
+                                </div>
+                                <span class="ex-listing-page--cta" show="more">Show more</span>
+                                <span class="ex-listing-page--cta" show="less">Show less</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="ex-listing-page__results-count" listing_showingresult__wrap>
+                                Showing
+                                <span listing_showingresult__page>09</span>
+                                of
+                                <span listing_showingresult__total>24</span>
+                                results.
+                            </div>
+                            <div class="ex-listing-page__sort d-lg-flex " listing_sort__wrap>
+                                <span class="ex-listing-page__sort--label">Sort by</span>
+                                <div class="ex-listing-page__sort--dropdown position-relative" listing_soting__wrap>
+                                    <select>
+                                        <option value="A to Z" data-value="Title" data-sort-dir="asc"> A to Z </option>
+                                        <option value="Date of Publication" data-value="PublicationDate"
+                                            data-sort-dir="desc"> Date of Publication </option>
+                                    </select>
+                                    <div class="dropdown-link rounded d-inline-flex justify-content-between align-items-center">
+                                        <span class="ex-listing-page__sort--dropdown--text">Date</span>
+                                        <span
+                                            class="ex-listing-page__sort--dropdown--arrow button--sitecore__icon icon-chevron-down "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div template-container>
+                            <div class="row mt-4" template-parent>
+                                <div class="col-lg-4 col-md-6 col-sm-12 mb-3 ex-publications-v2 d-none" template>
+                                    <div class="ex-publications-v2-card rounded-5 d-flex flex-column">
+                                        <div class="ex-publications-v2-card--img">
+                                            <img src="https://via.placeholder.com/278x164.png" alt="Thumbnail Image"
+                                                data-temp-attr="Image" data-temp-type="img" />
+                                        </div>
+                                        <div
+                                            class="ex-publications-v2-card__content-wrapper p-4 d-flex flex-column justify-content-between">
+                                            <div class="ex-publications-v2-card--details">
+                                                <div class="ex-publications-v2-card--details--caategory__container" data-temp-attr="Categories" data-temp-type="list">
+                                                    <span class="ex-publications-v2-card--details--caategory" list-template>
+                                                        <img src="https://via.placeholder.com/24x24.png" a
+                                                            data-list-temp-attr="Icon" data-list-temp-type="img" />
+
+                                                        <span
+                                                            class="ex-publications-v2-card--details--caategory-title text-uppercase"
+                                                            data-list-temp-attr="Title" data-list-temp-type="txt">
+                                                            </span>
+                                                    </span>
+                                                </div>
+                                                <div class="ex-publications-v2-card--details--heading font-weight-boldest truncate truncate-2 "
+                                                    data-temp-attr="Title" data-temp-type="txt">
+                                                    
+                                                </div>
+                                                <p class="ex-publications-v2-card--details--descriptiontruncate truncate-3"
+                                                    data-temp-attr="Description" data-temp-type="txt">
+                                                    
+                                                </p>
+                                                <div class="ex-publications-v2-card--details--data" temp-atrr-parent>
+                                                    <div class="ex-publications-v2-card--details--data_title text-uppercase"
+                                                        data-dictionary-key="publications_Card_Date">
+
+                                                    </div>
+                                                    <div class="ex-publications-v2-card--details--data_valuefont-weight-bold mt-2"
+                                                        data-temp-attr="Date" data-temp-type="txt">
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="ex-publications-v2-card--details--data" temp-atrr-parent>
+                                                    <div class="ex-publications-v2-card--details--data_title text-uppercase"
+                                                        data-dictionary-key="publications_title">
+
+                                                    </div>
+                                                    <!-- <div class="ex-publications-v2-card--details--data_value font-weight-bold mt-2"
+                                                        data-temp-attr="Types" data-temp-type="txt">
+                                                        
+                                                    </div> -->
+                                                    <div class="types-value-container" data-temp-attr="Types" data-temp-type="list">
+                                                      <div
+                                                      class="
+                                                        ex-publications-v2-card--details--data_value
+                                                        font-weight-bold mt-2
+                                                        " list-template data-list-temp-attr="Title" data-list-temp-type="txt">
+                                                        
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ex-publications-v2-card--details--data" temp-atrr-parent>
+                                                    <div class="ex-publications-v2-card--details--data_title text-uppercase"
+                                                        data-dictionary-key="publications_file_size">
+
+                                                    </div>
+                                                    <div class="ex-publications-v2-card--details--data_value font-weight-bold mt-2"
+                                                        data-temp-attr="size" data-temp-type="txt">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- if one btn -->
+                                            <div class="ex-publications-v2-card--buttons" data-temp-attr="Files" data-temp-type="list" data-condition="publication" data-condition-type="1">
+                                                <div class="ex-publications-v2-card--buttons_button rounded d-inline-flex w-100 justify-content-between position-relative" list-template>
+                                                    <a href="" data-list-temp-attr="Path" data-list-temp-type="attr" attr-name="href" class="ex-publications-v2-card--buttons_button--text font-weight-boldest stretched-link"
+                                                    data-list-temp-attr-1="Title" data-list-temp-type-1="txt"> </a>
+                                                    <span class="ex-publications-v2-card--buttons_button--arrow button--sitecore__icon icon-arrow-down"></span>
+                                                </div>
+
+                                            </div>
+                                            <!-- if two btn -->
+                                            <div class="ex-publications-v2-card--buttons d-flex" data-temp-attr="Files" data-temp-type="list" data-condition="publication" data-condition-type="2">
+                                                <div class="ex-publications-v2-card--buttons_button rounded d-inline-flex  justify-content-between position-relative" 
+                                                list-template>
+                                                    <a href="" data-list-temp-attr="Path" data-list-temp-type="attr" attr-name="href" class="ex-publications-v2-card--buttons_button--text font-weight-boldest stretched-link"
+                                                        data-list-temp-attr-1="Title" data-list-temp-type-1="txt"> </a>
+                                                    <span
+                                                        class="ex-publications-v2-card--buttons_button--arrow button--sitecore__icon icon-arrow-down"></span>
+                                                </div>
+                                            </div>
+                                            <!-- if > 2  btn -->
+                                            <div class="ex-publications-v2-card--dropdown position-relative" custom_ddlinks__wrap data-temp-attr="Files" data-temp-type="list" data-condition="publication" data-condition-type="3">
+                                                <div class="dropdown-link rounded d-inline-flex w-100 justify-content-between">
+                                                    <span class="ex-publications-v2-card--dropdown--text font-weight-boldest">select
+                                                        language &amp; download</span>
+                                                    <span class="ex-publications-v2-card--dropdown--arrow button--sitecore__icon icon-chevron-down"></span>
+                                                </div>
+                                                <div class="ex-publications-v2-card--dropdown--list w-100" custom_ddlinks__list list-template-parent>
+                                                    <div class="ex-publications-v2-card--dropdown--list-item position-relative" list-template>
+                                                        <a class="ex-publications-v2-card--dropdown--list-item-text stretched-link" target="_blanc"
+                                                            href="https://stage.tamm.abudhabi/master-site/-/media/DED-Documents/Invitation2-For-Public-Tenders-En.pdf"
+                                                            data-list-temp-attr-1="Title" data-list-temp-type-1="txt"
+                                                            data-list-temp-attr="Path" data-list-temp-type="attr" attr-name="href"> </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="loaderDiv">
+                                Loading.......
+                            </div>
+                            <div id="no-result" class="d-none">
+                                no result found
+                            </div>
+                            <div id="call-error" class="d-none">
+                                Server error
+                            </div>
+                            <div class="row justify-content-center d-none" listing_loadmore__wrap>
+                                <div
+                                    class="ex-listing-page__loadmore rounded-5 d-flex justify-content-between mt-9 mb-9">
+                                    <a href="javascript:void(0)"
+                                        class="ex-listing-page__loadmore--link text-uppercase font-weight-boldest stretched-link"
+                                        data-api-endpoint='SCAPI/ADGEs/Common/listing' data-pageno='1'
+                                        listing_loadmore__btn>Load
+                                        More</a>
+                                    <span
+                                        class="ex-listing-page__loadmore--icon font-weight-boldest button--sitecore__icon icon-chevron-down"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ex-main-theme : uncomment needed files -->
+    <!-- Lib -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/jquery-min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../ex-main-theme/scripts/lib/bootstrap-min.js"></script>
+    <!-- <script src="../../ex-main-theme/scripts/lib/smooth-scrollbar-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/fontawesome-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/jquery-fancybox-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/owl-carousel-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/slick-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/isotope-pkgd-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/lazysizes-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/jquery-validate-min.js"></script> -->
+    <!-- init  -->
+    <!-- <script src="../../ex-main-theme/scripts/fancybox-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/isotope-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/owl-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/scrollbar-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/slick-init.js"></script> -->
+    <script src="../../ex-main-theme/scripts/truncate-init.js"></script>
+
+    <!-- ex-main-theme : uncomment needed files -->
+
+    <!-- Your js files goes here -->
+    <script src="../..\\ex-listing-page/scripts/lib/axios.min.js"></script>
+    <script src="../..\\ex-listing-page/scripts/components-ex-listing-page-filters-popup.js"></script>
+    <script src="../..\\ex-listing-page/scripts/components-ex-listing-page-filters.js"></script>
+    <script src="../..\\ex-listing-page/scripts/components-ex-listing-page-sort-dropdown.js"></script>
+    <script src="../..\\ex-listing-page/scripts/components-ex-listing-page-filters-2.js"></script>
+    
+
+    <!-- Your js files goes here -->
+
+    <!-- BE script "JS variables" -->
+    <script>
+        document.Lookups = '[{"Key":"publications_Card_Date","Value":"EFFECTIVE DATE"},{"Key":"publications_title","Value":"Publications"},{"Key":"publications_file_size","Value":"File Size"},{"Key":"Filter_Category_Label","Value":"Categories"},{"Key":"Filter_Clear_All","Value":"Clear All"},{"Key":"Filter_Show_Less","Value":"Show Less"},{"Key":"Filter_Show_More","Value":"Show More"},{"Key":"Filter_Type_Label","Value":"Publications"},{"Key":"Label_Load_More","Value":"Load More"},{"Key":"Label_Search","Value":"SEARCH"},{"Key":"Placeholder_Search","Value":"search here"},{"Key":"Sort_Label","Value":"Sort by "},{"Key":"SORT_PUBLICATIONDATE_DESC","Value":"Date of Publication"},{"Key":"SORT_TITLE_ASC","Value":"A to Z"}]';
+        document.Language = 'en';
+        document.Template = '{1773DD96-7009-4670-BB77-34E208A94B34}';
+        document.Site = '{000894DE-7124-43C1-8152-278818FEA205}';
+        document.EndPoint = 'SCAPI/ADGEs/Common/listing'
+    </script>
+</body>
+
+</html>

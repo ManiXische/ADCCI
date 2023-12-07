@@ -1,0 +1,131 @@
+/***************************************************************************************************
+Extension Name: ex-content-rating 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-content-rating 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-content-rating 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-content-rating {
+  font-size: 14px;
+  color: #9F9FA2;
+  border: 1px solid #C4C4C4;
+}
+
+.ex-content-rating__title {
+  min-height: 60px;
+}
+
+.ex-content-rating__title__question .accordion-trigger {
+  background: transparent;
+  color: inherit;
+}
+
+.ex-content-rating__title__question .accordion-trigger [class^="icon-"], .ex-content-rating__title__question .accordion-trigger [class*=" icon-"] {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.ex-content-rating__title__question .accordion-trigger [class^="icon-"]:hover, .ex-content-rating__title__question .accordion-trigger [class*=" icon-"]:hover {
+  color: #FF5F60;
+}
+
+.ex-content-rating__title__question .accordion-trigger__loader {
+  display: none;
+}
+
+.ex-content-rating__title__question .accordion-trigger__loader.spinner-grow {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.ex-content-rating__title__question .accordion-trigger__disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.ex-content-rating__title__question .accordion-trigger__collapse {
+  display: none;
+}
+
+.ex-content-rating__title__question .accordion-trigger__expand {
+  display: block;
+}
+
+.ex-content-rating__title__question .accordion-trigger:not(.collapsed) .accordion-trigger__collapse {
+  display: block;
+  color: #FF5F60;
+}
+
+.ex-content-rating__title__question .accordion-trigger:not(.collapsed) .accordion-trigger__expand {
+  display: none;
+}
+
+.ex-content-rating__title__message {
+  display: none;
+}
+
+.ex-content-rating__title__message [class^="icon-"], .ex-content-rating__title__message [class*=" icon-"] {
+  font-size: 14px;
+}
+
+.ex-content-rating__title__message--success [class^="icon-"], .ex-content-rating__title__message--success [class*=" icon-"] {
+  color: #86C083;
+}
+
+.ex-content-rating__title__message--error {
+  color: #FF5F60;
+}
+
+.ex-content-rating__title__message--error [class^="icon-"], .ex-content-rating__title__message--error [class*=" icon-"] {
+  color: #FF5F60;
+}
+
+.ex-content-rating__content {
+  display: none;
+}
+
+.ex-content-rating--expanded [data-value='sad'] .accordion-trigger__collapse {
+  display: block;
+}
+
+.ex-content-rating--expanded [data-value='sad'] .accordion-trigger__expand {
+  display: none;
+}
+
+.ex-content-rating [data-target] {
+  white-space: nowrap;
+}

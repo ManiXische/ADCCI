@@ -1,0 +1,165 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    
+    &__item{
+        $item : &;
+        background-color: $accordion-bg-color;
+        border-width: $accordion-item-border-size;
+        border-style: solid;
+        border-color: $accordion-item-border-color;
+        position: relative;
+        @include transition(all $accordion-transition-time ease);
+        @include border-radius($accordion-item-border-radius);
+        
+        &__title{
+           
+            position: relative;
+            min-height: $accordion-item-min-height;
+            @media #{$ie11} {
+               justify-content: flex-start !important; //IE fix position
+            }
+            &:before{
+                content: '';
+                width: $accordion-item-strip-width;
+                height:100%;
+                opacity: 1;
+                @include transition(opacity .2s ease);
+                background: $accordion-item-strip-color;
+                position: absolute;
+                top:0;
+                left:0;
+                @include rtl{
+                    left: auto;
+                    right:0;
+                }
+            }
+            h1 , .accordion-title {
+                color:$accordion-item-header-title-color;
+                font-size: $accordion-item-header-title-font-size;
+                line-height: $accordion-item-header-line-height;
+                @media #{$ie11}{
+                    padding-right: $accordion-item-header-title-pading;
+                    @include rtl{
+                        padding-left: $accordion-item-header-title-pading;
+                        padding-right:0;
+                    }
+                }
+            }
+            .accordion-trigger{
+                cursor: pointer;
+                color : $accordion-item-trigger-color;
+                min-width: 62px;
+                display: flex;
+                justify-self: flex-start;
+                align-self: stretch;
+                justify-content: center;
+                align-items: center;
+                margin-right: -24px;
+                @media #{$ie11}{
+                    position: absolute;
+                    right: 25px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                     @include rtl {
+                         left: 25px;
+                         right: auto;
+                     }
+                }
+
+                @include rtl{
+                    margin-left: -24px;
+                    margin-right: 0;
+                }
+
+                &__collapse{
+                    display: none;
+                }
+            }
+            img{
+                max-width: $accordion-item-img-width;
+                max-height: $accordion-item-img-height;
+            }
+
+            &--no-b4{
+                &:before{
+                    display:none;
+                }
+            }
+        }
+        &__content{
+            display: none;
+            .accordion-content{
+                background-color: $accordion-item-content-bg;
+                color: $accordion-item-content-color;
+                padding: 24px;
+                line-height: $accordion-item-content-line-height;
+            }
+        }
+
+        
+        &--expanded{
+            background-color: $accordion-item-expanded-bg-color;
+            border-color: $accordion-item-expanded-border-color ;
+            border-radius: $accordion-item-expanded-border-radius ;
+            
+            #{$item}__title{
+                border-bottom:  $accordion-item-border-size solid $accordion-item-expanded-border-color;
+                &:before {
+                    opacity: 0;
+                }
+                .accordion-trigger{
+                    color : $accordion-item-expanded-trigger-color;
+                    &__collapse{
+                        display: flex;
+                    }
+                    &__expand{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &--alt{
+        .#{$ProjectName}__item{
+            $item : &;
+            border-color:$accordion-item-border-color-alt;
+            background-color: $accordion-item-bg-alt;
+
+            &--expanded{
+                border-color:$accordion-item-border-color-alt-hover;
+                background-color: $accordion-item-bg-alt-hover;
+                .#{$ProjectName}__item__title{
+                    border-bottom-color: $accordion-item-border-color-alt-hover;
+                }
+            }
+            &__title{
+                .icon { 
+                    font-size: $accordion-item-icon-font-size;
+                }
+                &:before{
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    [data-toggle]{
+        cursor: pointer;
+    }
+}
+
+.on-page-editor {
+.collapse:not(.show){
+    display: block !important;
+}}

@@ -1,0 +1,88 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+  // Your code goes here
+
+  &__qwrapper {
+    color: $quote-wrapper-txt-color;
+    padding: $quote-padding;
+    &__img {
+      @include ltr {
+        padding-right: $quote-aligment-right;
+      }
+      @include rtl {
+        padding-left: $quote-aligment-left;
+      }
+      img {
+        width: $quote-img-reset-width;
+        border-radius: $quote-border-raduis;
+      }
+    }
+    &--reset-border {
+      img {
+        border-radius: $quote-border-raduis-reset;
+      }
+    }
+    &__quote-text {
+      p {
+        font-size: $quote-text-fs;
+        line-height: $quote-text-lh;
+        padding-top: $quote-wrapper-padding;
+      }
+      .quote-name {
+        font-size: 16px;
+      }
+      .quote-position {
+        font-size: $quote-text-position-fs;
+        color: $quote-text-position-color;
+        line-height: $quote-text-line-hright;
+      }
+    }
+
+    &__quote-icon {
+      font-size: 36px;
+    }
+  }
+
+  .owl {
+    &-nav {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      height: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__arros-nav {
+    a#{&}
+    {&-next,
+     &-prev {  
+      position: absolute;
+      top: calc(50% - 10px);
+      cursor: pointer;
+      &:hover{
+        color:$quote-text-position-color ;
+      }
+    }}
+    
+    &-next {  
+      right: 0;
+    }
+    &-prev {
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,211 @@
+/***************************************************************************************************
+Extension Name: ex-social-grid 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-social-grid 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-social-grid 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-social-grid 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-social-grid {
+  background-color: #F5F5F7;
+  padding: 60px 0;
+}
+
+.ex-social-grid__title {
+  color: #3F3E45;
+}
+
+.ex-social-grid__description {
+  color: #3F3E45;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-social-grid__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-social-grid__header__title {
+    margin-bottom: 20px;
+  }
+}
+
+.ex-social-grid__header__filters {
+  height: 47px;
+  border: 1px solid #2B2849;
+  overflow: hidden;
+  background: #2B2849;
+}
+
+.ex-social-grid__header__filters .filter-button {
+  min-width: 50px;
+  outline: 0;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  background-color: transparent;
+  border-right: 1px solid rgba(63, 62, 69, 0.19);
+  color: #ffffff;
+}
+
+html[lang*='ar'] .ex-social-grid__header__filters .filter-button,
+html[class*='translated-rtl'] .ex-social-grid__header__filters .filter-button {
+  border-left: 1px solid rgba(63, 62, 69, 0.19);
+  border-right: none;
+}
+
+.ex-social-grid__header__filters .filter-button:last-child {
+  border: none;
+}
+
+html[lang*='ar'] .ex-social-grid__header__filters .filter-button:last-child,
+html[class*='translated-rtl'] .ex-social-grid__header__filters .filter-button:last-child {
+  border: none;
+}
+
+.ex-social-grid__header__filters .filter-button:hover {
+  outline: 0;
+  color: #ffffff;
+}
+
+.ex-social-grid__header__filters .filter-button:hover span, .ex-social-grid__header__filters .filter-button:hover i {
+  background-color: #FF8D00;
+}
+
+.ex-social-grid__header__filters .filter-button span, .ex-social-grid__header__filters .filter-button i {
+  display: inline-block;
+  width: 47px;
+  height: 37px;
+  margin: 3px 3px 3px 3px;
+  font-weight: bold;
+  line-height: 37px;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+.ex-social-grid__header__filters .filter-button--active {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.ex-social-grid__header__filters .filter-button--active span, .ex-social-grid__header__filters .filter-button--active i {
+  background: #FF8D00;
+}
+
+.ex-social-grid__body .social-grid-item {
+  border: 1px solid #F5F5F7;
+  background-color: #ffffff;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  margin: 0 0 1%;
+  width: 32.66667%;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-social-grid__body .social-grid-item {
+    width: 49.33333%;
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-social-grid__body .social-grid-item {
+    width: 100%;
+  }
+}
+
+.ex-social-grid__body .social-grid-item img {
+  width: 100%;
+}
+
+.ex-social-grid__body .social-grid-item__text {
+  line-height: 20px;
+  font-size: 14px;
+  margin: 26px;
+  margin-bottom: 90px;
+}
+
+.ex-social-grid__body .social-grid-item__details {
+  padding: 26px;
+  bottom: 0;
+}
+
+.ex-social-grid__body .social-grid-item__details__author .date {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.ex-social-grid__body .social-grid-item__details__author .author {
+  color: #3F3E45;
+}
+
+.ex-social-grid__body .social-grid-item__details__author .author:hover {
+  color: #3F3E45;
+}
+
+.ex-social-grid__body .social-grid-item__details__icon {
+  color: #3F3E45;
+  font-size: 24px;
+}
+
+.ex-social-grid__body .social-grid-item.instagram .social-grid-item__details__author .date, .ex-social-grid__body .social-grid-item.instagram .social-grid-item__details__author .author {
+  color: #ffffff;
+}
+
+.ex-social-grid__body .social-grid-item.instagram .social-grid-item__details__author .date:hover, .ex-social-grid__body .social-grid-item.instagram .social-grid-item__details__author .author:hover {
+  color: #ffffff;
+}
+
+.ex-social-grid__body .social-grid-item.instagram .social-grid-item__details__icon {
+  color: #ffffff;
+}
+
+.ex-social-grid__body__gutter {
+  width: 1%;
+}

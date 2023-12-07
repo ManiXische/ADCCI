@@ -1,0 +1,79 @@
+/***************************************************************************************************
+Extension Name: ex-new-member 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-new-member 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-new-member 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-new-member__img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.ex-new-member__img:hover {
+  webkit-filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.ex-new-member__img img {
+  opacity: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.ex-new-member__title h6 {
+  max-width: 65%;
+  color: #17626C;
+}
+
+.ex-new-member__subtitle .description {
+  font-size: 12px;
+  color: #6C6B70;
+}
+
+/*Editor Handler*/
+.on-page-editor .ex-new-member__img img {
+  opacity: 1;
+  pointer-events: visible;
+}

@@ -1,0 +1,195 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName}
+Extension Version: #{$ProjectVersion}
+File: base file
+Owner: #{$ProjectOwner}
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+// Your files goes here
+.ex-floatingbutton {
+  display: none;
+  &__sidenav {
+    z-index: 25;
+    top: 50%;
+    cursor: pointer;
+
+    @include ltr {
+      left: 0px;
+    }
+    @include rtl {
+      right: 0px;
+    }
+    &__wrapper {
+      $flotingbuttonwrapper: &;
+
+      cursor: pointer;
+      min-height: $ex-floatingbutton-wrapper-height;
+      max-height: $ex-floatingbutton-wrapper-height;
+      height: 100%;
+      .floating-arrow {
+        width: $ex-floatingbutton-arrowwrapper-width;
+        z-index: 2;
+        background-color: $ex-floatingbutton-arrow-bg-color;
+        color: $ex-floatingbutton-arrow-color;
+        @include rtl {
+          @include transform(scaleX(-1));
+        }
+        .icon {
+          @include transition(all 0.2s ease);
+          transform-origin: center;
+        }
+        &--open {
+          .icon {
+            @include transform(rotate(180deg));
+          }
+        }
+      }
+      .floating-icon {
+        $iconwrapper: &;
+        cursor: pointer;
+
+        @include ltr {
+          left: -100%;
+        }
+        @include rtl {
+          right: -100%;
+        }
+
+        background-color: $ex-floatingbutton-icon-bg-color;
+
+        @include transition(all 0.2s ease);
+
+        > :first-child {
+          display: block;
+          width: $ex-floatingbutton-iconimg-width;
+          height: $ex-floatingbutton-iconimg-width;
+        }
+
+        &--radius {
+          border-bottom-right-radius: $ex-floatingbutton-radius;
+          border-top-right-radius: $ex-floatingbutton-radius;
+
+          @include rtl {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+
+            border-bottom-left-radius: $ex-floatingbutton-radius;
+            border-top-left-radius: $ex-floatingbutton-radius;
+          }
+          
+          &.floating-icon--active {
+            &:hover {
+              border-radius: 0;
+
+              .floating-icon__content {
+                border-bottom-right-radius: $ex-floatingbutton-radius;
+                border-top-right-radius: $ex-floatingbutton-radius;
+
+                @include rtl{
+                  border-bottom-right-radius: 0;
+                  border-top-right-radius: 0;
+                  border-bottom-left-radius: $ex-floatingbutton-radius;
+                  border-top-left-radius: $ex-floatingbutton-radius;
+                }
+              }
+            }
+          }
+        }
+        &--active {
+          // border-top-right-radius: $ex-floatingbutton-border-raduis;
+          // border-bottom-right-radius: $ex-floatingbutton-border-raduis;
+
+          @include ltr {
+            left: 0;
+          }
+          @include rtl {
+            right: 0;
+          }
+        }
+
+
+        &:hover {
+          @include transition(width 0.2s ease);
+
+          .floating-icon__content {
+            opacity: 1;
+            pointer-events: visible;
+            line-height: $ex-floatingbutton-text-line-height;
+            @include ltr {
+              left: 100% ;
+            }
+            @include rtl {
+              right: 100%;
+            }
+          }
+        }
+
+        &__content {
+          opacity: 0;
+          overflow: hidden;
+          pointer-events: none;
+          padding: $ex-floatingbutton-content-padding;
+          top: 0;
+          @include transition(all 0.2s ease-out);
+          background-color: $ex-floatingbutton-content-bg-color;
+          z-index: -100;
+          width: $ex-floatingbutton-content-width ;
+          @include ltr {
+            left: 0;
+          }
+          @include rtl {
+            right: 0;
+          }
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: $ex-floatingbutton-item-link-font-size;
+            cursor: pointer;
+            height: 100%;
+            color: $ex-floatingbutton-content-color;
+          }
+        }
+      }
+    }
+  }
+}
+//bug 16760
+.on-page-editor {
+  .ex-floatingbutton {
+    display: block;
+    &__sidenav {
+      position: static !important;
+
+      @include rtl {
+        right: 0px;
+      }
+
+      &__wrapper {
+        cursor: default;
+
+        .floating-icon {
+          @include transition(none);
+          flex-direction: row !important;
+          cursor: default;
+          .floating-icon__content {
+            opacity: 1;
+            pointer-events: visible;
+            position: static !important;
+            z-index: 1;
+            @include ltr {
+              left: 100%;
+            }
+            @include rtl {
+              right: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

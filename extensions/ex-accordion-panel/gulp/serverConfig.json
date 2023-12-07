@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-accordion-panel",
+        "version" : "1.0.0",
+        "owner" :  "waqas-khan-omnia"
+    }
+}

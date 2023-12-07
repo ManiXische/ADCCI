@@ -1,0 +1,112 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: Breadcrumb file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+@import "../vars/_all";
+
+.page-breadcrumb-v2 {
+  background-color: $inner-header-breadcrumb-background !important;
+  .breadcrumb-item {
+    font-size: $inner-header-breadcrumb-font-size;
+    color: $inner-header-breadcrumb-text-color;
+    display: inline-flex;
+    padding: 0;
+    & + .breadcrumb-item:before {
+      padding: 0 $inner-header-breadcrumb-seperator-padding-left;
+      content: "›";
+    }
+    a {
+      color: $inner-header-breadcrumb-color;
+      @at-root {
+        .high-contrast & {
+          color : $white-color;
+        }
+      }
+    }
+
+    span.separator {
+      display: none;
+    }
+
+    &::before {
+      color: $inner-header-breadcrumb-seperator-color;
+          @at-root {
+        .high-contrast & {
+          color : $white-color;
+        }
+      }
+    } 
+
+    &.last{
+      display: none;
+    }
+  }
+
+  // @media #{$sm}{
+  //     padding-left: $inner-header-aligment-responsive-padding;
+  //     padding-right: $inner-header-aligment-responsive-padding;
+  // }
+
+  .bredcrumb-dropdown {
+    background-color: $inner-header-breadcrumb-dropdown-background;
+    z-index: 222;
+    .dropdown-menu.show{
+      display: flex;
+      flex-direction: column-reverse;
+      width: 270px;
+      left: 50px;
+      @include rtl{
+        right: 50px;
+        text-align: right;
+      }
+      @media #{$sm} {
+        width: 95%;
+        top: 25px;
+        left: 10px;
+        @include rtl{
+          left: auto;
+          right: 10px;
+          text-align: right;
+        }
+      }
+    }
+    .dropdown-item{
+      color: $inner-header-breadcrumb-dropdown-item-color;
+      font-size: $inner-header-breadcrumb-dropdown-item-size;
+      & , &:hover{
+        text-decoration: none;
+      }
+    }
+    button{
+      background: none;
+      padding: 0;
+      &:after{
+        display: none;
+      }
+    }
+    .dropdown-divider:last-child{
+      display: none;
+    }
+}
+
+.breadcrumb-toggler{
+  span
+  {
+    text-decoration: $inner-header-breadcrumb-dropdown-sm-back-text-decoration;
+  }
+  i{
+    @include ltr{
+      transform: rotate(180deg);
+    }
+  }
+}
+}
+
+ol li:not(:last-child) {
+  a {
+    text-decoration: underline;
+  }
+}

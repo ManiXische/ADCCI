@@ -1,0 +1,431 @@
+ @font-face {
+     font-family: 'poppins';
+     src: url('../fonts/poppins/Poppins-Bold.ttf') format('truetype'),
+         url('../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+
+ }
+
+ @font-face {
+     font-family: 'Inter';
+     src: url('../fonts/inter/Inter-Regular.ttf') format('truetype'),
+         url('../fonts/inter/Inter-Regular.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+
+ }
+
+ html,
+ body,
+ div,
+ span,
+ applet,
+ object,
+ iframe,
+
+ p,
+ blockquote,
+ pre,
+
+ abbr,
+ acronym,
+ address,
+ big,
+ cite,
+ code,
+ del,
+ dfn,
+ em,
+ img,
+ ins,
+ kbd,
+ q,
+ s,
+ samp,
+ tt,
+ var,
+ center,
+ dl,
+ dt,
+ dd,
+ ol,
+ ul,
+ li,
+ fieldset,
+ form,
+ label,
+ legend,
+ table,
+ caption,
+ tbody,
+ tfoot,
+ thead,
+ tr,
+ th,
+ td,
+ article,
+ aside,
+ canvas,
+ details,
+ embed,
+ figure,
+ figcaption,
+ footer,
+ header,
+ hgroup,
+ menu,
+ nav,
+ output,
+ ruby,
+ section,
+ summary,
+ time,
+ mark,
+ audio,
+ video {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+     font-family: "Inter", sans-serif;
+     font-weight: inherit;
+ }
+
+ small,
+ .small,
+ strong,
+ b,
+ u,
+ i,
+ sub,
+ sup,
+ strike {
+     margin: 0;
+     padding: 0;
+     vertical-align: baseline;
+     font-family: "Inter", sans-serif;
+     font-weight: inherit;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ a {
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+     font-family: "poppins", serif;
+     font-weight: inherit;
+ }
+
+ h1,
+ .title {
+     font-family: inherit;
+     font-size: 40px;
+     line-height: 48px;
+ }
+
+ @media screen and (max-device-width: 767px),
+ screen and (max-width: 767px) {
+
+     h1,
+     .title {
+         font-size: 32px;
+         line-height: 38px;
+     }
+ }
+
+ h2,
+ .sub-title {
+     font-family: inherit;
+     font-size: 32px;
+     line-height: 40px;
+ }
+
+ @media screen and (max-device-width: 767px),
+ screen and (max-width: 767px) {
+
+     h2,
+     .sub-title {
+         font-size: 32px;
+         line-height: 40px;
+     }
+ }
+
+ h3,
+ .side-menu-text {
+     font-family: inherit;
+     font-size: 28px;
+     line-height: 36px;
+ }
+
+ @media screen and (max-device-width: 767px),
+ screen and (max-width: 767px) {
+
+     h3,
+     .side-menu-text {
+         font-size: 28px;
+         line-height: 36px;
+     }
+ }
+
+ h4,
+ .small-title {
+     font-family: inherit;
+     font-size: 24px;
+     line-height: 30px;
+ }
+
+ @media screen and (max-device-width: 767px),
+ screen and (max-width: 767px) {
+
+     h4,
+     .small-title {
+         font-size: 24px;
+         line-height: 30px;
+     }
+ }
+
+ h5 {
+     font-family: inherit;
+     font-size: 20px;
+     line-height: 26px;
+ }
+
+ @media screen and (max-device-width: 767px),
+ screen and (max-width: 767px) {
+     h5 {
+         font-size: 20px;
+         line-height: 26px;
+     }
+ }
+
+ h6,
+ .card-text {
+     font-family: inherit;
+     font-size: 20px;
+     line-height: 26px;
+ }
+
+ @media screen and (max-device-width: 767px),
+ screen and (max-width: 767px) {
+
+     h6,
+     .card-text {
+         font-size: 20px;
+         line-height: 26px;
+     }
+ }
+
+ p,
+ .paragraph {
+     font-family: inherit;
+     font-size: 16px;
+     line-height: 24px;
+     font-weight: 400;
+ }
+
+ .display-1 {
+     font-weight: 900;
+     font-size: 62px;
+     line-height: 62px;
+ }
+
+ @media screen and (max-device-width: 767px),
+ screen and (max-width: 767px) {
+     .display-1 {
+         font-size: 44px;
+         line-height: 44px;
+     }
+ }
+
+ .display-2 {
+     font-weight: 400;
+     font-size: 62px;
+     line-height: 62px;
+ }
+
+ @media screen and (max-device-width: 767px),
+ screen and (max-width: 767px) {
+     .display-2 {
+         font-size: 44px;
+         line-height: 44px;
+     }
+ }
+
+ .display-3 {
+     font-weight: 900;
+     font-size: 40px;
+     line-height: 40px;
+ }
+
+ @media screen and (max-device-width: 767px),
+ screen and (max-width: 767px) {
+     .display-3 {
+         font-size: 32px;
+         line-height: 32px;
+     }
+ }
+
+ .display-4 {
+     font-weight: 400;
+     font-size: 40px;
+     line-height: 40px;
+ }
+
+ @media screen and (max-device-width: 576px),
+ screen and (max-width: 576px) {
+     .display-4 {
+         font-size: 32px;
+         line-height: 32px;
+     }
+ }
+
+ .display-5 {
+     font-weight: 900;
+     font-size: 28px;
+     line-height: 28px;
+ }
+
+ @media screen and (max-device-width: 767px),
+ screen and (max-width: 767px) {
+     .display-5 {
+         font-size: 24px;
+         line-height: 24px;
+     }
+ }
+
+ .display-6 {
+     font-weight: 400;
+     font-size: 28px;
+     line-height: 28px;
+ }
+
+ @media screen and (max-device-width: 767px),
+ screen and (max-width: 767px) {
+     .display-6 {
+         font-size: 24px;
+         line-height: 24px;
+     }
+ }
+
+ .h1,
+ .h2,
+ .h3,
+ .h4,
+ .h5,
+ .h6,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     font-weight: 900;
+ }
+
+ caption,
+ .caption {
+     font-family: inherit;
+     font-size: 14px;
+     line-height: 20px;
+ }
+
+ @media screen and (max-device-width: 922px),
+ screen and (max-width: 922px) {
+
+     caption,
+     .caption {
+         font-size: 14px;
+         line-height: 20px;
+     }
+ }
+
+ @media screen and (max-device-width: 922px),
+ screen and (max-width: 922px) {
+
+     caption,
+     .caption {
+         font-size: 14px;
+         line-height: 20px;
+     }
+ }
+
+ label,
+ .small-text {
+     font-family: inherit;
+     font-size: 12px;
+     line-height: 12px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ html[dir='rtl'] label,
+ .translated-rtl label,
+ html[dir='rtl'] .small-text,
+ .translated-rtl .small-text {
+     letter-spacing: 0;
+ }
+
+ @media screen and (max-device-width: 922px),
+ screen and (max-width: 922px) {
+
+     label,
+     .small-text {
+         font-size: 12px;
+         line-height: 12px;
+     }
+ }
+
+ @media screen and (min-device-width: 1200px),
+ screen and (min-width: 1200px) {
+
+     label,
+     .small-text {
+         font-size: 12px;
+         line-height: 12px;
+     }
+ }
+
+ .tags {
+     font-size: 12px;
+     line-height: 1.4;
+ }
+
+ .tiny-text {
+     font-family: inherit;
+     font-size: 12px;
+     line-height: 12px;
+ }
+
+ .title-block--white {
+     color: #fff;
+ }
+
+ .title-block--primary {
+     color: #0091C7;
+ }
+
+ .title-block--secondary {
+     color: #FAA317;
+ }
+
+ b,
+ strong {
+     font-family: "Roboto", Arial, sans-serif;
+     font-weight: 900;
+ }
+
+ html[dir='rtl'] b,
+ .translated-rtl b,
+ html[dir='rtl'] strong,
+ .translated-rtl strong {
+     font-family: "NotoKufiArabic", Arial, sans-serif;
+     font-weight: 900;
+ }

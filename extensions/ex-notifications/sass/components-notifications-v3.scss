@@ -1,0 +1,141 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName}
+Extension Version: #{$ProjectVersion}
+File: base file
+Owner: #{$ProjectOwner}
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+@import "./lib/ideabox-news-ticker.scss";
+
+.#{$ProjectName}-v3 {
+  // Your code goes here
+  display: flex;
+  background-color: $carousel-notification-container-background-color;
+  border-top: $ex-notifications-border;
+  border-bottom: $ex-notifications-border; 
+  max-height: $ex-notification-max-height;
+  height: $ex-notification-height; 
+  @media only screen and (max-width: 992px) {
+    max-height: $ex-notification-max-height-mobile;
+  }
+  @at-root{
+    .on-page-editor{
+      .#{$ProjectName}-v3 {
+            height: 175px !important;
+            max-height: 175px !important;
+        }
+    }
+}
+
+  &__item{
+    height: $ex-notification-height; 
+  }
+  h6{
+    position: relative;
+    font-size: $ex-notification-h6-fs; 
+    font-weight:$ex-notification-h6-fw;   
+    height: $ex-notification-label-height;
+    line-height: $ex-notification-label-lineheight;
+    background-color: $carousel-notification-container-background-color; 
+    z-index: 1;
+    &.ex-notifications-v3__label {
+      color: $ex-notification-label;
+      padding-right: $ex-notification-label-marginright;
+      padding-left: $ex-notification-label-pl;
+      overflow: hidden;
+      text-transform: $ex-notification-label-text-transform;
+      min-width: 80px;
+      @include rtl{
+        padding-left: $ex-notification-label-marginright; 
+        margin-right: 0;
+      }
+
+      @media #{$sm} {
+        padding-left: $ex-notification-label-pl-sm;  
+      }
+
+      @media #{$md} {
+        display: none !important;  
+      }
+    }
+    @media #{$ie11} {
+         font-weight: normal;  
+    }
+  }
+  p{
+    color: $carousel-notification-fixed-text-font-color;
+    
+  } 
+  h6, small, a{
+      color: $carousel-notification-container-font-color;
+      text-decoration: $ex-notification-a-text-decoration;
+      &:hover{
+        text-decoration: $ex-notification-a-text-decoration;
+      }
+  }
+
+  
+  .news-notify-item {
+    height: $ex-slick-notification-news-notify-item;
+    //overflow: $ex-slick-notification-overflow;
+    > p {
+      white-space: $ex-slick-notification-overflow-p-white-space;
+    }
+    &__date{
+      padding:$ex-slick-notification-p-small-padding;
+      margin: $ex-slick-notification-p-small-margin;
+      border-right:$ex-slick-notification-p-small-border-right;
+      font-size: $ex-slick-notification-p-small-font-size;
+      color: $ex-slick-notification-p-small-font-color;
+      @include rtl {
+        padding: $ex-slick-notification-p-small-padding-rtl;
+        margin: $ex-slick-notification-p-small-margin-rtl;
+        border-left:$ex-slick-notification-p-small-border-left-rtl;
+        border-right: $ex-slick-notification-p-small-border-right-rtl;
+      }
+      }
+  }
+
+
+  
+  &__prev, &__next{
+    margin: $carousel-navigation-margin;
+    box-shadow: $carousel-navigation-box-shadow;
+  }
+  &__prev{
+    background-color: $carousel-notification-arrow-circle-color;
+    color:$carousel-notification-arrow-circle-font-color;
+  }
+  &__next{
+    background-color: $carousel-notification-arrow-circle-color;
+    color:$carousel-notification-arrow-circle-font-color;
+    @include rtl {
+      margin-right: $carousel-notification-arrow-rtl-margin;
+    }
+  }
+
+  &__action{
+    
+  background-color: transparent;
+  width: $custom-circle-after-width;
+  height: $custom-circle-after-height;
+  border-radius: 50%;
+  border-radius: $custom-circle-after-border-radius;
+  border:$custom-circle-after-border-width solid $custom-circle-after-border-color;
+  display: $custom-circle-after-display;
+  padding: 0;
+
+  &--play{
+    width: 0;
+    height: 0;
+    border: none;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 13px solid $custom-circle-after-border-color;
+    border-radius: 0;
+  }
+}
+  }

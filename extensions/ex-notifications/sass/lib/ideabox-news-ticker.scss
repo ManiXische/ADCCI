@@ -1,0 +1,289 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName}
+Extension Version: #{$ProjectVersion}
+File: base file
+Owner: #{$ProjectOwner}
+***************************************************************************************************/
+
+@import "../vars/_all";
+
+.#{$ProjectName}-v3 {
+    &-breaking-news {
+        $breakingnews : &;
+
+        display: block;
+        width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        text-align: auto;
+        font-size: 14px;
+      
+        @at-root{
+            .on-page-editor{
+                #{$breakingnews}{
+                    height: 175px !important;
+                }
+            }
+        }
+        * {
+          box-sizing: border-box;
+        }
+      
+        &.#{$ProjectName}-fixed-top {
+          position: fixed;
+          left: 0;
+          right: 0;
+          top: 0;
+        }
+      
+        &.#{$ProjectName}-fixed-bottom {
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+    }
+
+    &-breaking-loading {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    padding: 0 10px;
+    }
+
+    &-label {
+        top: 0;
+        position: absolute;
+        background-color: $carousel-notification-container-background-color;
+        text-align: center;
+        color: $carousel-notification-fixed-text-font-color;
+        z-index: 3;
+        padding: 0 15px;
+        white-space: nowrap;
+
+        @include rtl{
+          left: auto;
+          right: 0;
+        }
+      }
+      &-news {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        overflow: hidden;
+        right: 0;
+
+        @media #{$md}{
+          @include ltr{
+            left: 0 !important;
+          }
+          @include rtl{
+            right: 0 !important;
+          }
+        }
+        
+        ul {
+          display: block;
+          height: 100%;
+          list-style: none;
+          padding: 0;
+          margin: 0 10px;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          position: absolute;
+      
+          li {
+            $newsItemWrap : &;
+
+
+            white-space: nowrap;
+            overflow: hidden !important;
+            text-overflow: ellipsis;
+            text-decoration: none;
+            -webkit-transition: color .2s linear;
+            -moz-transition: color .2s linear;
+            -o-transition: color .2s linear;
+            transition: color .2s linear;
+            position: absolute;
+            width: 100%;
+            display: none;
+            height: 100%;
+
+            @at-root{
+                .on-page-editor{
+                    #{$newsItemWrap}{
+                        p {
+                            white-space: initial;
+                        }
+                    }
+                
+              }
+            }
+           
+          }
+        }
+      }
+      
+      &-loader-text {
+        padding: 0 10px;
+      }
+      
+      &-seperator {
+        display: inline-block;
+        float: left;
+        margin-right: 15px;
+        width: 30px;
+        height: 40px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+      
+        &.#{$ProjectName}-news-dot {
+          margin-right: 0;
+      
+          &:after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            top: 50%;
+            margin-top: -4px;
+            left: 50%;
+            margin-left: -4px;
+          }
+        }
+
+        @include rtl{
+          margin-left: 15px;
+          margin-right: 0;
+          float: right;
+        }
+      }
+      
+      &-prefix {
+        margin-right: 15px;
+        padding-left: 10px;
+      @include rtl{
+        margin-left: 15px;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 10px;
+      }
+      }
+      
+      &-positive, &-negative {
+        font-weight: 700;
+      }
+      
+      &-controls {
+        width: auto;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        position: absolute;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        @media #{$md}{
+          display: none !important;
+        }
+        button {
+          width: 30px;
+          float: left;
+          height: 100%;
+          cursor: pointer;
+          border: none;
+          text-align: center;
+          outline: none;
+          background-color: transparent;
+      
+          &:hover {}
+        }
+
+        @include rtl{
+          right: auto;
+          left: 0;
+
+         
+      }
+      }
+      
+      &-arrow {
+        margin: 0;
+        display: inline-block;
+        height: 8px;
+        position: relative;
+        width: 8px;
+        top: -2px;
+      
+        &::after {
+          border-bottom-style: solid;
+          border-bottom-width: 2px;
+          border-right-style: solid;
+          border-right-width: 2px;
+          content: '';
+          display: inline-block;
+          height: 8px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 8px;
+        }
+      
+        &.#{$ProjectName}-next {
+          -moz-transform: rotate(315deg);
+          -ms-transform: rotate(315deg);
+          -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+          left: -3px;
+        }
+      
+        &.#{$ProjectName}-prev {
+          -moz-transform: rotate(135deg);
+          -ms-transform: rotate(135deg);
+          -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+          left: 3px;
+        }
+      
+      }
+      
+      &-direction-rtl {
+        direction: rtl;
+      }
+      
+      &-effect-scroll {
+        &-news ul {
+          display: block;
+          width: 100%;
+          position: relative;
+      
+          li {
+            display: list-item;
+            float: left;
+            position: relative;
+            width: auto;
+          }
+        }
+      
+        &.#{$ProjectName}-direction-rtl {
+            .#{$ProjectName}-news ul li {
+                float: right;
+            }
+        }
+      }
+}
+

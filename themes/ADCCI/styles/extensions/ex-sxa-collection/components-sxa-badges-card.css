@@ -1,0 +1,149 @@
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-sxa-badges-card {
+  background-color: #F5F5F7;
+  color: #3F3E45;
+}
+
+html:not([dir='rtl']) .ex-sxa-badges-card .border-badges-left, .translated-ltr .ex-sxa-badges-card .border-badges-left {
+  border-left: 2px #3F3E45 solid;
+}
+
+html[dir='rtl'] .ex-sxa-badges-card .border-badges-left, .translated-rtl .ex-sxa-badges-card .border-badges-left {
+  border-right: 2px #3F3E45 solid;
+}
+
+.ex-sxa-badges-card .font-weight-bold a, .ex-sxa-badges-card b a {
+  font-weight: 900;
+}
+
+.ex-sxa-badges-card a {
+  color: #3F3E45;
+  text-decoration: none;
+}
+
+.ex-sxa-badges-card a:hover, .ex-sxa-badges-card a:focus {
+  color: #3F3E45;
+}
+
+.ex-sxa-badges-card--dark {
+  background-color: #3F3E45;
+  color: #ffffff;
+}
+
+.ex-sxa-badges-card--dark a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ex-sxa-badges-card--dark a:hover, .ex-sxa-badges-card--dark a:focus {
+  color: #ffffff;
+}
+
+.ex-sxa-badges-card.grey-bg {
+  background-color: #3F3E45;
+  color: #ffffff;
+}
+
+.ex-sxa-badges-card.grey-bg a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ex-sxa-badges-card.grey-bg a:hover, .ex-sxa-badges-card.grey-bg a:focus {
+  color: #ffffff;
+}
+
+.ex-sxa-badges-card .seprator {
+  height: 1px;
+  padding: 10px 0;
+  border-top: 1px #ffffff dashed;
+  position: relative;
+  margin: 0 20px;
+}
+
+.ex-sxa-badges-card .seprator:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  left: -25px;
+  top: -5px;
+}
+
+.ex-sxa-badges-card .seprator:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  right: -25px;
+  top: -5px;
+}

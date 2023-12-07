@@ -1,0 +1,208 @@
+/***************************************************************************************************
+Extension Name: ex-main-theme 
+Extension Version:  
+File: Main Theme
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-main-theme 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-main-theme 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-main-theme 
+File: Mixins
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-main-theme 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-main-theme 
+File: Animations
+Author: TAMM
+***************************************************************************************************/
+@-webkit-keyframes owlFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes owlFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fancybox-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fancybox-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 17px 0 27px 0;
+}
+
+.owl-dots .owl-dot span {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #FF8D00;
+  background-color: #ffffff;
+  border-radius: 50%;
+  background-clip: padding-box;
+  display: inline-block;
+  margin: 7px 13px;
+}
+
+.owl-dots .owl-dot.active span {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 6px #FF8D00;
+}
+
+html[lang*='ar'] body,
+html[class*='translated-rtl'] body, html[lang*='ar'] caption,
+html[class*='translated-rtl'] caption {
+  text-align: right;
+}
+
+main {
+  margin-bottom: 80px;
+}
+
+.home-main-mb main {
+  margin-bottom: 0px;
+}
+
+.fancybox-active {
+  overflow: hidden;
+}
+
+.fancybox-bottom .fancybox-thumbs {
+  top: auto;
+  width: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 95px;
+  padding: 10px 10px 5px 10px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.fancybox-bottom.fancybox-show-thumbs .fancybox-inner {
+  right: 0;
+  bottom: 95px;
+}
+
+.fancybox-left .fancybox-thumbs {
+  left: 0;
+  right: initial;
+}
+
+.fancybox-left.fancybox-show-thumbs .fancybox-inner {
+  right: 0;
+  left: 212px;
+}
+
+.fancybox-caption__body {
+  overflow: hidden;
+}
+
+.fancybox-stage {
+  direction: ltr;
+}
+
+html[lang*='ar'] .fancybox-stage,
+html[class*='translated-rtl'] .fancybox-stage {
+  direction: rtl;
+}
+
+html[lang*='ar'] .fancybox-stage .fancybox-content,
+html[class*='translated-rtl'] .fancybox-stage .fancybox-content {
+  text-align: right;
+}
+
+.fancybox-caption {
+  direction: ltr;
+}
+
+html[lang*='ar'] .fancybox-caption,
+html[class*='translated-rtl'] .fancybox-caption {
+  direction: rtl;
+}
+
+.fancybox-navigation .fancybox-button {
+  direction: ltr;
+}
+
+html[lang*='ar'] .fancybox-navigation .fancybox-button,
+html[class*='translated-rtl'] .fancybox-navigation .fancybox-button {
+  direction: rtl;
+}
+
+.fancybox-navigation .fancybox-button--close {
+  color: #89888C;
+}
+
+.fancybox-navigation .fancybox-button--close:hover {
+  color: #AFAFAF;
+}
+
+.no-results {
+  color: #3F3E45;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 28px;
+}

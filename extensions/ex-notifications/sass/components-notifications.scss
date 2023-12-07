@@ -1,0 +1,149 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName}
+Extension Version: #{$ProjectVersion}
+File: base file
+Owner: #{$ProjectOwner}
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+  // Your code goes here
+  display: flex;
+  background-color: $carousel-notification-container-background-color;
+  border-top: $ex-notifications-border;
+  border-bottom: $ex-notifications-border; 
+  max-height: $ex-notification-max-height;
+  height: $ex-notification-height; 
+  @media only screen and (max-width: 992px) {
+    max-height: $ex-notification-max-height-mobile;
+  }
+
+  &__item{
+    height: $ex-notification-height; 
+  }
+  h6{
+    position: relative;
+    font-size: $ex-notification-h6-fs; 
+    font-weight:$ex-notification-h6-fw;   
+    height: $ex-notification-label-height;
+    line-height: $ex-notification-label-lineheight;
+    background-color: $carousel-notification-container-background-color; 
+    z-index: 1;
+    &.ex-notifications__label {
+      color: $ex-notification-label;
+      padding-right: $ex-notification-label-pr;
+      margin-right: $ex-notification-label-marginright;
+      padding-left: $ex-notification-label-pl;
+      overflow: hidden;
+      
+      @include rtl{
+        margin-left: $ex-notification-label-marginright; 
+        margin-right: 0;
+      }
+
+      @media #{$sm} {
+        padding-left: $ex-notification-label-pl-sm;  
+      }
+    }
+    @media #{$ie11} {
+         font-weight: normal;  
+    }
+  }
+  p{
+    color: $carousel-notification-fixed-text-font-color;
+    
+  } h6, small, a{
+      color: $carousel-notification-container-font-color;
+      text-decoration: $ex-notification-a-text-decoration;
+      &:hover{
+        text-decoration: $ex-notification-a-text-decoration;
+      }
+  }
+
+  .slick-notification {
+    .news-notify-item {
+      height: $ex-slick-notification-news-notify-item;
+      //overflow: $ex-slick-notification-overflow;
+      > p {
+        white-space: $ex-slick-notification-overflow-p-white-space;
+        small{
+        padding:$ex-slick-notification-p-small-padding;
+        margin: $ex-slick-notification-p-small-margin;
+        border-right:$ex-slick-notification-p-small-border-right;
+          font-size: $ex-slick-notification-p-small-font-size;
+          color: $ex-slick-notification-p-small-font-color;
+        @include rtl {
+          padding: $ex-slick-notification-p-small-padding-rtl;
+          margin: $ex-slick-notification-p-small-margin-rtl;
+          border-left:$ex-slick-notification-p-small-border-left-rtl;
+          border-right: $ex-slick-notification-p-small-border-right-rtl;
+        }
+        }
+      }
+    }
+
+    .slick-slide{
+      overflow: $ex-slick-notification-overflow;
+    }
+
+
+
+
+
+  }
+  .carousel-navigation__prev, .carousel-navigation__next, .notifications-slick-nav{
+    margin: $carousel-navigation-margin;
+    padding: $carousel-navigation-padding;
+    box-shadow: $carousel-navigation-box-shadow;
+  
+  }
+  .carousel-navigation__prev, .notifications-slick-nav{
+background-color: $carousel-notification-arrow-circle-color;
+color:$carousel-notification-arrow-circle-font-color;
+  }
+  .carousel-navigation__next{
+    background-color: $carousel-notification-arrow-circle-color;
+    color:$carousel-notification-arrow-circle-font-color;
+    @include rtl {
+      margin-right: $carousel-notification-arrow-rtl-margin;
+    }
+  }
+  .fa-circle{
+    color:$carousel-notification-container-font-color;
+    font-size:$carousel-notification-arrow-circle;
+  }
+
+  @include rtl {
+  .reverse-icon{
+    [class^="icon-"],
+[class*=" icon-"]{
+    display: inline-block;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  }
+}
+.custom-circle{
+  position: $custom-circle-position;
+  
+  width: $custom-circle-width;
+  height: $custom-circle-height;
+  display: $custom-circle-display;
+ 
+  &::after{
+    content:"";
+    position: $custom-circle-after-position;
+    left:$custom-circle-after-left;
+    top:$custom-circle-after-top;
+    background-color: $custom-circle-after-background-color;
+    width: $custom-circle-after-width;
+  height: $custom-circle-after-height;
+  border-radius: $custom-circle-after-border-radius;
+  border:$custom-circle-after-border-width solid $custom-circle-after-border-color;
+  display: $custom-circle-after-display;
+  }
+}
+}

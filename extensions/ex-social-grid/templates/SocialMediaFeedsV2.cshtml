@@ -1,0 +1,249 @@
+@using CustomComponents.SXA.Feature.Social.Models
+@using Sitecore.Data.Items
+@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.RenderingVariants.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.XA.Foundation.Variants.Abstractions.Fields
+@model SocialFeedListModel
+@helper RenderFeed(SocialFeedItemModel modelItem, int idx)
+{
+    var type = "";
+    var RedirectUrl = "";
+    var RedirectUrlTitle = "";
+    var TwitterNo = string.IsNullOrEmpty(Html.Sitecore().CurrentRendering.Parameters["Twitter Card Number"]) ? "0" : Html.Sitecore().CurrentRendering.Parameters["Twitter Card Number"];
+    var facebookNo = string.IsNullOrEmpty(Html.Sitecore().CurrentRendering.Parameters["Facebook Card Number"]) ? "0" : Html.Sitecore().CurrentRendering.Parameters["Facebook Card Number"];
+    var InstagramNo = string.IsNullOrEmpty(Html.Sitecore().CurrentRendering.Parameters["Instagram Card Number"]) ? "0" : Html.Sitecore().CurrentRendering.Parameters["Instagram Card Number"];
+    var YoutubeNo = string.IsNullOrEmpty(Html.Sitecore().CurrentRendering.Parameters["Youtube Card Number"]) ? "0" : Html.Sitecore().CurrentRendering.Parameters["Youtube Card Number"];
+    Int32 AllCardsNo = Int32.Parse(TwitterNo) + Int32.Parse(facebookNo) + Int32.Parse(InstagramNo) + Int32.Parse(YoutubeNo) < 6 ? 6 : Int32.Parse(TwitterNo) + Int32.Parse(facebookNo) + Int32.Parse(InstagramNo) + Int32.Parse(YoutubeNo);
+    if (modelItem.Type == "1")
+    {
+        type = "twitter-filled";
+        RedirectUrl = Model.TwitterRedirectURL;
+        RedirectUrlTitle = Model.TwitterRedirectURLTitle;
+    }
+    else if (modelItem.Type == "2")
+    {
+        type = "instagram";
+        RedirectUrl = Model.InstagramRedirectURL;
+        RedirectUrlTitle = Model.InstagramRedirectURLTitle;
+    }
+    else if (modelItem.Type == "3")
+    {
+        type = "facebook";
+        RedirectUrl = Model.FacebookRedirectURL;
+        RedirectUrlTitle = Model.FacebookRedirectURLTitle;
+    }
+    else if (modelItem.Type == "4")
+    {
+        RedirectUrl = "https://www.youtube.com/watch?v=" + modelItem.Text;
+        type = "youtube";
+    }
+    else if (modelItem.Type == "5")
+    {
+        type = "linkedin";
+    }
+
+    var allFilter = "all";
+    if (idx >= AllCardsNo || Html.Sitecore().CurrentRendering.Parameters["All Tab Visible"] != "1")
+    {
+        allFilter = "";
+    }
+    <div class="ex-social-grid__body__item social-grid-item rounded @type @allFilter" onclick='@{type != "youtube" ? window.open("@RedirectUrl"): ""'>
+
+        @if (type == "instagram")
+        {
+
+            if (modelItem.mediaType == "VIDEO")
+            {
+                 <a href="@modelItem.URL">
+                    <i class="icon icon-youtube-square"></i>
+                    <img src="@modelItem.URL" >
+                </a>
+            }
+            else
+            {
+                <img src="@modelItem.URL" alt="@modelItem.Text">
+            }
+        }
+        else if (type == "youtube")
+        {
+            <a href="https://www.youtube.com/embed/@modelItem.Text?enablejsapi=1&version=3">
+                <i class="icon icon-youtube-square"></i>
+                <img src="@modelItem.URL" >
+            </a>
+        }
+        else
+        {
+            <p class="social-grid-item__text truncate truncate-5">
+                @modelItem.Text
+            </p>
+        }
+        <div class="social-grid-item__details disable-pointer position-absolute w-100 d-flex justify-content-between align-items-end">
+            <div class="social-grid-item__details__author w-100">
+                <div class="date mb-1">@modelItem.CreatedAt</div>
+                <a class="author font-weight-bold truncate truncate-1 d-block w-100" href="@RedirectUrl">@RedirectUrlTitle</a>
+            </div>
+            <i class="social-grid-item__details__icon icon-@type"></i>
+        </div>
+    </div>
+}
+
+@{
+    var imagePath = "";
+    var position = "";
+    var repeat = "";
+    var size = "";
+
+    if (!string.IsNullOrEmpty(Model.Rendering.DataSourceItem.Fields["BackgroundImage"].Value))
+    {
+        Sitecore.Data.Fields.ImageField imageItem = Model.Rendering.DataSourceItem.Fields["BackgroundImage"];
+        imagePath = imageItem.MediaItem.Paths.Path.Replace("/sitecore/media library", "-/media");
+    }
+
+    if (!string.IsNullOrEmpty(Model.Rendering.DataSourceItem.Fields["BackgroundPosition"].Value))
+    {
+        position = Model.Rendering.DataSourceItem.Fields["BackgroundPosition"].Value;
+    }
+
+    if (!string.IsNullOrEmpty(Model.Rendering.DataSourceItem.Fields["BackgroundRepeat"].Value))
+    {
+        repeat = Model.Rendering.DataSourceItem.Fields["BackgroundRepeat"].Value;
+    }
+
+    if (!string.IsNullOrEmpty(Model.Rendering.DataSourceItem.Fields["BackgroundSize"].Value))
+    {
+        size = Model.Rendering.DataSourceItem.Fields["BackgroundSize"].Value;
+    }
+
+
+    <div class="ex-social-grid" style="background-image:url('@imagePath');background-position:@position;background-size:@size;background-repeat:@repeat">
+            <div class="container">
+                <div class="d-flex align-items-center flex-column">
+                    <h5 class="ex-social-grid__description mb-4">@Model.Rendering.DataSourceItem.Fields["Subtitle"]</h5>
+                    <h2 class="ex-social-grid__title mb-2 text-uppercase">@Model.Rendering.DataSourceItem.Fields["Title"]</h2>
+                </div>
+                <div class="row">
+                    @if (!(Model.Rendering.DataSourceItem == null && !Html.Sxa().IsEdit))
+                    {
+
+                        bool allVisible = false;
+                        bool twitterVisible = false;
+                        bool instagramVisible = false;
+                        bool facebookVisible = false;
+                        bool youtubeVisible = false;
+                        bool linkedinVisible = false;
+
+                        string Name = "All Tab Visible";
+                        if (!string.IsNullOrEmpty(Html.Sitecore().CurrentRendering.Parameters[Name]) && Html.Sitecore().CurrentRendering.Parameters[Name] == "1")
+                        {
+                            allVisible = true;
+                        }
+
+                        Name = "Twitter Tab Visible";
+                        if (!string.IsNullOrEmpty(Html.Sitecore().CurrentRendering.Parameters[Name]) && Html.Sitecore().CurrentRendering.Parameters[Name] == "1")
+                        {
+                            twitterVisible = true;
+                        }
+
+                        Name = "Instagram Tab Visible";
+                        if (!string.IsNullOrEmpty(Html.Sitecore().CurrentRendering.Parameters[Name]) && Html.Sitecore().CurrentRendering.Parameters[Name] == "1")
+                        {
+                            instagramVisible = true;
+                        }
+
+                        Name = "Facebook Tab Visible";
+                        if (!string.IsNullOrEmpty(Html.Sitecore().CurrentRendering.Parameters[Name]) && Html.Sitecore().CurrentRendering.Parameters[Name] == "1")
+                        {
+                            facebookVisible = true;
+                        }
+
+                        Name = "Youtube Tab Visible";
+                        if (!string.IsNullOrEmpty(Html.Sitecore().CurrentRendering.Parameters[Name]) && Html.Sitecore().CurrentRendering.Parameters[Name] == "1")
+                        {
+                            youtubeVisible = true;
+                        }
+
+                        Name = "Linkedin Tab Visible";
+                        if (!string.IsNullOrEmpty(Html.Sitecore().CurrentRendering.Parameters[Name]) && Html.Sitecore().CurrentRendering.Parameters[Name] == "1")
+                        {
+                            linkedinVisible = true;
+                        }
+
+                        <div class="col-lg-12">
+                            <div class="ex-social-grid__header d-flex justify-content-between align-items-center mb-6">
+                                <div class="ex-social-grid__header__title section-title">
+                                </div>
+                                <div class="ex-social-grid__header__filters position-relative d-inline-flex align-self-lg-end align-self-sm-center justify-content-end rounded">
+                                    @if (allVisible && Model.SocialFeedListItems.Count() > 0)
+                                    {
+                                        <button class="filter-button filter-button--active" title="@Sitecore.Globalization.Translate.Text("All")" data-filter=".all"
+                                                class="active-filter">
+                                            <span>@Sitecore.Globalization.Translate.Text("All")</span>
+                                        </button>
+                                    }
+                                    @if (facebookVisible && Model.FacebookFeedListItems.Count() > 0)
+                                    {
+                                        <button class="filter-button" data-filter=".facebook" title=@Sitecore.Globalization.Translate.Text("Facebook") >
+                                            <i class="icon-facebook-filled"></i>
+                                        </button>
+                                    }
+                                    @if (twitterVisible)
+                                    {
+                                        <button class="filter-button" data-filter=".twitter-filled" title=@Sitecore.Globalization.Translate.Text("Twitter") >
+                                            <i class="icon-twitter-filled"></i>
+                                        </button>
+                                    }
+                                    @if (instagramVisible && Model.InstagramFeedListItems.Count() > 0)
+                                    {
+                                        <button class="filter-button" data-filter=".instagram" title=@Sitecore.Globalization.Translate.Text("Instagram") >
+                                            <i class="icon-instagram"></i>
+                                        </button>
+                                    }
+                                    @if (youtubeVisible && Model.YoutubeListItems.Count() > 0)
+                                    {
+                                        <button class="filter-button" data-filter=".youtube" title=@Sitecore.Globalization.Translate.Text("Youtube") >
+                                            <i class="icon-youtube"></i>
+                                        </button>
+                                    }
+                                    @if (linkedinVisible)
+                                    {
+                                        <button class="filter-button" data-filter=".linkedin" title=@Sitecore.Globalization.Translate.Text("Youtube") >
+                                            <i class="icon-linkedin"></i>
+                                        </button>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="ex-social-grid__body"
+                                 data-media-grid="true"
+                                 data-active-filter=".all"
+                                 data-selector='social-grid-item'
+                                 data-gutter='.ex-social-grid__body__gutter'
+                                 data-active-filter-class="filter-button--active">
+                                <!-- Don't remove -->
+                                <div class="ex-social-grid__body__gutter"></div>
+
+                                @if (allVisible || twitterVisible || facebookVisible || youtubeVisible || linkedinVisible)
+                                {
+                                    for (int i = 0; i < Model.SocialFeedListItems.Count(); i++)
+                                    {
+                                        @RenderFeed(Model.SocialFeedListItems[i], i)
+                                    }
+                                }
+
+
+
+                            </div>
+
+                        </div>
+
+                    }
+
+
+
+                </div>
+            </div>
+        </div>
+}

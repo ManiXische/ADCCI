@@ -1,0 +1,23 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Animations
+Author: TAMM
+***************************************************************************************************/
+
+// owl keyframes 
+@keyframes owlFadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+// Fancybox keyframes  
+@keyframes fancybox-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}

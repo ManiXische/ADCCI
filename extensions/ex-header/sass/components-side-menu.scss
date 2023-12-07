@@ -1,0 +1,294 @@
+@import "../vars/_all";
+
+/***Sidebar style******/
+
+.sidemenu {
+  top: 0;
+  height: 100vh;
+  z-index: 999;
+  transition: all 0.3s;
+  box-shadow: 3px 3px 3px color-opacity($header-sidebar-box-shadow,0.2);
+  width: $header-sidemenu-width;
+  background-color: $header-sidebar-background;
+
+  @include ltr {
+    left: -#{$header-sidemenu-width + 10px};
+  }
+
+  @include rtl {
+    right: -#{$header-sidemenu-width + 10px};
+  }
+
+  // sidemenu overlay for ff 
+  &:after{
+    content: '';
+    background: $white-color;
+    position: fixed;
+    width: $header-sidemenu-width;
+    height: 100%;
+    top: 0;
+    @include ltr{
+      left: -$header-sidemenu-width;
+    }
+    @include rtl{
+      right: -$header-sidemenu-width;
+    }
+    z-index: 100;
+  }
+
+  &--active {
+    @include ltr {
+      left: 0;
+    }
+
+    @include rtl {
+      right: 0;
+    }
+    @media #{$ie11} {
+      overflow: auto;
+    }
+  }
+
+  &__header {
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  &__dismiss-menu {
+    cursor: pointer;
+  }
+
+  ul {
+    padding: 0 $header-sidemenu-x-padding;
+    color: $header-sidebar-links-color;
+    li {
+      border-bottom: 1px solid $header-sidebar-link-border;
+      @include rtl{
+        text-align: right;
+      }
+      a {
+        text-decoration: none;
+        color: $header-sidebar-links-color;
+        font-size: 16px;
+        display: block;
+        padding: 16px 0;
+        line-height: 23px;
+        font-weight: $header-sidebar-links-font-weight;
+        &:hover {
+          color: $header-sidebar-links-hover-color;
+        }
+      }
+
+      &.submenu {
+        .navigation-title {
+          position: relative;
+        }
+      }
+
+      @at-root {
+        $navTitle: &;
+
+        .expanding-navigation#{$navTitle} {
+          + .expanded-menu {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+    li.submenu {
+      > .navigation-title {
+        > a {
+          pointer-events: none;
+        }
+      }
+      ul {
+        @include transition(all 0.3s ease-in-out);
+        overflow: hidden;
+        border: none;
+        height: 0;
+        padding : 0 ;
+        &.expanded-menu {
+          margin-bottom: 10px;
+        }
+        @include ltr {
+          margin-left: 10px;
+        }
+        
+        @include rtl {
+          margin-right: 10px;
+        }
+        li {
+          border-bottom: none;
+
+          a {
+            padding: 10px 0;
+          }
+        }
+
+        & .expanded {
+          height: 100px;
+        }
+      }
+
+      .expand-icon {
+        position: absolute;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 12px;
+        width: 100%;
+        height: 100%;
+        top: 11px;
+        border-radius: 50%;
+        padding-right: 5px;
+        text-align: right;
+        top: 0;
+        right: 0;
+
+        @include rtl {
+          right: initial;
+          left: 0;
+          text-align: left;
+          padding-right: initial;
+          padding-left: 5px;
+        }
+
+        &::before {
+          display: inline-block;
+          @include transition(all 0.5s ease-in-out);
+
+          position: absolute;
+          right: 5px;
+
+          @include rtl {
+            left: 5px;
+            right: auto;
+          }
+          top: 0;
+          bottom: 0;
+          margin-top: auto;
+          margin-bottom: auto;
+          width: 10px;
+          height: 10px;
+        }
+
+        &.toggled {
+          &::before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__sidebar-header {
+    padding: 20px;
+    margin-bottom: 40px;
+    color: $header-sidebar-header-color;
+    background-color: $header-sidebar-header-background;
+  }
+
+  .lang-switch--small-screen {
+    border-radius: 2px;
+    background-color: $header-small-lang-switch-background;
+    .language-switcher {
+      a {
+        display: block;
+        padding: 6px 18px;
+
+        @include rtl {
+          font-family: $header-lang-switch-en-font;
+        }
+        color: $header-small-lang-switch-color;
+        &:hover {
+          color : $header-small-lang-switch-hover-color;
+          text-decoration: none;
+        }
+      }
+
+      // all languages will be roboto
+      &[data-language-code] a{
+        font-family: $header-lang-switch-en-font;
+      }
+      // arabic only will be specific
+      &[data-language-code='ar'] a{
+        font-family: $header-lang-switch-ar-font;
+      }
+    }
+  }
+
+  .settings-icon{
+    width: auto;
+    padding-left: 20px;
+     @include rtl {
+      padding-left: 0px;
+      padding-right: 20px;
+     }
+  }
+
+
+  &--first-level {
+    ul {
+      li.submenu {
+        > .navigation-title{
+          font-weight: bold;
+          > a {
+            pointer-events: visible;
+          }
+
+        }
+        .expanded-menu {
+          li{ 
+             a {
+               padding-left: 0px;
+               padding-right: 0px;
+               font-weight: $header-sidebar-links-children-font-weight;
+            }
+          }
+          @include ltr {
+            margin-left: 0px;
+          }
+          
+          @include rtl {
+            margin-right: 0px;
+          }
+        }
+        .expand-icon{
+          width: 55px;
+          padding: 0;
+          &:before{
+            right: 0;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            padding: 0;
+            text-align: center;
+            @include rtl {
+              right: 0;
+              left: 0;
+            }
+          }
+          @include rtl {
+            padding:0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: color-opacity($header-overlay-color, 0.7) ;
+  z-index: 998;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+
+  &--active {
+    display: block;
+    opacity: 1;
+    top: 0;
+  }
+}

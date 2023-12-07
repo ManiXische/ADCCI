@@ -1,0 +1,176 @@
+﻿@using Sitecore.Mvc.Presentation;
+
+@{
+    var happyTextItem = Sitecore.Context.Database.GetItem("/sitecore/system/Dictionary/Shared/Feedback/FeedbackValues/HappyFeedback");
+    var notBadTextItem = Sitecore.Context.Database.GetItem("/sitecore/system/Dictionary/Shared/Feedback/FeedbackValues/NeutralFeedback");
+    var sadTextItem = Sitecore.Context.Database.GetItem("/sitecore/system/Dictionary/Shared/Feedback/FeedbackValues/SadFeedback");
+    var currentPageName = Sitecore.Context.Item.Name;
+    var currentItemPath = Sitecore.Context.Item.Paths.Path;
+    var currentLanguage = Sitecore.Context.Language.Name;
+    var currentUserEmail = "";
+    var mobile = "";
+    var enableCaptcha = Sitecore.Configuration.Settings.GetSetting("EnableRecaptcha");
+    var capKey = Sitecore.Configuration.Settings.GetSetting("PublicKey");
+    bool authCheck = Sitecore.Context.User.IsAuthenticated;
+    var datasourceItem = RenderingContext.CurrentOrNull.Rendering.DataSource;
+    Sitecore.Data.Fields.ImageField imageField = (Sitecore.Data.Fields.ImageField)(Sitecore.Context.Database.GetItem(datasourceItem).Fields["Image"]);
+    if (authCheck)
+    {
+        currentUserEmail = Sitecore.Context.User.Profile.Email;
+        mobile = Sitecore.Context.User.Profile.GetCustomProperty("Mobile");
+    }
+    else
+    {
+        currentUserEmail = "";
+        mobile = "";
+    }
+
+}
+
+<div id="happiness-meter" class="ex-happiness-meter ex-happiness-meter--singlecolor-view" data-scrollbar="true" data-scrollbar-alwaysShow="true">
+    <form method="POST"
+          action="/Feedback/Feedback?ismobile=false"
+          data-success-message="@Sitecore.Globalization.Translate.Text("ThankYouForFeedback")"
+          data-error-message="@Sitecore.Globalization.Translate.Text("FeedBackNotSent")"
+          data-ok-button="@Sitecore.Globalization.Translate.Text("OkButtonDialog")">
+        <header class="ex-happiness-meter__header d-flex justify-content-between">
+            <div class="happiness-logo">
+                @if (imageField != null && imageField.MediaItem != null)
+                {
+                    <div class="happiness-logo__wrapper">
+                        @Html.Sitecore().Field("Image", Sitecore.Context.Database.GetItem(datasourceItem))
+                    </div>
+                }
+
+            </div>
+
+
+            <div>
+                <a href="#" data-fancybox-close class="happiness-close-btn d-inline-block">
+                    <i class="icon-remove"></i>
+                </a>
+            </div>
+        </header>
+        <div class="ex-happiness-meter__content flex-column justify-content-between">
+            <main class="ex-happiness-meter__content__main d-flex flex-lg-row flex-md-row flex-column align-items-center">
+                <h1 class="happiness-meter-heading mb-4">
+                    @Sitecore.Globalization.Translate.Text("HowWasExperience")
+                </h1>
+                <div class="happiness-meter-face">
+                    <div class="happiness-meter-face__image"></div>
+                </div>
+            </main>
+            <footer class="ex-happiness-meter__content__footer mt-5">
+                <div class="happiness-meter-slider">
+                    <input type="hidden" name="FeelValue">
+                    <input data-meter name="FeelPrecent" type="range" min="0" max="100" step="1" value="50" />
+                </div>
+                <div class="happiness-meter-notice mt-4 text-center">
+                    @Sitecore.Globalization.Translate.Text("HoldAndSwipe")
+                </div>
+                <div class="happiness-meter-value font-weight-bold mt-4 text-center">
+                    @Sitecore.Globalization.Translate.Text("Neutral")
+                </div>
+            </footer>
+            <div id="dvHiddenCaptcha">
+            </div>
+        </div>
+        <div class="ex-happiness-meter__form">
+            <div class="ex-happiness-meter__form__content d-flex flex-column justify-content-center align-items-center">
+                <div class="happiness-meter-message d-flex flex-column justify-content-center">
+                    <div class="happiness-meter-message__icon d-flex flex-column justify-content-center align-items-center">
+                        <i class="icon-check-circle-filled"></i>
+                    </div>
+                    <h3 class="happiness-meter-message__label text-center m-3">
+                        @Sitecore.Globalization.Translate.Text("ThankYouForFeedback")"
+                    </h3>
+                </div>
+                <!-- <h3 class="happiness-meter-error text-center my-3">
+                    @Sitecore.Globalization.Translate.Text("FeedBackNotSent")
+                </h3> -->
+                <div class="happiness-meter-error">
+                    <h3 class="happiness-meter-error__text text-center my-3">
+                        @Sitecore.Globalization.Translate.Text("FeedBackNotSent")
+                    </h3>
+                    <button class="button rounded my-4 mx-auto" data-happiness-trigger>
+                        <span> @Sitecore.Globalization.Translate.Text("Retry")  </span>
+                        <i class="icon-synchronize-arrows"></i>
+                    </button>
+                </div>
+                <div class="happiness-meter-form w-100 d-flex flex-column hidden">
+                    <div class="happiness-meter-form__wrapper">
+                        <div class="happiness-meter-input w-100 mb-3">
+                            <label class="happiness-meter-label" for="EmailContent">@Sitecore.Globalization.Translate.Text("AdditionalFeedback")</label>
+                            <textarea name="EmailContent" id="EmailContent" maxlength="300" required data-msg-required="@Sitecore.Globalization.Translate.Text("CommentRequired")" cols="30" rows="10"></textarea>
+                            <div class="d-flex justify-content-between mt-2">
+                                <div>
+                                    <span class="error-block  my-2"></span>
+                                </div>
+                                <div>
+                                    <div class="happiness-meter-input__count">
+                                        <span class="happiness-meter-input__count__current">
+                                            0
+                                        </span> /
+                                        <span class="happiness-meter-input__count__total">
+                                            300
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="happiness-meter-input happiness-meter-input--mobile happiness-meter-input--hide w-100 mb-3">
+                            <label class="happiness-meter-label" for="phonenumber">@Sitecore.Globalization.Translate.Text("FeedbackMobile")</label>
+                            <input type="tel" name="phonenumber" id="phonenumber" 
+                            class="happiness-validation-ignore"
+                            data-related-input="#enableMobile" 
+                            
+                            required 
+                            data-msg-required='@Sitecore.Globalization.Translate.Text("Happines-Phone-Required")' 
+                            
+                            pattern = "^(?=.*?[1-9])[0-9+]+$"
+                            data-msg-pattern='@Sitecore.Globalization.Translate.Text("Happines-Phone-Pattern")'
+
+                            rangelength = "9,15"
+                            data-msg-rangelength='@Sitecore.Globalization.Translate.Text("Happines-Phone-Range")'
+                        
+                            />
+                            <span class="error-block my-2"></span>
+                        </div>
+                        <div class="happiness-meter-checkbox d-flex mb-3">
+                            <div class="happiness-meter-checkbox__wrapper">
+                                <input type="checkbox" id="enableMobile" />
+                                <label for="enableMobile"></label>
+                            </div>
+                            <label class="happiness-meter-label" for="enableMobile">@Sitecore.Globalization.Translate.Text("HaveCall")</label>
+                        </div>
+                        @if (enableCaptcha.ToLower() == "true")
+                        {
+                          
+                            <div class="happiness-meter-input w-100 mb-3">
+                                <label class="happiness-meter-label"> @Sitecore.Globalization.Translate.Text("recaptchaText")</label>
+                                <input type="hidden" id="happiness-recaptcha-input" name="recaptcha" data-sitekey="@capKey" data-msg-required="@Sitecore.Globalization.Translate.Text("CaptchaMandatory")" />
+                                <div id="happiness-recaptcha"></div>
+                                <span class="error-block my-2"></span>
+                            </div>
+                        }
+
+                        <button class="button d-flex justify-content-between happiness-meter-submit">
+                            <span>@Sitecore.Globalization.Translate.Text("SubmitFeedback")  </span>
+                            <i class="icon-arrow-right font-weight-bold rotated-element"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="hidden-inputs" data-wrapper>
+            <input type="hidden" name="CurrentPageName" id="txtPageName" value="@currentPageName" />
+            <input type="hidden" name="UserEmail" id="txtEmail" value="@currentUserEmail" />
+            <input type="hidden" name="currentItemPath" id="txtCurrentItemPath" value="@currentItemPath" />
+            <input type="hidden" name="CurrentUrl" id="txtCurrentUrl" value="" />
+            <input type="hidden" name="ItemPath" id="txtItemPath" value="@currentItemPath" />
+            <input type="hidden" id="check" value="@authCheck" />
+            <input type="hidden" id="happiness-hidden-recaptcha-input" />
+        </div>
+    </form>
+</div>

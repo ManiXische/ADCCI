@@ -1,0 +1,39 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+$map-tab-title-font-size : 20px !default;
+$map-tab-title-line-height: 24px !default;
+$map-tab-title-color : $grey-400 !default;
+$map-tab-title-padding : 15px !default;
+$map-tab-title-color-active : $grey-900 !default;
+$map-tab-title-active-weight : bold !default;
+$map-tab-title-active-line-color : $primary-color !default;
+$map-tab-title-active-line-height : 6px !default;
+$map-search-box-font-size : 15px !default;
+$map-search-box-bg : $grey-50 !default;
+$map-search-box-width : 380px !default;
+$map-search-box-left : 130px !default;
+$map-search-box-bar-height : 90px !default;
+$map-search-box-bar-input-bg : $white-color !default;
+$map-search-box-bar-input-border-color : $white-color !default;
+$map-search-box-bar-input-border-radius : 6px !default;
+$map-search-box-bar-icon-position : 0 !default;
+$map-search-box-bar-icon-width: 55px !default;
+$map-search-box-item-color : $grey-600 !default;
+$map-search-box-item-font-size : 12px !default;
+$map-esri-zoom-esri-widget-border-color : color-opacity($grey-700, 0.3) !default;
+$map-map-box-bg : $grey-300 !default;
+$map-map-box-height : 600px !default;
+$map-map-box-popup-radius : 20px !default;
+$map-map-box-popup-text-align: center !default;
+$map-map-box-popup-font-size : 20px !default;
+$map-map-box-popup-padding : 1rem !default;
+$map-map-box-popup-line-height : 26px !default;
+$map-map-box-marker-color : $primary-color !default;
+
+$map-search-box-accordion-item-bg : $white-color !default;
+$map-search-box-accordion-item-border-radius : 0 !default;
+$map-search-box-accordion-item-border-bottom : 1px solid #d2d2d4 !default;

@@ -1,0 +1,36 @@
+
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: Colors
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    color : $layout-body-color;
+}
+
+a{
+    color: $layout-link-default-color;
+    &:hover{
+        color : $layout-link-default-hover-color;
+    }
+    &:focus{
+        color : $layout-link-default-focus-color;
+    }
+    &.disabled{
+        color: $layout-link-default-disabled-color;
+    }
+}
+
+label , .label {
+    color : $layout-label-default-color;
+}
+
+

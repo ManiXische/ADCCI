@@ -1,0 +1,66 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+  // Your code goes here
+
+  p {
+    font-size: $ex-publications-title-font;
+    line-height: $ex-publications-title-lineheight;
+  }
+
+  .font-small-x {
+    font-size: $ex-publications-card-type-font-size;
+  }
+
+  .letter-spacing {
+    @include ltr {
+      letter-spacing: 1.38px;
+    }
+  }
+
+  .publication-icon {
+    i {
+      font-size: 26px;
+      color: $ex-publications-icon-color;
+    }
+
+    img {
+      height: 30px;
+    }
+  }
+
+  &-card {
+    background-color: $ex-publications-card-background;
+    min-height: $ex-publications-card-min-height;
+  }
+  .button,
+  a.button {
+    height: $ex-publications-button-height;
+    font-size: $ex-publications-button-font-size;
+    min-width: $ex-publications-button-min-width;
+    span {
+      margin-left: 5px;
+      margin-right: 0;
+      @include rtl {
+        margin-left: 0;
+        margin-right: 5px;
+      }
+    }
+  }
+  &__btn-holder {
+    position: absolute;
+    bottom: 1.5rem;
+  }
+  .button--invert {
+    color: $ex-publications-button-color;
+    border-color: $ex-publications-button-border-color;
+  }
+}

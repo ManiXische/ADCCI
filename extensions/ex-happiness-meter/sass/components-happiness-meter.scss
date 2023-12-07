@@ -1,0 +1,291 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName}
+Extension Version: #{$ProjectVersion}
+File: base file
+Owner: #{$ProjectOwner}
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    width: $happiness-meter-width;
+
+    @media #{$sm}{
+        width:auto;
+    }
+    // @media #{$md}{
+    //     width: calc(#{$happiness-meter-width} - 100px);
+    // }
+    height:$happiness-meter-height;
+    display: none;
+    padding: $happiness-meter-padding;
+    position: relative;
+
+    @include background-gradient(-45deg, $happiness-meter-firstbg , 1% ,135deg, $happiness-meter-secondbg, 100%);
+
+    
+    form { 
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    > div{
+        cursor: default;
+    }
+    
+    &--singlecolor-view{
+        background: $happiness-meter-initbg;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width:100%;
+        height:100%;
+        pointer-events: none;
+        background: url('../images/bg.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+       
+    &__header{
+        border-top: $happiness-meter-header-border;
+        .happiness-logo{
+            margin: $happiness-meter-logo-margin;
+            max-width: $happiness-meter-logo-max-width;
+            
+            &__wrapper{
+                padding: $happiness-meter-logo-padding;
+                background: $happiness-meter-logo-background;
+                border-radius: $happiness-meter-logo-border-radius;
+
+                img {
+                    width:100%;
+                }
+            }
+
+        }
+        .happiness-close-btn{
+            color: $happiness-meter-close-btn-color;
+            padding: $happiness-meter-close-btn-padding;
+            font-size: $happiness-meter-close-btn-size;
+            transition: all 0.6s;
+            &:hover,
+            &:active{
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__content{
+        display: flex;
+        padding:  $happiness-meter-content-padding;
+        height: 100%;
+
+        @media #{$sm} {
+            height:auto;
+        }
+        &__main{
+            .happiness-meter-heading{
+                padding:$happiness-meter-content-heading-padding;
+                color :$happiness-meter-content-heading-color;
+                @media #{$sm}{
+                    text-align: center;
+                }
+            }
+
+            .happiness-meter-face{
+                &__image{
+                    background: url('../images/faces.svg');
+                    background-repeat: no-repeat;
+                    background-position: 0% 0%;
+                    width:$happiness-meter-face-size;
+                    height:$happiness-meter-face-size;
+                }
+            }
+        }
+
+        &__footer{
+            padding:$happiness-meter-footer-padding;
+            .happiness-meter-notice{
+                color :$happiness-meter-notice-color;
+            }
+            .happiness-meter-value{
+                color : $happiness-meter-notice-value;
+                display: none;
+            }
+
+        }
+
+        #dvHiddenCaptcha{
+            display: none;
+        }
+    }
+
+    &__form{
+        display: none;
+        padding: $happiness-meter-form-padding;
+
+        &__content{
+            .happiness-meter-message{
+                width:100%;
+                &__label{
+                    width:100%;
+                }
+                &__label, &__icon{
+                    color:$happiness-meter-label-color;
+                }
+                &__icon{
+                    font-size: $happiness-meter-icon-font-size;
+                    img{
+                        height:$happiness-meter-logo-height;
+                    }
+                }
+            }
+            .happiness-meter-error{
+                display: none;
+                width:100%;
+                &__text{
+                    color: $happiness-meter-error-color;
+                }
+            }
+            .happiness-meter-form{
+                &.hidden{
+                    display: none !important;
+                }
+                &__wrapper{
+                    .error-block{
+                        display: none;
+                        color : $happiness-meter-error-color;
+                        font-size:  $happiness-meter-error-font-size;
+                    }
+                    .happiness-meter-input{
+                        display: flex;
+                        flex-direction: column;
+                        &--hide{
+                            display: none;
+                        }
+                        label {
+                            &[for]{
+                                cursor: pointer;;
+                            }
+                        }
+                        input[type="text"],input[type="tel"], textarea{
+                            background:$happiness-meter-input-bg;
+                            color:$happiness-meter-input-color;
+                            resize: none;
+                            border: $happiness-meter-input-border ;
+                            border-radius:$happiness-meter-input-border-radius;
+                            height:$happiness-meter-input-height;
+                            padding: $happiness-meter-input-padding;
+                        }
+                        textarea{
+                            height:$happiness-meter-textarea-height;
+                        }   
+
+                        &.is-invalid{
+                            .error-block{
+                                display: block;
+                            }
+                        }
+                        &.is-valid{
+                            .error-block{
+                                display: none;
+                            }
+                        }
+
+                        &__count{
+                            color : $happiness-meter-counter-color;
+                            font-size: $happiness-meter-counter-fontsize;
+                            .error{
+                                color : $happiness-meter-error-color;
+                            }
+                        }
+                    }
+                    .happiness-meter-checkbox {
+                        &__wrapper {
+                            width: 20px;
+                            position: relative;
+                            margin-right: 10px;
+                            @include rtl{
+                                margin-left: 10px;
+                                margin-right: 0;
+                            }
+                            + label {
+                                cursor: pointer;
+                            }
+                            label {
+                              width: 20px;
+                              height: 20px;
+                              cursor: pointer;
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              background: $happiness-meter-checkbox-label-color;
+                              border-radius: 4px;
+                              @include box-shadow(inset 0px 1px 1px color-opacity($happiness-meter-checkbox-label-shadow-color1 , 0.5), 0px 1px 0px color-opacity($happiness-meter-checkbox-label-shadow-color2 , 0.4));
+                            //   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+                              &:after {
+                                content: '';
+                                width: 12px;
+                                height: 8px;
+                                position: absolute;
+                                top: 5px;
+                                left: 4px;
+                                border: $happiness-meter-checkbox-border;
+                                border-top: none;
+                                border-right: none;
+                                background: transparent;
+                                opacity: 0;
+                                transform: rotate(-45deg);
+                              }
+                              &:hover::after {
+                                opacity: 0.3;
+                              }
+                            }
+                            input[type=checkbox] {
+                              visibility: hidden;
+                              &:checked + label:after {
+                                opacity: 1;
+                              }    
+                            }
+                          }
+                    } 
+                    .happiness-meter-label {
+                        font-size: $happiness-meter-label-font-size;
+                        line-height: $happiness-meter-label-line-height;
+                        margin-bottom: $happiness-meter-label-margin-bottom;
+                        color :$happiness-meter-label-color;
+                        text-transform: $happiness-meter-label-text-transform;
+                    }
+                    .happiness-meter-submit{
+                        &[disabled]{
+                            @include opacity(0.4);
+                        }
+                    }
+                    button{
+                        i{
+                            @include rtl{
+                                transform: rotate(180deg);
+                            }
+                            
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .fancybox-button{
+        color : #b7b7b7;
+    }
+.fancybox-close-small{
+    display: none;
+}
+}

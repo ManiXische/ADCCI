@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-service-card",
+        "version" : "1.0.0",
+        "owner" :  "null"
+    }
+}

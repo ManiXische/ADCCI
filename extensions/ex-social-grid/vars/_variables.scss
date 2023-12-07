@@ -1,0 +1,39 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+$socialgrid-section-background-color: $grey-100 !default;
+$socialgrid-section-padding : 60px 0 !default;
+$socialgrid-section-title-color : $layout-body-color !default;
+$socialgrid-section-description-color : $grey-700 !default;
+$socialgrid-section-description-font-size:inherit !default;
+$socialgrid-section-description-font-weight:400 !default;
+$socialgrid-section-description-txt-transform : uppercase !default;
+
+$socialgrid-filters-wrapper-border : 1px solid $primary-color4 !default;
+$socialgrid-filters-button-container-bg:$primary-color4 !default;
+$socialgrid-filters-button-border: 1px solid color-opacity($grey-900 , 0.19) !default;
+$socialgrid-filters-button-bg-hover:$primary-color !default;
+$socialgrid-filters-button-color:$white-color !default;
+$socialgrid-filters-button-color-hover:$white-color !default;
+$socialgrid-filters-button-bg-active:$primary-color !default;
+$socialgrid-filters-button-color-active:$white-color !default;
+$socialgrid-grid-item-background:$white-color !default;
+$socialgrid-grid-item-border: 1px solid $grey-100 !default;
+$socialgrid-grid-gutter : 1% !default;
+$socialgrid-icon-color : $grey-900 !default;
+
+$socialgrid-text-line-height : 20px !default;
+$socialgrid-text-font-size : 14px !default;
+$socialgrid-date-font-size : 13px !default;
+$socialgrid-author-color : $layout-body-color !default;
+$socialgrid-author-hover-color : $layout-body-color !default;
+$socialgrid-text-padding: 26px !default;
+
+$socialgrid-author-revert-color : $white-color !default;
+$socialgrid-author-revert-hover-color : $white-color !default;
+$socialgrid-icon-revert-color: $white-color !default;
+
+

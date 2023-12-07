@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-new-member",
+        "version" : "1.0.0",
+        "owner" :  "Mahmoud"
+    }
+}

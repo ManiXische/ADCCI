@@ -1,0 +1,15 @@
+
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Mixins
+Author: Wael
+***************************************************************************************************/
+
+ @mixin reset-height() {
+    height: auto;
+    min-height: auto;
+
+    .#{$ProjectName}__wrapper{
+        max-height: inherit;
+    }
+  }

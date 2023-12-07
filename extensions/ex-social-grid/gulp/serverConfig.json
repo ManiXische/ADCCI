@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-social-grid",
+        "version" : "1.0.0",
+        "owner" :  "Wael Gomaa"
+    }
+}

@@ -1,0 +1,42 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    margin-bottom: $live-monitoring-marginBottom;
+    &__title{
+        margin-bottom: $live-monitoring-title-marginBottom;
+    }
+    &__map {
+        .live-monitoring-map{
+            height:$live-monitoring-map-height;
+        }
+    }
+    &__data{
+        margin-bottom: $live-monitoring-data-marginBottom;
+        &__table{
+            table {
+                tr{
+                    td {
+                        line-height: $live-monitoring-cell-lineHeight;
+                        &:first-child {
+                            width: $live-monitoring-firstCell-wdth;
+                        }
+                    }
+                    &:first-child{
+                        td { 
+                            border-top: $live-monitoring-firstRow-borderTop;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}

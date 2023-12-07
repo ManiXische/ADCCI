@@ -1,0 +1,118 @@
+/***************************************************************************************************
+Extension Name: ex-quote 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-quote 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-quote 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-quote__qwrapper {
+  color: #000;
+  padding: 0 1.5rem;
+}
+
+html[lang*='en'] .ex-quote__qwrapper__img,
+html[class*='translated-ltr'] .ex-quote__qwrapper__img {
+  padding-right: 30px;
+}
+
+html[lang*='ar'] .ex-quote__qwrapper__img,
+html[class*='translated-rtl'] .ex-quote__qwrapper__img {
+  padding-left: 30px;
+}
+
+.ex-quote__qwrapper__img img {
+  width: auto;
+  border-radius: 100%;
+}
+
+.ex-quote__qwrapper--reset-border img {
+  border-radius: 0;
+}
+
+.ex-quote__qwrapper__quote-text p {
+  font-size: 20px;
+  line-height: 26px;
+  padding-top: 15px;
+}
+
+.ex-quote__qwrapper__quote-text .quote-name {
+  font-size: 16px;
+}
+
+.ex-quote__qwrapper__quote-text .quote-position {
+  font-size: 12px;
+  color: #B2B2B5;
+  line-height: 15px;
+}
+
+.ex-quote__qwrapper__quote-icon {
+  font-size: 36px;
+}
+
+.ex-quote .owl-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.ex-quote__arros-nav a.ex-quote__arros-nav-next, .ex-quote__arros-nav a.ex-quote__arros-nav-prev {
+  position: absolute;
+  top: -webkit-calc(50% - 10px);
+  top: calc(50% - 10px);
+  cursor: pointer;
+}
+
+.ex-quote__arros-nav a.ex-quote__arros-nav-next:hover, .ex-quote__arros-nav a.ex-quote__arros-nav-prev:hover {
+  color: #B2B2B5;
+}
+
+.ex-quote__arros-nav-next {
+  right: 0;
+}
+
+.ex-quote__arros-nav-prev {
+  left: 0;
+}

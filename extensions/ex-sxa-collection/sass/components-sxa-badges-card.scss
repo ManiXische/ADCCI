@@ -1,0 +1,96 @@
+
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.ex-sxa-badges-card{
+  // Your code goes here
+  background-color: $badges-card-background;
+  color: $badges-card-font-color;
+
+  .border-badges-left {
+    @include ltr {
+    border-left: $badges-card-border-width $badges-card-border-color $badges-card-border-style;
+    }
+    @include rtl {
+      border-right: $badges-card-border-width $badges-card-border-color $badges-card-border-style;
+    }
+  }
+  .font-weight-bold,b {
+    a{
+        font-weight: $link-font-weight;
+    }
+  }
+  a {
+    color: $badges-card-font-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $badges-card-font-color;
+    }
+  }
+
+
+  &--dark{
+    background-color: $badges-card-background-dark;
+    color: $badges-card-font-color-dark;
+
+    a {
+      color: $badges-card-font-color-dark;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        color: $badges-card-font-color-dark;
+      }
+    }
+  }
+  
+  &.grey-bg {
+    background-color: $grey-bg;
+    color: $grey-bg-font-color;
+    a {
+      color: $grey-bg-font-color;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        color: $grey-bg-font-color;
+      }
+    }
+  }
+
+  .seprator {
+    height: $seprator-height;
+    padding: $seprator-padding;
+    border-top: $seprator-card-border-width $seprator-card-border-color $seprator-card-border-style;
+    position: relative;
+    margin : 0 $seprator-margin;
+    &:after {
+      content: "";
+      position: absolute;
+      border-radius: $seprator-border-radius;
+      width: $seprator-tik-width;
+      height: $seprator-tik-height;
+      background-color: $seprator-background-color;
+      left: -#{$seprator-margin + $seprator-tik-width / 2};
+      top: $seprator-position-top;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      border-radius: $seprator-border-radius;
+      width: $seprator-tik-width;
+      height: $seprator-tik-height;
+      background-color: $seprator-background-color;
+      right: -#{$seprator-margin + $seprator-tik-width / 2};
+      top: $seprator-position-top;
+      
+    }
+  }
+}

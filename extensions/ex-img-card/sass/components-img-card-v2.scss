@@ -1,0 +1,242 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+.#{$ProjectName}-v2 {
+    $instance : &;
+
+    overflow: hidden;
+    height: $img-card-img-height;
+  
+    @include rtl {
+        text-align: right;
+    }
+    &--shadow{
+        box-shadow: $img-card-box-shadow;
+    }
+    &__container {
+        $container: &;
+        height: $img-card-height;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &__content {
+            @include transition(all $img-card-container-after-hover-transition ease);
+            width: calc(#{$img-card-container-after-hover-width} - 50px);
+
+            bottom: $img-card-container-content-bottom;
+            height:$img-card-text-cont-height;
+            background: color-opacity($img-text-cont-bg, $img-text-cont-bg-opacity);
+            &:before {
+                @include transition(all $img-card-container-after-hover-transition ease);
+                content: '';
+                background: $img-card-strip-color;
+                width: $img-card-strip-width;
+                position: absolute;
+                top: $img-card-strip-top;
+
+                @include ltr {
+                    left: 0;
+                }
+
+                @include rtl {
+                    right: 0;
+                    left: auto;
+                }
+
+                height: $img-card-strip-height;
+            }
+
+            .imgcard-title {
+                @include transition(all $img-card-container-after-hover-transition ease);
+                margin-top: $img-card-container-padding;
+                margin-right: $img-card-container-padding;
+                margin-left: calc(#{$img-card-container-padding} * 2);
+                @include rtl{
+                    margin-left: $img-card-container-padding;
+                    margin-right: calc(#{$img-card-container-padding} * 2);
+                        
+                }
+                color: $img-card-title-color;
+                overflow: hidden ; 
+            }
+
+            .imgcard-description {
+                @include transition(all $img-card-container-after-hover-transition ease);
+                margin-top: $img-card-container-padding;
+                margin-right: $img-card-container-padding;
+                margin-left: calc(#{$img-card-container-padding} * 2);
+                @include rtl{
+                    margin-left: $img-card-container-padding;
+                    margin-right: calc(#{$img-card-container-padding} * 2);
+                        
+                }
+                display: none;
+            }
+
+            .imgcard-link {
+                @include transition(all $img-card-container-after-hover-transition ease);
+                margin-top: $img-card-container-padding;
+                margin-right: $img-card-container-padding;
+                margin-left: calc(#{$img-card-container-padding} * 2);
+                @include rtl{
+                    margin-left: $img-card-container-padding;
+                    margin-right: calc(#{$img-card-container-padding} * 2);
+                }
+                color: $img-card-icon-color;
+
+                &:hover{
+                    color: $img-card-icon-hover-color;
+                }
+                i {
+                    font-size: 13px;
+                    @include ltr {
+                        padding-right: $img-card-icon-padding;
+                    }
+
+                    @include rtl {
+                        padding-right: $img-card-icon-padding;
+                    }
+                }
+
+                span {
+                    font-size: $img-card-read-mor-fs;
+                    line-height: calc(#{$img-card-read-mor-fs} + 2px);
+                    text-transform: uppercase;
+                }
+            }
+
+            &--border-radius {
+                @include ltr{
+                    border-radius: $img-card-container-add-border-radius 0px 0px 0px;
+                }
+                @include rtl {
+                    border-radius: $img-card-container-add-border-radius 0px 0px 0px;
+                }
+                
+            }
+          
+            &--switch {
+                @include ltr {
+                    right: $img-card-container-content-align;
+                    left: auto;
+                }
+
+                @include rtl {
+                    left: $img-card-container-content-align;
+                    right: auto;
+                }
+
+                .imgcard-title {
+                    @include ltr {
+                        padding-left: $img-card-container-reset-img-card-title-padding;
+                    }
+
+                    @include rtl {
+                        padding-right: $img-card-container-reset-img-card-title-padding;
+                    }
+                }
+
+                .imgcard-link {
+                    @include ltr {
+                        padding-left: $img-card-container-reset-img-card-title-padding;
+                    }
+
+                    @include rtl {
+                        padding-right: $img-card-container-reset-img-card-title-padding;
+                    }
+                }
+
+                &:before {
+                    @include ltr {
+                        right: $img-card-container-align;
+                        left: auto;
+                    }
+
+                    @include rtl {
+                        left: $img-card-container-align;
+                        right: $img-card-container-content-before-left-rtl;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover & {
+
+        &__container {
+            &__content {
+                bottom: $img-card-container-content-bottom;
+                height: calc(#{$img-card-container-after-hover-height} - 20%);
+                border-radius: $img-card-container-add-border-radius-after-hover;
+                margin: auto;
+                background: color-opacity($img-text-cont-bg, $img-text-cont-bg-opacity);
+
+                @include ltr {
+                    left: $img-card-container-after-hover-aligmnet;
+                }
+
+                @include rtl {
+                    right: $img-card-container-after-hover-aligmnet;
+                }
+
+                .imgcard-title {
+                   
+                }
+
+                .imgcard-description {
+                    display: block;
+                }
+
+                .imgcard-link {
+                    margin-top: 0;
+                }
+                &:before{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &--small{
+        height: $img-card-img-small-height;
+
+        #{$instance}__container {
+            &__content {
+
+                .imgcard-link {
+                    i {
+                        font-size: 24px;
+                    }      
+                }
+            }
+        }
+        &:hover {
+            #{$instance}__container {
+                &__content {
+                    bottom: $img-card-container-content-bottom;
+                    height: 55%;
+    
+                    &:before {
+                        width:100%;
+                    }
+                    .imgcard-title {
+                       
+                    }
+    
+                    .imgcard-description {
+                        display: block;
+                    }
+    
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,220 @@
+/***************************************************************************************************
+Extension Name: ex-accordion 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-accordion 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-accordion 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-accordion__item {
+  background-color: #FAFAFA;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #D6D6D6;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+
+.ex-accordion__item__title {
+  position: relative;
+  min-height: 62px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-accordion__item__title {
+    -webkit-box-pack: start !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+  }
+}
+
+.ex-accordion__item__title:before {
+  content: '';
+  width: 0;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  background: #FF8D00;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+html[dir='rtl'] .ex-accordion__item__title:before, .translated-rtl .ex-accordion__item__title:before {
+  left: auto;
+  right: 0;
+}
+
+.ex-accordion__item__title h1, .ex-accordion__item__title .accordion-title {
+  color: #3F3E45;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-accordion__item__title h1, .ex-accordion__item__title .accordion-title {
+    padding-right: 62px;
+  }
+  html[dir='rtl'] .ex-accordion__item__title h1, .translated-rtl .ex-accordion__item__title h1, html[dir='rtl'] .ex-accordion__item__title .accordion-title, .translated-rtl .ex-accordion__item__title .accordion-title {
+    padding-left: 62px;
+    padding-right: 0;
+  }
+}
+
+.ex-accordion__item__title .accordion-trigger {
+  cursor: pointer;
+  color: #000;
+  min-width: 62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-start;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: -24px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-accordion__item__title .accordion-trigger {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+  html[dir='rtl'] .ex-accordion__item__title .accordion-trigger, .translated-rtl .ex-accordion__item__title .accordion-trigger {
+    left: 25px;
+    right: auto;
+  }
+}
+
+html[dir='rtl'] .ex-accordion__item__title .accordion-trigger, .translated-rtl .ex-accordion__item__title .accordion-trigger {
+  margin-left: -24px;
+  margin-right: 0;
+}
+
+.ex-accordion__item__title .accordion-trigger__collapse {
+  display: none;
+}
+
+.ex-accordion__item__title img {
+  max-width: 100px;
+  max-height: 50px;
+}
+
+.ex-accordion__item__title--no-b4:before {
+  display: none;
+}
+
+.ex-accordion__item__content {
+  display: none;
+}
+
+.ex-accordion__item__content .accordion-content {
+  background-color: #FAFAFA;
+  color: #2B2849;
+  padding: 24px;
+  line-height: 26px;
+}
+
+.ex-accordion__item--expanded {
+  background-color: #ffffff;
+  border-color: #D6D6D6;
+  border-radius: 4px 4px 0 0;
+}
+
+.ex-accordion__item--expanded .ex-accordion__item__title {
+  border-bottom: 1px solid #D6D6D6;
+}
+
+.ex-accordion__item--expanded .ex-accordion__item__title:before {
+  opacity: 0;
+}
+
+.ex-accordion__item--expanded .ex-accordion__item__title .accordion-trigger {
+  color: #2B2849;
+}
+
+.ex-accordion__item--expanded .ex-accordion__item__title .accordion-trigger__collapse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ex-accordion__item--expanded .ex-accordion__item__title .accordion-trigger__expand {
+  display: none;
+}
+
+.ex-accordion--alt .ex-accordion__item {
+  border-color: #D6D6D6;
+  background-color: #D6D6D6;
+}
+
+.ex-accordion--alt .ex-accordion__item--expanded {
+  border-color: transparent;
+  background-color: #ffffff;
+}
+
+.ex-accordion--alt .ex-accordion__item--expanded .ex-accordion__item__title {
+  border-bottom-color: transparent;
+}
+
+.ex-accordion--alt .ex-accordion__item__title .icon {
+  font-size: 21px;
+}
+
+.ex-accordion--alt .ex-accordion__item__title:before {
+  display: none;
+}
+
+.ex-accordion [data-toggle] {
+  cursor: pointer;
+}
+
+.on-page-editor .collapse:not(.show) {
+  display: block !important;
+}

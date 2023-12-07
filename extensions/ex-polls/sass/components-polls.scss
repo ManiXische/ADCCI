@@ -1,0 +1,153 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+
+  & , &__popup{
+
+    // Your code goes here
+    .question-title {
+      font-size: $ex-polls-question-title-font-size;
+      font-weight: $ex-polls-question-title-font-weight;
+      padding-bottom: $ex-polls-question-title-padding-bottom;
+      margin-bottom: $ex-polls-question-title-margin-bottom;
+      border-bottom: $ex-polls-question-title-border-bottom;
+      display: $ex-polls-question-title-display;
+
+      span {
+        font-size: $ex-polls-question-title-span-font-size;
+        font-weight: $ex-polls-question-title-span-font-weight;
+        margin-right: 8px;
+        @include rtl {
+          margin-right: 0px;
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .progress-item {
+      border-bottom: $ex-polls-progress-item-border-bottom;
+      
+      .progress-bar {
+        width:0%;
+        border-radius: $ex-polls-progress-bar-border-radius;
+        height: $ex-polls-progress-bar-height;
+        overflow: visible;
+        background: transparent;
+        
+        @include rtl {
+          border-radius: $ex-polls-progress-bar-rtl-border-radius;
+        }
+        
+        h4 {
+          font-size: $ex-polls-progress-bar-h4-font-size;
+          padding: $ex-polls-progress-bar-h4-padding;
+          text-align: $ex-polls-progress-bar-h4-text-align;
+          min-width: 330px;
+  
+          @include rtl {
+            text-align: $ex-polls-progress-bar-h4-rtl-text-align;
+            right: 0;
+          }
+  
+          span {
+            font-size: $ex-polls-progress-bar-h4-span-font-size;
+            padding: $ex-polls-progress-bar-h4-span-padding;
+            display: block;
+          }
+  
+          strong {
+            font-size: $ex-polls-progress-bar-h4-strong-font-size;
+            @include ltr {
+              padding-right: $ex-polls-progress-bar-h4-strong-padding-right;
+            }
+            @include rtl {
+            padding-left: $ex-polls-progress-bar-h4-strong-padding-right;
+            }
+          }
+        } 
+
+        &--verygood {
+          //as per discusion with pavel
+          background-color: $ex-polls-progress-bar-bg-verygood;
+          
+            color: $ex-polls-progress-bar-bg-verybad-black-font-color; 
+          
+        }
+
+        &--good {
+          //as per discusion with pavel
+         background-color: $ex-polls-progress-bar-bg-good;
+         
+            color: $ex-polls-progress-bar-bg-verybad-black-font-color; 
+          
+        }
+
+        &--verybad {
+          background-color: $ex-polls-progress-bar-bg-verybad;
+          color: $ex-polls-progress-bar-bg-verybad-black-font-color;    
+        }
+
+      }
+  
+    }
+
+    .polls-steps {
+
+      .steps,
+      .actions {
+        display: none;
+      }
+    }
+
+    .message-block {
+      display: none;
+    }
+
+    .ex-sitecore-form__input{
+  
+      label{
+        opacity: 1;
+        font-size: 16px;
+        cursor: pointer;
+        line-height: 1.2;
+        @include rtl {
+          letter-spacing: 0;
+        }
+      }
+    }
+
+    .polls-results{
+      .vote-wrap{
+        .icon-vote{
+          font-size: $ex-polls-icon-vote-font-size;
+        }
+        @media #{$sm} {
+          -webkit-box-pack: end !important;
+          -ms-flex-pack: end !important;
+          justify-content: flex-end !important;
+        }
+      }
+    }
+  }
+
+  &__popup{
+    width:$ex-polls-popup-width; // prevent over width when question text increase 
+    .fancybox-button:hover,
+      .fancybox-close-small:hover{
+        color: $layout-fancy-light-close-hover-color;
+      }
+  }
+
+  .button, a.button{
+    cursor: pointer;
+  }
+
+}   

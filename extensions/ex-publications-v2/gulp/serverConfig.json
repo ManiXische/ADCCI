@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-publications-v2",
+        "version" : "1.0.0",
+        "owner" :  "ahmedalaaezzt"
+    }
+}

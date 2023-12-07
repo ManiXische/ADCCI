@@ -1,0 +1,437 @@
+/***************************************************************************************************
+Extension Name: ex-timeline 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-timeline 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-timeline 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-timeline {
+  height: 650px;
+  background-color: #3F3E45;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-timeline {
+    height: auto;
+  }
+}
+
+.ex-timeline__container {
+  padding-right: 48px;
+  z-index: 1;
+}
+
+html[lang*='ar'] .ex-timeline__container,
+html[class*='translated-rtl'] .ex-timeline__container {
+  padding-right: 0;
+  padding-left: 48px;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  html[lang*='ar'] .ex-timeline__container,
+  html[class*='translated-rtl'] .ex-timeline__container {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-timeline__container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-timeline__container {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.ex-timeline__container .timeline-wrapper {
+  height: -webkit-calc(220px + 22px);
+  height: calc(220px + 22px);
+  margin: 40px auto;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-timeline__container .timeline-wrapper {
+    height: -webkit-calc(220px + 22px + 60px);
+    height: calc(220px + 22px + 60px);
+  }
+}
+
+.ex-timeline__container .timeline-wrapper:after {
+  content: '';
+  opacity: 0.6;
+  background: #FF8D00;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(0deg, #FF8D00 1%, rgba(63, 62, 69, 0.2) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #FF8D00), to(rgba(63, 62, 69, 0.2)));
+  background: -webkit-linear-gradient(top, #FF8D00 1%, rgba(63, 62, 69, 0.2) 100%);
+  background: linear-gradient(180deg, #FF8D00 1%, rgba(63, 62, 69, 0.2) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#FF8D00, endColorstr= rgba(63, 62, 69, 0.2) ,GradientType=0 );
+  /* IE6-9 */
+  height: 100%;
+  width: 4px;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 9px;
+}
+
+html[lang*='ar'] .ex-timeline__container .timeline-wrapper:after,
+html[class*='translated-rtl'] .ex-timeline__container .timeline-wrapper:after {
+  left: auto;
+  right: 9px;
+}
+
+.ex-timeline__container .timeline-wrapper__navigator {
+  padding-left: 10px;
+  width: 75px;
+}
+
+html[lang*='ar'] .ex-timeline__container .timeline-wrapper__navigator,
+html[class*='translated-rtl'] .ex-timeline__container .timeline-wrapper__navigator {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.ex-timeline__container .timeline-wrapper__navigator li {
+  color: #ffffff;
+  opacity: 0.3;
+  position: relative;
+  height: -webkit-calc(220px / 4);
+  height: calc(220px / 4);
+  font-size: 12px;
+  cursor: pointer;
+  padding-top: 2px;
+  padding-left: 20px;
+}
+
+html[lang*='ar'] .ex-timeline__container .timeline-wrapper__navigator li,
+html[class*='translated-rtl'] .ex-timeline__container .timeline-wrapper__navigator li {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+.ex-timeline__container .timeline-wrapper__navigator li.previous, .ex-timeline__container .timeline-wrapper__navigator li.selected {
+  opacity: 1;
+}
+
+.ex-timeline__container .timeline-wrapper__navigator li:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: none;
+  z-index: 1;
+  background-color: #ffffff;
+  border: 3px solid #FF8D00;
+  position: absolute;
+  top: 0;
+  left: -webkit-calc(1px - 7.5px);
+  left: calc(1px - 7.5px);
+}
+
+html[lang*='ar'] .ex-timeline__container .timeline-wrapper__navigator li:before,
+html[class*='translated-rtl'] .ex-timeline__container .timeline-wrapper__navigator li:before {
+  left: auto;
+  right: -webkit-calc(1px - 7.5px);
+  right: calc(1px - 7.5px);
+}
+
+.ex-timeline__container .timeline-wrapper__navigator li:hover {
+  opacity: 1;
+}
+
+.ex-timeline__container .timeline-wrapper__navigator li.selected {
+  padding-top: 4px;
+}
+
+.ex-timeline__container .timeline-wrapper__navigator li.selected, .ex-timeline__container .timeline-wrapper__navigator li.selected:hover {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.ex-timeline__container .timeline-wrapper__navigator li.selected:before, .ex-timeline__container .timeline-wrapper__navigator li.selected:hover:before {
+  display: block;
+  width: 22px;
+  height: 22px;
+  left: -webkit-calc(-11px);
+  left: calc(-11px);
+  background-color: #FF8D00;
+  border: 3px solid #ffffff;
+}
+
+html[lang*='ar'] .ex-timeline__container .timeline-wrapper__navigator li.selected:before,
+html[class*='translated-rtl'] .ex-timeline__container .timeline-wrapper__navigator li.selected:before, html[lang*='ar'] .ex-timeline__container .timeline-wrapper__navigator li.selected:hover:before,
+html[class*='translated-rtl'] .ex-timeline__container .timeline-wrapper__navigator li.selected:hover:before {
+  left: auto;
+  right: -webkit-calc(-11px);
+  right: calc(-11px);
+}
+
+.ex-timeline__container .timeline-wrapper__navigator li.previous:before {
+  display: block;
+}
+
+.ex-timeline__container .timeline-wrapper__content {
+  overflow: hidden;
+}
+
+.ex-timeline__container .timeline-wrapper__content .timeline-item {
+  height: 650px;
+}
+
+.ex-timeline__container .timeline-wrapper__content .timeline-item__content__label {
+  color: #ffffff;
+  font-size: 90px;
+  line-height: 90px;
+  margin-right: 48px;
+}
+
+html[lang*='ar'] .ex-timeline__container .timeline-wrapper__content .timeline-item__content__label,
+html[class*='translated-rtl'] .ex-timeline__container .timeline-wrapper__content .timeline-item__content__label {
+  margin-right: 0px;
+  margin-left: 48px;
+}
+
+.ex-timeline__container .timeline-wrapper__content .timeline-item__content__text {
+  color: #ffffff;
+}
+
+.ex-timeline__container__title-block {
+  margin-right: 70px;
+}
+
+html[lang*='ar'] .ex-timeline__container__title-block,
+html[class*='translated-rtl'] .ex-timeline__container__title-block {
+  margin-right: 0px;
+  margin-left: 70px;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  html[lang*='ar'] .ex-timeline__container__title-block,
+  html[class*='translated-rtl'] .ex-timeline__container__title-block {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-timeline__container__title-block {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-timeline__container__title-block {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.ex-timeline__nav {
+  color: #ffffff;
+}
+
+.ex-timeline__nav__button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  display: none;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+html[lang*='ar'] .ex-timeline__nav__button,
+html[class*='translated-rtl'] .ex-timeline__nav__button {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.ex-timeline__nav__button:hover {
+  background-color: #FF8D00;
+  border-color: transparent;
+}
+
+.ex-timeline__nav__button--disabled {
+  opacity: 0.3;
+  cursor: initial;
+  pointer-events: none;
+}
+
+.ex-timeline__nav__button:hover {
+  color: #ffffff;
+}
+
+.ex-timeline__image {
+  width: 40%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+html[lang*='ar'] .ex-timeline__image,
+html[class*='translated-rtl'] .ex-timeline__image {
+  right: auto;
+  left: 0;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-timeline__image {
+    width: 100%;
+  }
+}
+
+.ex-timeline__image div {
+  display: none;
+  background-size: cover;
+  background-position: center;
+}
+
+.ex-timeline__image img {
+  display: none;
+}
+
+.on-page-editor .ex-timeline__image img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.ex-timeline__image__pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: -180px;
+  width: 180px;
+  height: 100%;
+}
+
+html[lang*='ar'] .ex-timeline__image__pattern-overlay,
+html[class*='translated-rtl'] .ex-timeline__image__pattern-overlay {
+  left: auto;
+  right: -180px;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-timeline__image__pattern-overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: none;
+    width: 100%;
+    left: 0;
+  }
+  html[lang*='ar'] .ex-timeline__image__pattern-overlay,
+  html[class*='translated-rtl'] .ex-timeline__image__pattern-overlay {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-timeline__image:before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.ex-timeline--alt {
+  background-color: #F5F5F7;
+}
+
+.ex-timeline--alt.ex-timeline .ex-timeline__container .timeline-wrapper__navigator li {
+  color: #3F3E45;
+}
+
+.ex-timeline--alt.ex-timeline .ex-timeline__container .timeline-wrapper__navigator li:before {
+  background-color: #ffffff;
+  border-color: #FF8D00;
+}
+
+.ex-timeline--alt.ex-timeline .ex-timeline__container .timeline-wrapper__navigator li.selected, .ex-timeline--alt.ex-timeline .ex-timeline__container .timeline-wrapper__navigator li.selected:hover {
+  color: #3F3E45;
+}
+
+.ex-timeline--alt.ex-timeline .ex-timeline__container .timeline-wrapper__navigator li.selected:before, .ex-timeline--alt.ex-timeline .ex-timeline__container .timeline-wrapper__navigator li.selected:hover:before {
+  background-color: #FF8D00;
+  border-color: #ffffff;
+}
+
+.ex-timeline--alt.ex-timeline .ex-timeline__container .timeline-wrapper__content .timeline-item__content__label {
+  color: #FF8D00;
+}
+
+.ex-timeline--alt.ex-timeline .ex-timeline__container .timeline-wrapper__content .timeline-item__content__text {
+  color: #3F3E45;
+}
+
+.ex-timeline--alt.ex-timeline .ex-timeline__nav {
+  color: #3F3E45;
+}
+
+.ex-timeline--alt.ex-timeline .ex-timeline__nav__button {
+  color: #3F3E45;
+  border-color: #3F3E45;
+}
+
+.ex-timeline--alt.ex-timeline .ex-timeline__nav__button:hover {
+  background-color: #FF8D00;
+  border-color: transparent;
+}
+
+.ex-timeline--alt.ex-timeline .ex-timeline__nav__button:hover {
+  color: #ffffff;
+}

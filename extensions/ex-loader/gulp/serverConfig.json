@@ -1,0 +1,12 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-loader",
+        "version" : "1.0.0",
+        "owner" :  "rana abbassy"
+    },
+    "jsOrders"  : [
+        "lib/components-vivus.js" 
+    ]
+}

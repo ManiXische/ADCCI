@@ -1,0 +1,22 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+$mediagrid-filters-wrapper-border : 1px solid $grey-900 !default;
+$mediagrid-filters-button-container-bg:$grey-900 !default;
+$mediagrid-filters-button-border-color: color-opacity($black-color , 0.19) !default;
+$mediagrid-filters-button-bg-hover:$primary-color !default;
+$mediagrid-filters-button-color:$white-color !default;
+$mediagrid-filters-button-color-hover:$white-color !default;
+$mediagrid-filters-button-bg-active:$primary-color !default;
+$mediagrid-filters-button-color-active:$white-color !default;
+$mediagrid-grid-item-background:$white-color !default;
+$mediagrid-icon-color:$white-color !default;
+$mediagrid-grid-loadmore-mb: 50px!default;
+$mediagrid-grid-gutter: 2% !default;
+$mediagrid-grid-gutter-fraction : 0 !default;
+$mediagrid-grid-item-overlay-bg : $black-color !default;
+$mediagrid-grid-item-overlay-opacity : 0.5 !default;
+$mediagrid-grid-item-link-color : $white-color !default;
+$mediagrid-grid-item-link-color-hover : $primary-color !default;

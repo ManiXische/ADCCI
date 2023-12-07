@@ -1,0 +1,292 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+  // Your code goes here
+  &-card {
+    background-color: $ex-publications-card-background;
+    border: $ex-publications-card-border;
+    height: 100%;
+    padding: 20px;
+    &--img {
+      img {
+        width: 100%;
+        min-height: 164px;
+      }
+    }
+    &__content-wrapper{
+        height: 100%;
+        justify-content: space-between;
+    }
+    &--details {
+      div:first-child , p:first-child{
+        margin-top: 0;
+      }
+      &--caategory {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        @include ltr {
+          margin-right: 10px;
+        }
+
+        @include rtl {
+          margin-left: 10px;
+        }
+        &:last-child{
+          margin-bottom: 0;
+          @include ltr {
+            margin-right: 0;
+          }
+  
+          @include rtl {
+            margin-left: 0;
+          }
+        }
+        &__container{
+          display: flex;
+          align-items: flex-start;
+          flex-wrap: wrap;
+        }
+        &-title {
+          color: $ex-publications-card-details-caategory-title-color;
+          font-size: $ex-publications-card-details-caategory-title-fontSize;
+          @include ltr {
+            margin-left: $ex-publications-card-details-caategory-spaceBetweenTitleAndIcon;
+          }
+
+          @include rtl {
+            margin-right: $ex-publications-card-details-caategory-spaceBetweenTitleAndIcon;
+          }
+        }
+        img {
+          max-width: 24px;
+          max-height: 24px;
+          width: 100%;
+        }
+        i {
+          color: $ex-publications-card-details-caategory-icon-color;
+          font-size: $ex-publications-card-details-caategory-icon-fontSize;
+        }
+      }
+      &--heading {
+        margin-top: $ex-publications-card-details-heading-marginTop;
+        font-size: $ex-publications-card-details-heading-fontSize;
+        color: $ex-publications-card-details-heading-color;
+        line-height: 18px;
+      }
+      &--description {
+        margin-top: $ex-publications-card-details-description-marginTop;
+        font-size: $ex-publications-card-details-description-fontSize;
+        @include ltr {
+          line-height: $ex-publications-card-details-description-lineHeight-en;
+        }
+
+        @include rtl {
+          line-height: $ex-publications-card-details-description-lineHeight-ar;
+        }
+      }
+      &--data {
+        margin-top: $ex-publications-card-details-data-marginTop;
+
+        &_title {
+          font-size: $ex-publications-card-details-data-label-fontSize;
+        }
+        .types-value-container{
+          display: flex;
+          flex-wrap: wrap;
+        }
+        &_value {
+          font-size: $ex-publications-card-details-data-value-fontSize;
+          &::after{
+            
+            @include ltr {
+              padding-right: 5px;
+              content: ',';
+            }
+    
+            @include rtl {
+              padding-left: 5px;
+              content: '،';
+            }
+          }
+          &:last-child{
+            margin-bottom: 0;
+
+            &::after{
+              @include ltr {
+
+                content: '';
+              }
+      
+              @include rtl {
+
+                content: '';
+              }
+            }
+          }
+        }
+      }
+    } //End of Details
+    &--buttons {
+      margin-top: $ex-publications-card-buttons-marginTop;
+      &_button {
+        position: relative;
+        border: $ex-publications-card-buttons-button-border;
+        padding: $ex-publications-card-buttons-button-padding;
+        @include ltr {
+          margin-right: $ex-publications-card-buttons-button-margin;
+        }
+
+        @include rtl {
+          margin-left: $ex-publications-card-buttons-button-margin;
+        }
+        &--text {
+          font-size: $ex-publications-card-buttons-button-fontSize;
+          color: $ex-publications-card-buttons-button-color;
+          &:focus{
+            color: $ex-publications-card-buttons-button-color;
+          }
+          @include ltr {
+            line-height: $ex-publications-card-buttons-button-lineHeight-en;
+          }
+
+          @include rtl {
+            line-height: $ex-publications-card-buttons-button-lineHeight-ar;
+          }
+        }
+        &--arrow {
+          font-weight: 900;
+          font-size: 13px;
+          @include ltr {
+            margin-left: $ex-publications-card-buttons-button-arrow-spaceBetweenTitleAndIcon;
+          }
+
+          @include rtl {
+            margin-right: $ex-publications-card-buttons-button-arrow-spaceBetweenTitleAndIcon;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          background: $ex-publications-card-buttons-button-hover-background;
+          .ex-publications-v2-card--buttons_button--text,
+          .ex-publications-v2-card--buttons_button--arrow {
+            color: $ex-publications-card-buttons-button-hover-color;
+          }
+        }
+      }
+    }
+    &--dropdown {
+      margin-top: $ex-publications-card-buttons-marginTop;
+      z-index: 1;
+      select {
+        display: none;
+      }
+      .dropdown-link {
+        border: $ex-publications-card-lang-select-border;
+        padding: $ex-publications-card-lang-select-padding;
+        position: relative;
+      }
+      &--text {
+        font-size: $ex-publications-card-lang-select-fontSize;
+
+        @include ltr {
+          line-height: $ex-publications-card-lang-select-lineHeight-en;
+        }
+
+        @include rtl {
+          line-height: $ex-publications-card-lang-select-lineHeight-ar;
+        }
+        &::first-letter{
+          text-transform: uppercase;
+        }
+      }
+      &--arrow {
+        font-weight: 900;
+        font-size: 13px;
+      }
+      &:hover {
+        cursor: pointer;
+        .dropdown-link {
+          background: $ex-publications-card-buttons-button-hover-background;
+        }
+
+        .ex-publications-v2-card--dropdown--text,
+        .ex-publications-v2-card--dropdown--arrow {
+          color: $ex-publications-card-buttons-button-hover-color;
+        }
+      }
+
+      &--list {
+        position: absolute;
+        display: none;
+        overflow: auto;
+        border: $ex-publications-dropdown-listItem-border;
+        background: $ex-publications-dropdown-listItem-background;
+        max-height: $ex-publications-dropdown-listItem-maxHeight;
+        &-item {
+          padding: $ex-publications-dropdown-listItem-item-padding;
+          border: $ex-publications-dropdown-listItem-border;
+          &-text {
+            font-size: $ex-publications-dropdown-listItem-item-text-fontSize;
+            color: $ex-publications-dropdown-listItem-item-text-color;
+
+            @include ltr {
+              line-height: $ex-publications-dropdown-listItem-item-text-lineHeight-en;
+            }
+
+            @include rtl {
+              line-height: $ex-publications-dropdown-listItem-item-text-lineHeight-ar;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// a.ex-publications-v2-card--buttons_button--text{
+
+// }
+
+.#{$ProjectName} {
+  &-card {
+    &--background {
+        justify-content: flex-end;
+        min-height: $ex-publications-background-minHeight;
+         
+        @media #{$sm}{
+            height: 100%;
+            min-height: 0;
+        }
+
+      .#{$ProjectName} {
+        &-card {
+          &--img {
+            position: absolute;
+            top: 0;
+            @media #{$sm}{
+                position: relative;
+                width: $ex-publications-background-img-width;
+                height: auto;
+                margin: $ex-publications-background-img-margin;
+                
+            }
+          }
+          &__content-wrapper{
+            height: auto;
+            z-index: 1;
+            background: $ex-publications-background-contentWrapperBackgroundColor;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,210 @@
+/***************************************************************************************************
+Extension Name: ex-header 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-header 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-header 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.language-selector {
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  height: 30px;
+  min-width: 130px;
+}
+
+html:not([dir='rtl']) .language-selector, .translated-ltr .language-selector {
+  margin-left: 25px;
+}
+
+html[dir='rtl'] .language-selector, .translated-rtl .language-selector {
+  margin-right: 25px;
+}
+
+.language-selector .language-selector-select-item {
+  height: 30px;
+  min-width: 130px;
+  cursor: pointer;
+}
+
+.language-selector .language-selector-select-item > a {
+  width: 100%;
+  display: block;
+  position: relative;
+  color: #ffffff;
+  height: 30px;
+  line-height: 30px;
+}
+
+html:not([dir='rtl']) .language-selector .language-selector-select-item > a, .translated-ltr .language-selector .language-selector-select-item > a {
+  padding: 0px 30px 0px 15px;
+}
+
+html[dir='rtl'] .language-selector .language-selector-select-item > a, .translated-rtl .language-selector .language-selector-select-item > a {
+  padding: 0px 15px 0px 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  html[dir='rtl'] .language-selector .language-selector-select-item > a, .translated-rtl .language-selector .language-selector-select-item > a {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  html[dir='rtl'] .language-selector .language-selector-select-item > a, .translated-rtl .language-selector .language-selector-select-item > a {
+    font-size: 14px;
+  }
+}
+
+.language-selector .language-selector-select-item > a:hover {
+  text-decoration: none;
+}
+
+.language-selector .language-selector-select-item > a:before {
+  position: absolute;
+  right: 10px;
+  top: -webkit-calc(50% - 3px);
+  top: calc(50% - 3px);
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  content: '';
+  display: inline-block;
+  height: 6px;
+  vertical-align: top;
+  width: 6px;
+}
+
+html[dir='rtl'] .language-selector .language-selector-select-item > a:before, .translated-rtl .language-selector .language-selector-select-item > a:before {
+  left: 10px;
+  right: auto;
+}
+
+.language-selector .language-selector-select-item[data-language-code] a {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.language-selector .language-selector-select-item[data-language-code='ar'] a {
+  font-family: "NotoKufiArabic", Arial, sans-serif;
+}
+
+.language-selector .language-selector-select-item .language-selector-select-link {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 991px) {
+  .language-selector .language-selector-select-item .language-selector-select-link {
+    width: 220px;
+    overflow: hidden;
+  }
+  .language-selector .language-selector-select-item .language-selector-select-link:before {
+    z-index: 2;
+  }
+  .language-selector .language-selector-select-item .language-selector-select-link:after {
+    content: '';
+    display: block;
+    top: 0;
+    position: absolute;
+    background: #fff;
+    width: 28px;
+    height: 28px;
+    z-index: 1;
+  }
+  html:not([dir='rtl']) .language-selector .language-selector-select-item .language-selector-select-link:after, .translated-ltr .language-selector .language-selector-select-item .language-selector-select-link:after {
+    right: 0;
+    left: auto;
+  }
+  html[dir='rtl'] .language-selector .language-selector-select-item .language-selector-select-link:after, .translated-rtl .language-selector .language-selector-select-item .language-selector-select-link:after {
+    right: auto;
+    left: 0;
+  }
+}
+
+.language-selector .language-selector-item-container {
+  position: absolute;
+  top: 110%;
+  min-width: 100%;
+  z-index: 10;
+  background-color: #ffffff;
+  display: none;
+  left: 0;
+  right: 0;
+  padding: 0 5px;
+}
+
+.language-selector .language-selector-item:hover {
+  background-color: #F5F5F7;
+}
+
+.language-selector .language-selector-item a {
+  color: #3F3E45;
+  display: block;
+  padding: 10px;
+}
+
+.scrolled .language-selector,
+.language-selector--dark .language-selector {
+  background-color: transparent;
+  border-color: #3F3E45;
+}
+
+.scrolled .language-selector .language-selector-select-item > a,
+.language-selector--dark .language-selector .language-selector-select-item > a {
+  color: #3F3E45;
+}
+
+.scrolled .language-selector .language-selector-select-item > a:before,
+.language-selector--dark .language-selector .language-selector-select-item > a:before {
+  border-color: #3F3E45;
+}
+
+.scrolled .language-selector .language-selector-item-container,
+.language-selector--dark .language-selector .language-selector-item-container {
+  background-color: #D6D6D6;
+}
+
+.scrolled .language-selector .language-selector-item:hover,
+.language-selector--dark .language-selector .language-selector-item:hover {
+  background-color: #F5F5F7;
+}
+
+.scrolled .language-selector .language-selector-item a,
+.language-selector--dark .language-selector .language-selector-item a {
+  color: #3F3E45;
+}

@@ -1,0 +1,105 @@
+/***************************************************************************************************
+Extension Name: ex-authentication 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-authentication 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-authentication 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-authentication .login-card {
+  background-color: #F5F5F7;
+  font-size: 14px;
+}
+
+.ex-authentication .login-card__separator {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-authentication .login-card__separator {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-authentication .login-card__separator {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+.ex-authentication .login-card__separator__line {
+  background-color: #2B2849;
+  min-height: 85px;
+  width: 2px;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-authentication .login-card__separator__line {
+    width: 85px;
+    min-height: 2px;
+  }
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-authentication .login-card__separator__line {
+    width: 85px;
+    min-height: 2px;
+  }
+}
+
+.ex-authentication .login-card__separator span {
+  color: #2B2849;
+}
+
+.ex-authentication a {
+  color: #000;
+}
+
+.ex-authentication img {
+  max-width: 100%;
+}

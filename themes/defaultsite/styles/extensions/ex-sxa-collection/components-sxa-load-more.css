@@ -1,0 +1,120 @@
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-sxa-load-more {
+  margin-top: 50px;
+  width: auto;
+}
+
+.ex-sxa-load-more .component-content {
+  width: 100%;
+  border: none;
+  position: relative;
+  padding: 0;
+}
+
+.ex-sxa-load-more .component-content input {
+  height: 50px;
+  background-color: transparent;
+  width: 100%;
+  font-weight: bold;
+  padding-right: 40px;
+  border: none;
+}
+
+html[lang*='ar'] .ex-sxa-load-more .component-content input,
+html[class*='translated-rtl'] .ex-sxa-load-more .component-content input {
+  padding-left: 40px;
+  padding-right: 15px;
+}
+
+.ex-sxa-load-more .component-content span {
+  height: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+.ex-sxa-load-more .component-content span, .ex-sxa-load-more .component-content span::before {
+  pointer-events: none;
+}
+
+html[lang*='ar'] .ex-sxa-load-more .component-content span,
+html[class*='translated-rtl'] .ex-sxa-load-more .component-content span {
+  right: auto;
+  left: 15px;
+}

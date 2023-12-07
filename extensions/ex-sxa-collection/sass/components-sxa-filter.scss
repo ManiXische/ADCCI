@@ -1,0 +1,262 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.ex-sxa-filter {
+  &__title {
+    opacity: $sxa-filter-title-opacity;
+    font-size: $sxa-filter-title-size;
+    line-height: $sxa-filter-title-line-height;
+
+    color: $sxa-filter-title-color;
+    padding-bottom: $sxa-filter-padding-bottom;
+
+    @include rtl {
+      text-align: right;
+    }
+
+    @include ltr {
+      letter-spacing: $sxa-filter-title-letter-spacing;
+    }
+
+    @media #{$md} {
+      margin-top: $sxa-filter-margin-bottom-md;
+    }
+  }
+
+
+
+
+
+
+  &__input {
+    cursor: pointer;
+    position: relative;
+
+    .facet-heading {
+      display: none;
+    }
+
+    .dropdown-icon {
+      position: absolute;
+      top: $sxa-filter-border-width;
+      bottom: 0;
+      right: 10px;
+
+      @include rtl {
+        left: 10px;
+        right: auto;
+      }
+
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 35px;
+      height: calc(100% - #{($sxa-filter-border-width * 3) + 1px });
+      pointer-events: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: $sxa-filter-bg-color;
+    }
+
+    input {
+      width: $sxa-filter-inout-width;
+      height: $sxa-filter-input-height;
+      border-radius: $sxa-filter-border-raduis;
+      border: solid $sxa-filter-border-width $sxa-filter-border-color;
+      background-color: $sxa-filter-bg-color;
+      padding: $sxa-filter-input-padding;
+
+      -webkit-appearance: none;
+
+      &.startDate.hasDatepicker {
+        cursor: pointer;
+      }
+    }
+
+    .facet-dropdown-select {
+      width: $sxa-filter-inout-width;
+      height: $sxa-filter-input-height;
+      border-radius: $sxa-filter-border-raduis;
+      border: solid $sxa-filter-border-width $sxa-filter-border-color;
+      background-color: $sxa-filter-bg-color;
+      padding: $sxa-filter-input-padding;
+      -webkit-appearance: none;
+    }
+
+    select::-ms-expand {
+      display: none;
+    }
+
+
+
+
+    // --- 
+
+    .icon-delete-filled {
+      /*position: absolute;
+      z-index: 2;
+      top: 17px;
+    
+      right:47px;
+      @include rtl {
+        left: 47px;
+        right:auto;
+      }*/
+    }
+
+    .bottom-remove-filter {
+
+      width: 40px;
+      height: calc(100% - 2px);
+      display: inline-block;
+      position: absolute;
+      top: 1px;
+      z-index: 1;
+
+      @include ltr {
+        right: 45px;
+      }
+
+      @include rtl {
+        left: 45px;
+      }
+
+
+
+
+      button {
+        font-size: 0;
+      }
+
+      &,
+      &-custom {
+        position: absolute;
+        top: $sxa-filter-border-width + 1px;
+        width: 38px;
+        height: calc(100% - #{($sxa-filter-border-width * 3) + 1px });
+        padding: 0;
+
+        right: 45px;
+
+        @include rtl {
+          left: 45px;
+          right: auto;
+        }
+
+
+        button {
+          padding: 0;
+          background: $sxa-filter-select-input-bg;
+          position: relative;
+          height: 100%;
+          width: 100%;
+
+          i {
+            //position: absolute;
+            //top: 0;
+            //left: 0;
+          }
+        }
+      }
+
+      &-custom {
+        pointer-events: none;
+        z-index: 10;
+      }
+    }
+
+
+
+    .facet-dropdown-select {
+      height: $sxa-filter-select-input-height;
+      line-height: $sxa-filter-select-input-height;
+      border-radius: $sxa-filter-select-input-border-radius;
+      border: $sxa-filter-select-input-border;
+      background-color: $sxa-filter-select-input-bg;
+      width: $sxa-filter-select-input-width;
+      padding: $sxa-filter-select-input-y-padding $sxa-filter-select-input-x-padding;
+      direction: $sxa-filter-select-input-direction;
+      color: $sxa-filter-select-input-color;
+      padding-right: 50px;
+
+      @include rtl {
+        padding-left: 50px;
+        padding-right: $sxa-filter-select-input-x-padding;
+      }
+    }
+
+    &__icon-left {
+      top: $sxa-filter-icon-top-position;
+      pointer-events: none;
+
+      @include ltr {
+        left: $sxa-filter-icon-left-position;
+      }
+
+      @include rtl {
+        right: $sxa-filter-icon-left-position;
+      }
+    }
+
+    &__icon-right {
+      position: absolute;
+      top: $sxa-filter-icon-top-position;
+      pointer-events: none;
+
+      @include ltr {
+        right: $sxa-filter-icon-right-position;
+      }
+
+      @include rtl {
+        left: $sxa-filter-icon-right-position;
+      }
+    }
+  }
+}
+
+.ui-datepicker {
+  width: auto;
+
+  .ui-datepicker-title {
+    select {
+      cursor: pointer;
+    }
+  }
+
+  @include rtl {
+    width: 20em;
+  }
+}
+
+.ex-sxa-filter {
+  .ex-sxa-filter__input {
+
+    .bottom-remove-filter,
+    .bottom-remove-filter-custom {
+      display: none !important;
+
+    }
+
+  }
+
+  &.ex-sxa-filter-active {
+    .ex-sxa-filter__input {
+
+      .bottom-remove-filter,
+      .bottom-remove-filter-custom {
+        display: block !important;
+
+      }
+
+    }
+  }
+}

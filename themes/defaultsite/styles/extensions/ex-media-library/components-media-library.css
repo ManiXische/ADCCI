@@ -1,0 +1,128 @@
+/***************************************************************************************************
+Extension Name: ex-media-library 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-media-library 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-media-library 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-media-library 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-media-library a {
+  color: #000;
+}
+
+.ex-media-library__container {
+  height: 360px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ex-media-library__container__desc {
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #3F3E45;
+  width: 100%;
+  padding: 16px 20px 10px 20px;
+}
+
+html[lang*='en'] .ex-media-library__container__desc,
+html[class*='translated-ltr'] .ex-media-library__container__desc {
+  left: 0;
+}
+
+html[lang*='ar'] .ex-media-library__container__desc,
+html[class*='translated-rtl'] .ex-media-library__container__desc {
+  right: 0;
+}
+
+.ex-media-library__container__desc .album-name p {
+  font-size: 12px;
+}
+
+html[lang*='en'] .ex-media-library__container__desc .album-date,
+html[class*='translated-ltr'] .ex-media-library__container__desc .album-date {
+  margin-left: auto;
+}
+
+html[lang*='ar'] .ex-media-library__container__desc .album-date,
+html[class*='translated-rtl'] .ex-media-library__container__desc .album-date {
+  margin-right: auto;
+}
+
+.ex-media-library__container__desc .album-date p {
+  font-size: 12px;
+}
+
+.ex-media-library__container .icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.ex-media-library__container .icon i {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.ex-media-library:hover .icon {
+  background-color: #FF8D00;
+}
+
+.ex-media-library-feature-video__img {
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ex-media-library-feature-video__img .icon .fas {
+  font-size: 5rem;
+  color: #ffffff;
+}
+
+.ex-media-library-feature-video__content {
+  background-color: #F5F5F7;
+  height: 500px;
+  position: relative;
+}
+
+.ex-media-library-feature-video__content > p {
+  overflow: hidden;
+  height: 100%;
+}

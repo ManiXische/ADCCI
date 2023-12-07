@@ -1,0 +1,144 @@
+
+$ex-sitecore-form-title-font-size: 36px !default;
+$ex-sitecore-form-title-font-weight: 900 !default;
+$ex-sitecore-form-title-line-height: 1.33 !default;
+$ex-sitecore-form-title-color: $black-color !default;
+$ex-sitecore-form-title-letter-spacing: normal !default;
+
+$ex-sitecore-form-label-opacity: 0.56 !default;
+$ex-sitecore-form-label-font-size: 12px !default;
+$ex-sitecore-form-label-normal-font-size : 14px !default;
+$ex-sitecore-form-label-lineheight :24px !default;
+$ex-sitecore-form-label-margin-bottom:2px !default;
+$ex-sitecore-form-label-color:$black-color !default;
+$ex-sitecore-form-label-font-weight :normal !default; 
+$ex-sitecore-form-label-transform : uppercase !default;
+$ex-sitecore-form-label-letter-spacing: 1.09px !default;
+$ex-sitecore-form-label-required-asterisk-color :$danger-color !default;
+$ex-sitecore-iputs-color:$black-color !default;
+$ex-sitecore-form-input-height: 40px !default;
+$ex-sitecore-form-input-padding:10px !default;
+$ex-sitecore-form-textarea-height: 135px !default;
+$ex-sitecore-form-inputs-border-raduis: 2px !default;
+$ex-sitecore-textarea-exceeded-color : $danger-color !default;
+$ex-sitecore-form-input-focus : 1px solid $black-color !default;
+$ex-sitecore-form-input-hover : 1px solid $black-color !default;
+$ex-sitecore-form-input-bg: $white-color !default;
+$ex-sitecore-form-input-border-color: $grey-500 !default;
+$ex-sitecore-form-input-border-width : 1px !default;
+$ex-sitecore-form-text-color:$grey-500;
+
+$ex-sitecore-form-input-disabled-color : $grey-400 !default;
+$ex-sitecore-form-input-disabled-border-color : $grey-400 !default;
+$ex-sitecore-form-input-disabled-bg-color : $grey-100 !default;
+
+$ex-sitecore-form-input-border-color: $grey-200 !default;
+$ex-sitecore-form-valid-input-bg: $white-color  !default;
+
+$ex-sitecore-form-invalid-input-border:solid 1px $danger-color!default;
+$ex-sitecore-form-invalid-input-bg: $white-color  !default;
+$ex-sitecore-form-validation-error-msg-color:$danger-color !default;
+$ex-sitecore-form-validation-color: $danger-color !default;
+$ex-sitecore-form-validation-margin:0.5rem 0 0 0 !default;
+
+
+$ex-sitecore-form-custom-dropdown-color: $grey-500 !default;
+$ex-sitecore-form-custom-dropdown-items-color: $black-color !default;
+$ex-sitecore-form-custom-dropdown-items-bg: $white-color !default;
+$ex-sitecore-form-custom-dropdown-items-shadow: $grey-200 !default;
+$ex-sitecore-form-custom-dropdown-border: $black-color !default;
+$ex-sitecore-form-custom-dropdown-disabled-item-color: $grey-200 !default;
+$ex-sitecore-form-custom-dropdown-hasvalue-item-color: $black-color !default;
+$ex-sitecore-form-dropdown-arrow-color: $black-color !default;
+$ex-sitecore-form-dropdown-arrow-position-right:15px !default;
+$ex-sitecore-form-dropdown-arrow-position-top: 15px !default;
+$ex-sitecore-form-dropdown-arrow-position-bottom:-36px !default;
+$ex-sitecore-form-select-arrow-bg:$white-color !default;
+$ex-sitecore-form-select-right-padding : 40px !default;
+$ex-sitecore-form-select-arrow-border-color:$grey-100 !default;
+$ex-sitecore-form-input-lefticon-width: 50px !default;
+$ex-sitecore-form-input-lefticon-bg : $grey-100 !default;
+$ex-sitecore-form-input-lefticon-font-size : 18px !default;
+$ex-sitecore-form-checkbox-label-color :  $white-color !default;
+$ex-sitecore-form-checkbox-dark-label-bg :$white-color !default;
+$ex-sitecore-form-checkbox-dark-checked-label-bg : $black-color  !default;
+$ex-sitecore-form-checkbox-dark-label-border :$black-color !default;
+$ex-sitecore-form-checkbox-dark-label-dark-color : $grey-900 !default;
+$ex-sitecore-form-checkbox-border : 3px solid  $primary-color5 !default;
+$ex-sitecore-form-checkbox-dark-border :  3px solid  $white-color !default;
+$ex-sitecore-form-checkbox-size:20px !default;
+$ex-sitecore-form-checkbox-border-raduis:4px !default;
+$ex-sitecore-form-checkbox-box-shadow:inset 0px 1px 1px color-opacity($black-color , 0.5), 0px 1px 0px color-opacity($white-color , 0.4) !default;
+$ex-sitecore-form-input-lefticon-padding:$ex-sitecore-form-input-padding + $ex-sitecore-form-input-lefticon-width;
+
+
+$ex-sitecore-form-radiobox-position: relative !default;
+$ex-sitecore-form-radiobox-padding-left: 30px !default;
+$ex-sitecore-form-radiobox-padding-top: 3px !default;
+$ex-sitecore-form-radiobox-margin-bottom: 25px !default;
+$ex-sitecore-form-radiobox-dimention:20px !default;
+// $ex-sitecore-form-radiobox-box-shadow:inset 0px 1px 1px color-opacity(#000 , 0.5), 0px 1px 0px color-opacity(#fff , 0.4) !default;
+$ex-sitecore-form-radiobox-label-font-size: 16px !default;
+$ex-sitecore-form-radiobox-label-cursor: pointer !default;
+
+$ex-sitecore-form-radiobox-label-after-content: "" !default;
+$ex-sitecore-form-radiobox-label-after-height: 22px !default;
+$ex-sitecore-form-radiobox-label-after-width: 22px !default;
+$ex-sitecore-form-radiobox-label-after-border: 1px solid $black-color !default;
+$ex-sitecore-form-radiobox-label-after-background-color: transparent !default;
+$ex-sitecore-form-radiobox-label-after-dark-border: 1px solid $white-color !default;
+$ex-sitecore-form-radiobox-label-after-dark-background-color: transparent !default;
+$ex-sitecore-form-radiobox-label-after-position: absolute !default;
+$ex-sitecore-form-radiobox-label-after-left: -25px !default;
+$ex-sitecore-form-radiobox-label-after-top: 0 !default;
+$ex-sitecore-form-radiobox-label-after-border-radius: 50% !default;
+
+
+$ex-sitecore-form-radiobox-label-border-width : 1px !default;
+$ex-sitecore-form-radiobox-label-color :  $white-color !default;
+$ex-sitecore-form-checkbox-label-dark-color :$black-color !default;
+$ex-sitecore-form-radiobox-label-border-color : $grey-200 !default;
+$ex-sitecore-form-radiobox-dark-label-border-color :$white-color !default;
+$ex-sitecore-form-radiobox-label-background-color : $black-color !default;
+$ex-sitecore-form-radiobox-label-background-dark-color : $white-color !default;
+$form-dropzone-file-bg:$grey-100 !default;
+$form-dropzone-file-border-color:$grey-300 !default;
+$form-dropzone-file-color:$grey-600 !default;
+
+$dz-image-linear-gradient-color2:$grey-200 !default;
+$dz-image-linear-gradient-color1:$grey-100 !default;
+$dz-upload-bg:$grey-500 !default;
+$dz-upload-linear-gradient-color1:$grey-400 !default;
+$dz-upload-linear-gradient-color2:$grey-600 !default;
+$dz-image-dz-image-preview-bg:$white-color !default;
+$dz-image-dz-remove-color:$white-color !default;
+$dz-image-dz-ext-color:$white-color !default;
+$dz-image-dz-size-color:$white-color !default;
+$dz-image-dz-ext-bg:$black-color !default;
+$dz-image-dz-details-color:$white-color !default;
+$dz-image-dz-dz-progress-color:$white-color !default;
+$dz-image-dz-details-text-shadow:$black-color !default;
+$dz-success-mark-color:$white-color !default;
+$dropzone-preview-dz-details-color:$black-color !default;
+$form-dropzone-file-pdf: $danger-color !default;
+$form-dropzone-file-xlsx: $success-color !default;
+$form-dropzone-file-zip : $primary-color3 !default;
+$form-dropzone-file-docx : $secondary-color2 !default;
+$form-dropzone-file-txt : $secondary-color !default;
+$form-dropzone-file-ppsx :$primary-color2 !default;
+//calender
+
+$ex-sitecore-calender-background-color:$white-color !default;
+$ex-sitecore-calender-nav-hover-border:none !default;
+$ex-sitecore-calender-text-color:$black-color !default;
+$ex-sitecore-calender-border-radius:4px !default;
+$ex-sitecore-calender-font-size:12px !default;
+$ex-sitecore-calende-boxshadow:0px 0px 8px 0px color-opacity($black-color,0.56) !default;
+$ex-sitecore-calender-disabled-link-color: $grey-600 !default;
+$ex-sitecore-calender-nav-hover-color:$white-color !default;
+$ex-sitecore-calender-month-header-bg-color:$white-color !default;
+$ex-sitecore-calender-month-header-color:$grey-600 !default;
+
+
+$dz-ext-overlay-bg: $black-color !default;
+$dz-ext-overlay-color: $white-color !default;

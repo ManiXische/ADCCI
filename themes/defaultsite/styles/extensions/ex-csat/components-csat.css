@@ -1,0 +1,354 @@
+/***************************************************************************************************
+Extension Name: ex-csat 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-csat 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-csat 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-csat 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ui-lib-global-csat-feedback-js-modal-open {
+  /* FORM RESULT: SUCCESS OR ERROR */
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button {
+  color: #ffffff;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button:hover {
+  color: #ffffff;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_primary {
+  background-color: #0081C6;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_primary:hover {
+  background-color: #1DA3EB;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_primary:active,
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_primary.ui-lib-global-csat-feedback-js-button_active {
+  background-color: #006195;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_secondary {
+  color: #3F3E45;
+  border-color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_secondary:hover {
+  background-color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content {
+  color: #000;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:hover {
+  border-color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:focus,
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:active {
+  border-color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-webkit-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-moz-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:-ms-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-ms-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-webkit-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:-ms-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-webkit-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-moz-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:-ms-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-ms-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__content
+.ui-lib-global-csat-feedback-js-label {
+  color: #89888C;
+}
+
+@media only screen and (max-width: 767px) {
+  .ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-content-container {
+    top: -webkit-calc(50% + 45px);
+    top: calc(50% + 45px);
+    max-height: -webkit-calc(100% - 98px);
+    max-height: calc(100% - 98px);
+  }
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__close-icon path {
+  fill: #b2b2b5;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__close-icon:hover path {
+  fill: #0081C6;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__title {
+  color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-title {
+  color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__result-title {
+  color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__result-description {
+  color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-title {
+  color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-star_selected g {
+  stroke: #0081C6;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-star.ui-lib-global-csat-feedback-js-form__rate-item-star_hovered
+g {
+  stroke: #0081C6;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-star.ui-lib-global-csat-feedback-js-form__rate-item-star_hovered
+path {
+  fill: #0081C6;
+}
+
+@media only screen and (max-width: 767px) {
+  .ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-buttons-link {
+    display: none;
+  }
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__emotions-button svg path:first-child {
+  fill: #1DA3EB;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__emotions-button:nth-child(1)
+svg
+path:nth-child(2) {
+  fill: #0081C6;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__emotions-button:nth-child(2)
+svg
+path:nth-child(2) {
+  fill: #1DA3EB;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__emotions-button:nth-child(3)
+svg
+path:nth-child(2) {
+  fill: #006195;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-star path {
+  fill: #D6D6D6;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-star_selected path {
+  fill: #0081C6;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_primary
+.ui-lib-global-csat-feedback-js-button__icon {
+  fill: #ffffff;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_secondary
+.ui-lib-global-csat-feedback-js-button__icon {
+  fill: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_secondary:hover
+.ui-lib-global-csat-feedback-js-button__icon {
+  fill: #ffffff;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_secondary:hover {
+  color: #ffffff;
+}
+
+/* Open Button */
+body .ui-lib-global-csat-feedback-js-open-button {
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+  background-image: none;
+  background: #0081C6;
+}
+
+body .ui-lib-global-csat-feedback-js-open-button_default {
+  top: -webkit-calc(50% - 25px);
+  top: calc(50% - 25px);
+  border-radius: 8px;
+  padding: 0;
+}
+
+html[lang*='en'] body .ui-lib-global-csat-feedback-js-open-button_default,
+html[class*='translated-ltr'] body .ui-lib-global-csat-feedback-js-open-button_default {
+  right: 5px;
+}
+
+html[lang*='ar'] body .ui-lib-global-csat-feedback-js-open-button_default,
+html[class*='translated-rtl'] body .ui-lib-global-csat-feedback-js-open-button_default {
+  left: 5px;
+}
+
+body .ui-lib-global-csat-feedback-js-open-button.ui-lib-global-csat-feedback-js-open-button_default
+.open-button-elements-container {
+  width: 100%;
+  height: 100%;
+  background: #1DA3EB;
+}
+
+.ui-lib-global-csat-feedback-js-open-button.ui-lib-global-csat-feedback-js-open-button_default
+.open-button-elements-container:hover {
+  background: #0081C6;
+}
+
+.open-button-feedback-label {
+  height: 100%;
+  width: 0px;
+  padding: 14px 0;
+  font-weight: 900;
+  color: #ffffff;
+  display: none;
+  white-space: nowrap;
+}
+
+html[lang*='ar'] .open-button-feedback-label,
+html[class*='translated-rtl'] .open-button-feedback-label {
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.ui-lib-global-csat-feedback-js-form__rate-item-title {
+  text-transform: none;
+}
+
+body .ui-lib-global-csat-feedback-js-open-button:hover {
+  overflow: hidden;
+  background-image: none;
+  width: 136px;
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+}
+
+body .ui-lib-global-csat-feedback-js-open-button:hover .open-button-feedback-label {
+  display: block;
+}
+
+html[lang*='ar'] body .ui-lib-global-csat-feedback-js-open-button:hover .open-button-feedback-label,
+html[class*='translated-rtl'] body .ui-lib-global-csat-feedback-js-open-button:hover .open-button-feedback-label {
+  line-height: 20px;
+  font-size: 14px;
+}
+
+body .ui-lib-global-csat-feedback-js-open-button:hover .open-button-elements-container {
+  border-radius: 29px 0px 0px 8px;
+}
+
+html[lang*='ar'] body .ui-lib-global-csat-feedback-js-open-button:hover .open-button-elements-container,
+html[class*='translated-rtl'] body .ui-lib-global-csat-feedback-js-open-button:hover .open-button-elements-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+body .ui-lib-global-csat-feedback-js-open-button:active {
+  background-image: none;
+}

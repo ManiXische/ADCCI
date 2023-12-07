@@ -1,0 +1,259 @@
+/***************************************************************************************************
+Extension Name: ex-identity-card 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-identity-card 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-identity-card 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-identity-card {
+  background: #ffffff;
+  border: 1px solid #D6D6D6;
+  overflow: hidden;
+}
+
+.ex-identity-card:hover {
+  overflow: visible;
+}
+
+.ex-identity-card__title {
+  color: #89888C;
+}
+
+.ex-identity-card__container {
+  height: 175px;
+}
+
+.ex-identity-card__container__partners-img img {
+  max-width: 100%;
+}
+
+.ex-identity-card__hover-container {
+  background: #ffffff;
+  border: 1px solid #D6D6D6;
+  top: 100%;
+  visibility: hidden;
+  opacity: 1;
+  padding: 25px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: -webkit-calc(100% - 30px);
+  width: calc(100% - 30px);
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ex-identity-card__hover-container__content__icon-image img {
+  max-width: 100%;
+}
+
+.ex-identity-card__hover-container__content__contact-section .lbl {
+  color: #17626C;
+}
+
+.ex-identity-card__hover-container__content__contact-section__row1 .phone {
+  margin-right: 20px;
+}
+
+html[lang*='ar'] .ex-identity-card__hover-container__content__contact-section__row1 .phone,
+html[class*='translated-rtl'] .ex-identity-card__hover-container__content__contact-section__row1 .phone {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.ex-identity-card__hover-container__content__contact-section__row2 .mail {
+  margin-right: 20px;
+}
+
+html[lang*='ar'] .ex-identity-card__hover-container__content__contact-section__row2 .mail,
+html[class*='translated-rtl'] .ex-identity-card__hover-container__content__contact-section__row2 .mail {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.ex-identity-card:hover .ex-identity-card__hover-container {
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  background: #ffffff;
+  box-shadow: 0, 6px, 15px 0, rgba(208, 208, 208, 0.5);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  pointer-events: visible;
+}
+
+.ex-identity-card a,
+.ex-identity-card a:hover,
+.ex-identity-card a:focus {
+  color: #3F51B5;
+}
+
+.ex-identity-card--double-expand {
+  height: 255px;
+  overflow: hidden;
+  position: relative;
+  background-position-x: left;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-color: #ffffff;
+}
+
+.ex-identity-card--double-expand__initial {
+  height: 255px;
+  background-color: #ffffff;
+  z-index: 1;
+  position: relative;
+}
+
+.ex-identity-card--double-expand__initial__title .card-title-large {
+  display: none;
+}
+
+.ex-identity-card--double-expand__pattern {
+  position: absolute;
+  width: 75%;
+  height: 150px;
+  pointer-events: none;
+  left: 0;
+  background-position: bottom left;
+  bottom: 0px;
+  z-index: 0;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+html[lang*='ar'] .ex-identity-card--double-expand__pattern,
+html[class*='translated-rtl'] .ex-identity-card--double-expand__pattern {
+  left: auto;
+  right: 0;
+  background-position: bottom right;
+}
+
+.ex-identity-card--double-expand__link {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.ex-identity-card--double-expand--clone .ex-identity-card--double-expand__initial__desc {
+  font-weight: 700;
+}
+
+.ex-identity-card--double-expand--face .ex-identity-card--double-expand__eventual {
+  opacity: 1;
+  line-height: 23px;
+}
+
+.ex-identity-card--double-expand--face .ex-identity-card--double-expand__initial__desc p {
+  font-weight: 700;
+}
+
+.ex-identity-card--double-expand__initial__img {
+  height: 60px;
+}
+
+.ex-identity-card--double-expand__initial__img img {
+  max-height: 100%;
+}
+
+.ex-identity-card--double-expand__eventual {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 330px;
+  width: 100%;
+  padding: 1.5rem;
+  opacity: 0;
+  bottom: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+.on-page-editor .ex-identity-card--double-expand {
+  width: 25%;
+  margin-bottom: 20px;
+}
+
+.ex-identity-card__overlay {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(159, 159, 162, 0.5);
+  z-index: 20000;
+  opacity: 1;
+  opacity: 1;
+  top: 0;
+  left: 0;
+}
+
+.slick-slide {
+  position: relative;
+}
+
+.on-page-editor .ex-identity-card--double-expand {
+  height: 565px;
+}
+
+.on-page-editor .ex-identity-card--double-expand__eventual {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 330px;
+  width: 100%;
+  padding: 1.5rem;
+  bottom: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}

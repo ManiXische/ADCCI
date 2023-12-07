@@ -1,0 +1,216 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+
+    &__header{
+        @media #{$sm}{
+            flex-direction: column;
+        }
+
+        &__title{
+            @media #{$sm}{
+                margin-bottom: 20px;
+            }
+        }
+        &__filters{
+            height: 40px;
+            border: $mediagrid-filters-wrapper-border;
+            overflow: hidden;
+            background: $mediagrid-filters-button-container-bg;
+            .filter-button{
+                min-width: 50px;
+                outline: 0;
+                border: none;
+                padding: 0;
+                background-color: transparent;
+                cursor: pointer;
+                background-color: transparent;
+                border-right: 1px solid $mediagrid-filters-button-border-color;
+
+                @include rtl{
+                    border-left: 1px solid $mediagrid-filters-button-border-color;
+                    border-right: none;
+                }
+
+                color: $mediagrid-filters-button-color;
+                
+                &:last-child{
+                    border: none;
+                    @include rtl{
+                        border: none;
+                    }
+                }
+                &:hover{
+                    outline: 0;
+                    color: $mediagrid-filters-button-color-hover;
+                    span, i{
+                        background-color: $mediagrid-filters-button-bg-hover;
+                    }
+                }
+                span, i{
+                    display: inline-block;
+                    width: 40px;
+                    height: 30px;
+                    margin: 3px 3px 3px 3px;
+                    font-weight: bold;
+                    line-height: 30px;
+                    font-size: 16px;
+                    border-radius: 2px;
+                }
+                &--active{
+                    font-weight: bold;
+                    color: $mediagrid-filters-button-color-active;   
+                    span,i{
+                        background: $mediagrid-filters-button-bg-active;
+                    } 
+                }
+            }
+        }
+    }
+
+    &__body{
+        $gridBody : &;
+        // column-count:3;
+        // column-gap: 1em;
+        .media-grid-item{
+            $mediaGridItem : &;
+
+            background-color: $mediagrid-grid-item-background;
+            display: inline-block;
+        
+          
+
+            // width: calc(100% /3 - 10px);
+            width: (100% / 3) ; //32.66666666666%;
+            @media #{$md} {
+                width:  (100% / 2);//49.333333333%;
+            }
+            @media #{$sm} {
+                width: 100%;
+            }
+
+            @at-root{
+                #{$gridBody}--w-gutter {
+                    &#{$mediaGridItem}{
+                        margin: 0 0 $mediagrid-grid-gutter;
+
+                        width: #{(100%  - ($mediagrid-grid-gutter * 2)) / 3} ; //32.66666666666%;
+                        @media #{$md} {
+                            width:  #{(100%  - $mediagrid-grid-gutter) / 2} ;//49.333333333%;
+                        }
+                        @media #{$sm} {
+                            width: 100%;
+                        }
+
+                    }
+                }
+            }
+
+         
+            img{
+                $imgelement : &; 
+                width:100%;
+
+                @at-root {
+                    .high-contrast{
+                      #{$imgelement}{
+                        -webkit-filter: grayscale(1) invert(100%) !important;
+                        filter: grayscale(1) invert(100%) !important;
+                      }
+                    }
+                  }
+            }
+
+           
+            &__icon{
+                position: absolute;
+                top:0;
+                right:0;
+                left:0;
+                bottom:0;
+                margin:auto;
+                width:40px;
+                height:50px;
+                font-size: 50px;
+                cursor: pointer;
+                opacity: 0.7;
+                z-index: 1;
+                // color:$mediagrid-icon-color;
+            }
+
+            a{
+                color : $mediagrid-grid-item-link-color;
+            }
+            &:after{
+                content: "";
+                background: $mediagrid-grid-item-overlay-bg;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                display: block;
+                height: 100%;
+                z-index: 0;
+                opacity: $mediagrid-grid-item-overlay-opacity;
+            }
+            &:hover{
+                & , a , #{$mediaGridItem}__icon { 
+                    &:hover , &:focus{
+                        color : $mediagrid-grid-item-link-color-hover;
+                    }
+                }
+                &:after{
+                    display: none;
+                }
+                
+            }
+            // &--video{
+            //     #{$mediaGridItem}__icon{
+            //         display: block;
+            //     }
+            // }
+
+        }
+        // default gutter
+        &__gutter{
+            width:0%; 
+        }
+        &--w-gutter{
+            #{$gridBody}__gutter{
+                width: $mediagrid-grid-gutter; 
+            }
+        }
+        
+    }
+
+    &__message{
+        display: none;
+    }
+    &--without-filter{
+        .#{$ProjectName}__header{
+            &__filters{
+                display: none !important;
+            }
+        }
+    }
+    &--without-header{
+        .#{$ProjectName}__header{
+            display: none !important;
+        }
+    }
+
+    &__loadmore{
+        margin-bottom: $mediagrid-grid-loadmore-mb;
+    }
+}
+
+
+

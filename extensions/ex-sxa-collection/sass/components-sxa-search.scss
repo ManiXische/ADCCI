@@ -1,0 +1,112 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.ex-sxa-search  {
+  .component-content {
+    display: flex;
+    flex-direction: column;
+
+    @include rtl{
+      text-align: right;
+    }
+    
+    label {
+      opacity: $sxa-search-label-opacity;
+      font-size: $sxa-search-label-size;
+      line-height: $sxa-search-label-line-height;
+      letter-spacing: $sxa-search-label-letter-spacing;
+      color: $sxa-search-label-color;
+      margin-bottom: $sxa-search-label-margin-bottom;
+
+      @include rtl{
+        letter-spacing: 0;
+      }
+    }
+    .twitter-typeahead {
+      width: 100%;
+    }
+
+    .search-box {
+      &-input.tt-input {
+        width: 100%;
+        height: $sxa-search-box-height;
+        border-radius: $sxa-search-box-broder-radius;
+        border: $sxa-search-border-style $sxa-search-border-color;
+        background-color: $sxa-search-background-color !important;
+        padding: $sxa-search-box-padding;
+        direction: inherit;
+        color:$tt-input-color;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      .tt-hint {
+        display: none;
+      }
+
+      &-button,
+      &-button-with-redirect {
+        position: absolute;
+        bottom: 8px;
+        right: 0;
+        height: $sxa-search-box-btn-height;
+        right: 1px;
+        color:$sxa-search-box-btn-color;
+        width: $sxa-search-box-btn-width;
+        background-color: $sxa-search-background-color;
+        @include rtl {
+          left: 1px;
+          right:auto;
+        }
+        &:before {
+          visibility: visible;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: $sxa-search-button-before-width;
+          height: $sxa-search-button-before-height;
+          font-size: $sxa-search-button-before-font-size;
+        }
+      }
+    }
+  }
+  .tt-menu.tt-open {
+    border: none;
+    @include border-radius($sxa-search-box-broder-radius);
+    @include box-shadow(0 4px 5px $sxa-search-background-color);
+    background: $sxa-search-background-color;
+    width: 100%;
+    border: solid 1px $sxa-search-border-color;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .tt-dataset {
+    .tt-suggestion {
+      & , a {
+        padding:$sxa-search-suggestionlink-padding;
+        cursor: pointer;
+        overflow: hidden;
+        color: $sxa-search-suggestionlink-color;
+        width: 100%;
+        &:hover {
+          color: $sxa-search-suggestionlink-hover-color;
+        }
+      }
+      &:hover , &.tt-cursor{
+          background-color:$sxa-search-hover-background-color;
+      }
+      
+    }
+  }
+}

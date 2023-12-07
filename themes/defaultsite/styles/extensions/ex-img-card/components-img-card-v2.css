@@ -1,0 +1,280 @@
+/***************************************************************************************************
+Extension Name: ex-img-card 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-img-card 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-img-card 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-img-card 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-img-card-v2 {
+  overflow: hidden;
+  height: 380px;
+}
+
+html[lang*='ar'] .ex-img-card-v2,
+html[class*='translated-rtl'] .ex-img-card-v2 {
+  text-align: right;
+}
+
+.ex-img-card-v2--shadow {
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.07);
+}
+
+.ex-img-card-v2__container {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ex-img-card-v2__container__content {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: -webkit-calc(100% - 50px);
+  width: calc(100% - 50px);
+  bottom: 0;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.ex-img-card-v2__container__content:before {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  content: '';
+  background: #FF8D00;
+  width: 35%;
+  position: absolute;
+  top: -5px;
+  height: 5px;
+}
+
+html[lang*='en'] .ex-img-card-v2__container__content:before,
+html[class*='translated-ltr'] .ex-img-card-v2__container__content:before {
+  left: 0;
+}
+
+html[lang*='ar'] .ex-img-card-v2__container__content:before,
+html[class*='translated-rtl'] .ex-img-card-v2__container__content:before {
+  right: 0;
+  left: auto;
+}
+
+.ex-img-card-v2__container__content .imgcard-title {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-left: -webkit-calc(15px * 2);
+  margin-left: calc(15px * 2);
+  color: #3F3E45;
+  overflow: hidden;
+}
+
+html[lang*='ar'] .ex-img-card-v2__container__content .imgcard-title,
+html[class*='translated-rtl'] .ex-img-card-v2__container__content .imgcard-title {
+  margin-left: 15px;
+  margin-right: -webkit-calc(15px * 2);
+  margin-right: calc(15px * 2);
+}
+
+.ex-img-card-v2__container__content .imgcard-description {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-left: -webkit-calc(15px * 2);
+  margin-left: calc(15px * 2);
+  display: none;
+}
+
+html[lang*='ar'] .ex-img-card-v2__container__content .imgcard-description,
+html[class*='translated-rtl'] .ex-img-card-v2__container__content .imgcard-description {
+  margin-left: 15px;
+  margin-right: -webkit-calc(15px * 2);
+  margin-right: calc(15px * 2);
+}
+
+.ex-img-card-v2__container__content .imgcard-link {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-left: -webkit-calc(15px * 2);
+  margin-left: calc(15px * 2);
+  color: #9F9FA2;
+}
+
+html[lang*='ar'] .ex-img-card-v2__container__content .imgcard-link,
+html[class*='translated-rtl'] .ex-img-card-v2__container__content .imgcard-link {
+  margin-left: 15px;
+  margin-right: -webkit-calc(15px * 2);
+  margin-right: calc(15px * 2);
+}
+
+.ex-img-card-v2__container__content .imgcard-link:hover {
+  color: #3F3E45;
+}
+
+.ex-img-card-v2__container__content .imgcard-link i {
+  font-size: 13px;
+}
+
+html[lang*='en'] .ex-img-card-v2__container__content .imgcard-link i,
+html[class*='translated-ltr'] .ex-img-card-v2__container__content .imgcard-link i {
+  padding-right: 10px;
+}
+
+html[lang*='ar'] .ex-img-card-v2__container__content .imgcard-link i,
+html[class*='translated-rtl'] .ex-img-card-v2__container__content .imgcard-link i {
+  padding-right: 10px;
+}
+
+.ex-img-card-v2__container__content .imgcard-link span {
+  font-size: 12px;
+  line-height: -webkit-calc(12px + 2px);
+  line-height: calc(12px + 2px);
+  text-transform: uppercase;
+}
+
+html[lang*='en'] .ex-img-card-v2__container__content--border-radius,
+html[class*='translated-ltr'] .ex-img-card-v2__container__content--border-radius {
+  border-radius: 10px 0px 0px 0px;
+}
+
+html[lang*='ar'] .ex-img-card-v2__container__content--border-radius,
+html[class*='translated-rtl'] .ex-img-card-v2__container__content--border-radius {
+  border-radius: 10px 0px 0px 0px;
+}
+
+html[lang*='en'] .ex-img-card-v2__container__content--switch,
+html[class*='translated-ltr'] .ex-img-card-v2__container__content--switch {
+  right: -13%;
+  left: auto;
+}
+
+html[lang*='ar'] .ex-img-card-v2__container__content--switch,
+html[class*='translated-rtl'] .ex-img-card-v2__container__content--switch {
+  left: -13%;
+  right: auto;
+}
+
+html[lang*='en'] .ex-img-card-v2__container__content--switch .imgcard-title,
+html[class*='translated-ltr'] .ex-img-card-v2__container__content--switch .imgcard-title {
+  padding-left: 30px;
+}
+
+html[lang*='ar'] .ex-img-card-v2__container__content--switch .imgcard-title,
+html[class*='translated-rtl'] .ex-img-card-v2__container__content--switch .imgcard-title {
+  padding-right: 30px;
+}
+
+html[lang*='en'] .ex-img-card-v2__container__content--switch .imgcard-link,
+html[class*='translated-ltr'] .ex-img-card-v2__container__content--switch .imgcard-link {
+  padding-left: 30px;
+}
+
+html[lang*='ar'] .ex-img-card-v2__container__content--switch .imgcard-link,
+html[class*='translated-rtl'] .ex-img-card-v2__container__content--switch .imgcard-link {
+  padding-right: 30px;
+}
+
+html[lang*='en'] .ex-img-card-v2__container__content--switch:before,
+html[class*='translated-ltr'] .ex-img-card-v2__container__content--switch:before {
+  right: 13%;
+  left: auto;
+}
+
+html[lang*='ar'] .ex-img-card-v2__container__content--switch:before,
+html[class*='translated-rtl'] .ex-img-card-v2__container__content--switch:before {
+  left: 13%;
+  right: auto;
+}
+
+.ex-img-card-v2:hover .ex-img-card-v2__container__content {
+  bottom: 0;
+  height: -webkit-calc(100% - 20%);
+  height: calc(100% - 20%);
+  border-radius: 0px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+html[lang*='en'] .ex-img-card-v2:hover .ex-img-card-v2__container__content,
+html[class*='translated-ltr'] .ex-img-card-v2:hover .ex-img-card-v2__container__content {
+  left: 0px;
+}
+
+html[lang*='ar'] .ex-img-card-v2:hover .ex-img-card-v2__container__content,
+html[class*='translated-rtl'] .ex-img-card-v2:hover .ex-img-card-v2__container__content {
+  right: 0px;
+}
+
+.ex-img-card-v2:hover .ex-img-card-v2__container__content .imgcard-description {
+  display: block;
+}
+
+.ex-img-card-v2:hover .ex-img-card-v2__container__content .imgcard-link {
+  margin-top: 0;
+}
+
+.ex-img-card-v2:hover .ex-img-card-v2__container__content:before {
+  width: 100%;
+}
+
+.ex-img-card-v2--small {
+  height: 250px;
+}
+
+.ex-img-card-v2--small .ex-img-card-v2__container__content .imgcard-link i {
+  font-size: 24px;
+}
+
+.ex-img-card-v2--small:hover .ex-img-card-v2__container__content {
+  bottom: 0;
+  height: 55%;
+}
+
+.ex-img-card-v2--small:hover .ex-img-card-v2__container__content:before {
+  width: 100%;
+}
+
+.ex-img-card-v2--small:hover .ex-img-card-v2__container__content .imgcard-description {
+  display: block;
+}

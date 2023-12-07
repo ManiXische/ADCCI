@@ -1,0 +1,278 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+@import "./components-ADCloud-samsungfold.scss";
+
+.#{$ProjectName} {
+  // Your code goes here
+}
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-leftnav nav ul li a img {
+    max-width: initial;
+    width: 100px;
+  }
+}
+
+.ex-sxa-components {
+  table,
+  th,
+  td {
+    border: 1px solid #e0e0e1;
+    border-collapse: collapse;
+    color: #3f3e45 !important;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px !important;
+    width: 240px;
+  }
+}
+
+table {
+  border-radius: 6px;
+}
+
+.ex-sxa-components table td {
+  border: 1px solid #e0e0e1 !important;
+}
+
+.price-section,
+.img-section {
+  background-color: #ededed;
+}
+
+.download-btn {
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 900;
+  min-width: 160px;
+  -webkit-box-align: center;
+  align-items: center;
+  color: #161038 !important;
+}
+
+.download-btn:hover {
+  color: #fff;
+}
+
+.img-section {
+  padding: 40px;
+  width: 260px;
+  height: 135px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  table,
+  th,
+  td {
+    padding: 10px !important;
+  }
+
+  .img-section {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 285px) and (max-width: 575.98px) {
+  .price-table {
+    word-break: break-word !important;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 14px;
+  }
+
+  .download-btn {
+    font-size: 12px;
+  }
+
+  .price-section h5 {
+    font-size: 18px;
+  }
+
+  .price-table .heading {
+    font-size: 14px;
+  }
+
+  .price-table p {
+    font-size: 12px;
+  }
+}
+/* .ex-news-cards--document-card-image .ex-news-cards__card-details {
+  min-height: 140px;
+  height: 152px;
+} */
+
+.search-results-count .results-count span.font-weight-bold {
+  font-weight: normal !important;
+}
+.translated-rtl .call-to-action div.button:hover .rotated-element,
+html[dir="rtl"] .call-to-action div.button:hover .rotated-element {
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
+  transform: scale(-1);
+}
+.high-contrast body:not(.scrolled) .ex-header__wrapper {
+  background: #b2b2b5;
+}
+.title-block .caption,
+.ex-social-grid .small-title {
+  text-transform: uppercase;
+}
+.ex-social-grid {
+  margin-bottom: -82px;
+}
+input[type="submit"].button:hover,
+input[type="submit"].button > .component-content:hover,
+input[type="submit"] a.button:hover,
+input[type="submit"] a.button > .component-content:hover,
+input[type="submit"].button:focus,
+input[type="submit"].button > .component-content:focus,
+input[type="submit"] a.button:focus,
+input[type="submit"] a.button > .component-content:focus {
+  background: #3f3e45;
+  border-color: #3f3e45;
+}
+@media only screen and (min-width: 1024px) {
+  .contactus-form {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1180px) {
+  .ex-news-cards--document-card-image .ex-news-cards__img {
+    height: 140px;
+  }
+}
+@media only screen and (min-device-width: 390px) and (max-device-width: 844px) and (orientation: portrait) {
+  .privacy-warning.permisive .close {
+    top: 50px;
+  }
+}
+
+.ex-header__right-section__search-dismiss {
+  position: relative;
+  right: -90px;
+}
+.translated-rtl .ex-header__right-section__search-dismiss,
+html[dir="rtl"] .ex-header__right-section__search-dismiss {
+  left: -90px;
+  right: initial;
+}
+
+.translated-rtl .ui-lib-header__login-no-account,
+html[dir="rtl"] .ui-lib-header__login-no-account {
+  margin-top: 30px !important;
+  margin-bottom: 20px !important;
+}
+.logged-user-links .welcome-user-container div:nth-child(2) {
+  line-height: 22px;
+}
+
+.translated-rtl .logged-user-links .welcome-user-container div:nth-child(2),
+html[dir="rtl"] .logged-user-links .welcome-user-container div:nth-child(2) {
+  line-height: 28px;
+}
+@media only screen and (min-width: 1024px) {
+  .ex-inner-header {
+    background-size: contain;
+    background-position: center 110px;
+  }
+  .ex-inner-header .info-section--border {
+    background: rgba(255, 255, 255, 0);
+    /* Old browsers */
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) -23%, white 0%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(-23%, rgba(255, 255, 255, 0.8)),
+      color-stop(88%, white)
+    );
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) -23%, white 0%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=rgba(255, 255, 255, 0.8), endColorstr= white ,GradientType=0 );
+    /* IE6-9 */
+  }
+}
+@media only screen and (min-width: 1360px) {
+  .ex-inner-header {
+    padding-top: 410px;
+  }
+  .ex-inner-header .info-section--border {
+    margin-top: -60px;
+    padding-top: 10px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .ex-inner-header .info-section--border {
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 3500px) {
+  .ex-inner-header {
+    background-size: cover;
+    background-position: center 50px;
+    padding-top: 550px;
+  }
+}
+.sidemenu ul li a {
+  font-size: 16px;
+  @include ltr {
+    font-family: Roboto, Arial, sans-serif;
+  }
+}
+
+.ex-image-highlights__slides .slide {
+  background-position: center 0px;
+}
+.section-grey {
+  background: #fafafb;
+}
+
+.ui-lib-global-csat-feedback-js-open-button {
+  display: block;
+}
+
+.ui-lib-global-csat-feedback-js-open-button:nth-child(2),
+.ui-lib-global-csat-feedback-js-open-button:nth-child(3) {
+  display: none;
+}
+
+/* .cloud_services .ex-news-cards__card-details.position-relative.h-auto-x.pb-0 {
+  min-height: 150px;
+  height: auto;
+} */
+
+main {
+  margin-bottom: 50px;
+}
+.ex-sxa-components .signup-message .button--secondary a {
+  color: #3f3e45;
+}
+.ex-sxa-components .signup-message .button--secondary:hover a {
+  color: #fff;
+}
+.logged-in-user-icon {
+  width: 44px;
+  height: 44px;
+  border: solid 3px #908d9f;
+  border-radius: 22px;
+  img {
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}

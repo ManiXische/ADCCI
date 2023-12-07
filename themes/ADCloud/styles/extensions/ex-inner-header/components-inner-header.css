@@ -1,0 +1,135 @@
+/***************************************************************************************************
+Extension Name: ex-inner-header 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-inner-header 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-inner-header 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+.ex-inner-header {
+  padding-top: 310px;
+  background-color: #ffffff;
+  background-size: cover;
+  background-position-y: -2px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.on-page-editor .ex-inner-header {
+  margin-top: 0 !important;
+}
+
+.ex-inner-header--pattern {
+  background-position: center;
+  background-size: contain;
+  opacity: 30%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ex-inner-header--parallax {
+  background-attachment: fixed;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-inner-header--parallax {
+    background-attachment: scroll;
+  }
+}
+
+.ex-inner-header .info-section {
+  padding: 25px 0;
+  color: #ffffff;
+  position: relative;
+}
+
+.ex-inner-header .info-section:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 3px;
+  width: 100%;
+  display: block;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.high-contrast .ex-inner-header .info-section:after {
+  background-color: #000;
+}
+
+.ex-inner-header .info-section--border {
+  color: #3F3E45;
+  border-top: 0px solid #0091C7;
+  background: rgba(255, 255, 255, 0.8);
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) -23%, white 88%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-23%, rgba(255, 255, 255, 0.8)), color-stop(88%, white));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) -23%, white 88%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=rgba(255, 255, 255, 0.8), endColorstr= white ,GradientType=0 );
+  /* IE6-9 */
+}
+
+.high-contrast .ex-inner-header .info-section--border {
+  background: #000;
+  color: #fff;
+}
+
+.ex-inner-header .info-section .big-slogan {
+  font-size: 36px;
+  line-height: 46px;
+}
+
+html[dir='rtl'] .ex-inner-header .info-section .big-slogan, .translated-rtl .ex-inner-header .info-section .big-slogan {
+  margin-top: 10px;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-inner-header .info-section {
+    margin-left: 0;
+  }
+  html[dir='rtl'] .ex-inner-header .info-section, .translated-rtl .ex-inner-header .info-section {
+    margin-right: 0;
+  }
+}

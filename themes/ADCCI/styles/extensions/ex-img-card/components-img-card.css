@@ -1,0 +1,243 @@
+/***************************************************************************************************
+Extension Name: ex-img-card 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-img-card 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-img-card 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-img-card 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-img-card {
+  overflow: hidden;
+  height: 380px;
+}
+
+.ex-img-card--small {
+  height: 250px;
+}
+
+.ex-img-card--shadow {
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.07);
+}
+
+.ex-img-card__container {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ex-img-card__container__content {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 100%;
+  bottom: 0;
+  height: 100px;
+  background: #ffffff;
+}
+
+html:not([dir='rtl']) .ex-img-card__container__content, .translated-ltr .ex-img-card__container__content {
+  left: -13%;
+}
+
+html[dir='rtl'] .ex-img-card__container__content, .translated-rtl .ex-img-card__container__content {
+  right: -13%;
+}
+
+.ex-img-card__container__content:before {
+  content: '';
+  background: #0091C7;
+  width: 35%;
+  position: absolute;
+  top: -5px;
+  height: 5px;
+}
+
+html:not([dir='rtl']) .ex-img-card__container__content:before, .translated-ltr .ex-img-card__container__content:before {
+  left: 13%;
+}
+
+html[dir='rtl'] .ex-img-card__container__content:before, .translated-rtl .ex-img-card__container__content:before {
+  right: 13%;
+  left: auto;
+}
+
+.ex-img-card__container__content .imgcard-title {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+html:not([dir='rtl']) .ex-img-card__container__content .imgcard-title, .translated-ltr .ex-img-card__container__content .imgcard-title {
+  padding-left: -webkit-calc(13% + 30px);
+  padding-left: calc(13% + 30px);
+  padding-right: 15px;
+}
+
+html[dir='rtl'] .ex-img-card__container__content .imgcard-title, .translated-rtl .ex-img-card__container__content .imgcard-title {
+  padding-right: -webkit-calc(13% + 30px);
+  padding-right: calc(13% + 30px);
+  padding-left: 15px;
+}
+
+.ex-img-card__container__content .imgcard-description {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 0px 15px 15px 15px;
+  display: none;
+}
+
+.ex-img-card__container__content .imgcard-link {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0px -webkit-calc(13% + 30px);
+  padding: 0px calc(13% + 30px);
+  color: #9F9FA2;
+}
+
+html:not([dir='rtl']) .ex-img-card__container__content .imgcard-link i, .translated-ltr .ex-img-card__container__content .imgcard-link i {
+  padding-right: 10px;
+}
+
+html[dir='rtl'] .ex-img-card__container__content .imgcard-link i, .translated-rtl .ex-img-card__container__content .imgcard-link i {
+  padding-right: 10px;
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
+  transform: scale(-1);
+}
+
+.ex-img-card__container__content .imgcard-link span {
+  font-size: 12px;
+  line-height: -webkit-calc(12px + 2px);
+  line-height: calc(12px + 2px);
+  text-transform: uppercase;
+}
+
+html:not([dir='rtl']) .ex-img-card__container__content--border-radius, .translated-ltr .ex-img-card__container__content--border-radius {
+  border-radius: 10px 0px 0px 0px;
+}
+
+html[dir='rtl'] .ex-img-card__container__content--border-radius, .translated-rtl .ex-img-card__container__content--border-radius {
+  border-radius: 10px 0px 0px 0px;
+}
+
+html:not([dir='rtl']) .ex-img-card__container__content--switch, .translated-ltr .ex-img-card__container__content--switch {
+  right: -13%;
+  left: auto;
+}
+
+html[dir='rtl'] .ex-img-card__container__content--switch, .translated-rtl .ex-img-card__container__content--switch {
+  left: -13%;
+  right: auto;
+}
+
+html:not([dir='rtl']) .ex-img-card__container__content--switch .imgcard-title, .translated-ltr .ex-img-card__container__content--switch .imgcard-title {
+  padding-left: 30px;
+}
+
+html[dir='rtl'] .ex-img-card__container__content--switch .imgcard-title, .translated-rtl .ex-img-card__container__content--switch .imgcard-title {
+  padding-right: 30px;
+}
+
+html:not([dir='rtl']) .ex-img-card__container__content--switch .imgcard-link, .translated-ltr .ex-img-card__container__content--switch .imgcard-link {
+  padding-left: 30px;
+}
+
+html[dir='rtl'] .ex-img-card__container__content--switch .imgcard-link, .translated-rtl .ex-img-card__container__content--switch .imgcard-link {
+  padding-right: 30px;
+}
+
+html:not([dir='rtl']) .ex-img-card__container__content--switch:before, .translated-ltr .ex-img-card__container__content--switch:before {
+  right: 13%;
+  left: auto;
+}
+
+html[dir='rtl'] .ex-img-card__container__content--switch:before, .translated-rtl .ex-img-card__container__content--switch:before {
+  left: 13%;
+  right: auto;
+}
+
+.ex-img-card:hover {
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.07);
+}
+
+.ex-img-card:hover .ex-img-card__container__content {
+  bottom: 0;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 0px;
+  margin: auto;
+}
+
+html:not([dir='rtl']) .ex-img-card:hover .ex-img-card__container__content, .translated-ltr .ex-img-card:hover .ex-img-card__container__content {
+  left: 0px;
+}
+
+html[dir='rtl'] .ex-img-card:hover .ex-img-card__container__content, .translated-rtl .ex-img-card:hover .ex-img-card__container__content {
+  right: 0px;
+}
+
+.ex-img-card:hover .ex-img-card__container__content .imgcard-title {
+  display: block;
+  -webkit-box-orient: vertical;
+  height: auto;
+  -webkit-line-clamp: 5;
+}
+
+html:not([dir='rtl']) .ex-img-card:hover .ex-img-card__container__content .imgcard-title, .translated-ltr .ex-img-card:hover .ex-img-card__container__content .imgcard-title {
+  padding-left: 15px;
+}
+
+html[dir='rtl'] .ex-img-card:hover .ex-img-card__container__content .imgcard-title, .translated-rtl .ex-img-card:hover .ex-img-card__container__content .imgcard-title {
+  padding-right: 15px;
+}
+
+.ex-img-card:hover .ex-img-card__container__content .imgcard-description {
+  display: block;
+  display: -webkit-box;
+}
+
+html:not([dir='rtl']) .ex-img-card:hover .ex-img-card__container__content .imgcard-link, .translated-ltr .ex-img-card:hover .ex-img-card__container__content .imgcard-link {
+  padding-left: 15px;
+}
+
+html[dir='rtl'] .ex-img-card:hover .ex-img-card__container__content .imgcard-link, .translated-rtl .ex-img-card:hover .ex-img-card__container__content .imgcard-link {
+  padding-right: 15px;
+}

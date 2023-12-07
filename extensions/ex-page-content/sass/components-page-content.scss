@@ -1,0 +1,133 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+  &__event-details {
+    &__detail-icon {
+      margin-bottom: $ex-page-content-detail-icon-margin-bottom;
+      @include ltr {
+        margin-right: $ex-page-content-detail-margin-side;
+      }
+      @include rtl {
+        margin-left: $ex-page-content-detail-margin-side;
+      }
+      i {
+        color: $ex-page-content-detail-icon-color;
+        font-size: $ex-page-content-detail-icon-size;
+        @include ltr {
+          margin-right: $ex-page-content-detail-icon-margin;
+        }
+        @include rtl {
+          margin-left: $ex-page-content-detail-icon-margin;
+        }
+      }
+      span {
+        color: $ex-page-content-detail-icon-title-color;
+        font-size: $ex-page-content-detail-icon-title-size;
+      }
+      @media #{$md} {
+        flex-direction: column;
+        margin: 10px;
+      }
+    }
+
+    @media #{$md} {
+      margin-bottom: 30px;
+    }
+  }
+  &__event-title {
+    font-size: $ex-page-content-event-title-font-size;
+    font-weight: $ex-page-content-event-title-font-weight;
+    line-height: $ex-page-content-event-title-line-height;
+    margin-bottom: $ex-page-content-event-title-margin-bottom;
+  }
+
+  &__event-banner {
+    height: $ex-page-content-event-banner-height;
+    background-size: cover;
+    background-repeat: no-repeat;
+    img {
+      display: none;
+    }
+  }
+  &__event-card {
+    padding: $ex-page-content-event-card-padding;
+    border-radius: $ex-page-content-event-card-border-radius;
+    background-color: $ex-page-content-event-card-bg-color;
+    margin-bottom: 40px;
+    width: $ex-page-content-event-card-width;
+
+    &--shadow {
+      @include box-shadow(
+        0px,
+        0px,
+        5px,
+        $ex-page-content-event-card-shadow-color
+      );
+    }
+
+    &--pull-up {
+      margin-top: -70px;
+    }
+
+    &__card-date {
+      font-size: $ex-page-content-event-card-date-size;
+      margin-bottom: 15px;
+    }
+    &__icon-info {
+      margin-bottom: 10px;
+      i {
+        color: $ex-page-content-event-card-icons-color;
+        @include ltr {
+          margin-right: 10px;
+        }
+        @include rtl {
+          margin-left: 10px;
+        }
+      }
+      span {
+        font-size: $ex-page-content-event-card-icon-info-font-size;
+      }
+    }
+    &__card-link {
+      color: $ex-page-content-event-card-link-color;
+      font-size: $ex-page-content-event-card-icon-info-font-size;
+      font-weight: $ex-page-content-event-card-icon-info-font-weight;
+    }
+  }
+  &__small-heading {
+    margin-bottom: 20px;
+    font-size: $ex-page-content-small-heading-size;
+    font-weight: $ex-page-content-small-heading-font-weight;
+    &--blue {
+      color: $ex-page-content-small-heading-blue-color;
+    }
+  }
+  &__event-content {
+    line-height: $ex-page-content-line-height;
+  }
+}
+.inner-page {
+  p {
+    //content description
+    font-size: $ex-page-content-description-size;
+    &.field-content {
+      font-size: $ex-page-content-size;
+      line-height: $ex-page-content-line-height;
+    }
+  }
+}
+body.on-page-editor {
+  div.ex-page-content__event-banner {
+    img {
+      display: block;
+    }
+  }
+}

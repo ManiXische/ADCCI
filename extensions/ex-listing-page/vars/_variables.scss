@@ -1,0 +1,100 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+$listing-page-templateContainer-marginTop: 31px !default;
+
+$listing-page-label-fontSize: 12px !default;
+$listing-page-label-color: $grey-700 !default;
+$listing-page-label-letterSpacing: 1px !default;
+$listing-page-label-lineHeight-ar: 12px !default;
+$listing-page-label-lineHeight-en: 12px !default;
+
+
+$listing-page-cta-fontSize: 12px !default;
+$listing-page-cta-color: $secondary-color5 !default;
+$listing-page-cta-letterSpacing: 0px !default;
+$listing-page-cta-lineHeight-ar: 12px !default;
+$listing-page-cta-lineHeight-en: 12px !default;
+
+$listing-page-input-border: 1px solid $grey-500 !default;
+$listing-page-input-height: 40px !default;
+$listing-page-input-input-color: $grey-700 !default;
+$listing-page-input-paddingForIcon-en: 40px !default;
+$listing-page-input-paddingForIcon-ar: 40px !default;
+
+$listing-page-i-fontSize: 22px !default;
+$listing-page-i-top: 8px !default;
+$listing-page-i-startPosition-en: 10px !default;
+$listing-page-i-startPosition-ar: 10px !default;
+
+$listing-page-checkbox-label-fontSize: 16px !default;
+$listing-page-checkbox-label-color: $grey-900 !default;
+$listing-page-checkbox-marginBottom: 19px !default;
+$listing-page-checkbox-spaceBetweenLabelAndCheckbox-en: 28px !default;
+$listing-page-checkbox-spaceBetweenLabelAndCheckbox-ar: 28px !default;
+$listing-page-checkbox-spaceBetweenLabelAndTopBorder-en: 3px !default;
+$listing-page-checkbox-spaceBetweenLabelAndTopBorder-ar: 4px !default;
+$listing-page-checkbox-checkmark-height: 18px !default;
+$listing-page-checkbox-checkmark-width: 18px !default;
+$listing-page-checkbox-checkmark-backgroundColor:  $white-color !default;
+$listing-page-checkbox-checkmark-borderRadius: 3px !default;
+$listing-page-checkbox-checkmark-border:  1px solid $grey-500 !default;
+$listing-page-checkbox-checkmark-checked-backgroundColor: $grey-900 !default;
+$listing-page-checkbox-checkmark-checked-border: 1px solid $grey-900 !default;
+$listing-page-checkbox-checkmark-checked-icon-fontSize: 14px !default;
+$listing-page-checkbox-checkmark-checked-icon-color: $white-color !default;
+$listing-page-checkbox-checkmark-checked-icon-top: 1px !default;
+$listing-page-checkbox-checkmark-checked-icon-left: 1px !default;
+
+$listing-page-results-count-fontSize: 14px !default;
+$listing-page-results-count-color: $grey-700 !default;
+$listing-page-results-count-lineHeight: 20px !default;
+
+$listing-page-sort-label-font-size: 14px !default;
+$listing-page-sort-label-color: $grey-700 !default;
+$listing-page-sort-label-line-height-en: 20px !default;
+$listing-page-sort-label-line-height-ar: 20px !default;
+
+$listing-page-sort-dropdown-border:1px solid $grey-500 !default;
+$listing-page-sort-dropdown-padding: 7px !default;
+$listing-page-sort-dropdown-width: 120px !default;
+
+$listing-page-sort-dropdown-text-fontSize: 14px !default;
+$listing-page-sort-dropdown-text-color: $grey-700 !default;
+
+$listing-page-sort-dropdown-arrow-fontWeight: 900 !default;
+$listing-page-sort-dropdown-arrow-color: $grey-700 !default;
+$listing-page-sort-dropdown-arrow-fontSize: 10px !default;
+$listing-page-sort-dropdown-arrow-marginTop: 1px !default;
+
+$listing-page-sort-dropdown-background-hover: $grey-900 !default;
+$listing-page-sort-dropdown-color-hover: $white-color !default;
+
+$listing-page-sort-dropdown-sortlist-border: 1px solid $grey-500 !default;
+$listing-page-sort-dropdown-sortlist-background: $white-color !default;
+$listing-page-sort-dropdown-sortlist-maxHeight: auto !default;
+
+$listing-page-sort-dropdown-sortlist-item-padding: 7px 9px  !default;
+$listing-page-sort-dropdown-sortlist-item-border: 1px solid #e0e0e1 !default;
+
+$listing-page-sort-dropdown-sortlist-item-text-fontSize: 14px !default;
+$listing-page-sort-dropdown-sortlist-item-text-color: $grey-900 !default;
+
+$listing-page-loadmore-border: 2px solid #3F3E45 !default;
+$listing-page-loadmore-padding: 10px 18px !default;
+
+$listing-page-loadmore-link-color: $grey-900 !default;
+$listing-page-loadmore-arrow-color: $grey-900 !default;
+$listing-page-loadmore-link-fontSize:  16px !default;
+$listing-page-loadmore-link-spaceBetweenTextAndArrow-en: 17px !default;
+$listing-page-loadmore-link-spaceBetweenTextAndArrow-ar: 17px !default;
+
+$listing-page-loadmore-hover-background:  $grey-900 !default;
+$listing-page-loadmore-hover-color: $white-color !default;
+
+
+
+$listing-page-spaceTopShowMore: 14px !default;

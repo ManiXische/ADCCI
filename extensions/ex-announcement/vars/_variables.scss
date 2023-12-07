@@ -1,0 +1,45 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+
+$ex-announcement-background :  $grey-800 !default;
+$ex-announcement-primary-background :  $primary-color !default;
+$ex-announcement-secondery-background :  $secondary-color !default;
+$ex-announcement-padding :  20px !default;
+
+$ex-dark-text-color : $black-color !default;
+$ex-light-text-color : $white-color !default;
+
+$ex-announcement-title-font-size : 24px !default;
+$ex-announcement-title-font-size-mobi : 20px !default;
+$ex-announcement-title-font-weight : 900 !default;
+$ex-announcement-desc-font-size : 16px !default;
+$ex-announcement-desc-font-weight : normal !default;
+$ex-announcement-title-line-height : 30px !default;
+$ex-announcement-title-line-height-mobi : 24px !default;
+$ex-announcement-title-font-weight : bold !default;
+$ex-announcement-remove-transition:all 0.8s !default;
+
+$ex-announcement-defualt-title-color:$ex-light-text-color !default;
+$ex-announcement-defualt-title-hover-color:$ex-light-text-color !default;
+$ex-announcement-defualt-close-color:$ex-light-text-color !default;
+$ex-announcement-defualt-close-hover-color:$ex-light-text-color !default;
+$ex-announcement-defualt-desc-color:$ex-light-text-color !default;
+$ex-announcement-defualt-desc-hover-color:$ex-light-text-color !default;
+
+$ex-announcement-primary-title-color:$ex-light-text-color !default;
+$ex-announcement-primary-title-hover-color:$ex-light-text-color !default;
+$ex-announcement-primary-close-color:$ex-light-text-color !default;
+$ex-announcement-primary-close-hover-color:$ex-light-text-color !default;
+$ex-announcement-primary-desc-color:$ex-light-text-color !default;
+$ex-announcement-primary-desc-hover-color:$ex-light-text-color !default;
+
+$ex-announcement-secondary-title-color:$ex-light-text-color !default;
+$ex-announcement-secondary-title-hover-color:$ex-light-text-color !default;
+$ex-announcement-secondary-close-color:$ex-light-text-color !default;
+$ex-announcement-secondary-close-hover-color:$ex-light-text-color !default;
+$ex-announcement-secondary-desc-color:$ex-light-text-color !default;
+$ex-announcement-secondary-desc-hover-color:$ex-light-text-color !default;

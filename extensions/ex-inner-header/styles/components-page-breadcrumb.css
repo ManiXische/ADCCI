@@ -1,0 +1,68 @@
+/***************************************************************************************************
+Extension Name: ex-inner-header 
+Extension Version:  
+File: Breadcrumb file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-inner-header 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+.page-breadcrumb {
+  padding: 0.75rem 0;
+  background-color: transparent !important;
+}
+
+.page-breadcrumb .breadcrumb-item {
+  font-size: 14px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+}
+
+.page-breadcrumb .breadcrumb-item + .breadcrumb-item:before {
+  padding: 0 0.5rem;
+}
+
+.page-breadcrumb .breadcrumb-item a {
+  color: #3F3E45;
+}
+
+.page-breadcrumb .breadcrumb-item span.separator {
+  display: none;
+}
+
+.page-breadcrumb .breadcrumb-item::before {
+  color: #89888C;
+}
+
+ol li:not(:last-child) a {
+  text-decoration: underline;
+}

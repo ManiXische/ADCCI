@@ -1,0 +1,194 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    &__tabs{
+        li {
+            position: relative;
+            display: inline-block;
+            font-size: $map-tab-title-font-size;
+            line-height: $map-tab-title-line-height;
+            color: $map-tab-title-color;
+            padding: $map-tab-title-padding;
+            cursor: pointer;
+            &.active{
+                color: $map-tab-title-color-active;
+                font-weight: $map-tab-title-active-weight;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left:0;
+                    height:$map-tab-title-active-line-height;
+                    width:100%;
+                    background-color: $map-tab-title-active-line-color ;
+                }
+            }
+        }
+    }
+
+    &__container{
+
+        .searching-box{
+            position: absolute;
+            background-color: $map-search-box-bg;
+            width: $map-search-box-width;
+            height:100%;
+            top:0;
+            left:$map-search-box-left;
+            z-index: 10;
+            @include rtl{
+                left:auto;
+                right:$map-search-box-left;
+            }
+
+            @media #{$md}{
+                position: static;
+                width:100%;
+            }
+            @media #{$sm}{
+                position: static;
+                width:100%;
+            }
+            &__bar{
+                // height: $map-search-box-bar-height;
+
+                input[type="text"]{ 
+                    height:55px;
+                    width:100%;
+                    background-color: $map-search-box-bar-input-bg;
+                    border: 1px solid $map-search-box-bar-input-border-color;
+                    border-radius: $map-search-box-bar-input-border-radius;
+                }
+                .icon{
+                    background-color: $map-search-box-bar-input-bg;
+                    cursor: pointer;
+                    top: 0;
+                    bottom: 0;
+                    right: $map-search-box-bar-icon-position;
+                    @include rtl{
+                        left: $map-search-box-bar-icon-position;
+                        right: auto;
+                    }
+                    line-height: $map-search-box-bar-icon-width;
+                    height: $map-search-box-bar-icon-width;
+                    width: $map-search-box-bar-icon-width;
+                    font-size: 26px;
+                    text-align: center;
+                }
+            }
+
+            &__results{
+                height: calc(100% - 90px);
+                @media #{$ie11} {
+                    overflow: auto;
+                }
+                // for Edge
+                @supports (-ms-accelerator:true) {
+                    overflow: auto;
+                }
+                @supports (-ms-ime-align:auto) {
+                    overflow: auto;
+                }
+                li {
+                    display: none;
+                }
+                .search-item {
+                    display: flex;
+                    background-color: $map-search-box-accordion-item-bg;
+                    border-radius: $map-search-box-accordion-item-border-radius;
+                    border: none;
+                    border-bottom: $map-search-box-accordion-item-border-bottom;
+                    &__content {
+                      font-size: $map-search-box-font-size;
+                      &__label {
+                        color: $map-search-box-item-color;
+                        font-size: $map-search-box-item-font-size;
+                      }
+                    }
+                    .accordion-content {
+                      background-color: $map-search-box-accordion-item-bg;
+                    }
+                }
+                &__emptymsg{
+                    display: none;
+                }
+            }
+        }
+
+        .map-box{
+            background: $map-map-box-bg;
+            height:$map-map-box-height;
+            
+            .esri-ui {
+                .esri-popup{
+                    & , &__main-container{
+                        border-radius: $map-map-box-popup-radius;
+                    }
+
+                    &__content{
+                        text-align: $map-map-box-popup-text-align;
+                        font-size: $map-map-box-popup-font-size;
+                        line-height: $map-map-box-popup-line-height;
+                        padding:$map-map-box-popup-padding;
+                    }
+                }
+                .esri-attribution{
+                    background-color: transparent;
+                }
+                &-corner {
+                    .esri-component{
+                        &.esri-widget--panel{
+                            width: 245px;
+                        }
+                    }
+                }
+            }
+            .esri-zoom {
+                .esri-widget{
+                    &--button {
+                        border-top: solid 1px $map-esri-zoom-esri-widget-border-color;
+                    }
+                }
+            }
+            .map-marker{
+                color : $map-map-box-marker-color;
+            }
+        }
+        
+        .map-loader {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: 35px;
+            width: 35px;
+            font-size: 35px;
+        }
+
+        &__warning{
+            bottom: 0;
+            z-index: 11;
+            pointer-events: none;
+            & > div {
+                color: #fff;
+                background: #242424;
+            }
+        }
+    }
+
+    &--dynamic {
+        .esri-basemap-toggle {
+            display: none;
+        }
+    }
+}

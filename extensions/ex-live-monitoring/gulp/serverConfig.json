@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-live-monitoring",
+        "version" : "1.0.0",
+        "owner" :  "null"
+    }
+}

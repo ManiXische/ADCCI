@@ -1,0 +1,51 @@
+
+@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.XA.Foundation.Variants.Abstractions.Fields
+@using Sitecore.XA.Foundation.RenderingVariants.Extensions
+@using TAMM.Feature.Announcements.Models
+@model TAMM.Feature.Announcements.Models.AnnouncementList
+@{
+    var isVisible = Model.announcementItems.Count;
+    string colcss = Model.Rendering.Parameters["colcss"] != null ? Model.Rendering.Parameters["colcss"] : "col-md-4";
+    string place = Model.Rendering.Parameters["place"] != null ? Model.Rendering.Parameters["place"] : "outer";
+}
+
+@if (isVisible > 0)
+{
+    if (!(Model.Rendering.DataSourceItem == null && !Html.Sxa().IsEdit))
+    {   
+         <div class="ex-notifications-v3 align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="ex-notifications-v3-breaking-news d-flex align-items-center" id="newsTicker1">
+                            <h6 id="data-label" class="ex-notifications-v3-label ex-notifications-v3__label">NEWS</h6>
+                            <div class="ex-notifications-v3-news">
+                                <ul>
+                                    @foreach (var AnnouncementItem in Model.announcementItems)
+                                        {
+                                            foreach (BaseVariantField variantField in Model.VariantFields)
+                                            {
+                                                @Html.RenderingVariants().RenderVariant(variantField, AnnouncementItem.Item, Model.RenderingWebEditingParams, Model)
+                                            }
+                                        }  
+                                </ul>
+                            </div>
+                            <div class="ex-notifications-v3-controls d-flex">
+                                <button class="ex-notifications-v3__prev rotated-element" title="@Sitecore.Globalization.Translate.Text("Previous")"><span
+                                        class="icon-keyboard-arrow-left ex-notifications-v3-prev"></span></button>
+                                <button><span class="ex-notifications-v3__action custom-circle"></span></button>
+                                <button class="ex-notifications-v3__next rotated-element" title='@Sitecore.Globalization.Translate.Text("Next")'><span
+                                        class="icon-keyboard-arrow-right ex-notifications-v3-next"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+}

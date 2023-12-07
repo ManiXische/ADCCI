@@ -1,0 +1,133 @@
+﻿@using Sitecore.Data.Items;
+@using System.Web;
+@{
+
+    var renderingcontext = Sitecore.Mvc.Presentation.RenderingContext.CurrentOrNull;
+    var datasource = renderingcontext.Rendering.DataSource;
+    Sitecore.Data.Items.Item datasourceitem = Sitecore.Context.Database.GetItem(datasource);
+
+    var Title = string.Empty;
+    var ApiUrl = string.Empty;
+    var FullAPI = string.Empty;
+    var FullListCheck = false;
+    var Count = string.Empty;
+    var ViewMoreLinkTitle = string.Empty;
+    var ViewMoreLink = string.Empty;
+    if (datasourceitem != null)
+    {
+        Title = datasourceitem.Fields["Title"].Value;
+        Count = datasourceitem.Fields["Count"].Value;
+        ViewMoreLinkTitle = datasourceitem.Fields["ViewMoreLinkTitle"].Value;
+        Sitecore.Data.Fields.LinkField ViewMoreLinkField = (Sitecore.Data.Fields.LinkField)(datasourceitem.Fields["ViewMoreLink"]);
+        if (ViewMoreLinkField != null)
+        {
+            ViewMoreLink = ViewMoreLinkField.Url;
+        }
+
+        Sitecore.Data.Fields.CheckboxField checkboxField = datasourceitem.Fields["FullListView"];
+        if (checkboxField != null && checkboxField.Checked)
+        {
+            FullListCheck = checkboxField.Checked;
+        }
+    }
+
+    ApiUrl = datasourceitem.Fields["ApiUrl"].Value.ToString();
+    if (!String.IsNullOrEmpty(ApiUrl))
+    {
+        if (ApiUrl.Contains("maxResults"))
+        {
+            string [] FirtArray = ApiUrl.Split(new string[] { "maxResults=" }, StringSplitOptions.None);
+            if (FirtArray != null && FirtArray.Length > 0)
+            {
+                string[] SecondArray = FirtArray[1].Split('&');
+                if (SecondArray != null && SecondArray.Length ==1)
+                {
+                    FullAPI = FirtArray[0].ToString() + "maxResults=" + Count.ToString();
+                }
+                else if (SecondArray != null && SecondArray.Length >1)
+                {
+                    SecondArray[0] = Count;
+                    FullAPI = FirtArray[0].ToString() + "maxResults=" + string.Join("&",SecondArray);
+                }
+            }
+        }
+        else
+        {
+            FullAPI = String.Concat(ApiUrl, "&" + "maxResults=" + Count);
+        }
+    }
+
+
+}
+
+
+<div class="ex-media-grid" rv="VariantSection">
+    <div class="container" rv="VariantSection">
+        <div class="row" rv="VariantSection">
+
+            @{
+                if (!FullListCheck)
+                {
+                    <div class="col-lg-12" rv="VariantSection">
+                        <div class="ex-media-grid__header d-flex justify-content-between align-items-center mb-4" rv="VariantSection">
+                            <div class="ex-media-grid__header__title section-title" rv="VariantSection">
+                                <h3 class="field-title field-title" rv="VariantSection">@Title</h3>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+
+            <div class="col-lg-12" rv="VariantSection">
+                <div class="ex-media-grid__body ex-media-grid__body--w-gutter ex-media-grid--video-gallery"
+                     rv="VariantSection"
+                     data-media-grid="true"
+                     data-selector='media-grid-item'
+                     data-gutter='.ex-media-grid__body__gutter'
+                     data-active-filter-class="filter-button--active"
+                     data-active-filter=""
+                     data-fancybox-enabled
+                     data-fancybox-thumbs-autostart="true"
+                     data-fancybox-thumbs-position="bottom"
+                     data-fancybox-mode="seperate">
+                    <div class="ex-media-grid__body__gutter" rv="VariantSection"></div>
+                </div>
+            </div>
+
+        </div>
+
+        @{
+            if (FullListCheck)
+            {
+                <div class="row ">
+                    <div class="col-12 d-flex justify-content-center mt-7">
+                        <div class="ex-media-grid__loadmore d-none">
+
+                            <a class="button d-flex justify-content-between" href="@ViewMoreLink">
+                                @ViewMoreLinkTitle
+                                <i class="icon-loadmore font-weight-bold"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+
+    </div>
+
+</div>
+
+
+
+
+<script>
+
+    var youtTubeListURL =  '@Html.Raw(FullAPI)';
+
+</script>
+
+
+
+
+

@@ -1,0 +1,106 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+// Your files goes here
+.#{$ProjectName} {
+
+    // min-height: $inner-header-min-height;
+    padding-top: $inner-header-min-height;
+    @at-root{
+      .on-page-editor & {
+        margin-top:0 !important;
+      }
+    }
+    background-color:  $inner-header-background-color;
+    background-size: $inner-header-background-size;
+    background-position-y : $inner-header-background-y-position;
+    background-position-x: $inner-header-background-x-position;
+    background-repeat: no-repeat;
+
+    color: $inner-header-text-color;
+
+ 
+  &--pattern{
+      background-position: center;
+      background-size: contain;
+      opacity: $ex-iner-header-pattern-opacity;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  
+  &--parallax{
+    background-attachment: fixed;
+
+  @media #{$ie11} {
+      background-attachment: scroll;
+  }
+  }
+    .info-section {
+      padding: $inner-header-info-section-default-padding;
+      color: $inner-header-info-section-default-text-color;
+      position: relative; 
+      
+      &:after {
+        content: '';
+        position: absolute;
+        left:0;
+        bottom: -1px;
+        height: 3px;
+        width: 100%;
+        display: block;
+        background: $inner-header-afterline-color;
+        z-index: 1;
+
+        @at-root {
+          .high-contrast & {
+            background-color: $black-color;
+          }
+        }
+    }
+      &--border {
+        $infosection : &;
+        
+        color: $inner-header-info-section-text-color;
+        border-top: $inner-header-border-size solid $inner-header-border-color;
+        @include background-gradient(top, $inner-header-infosection-bg-start , $inner-header-infosection-precentage-start ,to bottom, $inner-header-infosection-bg-end, $inner-header-infosection-precentage-end);
+
+
+        @at-root {
+          .high-contrast{
+            #{$infosection}{
+               background: #000;
+               color: #fff;
+            }
+          }
+        }
+      }
+
+      .big-slogan {
+        font-size:  $inner-header-big-slogan-font-size;
+        line-height: $inner-header-big-slogan-line-height;
+        @include rtl {
+          margin-top:10px;
+        }
+      }
+    }
+    @media #{$sm}{
+      .info-section {
+        // padding-left: $inner-header-aligment-responsive-padding;
+        // padding-right: $inner-header-aligment-responsive-padding;
+        margin-left: $inner-header-aligment-responsive-margin;
+        @include rtl{
+          margin-right: $inner-header-aligment-responsive-margin
+        }
+      } 
+    }
+}

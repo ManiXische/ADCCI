@@ -1,0 +1,1488 @@
+@charset "UTF-8";
+@-webkit-keyframes passing-through {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  30%, 70% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes passing-through {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  30%, 70% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    transform: translateY(-40px);
+  }
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  20% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  20% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+.ex-sitecore-form__input--radiositecore > label:not(.ex-sitecore-form__label) {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-sitecore-form {
+  /* Firefox */
+}
+
+html[lang*='ar'] .ex-sitecore-form__title,
+html[class*='translated-rtl'] .ex-sitecore-form__title {
+  text-align: right;
+}
+
+.ex-sitecore-form input[type="text"],
+.ex-sitecore-form input[type="email"],
+.ex-sitecore-form input[type="tel"],
+.ex-sitecore-form input[type="date"],
+.ex-sitecore-form input[type="number"],
+.ex-sitecore-form input[type="time"],
+.ex-sitecore-form select, .ex-sitecore-form .custom-dropdown,
+.ex-sitecore-form textarea {
+  border-radius: 2px;
+  border: 1px solid #b2b2b5;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 10px;
+  color: #000;
+}
+
+.ex-sitecore-form input[type="text"]:focus,
+.ex-sitecore-form input[type="email"]:focus,
+.ex-sitecore-form input[type="tel"]:focus,
+.ex-sitecore-form input[type="date"]:focus,
+.ex-sitecore-form input[type="number"]:focus,
+.ex-sitecore-form input[type="time"]:focus,
+.ex-sitecore-form select:focus, .ex-sitecore-form .custom-dropdown:focus,
+.ex-sitecore-form textarea:focus {
+  border: 1px solid #000;
+}
+
+.ex-sitecore-form input[type="text"].valid,
+.ex-sitecore-form input[type="email"].valid,
+.ex-sitecore-form input[type="tel"].valid,
+.ex-sitecore-form input[type="date"].valid,
+.ex-sitecore-form input[type="number"].valid,
+.ex-sitecore-form input[type="time"].valid,
+.ex-sitecore-form select.valid, .ex-sitecore-form .custom-dropdown.valid,
+.ex-sitecore-form textarea.valid {
+  border-color: #b2b2b5;
+  background-color: #ffffff;
+}
+
+.ex-sitecore-form input[type="text"]:hover,
+.ex-sitecore-form input[type="email"]:hover,
+.ex-sitecore-form input[type="tel"]:hover,
+.ex-sitecore-form input[type="date"]:hover,
+.ex-sitecore-form input[type="number"]:hover,
+.ex-sitecore-form input[type="time"]:hover,
+.ex-sitecore-form select:hover, .ex-sitecore-form .custom-dropdown:hover,
+.ex-sitecore-form textarea:hover {
+  border: 1px solid #000;
+}
+
+.ex-sitecore-form input[type="text"].input-validation-error,
+.ex-sitecore-form input[type="email"].input-validation-error,
+.ex-sitecore-form input[type="tel"].input-validation-error,
+.ex-sitecore-form input[type="date"].input-validation-error,
+.ex-sitecore-form input[type="number"].input-validation-error,
+.ex-sitecore-form input[type="time"].input-validation-error,
+.ex-sitecore-form select.input-validation-error, .ex-sitecore-form .custom-dropdown.input-validation-error,
+.ex-sitecore-form textarea.input-validation-error {
+  border: solid 1px #FF5F60;
+  background-color: #ffffff;
+  margin-bottom: 23px;
+}
+
+.ex-sitecore-form input[type="text"].input-validation-error + .field-validation-error,
+.ex-sitecore-form input[type="email"].input-validation-error + .field-validation-error,
+.ex-sitecore-form input[type="tel"].input-validation-error + .field-validation-error,
+.ex-sitecore-form input[type="date"].input-validation-error + .field-validation-error,
+.ex-sitecore-form input[type="number"].input-validation-error + .field-validation-error,
+.ex-sitecore-form input[type="time"].input-validation-error + .field-validation-error,
+.ex-sitecore-form select.input-validation-error + .field-validation-error, .ex-sitecore-form .custom-dropdown.input-validation-error + .field-validation-error,
+.ex-sitecore-form textarea.input-validation-error + .field-validation-error {
+  bottom: 0;
+}
+
+.ex-sitecore-form input[type="text"]:-webkit-autofill, .ex-sitecore-form input[type="text"]:-webkit-autofill:hover, .ex-sitecore-form input[type="text"]:-webkit-autofill:focus,
+.ex-sitecore-form input[type="email"]:-webkit-autofill,
+.ex-sitecore-form input[type="email"]:-webkit-autofill:hover,
+.ex-sitecore-form input[type="email"]:-webkit-autofill:focus,
+.ex-sitecore-form input[type="tel"]:-webkit-autofill,
+.ex-sitecore-form input[type="tel"]:-webkit-autofill:hover,
+.ex-sitecore-form input[type="tel"]:-webkit-autofill:focus,
+.ex-sitecore-form input[type="date"]:-webkit-autofill,
+.ex-sitecore-form input[type="date"]:-webkit-autofill:hover,
+.ex-sitecore-form input[type="date"]:-webkit-autofill:focus,
+.ex-sitecore-form input[type="number"]:-webkit-autofill,
+.ex-sitecore-form input[type="number"]:-webkit-autofill:hover,
+.ex-sitecore-form input[type="number"]:-webkit-autofill:focus,
+.ex-sitecore-form input[type="time"]:-webkit-autofill,
+.ex-sitecore-form input[type="time"]:-webkit-autofill:hover,
+.ex-sitecore-form input[type="time"]:-webkit-autofill:focus,
+.ex-sitecore-form select:-webkit-autofill,
+.ex-sitecore-form select:-webkit-autofill:hover,
+.ex-sitecore-form select:-webkit-autofill:focus, .ex-sitecore-form .custom-dropdown:-webkit-autofill, .ex-sitecore-form .custom-dropdown:-webkit-autofill:hover, .ex-sitecore-form .custom-dropdown:-webkit-autofill:focus,
+.ex-sitecore-form textarea:-webkit-autofill,
+.ex-sitecore-form textarea:-webkit-autofill:hover,
+.ex-sitecore-form textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.ex-sitecore-form textarea {
+  height: 135px;
+  resize: none;
+}
+
+.ex-sitecore-form input[type="text"],
+.ex-sitecore-form input[type="email"],
+.ex-sitecore-form input[type="tel"],
+.ex-sitecore-form input[type="date"],
+.ex-sitecore-form input[type="number"],
+.ex-sitecore-form input[type="time"],
+.ex-sitecore-form select, .ex-sitecore-form .custom-dropdown {
+  height: 40px;
+  line-height: normal;
+}
+
+.ex-sitecore-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+html[lang*='en'] .ex-sitecore-form select,
+html[class*='translated-ltr'] .ex-sitecore-form select {
+  padding-right: 40px;
+}
+
+html[lang*='ar'] .ex-sitecore-form select,
+html[class*='translated-rtl'] .ex-sitecore-form select {
+  padding-left: 40px;
+  line-height: 27px;
+  padding: 4px 10px;
+}
+
+.ex-sitecore-form select::-ms-expand {
+  display: none;
+}
+
+.ex-sitecore-form input[type="date"]::-webkit-inner-spin-button,
+.ex-sitecore-form input[type="date"]::-webkit-calendar-picker-indicator,
+.ex-sitecore-form input[type="number"]::-webkit-inner-spin-button,
+.ex-sitecore-form input[type="number"]::-webkit-outer-spin-button,
+.ex-sitecore-form input[type="time"]::-webkit-outer-spin-button,
+.ex-sitecore-form input[type="time"]::-webkit-inner-spin-button,
+.ex-sitecore-form input[type="time"]::-webkit-clear-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.ex-sitecore-form input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.ex-sitecore-form__label {
+  opacity: 0.56;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: 1.09px;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.ex-sitecore-form__label--normal {
+  font-size: 14px;
+  text-transform: none;
+}
+
+html[lang*='ar'] .ex-sitecore-form__label,
+html[class*='translated-rtl'] .ex-sitecore-form__label {
+  text-align: right;
+}
+
+.ex-sitecore-form__label--required:after {
+  content: "*";
+  color: #FF5F60;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.ex-sitecore-form span.field-validation-error, .ex-sitecore-form span.field-validation-valid {
+  color: #FF5F60;
+  display: block;
+  margin: 0.5rem 0 0 0;
+}
+
+html[lang*='ar'] .ex-sitecore-form span.field-validation-error,
+html[class*='translated-rtl'] .ex-sitecore-form span.field-validation-error, html[lang*='ar'] .ex-sitecore-form span.field-validation-valid,
+html[class*='translated-rtl'] .ex-sitecore-form span.field-validation-valid {
+  direction: ltr;
+}
+
+.ex-sitecore-form .dropdown-list-arrow:after {
+  pointer-events: none;
+  border: solid;
+  border-color: #000;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  content: "";
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+html[lang*='en'] .ex-sitecore-form .dropdown-list-arrow:after,
+html[class*='translated-ltr'] .ex-sitecore-form .dropdown-list-arrow:after {
+  top: 40px;
+  right: 35px;
+}
+
+html[lang*='ar'] .ex-sitecore-form .dropdown-list-arrow:after,
+html[class*='translated-rtl'] .ex-sitecore-form .dropdown-list-arrow:after {
+  top: 40px;
+  left: 35px;
+}
+
+.ex-sitecore-form .exceeded {
+  color: #FF5F60;
+}
+
+.ex-sitecore-form__input {
+  margin-bottom: 5px;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input,
+html[class*='translated-rtl'] .ex-sitecore-form__input {
+  text-align: right;
+}
+
+.ex-sitecore-form__input .field-validation-valid, .ex-sitecore-form__input .field-validation-error {
+  pointer-events: none;
+  display: inline-block;
+  margin-top: 5px;
+  color: #FF5F60;
+  position: absolute;
+  width: 100%;
+  bottom: -23px;
+  left: 0;
+  z-index: 1;
+  height: 20px;
+}
+
+.ex-sitecore-form__input--submit .field-validation-valid, .ex-sitecore-form__input--submit .field-validation-error {
+  position: static;
+}
+
+.ex-sitecore-form__input--checkbox-wrp .ex-sitecore-form__input__label {
+  margin-bottom: 10px;
+}
+
+.ex-sitecore-form__input--checkbox-wrp .field-validation-error, .ex-sitecore-form__input--checkbox-wrp .field-validation-valid {
+  bottom: -16px;
+}
+
+.ex-sitecore-form__input__checkbox {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 10px;
+  text-indent: -100000px;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input__checkbox,
+html[class*='translated-rtl'] .ex-sitecore-form__input__checkbox {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.ex-sitecore-form__input__checkbox label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.ex-sitecore-form__input__checkbox label:after {
+  content: '';
+  width: 12px;
+  height: 8px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  border: 3px solid #454262;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.ex-sitecore-form__input__checkbox label:hover::after {
+  opacity: 0.3;
+}
+
+.ex-sitecore-form__input__checkbox--dark label {
+  border: 2px solid #000;
+  background: #ffffff;
+}
+
+.ex-sitecore-form__input__checkbox--dark label:after {
+  border: 3px solid #ffffff;
+  border-top: none;
+  border-right: none;
+  top: 3px;
+  left: 2px;
+}
+
+.ex-sitecore-form__input__checkbox--dark input[type=checkbox]:checked + label {
+  background: #000;
+}
+
+.ex-sitecore-form__input__checkbox input[type=checkbox] {
+  visibility: hidden;
+}
+
+.ex-sitecore-form__input__checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+.ex-sitecore-form__input__checkbox + label {
+  line-height: 20px;
+}
+
+.ex-sitecore-form__input__radiobox {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 10px;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input__radiobox,
+html[class*='translated-rtl'] .ex-sitecore-form__input__radiobox {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.ex-sitecore-form__input__radiobox label {
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #D6D6D6;
+  border-radius: 50%;
+}
+
+.ex-sitecore-form__input__radiobox label:after {
+  content: '';
+  width: -webkit-calc(20px - 6px);
+  width: calc(20px - 6px);
+  height: -webkit-calc(20px - 6px);
+  height: calc(20px - 6px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  opacity: 0;
+  background: #000;
+}
+
+.ex-sitecore-form__input__radiobox label:hover::after {
+  opacity: 0.3;
+}
+
+.ex-sitecore-form__input__radiobox--dark label {
+  background: #000;
+  border: 2px solid #ffffff;
+}
+
+.ex-sitecore-form__input__radiobox--dark label:after {
+  background: #ffffff;
+}
+
+.ex-sitecore-form__input__radiobox input[type=radio] {
+  visibility: hidden;
+}
+
+.ex-sitecore-form__input__radiobox input[type=radio]:checked + label:after {
+  opacity: 1;
+}
+
+.ex-sitecore-form__input__radiobox + label {
+  line-height: 20px;
+}
+
+.ex-sitecore-form__input--hidden {
+  display: none;
+}
+
+.ex-sitecore-form__input--disabled {
+  pointer-events: none;
+}
+
+.ex-sitecore-form__input--disabled input[type="text"],
+.ex-sitecore-form__input--disabled input[type="email"],
+.ex-sitecore-form__input--disabled input[type="tel"],
+.ex-sitecore-form__input--disabled input[type="date"],
+.ex-sitecore-form__input--disabled input[type="number"],
+.ex-sitecore-form__input--disabled input[type="time"],
+.ex-sitecore-form__input--disabled select, .ex-sitecore-form__input--disabled .custom-dropdown,
+.ex-sitecore-form__input--disabled textarea {
+  border-color: #AFAFAF;
+  background-color: #F5F5F7;
+  color: #AFAFAF;
+}
+
+.ex-sitecore-form__input--ignored input[type="text"].validation-ignore,
+.ex-sitecore-form__input--ignored input[type="email"].validation-ignore,
+.ex-sitecore-form__input--ignored input[type="tel"].validation-ignore,
+.ex-sitecore-form__input--ignored input[type="date"].validation-ignore,
+.ex-sitecore-form__input--ignored input[type="number"].validation-ignore,
+.ex-sitecore-form__input--ignored input[type="time"].validation-ignore,
+.ex-sitecore-form__input--ignored select.validation-ignore, .ex-sitecore-form__input--ignored .custom-dropdown.validation-ignore,
+.ex-sitecore-form__input--ignored textarea.validation-ignore {
+  pointer-events: none;
+  border-color: #AFAFAF;
+  background-color: #F5F5F7;
+  color: #AFAFAF;
+}
+
+.ex-sitecore-form__input--file {
+  min-height: 150px;
+}
+
+.ex-sitecore-form__input--file .input-file-trigger {
+  height: 140px;
+  width: 140px;
+  display: inline-block;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--file .input-file-trigger,
+html[class*='translated-rtl'] .ex-sitecore-form__input--file .input-file-trigger {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.ex-sitecore-form__input--file .input-file-trigger__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ex-sitecore-form__input--file .dropzone-file {
+  position: relative;
+  border-radius: 6px;
+  background: #F5F5F7;
+  height: 140px;
+  width: 140px;
+  border: 2px dashed #C4C4C4;
+  text-align: center;
+  font-size: 30px;
+  color: #9F9FA2;
+  cursor: pointer;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+.ex-sitecore-form__input--file .dropzone-file > .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.ex-sitecore-form__input--file .dropzone-file:hover {
+  opacity: 1;
+}
+
+.ex-sitecore-form__input--file .dropzone-file.dz-clickable {
+  cursor: pointer;
+}
+
+.ex-sitecore-form__input--file .dropzone-file.dz-clickable * {
+  cursor: default;
+}
+
+.ex-sitecore-form__input--file .dropzone-file.dz-clickable .dz-message {
+  cursor: pointer;
+}
+
+.ex-sitecore-form__input--file .dropzone-file.dz-clickable .dz-message * {
+  cursor: pointer;
+}
+
+.ex-sitecore-form__input--file .dropzone-file.dz-started .dz-message {
+  display: none;
+}
+
+.ex-sitecore-form__input--file .dropzone-file.dz-drag-hover {
+  border-style: solid;
+}
+
+.ex-sitecore-form__input--file .dropzone-file.dz-drag-hover .dz-message {
+  opacity: 0.5;
+}
+
+.ex-sitecore-form__input--file .dropzone-file .dz-message {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.ex-sitecore-form__input--file .dropzone-file .dz-message .dz-button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews {
+  display: inline-block;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview {
+  pointer-events: none;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 8px;
+  height: 140px;
+  width: 140px;
+  margin-right: 16px;
+  top: 0;
+  left: 0;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--file .dropzone-previews .dz-preview,
+html[class*='translated-rtl'] .ex-sitecore-form__input--file .dropzone-previews .dz-preview {
+  left: auto;
+  right: 0;
+  margin-right: auto;
+  margin-left: 16px;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview:hover {
+  z-index: 1000;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview:hover .dz-details {
+  opacity: 1;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview.dz-file-preview .dz-image {
+  border-radius: 6px;
+  background: #999;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F7), to(#D6D6D6));
+  background: -webkit-linear-gradient(top, #F5F5F7, #D6D6D6);
+  background: linear-gradient(to bottom, #F5F5F7, #D6D6D6);
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview.dz-file-preview .dz-details {
+  opacity: 1;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview.dz-image-preview {
+  background: #ffffff;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview.dz-image-preview .dz-details {
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-remove {
+  color: #ffffff;
+  pointer-events: visible;
+  font-size: 20px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 100;
+  display: block;
+  cursor: pointer;
+  border: none;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-remove:hover {
+  opacity: 0.5;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-remove i {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-remove,
+html[class*='translated-rtl'] .ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-remove {
+  right: auto;
+  left: 40px;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview:hover .dz-details {
+  opacity: 1;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  font-size: 25px;
+  border-radius: 6px;
+  background: color-opcity(#000, 0.2);
+  color: #ffffff;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay--pdf {
+  background: #FF5F60;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay--xlsx, .ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay--xlx {
+  background-color: #86C083;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay--zip, .ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay--rar {
+  background-color: #FBB815;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay--docx, .ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay--doc, .ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay--rtf {
+  background-color: #9C25B0;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay--txt {
+  background-color: #673AB7;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay--ppsx, .ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay--pptx {
+  background: #FB7415;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext-overlay i {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-ext {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 4px 6px;
+  background: rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-details {
+  z-index: 20;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 6px;
+  width: 100%;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.65)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  line-height: 150%;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-details .dz-size {
+  display: block;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-details .dz-size span {
+  border-radius: 3px;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-details .dz-filename {
+  white-space: nowrap;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-details .dz-filename:not(:hover) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview:hover .dz-image img {
+  -webkit-transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-image {
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-image img {
+  height: 100%;
+  display: inline-block;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview.dz-success .dz-success-mark {
+  -webkit-animation: passing-through 3s cubic-bezier(0.77, 0, 0.175, 1);
+  animation: passing-through 3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview.dz-error .dz-error-mark {
+  opacity: 1;
+  -webkit-animation: slide-in 3s cubic-bezier(0.77, 0, 0.175, 1);
+  animation: slide-in 3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-success-mark, .ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-error-mark {
+  pointer-events: none;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  z-index: 500;
+  position: absolute;
+  display: block;
+  width: 40px;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-success-mark svg, .ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-error-mark svg {
+  display: block;
+  width: 54px;
+  height: 54px;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview.dz-processing .dz-progress {
+  opacity: 1;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview.dz-complete .dz-progress {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview:not(.dz-processing) .dz-progress {
+  -webkit-animation: pulse 6s ease infinite;
+  animation: pulse 6s ease infinite;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-progress {
+  opacity: 1;
+  z-index: 1000;
+  pointer-events: none;
+  position: absolute;
+  height: 16px;
+  left: 50%;
+  top: 50%;
+  margin-top: -8px;
+  width: 80px;
+  margin-left: -40px;
+  background: dz-image-dz-dz-progress-color;
+  -webkit-transform: scale(1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-progress .dz-upload {
+  background: #b2b2b5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#AFAFAF), to(#9F9FA2));
+  background: -webkit-linear-gradient(top, #AFAFAF, #9F9FA2);
+  background: linear-gradient(to bottom, #AFAFAF, #9F9FA2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview.dz-error .dz-error-message {
+  display: block;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview.dz-error:hover .dz-error-message {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-error-message {
+  pointer-events: none;
+  z-index: 1000;
+  position: absolute;
+  display: block;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+  font-size: 13px;
+  top: 130px;
+  left: -10px;
+  width: 140px;
+  background: #FF5F60;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF5F60), to(#FF5F60));
+  background: -webkit-linear-gradient(top, #FF5F60, #FF5F60);
+  background: linear-gradient(to bottom, #FF5F60, #FF5F60);
+  padding: 0.5em 1.2em;
+  color: #ffffff;
+}
+
+.ex-sitecore-form__input--file .dropzone-previews .dz-preview .dz-error-message:after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 64px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #FF5F60;
+}
+
+.ex-sitecore-form__input--file .field-validation-error, .ex-sitecore-form__input--file .field-validation-valid {
+  font-size: 12px;
+  bottom: 2px;
+  width: -webkit-calc(100% - 2px);
+  width: calc(100% - 2px);
+  bottom: -webkit-calc(-100% - 5px);
+  bottom: calc(-100% - 5px);
+  height: 100%;
+  text-align: center;
+}
+
+.ex-sitecore-form__input--file .field-validation-error > span, .ex-sitecore-form__input--file .field-validation-valid > span {
+  line-height: 15px;
+  border-radius: 6px;
+  background: #cacaca;
+  border: 1px solid #b3b3b3;
+  display: block;
+  padding: 5px;
+  word-break: break-word;
+}
+
+.ex-sitecore-form__input--file .field-validation-error > span:before, .ex-sitecore-form__input--file .field-validation-valid > span:before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #C4C4C4;
+}
+
+.ex-sitecore-form__input--file--single {
+  min-height: auto;
+}
+
+.ex-sitecore-form__input--file--single .input-file-trigger {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+}
+
+.ex-sitecore-form__input--file--single .dropzone-file {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  text-align: left;
+  padding: 4px 5px;
+  border: 1px dashed #C4C4C4;
+  opacity: 1;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--file--single .dropzone-file,
+html[class*='translated-rtl'] .ex-sitecore-form__input--file--single .dropzone-file {
+  text-align: right;
+}
+
+.ex-sitecore-form__input--file--single .dropzone-file > .icon {
+  right: 0;
+  left: auto;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--file--single .dropzone-file > .icon,
+html[class*='translated-rtl'] .ex-sitecore-form__input--file--single .dropzone-file > .icon {
+  right: auto;
+  left: 15px;
+}
+
+.ex-sitecore-form__input--file--single .dropzone-file > .upload-btn {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 900;
+  background: #150F37;
+  height: 28px;
+  color: #ffffff;
+  width: 80px;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.ex-sitecore-form__input--file--single .dropzone-previews .dz-preview {
+  width: 100%;
+  height: 40px;
+}
+
+.ex-sitecore-form__input--file--single .dropzone-previews .dz-preview .dz-ext-overlay i {
+  right: 20px;
+  left: auto;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--file--single .dropzone-previews .dz-preview .dz-ext-overlay i,
+html[class*='translated-rtl'] .ex-sitecore-form__input--file--single .dropzone-previews .dz-preview .dz-ext-overlay i {
+  right: auto;
+  left: 20px;
+}
+
+.ex-sitecore-form__input--file--single .dropzone-previews .dz-preview .dz-ext {
+  display: none;
+}
+
+.ex-sitecore-form__input--file--single .dropzone-previews .dz-preview .dz-details {
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.25)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
+  height: 100%;
+  line-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ex-sitecore-form__input--file--single .dropzone-previews .dz-preview .dz-details .dz-size {
+  margin: 0 10px;
+}
+
+.ex-sitecore-form__input--custom-dropdown {
+  position: relative;
+}
+
+.ex-sitecore-form__input--custom-dropdown select + .field-validation-valid, .ex-sitecore-form__input--custom-dropdown select + .field-validation-error {
+  bottom: -20px;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--custom-dropdown select + .field-validation-valid,
+html[class*='translated-rtl'] .ex-sitecore-form__input--custom-dropdown select + .field-validation-valid, html[lang*='ar'] .ex-sitecore-form__input--custom-dropdown select + .field-validation-error,
+html[class*='translated-rtl'] .ex-sitecore-form__input--custom-dropdown select + .field-validation-error {
+  bottom: -26px;
+}
+
+.ex-sitecore-form__input--custom-dropdown .icon {
+  color: #000;
+  font-size: 11px;
+  pointer-events: none;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%) rotate(90deg);
+  -ms-transform: translate(0, -50%) rotate(90deg);
+  transform: translate(0, -50%) rotate(90deg);
+  padding: 10px;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--custom-dropdown .icon,
+html[class*='translated-rtl'] .ex-sitecore-form__input--custom-dropdown .icon {
+  right: auto;
+  left: 5px;
+}
+
+.ex-sitecore-form__input--custom-dropdown .custom-dropdown {
+  color: #b2b2b5;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.ex-sitecore-form__input--custom-dropdown .custom-dropdown-items {
+  position: absolute;
+  color: #000;
+  background-color: #ffffff;
+  box-shadow: 0 0 2px 1px #D6D6D6;
+  border-radius: 3px;
+  top: 100%;
+  left: 1px;
+  right: 0;
+  z-index: 10000;
+  height: -webkit-calc(40px * 4);
+  height: calc(40px * 4);
+  width: 100%;
+  overflow-y: auto;
+}
+
+.ex-sitecore-form__input--custom-dropdown .custom-dropdown-items > div {
+  padding: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 40px;
+  line-height: 25px;
+}
+
+.ex-sitecore-form__input--custom-dropdown .custom-dropdown-items > div:first-child {
+  border-top: none;
+}
+
+.ex-sitecore-form__input--custom-dropdown .custom-dropdown-items--hidden {
+  display: none;
+}
+
+.ex-sitecore-form__input--custom-dropdown .custom-dropdown-items div:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.ex-sitecore-form__input--custom-dropdown .custom-dropdown-selected-item {
+  font-weight: bold;
+}
+
+.ex-sitecore-form__input--custom-dropdown .custom-dropdown-disabled-item {
+  color: #D6D6D6;
+  pointer-events: none;
+}
+
+.ex-sitecore-form__input--custom-dropdown .custom-dropdown-hasvalue {
+  color: #000;
+}
+
+.ex-sitecore-form__input--custom-dropdown--value .icon {
+  color: #000;
+}
+
+.ex-sitecore-form__input--datepicker .trigger-calendar-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  display: block;
+  top: 15px;
+  margin-top: auto;
+  left: 10px;
+  pointer-events: none;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--datepicker .trigger-calendar-icon,
+html[class*='translated-rtl'] .ex-sitecore-form__input--datepicker .trigger-calendar-icon {
+  right: 10px;
+  left: auto;
+}
+
+.ex-sitecore-form__input--datepicker input[type="text"] {
+  padding-left: 40px;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--datepicker input[type="text"],
+html[class*='translated-rtl'] .ex-sitecore-form__input--datepicker input[type="text"] {
+  padding-left: auto;
+  padding-right: 40px;
+}
+
+.ex-sitecore-form__input--tel .custom-dropdown {
+  cursor: pointer;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  text-indent: -9000px;
+  border-right-width: 0;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--tel .custom-dropdown,
+html[class*='translated-rtl'] .ex-sitecore-form__input--tel .custom-dropdown {
+  border-right-width: 1px;
+  border-left-width: 0;
+}
+
+.ex-sitecore-form__input--tel .custom-dropdown-items {
+  top: 50px;
+}
+
+.ex-sitecore-form__input--tel .custom-dropdown.select-arrow-active {
+  background: #ffffff;
+}
+
+.ex-sitecore-form__input--tel .custom-dropdown.select-arrow-active:before {
+  content: '';
+  position: absolute;
+  width: -webkit-calc( 100% + 1px);
+  width: calc( 100% + 1px);
+  height: 8px;
+  background: #ffffff;
+  z-index: 10001;
+  bottom: -4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: #F5F5F7;
+  left: -1px;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--tel .custom-dropdown.select-arrow-active:before,
+html[class*='translated-rtl'] .ex-sitecore-form__input--tel .custom-dropdown.select-arrow-active:before {
+  border-left-color: transparent;
+  border-right-color: #F5F5F7;
+  left: auto;
+  right: -1px;
+}
+
+.ex-sitecore-form__input--tel .icon {
+  height: 50px;
+  z-index: 1;
+  pointer-events: none;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: 15px;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--tel .icon,
+html[class*='translated-rtl'] .ex-sitecore-form__input--tel .icon {
+  left: auto;
+  right: 15px;
+}
+
+.ex-sitecore-form__input--tel input[type="tel"], .ex-sitecore-form__input--tel input[type="text"] {
+  width: -webkit-calc(100% - 50px);
+  width: calc(100% - 50px);
+  margin-left: 50px;
+}
+
+html[lang*='ar'] .ex-sitecore-form__input--tel input[type="tel"],
+html[class*='translated-rtl'] .ex-sitecore-form__input--tel input[type="tel"], html[lang*='ar'] .ex-sitecore-form__input--tel input[type="text"],
+html[class*='translated-rtl'] .ex-sitecore-form__input--tel input[type="text"] {
+  margin-right: 50px;
+  margin-left: auto;
+}
+
+.ex-sitecore-form__integrated-dropdown {
+  width: 50px !important;
+  height: 50px !important;
+  opacity: 0;
+}
+
+.sitecore-form .sitecore-form-error {
+  display: none;
+}
+
+.sitecore-form .validation-summary-errors {
+  display: none;
+}
+
+.sitecore-form .validation-summary-errors + div .ex-sitecore-form, .sitecore-form .validation-summary-errors + input + div .ex-sitecore-form {
+  display: none !important;
+}
+
+.sitecore-form .validation-summary-errors + div .sitecore-form-error, .sitecore-form .validation-summary-errors + input + div .sitecore-form-error {
+  display: block;
+}
+
+.ui-datepicker {
+  width: 20em;
+  z-index: 1000000 !important;
+}
+
+.ui-datepicker select.ui-datepicker-year, .ui-datepicker select.ui-datepicker-month {
+  width: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: "NotoKufiArabic", Arial, sans-serif;
+  border: none;
+  background: transparent;
+}
+
+.ui-datepicker .ui-datepicker-header {
+  border: none;
+  background: transparent;
+  color: #000;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-icon {
+  background-image: none;
+}
+
+html[lang*='ar'] .ui-datepicker .ui-datepicker-header .ui-icon,
+html[class*='translated-rtl'] .ui-datepicker .ui-datepicker-header .ui-icon {
+  text-indent: 99999px;
+}
+
+.ui-datepicker .ui-datepicker-title {
+  line-height: 40px;
+}
+
+.ui-datepicker .ui-datepicker-year, .ui-datepicker .ui-datepicker-month {
+  color: #b2b2b5;
+  font-size: 15px;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  left: auto;
+}
+
+.ui-datepicker .ui-datepicker-prev span:before, .ui-datepicker .ui-datepicker-next span:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 0;
+}
+
+html[lang*='ar'] .ui-datepicker .ui-datepicker-prev span:before,
+html[class*='translated-rtl'] .ui-datepicker .ui-datepicker-prev span:before, html[lang*='ar'] .ui-datepicker .ui-datepicker-next span:before,
+html[class*='translated-rtl'] .ui-datepicker .ui-datepicker-next span:before {
+  left: auto;
+  right: 0;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-prev:hover {
+  left: 0;
+  right: auto;
+}
+
+.ui-datepicker .ui-datepicker-prev span:before {
+  content: '|⟵';
+}
+
+.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-next:hover {
+  right: 0;
+  left: auto;
+}
+
+.ui-datepicker .ui-datepicker-next span:before {
+  content: '⟶|';
+}
+
+.ui-datepicker th {
+  padding: 0.95em 0.55em;
+  font-size: 12px;
+  color: #b2b2b5;
+}
+
+.ui-datepicker td a {
+  padding: 0.8em 0.6em;
+  text-align: center;
+}

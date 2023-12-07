@@ -1,0 +1,304 @@
+/***************************************************************************************************
+Extension Name: ex-csat
+Extension Version: 
+File: base file
+Owner: 
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-csat 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-csat 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-csat 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ui-lib-global-csat-feedback-js-modal-open {
+  /* FORM RESULT: SUCCESS OR ERROR */
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button {
+  color: #ffffff;
+  font-family: 'Roboto', 'NotoKufiArabic', 'Arial';
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button:hover {
+  color: #ffffff;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_primary {
+  background-color: #FAA317;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_primary:hover {
+  background-color: #fcbf5d;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_primary:active,
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_primary.ui-lib-global-csat-feedback-js-button_active {
+  background-color: #F67707;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_secondary {
+  color: #3F3E45;
+  border-color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_secondary:hover {
+  background-color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content {
+  color: #000;
+  font-family: 'Roboto', 'NotoKufiArabic', 'Arial';
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:hover {
+  border-color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:focus,
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:active {
+  border-color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-webkit-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-moz-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:-ms-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-ms-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-webkit-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:-ms-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-webkit-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-moz-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content:-ms-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-text-area
+.ui-lib-global-csat-feedback-js-text-area__content::-ms-input-placeholder {
+  color: #89888C;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__content
+.ui-lib-global-csat-feedback-js-label {
+  color: #89888C;
+  font-family: 'Roboto', 'NotoKufiArabic', 'Arial';
+}
+
+@media only screen and (max-width: 767px) {
+  .ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-content-container {
+    top: -webkit-calc(50% + 45px);
+    top: calc(50% + 45px);
+    max-height: -webkit-calc(100% - 98px);
+    max-height: calc(100% - 98px);
+  }
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__close-icon path {
+  fill: #b2b2b5;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__close-icon:hover path {
+  fill: #FAA317;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__title {
+  color: #3F3E45;
+  font-weight: 900;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-title {
+  color: #3F3E45;
+  font-weight: 900;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__result-title {
+  color: #3F3E45;
+  font-weight: 900;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__result-description {
+  color: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-title {
+  color: #3F3E45;
+  font-weight: 900;
+  text-transform: none;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-star_selected g {
+  stroke: #FAA317;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-star.ui-lib-global-csat-feedback-js-form__rate-item-star_hovered
+g {
+  stroke: #FAA317;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-star.ui-lib-global-csat-feedback-js-form__rate-item-star_hovered
+path {
+  fill: #FAA317;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__emotions-button svg path:first-child {
+  fill: #fcbf5d;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__emotions-button:nth-child(1)
+svg
+path:nth-child(2) {
+  fill: #FAA317;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__emotions-button:nth-child(2)
+svg
+path:nth-child(2) {
+  fill: #fcbf5d;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__emotions-button:nth-child(3)
+svg
+path:nth-child(2) {
+  fill: #F67707;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-star path {
+  fill: #D6D6D6;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-form__rate-item-star_selected path {
+  fill: #FAA317;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_primary
+.ui-lib-global-csat-feedback-js-button__icon {
+  fill: #ffffff;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_secondary
+.ui-lib-global-csat-feedback-js-button__icon {
+  fill: #3F3E45;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_secondary:hover
+.ui-lib-global-csat-feedback-js-button__icon {
+  fill: #ffffff;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-button_secondary:hover {
+  color: #ffffff;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open button:focus {
+  outline: none !important;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-modal-overlay {
+  z-index: 999999;
+}
+
+.ui-lib-global-csat-feedback-js-modal-open h1, .ui-lib-global-csat-feedback-js-modal-open h2, .ui-lib-global-csat-feedback-js-modal-open h3, .ui-lib-global-csat-feedback-js-modal-open h4, .ui-lib-global-csat-feedback-js-modal-open h5, .ui-lib-global-csat-feedback-js-modal-open h6 {
+  font-family: 'Roboto', 'NotoKufiArabic', 'Arial' !important;
+}
+
+@media screen and (max-width: 992px) {
+  .ui-lib-global-csat-feedback-js-modal-open .ui-lib-global-csat-feedback-js-content-container {
+    max-width: 90vw;
+  }
+}
+
+/* Open Button */
+body .ui-lib-global-csat-feedback-js-open-button {
+  background: #F67707;
+}
+
+body .ui-lib-global-csat-feedback-js-open-button .ui-lib-global-csat-feedback-js-open-button__wrapper {
+  background: #FAA317;
+}
+
+body .ui-lib-global-csat-feedback-js-open-button:focus {
+  outline: none !important;
+}
+
+body .ui-lib-global-csat-feedback-js-open-button:hover .ui-lib-global-csat-feedback-js-open-button__wrapper {
+  background: #F67707;
+}
+
+body .ui-lib-global-csat-feedback-js-open-button .ui-lib-global-csat-feedback-js-open-button__text {
+  font-weight: 900;
+  font-family: 'Roboto', 'NotoKufiArabic', 'Arial' !important;
+}

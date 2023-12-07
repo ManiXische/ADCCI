@@ -1,0 +1,244 @@
+/***************************************************************************************************
+Extension Name: ex-parallax 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-parallax 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-parallax 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-parallax 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-parallax, .section {
+  position: relative;
+  background-color: #F5F5F7;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.ex-parallax--parallax, .section--parallax {
+  background-attachment: fixed;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-parallax--parallax, .section--parallax {
+    background-attachment: initial;
+  }
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .ex-parallax--parallax, .section--parallax {
+      background-attachment: scroll;
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-parallax--parallax, .section--parallax {
+    background-attachment: scroll;
+  }
+}
+
+.ex-parallax--parallax__slider__tabs__title, .section--parallax__slider__tabs__title {
+  margin: 0 auto;
+}
+
+.ex-parallax--parallax__slider__tabs__title .slick-slide, .section--parallax__slider__tabs__title .slick-slide {
+  opacity: 0.5;
+}
+
+.ex-parallax--parallax__slider__tabs__title .slick-current, .section--parallax__slider__tabs__title .slick-current {
+  opacity: 1;
+}
+
+.ex-parallax--parallax__Links-numbers img, .section--parallax__Links-numbers img {
+  width: 60px;
+  max-width: none;
+}
+
+.ex-parallax--parallax__Links-numbers a, .section--parallax__Links-numbers a {
+  color: #ffffff;
+}
+
+.ex-parallax--parallax__Links-numbers a:hover, .section--parallax__Links-numbers a:hover {
+  color: #FF8D00;
+}
+
+.ex-parallax--parallax__Links-numbers__separator, .section--parallax__Links-numbers__separator {
+  opacity: 0.5;
+  height: 130px;
+  border-left: 1px solid #ffffff;
+}
+
+.ex-parallax--bg-contain, .section--bg-contain {
+  background-size: contain;
+}
+
+.ex-parallax--min-height, .section--min-height {
+  min-height: 600px;
+}
+
+.ex-parallax--left, .section--left {
+  background-size: initial;
+  background-position-x: left;
+}
+
+html[lang*='ar'] .ex-parallax--left,
+html[class*='translated-rtl'] .ex-parallax--left, html[lang*='ar'] .section--left,
+html[class*='translated-rtl'] .section--left {
+  background-position-x: right;
+}
+
+.ex-parallax--repeat-x, .section--repeat-x {
+  background-repeat: repeat-x;
+}
+
+.ex-parallax--repeat-y, .section--repeat-y {
+  background-repeat: repeat-y;
+}
+
+.ex-parallax--repeat, .section--repeat {
+  background-repeat: repeat;
+}
+
+.ex-parallax--right, .section--right {
+  background-size: initial;
+  background-position-x: right;
+}
+
+html[lang*='ar'] .ex-parallax--right,
+html[class*='translated-rtl'] .ex-parallax--right, html[lang*='ar'] .section--right,
+html[class*='translated-rtl'] .section--right {
+  background-position-x: left;
+}
+
+.ex-parallax--bottom, .section--bottom {
+  background-size: initial;
+  background-position-y: bottom;
+}
+
+.ex-parallax--top, .section--top {
+  background-size: initial;
+  background-position-y: top;
+}
+
+.ex-parallax--white, .section--white {
+  background-color: #ffffff;
+}
+
+.ex-parallax--bg-effect, .section--bg-effect {
+  background-color: #FF8D00;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.ex-parallax--bg-effect--cover, .section--bg-effect--cover {
+  background-size: cover;
+}
+
+.ex-parallax--bg-effect__cms-img img, .section--bg-effect__cms-img img {
+  display: none;
+}
+
+html[lang*='en'] .ex-parallax--bg-effect,
+html[class*='translated-ltr'] .ex-parallax--bg-effect, html[lang*='en'] .section--bg-effect,
+html[class*='translated-ltr'] .section--bg-effect {
+  background-position: right bottom;
+}
+
+html[lang*='ar'] .ex-parallax--bg-effect,
+html[class*='translated-rtl'] .ex-parallax--bg-effect, html[lang*='ar'] .section--bg-effect,
+html[class*='translated-rtl'] .section--bg-effect {
+  background-position: left bottom;
+}
+
+.ex-parallax--before::before, .section--before::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  width: 1px;
+  height: 50px;
+  background-color: #ffffff;
+}
+
+.ex-parallax--before::after, .section--before::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.ex-parallax--animation > div, .section--animation > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.ex-parallax--overlay .parallax-overlay, .section--overlay .parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transform: none !important;
+  -ms-transform: none !important;
+  transform: none !important;
+}
+
+.on-page-editor .ex-parallax--bg-effect__cms-img img {
+  display: block;
+}

@@ -1,0 +1,110 @@
+﻿@{ var datasource = ViewBag.datasource;
+    var currentPage = ViewBag.currentPage;
+
+
+    //var isFormSubmitted = TempData["isSuccess"] == null ? false : (bool)TempData["isSuccess"];
+
+}
+
+
+
+
+
+
+<div class="ex-download-form ">
+    <form id="downloadForm" data-success-message="We have recieved your message"
+          data-error-message="We could not recieve this, Please try again later" data-ok-button="OK">
+
+
+        <section class="container">
+            <div class="row ex-sitecore-form w-100 mb-7">
+                <div class="col-12">
+                    <h4 class="ex-sitecore-form__title mb-4 text-capitalize">Custom Download Form</h4>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ex-sitecore-form__input ex-sitecore-form__input--disabledx position-relative mb-4">
+                        <label class="ex-sitecore-form__label" for="Name"> Name</label>
+                        <input name="Name" id="Name" type="text" placeholder="Name" required
+                               data-msg-required="Name is required" class="ex-sitecore-form__input" />
+                        <div class="field-validation-error error-block mt-2"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ex-sitecore-form__input position-relative mb-4">
+
+                        <label class="ex-sitecore-form__label" for="Email">Email</label>
+                        <input name="Email" id="Email" type="Email" placeholder="Email" required
+                               data-msg-required="Email is required" class="ex-sitecore-form__input" />
+                        <div class="field-validation-error error-block mt-2"></div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="captcha-wrapper g-recaptcha"
+                         data-name="recaptcha"
+                         data-sitekey="6LdTYDAaAAAAACcl8TOHfMZvcPizqtDaeii8ey0t"
+                         data-msg-required="reCAPTCHA is mandatory"></div>
+
+                    
+                </div>
+
+                <div class="col-12">
+                    <button class="button floated-element-left mt-3" type="submit" id="submit" data-ds="@datasource" data-currentPage="@currentPage" disabled >Submit</button>
+
+
+                </div>
+            </div>
+            <div class="ex-download-form__content">
+
+            </div>
+        </section>
+
+
+    </form>
+
+</div>
+<!-- JQUERY -->
+<!-- ex-main-theme : uncomment needed files -->
+<!-- Lib -->
+
+
+<form method="post" action="@Url.Action("downloadFile", "DownloadForm",new { ds = datasource})">
+    <div class="ex-download-form-response" id="downloadButtonSection" style="display:none;">
+        <div class="ex-download-form-response__title">
+            <h3>Thanks for the input, you can download the form</h3>
+        </div>
+        <button class="button floated-element-left mt-3" type="submit">
+            DOWNLOAD PDF
+        </button>
+    </div>
+</form>
+
+  <script type="text/javascript">
+    var onloadCallback = function () {
+      var event = new Event('grecaptcha-loaded');
+      document.dispatchEvent(event);
+    };
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&lang=en" async defer></script>
+
+@*<script src="@Url.Content("/Assets/Js/jquery-3.4.1.js")"></script>
+    <script src="@Url.Content("/Assets/Js/prototypeextensions.js")"></script>
+    <script src="@Url.Content("/Assets/Js/extendextensions.js")"></script>
+    <script src="@Url.Content("/Assets/Js/prototypeextensions.js")"></script>
+
+    <script src="@Url.Content("/Assets/Js/jquery-validate-min.js")"></script>
+    <script src="@Url.Content("/Assets/Js/component.sitecore.form.plugin.source.code.js")"></script>
+    <script src="@Url.Content("/Assets/Js/components-sitecore-form.js")"></script>*@
+
+
+@*
+<script src="@Url.Content("/Assets/Js/jquery-3.4.1.js")"></script>
+
+<script src="@Url.Content("/Assets/Js/DownloadForm.js")"></script>*@
+
+
+
+
+
+
+
+

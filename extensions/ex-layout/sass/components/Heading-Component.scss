@@ -1,0 +1,292 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: Headings
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+h1,
+.title {
+  font-family: $layout-heading-font-family;
+  // fallback 
+  font-size: $layout-h1-font-size;
+  line-height: $layout-h1-line-height;
+
+  // mobile & tablets portrait 
+  @media #{$sm} {
+    font-size: $layout-h1-sm-font-size;
+    line-height: $layout-h1-sm-line-height;
+  }
+
+}
+
+h2,
+.sub-title {
+  font-family: $layout-heading-font-family;
+  // fallback
+  font-size: $layout-h2-font-size;
+  line-height: $layout-h2-line-height;
+
+  // mobile & tablets portrait 
+  @media #{$sm} {
+    font-size: $layout-h2-sm-font-size;
+    line-height: $layout-h2-sm-line-height;
+  }
+}
+
+h3,
+.side-menu-text {
+  font-family: $layout-heading-font-family;
+  // fallback
+  font-size: $layout-h3-font-size;
+  line-height: $layout-h3-line-height;
+  // mobile & tablets portrait 
+  @media #{$sm} {
+    font-size: $layout-h3-sm-font-size;
+    line-height: $layout-h3-sm-line-height;
+  }
+}
+
+h4,
+.small-title {
+  font-family: $layout-heading-font-family;
+
+  // fallback
+  font-size: $layout-h4-font-size;
+  line-height: $layout-h4-line-height;
+
+  // mobile & tablets portrait 
+  @media #{$sm} {
+    font-size: $layout-h4-sm-font-size;
+    line-height: $layout-h4-sm-line-height;
+  }
+}
+
+h5 {
+  font-family: $layout-heading-font-family;
+
+  // fallback
+  font-size: $layout-h5-font-size;
+  line-height: $layout-h5-line-height;
+
+  // mobile & tablets portrait 
+  @media #{$sm} {
+    font-size: $layout-h5-sm-font-size;
+    line-height: $layout-h5-sm-line-height;
+  }
+}
+
+h6,
+.card-text {
+  font-family: $layout-heading-font-family;
+
+  // fallback
+  font-size: $layout-h6-font-size;
+  line-height: $layout-h6-line-height;
+
+  // mobile & tablets portrait 
+  @media #{$sm} {
+    font-size: $layout-h6-sm-font-size;
+    line-height: $layout-h6-sm-line-height;
+  }
+}
+
+p,
+.paragraph {
+  font-family: $layout-p-font-family;
+  // fallback
+  font-size: $layout-p-font-size;
+  line-height: $layout-p-line-height;
+  font-weight: 400;
+}
+
+.display {
+  &-1 {
+    font-weight: 900;
+    font-size: $layout-display-1-font-size;
+    line-height: $layout-display-1-line-height;
+
+    // mobile & tablets portrait 
+    @media #{$sm} {
+      font-size: $layout-display-1-sm-font-size;
+      line-height: $layout-display-1-sm-line-height;
+    }
+  }
+
+  &-2 {
+    font-weight: 400;
+    font-size: $layout-display-2-font-size;
+    line-height: $layout-display-2-line-height;
+    // mobile & tablets portrait 
+    @media #{$sm} {
+      font-size: $layout-display-2-sm-font-size;
+      line-height: $layout-display-2-sm-line-height;
+    }
+  }
+
+  &-3 {
+    font-weight: 900;
+    font-size: $layout-display-3-font-size;
+    line-height: $layout-display-3-line-height;
+
+    // mobile & tablets portrait 
+    @media #{$sm} {
+      font-size: $layout-display-3-sm-font-size;
+      line-height: $layout-display-3-sm-line-height;
+    }
+  }
+
+  &-4 {
+    font-weight: 400;
+    font-size: $layout-display-4-font-size;
+    line-height: $layout-display-4-line-height;
+
+    // mobile & tablets portrait 
+    @media #{$xs} {
+      font-size: $layout-display-4-sm-font-size;
+      line-height: $layout-display-4-sm-line-height;
+    }
+  }
+
+  &-5 {
+    font-weight: 900;
+    font-size: $layout-display-5-font-size;
+    line-height: $layout-display-5-line-height;
+
+    // mobile & tablets portrait 
+    @media #{$sm} {
+      font-size: $layout-display-5-sm-font-size;
+      line-height: $layout-display-5-sm-line-height;
+    }
+  }
+
+  &-6 {
+    font-weight: 400;
+    font-size: $layout-display-6-font-size;
+    line-height: $layout-display-6-line-height;
+
+    // mobile & tablets portrait 
+    @media #{$sm} {
+      font-size: $layout-display-6-sm-font-size;
+      line-height: $layout-display-6-sm-line-height;
+    }
+  }
+}
+
+//h1,h2,h3,h4,h5,h6
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
+
+// caption & tablets portrait 
+caption,
+.caption {
+  font-family: $layout-caption-font-family;
+  // fallback
+  font-size: $layout-caption-font-size;
+  line-height: $layout-caption-line-height;
+
+  // mobile & tablets portrait 
+  @media #{$md} {
+    font-size: $layout-caption-sm-font-size;
+    line-height: $layout-caption-sm-line-height;
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media #{$md} {
+    font-size: $layout-caption-font-size;
+    line-height: $layout-caption-line-height;
+  }
+}
+
+label,
+.small-text {
+  font-family: $layout-label-font-family;
+  // fallback
+  font-size: $layout-label-font-size;
+  line-height: $layout-label-line-height;
+  text-transform: $layout-label-text-transform;
+  letter-spacing: $layout-label-letter-spacing;
+  @include rtl{
+  letter-spacing: 0;
+  }
+  // mobile & tablets portrait 
+  @media #{$md} {
+    font-size: $layout-label-sm-font-size;
+    line-height: $layout-label-sm-line-height;
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media #{$xxl} {
+    font-size: $layout-label-xxl-font-size;
+    line-height: $layout-label-xxl-line-height;
+  }
+}
+
+.tags {
+  font-size: $layout-tags-font-size;
+  line-height: $layout-tags-line-height;
+}
+
+.tiny-text {
+  font-family: $layout-label-font-family;
+  // fallback
+  font-size: $layout-label-font-size;
+  line-height: $layout-label-line-height;
+}
+
+
+.title-block {
+  &__sub {
+    // font-size: $layout-titleblock-sub-font-size;
+    // font-weight: $layout-titleblock-sub-font-weight;
+    // margin-bottom: $layout-titleblock-sub-mb;
+  }
+
+  &__main {
+    // font-size: $layout-titleblock-main-font-size;
+    // font-weight: $layout-titleblock-main-font-weight;
+    // line-height: $layout-titleblock-main-line-height;
+    // margin-bottom: $layout-titleblock-main-mb;
+  }
+
+  &__desc {
+    // font-size: $layout-titleblock-desc-font-size;
+    // line-height: $layout-titleblock-desc-line-height;
+    // margin-bottom: $layout-titleblock-desc-mb;
+  }
+
+  &--white {
+    color: #fff;
+  }
+
+  &--primary {
+    color: $layout-titleblock-primary-color;
+  }
+
+  &--secondary {
+    color: $layout-titleblock-secondary-color;
+  }
+}
+
+b,
+strong {
+  font-family: $font_en;
+  font-weight: 900;
+
+  @include rtl {
+    font-family: $font_ar;
+    font-weight: 900;
+  }
+}

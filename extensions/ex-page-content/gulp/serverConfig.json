@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-page-content",
+        "version" : "1.0.0",
+        "owner" :  "mfouadshaheen"
+    }
+}

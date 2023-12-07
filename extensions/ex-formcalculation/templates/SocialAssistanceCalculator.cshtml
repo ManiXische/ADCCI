@@ -1,0 +1,185 @@
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@{
+    string UnderAgevalue = string.Empty, AboveAgeValue = string.Empty, FamilyHeadValue = string.Empty, ApplySocialAssitance = string.Empty;
+    string MaxUnderAge = string.Empty, MaxAboveAge = string.Empty, ValueImage = string.Empty;
+    Sitecore.Data.Fields.ImageField imageField = null;
+    Sitecore.Data.Fields.LinkField linkField = null;
+    var renderingcontext = Sitecore.Mvc.Presentation.RenderingContext.CurrentOrNull;
+    var datasource = renderingcontext.Rendering.DataSource;
+    Sitecore.Data.Items.Item datasourceitem = Sitecore.Context.Database.GetItem(datasource);
+    if (datasourceitem != null && datasourceitem.Fields != null && datasourceitem.Fields.Count > 0)
+    {
+        imageField = (Sitecore.Data.Fields.ImageField)(datasourceitem.Fields["ValuesImage"]);
+        linkField = (Sitecore.Data.Fields.LinkField)(datasourceitem.Fields["SocialAssistanceLink"]);
+        MaxUnderAge = datasourceitem.Fields["MaxUnderAge"] != null ? datasourceitem.Fields["MaxUnderAge"].ToString() : MaxUnderAge;
+        MaxAboveAge = datasourceitem.Fields["MaxAboveAge"] != null ? datasourceitem.Fields["MaxAboveAge"].ToString() : MaxAboveAge;
+        UnderAgevalue = datasourceitem.Fields["UnderAgevalue"] != null ? datasourceitem.Fields["UnderAgevalue"].ToString() : UnderAgevalue;
+        AboveAgeValue = datasourceitem.Fields["AboveAgeValue"] != null ? datasourceitem.Fields["AboveAgeValue"].ToString() : AboveAgeValue;
+        FamilyHeadValue = datasourceitem.Fields["FamilyHeadValue"] != null ? datasourceitem.Fields["FamilyHeadValue"].ToString() : FamilyHeadValue;
+
+    }
+    var DictionaryDomain=string.Format("{0}-Dictionary",Sitecore.Context.GetSiteName());
+    
+}
+<div class="container mt-5 ex-formcalculation">
+    <div class="row mb-7 flex-row-reverse">
+        <div class="col-lg-8 col-md-6 col-sm-12">
+            <div class="ex-formcalculation__image mx-6">
+                @if (imageField != null && imageField.MediaItem != null)
+                {
+                    @Html.Sitecore().Field("ValuesImage", Sitecore.Context.Database.GetItem(datasource))
+
+                }
+
+                <span class="mt-3 d-block small-text">@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.imgcondition")</span>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <form action="#">
+                <div class="ex-sitecore-form">
+                    <div class="mt-5">
+
+                       
+                        <h5 class="mb-2 font-weight-boldest">@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.headerunderage") </h5>
+                        <p class="mb-2">
+                            @Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.subheaderunderage")
+                        </p>
+                        <div class="ex-sitecore-form__input position-relative mb-4">
+                            <label class="ex-sitecore-form__label" for="under14dependents">@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.labelunderage")</label>
+                            <input type="text" placeholder="" name="under14dependents"
+                                    data-rule-max="@MaxUnderAge" data-msg-max="@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.errminmsg")"
+                                    data-rule-min="0" data-msg-min="@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.errmaxmsg")" 
+                                    data-rule-pattern = "^(?=.*?[1-9])[0-9]+$" 
+                                    data-msg-pattern = "@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.errdependentspattern")" 
+
+                                   />
+                            <span class="field-validation-error">  </span>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <h5 class="mb-2 font-weight-boldest">
+                            @Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.headeroverage")
+                        </h5>
+                        <p class="mb-2">
+                            @Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.subheaderoverage")
+
+                        </p>
+
+                        <div class="ex-sitecore-form__input position-relative mb-4">
+                            <label class="ex-sitecore-form__label" for="over14dependents">
+                                @Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.labeloverage")
+                            </label>
+                            <input type="text" placeholder="" name="over14dependents"
+                                    data-rule-max="@MaxAboveAge" data-msg-max="@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.errminmsg")"
+                                    data-rule-min="0" data-msg-min="@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.errmaxmsg")" 
+                                    data-rule-pattern = "^(?=.*?[1-9])[0-9]+$" 
+                                    data-msg-pattern = "@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.errdependentspattern")" 
+
+                                   />
+                            <span class="field-validation-error">  </span>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <h5 class="mb-2 font-weight-boldest">
+                            @Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.headertotalincome")
+                        </h5>
+                        <div class="ex-sitecore-form__input position-relative mb-4">
+                            <label class="ex-sitecore-form__label" for="monthlyincome">
+                                @Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.monthlyincome")
+                            </label>
+                            <input type="text" placeholder="" name="monthlyincome"
+                                   required
+                                   data-msg-required="@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.errreqmsg1")"
+                                   data-rule-pattern="^(?=.*?[1-9])[0-9]+$"
+                                   data-msg-pattern="@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.errtypmsg1")" 
+                                    data-rule-min="0"
+                                    data-msg-min="@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.errincomeminvalue")"
+                                   />
+                            <span class="field-validation-error">  </span>
+                        </div>
+                    </div>
+                    <div class="my-5">
+                        <button type="submit" class="ex-formcalculation__calculate button rounded text-uppercase font-weight-boldest">
+                            @Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.btncal")
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+      
+    </div>
+    <div class="row ex-formcalculation__table-holder" style="display: none;">
+        <div class="col-12">
+            <div class="ex-formcalculation__tip d-flex justify-content-between px-5 py-4 flex-column flex-lg-row flex-md-row">
+                <p class="mb-2">
+                    @Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.hdrcondition")
+                </p>
+                <div class="d-flex flex-column mb-2">
+                    <h3 class="font-weight-normal">
+                        <span class="possible-total-cell">9,370</span> @Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.currency")
+                    </h3>
+                    <p>
+                        @Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.tblpermonth")
+                    </p>
+                </div>
+            </div>
+            <div class="ex-formcalculation__table table-responsive">
+                <table class="table table-hover">
+                    <thead class="">
+                        <tr class="ex-formcalculation__table__head font-weight-bold">
+                            <th></th>
+                            <th>@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.colhdr1")</th>
+                            <th>@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.colhdr2")</th>
+                            <th>@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.colhdr3")</th>
+                        </tr>
+
+                    </thead>
+                    <tr>
+                        <td>@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.row1")</td>
+                        <td class="under-no-cell">2</td>
+                        <td class="under-sap-cell">@UnderAgevalue</td>
+                        <td class="under-total-cell">4,470</td>
+                    </tr>
+                    <tr class="">
+                        <td>@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.row2")</td>
+                        <td class="over-no-cell">2</td>
+                        <td class="over-sap-cell">@AboveAgeValue</td>
+                        <td class="over-total-cell">4,470</td>
+                    </tr>
+                    <tr>
+                        <td>@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.row3")</td>
+                        <td class="familyhead-no-cell">2</td>
+                        <td class="familyhead-sap-cell">@FamilyHeadValue</td>
+                        <td class="familyhead-total-cell">4,470</td>
+                    </tr>
+                    <tr class="ex-formcalculation__table__active">
+                        <td class="font-weight-bold">@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.row4")</td>
+                        <td></td>
+                        <td></td>
+                        <td class="familyincome-total-cell">4,470</td>
+                    </tr>
+                    <tr>
+                        <td>@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.row5")</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="monthlyincome-total-cell">4,470</td>
+                    </tr>
+                    <tr class="ex-formcalculation__table__active">
+                        <td>@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.row6")</td>
+                        <td></td>
+                        <td></td>
+                        <td class="possible-total-cell">4,470</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="d-flex mt-4 mx-3">
+                @Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.allcondition")
+            </div>
+            <div class="d-flex justify-content-between px-lg-5 mt-5 mb-7 flex-column flex-lg-row flex-md-row">
+                <button class="button rounded button--invert button--invert--reverse text-uppercase font-weight-bold ex-formcalculation__clear m-2">@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.startover")</button>
+                <a href="@linkField.Url" target="@linkField.Target" title="@linkField.Title"  class="button rounded button--invert button--invert--reverse text-uppercase font-weight-bold ex-formcalculation__apply m-2">@Sitecore.Globalization.Translate.TextByDomain(DictionaryDomain,"ssa.social.assistance.label.btnapply")</a>
+            </div>
+        </div>
+    </div>
+</div>

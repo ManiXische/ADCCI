@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"###tenant###",
+        "name": "###projectName###",
+        "version" : "1.0.0",
+        "owner" :  "###owner###"
+    }
+}

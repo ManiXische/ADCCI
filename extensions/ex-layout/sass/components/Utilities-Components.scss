@@ -1,0 +1,367 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: Utilities
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// message block 
+.message-block {
+    $msgBlock : &;
+   
+    &--icon{
+      color:$layout-message-block-font-color;
+      min-width: 0;
+      border-radius: $layout-message-block-border-raduis;
+      background-clip: padding-box;
+      width: $layout-message-block-width;
+      height: $layout-message-block-height;
+      font-size: $layout-message-block-font-size;
+      @media #{$sm} {
+        width: $layout-message-block-width-mobile;
+        height: $layout-message-block-height-mobile;
+      }
+    } 
+    &--error{
+        .message-block--icon{
+          background-color: $layout-message-block-bar-bg-bad;
+        }
+    }
+    &--success{
+        .message-block--icon{
+          background-color: $layout-message-block-bar-bg-good;
+        }
+    }
+}
+
+// alert 
+.alert{
+  padding: $layout-alerts-padding;
+  &__indicator-icon{
+    font-size: $layout-alerts-indicator-icon-size;
+  }
+  &-info{
+    background-color: $layout-alerts-info-bg-color;
+    i{
+      color:$layout-alerts-info-icon-color;
+    }
+  }
+
+  &-success{
+    background-color: $layout-alerts-success-bg-color;
+    i{
+      color:$layout-alerts-success-icon-color;
+    }
+  }
+
+  &-warning{
+    background-color: $layout-alerts-warning-bg-color;
+    i{
+      color:$layout-alerts-warning-icon-color;
+    }
+  }
+
+  &-error{
+    background-color: $layout-alerts-error-bg-color;
+    i{
+      color:$layout-alerts-icon-color;
+    }
+  }
+  
+  
+}
+  
+// dialog 
+.dialog-component{
+    @include rtl{
+      direction: rtl;
+      text-align: right;
+    }
+    max-width: $layout-dialog-max-width;
+    @media #{$sm}{
+      max-width: 100%;
+    }
+    // max-height: $layout-dialog-max-height;
+    overflow: hidden;
+    &__header{
+      max-height: $layout-dialog-header-height;
+      padding : $layout-dialog-header-padding;
+      border-bottom: $layout-dialog-header-border-bottom;
+    }
+    &__close{
+      color : $layout-dialog-close-color;
+      position: absolute;
+      right: 33px;
+      @include rtl{
+        right: auto;
+        left: 33px;
+      }
+      top: 28px;
+      cursor: pointer;
+
+      &:hover{
+        color : $layout-dialog-close-hover-color;
+      }
+    }
+    &__message {
+      max-height: $layout-dialog-message-height;
+
+      overflow: auto;
+
+      p{
+          margin : $layout-dialog-text-padding;
+      }
+
+      &__image {
+        height : $layout-dialog-image-height;
+        background-size: cover;
+        img { 
+          display: none;
+        }
+        $image : &;
+        @at-root{
+          .on-page-editor{
+            #{$image}{
+              img { 
+                display: block;
+              }
+            }
+          }
+        }
+        i {
+          color: $layout-dialog-play-video-color;
+          position: absolute;
+          width:28px;
+          height:28px;
+          font-size: 28px;
+          bottom: 0;
+          right:0;
+          top:0;
+          left:0;
+          margin:auto;
+        }
+      }
+    }
+    &__footer {
+      margin : $layout-dialog-footer-padding;
+      max-height: $layout-dialog-footer-height;
+      &__button{
+        border: $layout-dialog-button-border;
+        border-radius: $layout-dialog-button-border-radius;
+        background: $layout-dialog-button-bg;
+        color : $layout-dialog-button-color;
+      }
+    }
+}
+
+// google translate 
+.goog-te-gadget{
+  height: 28px;
+  overflow: hidden;
+  > div:first-child {
+    position: relative;
+    height: 100%;
+    &:before{
+      content: '';
+      display: block;
+      background-repeat: no-repeat;
+      background-image: url(../images/glogo.png);
+      background-size: contain;
+      width: 17px;
+      height: 17px;
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      @include transform( translate(0, -50%));
+
+      left: 8px;
+      // @include rtl{
+      //   left: auto;
+      //   right:8px;
+      // }
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      right:8px;
+      // @include rtl{
+      //   right:auto;
+      //   left:8px;
+      // }
+      top: 50%;
+      @include transform( translate(0, -50%) rotate(45deg));
+      border: solid black;
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      padding: 3px;
+      pointer-events: none;
+    }
+  }
+  select.goog-te-combo{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border: $layout-google-translate-border;
+    margin: 0;
+    border-radius: 3px;
+    font-weight: 900;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 26px;
+    color: $layout-google-translate-color;
+    padding-left: 30px;
+    padding-right:5px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  &-simple{
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    &[style] {
+      border: $layout-google-translate-border;
+    }
+  
+    .goog-te-menu-value {
+      span {
+        &:first-child {
+          @include rtl {
+            font-size: 0;
+          }
+          &:after {
+            @include rtl {
+              content: "تحديد اللغة";
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }  
+}
+
+
+//call to action 
+.call-to-action {
+  @include background-gradient(top,$cta-component-bg-color1,$cta-component-bg-color1-percentage ,to $cta-component-bg-color1-direction, $cta-component-bg-color2,$cta-component-bg-color2-percentage);
+  color: $cta-component-text-color;
+
+  div.button{
+    background-color: $cta-component-button-bg-color;
+    border:none;
+    height: 40px;
+    &:hover{
+      background-color:$cta-component-button-bg-hover;
+      color:$cta-component-button-color-hover;
+    }
+  }
+  &__separator{
+    height: 50px;
+    border-left: $cta-component-separator;
+    opacity: 50%;
+  }
+  
+  &__text{
+    z-index: 1;
+  }
+  &__bg-img{
+    left: 0;
+    top: 0;
+    background-size: cover;
+  }
+
+  &__number {
+    z-index: 1;
+    //for the telephone number color
+    a {
+      color: $cta-component-telphone-color;
+    }
+    img{
+      width: 30px;
+    }
+  }
+
+  &__button-holder{
+    z-index: 1;
+    @media #{$sm}{
+      width: 295px;
+    }
+  }
+
+  &--alt{
+    background-color: $cta-component--alt-background;
+    color: $cta-component--alt-color;
+    .call-to-action__separator{
+      border-left-color: $cta-component--alt-separator;
+    }
+
+  }
+
+
+
+}
+
+
+
+.privacy-warning.permisive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 25px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  background-color: color-opacity($layout-cookies-background-color, 0.95);
+  box-shadow: 0 0 5px 0 #000;
+  color: $layout-cookies-font-color;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  z-index:10000;
+}
+
+.privacy-warning.permisive a,
+.privacy-warning.permisive a:hover{
+  cursor: pointer;
+  color: $layout-cookies-font-color;
+}
+
+.privacy-warning.permisive .close{
+  opacity:1;
+  position: absolute;
+  height:20px;
+  z-index:10001;
+  right:35px;
+  top:0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.privacy-warning.permisive .submit a{
+  margin:10px 30px;
+  display:inline-block;
+  border:1px solid $layout-cookies-font-color;
+  padding:10px;
+}
+
+.privacy-warning.permisive .info{
+  text-align:center;
+}
+
+@media only screen and (max-width: 992px) {
+  .privacy-warning.permisive{
+    flex-flow: column;
+  }
+}

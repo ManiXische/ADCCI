@@ -1,0 +1,49 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+
+
+$ex-polls-question-title-font-size: 26px !default;
+$ex-polls-question-title-font-weight: normal !default;
+$ex-polls-question-title-padding-bottom: 20px !default;
+$ex-polls-question-title-margin-bottom: 35px !default;
+$ex-polls-question-title-border-bottom: 1px solid $grey-200 !default;
+$ex-polls-question-title-display: inline-block !default;
+
+$ex-polls-question-title-span-font-size: 36px !default;
+$ex-polls-question-title-span-font-weight: bold !default;
+
+
+$ex-polls-progress-item-border-bottom:1px solid $grey-100 !default;
+
+$ex-polls-progress-bar-border-radius:0 25px 25px 0 !default;
+$ex-polls-progress-bar-height:52px !default;
+$ex-polls-progress-bar-rtl-border-radius:25px 0 0 25px !default;
+$ex-polls-progress-bar-h4-font-size:16px !default;
+$ex-polls-progress-bar-h4-padding: 0 25px !default;
+$ex-polls-progress-bar-h4-text-align: left !default;
+$ex-polls-progress-bar-h4-rtl-text-align: right !default;
+$ex-polls-progress-bar-h4-span-font-size: 16px !default;
+$ex-polls-progress-bar-h4-span-padding: 0 25px !default;
+$ex-polls-progress-bar-h4-strong-font-size: 24px !default;
+$ex-polls-progress-bar-h4-strong-padding-right: 40px !default;
+
+$ex-polls-progress-bar-h4-sm-font-size:12px !default;
+$ex-polls-progress-bar-h4-sm-padding: 0 5px !default;
+$ex-polls-progress-bar-h4-sm-span-font-size: 12px !default;
+$ex-polls-progress-bar-h4-sm-span-padding: 0 5px !default;
+$ex-polls-progress-bar-h4-sm-strong-font-size: 12px !default;
+$ex-polls-progress-bar-h4-sm-strong-padding-right: 5px !default;
+
+$ex-polls-progress-bar-bg-verygood:$success-color !default;
+$ex-polls-progress-bar-bg-good:#e6ae74 !default;
+$ex-polls-progress-bar-bg-verybad:$danger-color !default;
+$ex-polls-progress-bar-bg-verybad-black-font-color: $black-color !default;
+
+
+$ex-polls-popup-width: 950px  !default;
+$ex-polls-icon-vote-font-size:50px !default;
+$layout-fancy-light-close-hover-color:$black-color !default;

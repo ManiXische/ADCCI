@@ -1,0 +1,435 @@
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Don't remove Section -->
+
+        <!-- ex-main-theme -->
+        <link rel="stylesheet" href="../../ex-main-theme/styles/bootstrap.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/icomoon.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/icons.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/animate.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/jquery-fancybox.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/owl-carousel.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/slick.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/smooth-scrollbar.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/components-main-theme.css" >
+
+        <!-- ex-layout  -->
+        <link rel="stylesheet" href="../../ex-layout/styles/components-layout.css">
+        <!-- End don't remove Section -->
+
+
+        <!-- Your css files goes here -->
+        <link rel="stylesheet" href="../..\\ex-live-monitoring/styles/components-live-monitoring.css">
+
+        <!-- Your css files goes here -->
+        <link rel="stylesheet" href="../../ex-sxa-collection/styles/components-sitecore-form.css">
+
+
+        <!-- Your css files goes here -->
+
+   
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-9">
+                <div class="ex-live-monitoring">
+                    <div class="ex-live-monitoring__map">
+                        <h2 class="mb-6">Live Oaceangraphic Data</h2>
+                        <div class="live-monitoring-map" id="live-monitoring-map" data-pinpoint="http://localhost:8080/extensions/ex-live-monitoring/images/map-marker.png">
+
+                        </div>
+                        <div class="ex-live-monitoring__map__data d-none">
+                                <div data-item="{&quot;name&quot;:&quot;Buoy 05&quot;,&quot;lan&quot;:&quot;54.3773&quot;,&quot;Lat&quot;:&quot;24.4539&quot;,&quot;type&quot;:&quot;BUOY&quot;,&quot;location&quot;:&quot;Abu dhabi&quot;,&quot;details&quot;:[{&quot;icon&quot;:&quot;http://via.placeholder.com/20&quot;,&quot;label&quot;:&quot;water level&quot;,&quot;value&quot;:&quot;0.56 m&quot;},{&quot;icon&quot;:&quot;http://via.placeholder.com/20&quot;,&quot;label&quot;:&quot;Water Temperature&quot;,&quot;value&quot;:&quot;43.77 Degc&quot;}]}"></div>
+                                <div data-item="{&quot;name&quot;:&quot;Dubai 03&quot;,&quot;lan&quot;:&quot;55.3623&quot;,&quot;Lat&quot;:&quot;25.2791&quot;,&quot;type&quot;:&quot;DUBAI&quot;,&quot;location&quot;:&quot;Dubai&quot;,&quot;details&quot;:[{&quot;icon&quot;:&quot;http://via.placeholder.com/20&quot;,&quot;label&quot;:&quot;Weather Temperature&quot;,&quot;value&quot;:&quot;22 Degc&quot;},{&quot;icon&quot;:&quot;http://via.placeholder.com/20&quot;,&quot;label&quot;:&quot;Earth Level&quot;,&quot;value&quot;:&quot;0.2 m&quot;}]}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-9 mt-9">
+                <div class="ex-live-monitoring">
+                    <div class="ex-live-monitoring__data ex-sitecore-form">
+                        <h2 class="mb-6">Live Oaceangraphic Data</h2>
+                        <div class="ex-live-monitoring__data__select ex-sitecore-form__input position-relative mb-6" style="display: none;">
+                            <label class="ex-sitecore-form__label" for="nationality">Nationality</label>
+                            <div class="position-relative cursor-pointer">
+                            <i class="position-absolute icon icon-arrow-small-right"></i>
+                            <select selectedIndex="0" name="stations" class="visually-hidden">
+                                <option value="">Select</option>
+                               
+                            </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ex-live-monitoring__data__table table-responsive" >
+                                <table class="table">
+                                 
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+    <!-- ex-main-theme : uncomment needed files -->
+    <!-- Lib -->
+    <script src="../../ex-main-theme/scripts/lib/jquery-min.js"></script>
+    <script src="../../ex-main-theme/scripts/lib/bootstrap-min.js"></script>
+    <!-- <script src="../../ex-main-theme/scripts/lib/smooth-scrollbar-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/fontawesome-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/jquery-fancybox-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/owl-carousel-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/slick-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/isotope-pkgd-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/lazysizes-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/jquery-validate-min.js"></script> -->
+    <!-- init  -->
+    <!-- <script src="../../ex-main-theme/scripts/fancybox-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/isotope-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/owl-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/scrollbar-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/slick-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/truncate-init.js"></script> -->
+    
+    <!-- ex-main-theme : uncomment needed files -->
+
+
+    <!-- Your js files goes here -->
+    <script src="../../ex-sxa-collection/scripts/lib/custom-dropdown.js"></script>
+    <script src="../../ex-sxa-collection/scripts/components-sitecore-form.js"></script>
+
+
+     <!-- Map scripts -->
+    <script>
+        // set locale before JSAPI is loaded
+        let language = document.getElementsByTagName("html")[0].getAttribute("lang");
+        dojoConfig = {
+          locale: language,
+          parseOnLoad: true
+        };
+    </script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.14/esri/themes/dark/main.css">
+    <script src="https://js.arcgis.com/4.14/"></script>
+  
+    <script>
+        var listingApiURL = "https://adcoast.adm.gov.abudhabi/api/ServiceData?buoy=buoy&amp;tide=tide",
+            detailsApiURL = "";
+        var BuoyPinpoint = "";
+        var TidePinpoint ="";
+        var DefaultPinpoint ="";
+
+
+        // to be removed 
+        var data = [
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "1",
+                "StationName": "Ghantoot",
+                "StationLatitude": "24.889950",
+                "StationLongititude": "54.852386",
+                "StationType": "TIDE"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "2",
+                "StationName": "Rahba",
+                "StationLatitude": "24.701178",
+                "StationLongititude": "54.659044",
+                "StationType": "TIDE"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "3",
+                "StationName": "Shahama",
+                "StationLatitude": "24.510197",
+                "StationLongititude": "54.631667",
+                "StationType": "TIDE"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "4",
+                "StationName": "Abu Dhabi (Meena)",
+                "StationLatitude": "24.535653",
+                "StationLongititude": "54.359131",
+                "StationType": "TIDE"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "5",
+                "StationName": "Mussafah",
+                "StationLatitude": "24.382233",
+                "StationLongititude": "54.468322",
+                "StationType": "TIDE"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "6",
+                "StationName": "Abu Al Abyadh",
+                "StationLatitude": "24.260339",
+                "StationLongititude": "53.818911",
+                "StationType": "TIDE"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "7",
+                "StationName": "Mirfa",
+                "StationLatitude": "24.100181",
+                "StationLongititude": "53.491936",
+                "StationType": "TIDE"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "8",
+                "StationName": "Jabal Dhana",
+                "StationLatitude": "24.182089",
+                "StationLongititude": "52.567306",
+                "StationType": "TIDE"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "9",
+                "StationName": "Sila",
+                "StationLatitude": "24.071194",
+                "StationLongititude": "51.792569",
+                "StationType": "TIDE"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "10",
+                "StationName": "Ras Ghumais",
+                "StationLatitude": "24.384442",
+                "StationLongititude": "51.579442",
+                "StationType": "TIDE"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "11",
+                "StationName": "Buoy 01",
+                "StationLatitude": "24.8764",
+                "StationLongititude": "54.7276",
+                "StationType": "BUOY"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "13",
+                "StationName": "Buoy 03",
+                "StationLatitude": "24.5714",
+                "StationLongititude": "54.4082",
+                "StationType": "BUOY"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "15",
+                "StationName": "Buoy 05",
+                "StationLatitude": "24.3423",
+                "StationLongititude": "54.0468",
+                "StationType": "BUOY"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "16",
+                "StationName": "Buoy 06",
+                "StationLatitude": "24.5388",
+                "StationLongititude": "53.9193",
+                "StationType": "BUOY"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "17",
+                "StationName": "Buoy 07",
+                "StationLatitude": "24.2997",
+                "StationLongititude": "53.6805",
+                "StationType": "BUOY"
+            },
+            {
+                "ParameterName": null,
+                "ImagePath": null,
+                "LatestValue": null,
+                "Unit": null,
+                "StationID": "18",
+                "StationName": "Buoy 08",
+                "StationLatitude": "24.4708",
+                "StationLongititude": "52.8743",
+                "StationType": "BUOY"
+            }
+        ];
+        var rows = [
+            [{
+                "ParameterName": "Water Level",
+                "ImagePath": "Images/weather-icon/sea-level.png",
+                "LatestValue": "0.48",
+                "Unit": "m",
+                "StationID": null,
+                "StationName": null,
+                "StationLatitude": null,
+                "StationLongititude": null,
+                "StationType": null
+            },
+            {
+                "ParameterName": "Water Temperature",
+                "ImagePath": "Images/weather-icon/water-temp.jpg",
+                "LatestValue": "35.44",
+                "Unit": "DegC",
+                "StationID": null,
+                "StationName": null,
+                "StationLatitude": null,
+                "StationLongititude": null,
+                "StationType": null
+            }],
+            [{
+                "ParameterName": "Water Level",
+                "ImagePath": "Images/weather-icon/sea-level.png",
+                "LatestValue": "-0.88",
+                "Unit": "m",
+                "StationID": null,
+                "StationName": null,
+                "StationLatitude": null,
+                "StationLongititude": null,
+                "StationType": null
+            },
+            {
+                "ParameterName": "Water Temperature",
+                "ImagePath": "Images/weather-icon/water-temp.jpg",
+                "LatestValue": "35.38",
+                "Unit": "DegC",
+                "StationID": null,
+                "StationName": null,
+                "StationLatitude": null,
+                "StationLongititude": null,
+                "StationType": null
+            }],
+            [{
+                "ParameterName": "Water Level",
+                "ImagePath": "Images/weather-icon/sea-level.png",
+                "LatestValue": "-0.37",
+                "Unit": "m",
+                "StationID": null,
+                "StationName": null,
+                "StationLatitude": null,
+                "StationLongititude": null,
+                "StationType": null
+            },
+            {
+                "ParameterName": "Water Temperature",
+                "ImagePath": "Images/weather-icon/water-temp.jpg",
+                "LatestValue": "36.49",
+                "Unit": "DegC",
+                "StationID": null,
+                "StationName": null,
+                "StationLatitude": null,
+                "StationLongititude": null,
+                "StationType": null
+            }],
+            [{
+                "ParameterName": "Water Level",
+                "ImagePath": "Images/weather-icon/sea-level.png",
+                "LatestValue": "-0.03",
+                "Unit": "m",
+                "StationID": null,
+                "StationName": null,
+                "StationLatitude": null,
+                "StationLongititude": null,
+                "StationType": null
+            },
+            {
+                "ParameterName": "Water Temperature",
+                "ImagePath": "Images/weather-icon/water-temp.jpg",
+                "LatestValue": "34.62",
+                "Unit": "DegC",
+                "StationID": null,
+                "StationName": null,
+                "StationLatitude": null,
+                "StationLongititude": null,
+                "StationType": null
+            }],
+            [{
+                "ParameterName": "Water Level",
+                "ImagePath": "Images/weather-icon/sea-level.png",
+                "LatestValue": "0.02",
+                "Unit": "m",
+                "StationID": null,
+                "StationName": null,
+                "StationLatitude": null,
+                "StationLongititude": null,
+                "StationType": null
+            },
+            {
+                "ParameterName": "Water Temperature",
+                "ImagePath": "Images/weather-icon/water-temp.jpg",
+                "LatestValue": "34.28",
+                "Unit": "DegC",
+                "StationID": null,
+                "StationName": null,
+                "StationLatitude": null,
+                "StationLongititude": null,
+                "StationType": null
+            }]
+        ]
+        // end to be removed 
+
+    </script>
+
+    <script src="../..\\ex-live-monitoring/scripts/components-live-monitoring.js"></script>
+
+    <!-- Your js files goes here -->
+</body>
+
+</html>

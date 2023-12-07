@@ -1,0 +1,63 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+@mixin smallscreens {
+    width: $authentication-login-line-min-height;
+    min-height: $authentication-login-line-width;
+}
+
+@mixin logincard {
+    margin-top: $authentication-login-card-margin;
+    margin-bottom: $authentication-login-card-margin;
+    flex-direction: row;
+}
+.#{$ProjectName} {
+
+    .login-card{
+       background-color: $authentication-login-cards; 
+       font-size: $authentication-login-card-font-size;
+       &__separator{ 
+        flex-direction: column;
+        @media #{$sm} {
+           @include logincard();
+        }
+        @media #{$md}{
+            @include logincard();
+        }
+ 
+         &__line{
+ 
+             background-color: $authentication-login-line-background-color;
+                  
+             min-height: $authentication-login-line-min-height;
+             width: $authentication-login-line-width;
+             
+             @media #{$sm}  { 
+                 @include smallscreens();
+             }
+             @media #{$md}{
+                 @include smallscreens();
+             }
+         }
+         span{
+            color:$authentication-login-line-text-color;
+         }
+    }
+   
+   }
+   a{
+       color:$authentication-login-cards-font-color;
+   }
+   img{
+       max-width: 100%;
+   }
+  
+}
+   

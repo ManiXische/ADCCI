@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/***************************************************************************************************
+Extension Name: ex-inner-header 
+Extension Version:  
+File: Breadcrumb file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-inner-header 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-inner-header 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+.page-breadcrumb-v2 {
+  background-color: transparent !important;
+}
+
+.page-breadcrumb-v2 .breadcrumb-item {
+  font-size: 14px;
+  color: #3F3E45;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+}
+
+.page-breadcrumb-v2 .breadcrumb-item + .breadcrumb-item:before {
+  padding: 0 0.5rem;
+  content: "›";
+}
+
+.page-breadcrumb-v2 .breadcrumb-item a {
+  color: #3F3E45;
+}
+
+.high-contrast .page-breadcrumb-v2 .breadcrumb-item a {
+  color: #ffffff;
+}
+
+.page-breadcrumb-v2 .breadcrumb-item span.separator {
+  display: none;
+}
+
+.page-breadcrumb-v2 .breadcrumb-item::before {
+  color: #89888C;
+}
+
+.high-contrast .page-breadcrumb-v2 .breadcrumb-item::before {
+  color: #ffffff;
+}
+
+.page-breadcrumb-v2 .breadcrumb-item.last {
+  display: none;
+}
+
+.page-breadcrumb-v2 .bredcrumb-dropdown {
+  background-color: #ffffff;
+  z-index: 222;
+}
+
+.page-breadcrumb-v2 .bredcrumb-dropdown .dropdown-menu.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  width: 270px;
+  left: 50px;
+}
+
+html[dir='rtl'] .page-breadcrumb-v2 .bredcrumb-dropdown .dropdown-menu.show, .translated-rtl .page-breadcrumb-v2 .bredcrumb-dropdown .dropdown-menu.show {
+  right: 50px;
+  text-align: right;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .page-breadcrumb-v2 .bredcrumb-dropdown .dropdown-menu.show {
+    width: 95%;
+    top: 25px;
+    left: 10px;
+  }
+  html[dir='rtl'] .page-breadcrumb-v2 .bredcrumb-dropdown .dropdown-menu.show, .translated-rtl .page-breadcrumb-v2 .bredcrumb-dropdown .dropdown-menu.show {
+    left: auto;
+    right: 10px;
+    text-align: right;
+  }
+}
+
+.page-breadcrumb-v2 .bredcrumb-dropdown .dropdown-item {
+  color: #3F3E45;
+  font-size: 14px;
+}
+
+.page-breadcrumb-v2 .bredcrumb-dropdown .dropdown-item, .page-breadcrumb-v2 .bredcrumb-dropdown .dropdown-item:hover {
+  text-decoration: none;
+}
+
+.page-breadcrumb-v2 .bredcrumb-dropdown button {
+  background: none;
+  padding: 0;
+}
+
+.page-breadcrumb-v2 .bredcrumb-dropdown button:after {
+  display: none;
+}
+
+.page-breadcrumb-v2 .bredcrumb-dropdown .dropdown-divider:last-child {
+  display: none;
+}
+
+.page-breadcrumb-v2 .breadcrumb-toggler span {
+  text-decoration: underline;
+}
+
+html:not([dir='rtl']) .page-breadcrumb-v2 .breadcrumb-toggler i, .translated-ltr .page-breadcrumb-v2 .breadcrumb-toggler i {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+ol li:not(:last-child) a {
+  text-decoration: underline;
+}

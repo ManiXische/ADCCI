@@ -1,0 +1,95 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+//=== open-button ===
+$csat-open-button-background-color: $ADGE-500 !default;
+$csat-open-button-background-color-hover: $ADGE-900 !default;
+$csat-open-button-top-corner-color: $ADGE-900 !default;
+//open-button /Label
+
+$cast-open-button-feedback-label-font-weight: 900 !default;
+// $cast-open-button-feedback-label-color: $white-color !default;
+// $cast-open-button-feedback-label-ar-line-height: 20px !default;
+// $cast-open-button-feedback-label-ar-font-size: 14px !default;
+// $cast-open-button-feedback-label-padding: 14px 0 !default;
+
+$cast-open-button-extended-ar-width:  136px !default;
+$cast-open-button-extended-en-width:  136px !default;
+
+//open-button /position
+$cast-open-button-top: calc(50% - 25px) !default;;
+$csat-open-button-space-rtl-left: 5px !default;
+$csat-open-button-space-en-right: 5px !default;
+
+//=== elements inside the button ===
+$open-button-elements-container-border-radius: 29px 8px 8px 8px !default;
+
+
+//=== emotions-form ===
+//emotions-form //title
+$csat-emotions-form-title-color: $grey-900 !default;
+$csat-emotions-form-title-font-weight: 900 !default;
+
+//emotions-form //Close Button
+$csat-emotions-form-close-button-color: $grey-500 !default;
+$csat-emotions-form-close-button-hover-color: $ADGE-500 !default;
+
+//emotions-form //emotions icons
+$csat-emotions-form-emotions-color: $ADGE-300 !default;
+
+$csat-emotions-form-emotions-color-hover-angry: $ADGE-900 !default;
+$csat-emotions-form-emotions-color-hover-normal: $ADGE-300 !default;
+$csat-emotions-form-emotions-color-hover-happy: $ADGE-500 !default;
+//=== feedback-form ===
+
+//feedback-form //title
+$csat-feedback-form-title-color: $grey-900 !default;
+$csat-feedback-form-title-font-weight: 900  !default;
+
+//feedback-form //rate-item-title
+$csat-feedback-form-rate-item-title-color: $grey-900 !default;
+$csat-feedback-form-rate-item-title-font-weight: 900 !default;
+
+//feedback-form //rate-item-star
+$csat-feedback-form-rate-item-star-color: $grey-200 !default;
+$csat-feedback-form-rate-item-star-hover-color: $ADGE-500 !default;
+
+$csat-feedback-form-rate-item-star-selected-color: $ADGE-500 !default;
+$csat-feedback-form-rate-item-star-selected-border-color: $ADGE-500 !default;
+
+//feedback-form //add comment
+$csat-feedback-form-add-comment-color: $grey-700 !default;
+
+//feedback-form //textarea
+$csat-feedback-form-textarea-border-color: $black-color !default;
+$csat-feedback-form-textarea-border-color-hover: $grey-900 !default;
+$csat-feedback-form-textarea-placeholder-color: $grey-700 !default;
+
+//feedback-form //submit
+$csat-feedback-form-submit-button-color: $white-color !default;
+$csat-feedback-form-submit-icon-color: $white-color !default;
+$csat-feedback-form-submit-button-background-color: $ADGE-500 !default;
+$csat-feedback-form-submit-button-background-hover: $ADGE-300 !default;
+$csat-feedback-form-submit-button-background-active: $ADGE-900 !default;
+
+//feedback-form //back
+$csat-feedback-form-back-button-color: $grey-900 !default;
+$csat-feedback-form-back-button-color-hover: $white-color !default;
+$csat-feedback-form-back-icon-color: $grey-900 !default;
+$csat-feedback-form-back-icon-color-hover: $white-color !default;
+$csat-feedback-form-back-icon-ar-margin: 5px 0 0 10px !default;
+
+$csat-feedback-form-back-button-border-color: $grey-900 !default;
+$csat-feedback-form-back-button-background-color-hover: $grey-900  !default;
+
+//===Thank you message===
+//Thank you /title
+$csat-thankyou-title-color: $grey-900 !default;
+$csat-thankyou-title-font-weight: 900 !default;
+
+//Thank you /description
+$csat-thankyou-description-color:  $grey-900 !default;
+

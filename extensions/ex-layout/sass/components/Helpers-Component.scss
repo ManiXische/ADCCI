@@ -1,0 +1,438 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: Helpers
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+.component {
+  width: 100%;
+  &.column-splitter {
+    width: auto;
+  }
+}
+
+// prevent flex from wrapping text
+.no-wrap { 
+  flex: 0 0 auto; 
+}
+
+.inner-page-contenr {
+  padding: 0 15px;
+}
+
+.visually-hidden {
+  @extend %visuallyhidden;
+}
+
+// truncate helper
+.truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  @each $num in $layout-truncateLines {
+    &-#{$num} {
+      // -webkit-line-clamp: $num;
+    }
+  }
+}
+
+// opacity utility
+.opacity {
+  @each $num in $layout-opacities {
+    &-#{$num} {
+      opacity: $num / 100;
+    }
+  }
+}
+
+// rounded borders
+.rounded {
+  @each $num in $layout-radiuses {
+    &-#{$num} {
+      border-radius: #{$num}px !important;
+    }
+  }
+}
+
+// search results count hide progress count
+.search-results-count {
+  .results-count{
+    font-size: $layout-results-count-font-size;
+  }
+  .progress {
+    display: none;
+  }
+}
+
+// rotated icons on RTL
+.rotated-element {
+  @include rtl {
+    @include transform(rotate(180deg));
+  }
+}
+
+// floated element 
+.floated-element{ 
+  &-left{
+    float:left;
+    @include rtl{
+      float:right;
+    }
+  }
+  &-right{
+    float:right;
+    @include rtl{
+      float:left;
+    }
+  }
+}
+
+// horizontal lines
+.hr {
+  @each $num in $layout-hrs {
+    &-#{$num} {
+      height: #{$num}px;
+      width: auto;
+      background: $layout-hr-color;
+
+      &-v{
+        width: #{$num}px;
+        height: auto;
+      }
+    }
+   
+  }
+}
+
+// Columns handle for search results
+[class^="column-"],
+[class*=" column-"] {
+  > ul {
+    @include make-row();
+  }
+}
+
+@include make-grid-columns(column);
+
+// styling carousel navigation
+.carousel-navigation {
+  .slick-slide {
+    padding: $grid-gutter-width / 2;
+    @media #{$sm}{
+      padding: $grid-gutter-width;
+    }
+  }
+  &__navigations {
+    @include rtl {
+      flex-direction: row-reverse;
+    }
+  }
+  &__prev,
+  &__next {
+    display: inline-flex;
+    background-color: $layout-carousel-arrow-primary-color;
+
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    border: $layout-carousel-border-width solid $layout-carousel-border-color;
+    color: $layout-carousel-arrow-font-primary-color;
+    position: relative;
+    margin-left: 10px;
+    @include transition(all 0.5s ease-in-out);
+    @include rtl {
+      margin-right: 10px;
+      margin-left: 0;
+    }
+    &:hover {
+      background-color: $layout-carousel-arrow-bg-hover-color;
+      color: $layout-carousel-arrow-font-hover-color;
+      border-color: $layout-carousel-hover-border-color;
+    }
+    span{
+      position: absolute;
+      top: calc(50% - 8px);
+      left: calc(50% - 4.5px);
+    }
+  }
+
+  hr {
+    flex-grow: 2;
+  }
+}
+
+// image containers
+.img-container {
+  img {
+    width: 100%;
+  }
+}
+
+.text-break{
+  word-wrap:break-word;
+}
+
+.black-white-img{
+  filter: grayscale(1);
+  &--remove-on-hover{
+    &:hover
+    {
+      filter: grayscale(0);
+    }
+  } 
+}
+
+
+
+// scrollbar 
+::-webkit-scrollbar {
+  width: $layout-scrollbar-width;
+}
+
+::-webkit-scrollbar-track {
+  background:$layout-scrollbar-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $layout-scrollbar-thumb-bg;
+  outline: none;
+  border-radius: 4px;
+}
+
+
+// go to top 
+.go-to-top{
+  display: none;
+  height:$layout-gototop-width;
+  line-height: $layout-gototop-width;
+  width:$layout-gototop-width;
+  text-align: center;
+  color : $layout-gototop-color;
+  background-color: $layout-gototop-bg-color;
+  font-size:  $layout-gototop-font-size;
+  border-radius: $layout-gototop-radius;
+  bottom: $layout-gototop-bottom;
+  cursor: pointer;
+  z-index: 10000;
+  right: 20px;
+  @include rtl{
+    right:auto;
+    left:20px;
+  }
+
+  > * {
+    line-height: $layout-gototop-width;
+  }
+
+}
+
+
+//colors 
+.color{
+  &-primary{
+    color : $primary-color;
+  }
+  &-secondary{
+    color : $secondary-color;
+  }
+}
+.background{
+  &-primary{
+    background-color: $primary-color;
+  }
+  &-secondary{
+    background-color: $secondary-color;
+  }
+}
+
+// font weight
+.font-weight-boldest{
+  font-weight: 900 !important;
+}
+
+// adding d-none browser 
+@-moz-document url-prefix() {
+  .d-none-ff {
+      display: none !important;
+  } 
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .d-none-ie {
+      display: none !important;
+  }
+}
+
+.d-none{
+  &-rtl{
+    @include rtl{
+      display:  none !important;
+    }
+  }
+  &-ltr{
+    @include ltr{
+      display: none !important;
+    }
+  }
+}
+
+// disable pointers 
+.disable-pointer { 
+  pointer-events: none !important;
+}
+
+// cursors
+.cursor{
+  @each $c in $cursor-pointers {
+    &-#{$c} {
+      cursor: $c;
+    }
+  }
+}
+
+
+// text 
+.text-indent{
+  text-indent: -9000px;
+  height:0;
+  direction: ltr;
+}
+
+
+// workaround for streatched link 
+.stretched-link-field{
+  &:hover{
+    color: $layout-link-default-hover-color;
+    [class^="icon-"], [class*=" icon-"]{
+      transform: scale(1.5);
+      @include transition(all 0.4s);
+    }
+  }
+  a{
+    $stretchedLink : &;
+
+    display: block;
+    // text-indent: -9000px;
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: auto;
+      content: "";
+      background-color: transparent;
+    }
+
+
+    @at-root{
+      .on-page-editor{
+        #{$stretchedLink}{
+          &:after{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+// hide stretched link 
+.on-page-editor{
+  .stretched-link{
+    &:after{
+      display: none;
+    }
+  }
+}
+
+
+
+// font family on demand
+
+.english-font {
+  font-family: $font_en !important;
+}
+.arabic-font {
+  font-family: $font_ar !important;
+}
+
+.flex-basis-0{
+  flex-basis: 0%;
+}
+// backgrounds 
+.bg-position{
+  &-y{
+    &--top{
+      background-position-y: top !important; 
+    }
+    &--bottom{
+      background-position-y: bottom !important; 
+    }
+    &--right{
+      background-position-y: right !important; 
+      @include rtl{
+        background-position-y: left !important; 
+      }
+    }
+    &--left{
+      background-position-y: left !important; 
+      @include rtl{
+        background-position-y: right !important; 
+      }
+    }
+  }
+  &-x{
+    &--top{
+      background-position-x: top !important; 
+    }
+    &--bottom{
+      background-position-x: bottom !important; 
+    }
+    &--right{
+      background-position-x: right !important; 
+      @include rtl{
+        background-position-x: left !important; 
+      }
+    }
+    &--left{
+      background-position-x: left !important; 
+      @include rtl{
+        background-position-x: right !important; 
+      }
+    }
+  }
+}
+.bg-size{
+  &-cover {
+    background-size: cover !important;
+  }
+  &-auto {
+    background-size: auto !important;
+  }
+  &-contain {
+    background-size: contain !important;
+  }
+}
+.bg-repeat{
+  &-no{
+    background-repeat: no-repeat !important; 
+  }
+  &-y{
+    background-repeat:repeat-y !important; 
+  }
+  &-x{
+    background-repeat:repeat-x !important; 
+  }
+}
+
+
+
+// site core images 
+
+.sitecore-image{
+  > img{
+    width:100%
+  }
+}

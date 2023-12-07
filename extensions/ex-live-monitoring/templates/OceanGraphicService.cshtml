@@ -1,0 +1,44 @@
+@using TAMM.Project.LiveService.Models;
+@using Sitecore.Mvc.Presentation;
+@{
+
+    var renderingcontext = Sitecore.Mvc.Presentation.RenderingContext.CurrentOrNull;
+    var datasource = renderingcontext.Rendering.DataSource;
+    Sitecore.Data.Items.Item datasourceitem = Sitecore.Context.Database.GetItem(datasource);
+    var ListingApiUrl = datasourceitem.Fields["ListingApiUrl"].Value;
+    var DetailApiUrl = datasourceitem.Fields["DetailApiUrl"].Value;
+    var ServiceTitle = datasourceitem.Fields["ServiceTitle"].Value;
+    var DropdownLabel = datasourceitem.Fields["DropdownLabel"].Value;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="ex-live-monitoring">
+                <div class="ex-live-monitoring__data ex-sitecore-form">
+                    <h2 class="ex-live-monitoring__title">@ServiceTitle</h2>
+                    <div class="ex-live-monitoring__data__select ex-sitecore-form__input position-relative mb-6" style="display: none;">
+                        <label class="ex-sitecore-form__label">@DropdownLabel</label>
+                        <div class="position-relative cursor-pointer">
+                            <i class="position-absolute icon icon-arrow-small-right"></i>
+                            <select selectedIndex="0" name="stations" class="visually-hidden">
+                                <option value="">Select</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ex-live-monitoring__data__table table-responsive">
+                            <table class="table"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        var listingApiURL = '@ListingApiUrl',
+        detailsApiURL = '@DetailApiUrl';
+</script>

@@ -1,0 +1,55 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+
+$content-editor-line-height: 24px !default;
+$content-editor-link-color-tag: $primary-color !default;
+$content-editor-table-border-color:$primary-color !default;
+$content-editor-table-head-color:$white-color !default;
+$content-editor-table-head-background-color:$primary-color !default;
+
+$content-editor-heading-padding-bottom:  10px  !default;
+$content-editor-heading-font-weight: bold !default;
+$content-editor-p-margin-bottom: 20px !default;
+$content-editor-calendar-background-color: $white-color !default;
+$content-editor-calendar-font-color: $black-color !default;
+$content-editor-calendar-border-raduis: 4px !default;
+$content-editor-calendar-today-background-color: $black-color !default;
+$content-editor-calendar-today-font-color: $white-color !default;
+$content-editor-calendar-today-border-color: $black-color !default;
+$content-editor-calendar-active-background-color: $black-color !default;
+$content-editor-calendar-active-font-color: $white-color !default;
+$content-editor-calendar-active-border-color: $primary-color !default;
+$content-editor-calendar-hover-background-color: $white-color !default;
+$content-editor-calendar-hover-font-color: $black-color !default;
+$content-editor-calendar-hover-border-color: $grey-900 !default;
+$content-editor-calendar-shadow:$grey-900 !default;
+$content-editor-content-editor-news-details-src-img-height:150px !default;
+$content-editor-color-primary:$primary-color !default;
+$content-editor-color-secondary:$secondary-color !default;
+$content-editor-ul-list-style:   disc !default;
+$content-editor-ul-font-size:    16px !default;
+$content-editor-ul-line-height:  26px !default;
+$content-editor-ul-margin-left:  20px !default;
+$content-editor-ul-margin-right: 20px !default;
+$content-editor-ul-margin-bottom:20px !default;
+$content-editor-li-padding-bottom: 5px !default;
+$content-editor-li-padding-top: 5px !default;
+$content-editor-ol-padding: 0 30px !default;
+$content-editor-ol-list-style: decimal !default;
+$content-editor-ol-list-ar-style: arabic-indic !default;
+$content-editor-ol-font-size: 18px !default;
+$content-editor-em-style: italic !default;
+$content-editor-table-min-width: 100% !default;
+$content-editor-table-margin-bottom: 1rem !default;
+$content-editor-table-color: $black-color !default;
+$content-editor-th-td-padding: 0.75rem !default;
+$content-editor-th-td-vertical-align: top !default;
+$content-editor-th-td-border-top: 1px solid $content-editor-table-border-color !default;
+
+$content-editor-img-shadow-padding: 10px 10px 10px 0px !default;
+$content-editor-img-shadow-background: $primary-color !default;
+$content-editor-img-shadow-size: 85% !default;

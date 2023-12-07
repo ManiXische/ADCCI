@@ -1,0 +1,359 @@
+@charset "UTF-8";
+/***************************************************************************************************
+Extension Name: ex-publications-v2 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-publications-v2 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-publications-v2 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-publications-v2-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e1;
+  height: 100%;
+  padding: 20px;
+}
+
+.ex-publications-v2-card--img img {
+  width: 100%;
+  min-height: 164px;
+}
+
+.ex-publications-v2-card__content-wrapper {
+  height: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.ex-publications-v2-card--details div:first-child, .ex-publications-v2-card--details p:first-child {
+  margin-top: 0;
+}
+
+.ex-publications-v2-card--details--caategory {
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--details--caategory, .translated-ltr .ex-publications-v2-card--details--caategory {
+  margin-right: 10px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--details--caategory, .translated-rtl .ex-publications-v2-card--details--caategory {
+  margin-left: 10px;
+}
+
+.ex-publications-v2-card--details--caategory:last-child {
+  margin-bottom: 0;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--details--caategory:last-child, .translated-ltr .ex-publications-v2-card--details--caategory:last-child {
+  margin-right: 0;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--details--caategory:last-child, .translated-rtl .ex-publications-v2-card--details--caategory:last-child {
+  margin-left: 0;
+}
+
+.ex-publications-v2-card--details--caategory__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ex-publications-v2-card--details--caategory-title {
+  color: #3F3E45;
+  font-size: 12px;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--details--caategory-title, .translated-ltr .ex-publications-v2-card--details--caategory-title {
+  margin-left: 5px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--details--caategory-title, .translated-rtl .ex-publications-v2-card--details--caategory-title {
+  margin-right: 5px;
+}
+
+.ex-publications-v2-card--details--caategory img {
+  max-width: 24px;
+  max-height: 24px;
+  width: 100%;
+}
+
+.ex-publications-v2-card--details--caategory i {
+  color: #3F3E45;
+  font-size: 16;
+}
+
+.ex-publications-v2-card--details--heading {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #3F3E45;
+  line-height: 18px;
+}
+
+.ex-publications-v2-card--details--description {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--details--description, .translated-ltr .ex-publications-v2-card--details--description {
+  line-height: 20px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--details--description, .translated-rtl .ex-publications-v2-card--details--description {
+  line-height: 20px;
+}
+
+.ex-publications-v2-card--details--data {
+  margin-top: 15px;
+}
+
+.ex-publications-v2-card--details--data_title {
+  font-size: 12px;
+}
+
+.ex-publications-v2-card--details--data .types-value-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ex-publications-v2-card--details--data_value {
+  font-size: 14px;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--details--data_value::after, .translated-ltr .ex-publications-v2-card--details--data_value::after {
+  padding-right: 5px;
+  content: ',';
+}
+
+html[dir='rtl'] .ex-publications-v2-card--details--data_value::after, .translated-rtl .ex-publications-v2-card--details--data_value::after {
+  padding-left: 5px;
+  content: '،';
+}
+
+.ex-publications-v2-card--details--data_value:last-child {
+  margin-bottom: 0;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--details--data_value:last-child::after, .translated-ltr .ex-publications-v2-card--details--data_value:last-child::after {
+  content: '';
+}
+
+html[dir='rtl'] .ex-publications-v2-card--details--data_value:last-child::after, .translated-rtl .ex-publications-v2-card--details--data_value:last-child::after {
+  content: '';
+}
+
+.ex-publications-v2-card--buttons {
+  margin-top: 17px;
+}
+
+.ex-publications-v2-card--buttons_button {
+  position: relative;
+  border: 2px solid #3F3E45;
+  padding: 7px 8px;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--buttons_button, .translated-ltr .ex-publications-v2-card--buttons_button {
+  margin-right: 15px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--buttons_button, .translated-rtl .ex-publications-v2-card--buttons_button {
+  margin-left: 15px;
+}
+
+.ex-publications-v2-card--buttons_button--text {
+  font-size: 12px;
+  color: #3F3E45;
+}
+
+.ex-publications-v2-card--buttons_button--text:focus {
+  color: #3F3E45;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--buttons_button--text, .translated-ltr .ex-publications-v2-card--buttons_button--text {
+  line-height: 12px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--buttons_button--text, .translated-rtl .ex-publications-v2-card--buttons_button--text {
+  line-height: 12px;
+}
+
+.ex-publications-v2-card--buttons_button--arrow {
+  font-weight: 900;
+  font-size: 13px;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--buttons_button--arrow, .translated-ltr .ex-publications-v2-card--buttons_button--arrow {
+  margin-left: 20px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--buttons_button--arrow, .translated-rtl .ex-publications-v2-card--buttons_button--arrow {
+  margin-right: 20px;
+}
+
+.ex-publications-v2-card--buttons_button:hover {
+  cursor: pointer;
+  background: #3F3E45;
+}
+
+.ex-publications-v2-card--buttons_button:hover .ex-publications-v2-card--buttons_button--text,
+.ex-publications-v2-card--buttons_button:hover .ex-publications-v2-card--buttons_button--arrow {
+  color: #ffffff;
+}
+
+.ex-publications-v2-card--dropdown {
+  margin-top: 17px;
+  z-index: 1;
+}
+
+.ex-publications-v2-card--dropdown select {
+  display: none;
+}
+
+.ex-publications-v2-card--dropdown .dropdown-link {
+  border: 2px solid #3F3E45;
+  padding: 7px 8px;
+  position: relative;
+}
+
+.ex-publications-v2-card--dropdown--text {
+  font-size: 12px;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--dropdown--text, .translated-ltr .ex-publications-v2-card--dropdown--text {
+  line-height: 12px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--dropdown--text, .translated-rtl .ex-publications-v2-card--dropdown--text {
+  line-height: 12px;
+}
+
+.ex-publications-v2-card--dropdown--text::first-letter {
+  text-transform: uppercase;
+}
+
+.ex-publications-v2-card--dropdown--arrow {
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.ex-publications-v2-card--dropdown:hover {
+  cursor: pointer;
+}
+
+.ex-publications-v2-card--dropdown:hover .dropdown-link {
+  background: #3F3E45;
+}
+
+.ex-publications-v2-card--dropdown:hover .ex-publications-v2-card--dropdown--text,
+.ex-publications-v2-card--dropdown:hover .ex-publications-v2-card--dropdown--arrow {
+  color: #ffffff;
+}
+
+.ex-publications-v2-card--dropdown--list {
+  position: absolute;
+  display: none;
+  overflow: auto;
+  border: 1px solid #e0e0e1;
+  background: #ffffff;
+  max-height: 162px;
+}
+
+.ex-publications-v2-card--dropdown--list-item {
+  padding: 7px 9px;
+  border: 1px solid #e0e0e1;
+}
+
+.ex-publications-v2-card--dropdown--list-item-text {
+  font-size: 16px;
+  color: #3F3E45;
+}
+
+html:not([dir='rtl']) .ex-publications-v2-card--dropdown--list-item-text, .translated-ltr .ex-publications-v2-card--dropdown--list-item-text {
+  line-height: 24px;
+}
+
+html[dir='rtl'] .ex-publications-v2-card--dropdown--list-item-text, .translated-rtl .ex-publications-v2-card--dropdown--list-item-text {
+  line-height: 24px;
+}
+
+.ex-publications-v2-card--background {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  min-height: 520px;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-publications-v2-card--background {
+    height: 100%;
+    min-height: 0;
+  }
+}
+
+.ex-publications-v2-card--background .ex-publications-v2-card--img {
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-publications-v2-card--background .ex-publications-v2-card--img {
+    position: relative;
+    width: 128px;
+    height: auto;
+    margin: 20px 20px 1px 20px;
+  }
+}
+
+.ex-publications-v2-card--background .ex-publications-v2-card__content-wrapper {
+  height: auto;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.4);
+}

@@ -1,0 +1,507 @@
+/***************************************************************************************************
+Extension Name: ex-listing-page 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-listing-page 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-listing-page 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-listing-page 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-listing-page__popup--overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.ex-listing-page__popup--form {
+  position: fixed;
+  height: 95%;
+  width: 95%;
+  z-index: 99999;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  max-height: 681px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ex-listing-page__popup--form--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 70px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.ex-listing-page__popup--form--header-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #3f3e45;
+  padding: 20px;
+}
+
+.ex-listing-page__popup--form--header-icon {
+  padding: 20px;
+}
+
+.ex-listing-page__popup--form--body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: -webkit-calc(100% - 70px - 81px);
+  max-height: calc(100% - 70px - 81px);
+  padding: 20px;
+}
+
+.ex-listing-page__popup--form--body .ex-listing-page__sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.ex-listing-page__popup--form--body .ex-listing-page__sort--label {
+  margin: 0;
+}
+
+.ex-listing-page__popup--form--body .ex-listing-page_search {
+  margin-bottom: 40px;
+}
+
+.ex-listing-page__popup--form--body .ex-listing-page__sort--dropdown .dropdown-link {
+  width: 100%;
+  height: 50px;
+}
+
+.ex-listing-page__popup--form--body .ex-listing-page_group {
+  margin-bottom: 35px;
+}
+
+.ex-listing-page__popup--form--footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+  height: 81px;
+  border-top: 1px solid #d6d6d6;
+}
+
+.ex-listing-page [template-container] {
+  margin-top: 31px;
+}
+
+.ex-listing-page--label {
+  font-size: 12px;
+  color: #89888C;
+  letter-spacing: 1px;
+}
+
+html:not([dir='rtl']) .ex-listing-page--label, .translated-ltr .ex-listing-page--label {
+  line-height: 12px;
+}
+
+html[dir='rtl'] .ex-listing-page--label, .translated-rtl .ex-listing-page--label {
+  line-height: 12px;
+}
+
+.ex-listing-page--cta {
+  cursor: pointer;
+  font-size: 12px;
+  color: #3F51B5;
+  letter-spacing: 0px;
+}
+
+html:not([dir='rtl']) .ex-listing-page--cta, .translated-ltr .ex-listing-page--cta {
+  line-height: 12px;
+}
+
+html[dir='rtl'] .ex-listing-page--cta, .translated-rtl .ex-listing-page--cta {
+  line-height: 12px;
+}
+
+.ex-listing-page--cta[show] {
+  display: none;
+}
+
+.ex-listing-page_search--input {
+  border: 1px solid #b2b2b5;
+  height: 40px;
+  color: #89888C;
+}
+
+html:not([dir='rtl']) .ex-listing-page_search--input, .translated-ltr .ex-listing-page_search--input {
+  padding-left: 40px;
+}
+
+html[dir='rtl'] .ex-listing-page_search--input, .translated-rtl .ex-listing-page_search--input {
+  padding-right: 40px;
+}
+
+.ex-listing-page_search i {
+  font-size: 22px;
+  top: 8px;
+}
+
+html:not([dir='rtl']) .ex-listing-page_search i, .translated-ltr .ex-listing-page_search i {
+  left: 10px;
+}
+
+html[dir='rtl'] .ex-listing-page_search i, .translated-rtl .ex-listing-page_search i {
+  right: 10px;
+}
+
+.ex-listing-page_search [listing_search__btn] {
+  cursor: pointer;
+}
+
+.ex-listing-page_group.mt-lg-8 {
+  margin-top: 40px !important;
+}
+
+.ex-listing-page_group .checkbox__wrapper {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: none;
+  font-size: 16px;
+  color: #3F3E45;
+  margin-bottom: 19px;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+}
+
+html:not([dir='rtl']) .ex-listing-page_group .checkbox__wrapper, .translated-ltr .ex-listing-page_group .checkbox__wrapper {
+  padding-left: 28px;
+}
+
+html[dir='rtl'] .ex-listing-page_group .checkbox__wrapper, .translated-rtl .ex-listing-page_group .checkbox__wrapper {
+  padding-right: 28px;
+}
+
+.ex-listing-page_group .checkbox__wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.ex-listing-page_group .checkbox__wrapper .checkmark {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 1px solid #b2b2b5;
+}
+
+html:not([dir='rtl']) .ex-listing-page_group .checkbox__wrapper .checkmark, .translated-ltr .ex-listing-page_group .checkbox__wrapper .checkmark {
+  left: 0;
+}
+
+html[dir='rtl'] .ex-listing-page_group .checkbox__wrapper .checkmark, .translated-rtl .ex-listing-page_group .checkbox__wrapper .checkmark {
+  right: 0;
+}
+
+.ex-listing-page_group .checkbox__wrapper input:checked ~ .checkmark {
+  background-color: #3F3E45;
+  border: 1px solid #3F3E45;
+}
+
+.ex-listing-page_group .checkbox__wrapper .checkmark:before {
+  display: none;
+}
+
+.ex-listing-page_group .checkbox__wrapper input:checked ~ .checkmark:before {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.ex-listing-page_group .checkbox__wrapper:last-child {
+  margin-bottom: 14px;
+}
+
+.ex-listing-page__results-count {
+  font-size: 14px;
+  color: #89888C;
+  line-height: 20px;
+}
+
+.ex-listing-page__sort {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-listing-page__sort {
+    display: none;
+  }
+}
+
+.ex-listing-page__sort--label {
+  margin: 0 10px 0 10px;
+  font-size: 14px;
+  color: #89888C;
+}
+
+html:not([dir='rtl']) .ex-listing-page__sort--label, .translated-ltr .ex-listing-page__sort--label {
+  line-height: 20px;
+}
+
+html[dir='rtl'] .ex-listing-page__sort--label, .translated-rtl .ex-listing-page__sort--label {
+  line-height: 20px;
+}
+
+.ex-listing-page__sort--dropdown {
+  z-index: 1;
+}
+
+.ex-listing-page__sort--dropdown select {
+  display: none;
+}
+
+.ex-listing-page__sort--dropdown .dropdown-link {
+  border: 1px solid #b2b2b5;
+  padding: 7px;
+  position: relative;
+  width: 120px;
+}
+
+.ex-listing-page__sort--dropdown--text {
+  font-size: 14px;
+  color: #89888C;
+}
+
+.ex-listing-page__sort--dropdown--arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 900;
+  color: #89888C;
+  font-size: 10px;
+  margin-top: 1px;
+}
+
+.ex-listing-page__sort--dropdown:hover {
+  cursor: pointer;
+}
+
+.ex-listing-page__sort--dropdown:hover .dropdown-link {
+  background: #3F3E45;
+}
+
+.ex-listing-page__sort--dropdown:hover .ex-listing-page__sort--dropdown--text,
+.ex-listing-page__sort--dropdown:hover .ex-listing-page__sort--dropdown--arrow {
+  color: #ffffff;
+}
+
+.ex-listing-page__sort--dropdown--list {
+  position: absolute;
+  display: none;
+  overflow: auto;
+  border: 1px solid #b2b2b5;
+  background: #ffffff;
+}
+
+.ex-listing-page__sort--dropdown--list-item {
+  padding: 7px 9px;
+  border: 1px solid #e0e0e1;
+}
+
+.ex-listing-page__sort--dropdown--list-item-text {
+  font-size: 14px;
+  color: #3F3E45;
+}
+
+.ex-listing-page__loadmore {
+  border: 2px solid #3F3E45;
+  padding: 10px 18px;
+  position: relative;
+  min-width: 160px;
+}
+
+.ex-listing-page__loadmore a.ex-listing-page__loadmore--link {
+  color: #3F3E45;
+}
+
+.ex-listing-page__loadmore--link {
+  font-size: 16px;
+}
+
+html:not([dir='rtl']) .ex-listing-page__loadmore--link, .translated-ltr .ex-listing-page__loadmore--link {
+  padding-right: 17px;
+}
+
+html[dir='rtl'] .ex-listing-page__loadmore--link, .translated-rtl .ex-listing-page__loadmore--link {
+  padding-left: 17px;
+}
+
+.ex-listing-page__loadmore--icon {
+  color: #3F3E45;
+}
+
+.ex-listing-page__loadmore:hover {
+  background: #3F3E45;
+}
+
+.ex-listing-page__loadmore:hover .ex-listing-page__loadmore--link,
+.ex-listing-page__loadmore:hover .ex-listing-page__loadmore--icon {
+  color: #ffffff;
+}
+
+.ex-listing-page #loaderDiv {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 0 40px;
+  font-weight: 700;
+}
+
+.ex-listing-page__filters--buttons {
+  margin: 0 0 15px 0;
+}
+
+.ex-listing-page__filters--buttons .button {
+  border: 2px solid #3f3e45;
+  border-radius: 3px;
+  background: #fff;
+  height: 28px;
+  width: auto;
+  min-width: 0;
+  padding: 0 10px;
+}
+
+.ex-listing-page__filters--buttons .button span {
+  color: #3f3e45;
+}
+
+.ex-listing-page__filters--buttons .button:hover {
+  background: #3f3e45;
+}
+
+.ex-listing-page__filters--buttons .button:hover span {
+  color: #fff;
+}
+
+.ex-listing-page__filters--buttons .filter-button--text {
+  margin: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ex-listing-page__filters--buttons .filter-button--icon {
+  font-size: 12px;
+}
+
+@media only screen and (max-device-width: 1280px) {
+  .ex-listing-page .ex-listing-page__filters--buttons.d-lg-none {
+    display: block !important;
+  }
+  .ex-listing-page > .col-lg-9 {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  .ex-listing-page > .col-lg-3 {
+    display: none !important;
+  }
+}

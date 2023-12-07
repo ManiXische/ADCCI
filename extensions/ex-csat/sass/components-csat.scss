@@ -1,0 +1,259 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName}
+Extension Version: #{$ProjectVersion}
+File: base file
+Owner: #{$ProjectOwner}
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+  // Your code goes here
+}
+
+.ui-lib-global-csat-feedback-js-modal-open {
+  .ui-lib-global-csat-feedback-js-button {
+    color: $csat-feedback-form-submit-button-color ;
+    font-family: 'Roboto', 'NotoKufiArabic', 'Arial';
+  }
+
+  .ui-lib-global-csat-feedback-js-button:hover{
+    color: $csat-feedback-form-submit-button-color;
+  }
+
+  .ui-lib-global-csat-feedback-js-button_primary {
+    background-color: $csat-feedback-form-submit-button-background-color ;
+  }
+  .ui-lib-global-csat-feedback-js-button_primary:hover {
+    background-color: $csat-feedback-form-submit-button-background-hover ;
+  }
+  .ui-lib-global-csat-feedback-js-button_primary:active,
+  .ui-lib-global-csat-feedback-js-button_primary.ui-lib-global-csat-feedback-js-button_active {
+    background-color: $csat-feedback-form-submit-button-background-active ;
+  }
+
+  .ui-lib-global-csat-feedback-js-button_secondary {
+    color: $csat-feedback-form-back-button-color ;
+    border-color: $csat-feedback-form-back-button-border-color ;
+
+  }
+
+  .ui-lib-global-csat-feedback-js-button_secondary:hover {
+    background-color: $csat-feedback-form-back-button-background-color-hover ;
+  }
+
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content {
+    color: $csat-feedback-form-textarea-border-color ;
+    font-family: 'Roboto', 'NotoKufiArabic', 'Arial';
+  }
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content:hover {
+    border-color: $csat-feedback-form-textarea-border-color-hover ;
+  }
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content:focus,
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content:active {
+    border-color: $csat-feedback-form-textarea-border-color-hover ;
+  }
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content::-webkit-input-placeholder {
+    color: $csat-feedback-form-textarea-placeholder-color ; //
+  }
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content::-moz-placeholder {
+    color: $csat-feedback-form-textarea-placeholder-color ;
+  }
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content:-ms-input-placeholder {
+    color: $csat-feedback-form-textarea-placeholder-color ;
+  }
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content::-ms-input-placeholder {
+    color: $csat-feedback-form-textarea-placeholder-color ;
+  }
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content::placeholder {
+    color: $csat-feedback-form-textarea-placeholder-color ;
+  }
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content::-webkit-input-placeholder {
+    color: $csat-feedback-form-textarea-placeholder-color ;
+  }
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content::-moz-placeholder {
+    color: $csat-feedback-form-textarea-placeholder-color ;
+  }
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content:-ms-input-placeholder {
+    color: $csat-feedback-form-textarea-placeholder-color ;
+  }
+  .ui-lib-global-csat-feedback-js-text-area
+    .ui-lib-global-csat-feedback-js-text-area__content::-ms-input-placeholder {
+    color: $csat-feedback-form-textarea-placeholder-color ;
+  }
+
+  .ui-lib-global-csat-feedback-js-form__content
+    .ui-lib-global-csat-feedback-js-label {
+    color: $csat-feedback-form-add-comment-color ;
+    font-family: 'Roboto', 'NotoKufiArabic', 'Arial';
+  }
+
+
+
+
+  @media only screen and (max-width: 767px) {
+    .ui-lib-global-csat-feedback-js-content-container {
+      top: calc(50% + 45px) ;
+      max-height: calc(100% - 98px) ;
+    }
+  }
+
+  .ui-lib-global-csat-feedback-js-form__close-icon path {
+    fill: $csat-emotions-form-close-button-color ;
+  }
+  .ui-lib-global-csat-feedback-js-form__close-icon:hover path {
+    fill: $csat-emotions-form-close-button-hover-color ;
+  }
+
+  .ui-lib-global-csat-feedback-js-form__title {
+    color: $csat-emotions-form-title-color ;
+    font-weight: $csat-emotions-form-title-font-weight;
+  }
+  .ui-lib-global-csat-feedback-js-form__rate-title {
+    color: $csat-feedback-form-title-color ;
+    font-weight: $csat-feedback-form-title-font-weight;
+  }
+
+  /* FORM RESULT: SUCCESS OR ERROR */
+  .ui-lib-global-csat-feedback-js-form__result-title {
+    color: $csat-thankyou-title-color ;
+    font-weight: $csat-thankyou-title-font-weight;
+  }
+  .ui-lib-global-csat-feedback-js-form__result-description {
+    color: $csat-thankyou-description-color ;
+  }
+
+  .ui-lib-global-csat-feedback-js-form__rate-item-title {
+    color: $csat-feedback-form-rate-item-title-color ;
+    font-weight: $csat-feedback-form-rate-item-title-font-weight;
+    text-transform: none;
+  }
+
+  .ui-lib-global-csat-feedback-js-form__rate-item-star_selected g {
+    stroke: $csat-feedback-form-rate-item-star-selected-border-color ;
+  }
+
+  .ui-lib-global-csat-feedback-js-form__rate-item-star.ui-lib-global-csat-feedback-js-form__rate-item-star_hovered
+    g {
+    stroke: $csat-feedback-form-rate-item-star-hover-color ;
+  }
+  .ui-lib-global-csat-feedback-js-form__rate-item-star.ui-lib-global-csat-feedback-js-form__rate-item-star_hovered
+    path {
+    fill: $csat-feedback-form-rate-item-star-hover-color ;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .ui-lib-global-csat-feedback-js-form__rate-buttons-link {
+      //display: none ; //the cancle button that appear on the mobile view
+    }
+  }
+
+  //
+  .ui-lib-global-csat-feedback-js-form__emotions-button svg path:first-child {
+    fill: $csat-emotions-form-emotions-color ;
+  }
+
+  .ui-lib-global-csat-feedback-js-form__emotions-button:nth-child(1)
+    svg
+    path:nth-child(2) {
+    fill: $csat-emotions-form-emotions-color-hover-happy ;
+  }
+
+  .ui-lib-global-csat-feedback-js-form__emotions-button:nth-child(2)
+    svg
+    path:nth-child(2) {
+    fill: $csat-emotions-form-emotions-color-hover-normal ;
+  }
+
+  .ui-lib-global-csat-feedback-js-form__emotions-button:nth-child(3)
+    svg
+    path:nth-child(2) {
+    fill: $csat-emotions-form-emotions-color-hover-angry ;
+  }
+
+  .ui-lib-global-csat-feedback-js-form__rate-item-star path {
+    fill: $csat-feedback-form-rate-item-star-color ;
+  }
+
+  .ui-lib-global-csat-feedback-js-form__rate-item-star_selected path {
+    fill: $csat-feedback-form-rate-item-star-selected-color ;
+  }
+
+  .ui-lib-global-csat-feedback-js-button_primary
+    .ui-lib-global-csat-feedback-js-button__icon {
+    fill: $csat-feedback-form-submit-icon-color ;
+  }
+
+  .ui-lib-global-csat-feedback-js-button_secondary
+    .ui-lib-global-csat-feedback-js-button__icon {
+    fill: $csat-feedback-form-back-icon-color ;
+  }
+
+  .ui-lib-global-csat-feedback-js-button_secondary:hover
+    .ui-lib-global-csat-feedback-js-button__icon {
+    fill: $csat-feedback-form-back-icon-color-hover ;
+  }
+
+  .ui-lib-global-csat-feedback-js-button_secondary:hover {
+    color: $csat-feedback-form-back-button-color-hover ;
+  }
+
+  button:focus{
+    outline: none !important;
+  }
+
+  //fix the overly of csat with header
+  .ui-lib-global-csat-feedback-js-modal-overlay{
+    z-index: 999999;
+  }
+
+
+  h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', 'NotoKufiArabic', 'Arial' !important;
+  }
+  
+  @media screen and (max-width:992px) {
+    .ui-lib-global-csat-feedback-js-content-container {
+      max-width: 90vw;
+    }
+  }
+
+}//
+
+
+
+
+ /* Open Button */
+body .ui-lib-global-csat-feedback-js-open-button {
+  // transition: width 0.2s ease;
+  // background-image: none ;
+  background: $csat-open-button-top-corner-color ;
+  .ui-lib-global-csat-feedback-js-open-button__wrapper{
+    background: $csat-open-button-background-color;
+  }
+  &:focus{
+    outline: none !important;
+  }
+  &:hover{
+    .ui-lib-global-csat-feedback-js-open-button__wrapper{
+      background: $csat-open-button-background-color-hover;
+    }
+  }
+  .ui-lib-global-csat-feedback-js-open-button__text{
+    font-weight: $cast-open-button-feedback-label-font-weight;
+    font-family: 'Roboto', 'NotoKufiArabic', 'Arial' !important;
+  }
+}

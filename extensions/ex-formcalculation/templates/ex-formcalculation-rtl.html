@@ -1,0 +1,215 @@
+<html lang="ar-ae" dir="rtl" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Don't remove Section -->
+
+        <!-- ex-main-theme -->
+        <link rel="stylesheet" href="../../ex-main-theme/styles/bootstrap.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/icomoon.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/icons.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/animate.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/jquery-fancybox.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/owl-carousel.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/slick.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/smooth-scrollbar.css">
+        <link rel="stylesheet" href="../../ex-main-theme/styles/components-main-theme.css" >
+
+        <!-- ex-layout  -->
+        <link rel="stylesheet" href="../../ex-layout/styles/components-layout.css">
+        <!-- End don't remove Section -->
+
+
+        <!-- Your css files goes here -->
+        <link rel="stylesheet" href="../..\\ex-formcalculation/styles/components-formcalculation.css">
+
+
+        <!-- Your css files goes here -->
+        <link rel="stylesheet" href="../../ex-sxa-collection/styles/components-sitecore-form.css">
+
+   
+</head>
+
+<body>
+    <div class="container mt-5 ex-formcalculation">
+        <div class="row mb-7 flex-row-reverse">
+            <div class="col-lg-8 col-md-6 col-sm-12">
+                <div class="ex-formcalculation__image mx-6">
+                    <img src="../images/img.png" alt="Image">
+                    <span class="mt-3 d-block small-text">* Social assistance amount per family member</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <form action="#">
+                    <div class="ex-sitecore-form">
+                        <div class="mt-5">
+                            <h5 class="mb-2 font-weight-boldest">How many dependents in your family are under the age of 14 ?</h5>
+                            <p class="mb-2">
+                                You can enter up to 30 dependents
+                            </p>
+                            <div class="ex-sitecore-form__input position-relative mb-4">
+                                <label class="ex-sitecore-form__label" for="under14dependents">Enter Number of dependents</label>
+                                <input type="text" placeholder="" name="under14dependents" 
+                                data-rule-max="30" data-msg-max="The dependents should be less than or equal {0}" 
+                                data-rule-min="0" data-msg-min="The dependents should be more than or equal {0} "  
+                                data-rule-pattern = "^(?=.*?[1-9])[0-9]+$" 
+                                data-msg-pattern = "The dependents should be only numbers"
+                                />
+                                <span class="field-validation-error">  </span>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <h5 class="mb-2 font-weight-boldest">How many dependents in your family are over the age of 14 ?</h5>
+                            <p class="mb-2">
+                                You can enter up to 30 dependents
+                            </p>
+                            
+                            <div class="ex-sitecore-form__input position-relative mb-4">
+                                <label class="ex-sitecore-form__label" for="over14dependents">Enter Number of dependents</label>
+                                <input type="text" placeholder="" name="over14dependents" 
+                                data-rule-max="30" data-msg-max="The dependents should be less than or equal {0}" 
+                                data-rule-min="0" data-msg-min="The dependents should be more than or equal {0} " 
+                                data-rule-pattern = "^(?=.*?[1-9])[0-9]+$" 
+                                data-msg-pattern = "The dependents should be only numbers"
+
+                                />
+                                <span class="field-validation-error">  </span>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <h5 class="mb-2 font-weight-boldest">What is your total family monthly income ?</h5>
+                            <div class="ex-sitecore-form__input position-relative mb-4">
+                                <label class="ex-sitecore-form__label" for="monthlyincome">Enter you monthly income (AED)</label>
+                                <input type="text" placeholder="" name="monthlyincome" 
+                                    required 
+                                    data-msg-required="Monthly income is required"  
+                                    data-rule-pattern = "^(?=.*?[1-9])[0-9]+$" 
+                                    data-msg-pattern = "Monthly income should be only numbers"
+                                    data-rule-min="0"
+                                    data-msg-min="The salary should be more than {0}" 
+                                />
+                                <span class="field-validation-error">  </span>
+                            </div>
+                        </div>
+                        <div class="my-5">
+                            <button type="submit" class="ex-formcalculation__calculate button rounded text-uppercase font-weight-boldest">
+                                Calculate
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+         
+        </div>
+        <div class="row ex-formcalculation__table-holder" style="display: none;">
+            <div class="col-12">
+                <div class="ex-formcalculation__tip d-flex justify-content-between px-5 py-4 flex-column flex-lg-row flex-md-row">
+                    <p class="mb-2">
+                        ** Social assistance allowance for your family (approximately)
+                    </p>
+                    <div class="d-flex flex-column mb-2">
+                        <h3 class="font-weight-normal ">
+                            <span class="possible-total-cell">9,370</span> AED
+                        </h3>
+                        <p>
+                            per month
+                        </p>
+                    </div>
+                </div>
+                <div class="ex-formcalculation__table table-responsive">
+                    <table class="table table-hover">
+                        <thead class="">
+                            <tr class="ex-formcalculation__table__head font-weight-bold">
+                                <th></th>
+                                <th>No. of persons</th>
+                                <th>Social assistance per person (AED)</th>
+                                <th>Total (AED)</th>
+                            </tr>
+                            <tr>
+                        </thead>
+                            <td>Dependents (under 14 yeard)</td>
+                            <td class="under-no-cell">2</td>
+                            <td class="under-sap-cell">2,235</td>
+                            <td class="under-total-cell">4,470</td>
+                        </tr>
+                        <tr class="">
+                            <td>Dependents (over 14 yeard)</td>
+                            <td class="over-no-cell">2</td>
+                            <td class="over-sap-cell">3,725</td>
+                            <td class="over-total-cell">4,470</td>
+                        </tr>
+                        <tr>
+                            <td>Family head</td>
+                            <td class="familyhead-no-cell">2</td>
+                            <td class="familyhead-sap-cell">7,450</td>
+                            <td class="familyhead-total-cell">4,470</td>
+                        </tr>
+                        <tr class="ex-formcalculation__table__active">
+                            <td class="font-weight-bold">Family income for a decent living:</td>
+                            <td></td>
+                            <td></td>
+                            <td class="familyincome-total-cell">4,470</td>
+                        </tr>
+                        <tr>
+                            <td>Your monthly income</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="monthlyincome-total-cell">4,470</td>
+                        </tr>
+                        <tr class="ex-formcalculation__table__active">
+                            <td>Possible entitlement ++</td>
+                            <td></td>
+                            <td></td>
+                            <td class="possible-total-cell">4,470</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="d-flex mt-4 mx-3">
+                    ** This is an estimated amount. The final amount disbursed is subject to evaluation and approval. 
+                </div>
+                <div class="d-flex justify-content-between px-lg-5 mt-5 mb-7 flex-column flex-lg-row flex-md-row">
+                    <button class="button rounded button--invert button--invert--reverse text-uppercase font-weight-bold ex-formcalculation__clear m-2"> Start over </button>
+                    <a href="#" class="button rounded button--invert button--invert--reverse text-uppercase font-weight-bold ex-formcalculation__apply m-2"> Apply for social assistance </a>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+
+
+    <!-- ex-main-theme : uncomment needed files -->
+    <!-- Lib -->
+    <script src="../../ex-main-theme/scripts/lib/jquery-min.js"></script>
+    <script src="../../ex-main-theme/scripts/lib/bootstrap-min.js"></script>
+    <!-- <script src="../../ex-main-theme/scripts/lib/smooth-scrollbar-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/fontawesome-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/jquery-fancybox-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/owl-carousel-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/slick-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/isotope-pkgd-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/lazysizes-min.js"></script> -->
+    <script src="../../ex-main-theme/scripts/lib/jquery-validate-min.js"></script>
+    <script src="../../ex-main-theme/scripts/prototypes/extend.extensions.js"></script>
+    <script src="../../ex-main-theme/scripts/prototypes/prototype.extensions.js"></script>
+
+    <!-- init  -->
+    <!-- <script src="../../ex-main-theme/scripts/fancybox-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/isotope-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/owl-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/scrollbar-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/slick-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/truncate-init.js"></script> -->
+    
+    <!-- ex-main-theme : uncomment needed files -->
+
+
+    <!-- Your js files goes here -->
+    <script src="../..\\ex-formcalculation/scripts/components-formcalculation.js"></script>
+    <script src="../../ex-sxa-collection/scripts/component-sitecore-form-plugin.js"></script>
+</body>
+
+</html>

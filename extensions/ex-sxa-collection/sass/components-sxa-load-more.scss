@@ -1,0 +1,76 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.ex-sxa-load-more  {
+  margin-top: $sxa-load-more-margin-top;
+  // text-align: center;
+  width: auto;
+  .component-content {
+    width:100%;
+    border:none;
+    position: relative;
+    padding:0;
+    // line-height: 58px;
+    // width: $sxa-load-more-width;
+    // border-radius: $sxa-load-more-border-raduis;
+    // background-color: $sxa-load-more-background;
+    // color: $sxa-load-more-text-color;
+    // display: inline-flex;
+    // justify-content: space-between;
+    // margin: 0 auto;
+    // border: $sxa-load-more-border;
+    input {
+      height: $sxa-load-more-height;
+      background-color: transparent;
+      width:100%;
+      // line-height:$sxa-load-more-font-size;
+      // color: $sxa-load-more-text-color;
+      // font-size: $sxa-load-more-font-size;
+      font-weight: $sxa-load-more-font-weight;
+      // letter-spacing: $sxa-load-more-letter-spacing;
+      // padding: $sxa-load-more-padding-y $sxa-load-more-padding-x;
+      padding-right: $sxa-load-more-padding-extra;
+      border:none;
+      @include rtl {
+        padding-left: $sxa-load-more-padding-extra;
+        padding-right : $sxa-load-more-padding-x;
+      }
+      // position: absolute;
+      // width: 100%;
+      // height: 100%;
+      // top: 0;
+      // left: 0;
+      // padding: $sxa-load-more-padding;
+      // text-align: left;
+
+      // @include rtl{
+      //   text-align: right;
+      // }
+    }
+    span{
+      height: 100%;
+      font-size:  $sxa-load-more-icon-font-size;
+      font-weight: $sxa-load-more-icon-font-weight;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      & , &::before{
+        pointer-events: none;
+      }
+      position: absolute;
+      right: $sxa-load-more-padding-x;
+      top:0;
+      @include rtl{
+        right:auto;
+        left: $sxa-load-more-padding-x;
+      }
+    }
+  }
+}

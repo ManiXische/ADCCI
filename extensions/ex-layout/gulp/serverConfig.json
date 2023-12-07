@@ -1,0 +1,15 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-layout",
+        "version" : "1.0.0"
+    },
+    "order" : 2,
+    "prerequisites" : [
+       "ex-main-theme"
+    ],
+    "cssOrders" : [
+        "components-layout.css"
+    ]
+}

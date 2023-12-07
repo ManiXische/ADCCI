@@ -1,0 +1,111 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    font-size: $content-rating-font-size;
+    color :$content-rating-color;
+    border:$content-rating-border;
+
+    &__title{
+        min-height: $content-rating-title-height;
+
+       
+        &__question{
+            .accordion-trigger{
+                $trigger: &;
+
+                background: transparent;
+                color: inherit;
+                
+                [class^="icon-"], [class*=" icon-"] { 
+                    font-size: $content-rating-icon-font-size;
+                    cursor: pointer;
+        
+                    &:hover{
+                        color :$content-rating-active-color;
+                    }
+                }
+                
+                &__loader{
+                    display: none;
+
+                    &.spinner-grow{
+                        width: 1.7rem;
+                        height: 1.7rem;
+                    }
+                }
+                &__disabled{
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+                &.collapsed{
+                    @at-root{
+                        #{$trigger}__collapse{
+                            display: none;
+                        }
+                        #{$trigger}__expand{
+                            display: block;
+                        }
+                    }
+                }
+                @at-root{
+                    &:not(.collapsed) .accordion-trigger__collapse{
+                        display: block;
+                        color: $content-rating-active-color;
+                    }
+                    &:not(.collapsed) .accordion-trigger__expand{
+                        display: none;
+                    }
+                }
+            }
+           
+        }
+        &__message{
+            display: none;
+
+            [class^="icon-"], [class*=" icon-"] { 
+                font-size: $content-rating-font-size;
+            }
+
+            &--success{    
+                [class^="icon-"], [class*=" icon-"] { 
+                    color :$content-rating-success-color;
+                }
+            }
+
+            &--error{
+                color : $content-rating-error-color;
+                [class^="icon-"], [class*=" icon-"] { 
+                    color :$content-rating-error-color;
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &--expanded{
+        [data-value='sad']{
+            .accordion-trigger__collapse{
+                display: block;
+            }
+            .accordion-trigger__expand{
+                display:none;
+            }
+        }
+    }
+
+    [data-target] {
+        white-space: nowrap;
+    }    
+}

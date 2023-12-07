@@ -1,0 +1,57 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+
+    &__img {
+        background-size: cover;
+        background-repeat:no-repeat;
+        webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        @include transition(all 0.2s ease);
+        &:hover {
+            webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+            @include transition(all 0.2s ease);
+        }
+        img{
+            opacity: 0;
+            width: 100%;
+            // height: $new-member-img-height;
+            pointer-events: none;
+        }
+    }
+
+    &__title {
+        h6 {
+            max-width: $new-member-title-max-width;
+            color: $new-member-title-color;
+        }
+    }
+
+    &__subtitle {
+        .description {
+            font-size: $new-member-sub-title-fz;
+            color: $new-member-subtitle-color;
+        }
+    }
+}
+/*Editor Handler*/
+.on-page-editor{
+    .#{$ProjectName} {
+        &__img {
+            img{
+                opacity: 1;
+                pointer-events: visible;
+            }
+        }
+    }
+}

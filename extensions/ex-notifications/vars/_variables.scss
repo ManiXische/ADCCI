@@ -1,0 +1,74 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName}
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+
+$carousel-notification-container-background-color : $secondary-color  !default;
+$carousel-notification-container-font-color : $white-color  !default;
+$carousel-notification-fixed-text-font-color: $white-color  !default;
+$carousel-notification-arrow-circle-color : transparent  !default;
+$carousel-notification-arrow-circle-font-color : $white-color  !default;
+$carousel-notification-arrow-rtl-margin:0 !default;
+$carousel-notification-arrow-circle:12px !default;
+$ex-notifications-border: 1px solid $danger-color !default; 
+$ex-slick-notification-p-small-font-size: 16px !default;
+
+$ex-notification-label: $danger-color !default;
+$ex-notification-label-height: 45px !default;
+$ex-notification-label-lineheight: 43px !default;
+$ex-notification-label-pr: 10px !default;
+$ex-notification-label-marginright : 30px !default;
+$ex-notification-label-pl: 5px !default;
+$ex-notification-height: 75px !default;
+$ex-notification-max-height: 75px !default;
+$ex-notification-max-height-mobile:none !default;
+$ex-notification-a-text-decoration:none !default;
+$ex-notification-h6-fs:18px!default;
+$ex-notification-h6-fw: 400!default;
+
+$ex-slick-notification-news-notify-item:26px !default;
+$ex-slick-notification-overflow: hidden !default;
+
+$ex-slick-notification-overflow-p-white-space:nowrap !default;
+
+$ex-slick-notification-p-small-font-color:$grey-700 !default;
+$ex-slick-notification-p-small-padding:5px 10px 5px 0 !default;
+$ex-slick-notification-p-small-margin: 0 10px 0 0 !default;
+$ex-slick-notification-p-small-border-right:1px solid  $carousel-notification-container-font-color !default;
+
+$ex-slick-notification-item-date-font-color:$grey-700 !default;
+$ex-slick-notification-item-date-padding:5px 10px 5px 0 !default;
+$ex-slick-notification-item-date-margin: 0 10px 0 0 !default;
+$ex-slick-notification-item-date-border-right:1px solid  $carousel-notification-container-font-color !default;
+
+$ex-slick-notification-p-small-padding-rtl:5px 10px 5px 10px !default;
+$ex-slick-notification-p-small-margin-rtl: 0 0 0 10px !default;
+$ex-slick-notification-p-small-border-left-rtl:1px solid  $carousel-notification-container-font-color !default;
+$ex-slick-notification-p-small-border-right-rtl:none !default;
+
+$carousel-navigation-margin:0 !default;
+$carousel-navigation-padding:3px 0px 0px 0px !default;
+$carousel-navigation-box-shadow:none !default;
+
+$custom-circle-position:relative !default;
+$custom-circle-width:12px !default;
+$custom-circle-height:12px !default;
+$custom-circle-display:inline-block !default;
+
+$custom-circle-after-position: absolute !default;
+$custom-circle-after-left:-1px !default;
+$custom-circle-after-top:0 !default;
+$custom-circle-after-background-color: transparent !default;
+$custom-circle-after-width: 14px !default;
+$custom-circle-after-height: 14px !default;
+$custom-circle-after-border-radius: 50% !default;
+$custom-circle-after-border-width: 2px  !default;
+$custom-circle-after-border-color : $danger-color  !default;
+$custom-circle-after-display: inline-block !default;
+
+$ex-notification-label-pl-sm: 10px !default;
+$ex-notification-label-text-transform:uppercase !default;
+
+

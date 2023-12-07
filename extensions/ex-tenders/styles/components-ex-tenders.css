@@ -1,0 +1,427 @@
+/***************************************************************************************************
+Extension Name: ex-tenders 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-tenders 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-tenders 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-tenders .doc-number:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border: 2px solid #006ba2;
+  background-color: #006ba2;
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+}
+
+html:not([dir='rtl']) .ex-tenders .doc-number:before, .translated-ltr .ex-tenders .doc-number:before {
+  margin-right: 10px;
+}
+
+html[dir='rtl'] .ex-tenders .doc-number:before, .translated-rtl .ex-tenders .doc-number:before {
+  margin-left: 10px;
+}
+
+.ex-tenders .badge span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  border-radius: 4px;
+  background-color: #ededed;
+  padding: 5px 10px;
+  font-weight: normal;
+  white-space: normal;
+}
+
+html:not([dir='rtl']) .ex-tenders .badge span, .translated-ltr .ex-tenders .badge span {
+  text-align: left;
+}
+
+html[dir='rtl'] .ex-tenders .badge span, .translated-rtl .ex-tenders .badge span {
+  text-align: right;
+}
+
+.ex-tenders .badge span.active {
+  background-color: rgba(0, 107, 162, 0.2);
+  color: #006ba2;
+}
+
+.ex-tenders hr {
+  height: 1px;
+  border: 0px;
+  border-top: 1px solid #e0e0e1;
+  width: 100%;
+}
+
+.ex-tenders .ex-tender-head {
+  cursor: pointer;
+}
+
+.ex-tenders .ex-tender-body {
+  display: none;
+}
+
+.ex-tenders .load-more,
+.ex-tenders #no-result,
+.ex-tenders #call-error,
+.ex-tenders #no-listing-result {
+  display: none;
+}
+
+.ex-tenders .nav-filter {
+  border: 1px solid #e0e0e1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.ex-tenders .nav-filter a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 13px;
+  font-weight: 900;
+  color: #3f3e45;
+  border-bottom: 1px solid #e0e0e1;
+}
+
+.ex-tenders .nav-filter a span {
+  margin: 0 13px;
+  line-height: 24px;
+}
+
+.ex-tenders .nav-filter a span.icon {
+  margin: 0;
+}
+
+.ex-tenders .nav-filter a.active {
+  padding: 16px 10px;
+}
+
+html:not([dir='rtl']) .ex-tenders .nav-filter a.active, .translated-ltr .ex-tenders .nav-filter a.active {
+  border-left: 5px solid #006ba2;
+}
+
+html[dir='rtl'] .ex-tenders .nav-filter a.active, .translated-rtl .ex-tenders .nav-filter a.active {
+  border-right: 5px solid #006ba2;
+}
+
+.ex-tenders .nav-filter li:last-child a {
+  border-bottom: 0;
+}
+
+.ex-tenders #tender-search input {
+  background-color: transparent;
+  padding: 10px 35px;
+}
+
+.ex-tenders #tender-search .icon-search {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.ex-tenders .section--box {
+  border: 1px solid #006ba2;
+  border-radius: 6px;
+  background-color: #daecf5;
+}
+
+.ex-tenders a.link-default {
+  color: #3f3e45;
+}
+
+.ex-tenders a.link-default:hover, .ex-tenders a.link-default:focus {
+  color: #3f3e45;
+}
+
+.ex-tenders .button {
+  border-radius: 3px;
+}
+
+.ex-tenders .headIcon {
+  font-weight: 900;
+  position: absolute;
+  top: 47%;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  pointer-events: none;
+}
+
+html:not([dir='rtl']) .ex-tenders .headIcon, .translated-ltr .ex-tenders .headIcon {
+  right: 0;
+}
+
+html[dir='rtl'] .ex-tenders .headIcon, .translated-rtl .ex-tenders .headIcon {
+  left: 0;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-tenders .headIcon {
+    top: 0px;
+  }
+}
+
+.ex-tenders .headIcon.active {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.ex-tenders .ex-sxa-load-more {
+  margin-top: 60px;
+}
+
+.ex-tenders .ex-sitecore-form__label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 12px;
+}
+
+.ex-tenders .ex-sitecore-form__input__label {
+  color: #3f3e45;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 22px;
+  cursor: pointer;
+  text-transform: none;
+}
+
+.ex-tenders .ex-sitecore-form__link {
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 12px;
+}
+
+.ex-tenders .ex-sitecore-form__input__checkbox--dark label {
+  border: 1px solid #b2b2b5;
+}
+
+.ex-tenders .ex-sitecore-form__input__checkbox--dark label:after {
+  left: 3px;
+}
+
+.ex-tenders .ex-sitecore-form select {
+  height: 28px;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #89888C;
+}
+
+html:not([dir='rtl']) .ex-tenders .ex-sitecore-form select, .translated-ltr .ex-tenders .ex-sitecore-form select {
+  padding: 0px 25px 0px 10px !important;
+}
+
+html[dir='rtl'] .ex-tenders .ex-sitecore-form select, .translated-rtl .ex-tenders .ex-sitecore-form select {
+  padding: 0px 10px 0px 25px !important;
+}
+
+.ex-tenders .ex-sitecore-form .dropdown-list-arrow:after {
+  border-color: #89888c;
+  border-width: 0 2px 2px 0;
+}
+
+html:not([dir='rtl']) .ex-tenders .ex-sitecore-form .dropdown-list-arrow:after, .translated-ltr .ex-tenders .ex-sitecore-form .dropdown-list-arrow:after {
+  top: 9px;
+  right: 13px;
+}
+
+html[dir='rtl'] .ex-tenders .ex-sitecore-form .dropdown-list-arrow:after, .translated-rtl .ex-tenders .ex-sitecore-form .dropdown-list-arrow:after {
+  top: 9px;
+  left: 13px;
+}
+
+.ex-tenders .button-filter,
+.ex-tenders .button-status {
+  display: none;
+}
+
+.ex-tenders .sorting-filters--select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.ex-tenders .showlessLnk {
+  display: none;
+}
+
+.ex-tenders .event-type-wrap img,
+.ex-tenders .estimate-value-wrap img {
+  width: 18px;
+  height: 24px;
+}
+
+@media print {
+  html[lang="en"],
+  html[lang="ar-AE"] {
+    /* All your print styles go here */
+  }
+  html[lang="en"] header,
+  html[lang="en"] footer,
+  html[lang="ar-AE"] header,
+  html[lang="ar-AE"] footer {
+    display: none !important;
+  }
+  html[lang="en"] .ex-tenders .col-lg-3,
+  html[lang="ar-AE"] .ex-tenders .col-lg-3 {
+    display: none !important;
+  }
+  html[lang="en"] .ex-tenders .ex-tender,
+  html[lang="ar-AE"] .ex-tenders .ex-tender {
+    display: none !important;
+  }
+  html[lang="en"] .section.sectionLoadedTender,
+  html[lang="ar-AE"] .section.sectionLoadedTender {
+    display: block !important;
+  }
+  html[lang="en"] .print-row,
+  html[lang="ar-AE"] .print-row {
+    display: block !important;
+    width: 100% !important;
+    clear: both !important;
+    background: none !important;
+    border: 0px !important;
+    max-width: none !important;
+  }
+  html[lang="en"] .print-0-spacing,
+  html[lang="ar-AE"] .print-0-spacing {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html[lang="en"] .hide-print,
+  html[lang="ar-AE"] .hide-print {
+    display: none !important;
+  }
+  html[lang="en"] .badge,
+  html[lang="ar-AE"] .badge {
+    border: 0;
+  }
+  html[lang="en"] .caption,
+  html[lang="en"] caption,
+  html[lang="ar-AE"] .caption,
+  html[lang="ar-AE"] caption {
+    font-size: 16px;
+  }
+  html[lang="en"] .small-text,
+  html[lang="en"] label,
+  html[lang="ar-AE"] .small-text,
+  html[lang="ar-AE"] label {
+    font-size: 16px;
+  }
+  html[lang="en"] .headIcon,
+  html[lang="ar-AE"] .headIcon {
+    display: none;
+  }
+}
+
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+  html[lang="en"] .ppe-wrap,
+  html[lang="ar-AE"] .ppe-wrap {
+    display: block !important;
+  }
+  html[lang="en"] .participate-btn-wrap,
+  html[lang="ar-AE"] .participate-btn-wrap {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  html[lang="en"] .event-type-wrap,
+  html[lang="ar-AE"] .event-type-wrap {
+    margin: 10px !important;
+  }
+  html[lang="en"] .estimate-value-wrap,
+  html[lang="ar-AE"] .estimate-value-wrap {
+    margin: 10px !important;
+  }
+  html[lang="en"] .recomendedtenders .ex-news-cards__card-details__card-date,
+  html[lang="ar-AE"] .recomendedtenders .ex-news-cards__card-details__card-date {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .ex-tenders .nav-status {
+    min-width: 300px;
+  }
+  .ex-tenders .button-filter,
+  .ex-tenders .button-status {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .dialog-component__message .sorting-filters--select {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .dialog-component__message .sorting-filters-sort-filter.sorting-filters--select {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+  .dialog-component__message .sorting-filters-sort-filter.sorting-filters--select p {
+    margin: 0 !important;
+    padding-bottom: 10px;
+  }
+  .dialog-component__message .sorting-filters-sort-filter.sorting-filters--select .sortingFilters {
+    padding: 5px;
+    width: 100%;
+  }
+  .search-filters {
+    margin-bottom: 40px;
+  }
+}

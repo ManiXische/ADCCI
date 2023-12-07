@@ -1,0 +1,151 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+.#{$ProjectName} {
+    $baseNameClass : 'happiness-meter-slider';
+
+    .#{$baseNameClass}{
+        position: relative;
+        
+        @include background-gradient(left, $happiness-meter-slider-firstbg , 1% ,to right, $happiness-meter-slider-secondbg, 100%);
+        @include box-shadow(0px, 0px, 0px 10px , rgba($happiness-meter-slider-box-Shadow , 0.20));
+        @include border-radius(10px);
+
+        &__fill
+        {
+            display: block;
+            @include box-shadow( inset 0px 1px 3px rgba($happiness-meter-slider-box-Shadow-fill, 0.3));
+            @include border-radius(10px);
+        }
+
+    &--horizontal {
+        height: $happiness-meter-slider-horizontal-height;
+        width: $happiness-meter-slider-horizontal-width;
+        &:before{
+            content: '';
+            position: absolute;
+            height: calc(#{$happiness-meter-slider-horizontal-height} + 30px);
+            top: 50%;
+            left: -10px;
+            right: -10px;
+            transform: translateY(-50%);
+            background: $happiness-meter-slider-horizontal-shadow-bg;
+            @include border-radius(26px);
+        }
+    }
+
+    &--vertical {
+        width: $happiness-meter-slider-vertical-width;
+        min-height: $happiness-meter-slider-vertical-min-height;
+        max-height: $happiness-meter-slider-vertical-max-height;
+    }
+
+    &--disabled {
+        // @include opacity(0.4);
+    }
+
+    &__fill {
+        position: absolute;
+    }
+    &__fill{
+        &--revert{
+            background:$happiness-meter-slider-inactive-color;
+        }
+    }
+    &--horizontal {
+        .#{$baseNameClass}__fill  {
+            top: 0;
+            width:100%;
+            height: 100%;
+        }
+    }
+    &--horizontal  {
+        .#{$baseNameClass}__fill--revert{
+            right:0;
+            @include rtl{
+                left: 0;
+                right:auto;
+            }
+        }
+    }
+    &--vertical {
+        .#{$baseNameClass}__fill  {
+            bottom: 0;
+            width: 100%;
+            height:100%;
+        }
+    }
+    &--vertical {
+        .#{$baseNameClass}__fill{
+            &--revert{
+                top:0;
+            }
+        }
+    }
+
+    &__handle {
+        border: 1px solid #ccc;
+        cursor: pointer;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        background-size: 100%;
+        background: white;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4xIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+        // background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, color-opacity(255, 255, 255, 0)), color-stop(100%, color-opacity(0, 0, 0, 0.1)));
+        // background-image: -moz-linear-gradient(color-opacity(255, 255, 255, 0), color-opacity(0, 0, 0, 0.1));
+        // background-image: -webkit-linear-gradient(color-opacity(255, 255, 255, 0), color-opacity(0, 0, 0, 0.1));
+        background-image: background-gradient(rgba($happiness-meter-handle-bg-grdiant1, 0), rgba($happiness-meter-handle-bg-grdiant2, 0.1));
+
+        @include box-shadow( 0 0 8px rgba(0, 0, 0, 0.3));
+        @include border-radius(50%);
+
+        &:after {
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjEzIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+            background-size: 100%;
+            // background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, color-opacity(0, 0, 0, 0.13)), color-stop(100%, color-opacity(255, 255, 255, 0)));
+            // background-image: -moz-linear-gradient(color-opacity(0, 0, 0, 0.13), color-opacity(255, 255, 255, 0));
+            // background-image: -webkit-linear-gradient(color-opacity(0, 0, 0, 0.13), color-opacity(255, 255, 255, 0));
+            background-image: background-gradient(rgba($happiness-meter-handle-bg-grdiant2, 0.13), rgba($happiness-meter-handle-bg-grdiant1, 0));
+            @include border-radius(50%);
+
+            }
+    }
+
+    &--horizontal {
+        .#{$baseNameClass}__handle {
+            top: -10px;
+            touch-action: pan-y;
+            -ms-touch-action: pan-y;
+        }
+    }
+    &--vertical{
+        .#{$baseNameClass}__handle {
+            left: -10px;
+            touch-action: pan-x;
+            -ms-touch-action: pan-x;
+        }
+    }
+}
+    input[type="range"]:focus + .#{$baseNameClass} .#{$baseNameClass}__handle {
+        // @include box-shadow(0 0 8px color-opacity(255, 0, 255, 0.9));
+    }
+}

@@ -1,0 +1,164 @@
+/***************************************************************************************************
+Extension Name: ex-data-grid 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-data-grid 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-data-grid 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-data-grid__search-box input,
+.ex-data-grid__search-button a,
+.ex-data-grid__dropdown select {
+  height: 50px;
+  border-radius: 2px;
+  border: solid 1px #D6D6D6;
+  background-color: rgba(175, 175, 175, 0.5);
+}
+
+.ex-data-grid__search-box input {
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9F9FA2;
+}
+
+html[lang*='en'] .ex-data-grid__search-box input,
+html[class*='translated-ltr'] .ex-data-grid__search-box input {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+html[lang*='ar'] .ex-data-grid__search-box input,
+html[class*='translated-rtl'] .ex-data-grid__search-box input {
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.ex-data-grid__search-button a {
+  padding: 10px 15px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+html[lang*='ar'] .ex-data-grid__search-button a,
+html[class*='translated-rtl'] .ex-data-grid__search-button a {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+html[lang*='en'] .ex-data-grid__search-button a,
+html[class*='translated-ltr'] .ex-data-grid__search-button a {
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.ex-data-grid__dropdown select {
+  padding: 10px 10px;
+}
+
+.ex-data-grid label {
+  opacity: 0.56;
+  font-size: 12px;
+  color: #000;
+  letter-spacing: 1.09px;
+}
+
+html[lang*='ar'] .ex-data-grid label,
+html[class*='translated-rtl'] .ex-data-grid label {
+  letter-spacing: 0;
+}
+
+.ex-data-grid__total-results {
+  font-size: 16px;
+  color: #3F3E45;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+.ex-data-grid .table-responsive {
+  min-height: 300px;
+}
+
+.ex-data-grid .table-responsive thead th {
+  color: #3F3E45;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 900;
+  letter-spacing: normal;
+  border-top: none;
+  border-bottom: 2px solid #F5F5F7;
+}
+
+.ex-data-grid .table-responsive td {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+html[lang*='ar'] .ex-data-grid .table-responsive td,
+html[class*='translated-rtl'] .ex-data-grid .table-responsive td {
+  text-align: right;
+}
+
+.ex-data-grid .grid-load-more {
+  display: none;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-data-grid table.table tr {
+    display: table-row !important;
+  }
+  .ex-data-grid table {
+    table-layout: fixed;
+  }
+  .ex-data-grid .grid-load-more-wrapper {
+    display: block !important;
+  }
+}
+
+.ex-data-grid select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.ex-data-grid select::-ms-expand {
+  display: none;
+}

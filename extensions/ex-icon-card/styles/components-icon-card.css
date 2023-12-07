@@ -1,0 +1,467 @@
+/***************************************************************************************************
+Extension Name: ex-icon-card 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-icon-card 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-icon-card 
+File: Mixins
+Author: Wael
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-icon-card 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-icon-card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #D6D6D6;
+  border-radius: 0px;
+  padding: 20px;
+  min-height: 140px;
+}
+
+.ex-icon-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  height: 4px;
+  background: #FF8D00;
+}
+
+html[dir='rtl'] .ex-icon-card:before, .translated-rtl .ex-icon-card:before {
+  right: 0;
+  left: auto;
+}
+
+.ex-icon-card--fixed-height {
+  height: 175px;
+}
+
+.ex-icon-card--auto-height {
+  min-height: auto;
+}
+
+.ex-icon-card__wrapper {
+  max-height: 175px;
+}
+
+@media (max-width: 768px) {
+  .ex-icon-card__wrapper {
+    max-height: none;
+  }
+}
+
+.ex-icon-card__wrapper__content .card-icon {
+  margin-right: 20px;
+  font-size: 40px;
+  text-align: center;
+  min-width: 50px;
+}
+
+html[dir='rtl'] .ex-icon-card__wrapper__content .card-icon, .translated-rtl .ex-icon-card__wrapper__content .card-icon {
+  margin-left: 20px;
+  margin-right: 0px;
+}
+
+.ex-icon-card__wrapper__content .card-icon--primary {
+  color: #FF8D00;
+}
+
+.ex-icon-card__wrapper__content .card-icon--secondary {
+  color: #3F51B5;
+}
+
+.ex-icon-card__wrapper__content .card-icon img {
+  height: 50px;
+}
+
+.ex-icon-card__wrapper__content .card-img {
+  width: 120px;
+}
+
+.ex-icon-card__wrapper__content .card-img img {
+  max-height: 105px;
+}
+
+.ex-icon-card__wrapper__content .card-link,
+.ex-icon-card__wrapper__content .card-link a {
+  font-size: 13px;
+  color: #3F51B5;
+  margin-top: 10px;
+  bottom: 20px;
+}
+
+.ex-icon-card__wrapper__content .card-link:hover,
+.ex-icon-card__wrapper__content .card-link a:hover {
+  color: #000;
+}
+
+.ex-icon-card__wrapper__content .card-link:hover i,
+.ex-icon-card__wrapper__content .card-link a:hover i {
+  color: #000;
+}
+
+.ex-icon-card__wrapper__content .card-link .icon,
+.ex-icon-card__wrapper__content .card-link a .icon {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+html[dir='rtl'] .ex-icon-card__wrapper__content .card-link .icon, .translated-rtl .ex-icon-card__wrapper__content .card-link .icon, html[dir='rtl']
+.ex-icon-card__wrapper__content .card-link a .icon, .translated-rtl
+.ex-icon-card__wrapper__content .card-link a .icon {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.ex-icon-card__wrapper__content .card-link .field-size,
+.ex-icon-card__wrapper__content .card-link a .field-size {
+  text-transform: uppercase;
+}
+
+.ex-icon-card__wrapper__content .card-link--seperator,
+.ex-icon-card__wrapper__content .card-link a--seperator {
+  width: 16px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.ex-icon-card__wrapper__content .card-meta .card-link-with-icon {
+  line-height: 25px;
+}
+
+.ex-icon-card__wrapper__content .card-meta .card-link-with-icon a:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: transparent;
+}
+
+.ex-icon-card__wrapper__content .card-meta .card-link,
+.ex-icon-card__wrapper__content .card-meta .card-link a {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.ex-icon-card__wrapper__content .card-meta .card-link-icon img {
+  height: 25px;
+}
+
+.ex-icon-card__wrapper__content .card-title {
+  font-size: 22px;
+  color: #3F3E45;
+  margin-bottom: 5px;
+  line-height: 26px;
+}
+
+.ex-icon-card__wrapper__content .card-title--fixed-height {
+  height: 52px;
+}
+
+.ex-icon-card__wrapper__content .card-title--primary {
+  color: #3F3E45;
+}
+
+.ex-icon-card__wrapper__content .card-title--secondary {
+  color: #3F51B5;
+}
+
+.ex-icon-card__wrapper__content .card-description {
+  font-size: 14px;
+  line-height: 22px;
+  color: #000;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-icon-card__wrapper__content .card-description {
+    width: 200px;
+  }
+}
+
+.ex-icon-card__wrapper__content .card-description b {
+  font-weight: bold;
+}
+
+.ex-icon-card__wrapper__content .card-tag {
+  color: #89888C;
+  font-size: 14px;
+}
+
+.ex-icon-card__wrapper__content .card-tag i {
+  color: #89888C;
+}
+
+.ex-icon-card__wrapper__content .card-buttons {
+  font-size: 12px;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-icon-card__wrapper__content .card-buttons {
+    margin-top: 15px;
+  }
+}
+
+.ex-icon-card__wrapper__content .card-buttons--white {
+  color: #ffffff;
+}
+
+.ex-icon-card__back {
+  position: absolute;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  padding: 20px;
+  -webkit-transition: top 0.5s ease;
+  transition: top 0.5s ease;
+}
+
+.ex-icon-card:hover {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+.ex-icon-card:hover .ex-icon-card__back {
+  top: 0;
+}
+
+.ex-icon-card--hoverless:hover {
+  box-shadow: none;
+}
+
+.ex-icon-card--larger {
+  height: 370px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-icon-card--larger {
+    height: 370px;
+  }
+}
+
+.ex-icon-card--large {
+  min-height: 290px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-icon-card--large {
+    height: 290px;
+  }
+}
+
+.ex-icon-card--medium {
+  min-height: 250px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-icon-card--medium {
+    height: 250px;
+  }
+}
+
+.ex-icon-card--shortb4::before {
+  width: 98px;
+}
+
+.ex-icon-card--shortb4.ex-icon-card--w-b4-hover:hover {
+  border-color: #FF8D00;
+}
+
+.ex-icon-card--shortb4.ex-icon-card--w-b4-hover:hover::before {
+  width: 100%;
+}
+
+.ex-icon-card--verticalb4::before {
+  width: 4px;
+  height: 100%;
+  opacity: 1;
+}
+
+.ex-icon-card--fullb4::before {
+  width: 100%;
+}
+
+.ex-icon-card--reset-height {
+  height: auto;
+  min-height: auto;
+}
+
+.ex-icon-card--reset-height .ex-icon-card__wrapper {
+  max-height: inherit;
+}
+
+.ex-icon-card--reset-height .card-description {
+  height: auto;
+}
+
+.ex-icon-card--white {
+  color: #ffffff;
+}
+
+.ex-icon-card--white .card-title,
+.ex-icon-card--white .card-description,
+.ex-icon-card--white .card-icon {
+  color: #ffffff;
+}
+
+.ex-icon-card--transparent {
+  background: transparent;
+}
+
+.ex-icon-card--border-less {
+  border: none;
+}
+
+.ex-icon-card--border-less:hover {
+  box-shadow: none;
+}
+
+.ex-icon-card--alt {
+  background: #F5F5F7;
+}
+
+.ex-icon-card--alt.ex-icon-card .card-icon:not(.card-icon--primary),
+.ex-icon-card--alt.ex-icon-card .card-description {
+  color: #000;
+}
+
+.ex-icon-card--w-alt-hover {
+  max-height: 145px;
+}
+
+.ex-icon-card--w-alt-hover:hover {
+  background: #3F3E45;
+  color: #ffffff;
+}
+
+.ex-icon-card--w-alt-hover:hover .card-icon:not(.card-icon--primary),
+.ex-icon-card--w-alt-hover:hover .card-title,
+.ex-icon-card--w-alt-hover:hover .card-link,
+.ex-icon-card--w-alt-hover:hover .card-description {
+  color: #ffffff;
+}
+
+.ex-icon-card--w-alt-hover:hover .card-link:hover {
+  color: #ffffff;
+}
+
+.ex-icon-card--border-hover {
+  border: 1px solid #D6D6D6;
+}
+
+.ex-icon-card--border-hover:hover {
+  border-color: #000;
+}
+
+.ex-icon-card--numbercard {
+  border-color: #C4C4C4;
+  padding: 10px;
+}
+
+.ex-icon-card--numbercard .card-icon {
+  width: 45px;
+  height: 45px;
+  font-size: 36px;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 4px solid #008090;
+  border-radius: 50%;
+}
+
+.ex-icon-card--numbercard .card-icon span {
+  color: #008090;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ex-icon-card--numbercard .card-icon {
+    width: 75px;
+    height: 70px;
+  }
+}
+
+.ex-icon-card--hover-effect {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  overflow: visible;
+}
+
+.ex-icon-card--hover-effect:hover {
+  border-color: #FF8D00;
+  box-shadow: 0px 10px 0px 0px #FF8D00;
+  -webkit-transform: translateY(-7px) scale(1.02);
+  -ms-transform: translateY(-7px) scale(1.02);
+  transform: translateY(-7px) scale(1.02);
+}
+
+.ex-icon-card--hover-effect:hover:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+  height: 10px;
+  left: 0;
+}
+
+.ex-icon-card--hover-effect .ex-icon-card__wrapper {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .card-title.height-p45 {
+    height: auto;
+    max-height: none;
+  }
+}

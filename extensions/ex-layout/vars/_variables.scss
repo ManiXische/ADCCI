@@ -1,0 +1,343 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+
+// General 
+$layout-button-height: 50px !default;
+$layout-button-medium-height : 40px !default;
+$layout-button-small-height : 28px !default;
+$layout-button-fontsize: 16px !default;
+$layout-button-small-fontsize: 12px !default;
+$layout-button-fontweight: 900 !default;
+$layout-button-minwidth: 160px !default;
+$layout-button-border-less-fs: 16px !default;
+$layout-button-border-less-color:$black-color !default;
+$layout-button-border-hover-width:60%  !default;
+$layout-button-border-hover-height:2px  !default;
+$layout-button-border-hover-color:$black-color  !default;
+$layout-button-padding : 0 20px 0 20px !default;
+$layout-button-small-padding : 0 10px 0 10px !default;
+$layout-button-small-icon-padding : 10px !default;
+
+
+$layout-button-secondary-border-width : 2px !default;
+
+$layout-button-inverted-border-width : 1px !default;
+
+
+
+// to be deprecated
+$layout-button-reverse-bg : $grey-900 !default;
+$layout-button-reverse-hover-bg :  $primary-color !default;
+$layout-button-white-bg : $white-color !default;
+$layout-button-white-color: $primary-color !default;
+$layout-button-white-hover-color:$white-color !default;
+$layout-button-white-hover-bg:$primary-color !default;
+$layout-button-invert-bg: transparent !default;
+$layout-button-invert-color : $primary-color !default;
+$layout-button-invert-border-color : $primary-color !default;
+$layout-button-invert-hover-bg : transparent !default;
+$layout-button-invert-hover-color : $grey-900 !default;
+$layout-button-invert-hover-border-color : $grey-900 !default;
+$layout-button-invert-reverse-color: $grey-900 !default;
+$layout-button-invert-reverse-border-color: $grey-900 !default;
+$layout-button-invert-reverse-hover-color: $primary-color !default;
+$layout-button-invert-reverse-border-hover-border-color: $primary-color !default;
+$layout-button-invert-white-color: $white-color !default;
+$layout-button-invert-white-border-color: $white-color !default;
+$layout-button-invert-white-hover-color: $primary-color !default;
+$layout-button-invert-white-hover-border-color: $primary-color !default;
+$layout-button-sign-bg-color:transparent !default;
+$layout-button-sign-txt-color:#0081C6 !default;
+$layout-button-sign-txt-size:16px !default;
+$layout-button-sign-circle-color:#0081C6 !default;
+$layout-button-sign-circle-padding:9px !default;
+$layout-button-sign-circle-brdr-rdis:50% !default;
+$layout-button-sign-icon-color:$white-color !default;
+$layout-button-direction-border: 2px solid $primary-color;
+$layout-button-direction-font-sie:16px;
+$layout-button-normal-bg-color:transparent;
+$layout-button-normal-text-color:$primary-color4;
+$layout-button-normal-border:2px solid $primary-color4;
+
+
+
+// Headings 
+$layout-heading-font-family : inherit !default;
+
+$layout-h1-font-size : 40px !default;
+$layout-h1-line-height : 48px !default;
+$layout-h1-sm-font-size : 32px !default;
+$layout-h1-sm-line-height : 38px !default;
+
+$layout-h2-font-size : 32px !default;
+$layout-h2-line-height : 40px !default;
+$layout-h2-sm-font-size : 32px !default;
+$layout-h2-sm-line-height : 40px !default;
+$layout-h2-xxl-font-size : 32px !default;
+$layout-h2-xxl-line-height : 40px !default;
+
+$layout-h3-font-size : 28px !default;
+$layout-h3-line-height : 36px !default;
+$layout-h3-sm-font-size : 28px !default;
+$layout-h3-sm-line-height : 36px !default;
+$layout-h3-xxl-font-size : 28px !default;
+$layout-h3-xxl-line-height : 36px !default;
+
+$layout-h4-font-size : 24px !default;
+$layout-h4-line-height : 30px !default;
+$layout-h4-sm-font-size : 24px !default;
+$layout-h4-sm-line-height : 30px !default;
+$layout-h4-xxl-font-size : 24px !default;
+$layout-h4-xxl-line-height : 30px !default;
+
+$layout-h5-font-size : 20px !default;
+$layout-h5-line-height : 26px !default;
+$layout-h5-sm-font-size : 20px !default;
+$layout-h5-sm-line-height : 26px !default;
+$layout-h5-xxl-font-size : 20px !default;
+$layout-h5-xxl-line-height : 26px !default;
+
+$layout-h6-font-size : 20px !default;
+$layout-h6-line-height : 26px !default;
+$layout-h6-sm-font-size : 20px !default;
+$layout-h6-sm-line-height : 26px !default;
+$layout-h6-xxl-font-size : 20px !default;
+$layout-h6-xxl-line-height : 26px !default;
+
+$layout-p-font-size : 16px !default;
+$layout-p-line-height : 24px !default;
+$layout-p-font-family : inherit !default;
+$layout-p-sm-font-size : 16px !default;
+$layout-p-sm-line-height : 24px !default;
+$layout-p-xxl-font-size : 16px !default;
+$layout-p-xxl-line-height : 24px !default;
+
+$layout-caption-font-size : 14px !default;
+$layout-caption-line-height : 20px !default;
+$layout-caption-font-family : inherit !default;
+$layout-caption-sm-font-size : 14px !default;
+$layout-caption-sm-line-height : 20px !default;
+$layout-caption-xxl-font-size : 14px !default;
+$layout-caption-xxl-line-height : 20px !default;
+
+$layout-display-1-font-size : 62px !default;
+$layout-display-1-line-height : 62px !default;
+$layout-display-2-font-size : 62px !default;
+$layout-display-2-line-height : 62px !default;
+$layout-display-3-font-size : 40px !default;
+$layout-display-3-line-height : 40px !default;
+$layout-display-4-font-size : 40px !default;
+$layout-display-4-line-height : 40px !default;
+$layout-display-5-font-size : 28px !default;
+$layout-display-5-line-height : 28px !default;
+$layout-display-6-font-size : 28px !default;
+$layout-display-6-line-height : 28px !default;
+
+$layout-label-font-size : 12px !default;
+$layout-label-line-height : 12px !default;
+$layout-label-text-transform : uppercase !default;
+$layout-label-letter-spacing : 1px !default;
+$layout-label-font-family : inherit !default;
+$layout-label-sm-font-size : 12px !default;
+$layout-label-sm-line-height : 12px !default;
+$layout-label-xxl-font-size : 12px !default;
+$layout-label-xxl-line-height : 12px !default;
+
+
+$layout-tags-font-size : 12px !default;
+$layout-tags-line-height : 1.4 !default;
+
+$layout-display-1-font-size: 62px !default; 
+$layout-display-1-line-height: 62px !default; 
+$layout-display-1-sm-font-size: 44px !default; 
+$layout-display-1-sm-line-height: 44px !default; 
+$layout-display-2-font-size: 62px !default; 
+$layout-display-2-line-height: 62px !default; 
+$layout-display-2-sm-font-size: 44px !default; 
+$layout-display-2-sm-line-height: 44px !default; 
+$layout-display-3-font-size: 40px !default; 
+$layout-display-3-line-height: 40px !default; 
+$layout-display-3-sm-font-size: 32px !default; 
+$layout-display-3-sm-line-height: 32px !default; 
+$layout-display-4-font-size: 40px !default; 
+$layout-display-4-line-height: 40px !default; 
+$layout-display-4-sm-font-size: 32px !default; 
+$layout-display-4-sm-line-height: 32px !default; 
+$layout-display-5-font-size: 28px !default; 
+$layout-display-5-line-height: 28px !default; 
+$layout-display-5-sm-font-size: 24px !default; 
+$layout-display-5-sm-line-height: 24px !default; 
+$layout-display-6-font-size: 28px !default; 
+$layout-display-6-line-height: 28px !default; 
+$layout-display-6-sm-font-size: 24px !default; 
+$layout-display-6-sm-line-height: 24px !default; 
+
+
+$cta-component-bg-color1:$primary-color !default;
+$cta-component-bg-color1-percentage:0% !default;
+$cta-component-bg-color1-direction:bottom !default;
+$cta-component-bg-color2: $primary-color2 !default;
+$cta-component-bg-color2-percentage:100% !default;
+$cta-component-text-color:$white-color !default;
+$cta-component-separator-style: 1px solid rgba(255,255,255,0.5) !default;
+$cta-component-button-bg-color: $white-color !default;
+$cta-component-button-bg-hover: $grey-900 !default;
+$cta-component-button-color-hover: $white-color !default;
+$cta-component-telphone-color:$white-color !default;
+$cta-component-separator:1px solid #fff !default;
+$cta-component--alt-background:$grey-100 !default;
+$cta-component--alt-color:$grey-900 !default;
+$cta-component--alt-separator: $grey-400 !default;
+$layout-results-count-font-size : 14px !default;
+
+
+$layout-truncateLines: 1,2,3,4,5,6,7,8 !default;
+$layout-opacities : 0,10,20,30,40,50,60,70,80,90,100 !default;
+$layout-radiuses : 0,3,5,10,15,20,25,30,35,40,45,50,55,60 !default;
+$layout-hrs : 1,2,3,4,5,6,6,7,8 !default;
+$layout-spacer: 1rem !default;
+$layout-columns: (
+    (2,48%, 46%, 100%),
+    (3,31%, 46%, 100%),
+    (4,23%, 30%, 100%)
+);
+
+
+// fonts
+$supported-fonts-exts : (
+    ('woff2',format("woff2")),
+    ('woff',format("woff")),
+    ('ttf',format("truetype")),
+    ('svg',format("svg")),
+    ('eot?#iefix',format("embedded-opentype"))
+); 
+
+$supported-fonts: (
+    // (circularstd, CircularStd-Bold , CircularStd , 700),
+    // (circularstd, CircularStd-Black , CircularStd , 900),
+    // (circularstd, CircularStd-Book , CircularStd , 400),
+    // (museosans, MuseoSans-100 , MuseoSans , 100),
+    // (museosans, MuseoSans-300,MuseoSans , 300),
+    // (museosans, MuseoSans-500 , MuseoSans ,500),
+    // (museosans, MuseoSans-900 , MuseoSans , 900),
+    (notokufi, NotoKufiArabic , NotoKufiArabic , 400),
+    (notokufi, NotoKufiArabic-Bold , NotoKufiArabic , 700),
+    // (roboto, Roboto-Thin ,Roboto , 100),
+    // (roboto, Roboto-Light ,Roboto , 300),
+    (roboto, Roboto-Regular ,Roboto, 400),
+    // (roboto, Roboto-Medium ,Roboto , 500),
+    (roboto, Roboto-Bold ,Roboto , 700),
+    (roboto, Roboto-Black ,Roboto , 900)
+) !default;
+
+$zoom-values: (
+    (in-x1,1.1),
+    (in-x2,1.2),
+    (out-x1,0.9),
+    (out-x2,0.8),
+) !default;
+
+$height-values: (
+    (p65,65px),
+    (p50,50px),
+    (p45,45px),
+    (p30,30px),
+    (p25,25px)
+) !default;
+
+$lineheights-values: (
+    (65,65px),
+    (50,50px),
+    (45,45px),
+    (30,30px),
+    (25,25px)
+) !default;
+
+
+$cursor-pointers : pointer !default;
+
+
+// Scrollbar
+$layout-scrollbar-bg : $grey-200 !default;
+$layout-scrollbar-width : 8px !default;
+$layout-scrollbar-thumb-bg :  color-opacity($black-color, 0.5) !default;
+
+// title block 
+$layout-titleblock-sub-font-size :inherit !default;
+$layout-titleblock-sub-font-weight :inherit !default;
+$layout-titleblock-sub-mb :inherit !default;
+$layout-titleblock-main-font-size :inherit !default;
+$layout-titleblock-main-font-weight :inherit !default;
+$layout-titleblock-main-line-height :inherit !default;
+$layout-titleblock-main-mb :inherit !default;
+$layout-titleblock-desc-font-size :inherit !default;
+$layout-titleblock-desc-line-height :inherit !default;
+$layout-titleblock-desc-mb :inherit !default;
+
+
+// google translate 
+$layout-google-translate-border: 2px solid $grey-900 !default;
+$layout-google-translate-color : $grey-900 !default;
+
+// carousel 
+
+$layout-carousel-border-opacity:1;
+$layout-carousel-hover-border-opacity:1;
+
+// go to top 
+$layout-gototop-width : 50px !default;
+$layout-gototop-font-size : 20px !default;
+$layout-gototop-bottom : 100px !default;
+$layout-gototop-radius : 50% !default;
+
+
+// Utilities
+$layout-message-block-font-color:$white-color !default;
+$layout-message-block-border-raduis:50% !default;
+$layout-message-block-font-size:25px !default;
+$layout-message-block-width:48px !default;
+$layout-message-block-height:48px !default;
+$layout-message-block-width-mobile:45px;
+$layout-message-block-height-mobile:40px; 
+$layout-message-block-bar-bg-good:$success-color !default;
+$layout-message-block-bar-bg-bad: $danger-color!default;
+
+// dialog 
+$layout-dialog-button-border : 1px solid $grey-400 !default;
+$layout-dialog-button-border-radius : 4px !default; 
+$layout-dialog-button-bg : $primary-color !default; 
+$layout-dialog-button-color : $white-color !default; 
+$layout-dialog-max-width: 600px !default; 
+$layout-dialog-max-height : 485px !default;
+$layout-dialog-header-height : 70px !default;
+$layout-dialog-footer-height : 100px !default;
+$layout-dialog-footer-padding : 30px !default;
+$layout-dialog-header-padding : 20px 30px !default;
+$layout-dialog-text-padding : 30px !default;
+$layout-dialog-message-height: 530px;
+$layout-dialog-message-padding-right: 25px !default;
+$layout-dialog-header-border-bottom: 1px solid $grey-200 !default;
+$layout-dialog-close-color: $black-color !default;
+$layout-dialog-close-hover-color: $primary-color !default;
+$layout-dialog-play-video-color: $black-color !default;
+$layout-dialog-image-height : 260px !default;
+
+//alerts
+$layout-alerts-padding:10px !default;
+$layout-alerts-indicator-icon-size:24px !default;
+$layout-alerts-info-bg-color:$grey-200 !default;
+$layout-alerts-info-icon-color: $grey-400 !default;
+$layout-alerts-success-bg-color: $success-color !default;
+$layout-alerts-success-icon-color: $success-border !default;
+$layout-alerts-warning-bg-color: $warning-color !default;
+$layout-alerts-warning-icon-color: $warning-border !default;
+$layout-alerts-error-bg-color:$danger-color !default;
+$layout-alerts-icon-color:$danger-border !default;
+
+// privacy policy 
+$layout-cookies-font-color:$white-color !default;
+$layout-cookies-background-color:$primary-color !default;

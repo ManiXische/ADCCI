@@ -1,0 +1,496 @@
+/***************************************************************************************************
+File: Shared Mixins
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+// Language mixin
+@mixin ltr {
+  html:not([dir='rtl']) & , .translated-ltr &  {
+    // added to fix page corruption after using google translate
+    @content;
+  }
+}
+
+@mixin rtl {
+  html[dir='rtl'] & , .translated-rtl & {
+    // added to fix page corruption after using google translate 
+    @content;
+  }
+}
+
+@mixin lang($lang) {
+  html[lang='#{$lang}'] &{
+    // added to fix page corruption after using google translate 
+    @content;
+  }
+}
+
+@mixin lang($lang) {
+  html[lang='#{$lang}'] &{
+    // added to fix page corruption after using google translate 
+    @content;
+  }
+}
+
+// safri browser 
+@mixin safari {
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      // added to fix page corruption after using google translate 
+      @content;
+    }
+  }
+}
+
+@mixin firefox {
+  @-moz-document url-prefix(){
+    @content;
+  }
+}
+
+
+// page editor 
+
+@mixin onPageEditor {
+  .on-page-editor &{
+    @content;
+  }
+}
+
+// colors 
+@function color-opacity($color, $opacity: 1) {
+  @return rgba($color, $opacity);
+}
+
+@mixin background-opacity($color, $opacity: 1) {
+  background: $color;
+  /* fallback */
+  background: color-opacity($color, $opacity);
+}
+
+@mixin background-gradient($start-deg : top, $start-color : #fff, $start-percentage : 0% , $end-deg : to bottom, $end-color : #fff, $end-percentage : 100% ) {
+  background: $start-color; /* Old browsers */
+
+  background: -moz-linear-gradient(
+    $start-deg,
+    $start-color $start-percentage,
+    $end-color $end-percentage
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    $start-deg,
+    $start-color $start-percentage,
+    $end-color $end-percentage
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    $end-deg,
+    $start-color $start-percentage,
+    $end-color $end-percentage
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#{$start-color}, endColorstr= #{$end-color} ,GradientType=0 ); /* IE6-9 */
+
+
+}
+
+// @mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+//   -webkit-box-shadow: $top $left $blur $color #{$inset};
+//   -moz-box-shadow: $top $left $blur $color #{$inset};
+//   box-shadow: $top $left $blur $color #{$inset};
+// }
+
+@mixin box-shadow($args...) {
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  box-shadow:$args;
+}
+
+// border-radius
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+
+// padding
+@mixin padding($padding) {
+  padding-inline-start: $padding;
+  -moz-padding-start: $padding;
+  -webkit-padding-start: $padding;
+  -khtml-padding-start: $padding;
+  -o-padding-start: $padding;
+  padding: $padding;
+}
+
+// fonts 
+@mixin font-family($lang : 'en', $weight : inherit) {
+  @if($lang =='en') {
+    font-family: $font_en;
+    font-weight: $weight;
+  }
+  @else {
+    font-family: $font_ar;
+    // font-weight: $weight;
+  }
+}
+
+// calculate rem from px
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// // usage 
+// .element {
+//   @include font-size(14px)
+// }
+
+
+// animation mixins 
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+// //animation usage 
+// @include keyframes(slide-down) {
+//   0% { opacity: 1; }
+//   90% { opacity: 0; }
+// }
+
+// .element {
+//   @include animation('slide-down 5s 3');
+// }
+
+
+
+
+// transitions mixins 
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// // usage
+// a {
+//   @include transition(color .3s ease);
+// }
+
+
+// transform mixins 
+@mixin transform($args) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+// // usage
+// a {
+//   @include transform(scale(1.1) , rotate(20deg));
+// }
+
+
+// transform mixins 
+@mixin transform($args) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+// // usage
+// a {
+//   @include transform(scale(1.1) , rotate(20deg));
+// }
+
+
+// opacity 
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+// usage
+// .element {
+//   @include opacity(0.8);
+// }
+
+
+
+// clear float if you used the float 
+%clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+// usage 
+// .element {
+//   @extend %clearfix;
+// }
+
+
+
+// hidden class for the accessiblity 
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+// usage 
+// .element {
+//   @extend %visuallyhidden;
+// }
+
+
+
+// bootstrap mixins 
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    576px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+@mixin make-row($gutter: $grid-gutter-width) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$gutter / 2;
+  margin-left: -$gutter / 2;
+  @media #{$sm}{
+    margin-right: -$gutter;
+    margin-left: -$gutter;  
+  }
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 percentage($size / $columns);
+  // Add a `max-width` to ensure content within each column does not blow out
+  // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+  // do not appear to require this.
+  max-width: percentage($size / $columns);
+  margin-bottom: $grid-gutter-width;
+}
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
+// Useful for making responsive utilities.
+//
+//    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    "-sm"
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints)==null, "", "-#{$name}");
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
+}
+
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: $size / $columns;
+  margin-right: if($num == 0, 0, percentage($num));
+  margin-left:auto;
+}
+
+
+@mixin row-cols($count) {
+  & > * {
+    flex: 0 0 100% / $count;
+    max-width: 100% / $count;
+  }
+}
+
+@mixin make-col-auto() {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%; // Reset earlier grid tiers
+}
+
+@mixin make-grid-columns($prefix : 'col', $columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+
+  // Common properties for all breakpoints
+  %grid-column {
+    position: relative;
+    width: 100%;
+    padding-right: $gutter / 2;
+    padding-left: $gutter / 2;
+    @media #{$sm}{
+      padding-right: $gutter;
+      padding-left: $gutter;  
+    }
+    margin-bottom: $gutter;
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    // Allow columns to stretch full width below their breakpoints
+    @for $i from 1 through $columns {
+      .#{$prefix}#{$infix}-#{$i} {
+        ul {
+          li {
+            @extend %grid-column;
+          }
+        }
+      }
+    }
+
+    .#{$prefix}#{$infix},
+    .#{$prefix}#{$infix}-auto {
+      ul {
+        li {
+          @extend %grid-column;
+        }
+      }
+    }
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      .#{$prefix}#{$infix} {
+        ul {
+          li {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+            margin-bottom: $grid-gutter-width;
+          }
+        }
+      }
+      @for $i from 1 through $grid-row-columns {
+        .row-cols#{$infix}-#{$i} {
+          @include row-cols($i);
+        }
+      }
+
+      .#{$prefix}#{$infix}-auto {
+        ul {
+          li {
+            @include make-col-auto();
+            margin-bottom: $grid-gutter-width;
+          }
+        }
+      }
+
+      @for $i from 1 through $columns {
+        .#{$prefix}#{$infix}-#{$i} {
+          ul {
+            li {
+              @include make-col($i, $columns);
+            }
+          }
+        }
+      }
+
+      // `$columns - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 0 through ($columns - 1) {
+        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
+          .offset#{$infix}-#{$i} {
+            @include rtl{
+              @include make-col-offset($i, $columns);
+            }
+          }
+        }
+      }
+    }
+  }
+}

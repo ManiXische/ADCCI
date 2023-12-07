@@ -1,0 +1,256 @@
+/***************************************************************************************************
+Extension Name: ex-floatingbutton
+Extension Version: 
+File: base file
+Owner: 
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-floatingbutton
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+.ex-floatingbutton {
+  display: none;
+}
+
+.ex-floatingbutton__sidenav {
+  z-index: 25;
+  top: 50%;
+  cursor: pointer;
+}
+
+html[lang*='en'] .ex-floatingbutton__sidenav,
+html[class*='translated-ltr'] .ex-floatingbutton__sidenav {
+  left: 0px;
+}
+
+html[lang*='ar'] .ex-floatingbutton__sidenav,
+html[class*='translated-rtl'] .ex-floatingbutton__sidenav {
+  right: 0px;
+}
+
+.ex-floatingbutton__sidenav__wrapper {
+  cursor: pointer;
+  min-height: 80px;
+  max-height: 80px;
+  height: 100%;
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-arrow {
+  width: 20px;
+  z-index: 2;
+  background-color: #FB7415;
+  color: #ffffff;
+}
+
+html[lang*='ar'] .ex-floatingbutton__sidenav__wrapper .floating-arrow,
+html[class*='translated-rtl'] .ex-floatingbutton__sidenav__wrapper .floating-arrow {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-arrow .icon {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-arrow--open .icon {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-icon {
+  cursor: pointer;
+  background-color: #FF8D00;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+html[lang*='en'] .ex-floatingbutton__sidenav__wrapper .floating-icon,
+html[class*='translated-ltr'] .ex-floatingbutton__sidenav__wrapper .floating-icon {
+  left: -100%;
+}
+
+html[lang*='ar'] .ex-floatingbutton__sidenav__wrapper .floating-icon,
+html[class*='translated-rtl'] .ex-floatingbutton__sidenav__wrapper .floating-icon {
+  right: -100%;
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-icon > :first-child {
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-icon--radius {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+html[lang*='ar'] .ex-floatingbutton__sidenav__wrapper .floating-icon--radius,
+html[class*='translated-rtl'] .ex-floatingbutton__sidenav__wrapper .floating-icon--radius {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-icon--radius.floating-icon--active:hover {
+  border-radius: 0;
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-icon--radius.floating-icon--active:hover .floating-icon__content {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+html[lang*='ar'] .ex-floatingbutton__sidenav__wrapper .floating-icon--radius.floating-icon--active:hover .floating-icon__content,
+html[class*='translated-rtl'] .ex-floatingbutton__sidenav__wrapper .floating-icon--radius.floating-icon--active:hover .floating-icon__content {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+html[lang*='en'] .ex-floatingbutton__sidenav__wrapper .floating-icon--active,
+html[class*='translated-ltr'] .ex-floatingbutton__sidenav__wrapper .floating-icon--active {
+  left: 0;
+}
+
+html[lang*='ar'] .ex-floatingbutton__sidenav__wrapper .floating-icon--active,
+html[class*='translated-rtl'] .ex-floatingbutton__sidenav__wrapper .floating-icon--active {
+  right: 0;
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-icon:hover {
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-icon:hover .floating-icon__content {
+  opacity: 1;
+  pointer-events: visible;
+  line-height: 18px;
+}
+
+html[lang*='en'] .ex-floatingbutton__sidenav__wrapper .floating-icon:hover .floating-icon__content,
+html[class*='translated-ltr'] .ex-floatingbutton__sidenav__wrapper .floating-icon:hover .floating-icon__content {
+  left: 100%;
+}
+
+html[lang*='ar'] .ex-floatingbutton__sidenav__wrapper .floating-icon:hover .floating-icon__content,
+html[class*='translated-rtl'] .ex-floatingbutton__sidenav__wrapper .floating-icon:hover .floating-icon__content {
+  right: 100%;
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-icon__content {
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  padding: 0 15px;
+  top: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background-color: #FF8D00;
+  z-index: -100;
+  width: 100px;
+}
+
+html[lang*='en'] .ex-floatingbutton__sidenav__wrapper .floating-icon__content,
+html[class*='translated-ltr'] .ex-floatingbutton__sidenav__wrapper .floating-icon__content {
+  left: 0;
+}
+
+html[lang*='ar'] .ex-floatingbutton__sidenav__wrapper .floating-icon__content,
+html[class*='translated-rtl'] .ex-floatingbutton__sidenav__wrapper .floating-icon__content {
+  right: 0;
+}
+
+.ex-floatingbutton__sidenav__wrapper .floating-icon__content a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 13px;
+  cursor: pointer;
+  height: 100%;
+  color: #ffffff;
+}
+
+.on-page-editor .ex-floatingbutton {
+  display: block;
+}
+
+.on-page-editor .ex-floatingbutton__sidenav {
+  position: static !important;
+}
+
+html[lang*='ar'] .on-page-editor .ex-floatingbutton__sidenav,
+html[class*='translated-rtl'] .on-page-editor .ex-floatingbutton__sidenav {
+  right: 0px;
+}
+
+.on-page-editor .ex-floatingbutton__sidenav__wrapper {
+  cursor: default;
+}
+
+.on-page-editor .ex-floatingbutton__sidenav__wrapper .floating-icon {
+  -webkit-transition: none;
+  transition: none;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: row !important;
+  flex-direction: row !important;
+  cursor: default;
+}
+
+.on-page-editor .ex-floatingbutton__sidenav__wrapper .floating-icon .floating-icon__content {
+  opacity: 1;
+  pointer-events: visible;
+  position: static !important;
+  z-index: 1;
+}
+
+html[lang*='en'] .on-page-editor .ex-floatingbutton__sidenav__wrapper .floating-icon .floating-icon__content,
+html[class*='translated-ltr'] .on-page-editor .ex-floatingbutton__sidenav__wrapper .floating-icon .floating-icon__content {
+  left: 100%;
+}
+
+html[lang*='ar'] .on-page-editor .ex-floatingbutton__sidenav__wrapper .floating-icon .floating-icon__content,
+html[class*='translated-rtl'] .on-page-editor .ex-floatingbutton__sidenav__wrapper .floating-icon .floating-icon__content {
+  right: 100%;
+}

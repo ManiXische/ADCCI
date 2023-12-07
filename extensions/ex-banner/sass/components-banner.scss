@@ -1,0 +1,118 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+
+.#{$ProjectName} {
+    // Your code goes here
+
+    &--switch{
+        .ex-banner__content{
+            .row{
+                flex-direction: row-reverse;
+                @media #{$md} {
+                    flex-direction: column;
+                }
+                .data{
+                    padding-left: 0px;
+                    padding-right: 24px;
+                    @media #{$md} {
+                        padding-left: 0px;
+                        padding-right: 0px;
+                    }
+                    @include rtl{
+                        padding-right: 0px;
+                        padding-left: 24px;
+                        @media #{$md} {
+                            padding-left: 0px;
+                            padding-right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &--border {
+        .img-wraper {
+            position: relative;
+            padding-top: $banner-border-padding-value;
+            @include ltr {
+                padding-left: $banner-border-padding-value;
+            }
+            @include rtl {
+                padding-right: $banner-border-padding-value;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                pointer-events: none;
+                top: 0;
+                @include ltr{
+                    left: 0;
+                }
+                @include rtl{
+                    right: 0;
+                }
+                height: calc(100% - #{$banner-border-padding-value});
+                width: calc(100% - #{$banner-border-padding-value});
+                border: $banner-border-width solid $banner-dark-gold-color;
+              }
+        }
+    }
+    &__content{
+        .img-wraper{
+            height: $banner-background-img-height;
+            .img-wraper__img{
+                background-size: $banner-background-img-size;
+                background-position: $banner-background-img-position;
+                height: 100%;
+            }
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .data{
+            padding-left: 24px;
+            @media #{$md} {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            @include rtl{
+                padding-left: 0px;
+                padding-right: 24px;
+                @media #{$md} {
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
+            }
+            &__sub-title{
+                color: $banner-sub-title-color;
+                font-size: $banner-sub-title-fontsize;
+                line-height: $banner-sub-title-lineheight;
+                font-weight: $banner-sub-title-weight;
+            }
+            &__title{
+                color: $banner-title-color;
+                font-size: $banner-title-fontsize;
+                line-height: $banner-title-lineheight;
+                font-weight: $banner-title-weight;
+            }
+            &__description{
+                color: $banner-description-color;
+                font-size: $banner-description-fontsize;
+                line-height: $banner-description-lineheight;
+                font-weight: $banner-description-weight;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,1259 @@
+
+// vars
+@import '../vars/_animations';
+@import "../vars/_all";
+
+@mixin disabledStyles(){
+  border-color: $ex-sitecore-form-input-disabled-border-color ;
+  background-color: $ex-sitecore-form-input-disabled-bg-color ;
+  color:$ex-sitecore-form-input-disabled-color ;
+}
+
+.ex-sitecore-form {
+ 
+  &__title{
+    @include rtl {
+      text-align: right;
+    }
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  input[type="time"],
+  select, .custom-dropdown,
+  textarea {
+    border-radius: $ex-sitecore-form-inputs-border-raduis;
+    border:$ex-sitecore-form-input-border-width solid $ex-sitecore-form-input-border-color;
+    background-color: $ex-sitecore-form-input-bg;
+    width: 100%;
+    padding: $ex-sitecore-form-input-padding;
+    color: $ex-sitecore-iputs-color;
+
+    &:focus { 
+      border:$ex-sitecore-form-input-focus;
+    }
+ 
+    &.valid{
+      border-color: $ex-sitecore-form-input-border-color;
+      background-color: $ex-sitecore-form-valid-input-bg;
+    }
+    &:hover { 
+      border:$ex-sitecore-form-input-hover;
+    }
+    &.input-validation-error {
+      border: $ex-sitecore-form-invalid-input-border;
+      background-color: $ex-sitecore-form-invalid-input-bg;
+      margin-bottom: 23px;
+
+      + .field-validation-error{
+        bottom: 0;
+      }
+    }
+
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus{
+      -webkit-box-shadow: 0 0 0px 1000px  $ex-sitecore-form-input-bg inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+
+  }
+  textarea {
+    height: $ex-sitecore-form-textarea-height;
+    resize: none;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  input[type="time"],
+  select, .custom-dropdown {
+    height: $ex-sitecore-form-input-height;
+    line-height: normal;
+  }
+
+  select {
+    @include ltr { 
+      padding-right: $ex-sitecore-form-select-right-padding;
+    } 
+    @include rtl { 
+      padding-left: $ex-sitecore-form-select-right-padding; 
+      line-height: 27px;
+      padding: 4px 10px;
+    } 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator ,
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button  ,
+  input[type="time"]::-webkit-outer-spin-button,
+  input[type="time"]::-webkit-inner-spin-button,
+  input[type="time"]::-webkit-clear-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  
+  &__label { 
+    opacity: $ex-sitecore-form-label-opacity;
+    font-size: $ex-sitecore-form-label-font-size;
+    font-weight: $ex-sitecore-form-label-font-weight;
+    line-height: $ex-sitecore-form-label-lineheight;
+    letter-spacing: $ex-sitecore-form-label-letter-spacing;
+    color: $ex-sitecore-form-label-color;
+    text-transform: $ex-sitecore-form-label-transform;
+    margin-bottom: $ex-sitecore-form-label-margin-bottom;
+
+    &--normal {
+      font-size: $ex-sitecore-form-label-normal-font-size;
+      text-transform:none;
+    }
+    @include rtl { 
+      text-align: right;
+    }
+
+    &--required{
+      &:after{
+        content: "*";
+        color: $ex-sitecore-form-label-required-asterisk-color;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  span.field-validation-error , span.field-validation-valid {
+    color: $ex-sitecore-form-validation-error-msg-color;
+    display: block;
+    margin: $ex-sitecore-form-validation-margin;
+    
+    @include rtl {
+      direction: ltr;
+    }
+  }
+
+  .dropdown-list-arrow:after {
+    pointer-events: none;
+    border: solid;
+    border-color: $ex-sitecore-form-dropdown-arrow-color;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    content: "";
+    position: absolute;
+    @include transform(rotate(45deg));
+
+    @include ltr {
+      top: $ex-sitecore-form-dropdown-arrow-position-top;
+      right: $ex-sitecore-form-dropdown-arrow-position-right;
+    }
+    @include rtl {
+      top: $ex-sitecore-form-dropdown-arrow-position-top;
+      left: $ex-sitecore-form-dropdown-arrow-position-right;
+    }
+  }
+
+  .exceeded {
+    color: $ex-sitecore-textarea-exceeded-color;
+  }
+
+  &__input{
+    $inputWrap : &;
+
+    margin-bottom: 5px;
+
+    @include rtl{
+      text-align: right;
+    }
+
+    .field-validation-valid , .field-validation-error{
+      pointer-events: none;
+      display: inline-block;
+      margin-top: 5px;
+      color: $danger-color;
+      position: absolute;
+      width: 100%;
+      bottom: -23px;
+      @include ltr{
+        left : 0;
+      }
+      @include rtl{
+        right:0;
+      }
+      z-index: 1;
+      height: 20px;
+    }
+
+    &--submit{
+      .field-validation-valid , .field-validation-error{
+        position: static;
+      }
+    }
+    &--checkbox-wrp{
+      #{$inputWrap}__label{
+        margin-bottom: 10px;
+      }
+      .field-validation-error , .field-validation-valid{
+        bottom: -16px;
+      }
+    }
+    &__checkbox {
+      width: $ex-sitecore-form-checkbox-size;
+      height: $ex-sitecore-form-checkbox-size;
+      position: relative;
+      margin-right: 10px;
+      text-indent: -100000px;
+      @include rtl{
+          margin-left: 10px;
+          margin-right: 0;
+      }
+      label {
+        width: $ex-sitecore-form-checkbox-size;
+        height: $ex-sitecore-form-checkbox-size;
+        cursor: pointer;
+        position: absolute;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        background: $ex-sitecore-form-checkbox-label-color;
+        border-radius: $ex-sitecore-form-checkbox-border-raduis;
+        // @include box-shadow($ex-sitecore-form-checkbox-box-shadow);
+        &:after {
+          content: '';
+          width: 12px;
+          height: 8px;
+          position: absolute;
+          top: 5px;
+          left: 4px;
+          border: $ex-sitecore-form-checkbox-border;
+          border-top: none;
+          border-right: none;
+          background: transparent;
+          opacity: 0;
+          transform: rotate(-45deg);
+        }
+        &:hover::after {
+          opacity: 0.3;
+        }
+
+      }
+      
+      &--dark { 
+        label{
+          border: 2px solid $ex-sitecore-form-checkbox-dark-label-border;
+          background: $ex-sitecore-form-checkbox-dark-label-bg;
+          &:after { 
+            border: $ex-sitecore-form-checkbox-dark-border;
+            border-top: none;
+            border-right: none;
+            top: 3px;
+            left: 2px;
+          }
+        }
+        input[type=checkbox] {
+          &:checked + label {
+            background: $ex-sitecore-form-checkbox-dark-checked-label-bg;
+          }    
+        }
+      }
+      input[type=checkbox] {
+        visibility: hidden;
+        &:checked + label:after {
+          opacity: 1;
+        }    
+      }
+
+      & + label {
+        line-height: 20px;
+      }
+    }
+
+    &__radiobox {
+      width: $ex-sitecore-form-radiobox-dimention;
+      height: $ex-sitecore-form-radiobox-dimention;
+      position: relative;
+      margin-right: 10px;
+      @include rtl{
+          margin-left: 10px;
+          margin-right: 0;
+      }
+      label {
+        opacity: 1;
+        width: $ex-sitecore-form-radiobox-dimention;
+        height: $ex-sitecore-form-radiobox-dimention;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $ex-sitecore-form-radiobox-label-color;
+        border: $ex-sitecore-form-radiobox-label-border-width solid $ex-sitecore-form-radiobox-label-border-color;
+        border-radius: 50%;
+        // @include box-shadow($ex-sitecore-form-radiobox-box-shadow);
+        &:after {
+          content: '';
+          width: calc(#{$ex-sitecore-form-radiobox-dimention} - 6px);
+          height: calc(#{$ex-sitecore-form-radiobox-dimention} - 6px);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          border-radius: 50%;
+          opacity: 0;
+          background: $ex-sitecore-form-radiobox-label-background-color;
+        }
+        &:hover::after {
+          opacity: 0.3;
+        }
+
+      }
+      
+      &--dark { 
+        label{
+          background: $ex-sitecore-form-checkbox-label-dark-color;
+          border: 2px solid $ex-sitecore-form-radiobox-dark-label-border-color;
+          &:after { 
+            background: $ex-sitecore-form-radiobox-label-background-dark-color;
+          }
+        }
+      }
+      input[type=radio] {
+        visibility: hidden;
+        &:checked + label:after {
+          opacity: 1;
+        }
+      }
+
+      & + label {
+        line-height: 20px;
+      }
+    }
+
+    &--radiositecore {
+      > label:not(.ex-sitecore-form__label) {
+        @extend %visuallyhidden;
+      }
+    }
+
+    &--hidden{
+      display: none;
+    }
+    &--disabled{
+      pointer-events: none;
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="number"],
+      input[type="time"],
+      select, .custom-dropdown,
+      textarea {
+          @include disabledStyles();
+      }
+    }
+    &--ignored  {
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="number"],
+      input[type="time"],
+      select, .custom-dropdown,
+      textarea {
+         &.validation-ignore{
+            pointer-events: none;
+            @include disabledStyles();
+        }
+      }
+    }
+    
+    &--file {
+      min-height: 150px;
+      // border: 1px solid #f9f9fc;
+      // background: #f9f9fc;
+
+      .input-file-trigger{
+        height: 140px;
+        width: 140px;
+        display: inline-block;
+        margin-bottom: 15px;
+
+        margin-right: 10px;
+
+        @include rtl {
+          margin-left: 0;
+          margin-right: 10px;
+        }
+        &__label{
+          display: flex;
+        }
+      }
+      .dropzone-file{
+        position: relative;
+        border-radius: 6px;
+        background: $form-dropzone-file-bg;
+        height: 140px;
+        width: 140px;
+        border: 2px dashed $form-dropzone-file-border-color;
+        text-align: center;
+        font-size: 30px;
+        color: $form-dropzone-file-color;
+        cursor: pointer;
+        opacity: 0.5;
+        margin-bottom: 8px;
+
+         > .icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+        }
+
+        &:hover{
+          opacity: 1;
+        }
+
+        &.dz-clickable {
+          cursor: pointer;
+
+          * {
+            cursor: default;
+          }
+
+          .dz-message {
+            cursor: pointer;
+
+            * {
+              cursor: pointer;
+            }
+          }
+        }
+
+        &.dz-started .dz-message {
+          display: none;
+        }
+
+        &.dz-drag-hover {
+          border-style: solid;
+
+          .dz-message {
+            opacity: 0.5;
+          }
+        }
+
+        .dz-message {
+          text-align: center;
+          margin: 2em 0;
+
+          .dz-button {
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+          }
+        }
+
+      }
+      .dropzone-previews{
+        display: inline-block;
+        .dz-preview {
+          pointer-events: none;
+          display: inline-block;
+          vertical-align: top;
+          margin-bottom: 8px;
+          height: 140px;
+          width: 140px;
+          margin-right: 16px;
+          top:0;
+          left:0;
+          @include rtl{
+            left: auto;
+            right:0;
+            margin-right: auto;
+            margin-left: 16px;
+          }
+
+          &:hover {
+            z-index: 1000;
+
+            .dz-details {
+              opacity: 1;
+            }
+          }
+
+          &.dz-file-preview {
+            .dz-image {
+              border-radius: 6px;
+              background: #999;
+              background: linear-gradient(to bottom, $dz-image-linear-gradient-color1, $dz-image-linear-gradient-color2);
+            }
+
+            .dz-details {
+              opacity: 1;
+            }
+          }
+
+          &.dz-image-preview {
+            background: $dz-image-dz-image-preview-bg;
+
+            .dz-details {
+              -webkit-transition: opacity 0.2s linear;
+              -moz-transition: opacity 0.2s linear;
+              -ms-transition: opacity 0.2s linear;
+              -o-transition: opacity 0.2s linear;
+              transition: opacity 0.2s linear;
+            }
+          }
+
+          .dz-remove {
+            color:$dz-image-dz-remove-color ;
+            pointer-events: visible;
+            font-size: 20px;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            z-index: 100;
+            display: block;
+            cursor: pointer;
+            border: none;
+            &:hover {
+              opacity: 0.5;
+            }
+            i {
+              cursor: pointer;
+              width: 20px;
+              height: 20px;
+            }
+            @include rtl{
+              right: auto;
+              left: 8px;
+            }
+          }
+            &:hover .dz-details {
+            opacity: 1;
+          }
+
+          .dz-ext-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            font-size: 25px;
+            border-radius: 6px;
+            background: color-opcity($dz-ext-overlay-bg, 0.2);
+            color: $dz-ext-overlay-color;
+
+            &--pdf{
+              background: $form-dropzone-file-pdf;
+            }
+            &--xlsx , &--xlx{
+              background-color: $form-dropzone-file-xlsx;
+            }
+            &--zip , &--rar{
+              background-color: $form-dropzone-file-zip;
+            }
+            &--docx , &--doc , &--rtf{
+              background-color: $form-dropzone-file-docx;
+            }
+            &--txt{
+              background-color: $form-dropzone-file-txt;
+            }
+            &--ppsx , &--pptx{
+              background:$form-dropzone-file-ppsx;
+            }
+            i {
+              position: absolute;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              left: 50%;
+            }
+          }
+
+          .dz-ext {
+            position: absolute;
+            top: 6px;
+            @include ltr{
+              left: 6px;
+            }
+            @include rtl {
+              right: 6px;
+            }
+            
+            padding: 4px 6px;
+            background: color-opacity($dz-image-dz-ext-bg, 0.4);
+            text-transform: uppercase;
+            color: $dz-image-dz-ext-color;
+            font-size: 12px;
+            border-radius: 4px;
+            z-index: 10;
+          }
+
+          .dz-details {
+            z-index: 20;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+            padding: 6px;
+            font-size: 14px;
+            border-radius: 6px;
+            width: 100%;
+            color: $dz-image-dz-details-color;
+            text-shadow: 1px 1px 3px color-opacity($dz-image-dz-details-text-shadow, 0.3);
+            background: -webkit-linear-gradient(top, color-opacity($dz-image-dz-details-text-shadow, 0) 0%, color-opacity($dz-image-dz-details-text-shadow, 0.65) 100%);
+            background: -moz-linear-gradient(top, color-opacity($dz-image-dz-details-text-shadow, 0) 0%, color-opacity($dz-image-dz-details-text-shadow, 0.65) 100%);
+            background: linear-gradient(to bottom, color-opacity($dz-image-dz-details-text-shadow, 0) 0%, color-opacity($dz-image-dz-details-text-shadow, 0.65) 100%);
+            line-height: 150%;
+
+            .dz-size {
+              display: block;
+              font-size: 11px;
+              color: color-opacity($dz-image-dz-size-color, 0.8);
+              span {
+                border-radius: 3px;
+              }
+            }
+
+            .dz-filename {
+              white-space: nowrap;
+              &:not(:hover) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+            }
+          }
+
+          &:hover .dz-image img {
+            -webkit-transform: scale(1.05, 1.05);
+            -moz-transform: scale(1.05, 1.05);
+            -ms-transform: scale(1.05, 1.05);
+            -o-transform: scale(1.05, 1.05);
+            transform: scale(1.05, 1.05);
+            -webkit-filter: blur(8px);
+            filter: blur(8px);
+          }
+
+          .dz-image {
+            border-radius: 6px;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: block;
+
+            img {
+              height: 100%;
+              display: inline-block;
+            }
+          }
+
+          &.dz-success .dz-success-mark {
+            -webkit-animation: passing-through 3s cubic-bezier(0.77, 0, 0.175, 1);
+            -moz-animation: passing-through 3s cubic-bezier(0.77, 0, 0.175, 1);
+            -ms-animation: passing-through 3s cubic-bezier(0.77, 0, 0.175, 1);
+            -o-animation: passing-through 3s cubic-bezier(0.77, 0, 0.175, 1);
+            animation: passing-through 3s cubic-bezier(0.77, 0, 0.175, 1);
+          }
+
+          &.dz-error .dz-error-mark {
+            opacity: 1;
+            -webkit-animation: slide-in 3s cubic-bezier(0.77, 0, 0.175, 1);
+            -moz-animation: slide-in 3s cubic-bezier(0.77, 0, 0.175, 1);
+            -ms-animation: slide-in 3s cubic-bezier(0.77, 0, 0.175, 1);
+            -o-animation: slide-in 3s cubic-bezier(0.77, 0, 0.175, 1);
+            animation: slide-in 3s cubic-bezier(0.77, 0, 0.175, 1);
+          }
+
+          .dz-success-mark, .dz-error-mark {
+            pointer-events: none;
+            font-size: 40px;
+            color: color-opacity($dz-success-mark-color , 0.4);
+            opacity: 0;
+            z-index: 500;
+            position: absolute;
+            display: block;
+            width: 40px;
+            top:25%;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .dz-success-mark svg, .dz-error-mark svg {
+            display: block;
+            width: 54px;
+            height: 54px;
+          }
+
+          &.dz-processing .dz-progress {
+            opacity: 1;
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            -ms-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+          }
+
+          &.dz-complete .dz-progress {
+            opacity: 0;
+            -webkit-transition: opacity 0.4s ease-in;
+            -moz-transition: opacity 0.4s ease-in;
+            -ms-transition: opacity 0.4s ease-in;
+            -o-transition: opacity 0.4s ease-in;
+            transition: opacity 0.4s ease-in;
+          }
+
+          &:not(.dz-processing) .dz-progress {
+            -webkit-animation: pulse 6s ease infinite;
+            -moz-animation: pulse 6s ease infinite;
+            -ms-animation: pulse 6s ease infinite;
+            -o-animation: pulse 6s ease infinite;
+            animation: pulse 6s ease infinite;
+          }
+
+          .dz-progress {
+            opacity: 1;
+            z-index: 1000;
+            pointer-events: none;
+            position: absolute;
+            height: 16px;
+            left: 50%;
+            top: 50%;
+            margin-top: -8px;
+            width: 80px;
+            margin-left: -40px;
+            background: dz-image-dz-dz-progress-color;
+            -webkit-transform: scale(1);
+            border-radius: 8px;
+            overflow: hidden;
+
+            .dz-upload {
+              background: $dz-upload-bg;
+              background: linear-gradient(to bottom, $dz-upload-linear-gradient-color1, $dz-upload-linear-gradient-color2);
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              -webkit-transition: width 300ms ease-in-out;
+              -moz-transition: width 300ms ease-in-out;
+              -ms-transition: width 300ms ease-in-out;
+              -o-transition: width 300ms ease-in-out;
+              transition: width 300ms ease-in-out;
+            }
+          }
+
+          &.dz-error {
+            .dz-error-message {
+              display: block;
+            }
+
+            &:hover .dz-error-message {
+              opacity: 1;
+              pointer-events: auto;
+            }
+          }
+
+          .dz-error-message {
+            pointer-events: none;
+            z-index: 1000;
+            position: absolute;
+            display: block;
+            display: none;
+            opacity: 0;
+            -webkit-transition: opacity 0.3s ease;
+            -moz-transition: opacity 0.3s ease;
+            -ms-transition: opacity 0.3s ease;
+            -o-transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease;
+            border-radius: 8px;
+            font-size: 13px;
+            top: 130px;
+            left: -10px;
+            width: 140px;
+            background: $ex-sitecore-form-validation-error-msg-color;
+            background: linear-gradient(to bottom, $ex-sitecore-form-validation-error-msg-color, $ex-sitecore-form-validation-error-msg-color);
+            padding: 0.5em 1.2em;
+            color: $dz-image-dz-ext-color;
+
+            &:after {
+              content: '';
+              position: absolute;
+              top: -6px;
+              left: 64px;
+              width: 0;
+              height: 0;
+              border-left: 6px solid transparent;
+              border-right: 6px solid transparent;
+              border-bottom: 6px solid $ex-sitecore-form-validation-error-msg-color;
+            }
+          }
+        }
+      }
+      .field-validation-error ,.field-validation-valid  {
+        font-size: 12px;
+        bottom: 2px;
+        width: calc(100% - 2px);
+        bottom: calc(-100% - 5px);
+        height: 100%;
+        text-align: center;
+        
+        > span {
+          line-height: 15px;
+          border-radius: 6px;
+          background: #cacaca;
+          border: 1px solid #b3b3b3;
+          display: block;
+          padding: 5px;
+          word-break: break-word;
+
+          &:before {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: -5px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid $form-dropzone-file-border-color;
+          }
+        } 
+      }
+
+      &--single{
+        min-height: auto;
+
+        .input-file-trigger{
+          width: 100%;
+          height: 40px;
+          margin: 0;
+        }
+        .dropzone-file{
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          text-align: left;
+          @include rtl{
+            text-align: right;
+          }
+          padding: 4px 5px;
+          border: 1px dashed $form-dropzone-file-border-color;
+          opacity: 1;
+          > .icon{
+            right: 0;
+            left: auto;
+            @include rtl{
+              right: auto;
+              left: 15px;
+            }
+            font-size: 18px;
+            font-weight: bold;
+          }
+          > .upload-btn {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 900;
+            background: #150F37;
+            height: 28px;
+            color: $dz-image-dz-ext-color;
+            width: 80px;
+            text-align: center;
+            line-height: 28px;
+            border-radius: 3px;
+            pointer-events: none;
+          }
+        }
+
+        .dropzone-previews{
+          .dz-preview {
+            width: 100%;
+            height: 40px;
+            .dz-ext-overlay {
+              i {
+                right: 20px;
+                left: auto;
+                @include rtl{
+                  right: auto;
+                  left: 20px;
+                }
+              }
+            }
+            .dz-ext{
+              display: none;
+            }
+            .dz-details{
+              background: -webkit-linear-gradient(top, color-opacity($dropzone-preview-dz-details-color, 0) 0%, color-opacity($dropzone-preview-dz-details-color, 0.25) 100%);
+              background: -moz-linear-gradient(top, color-opacity($dropzone-preview-dz-details-color, 0) 0%, color-opacity($dropzone-preview-dz-details-color, 0.25) 100%);
+              background: linear-gradient(to bottom, color-opacity($dropzone-preview-dz-details-color, 0) 0%, color-opacity($dropzone-preview-dz-details-color, 0.25) 100%);
+  
+              height:100%;
+              line-height: 30px;
+              display: flex;
+
+              .dz-size{
+                margin: 0 10px;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    &--custom-dropdown{
+
+    position: relative;
+  
+    select.input-validation-error {
+      // opacity: none ;
+      + .field-validation-valid , + .field-validation-error{
+        bottom: -23px;
+        @include rtl{
+          bottom: -23px;
+        }
+      }
+    }
+
+
+      .icon { 
+        color: #000;
+        font-size: 11px;
+        pointer-events: none;
+        right: 5px;
+        @include rtl{
+          right : auto;
+          left:  5px;
+        }
+        top: 50%;
+        transform: translate(0, -50%) rotate(90deg);
+        padding: 10px;
+      }
+      .custom-dropdown{
+        color: $ex-sitecore-form-custom-dropdown-color;
+        line-height: 20px;
+        cursor: pointer;
+        &-items {
+          position: absolute;
+          color : $ex-sitecore-form-custom-dropdown-items-color;
+          background-color: $ex-sitecore-form-custom-dropdown-items-bg;
+          box-shadow: 0 0 2px 1px $ex-sitecore-form-custom-dropdown-items-shadow;
+          border-radius: 3px;
+          top: 100%;
+          left: 1px;
+          right: 0;
+          z-index: 10000;
+          max-height: calc(40px * 4);
+          height:auto;
+          width: 100%;
+          overflow-y: auto;
+      
+      
+          > div {
+            padding: 8px;
+            border-top: 1px solid color-opacity($ex-sitecore-form-custom-dropdown-border, 0.1);
+            cursor: pointer;
+            user-select: none;
+            height: 40px;
+            line-height: 25px;
+            &:first-child {
+              border-top: none;
+            }
+          }
+          &--hidden {
+            display: none;
+          }
+      
+        }
+
+        &-items div:hover{
+          background-color: color-opacity($ex-sitecore-form-custom-dropdown-border, 0.03);
+        }
+        &-selected-item {
+          font-weight: bold;
+        }
+        &-disabled-item {
+          color: $ex-sitecore-form-custom-dropdown-disabled-item-color;
+          pointer-events: none;
+        }
+
+        &-hasvalue{            
+          color : $ex-sitecore-form-custom-dropdown-hasvalue-item-color;
+        }
+        
+      }
+
+      &--value{
+        .icon {
+          color :$ex-sitecore-form-custom-dropdown-hasvalue-item-color;
+        }
+      }
+    }
+
+    &--datepicker{
+      .trigger-calendar-icon {
+        font-size: 20px;
+        height: 20px;
+        width: 20px;
+        display: block;
+        top: 15px;
+        margin-top: auto;
+        left: 10px;
+        @include rtl{
+          right : 10px;
+          left: auto;
+        }
+        pointer-events: none;
+      }
+      input[type="text"] {
+        padding-left: 40px;
+        @include rtl{
+          padding-left: auto;
+          padding-right: 40px;
+
+        }
+      }
+    }
+
+    &--tel{
+      .custom-dropdown{
+        cursor: pointer;
+        width : 50px;
+        position: absolute;
+        top: 0;
+        text-indent: -9000px;
+
+        border-right-width: 0;
+        @include rtl { 
+          border-right-width: $ex-sitecore-form-input-border-width;
+          border-left-width: 0;
+        }
+        &-items { 
+          top:50px;
+        }
+
+        &.select-arrow-active{
+          background: $ex-sitecore-form-select-arrow-bg;
+          &:before {
+            content: '';
+            position: absolute;
+            width: calc( 100% + 1px);
+            height: 8px;
+            background: $ex-sitecore-form-select-arrow-bg;
+            z-index: 10001;
+            bottom: -4px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: transparent;
+            border-left-color:  $ex-sitecore-form-select-arrow-border-color;
+            left: -1px;
+            @include rtl{
+              border-left-color:  transparent;
+              border-right-color: $ex-sitecore-form-select-arrow-border-color;
+              left: auto;
+              right: -1px;
+            }
+          }
+        }
+      }
+      .icon { 
+        height: 50px;
+        z-index: 1;
+        pointer-events: none;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        top: 15px;
+        left: 15px;
+        @include rtl{
+          left : auto;
+          right: 15px;
+        }
+      }
+      input[type="tel"] ,input[type="text"] {
+        width : calc(100% - 50px);
+        margin-left: 50px;
+        @include rtl { 
+          margin-right: 50px;
+          margin-left: auto;
+        }
+      }
+    }
+
+    // text area 
+    textarea + .field-validation-error{
+        width: calc(100% - 50px);
+    }
+    &--captcha-valid {
+      @media #{$sm} {
+        .field-validation-error {
+          position: static;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &__integrated-dropdown{
+    width: 50px !important;
+    height: 50px !important;
+    opacity: 0;
+  }
+
+  @at-root{
+    .sitecore-form{
+        .sitecore-form-error{
+          display: none;
+        }
+        .validation-summary-errors{
+            display:  none;
+           + div , + input + div {
+            .ex-sitecore-form{
+              display: none !important;
+            }
+            .sitecore-form-error{
+              display: block;
+            }
+          }
+        }
+    }
+  }
+
+
+}
+
+// edits ui picker 
+.ui-datepicker{
+  $datepicker : &;
+  width: 20em;
+  z-index: 1000000 !important;
+
+
+  select#{$datepicker} {
+    &-year , &-month{
+      width: auto;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      font-family: "NotoKufiArabic", Arial, sans-serif;
+      border: none;
+      background: transparent;
+
+    }
+  }
+
+  #{$datepicker}{
+    &-header{
+      border: none;
+      background: transparent;
+      color: #000;
+      font-weight: normal;
+      margin-bottom: 15px;
+
+      .ui-icon{
+        background-image: none;
+        @include rtl { 
+          text-indent: 99999px;
+        }
+      }
+
+    }
+
+    &-title{
+      line-height: 40px;
+    }
+    
+    &-year , &-month{
+      color: $ex-sitecore-form-text-color;
+      font-size: 15px;
+    }
+
+    &-prev , &-next{
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+
+      span {
+        width:100%;
+        height: 100%;
+        margin: 0;
+        left: auto;
+        &:before{
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          @include rtl{
+            left: auto;
+            right:0;
+          }
+          text-indent: 0;
+        }
+      }
+    }
+
+
+    &-prev{
+      &,  &:hover{
+        left:  0;
+        right: auto;
+      }
+      
+      span{
+        &:before{
+          content: '|⟵';
+        }
+      }
+    }
+    &-next{
+      & , &:hover{
+        right : 0;
+        left: auto;
+      }
+      span{
+        &:before{
+          content: '⟶|';
+        }
+      }
+    }
+  }
+
+  th {
+    padding: 0.95em 0.55em;
+    font-size: 12px;
+    color: $ex-sitecore-form-text-color;
+  }
+  td a{
+    padding: 0.8em 0.6em;
+    text-align: center;
+  }
+}
+

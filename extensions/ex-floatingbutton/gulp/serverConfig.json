@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-floatingbutton",
+        "version" : "1.0.0",
+        "owner" : "Manikandan"
+    }
+}

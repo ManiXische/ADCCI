@@ -1,0 +1,96 @@
+{
+    "name": "ADGE",
+    "version": "1.0.0",
+    "description": "Gulp Configuration Project",
+    "main": "index.js",
+    "scripts": {
+        "gulp": "gulp",
+        "storybook": "start-storybook -s ./extensions -p 9001",
+        "compile": "gulp compile",
+        "deploy": "gulp deploy"
+    },
+    "keywords": [
+        "Gulp",
+        "Theme"
+    ],
+    "author": "Kulahin Anton",
+    "license": "ISC",
+    "dependencies": {
+        "colors": "^1.1.2",
+        "form-data": "^2.1.4",
+        "formstream": "^1.1.0",
+        "g": "^2.0.1",
+        "gulp-autoprefixer": "^3.1.1",
+        "gulp-cli": "^1.2.2",
+        "gulp-eslint": "^3.0.1",
+        "gulp-filter": "^5.0.0",
+        "gulp-if": "^2.0.2",
+        "gulp-prompt": "^0.2.0",
+        "gulp-sass": "^3.1.0",
+        "gulp-sass-bulk-import": "^1.0.1",
+        "gulp-sass-grapher": "^0.1.4",
+        "gulp-sourcemaps": "^2.5.0",
+        "gulp-upload": "^0.0.3",
+        "gulp-watch": "^4.3.11",
+        "gulp.spritesmith": "^6.4.0",
+        "inquirer": "^3.0.6",
+        "path": "^0.12.7",
+        "request": "^2.81.0",
+        "urllib": "^2.22.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/plugin-transform-runtime": "^7.8.0",
+        "@babel/preset-env": "^7.8.2",
+        "@babel/register": "^7.8.0",
+        "@storybook/html": "^5.3.1",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-loader": "^8.0.6",
+        "cross-env": "^5.2.0",
+        "docxtemplater": "^3.14.3",
+        "env-cmd": "^9.0.3",
+        "git-user-name": "^2.0.0",
+        "gulp": "^3.9.1",
+        "gulp-batch-replace": "0.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-connect": "^5.7.0",
+        "gulp-debug": "^3.1.0",
+        "gulp-env": "^0.4.0",
+        "gulp-git": "^2.9.0",
+        "gulp-minify": "^3.1.0",
+        "gulp-open": "^3.0.1",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass-variables": "^1.2.0",
+        "path-exists": "^4.0.0",
+        "pizzip": "^3.0.6",
+        "rimraf": "^3.0.0",
+        "yargs": "^13.2.4"
+    },
+    "eslintConfig": {
+        "extends": "eslint:recommended",
+        "ecmaVersion": 5,
+        "sourceType": "module",
+        "rules": {
+            "no-alert": 0,
+            "no-bitwise": 0,
+            "camelcase": 1,
+            "curly": 1,
+            "eqeqeq": 0,
+            "no-eq-null": 0,
+            "guard-for-in": 1,
+            "no-empty": 1
+        },
+        "globals": {
+            "$": false,
+            "jQuery": false,
+            "Sitecore": false,
+            "XA": false,
+            "_": false
+        },
+        "env": {
+            "browser": true,
+            "node": true
+        }
+    }
+}

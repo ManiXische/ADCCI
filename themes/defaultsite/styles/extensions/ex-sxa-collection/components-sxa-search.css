@@ -1,0 +1,175 @@
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-sxa-search .component-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+html[lang*='ar'] .ex-sxa-search .component-content,
+html[class*='translated-rtl'] .ex-sxa-search .component-content {
+  text-align: right;
+}
+
+.ex-sxa-search .component-content label {
+  opacity: 0.56;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 1.09px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+html[lang*='ar'] .ex-sxa-search .component-content label,
+html[class*='translated-rtl'] .ex-sxa-search .component-content label {
+  letter-spacing: 0;
+}
+
+.ex-sxa-search .component-content .twitter-typeahead {
+  width: 100%;
+}
+
+.ex-sxa-search .component-content .search-box-input.tt-input {
+  width: 100%;
+  height: 50px;
+  border-radius: 2px;
+  border: solid 1px #AFAFAF;
+  background-color: #FAFAFA !important;
+  padding: 10px;
+  direction: inherit;
+  color: #000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.ex-sxa-search .component-content .search-box .tt-hint {
+  display: none;
+}
+
+.ex-sxa-search .component-content .search-box-button, .ex-sxa-search .component-content .search-box-button-with-redirect {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+  height: 41px;
+  right: 1px;
+  color: #000;
+  width: 60px;
+  background-color: #FAFAFA;
+}
+
+html[lang*='ar'] .ex-sxa-search .component-content .search-box-button,
+html[class*='translated-rtl'] .ex-sxa-search .component-content .search-box-button, html[lang*='ar'] .ex-sxa-search .component-content .search-box-button-with-redirect,
+html[class*='translated-rtl'] .ex-sxa-search .component-content .search-box-button-with-redirect {
+  left: 1px;
+  right: auto;
+}
+
+.ex-sxa-search .component-content .search-box-button:before, .ex-sxa-search .component-content .search-box-button-with-redirect:before {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  font-size: 23px;
+}
+
+.ex-sxa-search .tt-menu.tt-open {
+  border: none;
+  border-radius: 2px;
+  background-clip: padding-box;
+  box-shadow: 0 4px 5px #FAFAFA;
+  background: #FAFAFA;
+  width: 100%;
+  border: solid 1px #AFAFAF;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.ex-sxa-search .tt-dataset .tt-suggestion, .ex-sxa-search .tt-dataset .tt-suggestion a {
+  padding: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  color: #000;
+  width: 100%;
+}
+
+.ex-sxa-search .tt-dataset .tt-suggestion:hover, .ex-sxa-search .tt-dataset .tt-suggestion a:hover {
+  color: #000;
+}
+
+.ex-sxa-search .tt-dataset .tt-suggestion:hover, .ex-sxa-search .tt-dataset .tt-suggestion.tt-cursor {
+  background-color: #D6D6D6;
+}

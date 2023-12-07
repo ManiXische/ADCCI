@@ -1,0 +1,33 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+$history-timeline-border: 1px dashed $primary-color3 !default;
+$history-timeline-journey-timeline-padding: 0 20px !default;
+$history-timeline-primary-color: $primary-color2 !default;
+$history-timeline-year-margin-top: 20px !default;
+$history-timeline-year-margin-bottom: 20px !default;
+$history-timeline-year-margin-left : -0.25rem !default;
+$history-timeline-year-font-color: $black-color !default;
+$history-timeline-year-hover-color: $black-color !default;
+$history-timeline-year-padding: 14px 15px 14px 15px !default;
+$history-timeline-content-padding: 10px !default;
+$history-timeline-bullet-width: 5px !default;
+$history-timeline-bullet-height: 30px !default;
+$history-timeline-bullet-bg: $primary-color2 !default;
+$history-timeline-bullet-alignment: 13px !default;
+$history-timeline-content-bg: $grey-100 !default;
+$history-timeline-mobile-image-min-height: 230px !default;
+$history-timeline-nav-width: 100px !default;
+$history-timeline-nav-top: 10% !default;
+$history-timeline-nav-left: 35% !default;
+$history-timeline-nav-bullet-bg: $white-color !default;
+$history-timeline-nav-bullet-size: 3px !default;
+$history-timeline-nav-bullet-radius: 50% !default;
+$history-timeline-nav-bullet-spacing: 10px !default;
+$history-timeline-nav-line-position-top: 8px !default;
+$history-timeline-row-height : 351px !default;
+// readonly variables 
+$history-timeline-row-padding: 20px;

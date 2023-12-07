@@ -1,0 +1,175 @@
+@using Sitecore.Mvc
+@using Sitecore.Data.Fields;
+@using Sitecore.Data.Items;
+@using Sitecore.Mvc.Configuration
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Data.Items
+@using Sitecore.Configuration;
+@using Sitecore.Data;
+@using Sitecore.Data.Managers;
+
+@{
+
+    var dataSourceId = RenderingContext.CurrentOrNull.Rendering.DataSource;
+    string currentPageId = Sitecore.Context.Item.ID.ToString();
+     string currentPageItemPath = Sitecore.Context.Item.Paths.Path;
+    //string currentPageUrl = Sitecore.Links.LinkManager.GetItemUrl(Sitecore.Context.Item);
+
+    ID contextLanguageId = LanguageManager.GetLanguageItemId(Sitecore.Context.Language, Sitecore.Context.Database);
+    Item contextLanguage = Sitecore.Context.Database.GetItem(contextLanguageId);
+
+    string iso = contextLanguage["Regional Iso Code"];
+    if (string.IsNullOrEmpty(iso))
+    {
+        iso = contextLanguage["Iso"];
+    }
+}
+
+@{
+    string host = HttpContext.Current.Request.Url.Host;
+    string apiLink = string.Format("https://" + host + "/SCAPI/ContentRatings/RegisterContentRatingEvent");
+}
+
+@{
+    string CountyCodesFolderPath = "/sitecore/layout/Renderings/Feature/SXA Extension/Content Rating/Country Codes";
+	Item CountyCodesFolderItem = Sitecore.Context.Database.GetItem(CountyCodesFolderPath);
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="ex-content-rating mb-3 rounded px-4" data-accordion="true" data-self="true" data-active-class="expanded" data-item="ex-content-rating">
+                <form action="@apiLink"
+                      data-success-message="We have recieved your message"
+                      data-error-message="We could not recieve this, Please try again later"
+                      data-ok-button="OK">
+                    <div class="ex-content-rating__title d-flex justify-content-between align-items-center" data-heading="true">
+                        <div class="ex-content-rating__title__question">
+                            <div class="d-inline-flex my-3 align-items-center">
+                                <div class="mr-3">
+                                    @Sitecore.Globalization.Translate.Text("Content-Rate-Title")
+                                </div>
+                                <div class="d-flex">
+                                    <div class="accordion-trigger position-relative collapsed" data-value="happy" role="button">
+                                        <span class="accordion-trigger__expand icon-smiley-smile mx-2"></span>
+                                        <span class="accordion-trigger__collapse icon-smile-filled mx-2"></span>
+                                        <span class="accordion-trigger__loader spinner-grow mx-2"></span>
+                                    </div>
+                                    <div class="accordion-trigger position-relative collapsed" data-value="sad" data-toggle="collapse" role="button">
+                                        <span class="accordion-trigger__expand icon-smiley-sad mx-2"></span>
+                                        <span class="accordion-trigger__collapse icon-sad-filled mx-2"></span>
+                                        <span class="accordion-trigger__loader spinner-grow mx-2"></span>
+                                    </div>
+                                    <input type="hidden" name="FeelValue" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ex-content-rating__title__message ex-content-rating__title__message--success">
+                            <div class="d-inline-flex my-3 align-items-center">
+                                <span class="icon-check-circle mx-1"></span>
+                                <div class="mx-2">
+                                    @Sitecore.Globalization.Translate.Text("Content-Rate-Success")
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ex-content-rating__title__message ex-content-rating__title__message--error">
+                            <div class="d-inline-flex my-3 align-items-center">
+                                <span class="icon-remove-circle mx-1"></span>
+                                <div class="mx-2">
+                                    @Sitecore.Globalization.Translate.Text("Content-Rate-Failed")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ex-content-rating__content collapse pb-6" data-content="true">
+                        <div class="row">
+                            <div class="rating-content col-12 mb-5">
+                                <p>
+                                    @Sitecore.Globalization.Translate.Text("Content-Rate-first-text")
+                                </p>
+                                <p>
+                                    @Sitecore.Globalization.Translate.Text("Content-Rate-second-text")
+                                </p>
+                            </div>
+                            <div class="ex-sitecore-form col-lg-4 col-md-6 col-sm-12">
+                                <div class="ex-sitecore-form__input input-box position-relative mb-5">
+                                    <label class="ex-sitecore-form__label text-uppercase mb-2" for="email">@Sitecore.Globalization.Translate.Text("Content-Rate-Email")</label>
+                                    <input name="email" id="email" type="email" placeholder="@Sitecore.Globalization.Translate.Text("Content-Rate-Email-placeholder")" required data-msg-required="@Sitecore.Globalization.Translate.Text("Content-Rate-Email-Required")" />
+                                    <div class="field-validation-error"></div>
+                                </div>
+                                <div class="ex-sitecore-form__input input-box position-relative mb-4">
+                                    <label class="ex-sitecore-form__label text-uppercase mb-2" for="comments">@Sitecore.Globalization.Translate.Text("Content-Rate-comment")</label>
+                                    <textarea name="comments" id="comments" placeholder="@Sitecore.Globalization.Translate.Text("Content-Rate-comment-placeholder")" maxlength="200" cols="30" rows="10" required data-msg-required="@Sitecore.Globalization.Translate.Text("Content-Rate-Comment-Required")"></textarea>
+                                    <div class="field-validation-error"></div>
+                                </div>
+                                <div class="ex-sitecore-form__input input-box d-flex p-0 mb-5">
+                                    <div class="ex-sitecore-form__input__checkbox ex-sitecore-form__input__checkbox--dark">
+                                        <input type="checkbox" id="enablePhone" data-toggler="#phoneContainer" />
+                                        <label for="enablePhone"></label>
+                                    </div>
+                                    <label class="ex-sitecore-form__input__label" for="enablePhone">@Sitecore.Globalization.Translate.Text("Content-Rate-call-us")</label>
+                                </div>
+                                <div class="ex-sitecore-form__input ex-sitecore-form__input--hidden ex-sitecore-form__input--tel position-relative mb-7" id="phoneContainer">
+                                    <label class="ex-sitecore-form__label text-uppercase mb-2" for="phonenumber">@Sitecore.Globalization.Translate.Text("Content-Rate-Phone")</label>
+                                    <div class="position-relative">
+                                        <i class="position-absolute icon icon-earth"></i>
+                                        <div class="position-relative ex-sitecore-form__input--custom-dropdown">
+                                            <select class="visually-hidden">
+                                                <!-- Loop her on phone numbers from dictionary -->
+                                                <option value=""></option>
+												@foreach(Sitecore.Data.Items.Item child in CountyCodesFolderItem.Children)
+                                                {
+                                                     <option data-countryCode=@child.Fields["Code"] value=@child.Fields["Value"]>@child.Fields["Text"]</option>
+                                                }                                                                                             
+                                            </select>
+                                        </div>
+                                        <input class="rounded validation-ignore" placeholder="@Sitecore.Globalization.Translate.Text("Content-Rate-Phone-placeholder")" name="phonenumber" 
+                                            id="phonenumber" 
+                                            
+                                            pattern = "^(?=.*?[1-9])[0-9+]+$"
+                                            data-msg-pattern='@Sitecore.Globalization.Translate.Text("Content-Rate-Phone-Pattern")'
+
+                                            required 
+                                            data-msg-required='@Sitecore.Globalization.Translate.Text("Content-Rate-Phone-Required")'
+    
+                                            rangelength = "9,15"
+                                            data-msg-rangelength='@Sitecore.Globalization.Translate.Text("Content-Rate-Phone-Range")'
+    
+                                            type="tel" 
+                                            data-related-input="#enablePhone" />
+                                        <div class="field-validation-error"></div>
+                                    </div>
+                                </div>
+                                <div class="ex-sitecore-form__input input-box position-relative">
+                                    <div class="captcha-wrapper"
+                                         data-name="recaptcha" data-size="invisible"
+                                         data-sitekey="@Settings.GetSetting("CaptchaPublicKey")"
+                                         data-msg-required="@Sitecore.Globalization.Translate.Text("Content-Rate-reCAPTCHA-is-mandatory")"></div>
+                                </div>
+                                <div class="ex-sitecore-form__input position-relative mt-4 d-flex">
+                                    <button type="submit" class="button button--secondary rounded text-uppercase d-inline-flex align-items-center justify-content-center mr-2">
+                                        <span>@Sitecore.Globalization.Translate.Text("Submit")</span>
+                                        <span class="button__loadingicon spinner-grow spinner-grow-sm"></span>
+                                    </button>
+                                    <div>
+                                      <a href="javascript:void(0);" class="d-flex h-100 align-items-center justify-content-center px-4 font-weight-boldest text-uppercase" data-toggle="collapse">
+                                        <span>@Sitecore.Globalization.Translate.Text("No-Thanks")</span>
+                                        </a>
+                                    </div>
+                                  
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="DatasourceId" value="@dataSourceId" />
+                    <input type="hidden" name="currentLanguage" value="@iso" />
+                    <input type="hidden" name="CurrentPageId" value="@currentPageId" />
+                    <input type="hidden" name="currentPageItemPath" value="@currentPageItemPath" />
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

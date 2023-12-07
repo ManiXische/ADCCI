@@ -1,0 +1,60 @@
+@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.XA.Foundation.Variants.Abstractions.Fields
+@using Sitecore.XA.Foundation.RenderingVariants.Extensions
+@using TAMM.Feature.Announcements.Models
+@model TAMM.Feature.Announcements.Models.AnnouncementList
+@{
+    bool isVisible = true;
+    string colcss = Model.Rendering.Parameters["colcss"] != null ? Model.Rendering.Parameters["colcss"] : "col-md-4";
+    string place = Model.Rendering.Parameters["place"] != null ? Model.Rendering.Parameters["place"] : "outer";
+}
+@if (isVisible)
+{
+    if (!(Model.Rendering.DataSourceItem == null && !Html.Sxa().IsEdit))
+    {
+        <div class="ex-notifications d-flex align-items-center overflow-hidden">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-md-9 col-sm-12">
+                        <div class="announcement-content">
+                            <div class=" slick-notification" data-slick data-enableArrows="true"
+                                data-autoplay="true" data-rowstoshow="1" data-slidestoshow="1"
+                                data-slides-lg="1" data-slides-md="1" data-rows='1' autoplay="true"
+                                data-prev-arrow="carousel-navigation__prev"
+                                data-next-arrow="carousel-navigation__next" >
+                                    @foreach (var AnnouncementItem in Model.announcementItems)
+                                    {
+                                        <div class="ex-notifications__item d-flex align-items-center">
+                                            @foreach (BaseVariantField variantField in Model.VariantFields)
+                                            {
+                                                @Html.RenderingVariants().RenderVariant(variantField, AnnouncementItem.Item, Model.RenderingWebEditingParams, Model)
+                                            }
+                                        </div>
+                                    }  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-12 d-none d-md-block">
+                        <div class="d-flex align-items-center justify-content-end h-100">
+                            <button class="carousel-navigation__prev reverse-icon"
+                                title='@Sitecore.Globalization.Translate.Text("Previous")' aria-label="Previous"
+                                type="button">
+                                <i class="icon-keyboard-arrow-left"> </i>
+                            </button>
+                            <div class="d-flex align-items-center align-self-center">
+                                <i class="custom-circle"> </i>
+                            </div>
+                            <button class="carousel-navigation__next  reverse-icon"
+                                title='@Sitecore.Globalization.Translate.Text("Next")' aria-label="Next"
+                                type="button">
+                                <i class="icon-keyboard-arrow-right"> </i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

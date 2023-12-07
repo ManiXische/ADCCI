@@ -1,0 +1,85 @@
+@using Sitecore
+@using Sitecore.Mvc
+@using Sitecore.Analytics;
+@using Sitecore.Analytics.Model.Entities;
+@using Sitecore.Mvc.Analytics.Extensions;
+@using Sitecore.Mvc.Presentation;
+@using TAMM.SXA.Foundation.Authentication.Core.Helpers;
+@model IEnumerable<Sitecore.Data.SignInUrlInfo>
+
+@{
+    var parameters = RenderingContext.Current.Rendering.Parameters;
+    string lang = "en";
+    if (Sitecore.Context.Language.Name.ToLower().Contains("ar"))
+    {
+        lang = "ar";
+    }
+    string updateProfileURL = Sitecore.Configuration.Settings.GetSetting("IDP") + "?SPEntityID=" + Sitecore.Configuration.Settings.GetSetting("EntityID") + "&lang=" + lang;
+    bool showProfile = parameters["showProfile"] != null ? Boolean.Parse(parameters["showProfile"]) : false;
+
+    bool showRegister = parameters["showRegister"] != null ? Boolean.Parse(parameters["showRegister"]) : false;
+
+    //registration url
+    string registerURL = Sitecore.Configuration.Settings.GetSetting("RegistrationURL") + "?lang=" + lang;
+
+    // login urls 
+    var SmartPass = Model.Where(s => s.IdentityProvider.ToLower().Contains("saml")).SingleOrDefault();
+    var UaePass = Model.Where(s => s.IdentityProvider.ToLower().Contains("tammoauth")).SingleOrDefault();
+    var DataSourceItem = RenderingContext.Current.Rendering.Item;
+
+}
+
+@{
+
+ <div class="ex-authentication  mb-5">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+                <h2 class="mb-3">@DataSourceItem.Fields["ComponentTitle"]</h2>
+                <p class="">@DataSourceItem.Fields["ComponentDescription"]</p>
+            </div>
+            </div>
+            <div class="row justify-content-center">
+
+                <!-- @if (SmartPass != null)
+                {
+                    <div class="col-lg-5 col-md-8 col-sm-12">
+                        @using (Html.BeginForm(null, null, FormMethod.Post, new { @action = SmartPass.Href }))
+                        {
+                            <button type="submit" class="login-card d-flex flex-column align-items-start justify-content-center px-5 py-4 mb-md-0 mb-sm-3 h-100">
+                                <p class=" pb-4 text-uppercase">@Html.Sitecore().Field("LoginTitle", DataSourceItem)</p>
+                                @Html.Sitecore().Field("LoginImage", DataSourceItem, new { @class = "img-responsive" })
+                                <p class="pt-2  w-100 text-center px-4">@Html.Sitecore().Field("LoginDescription", DataSourceItem, new { @class = "img-responsive" })</p>
+                            </button>
+                        }
+                    </div>
+                    <div class="col-lg-1 col-md-8 col-sm-12">
+                        <div
+                            class="login-card__separator d-flex flex-fill align-self-center align-items-center justify-content-center h-100 ">
+                            <span class="login-card__separator__line"></span>
+                            <span class="flex-fill text-break mx-2 d-inline-flex align-items-center justify-content-center">@Sitecore.Globalization.Translate.Text("Login_Separator")</span>
+                            <span class="login-card__separator__line"></span>
+                        </div>
+                    </div>
+                } -->
+                @if (UaePass != null)
+                {
+                     <div class="col-lg-5 col-md-8 col-sm-12">
+                    @using (Html.BeginForm(null, null, FormMethod.Post, new { @action = UaePass.Href }))
+                    {
+                       
+                            <button type="submit" class="login-card d-flex flex-column   align-items-start justify-content-center px-5 py-4 h-100">
+                                <p class=" pb-4 text-uppercase">@Html.Sitecore().Field("RegisterTitle", DataSourceItem)</p>
+                                @Html.Sitecore().Field("RegisterImage", DataSourceItem, new { @class = "img-responsive" })
+                                <p class="pt-2 w-100 text-center px-4">@Html.Sitecore().Field("RegisterDescription", DataSourceItem)</p>
+                            </button>
+                    }
+                                            </div>
+
+                }
+            </div>
+        </div>
+    </div>
+
+}

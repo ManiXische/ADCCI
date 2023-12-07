@@ -1,0 +1,24 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+
+$map-map-box-bg : $grey-300 !default;
+$map-map-box-height : 600px !default;
+$map-tab-title-font-size : 20px !default;
+$map-tab-title-line-height: 24px !default;
+$map-tab-title-color : $grey-400 !default;
+$map-tab-title-padding : 15px !default;
+$map-tab-title-color-active : $grey-900 !default;
+$map-tab-title-active-weight : bold !default;
+$map-tab-title-active-line-color : #17626C !default;
+$map-tab-title-active-line-height : 6px !default;
+$map-esri-zoom-esri-widget-border-color:color-opacity($grey-700,0.3) !default;
+$map-map-box-popup-radius : 20px !default;
+$map-map-box-popup-text-align: center !default;
+$map-map-box-popup-font-size : 20px !default;
+$map-map-box-popup-padding : 1rem !default;
+$map-map-box-popup-line-height : 26px !default;
+$map-map-box-marker-color :  #17626C !default;

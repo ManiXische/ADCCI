@@ -1,0 +1,1 @@
+String.prototype.startsWith||Object.defineProperty(String.prototype,"startsWith",{value:function(t,r){var e=r>0?0|r:0;return this.substring(e,e+t.length)===t}});

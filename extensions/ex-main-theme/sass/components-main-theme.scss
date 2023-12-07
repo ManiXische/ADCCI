@@ -1,0 +1,145 @@
+
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: Main Theme
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+@import '../vars/_all';
+
+// overriding owl dots 
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    margin: $owl-dot-wrap-margin;
+
+    .owl-dot {
+      span {
+        width: $owl-dot-width;
+        height: $owl-dot-height;
+
+        border: $owl-dot-border-size solid $owl-dot-border-color;
+        background-color: $owl-dot-background-active;
+
+        @include border-radius($owl-dot-rounded);
+
+        display: inline-block;
+        margin: $owl-dot-margin;
+      }
+      &.active {
+        span {
+          background-color: $owl-dot-background-active;
+          box-shadow: $owl-dot-box-shadow $owl-dot-border-color;
+        }
+      }
+    }
+  }
+
+
+// bootstrap rtl fix 
+body ,caption {
+  @include rtl{
+    text-align: right; 
+  }
+}
+
+
+main{
+  margin-bottom: $main-spacing-bottom;
+}
+.home-main-mb{
+  main{
+    margin-bottom: 0px;
+  }
+}
+
+
+// fancybox bottom thumbs fixing 
+  .fancybox{
+    &-active{
+      overflow: hidden;
+    }
+    &-bottom{
+      .fancybox-thumbs {
+        top: auto;
+        width: auto;
+        bottom: 0;
+        left: 0;
+        right : 0;
+        height: 95px;
+        padding: 10px 10px 5px 10px;
+        box-sizing: border-box;
+        background: color-opacity($fancybox-thumbs-bg, 0.3);
+      }
+      
+      &.fancybox-show-thumbs {
+        .fancybox-inner {
+          right: 0;
+          bottom: 95px;
+        }
+      }
+    }
+    &-left{
+      .fancybox-thumbs {
+        left: 0;
+        right:initial;
+      }
+      
+      &.fancybox-show-thumbs {
+        .fancybox-inner{
+          right:0;
+          left: 212px;
+        }
+      }
+    }
+    &-caption{
+      &__body{
+        overflow: hidden;
+      }
+    }
+  }
+
+
+  
+// fancybox overrides
+.fancybox-stage {
+  direction: ltr;
+  @include rtl{
+      direction: rtl;
+  }
+  .fancybox-content{
+      @include rtl{
+          text-align: right;
+      }
+  }
+}
+.fancybox-caption{
+  direction: ltr;
+  @include rtl{
+      direction: rtl;
+  }
+}
+.fancybox-navigation {
+  .fancybox-button {
+      direction: ltr;
+      @include rtl{
+          direction: rtl;
+      }
+      
+      &--close{
+        color: $fancybox-button-close-color;
+        &:hover{
+            color: $fancybox-button-close-hover-color;
+        }
+    }
+  }
+}
+
+//Out of the box search result no results found
+.no-results{
+  color: $maintheme-noresult-found-color;
+  font-size: $maintheme-noresult-found-fs;
+  font-weight: $maintheme-noresult-found-fw;
+  line-height: $maintheme-noresult-found-linehight;
+}

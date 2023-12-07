@@ -1,0 +1,132 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+//Lib
+@import '../sass/lib/timeline-lib';
+
+
+.#{$ProjectName} {
+    // Your code goes here 
+    &__year{
+        position: absolute;
+        font-size: $ex-timeline-horizontal-year-fontsize;
+        font-weight: $ex-timeline-horizontal-year-weight;
+        left: $ex-timeline-horizontal-year-left;        
+        transform: translateX($ex-timeline-horizontal-translate-50); 
+        @media #{$md} {
+            left: $ex-timeline-horizontal-year-left-md;
+            top: $ex-timeline-horizontal-year-top-md 
+        }
+        
+    }
+    .timeline__item--top{
+        .#{$ProjectName}__year{             
+            bottom: $ex-timeline-horizontal-year-bottom;
+        }
+        .#{$ProjectName}__text{ 
+            top: $ex-timeline-horizontal-circle-top-text-top;            
+            left: $ex-timeline-horizontal-circle-top-text-left;
+        }
+    }
+    .timeline__item--bottom{
+        .#{$ProjectName}__year{             
+            top: $ex-timeline-horizontal-year-top;
+        }
+        .#{$ProjectName}__text{   
+            bottom: $ex-timeline-horizontal-circle-bottom-text-bottom;          
+            right: $ex-timeline-horizontal-circle-bottom-text-right;
+            text-align: right;
+        }
+    }
+
+    .timeline__items{
+        @media #{$md} {
+            padding-top: 40px;
+        }
+    }
+
+    .timeline__item{
+        @media #{$md} {
+            margin-bottom: $ex-timeline-horizontal-timeline__item-md-mb;
+        }
+    }
+
+    .timeline__item.timeline__item--top{
+        &:last-child{
+            .#{$ProjectName}__text{   
+                left: $ex-timeline-horizontal-circle-timeline-item-left;
+                bottom: $ex-timeline-horizontal-circle-timeline-item-bottom;
+                top: auto;
+            }
+        }
+    }
+    
+    &__circle-icon{
+        position: relative;
+        width: $ex-timeline-horizontal-circle-icon-width;
+        height: $ex-timeline-horizontal-circle-icon-height;
+        border-radius: $ex-timeline-horizontal-circle-icon-borderradious;
+        border: solid $ex-timeline-horizontal-circle-vertical-border-color $ex-timeline-horizontal-circle-icon-bordersize;
+        margin: 0 auto;
+        &:before{
+            content: "";
+            position: absolute;
+            left: $ex-timeline-horizontal-circle-icon-left;
+            top: $ex-timeline-horizontal-circle-icon-top; 
+            width: $ex-timeline-horizontal-circle-icon-width2;
+            height: $ex-timeline-horizontal-circle-icon-height2;
+            border-radius: $ex-timeline-horizontal-circle-icon-borderradious;
+            border: solid $ex-timeline-horizontal-circle-vertical-border-color $ex-timeline-horizontal-circle-icon-bordersize;
+            transform: translate($ex-timeline-horizontal-translate-50, $ex-timeline-horizontal-translate-50);
+        }
+        @media #{$md} {
+            margin: 0;
+            width: $ex-timeline-horizontal-circle-icon-md-width;
+            height: $ex-timeline-horizontal-circle-icon-md-height;
+            &::before{
+                width: $ex-timeline-horizontal-circle-icon-md-before-width;
+                height: $ex-timeline-horizontal-circle-icon-md-before-height;
+            }
+        }
+    }
+    &__circle-icon-img{
+        width: $ex-timeline-horizontal-circle-icon-img-width;
+        height: $ex-timeline-horizontal-circle-icon-img-height;
+        background-position: center;
+        background-size: cover;
+        @media #{$md} {
+            width: $ex-timeline-horizontal-circle-icon-md-img-width;
+            height: $ex-timeline-horizontal-circle-icon-md-img-height;
+        }
+    }
+    &__vertical-line{
+        display: block;
+        box-sizing: border-box;
+        height: $ex-timeline-horizontal-circle-vertical-height; 
+        width: $ex-timeline-horizontal-circle-vertical-width;
+        border: $ex-timeline-horizontal-circle-vertical-border dashed $ex-timeline-horizontal-circle-vertical-border-color;
+        margin: 0 auto;
+        @media #{$md} {
+            display: none;
+        }
+    }
+    &__text{
+        position: absolute;        
+        width: $ex-timeline-horizontal-circle-text-width;
+        h2{
+            line-height: $ex-timeline-horizontal-circle-text-luneheight;
+        }
+        @media #{$md} {
+            top: $ex-timeline-horizontal-circle-text-md-top;
+            left: $ex-timeline-horizontal-circle-text-md-left;
+            width: $ex-timeline-horizontal-circle-text-md-width;
+        }
+    }
+    
+}

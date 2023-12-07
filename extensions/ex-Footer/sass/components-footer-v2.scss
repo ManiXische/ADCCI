@@ -1,0 +1,232 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName}
+Extension Version: #{$ProjectVersion}
+File: base file
+Owner: #{$ProjectOwner}
+***************************************************************************************************/
+
+@import "../vars/_all";
+
+.#{$ProjectName}-v2 {
+  background-color: $footer-multinav-bg;
+  color : $footer-text-color; 
+  font-size: $footer-settings-anchor-fontsize;
+
+
+  a:not(.stretched-link){
+    text-decoration: none;
+    display: inline-block;
+
+    color: $footer-links-color;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: $footer-v2-links-hover-border;
+      background: $footer-links-hover-color;
+      transition: all .3s;
+    }
+
+    &:hover{
+      color:$layout-link-default-hover-color;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__usefullinks {
+    ul {
+      li {
+        a {
+          line-height: $footer-v2-usefullinks-lineheight;
+          margin: $footer-v2-usefullinks-margin; 
+        }
+      }
+    }
+
+    &__accordion {
+      .accordion__item{
+        $accordionitem : &;
+        border: $footer-v2-accordion-border;
+        border-top: none;
+        height:$footer-v2-accordion-title-height;
+        @include transition(height .3s ease-in-out);
+
+        &:first-child{
+          border-top: $footer-v2-accordion-border;
+          border-top-left-radius: $footer-v2-accordion-border-radius;
+          border-top-right-radius: $footer-v2-accordion-border-radius;  
+        }
+        &:last-child {
+          border-bottom-left-radius: $footer-v2-accordion-border-radius;
+          border-bottom-right-radius: $footer-v2-accordion-border-radius;
+        }
+        &--opened{
+          background: $footer-v2-accordion-active-bg;
+          
+            & , a:not(.stretched-link) {
+              color : $footer-v2-accordion-active-color;
+            }
+            .accordion__icon{
+              @include transform(rotate(90deg));
+            }
+        }
+        &__title{
+          height:$footer-v2-accordion-title-height;
+        }
+      }
+      .accordion__icon{
+        @include transition(all .3s ease-in-out);
+      }
+    }
+  }
+  &__copyrights {
+    ul {
+      li {
+        margin-right: $footer-v2-copyrights-li-margin-right;
+
+        @include rtl {
+          margin-right: 0;
+          margin-left: $footer-v2-copyrights-li-margin-right;
+        }
+
+        &:last-child {
+          margin-right: 0px;
+
+          @include rtl {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  &__sociallinks {
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        height: 40px;
+        padding-right: 15px;
+        display: inline-flex;
+        align-items: center;
+        
+        @include rtl {
+          padding-left: 15px;
+          padding-right:0; // this fix from QCC
+        }
+
+        a {
+          img {
+            max-width: $footer-social-links-icon-width-height;
+            max-height: $footer-social-links-icon-width-height;
+          }
+        }
+      }
+    }
+  }
+
+
+  section{
+    &:first-of-type {
+      @media #{$sm}{
+        display: none;
+      }
+      @media #{$md}{
+        display: none;
+      }
+    }
+  }
+
+  &--compact {
+    .#{$ProjectName}-v2__usefullinks {
+      ul {
+        display: flex;
+        @media #{$md}{
+          flex-wrap: wrap;
+        }
+        @media #{$sm}{
+          flex-direction: column;
+        }
+        li {
+          margin-right: $footer-v2-margin-li;
+
+          @media #{$md}{
+            width: calc(100% * (1/4) - 0px - 1px);
+          }
+          @media #{$sm}{
+            width:auto;
+          }
+          @include rtl {
+            margin-left: $footer-v2-margin-li;
+            margin-right: 0;
+          }
+
+          position: relative;
+
+          &:before {
+            content: '';
+            background: $footer-social-links-ul-before-color;
+            height: 20px;
+            width: 1px;
+            position: absolute;
+            left: -#{$footer-v2-margin-li / 2};
+
+            @include rtl {
+              right: -#{$footer-v2-margin-li / 2};
+            }
+
+            bottom: 10px;
+            top: 5px;
+            margin: auto 0;
+            
+            @media #{$md}{
+              display: none;
+            }
+          }
+
+          &:first-child {
+            &:before {
+              display: none;
+            }
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &--black {
+    background-color: $footer-v2-black;
+    color : $footer-text-dark-color; 
+    & , a { 
+      color : $footer-v2-font-color;
+    }
+    .#{$ProjectName}-v2__usefullinks {
+      ul {
+        li {
+            &::before {
+              background: $footer-v2-black-sep-color;
+            }
+          }
+      }
+    }
+    a:not(.stretched-link){
+      color: $footer-v2-black-link-color;
+      &:hover{
+        color : $footer-v2-link-hover-color;
+      }
+    }
+  
+    .hr-1{
+      background : $footer-v2-black-sep-color;
+    }
+  }
+}
+

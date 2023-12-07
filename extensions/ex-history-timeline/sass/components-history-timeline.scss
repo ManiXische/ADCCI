@@ -1,0 +1,226 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+  // Your code goes here
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    left: 15px;
+    border-left: $history-timeline-border;
+    @media #{$sm} {
+      display: none;
+    }
+    @include rtl {
+      left: auto;
+      right: 15px;
+    }
+  }
+
+  &__journey {
+    position: relative;
+    + .ex-history-timeline__journey {
+      a {
+        margin-top: $history-timeline-year-margin-top;
+      }
+    }
+
+
+    @at-root{
+      &:last-child {
+        .#{$ProjectName}{
+           &__card-content{
+             &:last-child{
+                &:before {
+                  content: "";
+                  position: absolute;
+                  top: 50px;
+                  bottom: 0;
+                  height: calc(100% - 50px + 27px);
+                  z-index: 1;
+                  background: #fff;
+                  width: $history-timeline-bullet-width;
+                  left: $history-timeline-bullet-alignment;;
+          
+                  @include rtl {
+                    left: auto;
+                    right: $history-timeline-bullet-alignment;;
+                  }
+                }
+             }
+           }
+        }
+      }
+   }
+    
+  }
+  &__year {
+    position: sticky;
+    top: 90px;
+    left:0;
+    @at-root {
+      .scrolled & {
+        top:120px;
+      }
+    }
+    color: $history-timeline-year-font-color;
+    margin: 0;
+    padding: $history-timeline-year-padding;
+    margin-bottom: $history-timeline-year-margin-bottom;
+    margin-left:$history-timeline-year-margin-left;
+    background-color: $history-timeline-primary-color;
+    z-index: 2;
+    &:hover {
+      color: $history-timeline-year-hover-color;
+      text-decoration: none;
+    }
+
+    @include rtl {
+      margin-right: $history-timeline-year-margin-left;
+      margin-left: 0;
+      left : auto;
+      right:0;
+    }
+    @media #{$sm} {
+      width:100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &__card-content {
+    position: relative;
+    padding: $history-timeline-row-padding;
+    padding-right: 0;
+    min-height:  $history-timeline-row-height;
+    @include rtl{
+      padding-right: $history-timeline-row-padding;
+      padding-left: 0;
+    }
+    @media #{$sm} {
+      padding: 0;
+    }
+    &:after {
+      content: "";
+      width: $history-timeline-bullet-width;
+      height: $history-timeline-bullet-height;
+      background-color: $history-timeline-bullet-bg;
+      position: absolute;
+      left: $history-timeline-bullet-alignment;
+      @include rtl {
+        left: auto;
+        right: $history-timeline-bullet-alignment;
+      }
+      z-index: 2;
+      @media #{$sm} {
+        display: none;
+      }
+    }
+    h3,
+    p {
+      padding: $history-timeline-content-padding;
+    }
+
+  }
+  &__card-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: $history-timeline-mobile-image-min-height;
+    height: 100%;
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+  &__card__text-content {
+    background-color: $history-timeline-content-bg;
+    height: 100%;
+  }
+
+  &__nav {
+    position: fixed;
+    z-index: 1;  
+    top: $history-timeline-nav-top;
+    @include transition(top .4s ease);
+    right: 0;
+    width: $history-timeline-nav-width;
+    list-style-type: none;
+    @include rtl {
+      right: auto;
+      left: 0;
+    }
+    @media #{$md} {
+      display: none;
+    }
+    &--hidden{
+      display: none;
+    }
+    a {
+      display: block;
+      width: $history-timeline-nav-bullet-size;
+      height: $history-timeline-nav-bullet-size;
+      padding: $history-timeline-nav-bullet-size;
+      border-radius: 50%;
+      border: 2px solid;
+      border-color: $history-timeline-primary-color;
+      text-decoration: none;
+      background-color: $history-timeline-nav-bullet-bg;
+      &.active {
+        border-radius: $history-timeline-nav-bullet-radius;
+        background-color: $history-timeline-primary-color;
+        text-decoration: none;
+      }
+      &:after {
+
+        content: "";
+        position: relative;
+        pointer-events: none;
+        top: $history-timeline-nav-line-position-top;
+        bottom: 0;
+        left : 0px;
+        @include rtl{
+          right: 0px;
+          left: auto;
+        }
+        height: 19px;
+        display: inline-block;
+        width: 1px;
+        z-index: 0;
+        border-left: $history-timeline-border;
+
+        &:last-child {
+          display: none;
+        }
+      }
+      &:hover {
+        border-radius: $history-timeline-nav-bullet-radius;
+        background-color: $history-timeline-primary-color;
+        text-decoration: none;
+      }
+    }
+    ul {
+      padding-left: $history-timeline-nav-left;
+      li {
+        padding: $history-timeline-nav-bullet-spacing;
+        &:last-child {
+          a {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

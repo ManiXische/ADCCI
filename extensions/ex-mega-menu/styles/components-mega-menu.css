@@ -1,0 +1,424 @@
+/***************************************************************************************************
+Extension Name: ex-mega-menu 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-mega-menu 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-mega-menu 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-mega-menu 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-mega-menu {
+  background: #ffffff;
+}
+
+.ex-mega-menu__logo {
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ex-mega-menu__logo:hover {
+  opacity: 0.7;
+}
+
+.ex-mega-menu__logo-img {
+  width: 100%;
+  max-width: 106px;
+}
+
+.ex-mega-menu .nav {
+  margin-top: 34px;
+}
+
+.ex-mega-menu .nav__main-item {
+  display: block;
+}
+
+.ex-mega-menu .nav__main-list {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 900;
+  list-style-type: none;
+  margin-right: 40px;
+}
+
+.ex-mega-menu .nav__main-list:last-child {
+  margin-right: 0;
+}
+
+.ex-mega-menu .nav__main-list:hover > a {
+  color: #008587;
+}
+
+.ex-mega-menu .nav__main-list:hover > a:after {
+  width: 100%;
+}
+
+.ex-mega-menu .nav__main-list:hover .sub-menu {
+  display: block;
+}
+
+.ex-mega-menu .nav__main-link {
+  position: relative;
+  display: block;
+  color: #000;
+  padding-bottom: 35px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ex-mega-menu .nav__main-link:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #008587;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ex-mega-menu .nav__main-link > i {
+  margin-left: 10px;
+}
+
+.ex-mega-menu .sub-menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 84px;
+  border-top: solid #AFAFAF 1px;
+  background: #ffffff;
+}
+
+.ex-mega-menu .featured {
+  position: relative;
+}
+
+.ex-mega-menu .featured__heading {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.ex-mega-menu .featured__image {
+  width: 100%;
+  height: 288px;
+  background-size: cover;
+  background-position: center;
+}
+
+.ex-mega-menu .featured__content {
+  position: absolute;
+  width: 88%;
+  left: 22px;
+  bottom: 26px;
+}
+
+.ex-mega-menu .featured__content-heading {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.ex-mega-menu .featured__content-text {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 19px;
+}
+
+.ex-mega-menu .whats-news {
+  background-color: #FAFAFA;
+  border-left: solid 1px #AFAFAF;
+  padding: 0 30px;
+}
+
+.ex-mega-menu .whats-news__main-heading {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.ex-mega-menu .whats-news__img {
+  width: 100%;
+  max-width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.ex-mega-menu .whats-news__heading {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 22px;
+}
+
+.ex-mega-menu .whats-news__text {
+  font-size: 14px;
+}
+
+.ex-mega-menu .whats-news__link {
+  font-size: 14px;
+  font-weight: 900;
+  color: #008587;
+}
+
+.ex-mega-menu .whats-news__link i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-right: 5px;
+}
+
+.ex-mega-menu .whats-news__link:hover i {
+  margin-right: 3px;
+}
+
+.ex-mega-menu .language-switcher {
+  float: right;
+  font-family: "NotoKufiArabic", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 36px;
+  padding-right: 25px;
+  padding-bottom: 34px;
+  padding-left: 24px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ex-mega-menu .language-switcher:hover {
+  color: #ffffff;
+  background: #008587;
+}
+
+.ex-mega-menu .phone-btn {
+  float: right;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ex-mega-menu .phone-btn__link {
+  display: block;
+  padding-top: 33px;
+  padding-right: 30px;
+  padding-bottom: 31px;
+  padding-left: 30px;
+}
+
+.ex-mega-menu .phone-btn__img {
+  max-width: 16px;
+  width: 100%;
+}
+
+.ex-mega-menu .phone-btn:hover {
+  background: #008587;
+}
+
+.ex-mega-menu .phone-btn:hover img {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.ex-mega-menu .search-btn {
+  float: right;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ex-mega-menu .search-btn > i {
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  cursor: pointer;
+  padding-top: 30px;
+  padding-right: 25px;
+  padding-bottom: 29px;
+  padding-left: 25px;
+}
+
+.ex-mega-menu .search-btn > i:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 34px;
+  height: 24px;
+  width: 1px;
+  background: #AFAFAF;
+}
+
+.ex-mega-menu .search-btn:hover {
+  background: #008587;
+}
+
+.ex-mega-menu .search-btn:hover > i {
+  color: #ffffff;
+}
+
+.ex-mega-menu .search-overlay {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -200%;
+  width: 85%;
+  height: 100%;
+  background: #C4C4C4;
+  padding: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ex-mega-menu .search-overlay--append {
+  top: 0;
+}
+
+.ex-mega-menu .search-overlay__close {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.ex-mega-menu .search-overlay__search-icon {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  font-size: 22px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 0;
+  background: none;
+}
+
+.ex-mega-menu .search-overlay__input {
+  font-size: 16px;
+  width: 100%;
+  font-weight: bold;
+  padding-left: 45px;
+  padding-right: 45px;
+  background: none;
+}
+
+.ex-mega-menu .accordion-menu .card {
+  border-radius: 0;
+  background-color: #D6D6D6;
+}
+
+.ex-mega-menu .accordion-menu .card:first-child {
+  border-top: none;
+}
+
+.ex-mega-menu .accordion-menu .card .card-header {
+  background-color: #ffffff;
+}
+
+.ex-mega-menu .accordion-menu .card .card-header .btn-link {
+  display: block;
+  color: #3F3E45;
+  text-align: left;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+  padding: 0;
+}
+
+.ex-mega-menu .accordion-menu .card .card-header .btn-link i {
+  float: right;
+  font-size: 18px;
+  margin-top: 2px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ex-mega-menu .accordion-menu .card .card-header .btn-link.collapsed i {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.ex-mega-menu .accordion-menu__list {
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.ex-mega-menu .accordion-menu__list-link {
+  font-size: 14px;
+  color: #3F3E45;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ex-mega-menu .accordion-menu__list-link:hover {
+  color: #008587;
+}
+
+.ex-mega-menu .accordion-menu__link {
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: underline;
+  color: #008587;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ex-mega-menu .accordion-menu__link:hover {
+  text-decoration: none;
+}
+
+.ex-mega-menu .accordion-menu__list-link-news {
+  font-size: 12px;
+  color: #ffffff;
+  background: #FF8D00;
+  border-radius: 3px;
+  padding: 2px 7px;
+  margin-left: 8px;
+}
+
+.ex-mega-menu--switch nav {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}

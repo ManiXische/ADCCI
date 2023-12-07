@@ -1,0 +1,64 @@
+
+
+
+$footer-multinav-bg: $grey-50  !default;
+$footer-text-color: $grey-900 !default;
+$footer-text-dark-color : $grey-100 !default;
+$footer-multinav-border-fg:$grey-200 !default;
+$footer-multinav-item-selected-bg:$secondary-color !default;
+$footer-multinav-item-color:$secondary-color  !default;
+$footer-multinav-item-selected-color:$white-color !default;
+
+$footer-buttons-border: 1px solid $secondary-color !default;
+
+$footer-settings-border-size:1px !default;
+$footer-settings-anchor-fontsize:14px !default;
+
+$footer-usefullinks-title-fontsize: 20px !default;
+$footer-settings-title-fontsize : 12px !default ;
+$footer-settings-title-color : $white-color !default;
+$footer-copyrights-color : $grey-600 !default;
+$footer-settings-anchor-copyrights-fontsize : 14px !default;
+/* updated variable for footer logo */
+$footer-poweredby-img-height : auto !default;
+$footer-poweredby-img-maxwidth:none !default;
+$footer-poweredby-img-width:auto !default;
+$footer-poweredby-img-margin:0 2px !default;
+$footer-poweredby-img-sep-color:$grey-800  !default;
+$footer-poweredby-img-sep-height:auto !default;
+$footer-poweredby-img-sep-width:1px !default;
+$footer-poweredby-img-sep-maxwidth:1px !default;
+$footer-poweredby-img-sep-margin:0 33px !default;
+$footer-poweredby-span-color:$grey-700  !default;
+$footer-poweredby-fontsize:11px  !default;
+/* end */
+$footer-social-links-icon-width-height:30px !default;
+$footer-social-links-ul-before-color:$grey-200  !default;
+$footer-margin-li:25px !default;
+
+$footer-strip-color:transparent !default;
+$footer-strip-width:100% !default;
+$footer-strip-height:9px !default;
+$footer-links-color : $grey-900 !default;
+$footer-links-hover-color : $primary-color !default;
+
+$footer-usefullinks-title-font-weight : normal !default;
+
+$footer-usefullinks-title-color: $black-color !default;
+
+
+$footer-v2-black : $grey-900 !default;
+$footer-v2-black-link-color: $grey-300 !default;
+$footer-v2-font-color : $grey-300 !default;
+$footer-v2-link-hover-color : $primary-color3  !default;
+$footer-v2-margin-li:40px !default;
+$footer-v2-links-hover-border : 1px !default;
+$footer-v2-usefullinks-lineheight: 20px !default;
+$footer-v2-usefullinks-margin: 0 0 10px 0 !default;
+$footer-v2-copyrights-li-margin-right: 20px !default;
+$footer-v2-black-sep-color : color-opacity($white-color , 0.1) !default;
+$footer-v2-accordion-border : 1px solid $grey-200 !default;
+$footer-v2-accordion-border-radius: $layout-border-radius !default;
+$footer-v2-accordion-active-bg :$grey-50 !default;
+$footer-v2-accordion-active-color : $grey-900 !default;
+$footer-v2-accordion-title-height: 50px !default;

@@ -1,0 +1,162 @@
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Don't remove Section -->
+    <!-- Bootstrap Lib -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- ex-main-theme -->
+    <link rel="stylesheet" href="../../ex-main-theme/styles/fontawesome.css" />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/icomoon.css" />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/animate.css" />
+    <link rel="stylesheet" href="../../ex-sxa-filter/styles/components-sxa-filter.css" />
+    
+    <link
+      rel="stylesheet"
+      href="../../ex-main-theme/styles/jquery-fancybox.css"
+    />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/owl-carousel.css" />
+    <link rel="stylesheet" href="../../ex-main-theme/styles/slick.css" />
+    <link
+      rel="stylesheet"
+      href="../../ex-main-theme/styles/smooth-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../ex-main-theme/styles/components-main-theme.css"
+    />
+
+    <!-- ex-layout  -->
+    <link
+      rel="stylesheet"
+      href="../../ex-layout/styles/components-layout.css"
+    />
+    <!-- End don't remove Section -->
+
+    <!-- Your css files goes here -->
+    <link rel="stylesheet" href="../../ex-data-grid/styles/components-data-grid.css" />
+
+    <!-- Your css files goes here -->
+  </head>
+
+  <body>
+    <div class="container ex-data-grid my-7">
+      <div class="row">
+        <div class="col-12">
+          <label for="codeName">
+            search by Code or Description
+          </label>
+        </div>
+        <div class="col-md-9 d-flex">
+          <div class="w-100 ex-data-grid__search-box mb-5">
+            <input class="w-100" type="text" name="codeName" id="codeName" />
+          </div>
+          <div class="ex-data-grid__search-button d-flex">
+            <a id="getCodes"><i class="icon-search"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ex-data-grid__dropdown ex-sxa-filter__input w-25 mb-5 mx-3 d-flex w-100 position-relative ex-sxa-filter">
+            <select id="hsCriteria" class="w-100"></select>
+            <i class="ex-sxa-filter__input__icon-right icon-chevron-down"></i>
+          </div>
+        </div>
+        <div class="col-lg-12 d-flex">
+          <div
+            id="totalResults"
+            class="ex-data-grid__total-results mb-4 w-100"
+          ></div>
+          <div
+            id="no-data"
+            class="alert alert-primary w-100"
+            role="alert"
+            style="display:none;"
+          >
+            There is no description in the Harmonized System customs
+            classification that includes your keyword. - Make sure all words are
+            spelled correctly - Please try again with a synonym or with a
+            hierarchical search.
+          </div>
+          <div
+            id="error-msg"
+            class="alert alert-danger"
+            role="alert"
+            style="display:none;"
+          >
+            Oops ! Something went wrong, please try again later
+          </div>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table">
+          <thead data-grid="true">
+            <tr class="d-flex">
+              <th class="col-lg-2 col-3" data-field="id">HS Code</th>
+              <th class="col-lg-4 col-6" data-field="overview">Description</th>
+              <th class="col-lg-1 col-3" data-field="vote_average">Tariff</th>
+              <th class="col-lg-1 col-3" data-field="vote_count">Unit</th>
+              <th class="col-lg-1 col-3" data-field="video">Status</th>
+              <th class="col-lg-1 col-3" data-field="title">authority</th>
+              <th class="col-lg-2 col-4" data-field="popularity">due flag</th>
+            </tr>
+          </thead>
+          <tbody id="codeResults"></tbody>
+        </table>
+      </div>
+
+      <div class="grid-load-more-wrapper d-flex justify-content-center mb-5 high-contrast--force bg-white text-center">
+      <button
+        id="loadmoreCodes"
+        class="mt-5 button button--withouticon my-0 mx-auto grid-load-more"
+      >
+        LOAD MORE
+      </button>
+      </div>
+    </div>
+
+    <!-- JQUERY -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ex-main-theme : uncomment needed files -->
+    <!-- Lib -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/smooth-scrollbar-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/fontawesome-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/jquery-fancybox-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/owl-carousel-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/slick-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/isotope-pkgd-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/lazysizes-min.js"></script> -->
+    <!-- init  -->
+    <!-- <script src="../../ex-main-theme/scripts/fancybox-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/isotope-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/owl-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/scrollbar-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/slick-init.js"></script> -->
+    <!-- ex-main-theme : uncomment needed files -->
+
+    <!-- Your js files goes here -->
+    <script src="../../ex-data-grid/scripts/requster.js"></script>
+    <script src="../../ex-data-grid/scripts/components-data-grid.js"></script>
+
+    <!-- Your js files goes here -->
+  </body>
+</html>

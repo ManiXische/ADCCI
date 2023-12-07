@@ -1,0 +1,363 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+// timelinr
+// @import 'lib/jquery-timelinr.scss';
+// @import 'lib/jquery-timelinr-v.scss';
+
+.#{$ProjectName} {
+    height: $timeline-height;
+    @media #{$sm} {
+        height:auto;
+    }
+
+    background-color:$timeline-background;
+    &__container {
+        padding-right: $timeline-container-padding-right;
+        @include rtl {
+            padding-right: 0;
+            padding-left: $timeline-container-padding-right;
+            @media #{$sm}{
+                padding-left: 0;
+            }
+        }
+        z-index: 1; // to order on top of bg
+
+        @media #{$md}{
+            padding-right: 0;
+            padding-left: 0;
+        }
+        @media #{$sm}{
+            margin-right:15px;
+            margin-left: 15px;
+            padding-right: 0;
+            padding-left: 0;
+        }
+        
+        .timeline-wrapper{
+            height: calc(#{$timeline-wrapper-height} + #{$timeline-navigator-item-bullet-selected-size});
+            @media #{$sm}{
+                height: calc(#{$timeline-wrapper-height} + #{$timeline-navigator-item-bullet-selected-size} + 60px);
+            }
+            
+            margin: $timeline-wrapper-margin;
+            
+            &:after {
+                content: '';
+                opacity: $timeline-wrapper-line-opacity;
+                @include background-gradient(0deg, $timeline-wrapper-line-background-first , 1% ,180deg, $timeline-wrapper-line-background-second , 100%);
+                height: 100%;
+                width: $timeline-wrapper-line-width;
+                z-index: 0;
+                position: absolute;
+                top: 0;
+                left: 9px;
+                @include rtl{
+                    left: auto;
+                    right:9px;
+                }
+            }
+
+            &__navigator {
+                padding-left: 10px;
+
+                @include rtl{
+                    padding-left: 0;
+                    padding-right: 10px;
+                }
+                width: $timeline-navigator-width;
+
+                li {
+                    color: $timeline-navigator-item-color;
+                    opacity: $timeline-navigator-item-opacity;
+                    position: relative;
+                    height: calc(#{$timeline-wrapper-height} / #{$timeline-navigator-item-displayed - 1});
+                    font-size: $timeline-navigator-item-fontsize;
+                    cursor: pointer;
+                    padding-top: $timeline-navigator-item-margin-top;
+                    padding-left: $timeline-navigator-item-padding-left;
+                    @include rtl{
+                        padding-right: $timeline-navigator-item-padding-left;
+                        padding-left: 0;
+                    }
+                    &.previous , &.selected{
+                        opacity: 1;
+                    }
+
+
+                    &:before {
+                        content: '';
+                        width: $timeline-navigator-item-bullet-size;
+                        height: $timeline-navigator-item-bullet-size;
+                        border-radius: $timeline-navigator-item-bullet-radius;
+                        display: none;
+                        z-index: 1;
+                        background-color: $timeline-navigator-item-bullet-background;
+                        border:$timeline-navigator-item-bullet-border-size solid $timeline-navigator-item-bullet-border-color; 
+                        position: absolute;
+                        top:0;
+                        left: calc(1px - #{$timeline-navigator-item-bullet-size / 2});
+                        @include rtl{
+                            left: auto;
+                            right: calc(1px - #{$timeline-navigator-item-bullet-size / 2});
+                        }
+                    }
+
+                    &:hover{
+                        opacity: 1;
+                    }
+                    &.selected {
+                        padding-top: $timeline-navigator-item-selected-margin-top;
+                        & , &:hover{
+                            color:$timeline-navigator-item-color-hover;
+                            font-size: $timeline-navigator-item-fontsize-hover;
+                            font-weight: bold;
+                            &:before{
+                                display: block;
+                                width: $timeline-navigator-item-bullet-selected-size;
+                                height: $timeline-navigator-item-bullet-selected-size;
+                                left: calc(-#{$timeline-navigator-item-bullet-selected-size / 2});
+                                @include rtl{
+                                    left: auto;
+                                    right: calc(-#{$timeline-navigator-item-bullet-selected-size / 2});
+                                }
+                                background-color: $timeline-navigator-item-bullet-background-selected;
+                                border:$timeline-navigator-item-bullet-border-size-selected solid $timeline-navigator-item-bullet-border-color-selected;
+                            }
+                        }
+                    }
+                    &.previous {
+                        &:before{
+                            display: block;
+                        }
+                    }
+                }
+                
+            }
+                    
+            &__content {
+                overflow: hidden;
+
+                .timeline-item {
+                    height: $timeline-height;
+
+                    &__content{
+                        &__label{
+                            color:$timeline-content-label-color;
+                            font-size: $timeline-content-label-fontsize;
+                            line-height: $timeline-content-label-lineheight;
+                            margin-right: $timeline-content-label-margin-right;
+                            @include rtl{
+                                margin-right: 0px;
+                                margin-left: $timeline-content-label-margin-right;
+                            }
+                        }
+                        &__text{
+                            color: $timeline-content-text-color;
+                        }
+                    }
+                }
+            }	
+        }
+
+        &__title-block{
+            margin-right: $timeline-title-margin-right;
+            @include rtl{
+                margin-right: 0px;
+                margin-left: $timeline-title-margin-right;
+                @media #{$sm}{
+                    margin-left: 0;
+                }
+            }
+
+            @media #{$md}{
+                margin-right: 0;
+                margin-left: 0;
+            }
+            @media #{$sm}{
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__nav{
+        color: $timeline-arrows-color;
+
+        &__button{
+            width:$timeline-arrows-button-size;
+            height: $timeline-arrows-button-size;
+            border-radius: 50%;
+            color : $timeline-arrows-button-border-color;
+            border: $timeline-arrows-button-border-size solid $timeline-arrows-button-border-color;
+            display: none;
+            cursor: pointer;
+
+            margin-right: $timeline-arrows-button-margin;
+
+            @include rtl{
+                margin-left: $timeline-arrows-button-margin;
+                margin-right: 0;
+            }
+            i{
+
+            }
+            &:hover {
+                background-color: $timeline-arrows-button-background;
+                border-color: transparent;
+            }
+            &--next{
+                i{
+
+                }
+            }
+            &--disabled {
+                opacity: 0.3;
+                cursor: initial;
+                pointer-events: none;
+            }
+
+            &:hover {
+                color:$timeline-arrows-color-hover;
+            }
+        }
+    }
+    &__image{
+        width: $timeline-image-wrapper-width;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        @include rtl{
+            right : auto;
+            left:0;
+        }
+        @include transition(background-image 0.2s ease-in-out);
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        @media #{$md}{
+            width:100%;
+        }
+        div {
+            display: none;
+            background-size: cover;
+            background-position: center;
+        }
+        img {
+            display: none;
+        }
+            @include onPageEditor{
+                img{
+                // for editor
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+            
+        }
+        
+
+        &__pattern-overlay{
+            position: absolute;
+            top:0;
+            left: -#{$timeline-image-wrapper-pattern-width};
+            @include rtl{
+                left: auto; 
+                right:-#{$timeline-image-wrapper-pattern-width};
+            }
+            width: $timeline-image-wrapper-pattern-width;
+            height:100%;
+            @media #{$md}{
+                background-color: color-opacity($timeline-image-wrapper-pattern-overlay-color , 0.3);
+                background-image : none;
+                width:100%;
+                left:0;
+                @include rtl{
+                    left:auto;
+                    right:0;
+                }
+            }
+        }
+
+        &:before{
+            @media #{$md}{
+                content: '';
+                z-index: 1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: color-opacity($timeline-image-wrapper-pattern-overlay-color , 0.8);
+            }
+        }
+    }
+
+    &--alt{
+        background-color:$timeline-alt-background;
+        &.#{$ProjectName} {
+            &{
+                .#{$ProjectName}__container{
+                    .timeline-wrapper{
+                    &__navigator { 
+                        li { 
+                            color: $timeline-navigator-item-alt-color;
+                            &:before {
+                                background-color: $timeline-navigator-item-bullet-alt-background;
+                                border-color:$timeline-navigator-item-bullet-border-alt-color; 
+                            }    
+                            &.selected {
+                                & , &:hover{
+                                    color:$timeline-navigator-item-alt-color-hover;
+                                    &:before{
+                                        background-color: $timeline-navigator-item-bullet-alt-background-selected;
+                                        border-color:$timeline-navigator-item-bullet-border-alt-color-selected;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &__content { 
+                        .timeline-item {
+                            &__content{
+                                &__label{
+                                    color:$timeline-content-label-alt-color;
+                                }
+                                &__text{ 
+                                    color: $timeline-content-text-alt-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                }  
+
+                .#{$ProjectName}__nav{
+                    color: $timeline-arrows-alt-color;
+            
+                    &__button{
+                        color : $timeline-arrows-button-border-alt-color;
+                        border-color:  $timeline-arrows-button-border-alt-color;
+        
+                        &:hover {
+                            background-color: $timeline-arrows-button-alt-background;
+                            border-color: transparent;
+                        }
+
+                        &:hover {
+                            color:$timeline-arrows-alt-color-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

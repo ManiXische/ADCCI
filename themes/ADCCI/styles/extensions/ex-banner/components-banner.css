@@ -1,0 +1,179 @@
+/***************************************************************************************************
+Extension Name: ex-banner 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-banner 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-banner 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-banner 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-banner--switch .ex-banner__content .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-banner--switch .ex-banner__content .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.ex-banner--switch .ex-banner__content .row .data {
+  padding-left: 0px;
+  padding-right: 24px;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-banner--switch .ex-banner__content .row .data {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+html[dir='rtl'] .ex-banner--switch .ex-banner__content .row .data, .translated-rtl .ex-banner--switch .ex-banner__content .row .data {
+  padding-right: 0px;
+  padding-left: 24px;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  html[dir='rtl'] .ex-banner--switch .ex-banner__content .row .data, .translated-rtl .ex-banner--switch .ex-banner__content .row .data {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.ex-banner--border .img-wraper {
+  position: relative;
+  padding-top: 15px;
+}
+
+html:not([dir='rtl']) .ex-banner--border .img-wraper, .translated-ltr .ex-banner--border .img-wraper {
+  padding-left: 15px;
+}
+
+html[dir='rtl'] .ex-banner--border .img-wraper, .translated-rtl .ex-banner--border .img-wraper {
+  padding-right: 15px;
+}
+
+.ex-banner--border .img-wraper::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  height: -webkit-calc(100% - 15px);
+  height: calc(100% - 15px);
+  width: -webkit-calc(100% - 15px);
+  width: calc(100% - 15px);
+  border: 1px solid #0091C7;
+}
+
+html:not([dir='rtl']) .ex-banner--border .img-wraper::before, .translated-ltr .ex-banner--border .img-wraper::before {
+  left: 0;
+}
+
+html[dir='rtl'] .ex-banner--border .img-wraper::before, .translated-rtl .ex-banner--border .img-wraper::before {
+  right: 0;
+}
+
+.ex-banner__content .img-wraper {
+  height: 100%;
+}
+
+.ex-banner__content .img-wraper .img-wraper__img {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.ex-banner__content .img-wraper img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.ex-banner__content .data {
+  padding-left: 24px;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  .ex-banner__content .data {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+html[dir='rtl'] .ex-banner__content .data, .translated-rtl .ex-banner__content .data {
+  padding-left: 0px;
+  padding-right: 24px;
+}
+
+@media screen and (max-device-width: 922px), screen and (max-width: 922px) {
+  html[dir='rtl'] .ex-banner__content .data, .translated-rtl .ex-banner__content .data {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.ex-banner__content .data__sub-title {
+  color: #89888C;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+}
+
+.ex-banner__content .data__title {
+  color: #3F3E45;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 900;
+}
+
+.ex-banner__content .data__description {
+  color: #3F3E45;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: normal;
+}

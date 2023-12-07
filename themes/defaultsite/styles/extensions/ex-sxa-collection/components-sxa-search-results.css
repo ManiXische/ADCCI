@@ -1,0 +1,163 @@
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-sxa-collection 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-sxa-search-result {
+  border-top: 1px solid #F5F5F7;
+  margin: 30px 0 0 0;
+  padding: 25px 15px;
+  background-color: #ffffff;
+}
+
+.ex-sxa-search-result--pointer {
+  cursor: pointer;
+}
+
+.ex-sxa-search-result__card-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #3F3E45;
+}
+
+.ex-sxa-search-result__card-description {
+  font-size: 16px;
+  line-height: 26px;
+  color: #3F3E45;
+}
+
+.ex-sxa-search-result__card-date span {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #3F3E45;
+}
+
+html[lang*='en'] .ex-sxa-search-result__card-date span,
+html[class*='translated-ltr'] .ex-sxa-search-result__card-date span {
+  margin-right: 25px;
+}
+
+html[lang*='ar'] .ex-sxa-search-result__card-date span,
+html[class*='translated-rtl'] .ex-sxa-search-result__card-date span {
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+.ex-sxa-search-result__card-date i {
+  color: #3F3E45;
+  font-size: 16px;
+}
+
+html[lang*='en'] .ex-sxa-search-result__card-date i,
+html[class*='translated-ltr'] .ex-sxa-search-result__card-date i {
+  margin-right: 10px;
+}
+
+html[lang*='ar'] .ex-sxa-search-result__card-date i,
+html[class*='translated-rtl'] .ex-sxa-search-result__card-date i {
+  margin-left: 10px;
+}
+
+.ex-sxa-search-result__card-tag span {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #3F3E45;
+}
+
+.ex-sxa-search-result__card-tag span::before {
+  content: "";
+  position: relative;
+  width: 2px;
+  height: 18px;
+  background-color: #3F3E45;
+  display: inline-block;
+  top: -1px;
+  vertical-align: middle;
+}
+
+html[lang*='en'] .ex-sxa-search-result__card-tag span::before,
+html[class*='translated-ltr'] .ex-sxa-search-result__card-tag span::before {
+  margin-right: 10px;
+}
+
+html[lang*='ar'] .ex-sxa-search-result__card-tag span::before,
+html[class*='translated-rtl'] .ex-sxa-search-result__card-tag span::before {
+  margin-left: 10px;
+}
+
+html[lang*='en'] .ex-sxa-search-result__card-tag span,
+html[class*='translated-ltr'] .ex-sxa-search-result__card-tag span {
+  margin-right: 10px;
+}
+
+html[lang*='ar'] .ex-sxa-search-result__card-tag span,
+html[class*='translated-rtl'] .ex-sxa-search-result__card-tag span {
+  margin-left: 10px;
+}
+
+.ex-sxa-search-result:hover .ex-sxa-search-result__card-title:not(.no-hover) {
+  text-decoration: underline;
+}

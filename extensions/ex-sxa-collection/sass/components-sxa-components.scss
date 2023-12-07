@@ -1,0 +1,276 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+
+@import "../vars/_all";
+
+.ex-sxa-components , .ex-page-content {
+  // Your code goes here
+  line-height: $content-editor-line-height;
+  word-break: break-word; 
+  ul {
+    list-style-type:    $content-editor-ul-list-style;
+    // font-size:     $content-editor-ul-font-size;
+    // line-height:   $content-editor-ul-line-height;
+    // margin-left:   $content-editor-ul-margin-left;
+    // margin-right:  $content-editor-ul-margin-right;
+    margin-bottom: $content-editor-ul-margin-bottom;
+
+    list-style-position: outside;
+    @include ltr{
+      padding-left: 18px;
+    }
+    @include rtl{
+        padding-right: 18px;
+    }
+  
+  }
+  ul li,
+  ol li {
+    padding-bottom: $content-editor-li-padding-bottom;
+    padding-top: $content-editor-li-padding-top;
+
+    @include rtl { 
+      text-align: right;
+    }
+  }
+
+  ol {
+    // padding: $content-editor-ol-padding;
+    list-style-type: $content-editor-ol-list-style;
+    // font-size: $content-editor-ol-font-size;
+    @include rtl { 
+      list-style-type: $content-editor-ol-list-ar-style;
+    }
+  }
+  a {
+    color: $content-editor-link-color-tag;
+  }
+
+  em {
+    font-style: $content-editor-em-style;
+  }
+
+  table {
+    min-width: $content-editor-table-min-width;
+    margin-bottom: $content-editor-table-margin-bottom;
+    color: $content-editor-table-color;
+  
+
+    th,
+    td {
+      padding: $content-editor-th-td-padding;
+      vertical-align: $content-editor-th-td-vertical-align;
+      border-top: $content-editor-th-td-border-top;
+    }
+    /*tbody > tr:first-child td {
+      background-color: $content-editor-table-head-background-color;
+      color: $content-editor-table-head-color;
+    }
+  
+    thead + tbody > tr:first-child td {
+      background-color: $content-editor-table-default-background-color;
+      color: $content-editor-table-default-color;
+    }*/
+    thead tr th {
+      background-color: $content-editor-table-head-background-color;
+      color: $content-editor-table-head-color;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding-bottom: $content-editor-heading-padding-bottom;
+    @include ltr{
+      font-weight: $content-editor-heading-font-weight;
+    }
+  }
+  p {
+    margin-bottom: $content-editor-p-margin-bottom;
+  }
+  img {
+    $imgelement : &;
+    max-width: 100% !important;
+    @at-root {
+      .high-contrast{
+        #{$imgelement}{
+          -webkit-filter: grayscale(1) invert(100%) !important;
+          filter: grayscale(1) invert(100%) !important;
+        }
+      }
+    }
+  }
+
+  .img-shadow{
+    padding: $content-editor-img-shadow-padding;
+    position: relative;
+    display: inline-block;
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: calc( 100% - #{$content-editor-img-shadow-size});
+      background: $content-editor-img-shadow-background;
+      z-index: -1;
+      @include rtl{
+        right: calc( 100% - #{$content-editor-img-shadow-size});
+        left: 0;
+      }
+    }
+  }
+  & {
+    .source-img {
+      img {
+        max-width: $content-editor-content-editor-news-details-src-img-height !important;
+      }
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    img {
+      height: auto !important;
+    }
+  }
+
+  a {
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.preview {
+  #scWebEditRibbon,
+  #scCrossPiece {
+    display: none;
+  }
+}
+
+.sxa-link-list ul {
+  display: flex;
+}
+
+.sxa-search-result {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  padding: 0.55em;
+  background: none;
+  color: $content-editor-calendar-font-color;
+  border-radius: $content-editor-calendar-border-raduis;
+  border-color: transparent;
+}
+.ui-state-default.ui-state-highlight {
+  color: $content-editor-calendar-today-border-color;
+  border: 1px solid $content-editor-calendar-today-border-color;
+}
+.ui-state-default.ui-state-active {
+  background-color: $content-editor-calendar-active-background-color;
+  color: $content-editor-calendar-active-font-color;
+  border: 1px solid $content-editor-calendar-active-border-color;
+}
+.ui-state-default.ui-state-hover {
+  background-color: $content-editor-calendar-hover-background-color;
+  color: $content-editor-calendar-hover-font-color;
+  border: 1px solid $content-editor-calendar-hover-border-color;
+}
+.ui-datepicker-today .ui-state-default.ui-state-hover {
+  background-color: $content-editor-calendar-today-background-color;
+  color: $content-editor-calendar-today-font-color;
+  border: 1px solid $content-editor-calendar-today-border-color;
+}
+.ui-widget-header {
+  border: 0;
+  background: transparent url("../media/ui-icons_ffffff_256x240.png") 50% 50% repeat-x;
+}
+
+.ui-widget-header .ui-icon {
+  background-image: url("../media/ui-icons_ffffff_256x240.png");
+}
+
+.ui-icon-circle-triangle-w {
+  background-position: -79px -190px;
+}
+
+.ui-datepicker-header {
+  .ui-state-hover,
+  .ui-widget-content .ui-state-hover,
+  .ui-widget-header .ui-state-hover,
+  .ui-state-focus,
+  .ui-widget-content .ui-state-focus,
+  .ui-widget-header .ui-state-focus {
+    border: 0;
+    background: transparent;
+  }
+}
+.ui-icon-circle-triangle-e {
+  background-position: -48px -190px;
+}
+
+// .ui-datepicker .ui-datepicker-next-hover {
+//   right: 2px;
+//   top: 2px;
+// }
+
+// .ui-datepicker .ui-datepicker-prev {
+//   left: 2px;
+//   top: 2px;
+// }
+
+.ex-sxa-filter__input .bottom-remove-filter button,
+.ex-sxa-filter__input .bottom-remove-filter-custom button {
+  overflow: hidden;
+  line-height: 1;
+}
+
+.color-primary{
+  color:$content-editor-color-primary;
+}
+.color-secondary{
+  color:$content-editor-color-secondary;
+}
+
+
+[href^="tel"]{
+  direction: ltr;
+  unicode-bidi: bidi-override;
+} 
+
+.ui-widget-content {
+  background: none;
+  padding: 10px 15px;
+  background-color: $content-editor-calendar-background-color;
+  box-shadow: 0px 0px 5px $content-editor-calendar-shadow; 
+}
+.ui-datepicker {
+  .ui-datepicker-title {
+    select{
+      cursor: pointer; 
+    }
+  }
+}
+@media (max-width: 575.98px){
+  .table-responsive-sm {
+    box-shadow: inset 0 0 5px 0 #dcdcdc;
+    table{
+      word-break: initial;
+    }
+  }
+}

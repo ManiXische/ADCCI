@@ -1,0 +1,217 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+.#{$ProjectName} {
+    &__content{
+        background: $white-color;
+        min-height:$accordion-panel-content-minheight;
+        > div{
+            .#{$ProjectName}__image-section {
+                margin-left: $accordion-panel-image-section-ml;
+                @include rtl {
+                    margin-left: 0;
+                    margin-right: $accordion-panel-image-section-mr;
+                }
+            }
+        }
+        &--switch {
+            > div {
+                display: flex;
+                flex-direction: row-reverse;
+                .#{$ProjectName}{
+                    &__image-section{
+                        flex-flow: inherit;
+                        margin-left: 0;
+                        margin-top: $accordion-panel-image-section-mt;
+                        margin-right:$accordion-panel-image-section-mr;
+                    }                
+                    &__full-image{                    
+                        padding-left: 0;
+                        padding-right: $accordion-panel-card-full-image-pr;
+                    }
+                    @include rtl {
+                        &__image-section{
+                            margin-left: $accordion-panel-image-section-mr;
+                            margin-right: 0;
+                        }                
+                        &__full-image{                    
+                            padding-left: $accordion-panel-card-full-image-pl;
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    &__information-section{
+        width:$accordion-panel-info-sec-width;
+        h5{
+            font-size: $accordion-panel-md-font-size;
+            text-transform: uppercase;
+        }
+        h2{
+            font-size:$accordion-panel-lg-font-size;
+            color:$accordion-panel-title-color;
+        }
+        @media #{$md} {
+            width: 100%;         
+        }
+    }
+
+    &__image-section{
+        display: flex;
+        width:$accordion-panel-image-section-width;
+        @media #{$md} {
+            display: none;          
+        }
+    }
+
+    &__multi-images{
+        width: $accordion-panel-card-multi-images-width;
+    }
+    &__multi-img-wrap{
+        display: block;
+        width: 100%;
+        height: $accordion-panel-card-multi-imag-wrap-height;
+        margin: $accordion-panel-card-multi-imag-wrap-m;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        @include transition($accordion-panel-transition-time);
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+
+    &__full-image{     
+        width: $accordion-panel-card-full-image-img;
+        margin-left: $accordion-panel-card-full-image-pl;
+        box-sizing: border-box;
+        @include rtl {
+            margin-left: 0;
+            margin-right: $accordion-panel-card-full-image-pr;
+        }
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    &_accordion{
+        .card{
+            border:none;
+            overflow: inherit;
+
+            border: $accordion-panel-border-1 solid $accordion-panel-grey;
+            border-bottom: $accordion-panel-border-1 solid $accordion-panel-grey;
+            border-radius: $accordion-panel-border-radius-4;
+
+            transition: border $accordion-panel-transition-time,
+            border-bottom $accordion-panel-transition-time;
+
+            &.opened{
+                border: $accordion-panel-border-1 solid $accordion-panel-primary-color;
+                border-bottom: $accordion-panel-border-1 solid $accordion-panel-primary-color !important;
+                .card-header {
+                    border-top: $accordion-panel-border-1 solid transparent;
+                    border-right: $accordion-panel-border-1 solid transparent;
+                    border-left: $accordion-panel-border-1 solid transparent;
+                    border-bottom: $accordion-panel-border-1 solid transparent;
+                    border-radius: $accordion-panel-border-radius-4;
+                }
+
+                button {
+                    .button {
+                        &__icon {
+                            color: $accordion-panel-primary-color;
+                        }
+
+                        &__text {
+                            font-weight: $accordion-panel-button-fontweight;
+                        }
+                    }
+                }
+            }
+
+            &-header{
+                background: $white-color;
+                border:none;
+
+                border-top: $accordion-panel-border-1 solid transparent; 
+                border-right: $accordion-panel-border-1 solid transparent; 
+                border-left: $accordion-panel-border-1 solid transparent; 
+                border-bottom: $accordion-panel-border-1 solid $accordion-panel-grey;
+                border-radius: $accordion-panel-border-radius-4;
+
+                transition:border-bottom $accordion-panel-transition-time;
+
+                button{
+                    position: relative;
+                    left: $accordion-panel-card-header-btn-left;
+                    text-decoration: none;
+                    color: $accordion-panel-title-color;
+                    width:100%;
+                    text-align: left;
+                    .button{
+                        &__icon{
+                            transition: color $accordion-panel-transition-time;
+                            transition: margin-right $accordion-panel-transition-time;
+                        }
+                        &__text{
+                            font-weight: $accordion-panel-button-fontweight;
+                        }
+                    }
+                    @include rtl {
+                        left: auto;
+                        right: $accordion-panel-card-header-btn-right;
+                        text-align: right;
+                    }
+                }
+            }
+
+            &-body{
+                position: relative;
+                padding: $accordion-panel-card-body-padding;
+                p{
+                    font-size: $accordion-panel-md-font-size;
+                    line-height: $accordion-panel-card-body-line-height;
+                }
+                &__read-more{
+                    font-size: $accordion-panel-card-body-redmore-fontsize;
+                    text-transform: uppercase;
+                    color: $accordion-panel-title-color;
+                    background: $white-color;
+                    padding: $accordion-panel-card-body-redmore-padding;
+                    position: absolute;
+                    bottom: $accordion-panel-card-body-redmore-bottom;
+                    &--switch{
+                        right:$accordion-panel-card-body-redmore-switch-right;
+                    }
+                    &:hover{
+                        span {
+                            margin-right: $accordion-panel-card-body-redmore-hover-mr;
+                        }
+                    }
+                    span{
+                        margin-right: $accordion-panel-card-body-redmore-span-mr;
+                        transition: margin-right $accordion-panel-transition-time;
+                    }
+                }
+                @include rtl{
+                    padding: $accordion-panel-card-body-padding-ar;  
+                }
+            }
+        }
+    }
+}

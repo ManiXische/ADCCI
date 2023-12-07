@@ -1,0 +1,44 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+//=== open-button ===
+$floating-action-button-background-color: $ADGE-500 !default;
+$floating-action-button-background-color-hover: $ADGE-900 !default;
+$floating-action-button-top-corner-color: $ADGE-900 !default;
+$floating-action-button-width: 50px !default;
+$floating-action-button-height: 50px !default;
+$floating-action-button-border-radius: 8px !default;
+$floating-action-button-transition: width 0.2s ease !default;
+$floating-action-button-z-index: 9 !default;
+
+//Location
+$floating-action-button-start-space: 5px !default;
+$floating-action-button-top: calc(50% - 25px) !default;
+
+
+
+//Label
+$floating-action-button-label-color: $white-color !default;
+$floating-action-button-label-font-size: 14px !default;
+$floating-action-button-label-line-height: 22px !default;
+$floating-action-button-label-padding: 14px 0 !default;
+$floating-action-button-label-margin: 4px 0 0 0 !default;
+
+
+$floating-action-button-rtl-extended-width: 183px !default;
+$floating-action-button-ltr-extended-width: 183px !default;
+//=== elements inside the button ===
+
+//container
+$floating-action-button-elements-container-height: 107% !default;
+$floating-action-button-elements-container-corner-border-radius: 29px !default;
+$floating-action-button-elements-container-top: -3px !default;;
+
+//icon
+$floating-action-button-img-width: 35px !default;
+$floating-action-button-img-height: 35px !default;
+$floating-action-button-img-margin: 12px 8px 8px 8px !default;
+

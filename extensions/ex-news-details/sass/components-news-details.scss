@@ -1,0 +1,79 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+  //default font
+  font-size: $newsdetails-default-fontsize;
+  line-height: $newsdetails-default-lineheight;
+
+  //end default font
+  &__date-time {
+  
+    font-size: $newsdetails-date-time-font-size;
+  
+    time {
+      @include ltr {
+        border-left:$newsdetails-date-time-time-border-style $newsdetails-date-time-time-border-color;
+      }
+      @include rtl{
+        border-right:$newsdetails-date-time-time-border-style $newsdetails-date-time-time-border-color;
+      }
+      
+      padding: $newsdetails-date-time-time-padding;
+    }
+    .location {
+      
+      svg {
+        font-size: $newsdetails-date-time-address-i-font-size;
+        line-height: $newsdetails-date-time-address-i-line-height;
+        margin-right: $newsdetails-date-time-address-i-margin-right;
+        color:$newsdetails-date-time-address-i-color;
+      }
+    }
+  }
+ 
+  &__shortdesc{
+    font-size: $newsdetails-shortdesc-font-size;
+  }
+  h6 {
+    margin-bottom: $newsdetails-h6-margin-bottom;
+  }
+  p {
+  // margin-bottom: $newsdetails-margin-bottom;
+
+    &.caption {
+      font-size: $newsdetails-caption-font-size;
+      line-height: $newsdetails-p-caption-line-height;
+      color : $newsdetails-p-caption-color;
+     // margin: $newsdetails-zero-value;
+    }
+  }
+  .figure {
+    $figure: &;
+
+    figcaption {
+      font-size: $newsdetails-figcaption-fontsize; 
+    }
+    @at-root{
+     .high-contrast{
+       #{$figure}-img{
+         background-color: #fff;
+       }
+     }
+    }
+  }
+  .figureCaption {
+    font-size: $newsdetails-figcaption-fontsize;
+   
+    line-height: $newsdetails-figcaption-line-height;
+    color: $newsdetails-figcaption-title-font-color;
+    margin: $newsdetails-zero-value;
+  }
+}

@@ -1,0 +1,236 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+.#{$ProjectName} {
+    // Your code goes here
+    background: $identity-card-bg;
+    border: $identity-card-border;
+    overflow: hidden;
+    &:hover{
+      overflow: visible;
+    }
+    &__title{
+      color:$identity-card-titlelink-color;
+    }
+    &__container {
+        height: $identity-card-height;
+        &__partners-img {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    &__hover-container {
+        background: $identity-card-bg;
+        border: $identity-card-border;
+        top: $identity-card-hover-container-top;
+        visibility: $identity-card-hover-container-visability;
+        opacity: $identity-card-hover-container-opacity;
+        padding: $identity-card-hover-container-padding;
+        @include transition($identity-card-hover-container-transition);
+        width: calc(100% - #{$identity-card-hover-container-width});
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 1;
+        &__content {
+            &__icon-image {
+                img {
+                    max-width: 100%;
+                }
+            }
+            &__contact-section {
+                //font-size: $identity-card-contact-section-fs;
+                .lbl {
+                    color: $identity-card-contact-section-lbl-color;
+                }
+                &__row1 {
+                    .phone {
+                        margin-right: $identity-card-contact-margins;
+                        @include rtl {
+                            margin-left: $identity-card-contact-margins;
+                            margin-right: 0;
+                        }
+                    }
+                }
+                &__row2 {
+                    .mail {
+                        margin-right: $identity-card-contact-margins;
+                        @include rtl {
+                            margin-right: 0;
+                            margin-left: $identity-card-contact-margins;
+                        }
+                    }
+                }
+            }
+        }
+    }
+  
+    &:hover & {
+        &__hover-container {
+            top: $identity-card-after-hover-top; 
+            visibility: $identity-card-after-hover-visability;
+            opacity: $identity-card-after-hover-opacity;
+            z-index: $identity-card-after-hover-z-index;
+            background: $identity-card-after-hover-bg;
+            @include box-shadow($identity-card-after-hover-box-shadow...);
+            @include transition($identity-card-hover-container-transition);
+            pointer-events: visible;
+        }
+    }
+  
+
+  a,
+  a:hover,
+  a:focus {
+    color: $identity-card-link-color;
+  }
+
+  &--double-expand {
+    $doubleExpand : &;
+    height: $identity-card-double-expand-normal-card-height;
+    overflow: hidden;
+    position: relative;
+    background-position-x: $identity-card-double-expand-bg-position-x;
+    background-repeat: no-repeat;
+    background-position-y:$identity-card-double-expand-bg-position-y;
+    background-color: $identity-card-double-expand-bg-color;
+
+    &__initial{
+      height: $identity-card-double-expand-normal-card-height;
+      background-color: $identity-card-double-expand-bg-color;
+      z-index: 1;
+      position: relative;
+
+      &__title {
+        .card-title-large{
+          display: none;
+        }
+      }
+    }
+    &__pattern{
+      position: absolute;
+      width: 75%;
+      height: 150px;
+      pointer-events: none;
+      left: 0;
+      background-position: bottom left;
+
+      @include rtl{
+        left : auto;
+        right:0;
+        background-position: bottom right;
+      }
+      bottom: 0px;
+      z-index: 0;
+      background-repeat: no-repeat;
+      @include transition(all 0.4s ease);
+    }
+
+    &__link{
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    &--clone {
+      #{$doubleExpand} {
+        &__initial {
+          &__desc {
+              font-weight: $identity-card-double-expand-hover-font-weight;
+        }
+      }
+      }
+    }
+    &--face{
+      // pointer-events: none;
+      #{$doubleExpand} {
+        &__eventual {
+          opacity: 1;
+          line-height: $identity-card-double-expand-desc-line-height;
+        }
+
+        &__initial {
+          &__desc {
+            p{
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+
+    &__initial {
+      &__img {
+        height: $identity-card-double-expand-img-height;
+        img{
+          max-height: 100%;
+        }
+      }
+    }
+
+    &__eventual {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 330px;
+      width: 100%;
+      padding: 1.5rem;
+      opacity: 0;
+      bottom: 0;
+      @include transition(opacity 0.4s ease);
+    }
+
+
+    @at-root{
+      .on-page-editor{
+        #{$doubleExpand}{
+          width:25%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  &__overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: color-opacity($identity-card-double-expand-overlay, 0.5);
+    z-index: 20000;
+    opacity: 1;
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+
+} 
+
+.slick-slide{
+    position: relative;
+}
+
+.on-page-editor{
+  .#{$ProjectName} {
+
+  &--double-expand {
+    height: 565px;
+    &__eventual {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 330px;
+      width: 100%;
+      padding: 1.5rem;
+      bottom: 0;
+      @include transition(opacity 0.4s ease);
+      opacity: 1;
+    }
+  }
+  
+} 
+}

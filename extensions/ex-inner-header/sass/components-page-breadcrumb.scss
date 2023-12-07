@@ -1,0 +1,47 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: Breadcrumb file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+@import "../vars/_all";
+
+.page-breadcrumb {
+  padding: $inner-header-breadcrumb-item-padding;
+  background-color: $inner-header-breadcrumb-background !important;
+  //@media #{$sm} {
+   //margin-left: $inner-header-breadcrumb-responsive-margin;
+   //margin-right: $inner-header-breadcrumb-responsive-margin;
+  //}
+  .breadcrumb-item {
+    font-size: $inner-header-breadcrumb-font-size;
+    display: inline-flex;
+    padding: 0;
+    & + .breadcrumb-item:before {
+      padding: 0 $inner-header-breadcrumb-seperator-padding-left;
+    }
+    a {
+      color: $inner-header-breadcrumb-color;
+    }
+
+    span.separator {
+      display: none;
+    }
+
+    &::before {
+      color: $inner-header-breadcrumb-seperator-color;
+    } 
+  }
+
+  // @media #{$sm}{
+  //     padding-left: $inner-header-aligment-responsive-padding;
+  //     padding-right: $inner-header-aligment-responsive-padding;
+  // }
+}
+
+ol li:not(:last-child) {
+  a {
+    text-decoration: underline;
+  }
+}

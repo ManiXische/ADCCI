@@ -1,0 +1,415 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+  position: relative;
+  overflow: hidden;
+  background: $icon-card-bg-color;
+  border: $icon-card-border-size solid $icon-card-border-color;
+  border-radius: $icon-card-border-radius;
+  padding: 20px;
+  min-height: $icon-card-min-height;
+
+  @media #{$md} {
+    //@include reset-height();
+    //bug#16961
+    //height: $icon-card-height-md-screen;
+  
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    @include transition(all 0.5s ease);
+
+    @include rtl {
+      right: 0;
+      left: auto;
+    }
+    height: $icon-card-b4-height;
+    background: $icon-card-b4-bg-color;
+  }
+ 
+  &--fixed-height {
+    height: $icon-card-fixed-height;
+  }
+  &--auto-height  {
+    min-height: auto;
+  }
+  &__wrapper {
+    max-height: $icon-card-max-height;
+    @media (max-width: 768px) {
+      max-height: none;
+    }
+   
+    &__content {
+      .card-icon {
+        margin-right: $icon-card-icon-margin-side;
+        font-size: $icon-card-icon-font-size;
+        text-align: $icon-card-icon-text-align;
+        min-width: $icon-card-icon-min-width;
+
+        @include rtl {
+          margin-left: $icon-card-icon-margin-side;
+          margin-right: 0px;
+        }
+        
+        &--primary {
+          color: $icon-card-icon-color;
+        }
+        &--secondary {
+          color: $icon-card-icon-color-secondary;
+        }
+        img {
+          height: $icon-card-img-height;
+        }
+      }
+      .card-img {
+        width: 120px;
+        img {
+          max-height: 105px;
+        }
+      }
+      .card-link {
+        &,
+        a {
+          font-size:  $icon-card-link-font-size;
+          color: $icon-card-link-color;
+          margin-top: 10px;
+          bottom: 20px;
+          &:hover {
+            color: $icon-card-link-hover-color;
+
+            i {
+              color : $icon-card-link-hover-color;
+            }
+          }
+
+          .icon {
+            margin-right: 5px;
+            font-size: 20px;
+            @include rtl {
+              margin-left: 5px;
+              margin-right: 0;
+            }
+          }
+          .field-size {
+            text-transform: uppercase;
+          }
+
+          // > span > [class*=" icon-"],
+          // > span > [class^="icon-"] {
+          //   display: none;
+          // }
+          // &.with-icon {
+          //   padding-right: 30px;
+          //   @include rtl {
+          //     padding-left: 30px;
+          //     padding-right: 0px;
+          //   }
+          //   & + span > [class*=" icon-"],
+          //   & + span > [class^="icon-"] {
+          //     margin-left: -25px;
+          //     @include rtl {
+          //       margin-left: 0px;
+          //       margin-right: -25px;
+          //     }
+          //     pointer-events: none;
+          //     display: inline-block;
+          //   }
+          // }
+
+          &--seperator{
+            width: 16px;
+            transform: rotate(90deg);
+          }
+        }
+      }
+      .card-meta {
+        .card-link-with-icon{
+          line-height: $icon-card-meta-link-icon-wh;
+
+          a {
+            &:after{
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 1;
+              pointer-events: auto;
+              content: "";
+              background-color: $icon-card-meta-link-after-bg;
+            }
+          }
+        }
+        .card-link {
+          &,
+          a {
+            font-weight:  $icon-card-meta-link-font-weight;
+            font-size: $icon-card-meta-link-font-size;
+          }
+        }
+        .card-link-icon{
+            img { 
+              height:$icon-card-meta-link-icon-wh;
+            }
+        }
+      }
+      .card-title {
+        font-size: $icon-card-title-fontsize;
+        color: $icon-card-title-color;
+        margin-bottom: 5px;
+        line-height: $icon-card-title-lineheight;
+        &--fixed-height {
+          height: $icon-card-title-lineheight * $icon-card-title-lines;
+        }
+        &--primary {
+          color: $icon-card-title-color;
+        }
+        &--secondary {
+          color: $icon-card-title-color-secondary;
+        }
+      }
+      .card-description {
+        font-size: $icon-card-description-fontsize;
+        line-height: $icon-card-description-lineheight;
+        color: $icon-card-description-color;
+
+        @media #{$ie11} {
+          width: 200px; //IE fix width
+        }
+
+        @media (max-width: 768px) {
+          //height: 45px;
+        }
+        b {
+          font-weight: bold;
+        }
+      }
+      .card-tag {
+        color: $icon-card-tag-color;
+        font-size: $icon-card-tag-font-size;
+        
+        i { 
+          color : $icon-card-tag-icon-color;
+        }
+      }
+      .card-buttons {
+        font-size: 12px;
+        @media #{$md} {
+          margin-top: 15px;
+        }
+        &--white {
+          color: $icon-card-white-color;
+        }
+      }
+    }
+  }
+
+  &__back {
+    position: absolute;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    padding: 20px;
+    @include transition(top 0.5s ease);
+  }
+
+  &:hover {
+    @include box-shadow(
+      0px 0px 12px color-opacity($icon-card-hover-shadow, 0.2)
+    );
+    .#{$ProjectName}__back {
+      top: 0;
+    }
+  }
+
+  &--hoverless {
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  // modifiers
+  &--larger {
+    height: $icon-card-larger-min-height;
+    @media #{$ie11} {
+      height: $icon-card-larger-min-height;
+    }
+  }
+  
+  &--large {
+    min-height: $icon-card-large-min-height;
+    @media #{$ie11} {
+      height: $icon-card-large-min-height;
+    }
+  }
+  &--medium {
+    min-height: $icon-card-medium-min-height;
+    @media #{$ie11} {
+      height: $icon-card-medium-min-height;
+    }
+  }
+  &--shortb4 {
+    &::before {
+      width: $icon-card-b4-width;
+    }
+    &.#{$ProjectName}--w-b4-hover {
+      &:hover {
+        border-color : $icon-card-border-hover-color;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &--verticalb4 {
+    &::before {
+      width: $icon-card-b4-height;
+      height: 100%;
+      opacity: 1;
+    }
+  }
+  &--fullb4 {
+    &::before {
+      width: 100%;
+    }
+  }
+  &--reset-height {
+    @include reset-height();
+
+    .card-description{
+      height: auto;
+    }
+  }
+  &--white {
+    color: $icon-card-white-color;
+
+    .card-title,
+    .card-description,
+    .card-icon {
+      color: $icon-card-white-color;
+    }
+  }
+  &--transparent {
+    background: transparent;
+  }
+  &--border-less {
+    border: none;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  &--alt {
+    background: $icon-card-alt-bg-color;
+
+    &.#{$ProjectName} {
+      .card-icon:not(.card-icon--primary),
+      .card-description {
+        color: $icon-card-alt-color;
+      }
+    }
+  }
+  &--w-alt-hover {
+    $hoverContainer: &;
+    max-height: 145px;
+    &:hover {
+      background: $icon-card-alt-bg-hover-color;
+      color: $icon-card-alt-color-hover-color;
+
+      .card-icon:not(.card-icon--primary),
+      .card-title,
+      .card-link,
+      .card-description {
+        color: $icon-card-alt-color-hover-color;
+      }
+      .card-link {
+        &:hover {
+          color: $icon-card-alt-color-hover-color;
+        }
+      }
+    }
+  }
+
+
+  &--border-hover{
+    border: $icon-card-border-size solid $icon-card-border-color;
+
+    &:hover {
+      border-color: $icon-card-alt-border-color-hover;
+    }
+  }
+
+  &--numbercard {
+    // border:1px solid red;
+    border-color: $icon-card-numbercard-icon-border-color;
+    padding: $icon-card-numbercard-icon-padding;
+    .card{
+      
+      &-icon{
+        width:$icon-card-numbercard-icon-wh;
+        height:$icon-card-numbercard-icon-wh;
+        font-size: $icon-card-numbercard-icon-font-size;
+        font-weight:$icon-card-numbercard-icon-font-weight;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border:4px solid $icon-card-numbercard-icon-circle-color;
+        border-radius:50%;
+        span{
+          color: $icon-card-numbercard-icon-font-color;
+        }
+        @media #{$ie11} {
+          width: 75px; //IE fix width
+          height: 70px; //IE fix height
+        }
+      }
+    }
+  }
+
+  &--hover-effect{
+    @include transition(all $icon-card-hover-effect-transition ease);
+    overflow: visible;
+    &:hover{
+      border-color: $icon-card-border-hover-color;
+      box-shadow: $icon-card-hover-effect-boxshadow ;
+        transform: translateY($icon-card-hover-effect-translateY) scale($icon-card-hover-effect-scale);
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          bottom: -($icon-card-hover-effect-boxshadow-bottom);
+          height: $icon-card-hover-effect-boxshadow-bottom;
+          left: 0;
+      }
+    }
+    .#{$ProjectName}__wrapper{
+      @include transition(all $icon-card-hover-effect-transition ease);
+    }    
+  } 
+
+
+}
+
+
+@media (max-width: 768px) {
+  .card-title.height-p45 {
+    height: auto;
+    max-height: none;
+  }
+}

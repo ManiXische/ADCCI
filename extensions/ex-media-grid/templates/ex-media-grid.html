@@ -1,0 +1,607 @@
+<html lang="en" class="" rv="VariantSection">
+
+<head>
+    <meta charset="UTF-8" rv="VariantSection">
+    <meta name="robots" content="noindex" rv="VariantSection">
+    <meta name="viewport" content="width=device-width, initial-scale=1" rv="VariantSection">
+
+    <!-- Don't remove Section -->
+    <!-- Bootstrap Lib -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" rv="VariantSection">
+
+    <!-- ex-main-theme -->
+    <link rel="stylesheet" href="../../ex-main-theme/styles/fontawesome.css" rv="VariantSection">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/icomoon.css" rv="VariantSection">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/animate.css" rv="VariantSection">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/jquery-fancybox.css" rv="VariantSection">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/owl-carousel.css" rv="VariantSection">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/slick.css" rv="VariantSection">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/smooth-scrollbar.css" rv="VariantSection">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/components-main-theme.css" rv="VariantSection">
+
+    <!-- ex-layout  -->
+    <link rel="stylesheet" href="../../ex-layout/styles/components-layout.css" rv="VariantSection">
+    <!-- End don't remove Section -->
+
+
+    <!-- Your css files goes here -->
+    <link rel="stylesheet" href="../../ex-media-grid/styles/components-media-grid.css" rv="VariantSection">
+
+
+    <!-- Your css files goes here -->
+
+
+</head>
+
+<body>
+    <div class="py-5" rv="VariantSection">
+   
+    <div class="ex-media-grid" rv="VariantSection">
+        <div class="container" rv="VariantSection">
+            <div class="row" rv="VariantSection">
+                <div class="col-lg-12" rv="VariantSection">
+                    <div class="ex-media-grid__header d-flex justify-content-between align-items-center mb-4" rv="VariantSection">
+                        <div class="ex-media-grid__header__title section-title" rv="VariantSection">
+                            <h1 class="field-title field-title" rv="VariantSection"> This is the title</h1>
+                        </div>
+
+                        <div class="ex-media-grid__header__filters position-relative d-inline-flex justify-self-end justify-content-end rounded" rv="VariantSection">
+                            <button class="filter-button filter-button--active" data-filter="*"
+                                class="active-filter" rv="VariantSection"><span>All</span></button>
+                            <button class="filter-button" data-filter=".videos" class="" rv="VariantSection"><i
+                                    class="fas fa-play" rv="VariantSection"></i></button>
+                                    <button class="filter-button" data-filter=".images" class="" rv="VariantSection"><i
+                                        class="far fa-images" rv="VariantSection"></i></button>
+                                        <button class="filter-button" data-filter=".dshd" class="" rv="VariantSection"><i
+                                            class="far fa-close" rv="VariantSection"></i></button>
+                                        <button class="filter-button" data-filter=".sh" class="" rv="VariantSection"><i
+                                        class="icon-house-filled" rv="VariantSection"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12" rv="VariantSection">
+                    <div class="ex-media-grid__body ex-media-grid__body--w-gutter" 
+                    rv="VariantSection"
+                    data-media-grid="true" 
+                    data-selector='media-grid-item'  
+                    data-gutter='.ex-media-grid__body__gutter'
+                    data-active-filter-class="filter-button--active" 
+                    data-active-filter="" 
+                    data-fancybox-enabled
+                    data-fancybox-thumbs-autostart="true"
+                    data-fancybox-thumbs-position = "bottom"
+                    data-fancybox-mode="seperate"
+                    
+                    >
+                        <!-- Don't remove -->
+                        <div class="ex-media-grid__body__gutter" rv="VariantSection"></div>
+                        <div class="ex-media-grid__body__item media-grid-item media-grid-item--video  videos" rv="VariantSection">
+                            <a href="https://www.youtube.com/watch?v=NiU4c4feFFQ"  
+                                data-caption="<h4 class='truncate truncate-1'> is the title</h4> <div>Caption for single image</div> <a href='#' class='button' >Download</a>" rv="VariantSection">
+                                <!-- Show only if the featured item is video -->
+                                <i class="media-grid-item__icon fas fa-play" rv="VariantSection"></i>
+                                <!-- End Show only if the featured item is video -->
+                                <img class="lazyload" data-sizes="auto"
+                                    data-src="https://via.placeholder.com/200x200" rv="Responsive Image" />
+                            </a>
+
+                        </div>
+                        <div class="ex-media-grid__body__item media-grid-item images" rv="VariantSection">
+                            <a href="https://via.placeholder.com/500x300"  
+                                data-caption="<h4 class='truncate truncate-1'>This is the title</h4> <div>Caption for single image</div>" rv="VariantSection">
+                                <!-- Show only if the featured item is video -->
+                                <i class="media-grid-item__icon far fa-images" rv="VariantSection"></i>
+                                <!-- End Show only if the featured item is video -->
+
+                                <img class="lazyload" data-sizes="auto"
+                                    data-src="https://via.placeholder.com/500x300" rv="Responsive Image" />
+                            </a>
+                        </div>
+                        <div class="ex-media-grid__body__item media-grid-item media-grid-item--video  videos" rv="VariantSection">
+                            <a href="https://via.placeholder.com/100x200"  
+                                data-caption="<h4 class='truncate truncate-1'>This is the title</h4> <div>Caption for single image</div>" rv="VariantSection">
+                                <!-- Show only if the featured item is video -->
+                                <i class="media-grid-item__icon fas fa-play" rv="VariantSection"></i>
+                                <!-- End Show only if the featured item is video -->
+                                <img class="lazyload" data-sizes="auto"
+                                    data-src="https://via.placeholder.com/100x200" rv="Responsive Image" />
+                            </a>
+                        </div>
+                 
+                        <div class="ex-media-grid__body__item media-grid-item images" rv="VariantSection">
+                            <a href="https://via.placeholder.com/150x50"  
+                                data-caption="<h4 class='truncate truncate-1'>This is the title</h4> <div>Caption for single image</div>" rv="VariantSection">
+                                <!-- Show only if the featured item is video -->
+                                <i class="media-grid-item__icon far fa-images" rv="VariantSection"></i>
+                                <!-- End Show only if the featured item is video -->
+                                <img class="lazyload" data-sizes="auto" data-src="https://via.placeholder.com/150x50" rv="Responsive Image" />
+                            </a>
+                        </div>
+
+                        <div class="ex-media-grid__body__item media-grid-item sh" rv="VariantSection">
+                                <a href="https://via.placeholder.com/150x50"  
+                                    data-caption="<h4 class='truncate truncate-1'>This is the title</h4> <div>Caption for single image</div>" rv="VariantSection">
+                                    <!-- Show only if the featured item is video -->
+                                    <i class="media-grid-item__icon far fa-images" rv="VariantSection"></i>
+                                    <!-- End Show only if the featured item is video -->
+                                    <img class="lazyload" data-sizes="auto" data-src="https://via.placeholder.com/150x50" rv="Responsive Image" />
+                                </a>
+                            </div>
+                       
+                     
+                    </div>
+                    <div class="ex-media-grid__message alert alert-warning" role="alert">
+                        Empty filter
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" rv="VariantSection"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous" rv="VariantSection"></script>
+
+    <!--  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" rv="VariantSection"></script>
+
+
+    <!-- ex-main-theme : uncomment needed files -->
+    <!-- Lib -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/smooth-scrollbar-min.js" rv="VariantSection"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/fontawesome-min.js" rv="VariantSection"></script> -->
+    <script src="../../ex-main-theme/scripts/lib/jquery-fancybox-min.js" rv="VariantSection"></script>
+    <!-- <script src="../../ex-main-theme/scripts/lib/owl-carousel-min.js" rv="VariantSection"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/slick-min.js" rv="VariantSection"></script> -->
+    <script src="../../ex-main-theme/scripts/lib/isotope-pkgd-min.js" rv="VariantSection"></script>
+    <script src="../../ex-main-theme/scripts/lib/lazysizes-min.js" rv="VariantSection"></script>
+    <!-- init  -->
+    <script src="../../ex-main-theme/scripts/fancybox-init.js" rv="VariantSection"></script>
+    <script src="../../ex-main-theme/scripts/isotope-init.js" rv="VariantSection"></script>
+    <!-- <script src="../../ex-main-theme/scripts/owl-init.js" rv="VariantSection"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/scrollbar-init.js" rv="VariantSection"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/slick-init.js" rv="VariantSection"></script> -->
+    <!-- ex-main-theme : uncomment needed files -->
+
+    <!-- ex-layout -->
+    <script src="../../ex-layout/scripts/components-layout.js" rv="VariantSection"></script>
+    <!-- ex-layout  -->
+
+
+        <script>
+            var youtubeVideoList = {
+    "kind": "youtube#searchListResponse",
+    "etag": "wmBtJCk2PKwpNvyIJL9FfMe9554",
+    "nextPageToken": "CAwQAA",
+    "regionCode": "AE",
+    "pageInfo": {
+      "totalResults": 1196,
+      "resultsPerPage": 12
+    },
+    "items": [
+      {
+        "kind": "youtube#searchResult",
+        "etag": "WWeTwr-NtO2xhmwUvuhHAnk9rXc",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "i2FN1fSu8ak"
+        },
+        "snippet": {
+          "publishedAt": "2020-09-02T17:30:08Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": "أخبار شرطة أبوظبي Abudhabi police news",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/i2FN1fSu8ak/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/i2FN1fSu8ak/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/i2FN1fSu8ak/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-09-02T17:30:08Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "uAFn1URmznqrwcecHPV-FJG-LH0",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "AX4vBPLhb6Q"
+        },
+        "snippet": {
+          "publishedAt": "2020-08-30T17:05:42Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": ". #أخبار_شرطة_أبوظبي  \u200f#Abudhabipolicenews \u200e",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/AX4vBPLhb6Q/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/AX4vBPLhb6Q/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/AX4vBPLhb6Q/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-08-30T17:05:42Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "Us6H0Dq9rTNL_tLuFXq96lpQX34",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "IeOsgklqyYA"
+        },
+        "snippet": {
+          "publishedAt": "2020-08-27T15:03:22Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": "#أخبار_شرطة_أبوظبي \u200e \u200f#Abudhabipolicenews",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/IeOsgklqyYA/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/IeOsgklqyYA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/IeOsgklqyYA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-08-27T15:03:22Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "quuWkre7cpLWjcnISI2HZ7gwmoE",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "atxxQCD_nI8"
+        },
+        "snippet": {
+          "publishedAt": "2020-08-27T07:40:34Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": "شرطة أبوظبي : بدعم القيادة الرشيدة.. المرأة الإماراتية سند للوطن",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/atxxQCD_nI8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/atxxQCD_nI8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/atxxQCD_nI8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-08-27T07:40:34Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "rOkhuex7ZfELpavDnXm5qW4YMDc",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "cPLeyhDlOdE"
+        },
+        "snippet": {
+          "publishedAt": "2020-08-27T05:45:27Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": "ثمن معالي اللواء ركن طيار فارس خلف المزروعي دعم القيادة الرشيدة لتمكين #المرأة_الاماراتية",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/cPLeyhDlOdE/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/cPLeyhDlOdE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/cPLeyhDlOdE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-08-27T05:45:27Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "eijb0B5Y7-UVU9y8QujwHbe_4hU",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "ZiV-YC-lYwI"
+        },
+        "snippet": {
+          "publishedAt": "2020-08-26T07:08:30Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": "\u200fFirst Lt. Mohammed Saif Al Hanai, from Abu Dhabi Civil Defense General-Directorate",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/ZiV-YC-lYwI/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/ZiV-YC-lYwI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/ZiV-YC-lYwI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-08-26T07:08:30Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "r0aAwzk7gbHVkxueeNQqxxtdavU",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "Xd2GDQhsXZ0"
+        },
+        "snippet": {
+          "publishedAt": "2020-08-26T07:07:14Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": "الملازم أول مهندس محمد سيف الهنائي من الإدارة العامة للدفاع المدني-أبوظبي",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/Xd2GDQhsXZ0/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/Xd2GDQhsXZ0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/Xd2GDQhsXZ0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-08-26T07:07:14Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "EwuQKTKwYbkJchCQU9Q2ZrL2UBY",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "z9hqdk06ZCE"
+        },
+        "snippet": {
+          "publishedAt": "2020-08-25T07:38:58Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": "شرطة أبوظبي: &quot;الانشغال&quot;..خطر يهدد سلامة مستخدمي الطريق",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/z9hqdk06ZCE/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/z9hqdk06ZCE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/z9hqdk06ZCE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-08-25T07:38:58Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "lTLj5ZEeAnqoDwlC3EAvsVFJ1a0",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "9uEQaO3MaL8"
+        },
+        "snippet": {
+          "publishedAt": "2020-08-24T08:33:03Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": "النظام التحفيزي لمنتسبي القيادة العامة لشرطة أبوظبي (نظام حافز).",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/9uEQaO3MaL8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/9uEQaO3MaL8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/9uEQaO3MaL8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-08-24T08:33:03Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "uFBMduM5sZPasH0-yYNlLgojDU0",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "awXg4aDxl1U"
+        },
+        "snippet": {
+          "publishedAt": "2020-08-20T07:55:12Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": "حلقة شبابية بـ ⁧\u202b#شرطة_أبوظبي\u202c⁩ تناقش الحلول المبتكره للسلامة المرورية",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/awXg4aDxl1U/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/awXg4aDxl1U/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/awXg4aDxl1U/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-08-20T07:55:12Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "36uFg2rsKRRN_reAjqxS5friSoQ",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "v0g_F5St4mI"
+        },
+        "snippet": {
+          "publishedAt": "2020-08-19T07:09:27Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": "شرطة أبوظبي تبث مشاهد حقيقية لحوادث &quot;الانحراف المفاجئ&quot;",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/v0g_F5St4mI/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/v0g_F5St4mI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/v0g_F5St4mI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-08-19T07:09:27Z"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "e7krJfGT6_R_mqcgoC4_gU0tLco",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "MlDn1hmrjgg"
+        },
+        "snippet": {
+          "publishedAt": "2020-08-18T05:53:08Z",
+          "channelId": "UCLqu78o49yHSQTOUEWh_8Vg",
+          "title": "\u202b#شرطة_أبوظبي\u202c⁩ ضمن &quot;أفضل المؤسسات الحكومية الصانعة للفرص التطوعية&quot; لعام 2019\u202c",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/MlDn1hmrjgg/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/MlDn1hmrjgg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/MlDn1hmrjgg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          },
+          "channelTitle": "ADPoliceHQ شرطة أبوظبي",
+          "liveBroadcastContent": "none",
+          "publishTime": "2020-08-18T05:53:08Z"
+        }
+      }
+    ]
+};
+var youtTubeListURL = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAC05qmBiwDDFfLJBF1Ra8TXj485M4DFyo&channelId=UCMiYw_LwzJAFach14Nakggg&part=snippet,id&maxResults=6&order=date";
+
+        </script>
+    <!-- Your js files goes here -->
+    <script src="../../ex-media-grid/scripts/components-media-grid.js" rv="VariantSection"></script>
+
+    <!-- Your js files goes here -->
+</body>
+
+</html>

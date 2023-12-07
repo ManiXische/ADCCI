@@ -1,0 +1,37 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+$identity-card-bg:$white-color !default;
+$identity-card-height:175px !default;
+$identity-card-border:1px solid $grey-200 !default;
+$identity-card-hover-container-top:100% !default;
+$identity-card-hover-container-visability:hidden !default;
+$identity-card-hover-container-opacity:1 !default;
+$identity-card-hover-container-padding:25px !default;
+$identity-card-hover-container-transition:all 0.3s ease !default;
+$identity-card-hover-container-width:30px !default;
+$identity-card-contact-section-fs:12px !default;
+$identity-card-contact-section-lbl-color:#17626C !default;
+$identity-card-contact-margins:20px !default;
+$identity-card-after-hover-top:0 !default;
+$identity-card-after-hover-visability:visible !default;
+$identity-card-after-hover-opacity:1 !default;
+$identity-card-after-hover-z-index:1 !default;
+$identity-card-after-hover-bg:$white-color !default;
+$identity-card-after-hover-box-shadow: 0 , 6px ,  15px 0 , color-opacity(#d0d0d0 , 0.5) !default;
+$identity-card-link-color:$secondary-color5 !default;
+$identity-card-titlelink-color:$grey-700 !default;
+$identity-card-home-title-color:$primary-color !default;
+
+$identity-card-double-expand-desc-line-height:23px !default;
+$identity-card-double-expand-transition: 0.5s ease !default;
+$identity-card-double-expand-normal-card-height: 255px !default;
+$identity-card-double-expand-bg-position-x: left !default;
+$identity-card-double-expand-bg-position-y: bottom !default;
+$identity-card-double-expand-bg-color: $white-color !default; 
+$identity-card-double-expand-hover-card-height: 565px !default;
+$identity-card-double-expand-hover-font-weight: 700 !default;
+$identity-card-double-expand-img-height: 60px !default;
+$identity-card-double-expand-overlay: $grey-600 !default;

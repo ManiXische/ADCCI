@@ -1,0 +1,361 @@
+@using Sitecore;
+@using Sitecore.Mvc;
+@using Sitecore.Mvc.Presentation;
+@using Sitecore.Data.Items;
+@using Sitecore.Data.Fields;
+@using System.Collections.Specialized;
+@using System.Linq;
+@using Sitecore.Globalization;
+@{
+    var dataSourceId = RenderingContext.CurrentOrNull.Rendering.DataSource;
+    var dataSource = Sitecore.Context.Database.GetItem(dataSourceId);
+
+    var lookups = new NameValueCollection();
+    var tenderLookupsFolder = Sitecore.Context.Database.GetItem(dataSource["Dictionary Folder"]);
+    if (tenderLookupsFolder != null)
+    {
+        foreach (Item item in tenderLookupsFolder.Children)
+        {
+            lookups.Add(item["Key"], item["Phrase"]);
+        }
+    }
+ 
+}
+<div class="container">
+    <div class="row ex-tenders">
+        <div class="col-lg-3">
+            <!-- Your code goes here -->
+            <div class="nav-status">
+                <ul class="nav-filter mb-7">
+                    <li>
+                        <a data-tenderFilter="OPEN" class="active" data="tenderfilter" href="#" data-fancybox-close>
+                            <span class="icon rotated-element icon-arrow-small-right disable-pointer mx-1"></span><span>
+                                @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Open_Tenders")
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-tenderFilter="COMPL" href="#" data-fancybox-close>
+                            <span class="icon rotated-element icon-arrow-small-right disable-pointer mx-1"></span><span>
+                                @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Complete_Tenders")
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row ex-sitecore-form">
+                <div class="col-md-12">
+                    <div class="search-filters">
+                        <div class="ex-sitecore-form__input">
+                            <div class="d-flex  align-items-center mb-2">
+                                <div>
+                                    <label class="ex-sitecore-form__label">
+                                        @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Label_Search")
+                                    </label>
+                                </div>
+                                <div>
+                                    <a href="#" class="ex-sitecore-form__link mx-4 clearSearch">
+                                        @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Clear_Only")
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="tender-search" class="position-relative">
+                                <input type="text" placeholder='@Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Placeholder_Search")'>
+                                <i class="icon-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sorting-filters">
+                        <div class="ex-sitecore-form__input mt-7  pr-5">
+                            <div class="d-flex  align-items-center mb-2">
+                                <div>
+                                    <label class="ex-sitecore-form__label">
+                                        @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_DueDate_Label")
+                                    </label>
+                                </div>
+                                <div>
+                                        <a href="#" class="ex-sitecore-form__link mx-4 clearDuedate">
+                                             @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Clear_All")
+                                        </a>
+                                    </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <div>
+                                    <div class="ex-sitecore-form__input__radiobox ">
+                                        <input type="radio" name="dueDate" id="CLOSE_IN_0D" checked=""
+                                               value="">
+                                        <label for="CLOSE_IN_0D"></label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="ex-sitecore-form__input__label" for="CLOSE_IN_0D">@Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_All")</label>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <div>
+                                    <div class="ex-sitecore-form__input__radiobox ">
+                                        <input type="radio" name="dueDate" id="CLOSE_IN_5D"
+                                               value="CLOSE_IN_5D">
+                                        <label for="CLOSE_IN_5D"></label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="ex-sitecore-form__input__label" for="CLOSE_IN_5D">@Sitecore.Globalization.Translate.TextByDomain("Dictionary", "CLOSE_IN_5D")</label>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <div>
+                                    <div class="ex-sitecore-form__input__radiobox ">
+                                        <input type="radio" name="dueDate" id="CLOSE_IN_15D"
+                                               value="CLOSE_IN_15D">
+                                        <label for="CLOSE_IN_15D"></label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="ex-sitecore-form__input__label" for="CLOSE_IN_15D"> @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "CLOSE_IN_15D")</label>
+                                </div>
+                            </div>
+                            <div class="d-flex  align-items-center mb-2">
+                                <div>
+                                    <div class="ex-sitecore-form__input__radiobox ">
+                                        <input type="radio" name="dueDate" id="CLOSE_IN_30D"
+                                               value="CLOSE_IN_30D">
+                                        <label for="CLOSE_IN_30D"></label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="ex-sitecore-form__input__label" for="CLOSE_IN_30D">@Sitecore.Globalization.Translate.TextByDomain("Dictionary", "CLOSE_IN_30D")</label>
+                                </div>
+                            </div>
+                            <div class="d-flex  align-items-center mb-2">
+                                <div>
+                                    <div class="ex-sitecore-form__input__radiobox ">
+                                        <input type="radio" name="dueDate" id="CLOSE_AFT_30D"
+                                               value="CLOSE_AFT_30D">
+                                        <label for="CLOSE_AFT_30D"></label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="ex-sitecore-form__input__label" for="CLOSE_AFT_30D">
+                                        @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "CLOSE_AFT_30D")
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ex-sitecore-form__input mt-7  pr-5 ">
+                            <div class="d-flex  align-items-center mb-4">
+                                <div>
+                                    <label class="ex-sitecore-form__label">
+                                        @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Category_Label")
+                                    </label>
+                                </div>
+                                <div>
+                                    <a href="#" class="ex-sitecore-form__link mx-4 clearALLLnk">
+                                        @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Clear_All")
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="listCategories"></div>
+                            <div class="d-flex  align-items-top ">
+                                <a href="#" class="ex-sitecore-form__link showmoreLnk">
+                                    @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Show_More")
+                                </a>
+                                <a href="#" class="ex-sitecore-form__link showlessLnk">
+                                    @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Show_Less")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ex-sitecore-form__input mt-7  pr-5 ">
+                            <div class="d-flex  align-items-center mb-4">
+                                <div>
+                                    <label class="ex-sitecore-form__label">
+                                        @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Entities_Label")
+                                    </label>
+                                </div>
+                                <div>
+                                    <a href="#" class="ex-sitecore-form__link mx-4 clearALLLnk">@Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Clear_All")</a>
+                                </div>
+                            </div>
+                            <div class="listEntities"></div>
+
+                            <div class="d-flex  align-items-top ">
+                                <a href="#" class="ex-sitecore-form__link showmoreLnk">
+                                    @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Show_More")
+                                </a>
+                                <a href="#" class="ex-sitecore-form__link showlessLnk">
+                                    @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Filter_Show_Less")
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 component-tender-wrap">
+            <div class="d-none">
+                <div id="tender-list-API">https://tammdevcm1.tamm.abudhabi/SCAPI/ADGEs/AlMaqtaa/Tender/List</div>
+            </div>
+            <div class="row mb-lg-8 mt-lg-0 mb-sm-4 mt-sm-4">
+                <div class="col-md-12">
+                    <div class=" align-content-start d-flex ">
+                        <a data-fancybox data-src="#dialog-status" href="javascript:;"
+                           class="button button--secondary button--small my-2 button-status align-self-center align-items-center">
+                            <span class="icon-picture-polaroid"></span> <span class="mx-2">
+
+                                @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Label_Button_Browse_Status")
+                            </span>
+                        </a>
+                        <a data-fancybox data-src="#dialog-filter" href="javascript:;"
+                           class="mx-2 button button--secondary button--small my-2 button-filter align-self-center align-items-center">
+                            <span class="icon-filter-filled"></span>
+                            <span class=" mx-2">
+                                @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Label_Button_Filter")
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-between flex-lg-row flex-md-column flex-sm-column">
+
+                        <div>
+                            <p class="caption  text-black-50 hide-print" id="resultIndicator">
+                                @dataSource["Results Count Message"]
+                            </p>
+                        </div>
+                        <div class="ex-sitecore-form">
+                            <div class="sorting-filters-sort-filter sorting-filters--select  hide-print">
+                                <p class="caption  text-black-50 m-0 mx-2 d-flex align-items-center">
+                                    @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Sort_Label")
+                                </p>
+                                <div class="dropdown-list-arrow position-relative">
+                                    <select class="sortingFilters" data-val="true">
+
+                                        <option value="LAST_CREATED" selected>
+                                            @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "LAST_CREATED")
+                                        </option>
+                                        <option value="FIRST_CREATED">
+                                            @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "FIRST_CREATED")
+                                        </option>
+                                        <option value="FIRST_DUEDATE">
+                                            @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "LAST_DUEDATE")
+                                        </option>
+                                        <option value="LAST_DUEDATE">
+                                            @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "FIRST_DUEDATE")
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loaderDiv">
+                @Html.Raw(dataSource["Loading Text"])
+            </div>
+            <div id="no-result">
+                @Html.Raw(dataSource["No Data Found"])
+            </div>
+            <div id="no-listing-result">
+                @Html.Raw(dataSource["No List Found"])
+            </div>
+            <div id="call-error">
+                @Html.Raw(dataSource["Server Error"])
+            </div>
+            <div class="ex-tenders--listing">
+
+
+            </div>
+            <div class="row hide-print">
+                <div class="col-12 ">
+                    <div class="d-flex justify-content-center">
+                        <a href="javascript:;" id="load-more-tender" class="button button--secondary mt-9">
+                            @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Label_Load_More")
+                            <span class="icon icon-loadmore"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display: none;" class="filter_template">
+    <div class="d-flex  align-items-top mb-2">
+        <div>
+            <div class=" ex-sitecore-form__input__checkbox ex-sitecore-form__input__checkbox--dark">
+                <input type="checkbox" {%_filter_checked%} id="{%_filter_id%}" value="{%_filter_value%}">
+                <label for="{%_filter_id%}"></label>
+            </div>
+        </div>
+        <div>
+            <label class="ex-sitecore-form__input__label" for="{%_filter_id%}">{%_filter_Title%}</label>
+        </div>
+    </div>
+</div>
+<div class="d-none">
+    <div class="dialog-component  d-inline-flex flex-column p-0 rounded" id="dialog-filter">
+        <header class="dialog-component__header d-flex align-items-center p-4">
+            <h4 class="text-capitalize  font-weight-boldest">
+                @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Label_popup_Filter")
+            </h4>
+        </header>
+        <div class="dialog-component__message">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="ex-tenders px-1 py-4 ex-sitecore-form"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog-component__footer d-flex justify-content-start align-items-center border-top mt-0 p-4 mx-0 mb-0">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex  align-items-center">
+                        <div>
+                            <a class="button button--primary button--medium" id="applyFilters" href="javascript:;">
+                                @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Label_popup_btn_Apply")
+                            </a>
+                        </div><div>
+                            <a class="grey-900 mx-7 " data-fancybox-close href="javascript:;">
+                                <u>
+                                    @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Label_popup_btn_Cancel")
+                                </u>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog-component  d-inline-flex flex-column p-0 rounded" id="dialog-status">
+        <header class="dialog-component__header d-flex align-items-center p-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="">
+                        <h4 class="text-capitalize  font-weight-boldest">
+                            @Sitecore.Globalization.Translate.TextByDomain("Dictionary", "Label_popup_Status")
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div class="dialog-component__message">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="ex-tenders px-1 py-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog-component__footer d-flex justify-content-start align-items-center">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    document.Lookups = '@Html.Raw(Json.Encode(lookups.AllKeys.Select(lookup => new { Key=lookup,Value=lookups[lookup] })))'
+</script>

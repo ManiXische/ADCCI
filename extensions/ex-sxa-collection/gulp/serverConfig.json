@@ -1,0 +1,23 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-sxa-collection",
+        "version" : "1.0.0",
+        "owner" :  "null"
+    },
+    "cssOrders" : [
+     
+    ],
+    "jsOrders"  : [
+        "lib/jquery-ui.js" , 
+        "lib/jqueryvalidateunobtrusivemin.js",
+        "lib/formvalidate-min.js",
+        "lib/formtracking-min.js",
+        "lib/formsextentionsvalidate-min.js",
+        "lib/formconditions-min.js",
+        "lib/custom-dropdown.js",
+        "component-sitecore-form-plugin.js",
+        "components-sitecore-download-form.js"
+    ]
+}

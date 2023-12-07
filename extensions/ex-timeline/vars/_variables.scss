@@ -1,0 +1,63 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+$timeline-background : $grey-900 !default;
+$timeline-alt-background : $grey-100 !default;
+$timeline-height: 650px !default;
+$timeline-container-padding-right : 48px !default;
+$timeline-wrapper-height : 220px !default;
+$timeline-wrapper-margin : 40px auto !default;
+$timeline-wrapper-line-opacity : 0.6 !default;
+$timeline-wrapper-line-background-first : $primary-color !default;
+$timeline-wrapper-line-background-second : color-opacity($timeline-background , 0.2) !default;
+$timeline-wrapper-line-width : 4px !default;
+$timeline-navigator-width : 75px !default;
+$timeline-navigator-item-displayed : 5 !default;
+$timeline-navigator-item-color : $white-color !default;
+$timeline-navigator-item-alt-color : $grey-900 !default;
+$timeline-navigator-item-color-hover : $white-color !default;
+$timeline-navigator-item-alt-color-hover : $grey-900 !default;
+$timeline-navigator-item-opacity : 0.3 !default;
+$timeline-navigator-item-margin-top : 2px !default;
+$timeline-navigator-item-selected-margin-top : 4px !default;
+$timeline-navigator-item-fontsize : 12px !default;
+$timeline-navigator-item-fontsize-hover :14px !default;
+$timeline-navigator-item-padding-left : 20px !default;
+$timeline-navigator-item-bullet-size: 15px !default;
+$timeline-navigator-item-bullet-selected-size : 22px !default; 
+$timeline-navigator-item-bullet-radius : 50% !default;
+$timeline-navigator-item-bullet-background : $white-color !default;
+$timeline-navigator-item-bullet-alt-background : $white-color !default;
+$timeline-navigator-item-bullet-border-color : $primary-color !default; 
+$timeline-navigator-item-bullet-border-alt-color : $primary-color !default; 
+$timeline-navigator-item-bullet-background-selected : $primary-color !default;
+$timeline-navigator-item-bullet-alt-background-selected : $primary-color !default;
+$timeline-navigator-item-bullet-border-color-selected : $white-color !default; 
+$timeline-navigator-item-bullet-border-alt-color-selected: $white-color !default; 
+$timeline-navigator-item-bullet-border-size : 3px !default;
+$timeline-navigator-item-bullet-border-size-selected: 3px !default;
+$timeline-content-label-color: $white-color !default;
+$timeline-content-label-alt-color: $primary-color !default;
+$timeline-content-label-fontsize: 90px !default;
+$timeline-content-label-lineheight: 90px !default;
+$timeline-content-label-margin-right: 48px !default;
+$timeline-content-text-color:$white-color !default;
+$timeline-content-text-alt-color:$grey-900 !default;
+$timeline-title-margin-right : 70px !default;
+$timeline-arrows-color : $white-color !default;
+$timeline-arrows-alt-color : $grey-900 !default;
+$timeline-arrows-color-hover : $white-color !default;
+$timeline-arrows-alt-color-hover : $white-color !default;
+$timeline-arrows-button-size: 40px !default;
+$timeline-arrows-button-background: $primary-color !default;
+$timeline-arrows-button-alt-background: $primary-color !default;
+$timeline-arrows-button-border-color : $white-color !default;
+$timeline-arrows-button-border-alt-color : $grey-900 !default;
+$timeline-arrows-button-border-size : 1px !default;
+$timeline-arrows-button-margin : 15px !default;
+$timeline-image-wrapper-width : 40% !default;
+$timeline-image-wrapper-pattern-width : 180px !default;
+$timeline-image-wrapper-pattern-overlay-color: #000 !default;

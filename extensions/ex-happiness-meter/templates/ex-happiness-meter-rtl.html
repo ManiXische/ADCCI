@@ -1,0 +1,231 @@
+<html lang="ar-AE" dir="rtl" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Don't remove Section -->
+    <!-- Bootstrap Lib -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- ex-main-theme -->
+    <link rel="stylesheet" href="../../ex-main-theme/styles/fontawesome.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/icomoon.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/animate.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/jquery-fancybox.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/owl-carousel.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/slick.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/smooth-scrollbar.css">
+    <link rel="stylesheet" href="../../ex-main-theme/styles/components-main-theme.css">
+
+    <!-- ex-layout  -->
+    <link rel="stylesheet" href="../../ex-layout/styles/components-layout.css">
+    <!-- End don't remove Section -->
+
+
+    <!-- Your css files goes here -->
+    <link rel="stylesheet" href="../../ex-floatingbutton/styles/components-floatingbutton.css">
+
+    <link rel="stylesheet" href="../styles/components-happiness-meter.css">
+    <link rel="stylesheet" href="../styles/components-happiness-meter-slider.css">
+    <!-- Your css files goes here -->
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ex-floatingbutton" style="display: block;" rv="VariantField">
+                    <ul class="ex-floatingbutton__sidenav position-fixed" rv="VariantField">
+                        <li rv="VariantField">
+                            <div rv="VariantField"
+                                class='ex-floatingbutton__sidenav__wrapper position-relative d-flex  mb-3'>
+                                <div rv="VariantField"
+                                    class='floating-arrow d-flex justify-content-center  flex-column position-relative'>
+                                    <span rv="VariantField"
+                                        class='fas fa-chevron-right icon icon d-flex justify-content-center'></span>
+                                </div>
+                                <div rv="VariantField" class='floating-icon position-relative d-flex  flex-column p-3'>
+                                    <img src="http://via.placeholder.com/45" />
+
+                                    <div rv="VariantField"
+                                        class='floating-icon__content text-center d-flex  flex-column justify-content-center h-100 position-absolute'>
+                                        <a rv="VariantField" data-happiness-trigger data-fancy data-src="#happiness-meter"
+                                            href="javascript:void(0);">
+                                            Happiness Meter
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="happiness-meter" class="ex-happiness-meter ex-happiness-meter--singlecolor-view" data-scrollbar="true" data-scrollbar-alwaysShow="true">
+                                <form method="POST" 
+                                action="https://tammdevcm2.tamm.abudhabi/Feedback/Feedback?ismobile=true"
+                                data-success-message="We have recieved your message"
+                                data-error-message="We could not recieve this, Please try again later"
+                                data-ok-button="OK"
+                                >
+                                    <header class="ex-happiness-meter__header d-flex justify-content-between">
+                                        <div class="happiness-logo">
+                                            <div class="happiness-logo__wrapper">
+                                                <img src="http://via.placeholder.com/125x70" alt="">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a href="#" data-fancybox-close class="happiness-close-btn d-inline-block">
+                                                <i class="icon-remove"></i>
+                                            </a>
+                                        </div>
+                                    </header>
+                                    <div class="ex-happiness-meter__content flex-column justify-content-between">
+                                        <main class="ex-happiness-meter__content__main d-flex flex-lg-row flex-md-row flex-column align-items-center">
+                                            <h1 class="happiness-meter-heading mb-4">
+                                                Please rate your overall experience with the website
+                                            </h1>
+                                            <div class="happiness-meter-face">
+                                                <div class="happiness-meter-face__image"></div>
+                                            </div>
+                                        </main>
+                                        <footer class="ex-happiness-meter__content__footer mt-5">
+                                            <div class="happiness-meter-slider">
+                                                <input type="hidden" name="FeelValue">
+                                                <input data-meter name="FeelPrecent" type="range" min="0" max="100" step="1" value="50" />
+                                            </div>
+                                            <div class="happiness-meter-notice mt-4 text-center">
+                                                Hold and swipe to the face that best represents your level of happiness
+                                            </div>
+                                            <div class="happiness-meter-value font-weight-bold mt-4 text-center">
+                                                Neutral
+                                            </div>
+                                        </footer>
+                                        <div id="dvHiddenCaptcha">
+                                        </div>
+                                    </div>
+                                    <div class="ex-happiness-meter__form">
+                                        <div class="ex-happiness-meter__form__content d-flex flex-column justify-content-center align-items-center">
+                                            <div class="happiness-meter-message d-flex flex-column justify-content-center"> 
+                                                <div class="happiness-meter-message__icon d-flex flex-column justify-content-center align-items-center">
+                                                    <i class="icon-check-circle-filled"></i>
+                                                </div>
+                                                <h3 class="happiness-meter-message__label text-center m-3">
+                                                    Thank you for your feedback
+                                                </h3>
+                                            </div>
+                                            <div class="happiness-meter-error">
+                                                <h3 class="happiness-meter-error__text text-center my-3">
+                                                    An error has occured, please try to submit your opinion later.
+                                                </h3>
+                                                <button class="button rounded my-4 mx-auto" data-happiness-trigger>
+                                                    <span> Retry </span>
+                                                    <i class="icon-synchronize-arrows"></i>
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="happiness-meter-form w-100 d-flex flex-column hidden">
+                                                <div class="happiness-meter-form__wrapper">
+                                                        <div class="happiness-meter-input w-100 mb-3">
+                                                                <label class="happiness-meter-label" for="EmailContent">ADDITIONAL FEEDBACK</label>
+                                                                <textarea name="EmailContent" id="EmailContent" cols="30" rows="10" required data-msg-required="Required"></textarea>
+                                                                <span class="error-block my-2"></span>
+                                                            </div>
+                                                            <div class="happiness-meter-input happiness-meter-input--mobile happiness-meter-input--hide w-100 mb-3">
+                                                                <label class="happiness-meter-label" for="phonenumber">Mobile Number</label>
+                                                                <input type="tel" name="phonenumber" id="phonenumber" phone="true" data-related-input="#enableMobile" data-msg-phone="Phone number should be at least 9 numbers" /> 
+                                                                <span class="error-block my-2"></span>     
+                                                            </div>
+                                                        <div class="happiness-meter-checkbox d-flex mb-3">
+                                                            <div class="happiness-meter-checkbox__wrapper">
+                                                                <input type="checkbox" id="enableMobile" />
+                                                                <label for="enableMobile"></label>  
+                                                            </div>     
+                                                            <label class="happiness-meter-label" for="enableMobile">Would you like to call us?</label>
+                                                    </div>
+                                                    
+                                                    <div class="happiness-meter-input w-100 mb-3">
+                                                        <h4 class="happiness-meter-label">Please show that your not a robot</h4>
+                                                        <input type="hidden" id="happiness-recaptcha-input" name="recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-msg-required="reCAPTCHA is mandatory" />
+                                                        <div id="happiness-recaptcha" ></div>
+                                                        <span class="error-block my-2"></span>
+                                                    </div>
+                                                        <button class="happiness-meter-submit button rounded my-3">
+                                                            <span> SUBMIT </span>
+                                                            <i class="icon-arrow-right rotated-element"></i>
+                                                        </button>
+                                                </div>                                            
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hidden-inputs" data-wrapper>
+                                        <input type="hidden" name="CurrentPageName" id="txtPageName" value="@currentPageName" />
+                                        <input type="hidden" name="UserEmail" id="txtEmail"  value="@currentUserEmail" />
+                                        <input type="hidden" name="currentItemPath" id="txtCurrentItemPath" value="@currentItemPath" />
+                                        <input type="hidden" name="CurrentUrl" id="txtCurrentUrl" value="" />
+                                        <input type="hidden" name="ItemPath" id="txtItemPath" value="@currentItemPath" />
+                                        <input type="hidden" id="check" value="@authCheck" />
+                                    </div>
+                                </form>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <div style='height:3100px'> </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <!-- ex-main-theme : uncomment needed files -->
+    <!-- Lib -->
+    <script src="../../ex-main-theme/scripts/lib/smooth-scrollbar-min.js"></script>
+    <!-- <script src="../../ex-main-theme/scripts/lib/fontawesome-min.js"></script> -->
+    <script src="../../ex-main-theme/scripts/lib/jquery-fancybox-min.js"></script>
+    <!-- <script src="../../ex-main-theme/scripts/lib/owl-carousel-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/slick-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/isotope-pkgd-min.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/lib/lazysizes-min.js"></script> -->
+    <script src="../../ex-main-theme/scripts/lib/jquery-validate-min.js"></script>
+    <!-- init  -->
+    <script src="../../ex-main-theme/scripts/fancybox-init.js"></script>
+    <!-- <script src="../../ex-main-theme/scripts/isotope-init.js"></script> -->
+    <!-- <script src="../../ex-main-theme/scripts/owl-init.js"></script> -->
+    <script src="../../ex-main-theme/scripts/scrollbar-init.js"></script>
+    <!-- <script src="../../ex-main-theme/scripts/slick-init.js"></script> -->
+    <!-- ex-main-theme : uncomment needed files -->
+
+
+    <!-- Your js files goes here -->
+    <!-- Google capotsha -->
+    <script type="text/javascript">
+        var onloadCallback = function() {
+            var event = new Event('grecaptcha-loaded');
+            document.dispatchEvent(event);
+        };
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&lang=en" async defer ></script> 
+
+    <script src="../scripts/components-rangeslider.js"></script>
+    <script src="../scripts/components-happiness-meter.js"></script>
+
+    <script src="../../ex-floatingbutton/scripts/component-floating-button.js"></script>
+
+    <!-- Your js files goes here -->
+</body>
+
+</html>

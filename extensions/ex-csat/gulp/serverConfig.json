@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-csat",
+        "version" : "1.0.0",
+        "owner" :  "ahmedalaaezzt"
+    }
+}

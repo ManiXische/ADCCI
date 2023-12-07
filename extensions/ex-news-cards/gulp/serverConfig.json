@@ -1,0 +1,9 @@
+
+{
+    "options": {
+        "tenant":"\\Extension Themes",
+        "name": "\\ex-news-cards",
+        "version" : "1.0.0",
+        "owner" :  "Mahmoud"
+    }
+}

@@ -1,0 +1,391 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import "../vars/_all";
+
+.#{$ProjectName} {
+    // Your code goes here
+
+    .doc-number {
+        &:before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            border: 2px solid #006ba2;
+            background-color: #006ba2;
+            border-radius: 50%;
+            position: relative;
+            top: 2px;
+
+            @include ltr {
+                margin-right: 10px;
+            }
+
+            @include rtl {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .badge {
+        span {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 12px;
+            line-height: 14px;
+            border-radius: 4px;
+            background-color: #ededed;
+            padding: 5px 10px;
+            font-weight: normal;
+            white-space: normal;
+
+            @include ltr {
+                text-align: left;
+            }
+
+            @include rtl {
+                text-align: right;
+            }
+
+            &.active {
+                background-color: rgba(0, 107, 162, 0.2);
+                color: #006ba2;
+            }
+        }
+    }
+
+    hr {
+        height: 1px;
+        border: 0px;
+        border-top: 1px solid #e0e0e1;
+        width: 100%;
+    }
+
+    .ex-tender-head {
+        cursor: pointer;
+    }
+
+    .ex-tender-body {
+        display: none;
+    }
+
+    .load-more,
+    #no-result,
+    #call-error,
+    #no-listing-result {
+        display: none;
+    }
+
+    .nav-filter {
+        border: 1px solid #e0e0e1;
+        border-radius: 6px;
+        overflow: hidden;
+
+        a {
+            display: flex;
+            padding: 16px 13px;
+            font-weight: 900;
+            color: #3f3e45;
+            border-bottom: 1px solid #e0e0e1;
+
+            span {
+                margin: 0 13px;
+                line-height: 24px;
+            }
+
+            span.icon {
+                margin: 0;
+            }
+
+            &.active {
+                @include ltr {
+                    border-left: 5px solid #006ba2;
+                }
+
+                @include rtl {
+                    border-right: 5px solid #006ba2;
+                }
+
+                padding: 16px 10px;
+            }
+        }
+
+        li:last-child {
+            a {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    #tender-search {
+        input {
+            background-color: transparent;
+            padding: 10px 35px;
+        }
+
+        .icon-search {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            font-weight: 900;
+            font-size: 20px;
+        }
+    }
+
+    .section--box {
+        border: 1px solid #006ba2;
+        border-radius: 6px;
+        background-color: #daecf5;
+    }
+
+    a.link-default {
+        color: #3f3e45;
+
+        &:hover,
+        &:focus {
+            color: #3f3e45;
+        }
+    }
+
+    .button {
+        border-radius: 3px;
+    }
+
+    .headIcon {
+        font-weight: 900;
+        position: absolute;
+
+        @include ltr {
+            right: 0;
+        }
+
+        @include rtl {
+            left: 0;
+        }
+
+        top: 47%;
+        transform: rotate(90deg);
+        pointer-events: none;
+
+        @media #{$md} {
+            top: 0px;
+        }
+
+        &.active {
+            transform: rotate(270deg);
+        }
+    }
+
+    .ex-sxa-load-more {
+        margin-top: 60px;
+    }
+
+    .ex-sitecore-form__label {
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 12px;
+    }
+
+    .ex-sitecore-form__input__label {
+        color: #3f3e45;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 22px;
+        cursor: pointer;
+        text-transform: none;
+    }
+
+    .ex-sitecore-form__link {
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 12px;
+    }
+
+    .ex-sitecore-form__input__checkbox--dark label {
+        border: 1px solid #b2b2b5;
+    }
+
+    .ex-sitecore-form__input__checkbox--dark label:after {
+        left: 3px;
+    }
+
+    .ex-sitecore-form select {
+        height: 28px;
+        border-radius: 3px;
+        @include ltr {
+            padding: 0px 25px 0px 10px !important;
+        }
+        @include rtl {
+            padding: 0px 10px 0px 25px !important;
+        }
+      
+        font-size: 14px;
+        color: #89888C;
+    }
+
+    .ex-sitecore-form .dropdown-list-arrow:after {
+        border-color: #89888c;
+        border-width: 0 2px 2px 0;
+
+        @include ltr {
+            top: 9px;
+            right: 13px;
+        }
+
+        @include rtl {
+            top: 9px;
+            left: 13px;
+        }
+    }
+
+    .button-filter,
+    .button-status {
+        display: none;
+    }
+
+    .sorting-filters--select {
+        display: flex;
+        align-self: center;
+    }
+
+    .showlessLnk {
+        display: none;
+    }
+    .event-type-wrap,
+    .estimate-value-wrap{
+        img{
+            width: 18px;
+            height: 24px;
+        }
+    }
+}
+
+@media print {
+    html[lang="en"],
+    html[lang="ar-AE"] {
+        /* All your print styles go here */
+        header,
+        footer {
+            display: none !important;
+        }
+
+        .ex-tenders .col-lg-3 {
+            display: none !important;
+        }
+
+        .ex-tenders .ex-tender {
+            display: none !important;
+        }
+
+        .section.sectionLoadedTender {
+            display: block !important;
+        }
+
+        .print-row {
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+
+            background: none !important;
+            border: 0px !important;
+            max-width: none !important;
+        }
+
+        .print-0-spacing {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .hide-print {
+            display: none !important;
+        }
+
+        .badge {
+            border: 0;
+        }
+
+        .caption,
+        caption {
+            font-size: 16px;
+        }
+
+        .small-text,
+        label {
+            font-size: 16px;
+        }
+
+        .headIcon {
+            display: none;
+        }
+        
+    }
+    
+}
+
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+    html[lang="en"],
+    html[lang="ar-AE"] {
+        .ppe-wrap {
+            display: block !important;
+        }
+
+        .participate-btn-wrap {
+            max-width: 100%;
+            min-width: 100%;
+        }
+
+        .event-type-wrap {
+            margin: 10px !important;
+        }
+
+        .estimate-value-wrap {
+            margin: 10px !important;
+        }
+
+        .recomendedtenders {
+            .ex-news-cards__card-details__card-date {
+                flex-flow: column;
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 1100px) {
+    .ex-tenders {
+        .nav-status {
+            min-width: 300px;
+        }
+
+        .button-filter,
+        .button-status {
+            display: flex;
+        }
+    }
+    .dialog-component__message {
+        .sorting-filters--select {
+            display: flex;
+        }
+        .sorting-filters-sort-filter.sorting-filters--select {
+            flex-flow: column;
+            p {
+                margin: 0 !important;
+                padding-bottom: 10px;
+            }
+            .sortingFilters {
+                padding: 5px;
+                width: 100%;
+            }
+        }
+    }
+    .search-filters{
+        margin-bottom: 40px
+    }
+}

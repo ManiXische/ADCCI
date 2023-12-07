@@ -1,0 +1,31 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+.#{$ProjectName} {
+    // Your code goes here
+    &__holder{
+        min-height:$tabs-holder-height;
+        background: $tabs-holder-bg;
+        &__btn{
+            max-width: $tabs-holder-btn-max-width;
+            &--active, &:hover{
+                color: $tabs-holder-btn-active-color;
+                background-color: $tabs-holder-btn-active-bg;
+            }
+        }
+    }
+    &__tab-content{
+        display: none;
+        &:first-child{
+            display: block;
+        }
+    }
+}

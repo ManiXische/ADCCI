@@ -1,0 +1,119 @@
+/***************************************************************************************************
+Extension Name: ex-live-chat 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-live-chat 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-live-chat 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-live-chat__img {
+  bottom: 0px;
+  z-index: 10000;
+  width: 50px;
+}
+
+html[lang*='en'] .ex-live-chat__img,
+html[class*='translated-ltr'] .ex-live-chat__img {
+  right: 20px;
+}
+
+html[lang*='ar'] .ex-live-chat__img,
+html[class*='translated-rtl'] .ex-live-chat__img {
+  left: 20px;
+}
+
+.ex-live-chat__popup {
+  top: 0;
+  z-index: 10001;
+  width: 380px;
+  height: 100%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+html[lang*='en'] .ex-live-chat__popup,
+html[class*='translated-ltr'] .ex-live-chat__popup {
+  right: -100%;
+}
+
+html[lang*='ar'] .ex-live-chat__popup,
+html[class*='translated-rtl'] .ex-live-chat__popup {
+  left: -100%;
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .ex-live-chat__popup {
+    width: 100%;
+  }
+}
+
+.ex-live-chat__popup__header {
+  right: 20px;
+  top: 15px;
+  z-index: 10002;
+  color: #ffffff;
+}
+
+.ex-live-chat__popup__content {
+  overflow: auto;
+  background-color: #ffffff;
+  z-index: 10001;
+}
+
+html[lang*='en'] .ex-live-chat__popup--opened,
+html[class*='translated-ltr'] .ex-live-chat__popup--opened {
+  right: 0;
+}
+
+html[lang*='ar'] .ex-live-chat__popup--opened,
+html[class*='translated-rtl'] .ex-live-chat__popup--opened {
+  left: 0;
+}
+
+.ex-live-chat__popup--opened .live-chat-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.ex-live-chat__popup iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+}

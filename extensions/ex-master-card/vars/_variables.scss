@@ -1,0 +1,24 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+$master-card-border : 2px solid $grey-200 !default;
+$master-card-icon-width: 35px !default;
+$master-card-img-min-width:260px !default;
+$master-card-img-max-width : 270px !default;
+$master-card-img-md-max-width : 160px !default;
+$master-card-img-md-min-width : 160px !default;
+$master-card-img-icon-width:35px !default;
+$master-card-type-icon-width:14px !default;
+$master-card-img-margin:20px !default;
+$master-card-details-margin-top: 20px !default;
+$master-card-details-columns: 3 !default;
+$master-card-details-md-columns: 2 !default;
+$master-card-details-column-padding: 10px !default;
+$master-card-hover-border-color: $primary-color !default;
+$master-card-hover-border-bottom-width: 10px !default;
+$master-card-hover-transform: translateY(-7px) !default;
+$master-card-hover-transiton:0.5s !default;
+$master-card-description-margin-top: 15px !default;

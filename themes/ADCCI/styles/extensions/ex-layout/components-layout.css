@@ -1,0 +1,5434 @@
+@charset "UTF-8";
+
+/***************************************************************************************************
+Extension Name: ex-layout 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-layout 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+.visually-hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-layout 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-layout 
+File: Mixins
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-layout 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-layout 
+File: Animations
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-layout 
+File: URLS
+Author: TAMM
+***************************************************************************************************/
+@font-face {
+  font-family: "NotoKufiArabic";
+  src: url("../fonts/notokufi/NotoKufiArabiceot.eot");
+  src: url("../fonts/notokufi/NotoKufiArabicwoff2.woff2") format("woff2"), url("../fonts/notokufi/NotoKufiArabicwoff.woff") format("woff"), url("../fonts/notokufi/NotoKufiArabicttf.ttf") format("truetype"), url("../fonts/notokufi/NotoKufiArabicsvg.svg") format("svg"), url("../fonts/notokufi/NotoKufiArabiceot?#iefix.eot?#iefix") format("embedded-opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "NotoKufiArabic";
+  src: url("../fonts/notokufi/NotoKufiArabic-Boldeot.eot");
+  src: url("../fonts/notokufi/NotoKufiArabic-Boldwoff2.woff2") format("woff2"), url("../fonts/notokufi/NotoKufiArabic-Boldwoff.woff") format("woff"), url("../fonts/notokufi/NotoKufiArabic-Boldttf.ttf") format("truetype"), url("../fonts/notokufi/NotoKufiArabic-Boldsvg.svg") format("svg"), url("../fonts/notokufi/NotoKufiArabic-Boldeot?#iefix.eot?#iefix") format("embedded-opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/Roboto-Regulareot.eot");
+  src: url("../fonts/roboto/Roboto-Regularwoff2.woff2") format("woff2"), url("../fonts/roboto/Roboto-Regularwoff.woff") format("woff"), url("../fonts/roboto/Roboto-Regularttf.ttf") format("truetype"), url("../fonts/roboto/Roboto-Regularsvg.svg") format("svg"), url("../fonts/roboto/Roboto-Regulareot?#iefix.eot?#iefix") format("embedded-opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/Roboto-Boldeot.eot");
+  src: url("../fonts/roboto/Roboto-Boldwoff2.woff2") format("woff2"), url("../fonts/roboto/Roboto-Boldwoff.woff") format("woff"), url("../fonts/roboto/Roboto-Boldttf.ttf") format("truetype"), url("../fonts/roboto/Roboto-Boldsvg.svg") format("svg"), url("../fonts/roboto/Roboto-Boldeot?#iefix.eot?#iefix") format("embedded-opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/Roboto-Blackeot.eot");
+  src: url("../fonts/roboto/Roboto-Blackwoff2.woff2") format("woff2"), url("../fonts/roboto/Roboto-Blackwoff.woff") format("woff"), url("../fonts/roboto/Roboto-Blackttf.ttf") format("truetype"), url("../fonts/roboto/Roboto-Blacksvg.svg") format("svg"), url("../fonts/roboto/Roboto-Blackeot?#iefix.eot?#iefix") format("embedded-opentype");
+  font-weight: 900;
+}
+
+/***************************************************************************************************
+Extension Name: ex-layout 
+Extension Version:  
+File: Reset
+Owner:  
+***************************************************************************************************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+tt,
+var,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: inherit;
+}
+
+html[lang='ar-AE'] html,
+html[lang='ar-AE'] body,
+html[lang='ar-AE'] div,
+html[lang='ar-AE'] span,
+html[lang='ar-AE'] applet,
+html[lang='ar-AE'] object,
+html[lang='ar-AE'] iframe,
+html[lang='ar-AE'] h1,
+html[lang='ar-AE'] h2,
+html[lang='ar-AE'] h3,
+html[lang='ar-AE'] h4,
+html[lang='ar-AE'] h5,
+html[lang='ar-AE'] h6,
+html[lang='ar-AE'] p,
+html[lang='ar-AE'] blockquote,
+html[lang='ar-AE'] pre,
+html[lang='ar-AE'] a,
+html[lang='ar-AE'] abbr,
+html[lang='ar-AE'] acronym,
+html[lang='ar-AE'] address,
+html[lang='ar-AE'] big,
+html[lang='ar-AE'] cite,
+html[lang='ar-AE'] code,
+html[lang='ar-AE'] del,
+html[lang='ar-AE'] dfn,
+html[lang='ar-AE'] em,
+html[lang='ar-AE'] img,
+html[lang='ar-AE'] ins,
+html[lang='ar-AE'] kbd,
+html[lang='ar-AE'] q,
+html[lang='ar-AE'] s,
+html[lang='ar-AE'] samp,
+html[lang='ar-AE'] tt,
+html[lang='ar-AE'] var,
+html[lang='ar-AE'] center,
+html[lang='ar-AE'] dl,
+html[lang='ar-AE'] dt,
+html[lang='ar-AE'] dd,
+html[lang='ar-AE'] ol,
+html[lang='ar-AE'] ul,
+html[lang='ar-AE'] li,
+html[lang='ar-AE'] fieldset,
+html[lang='ar-AE'] form,
+html[lang='ar-AE'] label,
+html[lang='ar-AE'] legend,
+html[lang='ar-AE'] table,
+html[lang='ar-AE'] caption,
+html[lang='ar-AE'] tbody,
+html[lang='ar-AE'] tfoot,
+html[lang='ar-AE'] thead,
+html[lang='ar-AE'] tr,
+html[lang='ar-AE'] th,
+html[lang='ar-AE'] td,
+html[lang='ar-AE'] article,
+html[lang='ar-AE'] aside,
+html[lang='ar-AE'] canvas,
+html[lang='ar-AE'] details,
+html[lang='ar-AE'] embed,
+html[lang='ar-AE'] figure,
+html[lang='ar-AE'] figcaption,
+html[lang='ar-AE'] footer,
+html[lang='ar-AE'] header,
+html[lang='ar-AE'] hgroup,
+html[lang='ar-AE'] menu,
+html[lang='ar-AE'] nav,
+html[lang='ar-AE'] output,
+html[lang='ar-AE'] ruby,
+html[lang='ar-AE'] section,
+html[lang='ar-AE'] summary,
+html[lang='ar-AE'] time,
+html[lang='ar-AE'] mark,
+html[lang='ar-AE'] audio,
+html[lang='ar-AE'] video {
+  font-family: "NotoKufiArabic", Arial, sans-serif;
+}
+
+small,
+.small,
+strong,
+b,
+u,
+i,
+sub,
+sup,
+strike {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: inherit;
+}
+
+html[lang='ar-AE'] small,
+html[lang='ar-AE'] .small,
+html[lang='ar-AE'] strong,
+html[lang='ar-AE'] b,
+html[lang='ar-AE'] u,
+html[lang='ar-AE'] i,
+html[lang='ar-AE'] sub,
+html[lang='ar-AE'] sup,
+html[lang='ar-AE'] strike {
+  font-family: "NotoKufiArabic", Arial, sans-serif;
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+}
+
+html[dir='rtl'] .fab,
+.translated-rtl .fab {
+  font-family: "Font Awesome 5 Brands";
+}
+
+.far {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
+html[dir='rtl'] .far,
+.translated-rtl .far {
+  font-family: "Font Awesome 5 Free";
+}
+
+.fa,
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+html[dir='rtl'] .fa,
+.translated-rtl .fa,
+html[dir='rtl'] .fas,
+.translated-rtl .fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: content-box;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 0;
+}
+
+a.disabled {
+  pointer-events: none;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  border: none;
+}
+
+button,
+button:focus,
+button:active,
+input,
+input:focus,
+input:active {
+  line-height: normal;
+  outline: 0;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+  pointer-events: none;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 transparent;
+}
+
+[data-slick]:not(.slick-initialized)[data-slides-lg='2']>div {
+  width: 48%;
+  margin: 0 10px;
+}
+
+@media screen and (max-device-width: 922px),
+screen and (max-width: 922px) {
+  [data-slick]:not(.slick-initialized)[data-slides-lg='2']>div {
+    width: 46%;
+  }
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  [data-slick]:not(.slick-initialized)[data-slides-lg='2']>div {
+    width: 100%;
+  }
+}
+
+[data-slick]:not(.slick-initialized)[data-slides-lg='3']>div {
+  width: 31%;
+  margin: 0 10px;
+}
+
+@media screen and (max-device-width: 922px),
+screen and (max-width: 922px) {
+  [data-slick]:not(.slick-initialized)[data-slides-lg='3']>div {
+    width: 46%;
+  }
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  [data-slick]:not(.slick-initialized)[data-slides-lg='3']>div {
+    width: 100%;
+  }
+}
+
+[data-slick]:not(.slick-initialized)[data-slides-lg='4']>div {
+  width: 23%;
+  margin: 0 10px;
+}
+
+@media screen and (max-device-width: 922px),
+screen and (max-width: 922px) {
+  [data-slick]:not(.slick-initialized)[data-slides-lg='4']>div {
+    width: 30%;
+  }
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  [data-slick]:not(.slick-initialized)[data-slides-lg='4']>div {
+    width: 100%;
+  }
+}
+
+.js-slick-mobile-disabled[data-slick]:not(.slick-initialized)[data-slides-lg='2']>div {
+  width: 48%;
+  margin: 0 20px;
+}
+
+@media screen and (max-device-width: 922px),
+screen and (max-width: 922px) {
+  .js-slick-mobile-disabled[data-slick]:not(.slick-initialized)[data-slides-lg='2']>div {
+    width: 46%;
+  }
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .js-slick-mobile-disabled[data-slick]:not(.slick-initialized)[data-slides-lg='2']>div {
+    width: 100%;
+  }
+}
+
+.js-slick-mobile-disabled[data-slick]:not(.slick-initialized)[data-slides-lg='3']>div {
+  width: 31%;
+  margin: 0 20px;
+}
+
+@media screen and (max-device-width: 922px),
+screen and (max-width: 922px) {
+  .js-slick-mobile-disabled[data-slick]:not(.slick-initialized)[data-slides-lg='3']>div {
+    width: 46%;
+  }
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .js-slick-mobile-disabled[data-slick]:not(.slick-initialized)[data-slides-lg='3']>div {
+    width: 100%;
+  }
+}
+
+.js-slick-mobile-disabled[data-slick]:not(.slick-initialized)[data-slides-lg='4']>div {
+  width: 23%;
+  margin: 0 20px;
+}
+
+@media screen and (max-device-width: 922px),
+screen and (max-width: 922px) {
+  .js-slick-mobile-disabled[data-slick]:not(.slick-initialized)[data-slides-lg='4']>div {
+    width: 30%;
+  }
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .js-slick-mobile-disabled[data-slick]:not(.slick-initialized)[data-slides-lg='4']>div {
+    width: 100%;
+  }
+}
+
+/***************************************************************************************************
+Extension Name: ex-layout 
+Extension Version:  
+File: Helpers
+Owner:  
+***************************************************************************************************/
+.component {
+  width: 100%;
+}
+
+.component.column-splitter {
+  width: auto;
+}
+
+.no-wrap {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.inner-page-contenr {
+  padding: 0 15px;
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-10 {
+  opacity: 0.1;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.rounded-0 {
+  border-radius: 0px !important;
+}
+
+.rounded-3 {
+  border-radius: 3px !important;
+}
+
+.rounded-5 {
+  border-radius: 5px !important;
+}
+
+.rounded-10 {
+  border-radius: 10px !important;
+}
+
+.rounded-15 {
+  border-radius: 15px !important;
+}
+
+.rounded-20 {
+  border-radius: 20px !important;
+}
+
+.rounded-25 {
+  border-radius: 25px !important;
+}
+
+.rounded-30 {
+  border-radius: 30px !important;
+}
+
+.rounded-35 {
+  border-radius: 35px !important;
+}
+
+.rounded-40 {
+  border-radius: 40px !important;
+}
+
+.rounded-45 {
+  border-radius: 45px !important;
+}
+
+.rounded-50 {
+  border-radius: 50px !important;
+}
+
+.rounded-55 {
+  border-radius: 55px !important;
+}
+
+.rounded-60 {
+  border-radius: 60px !important;
+}
+
+.search-results-count .results-count {
+  font-size: 14px;
+}
+
+.search-results-count .progress {
+  display: none;
+}
+
+html[dir='rtl'] .rotated-element,
+.translated-rtl .rotated-element {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.floated-element-left {
+  float: left;
+}
+
+html[dir='rtl'] .floated-element-left,
+.translated-rtl .floated-element-left {
+  float: right;
+}
+
+.floated-element-right {
+  float: right;
+}
+
+html[dir='rtl'] .floated-element-right,
+.translated-rtl .floated-element-right {
+  float: left;
+}
+
+.hr-1 {
+  height: 1px;
+  width: auto;
+  background: #D6D6D6;
+}
+
+.hr-1-v {
+  width: 1px;
+  height: auto;
+}
+
+.hr-2 {
+  height: 2px;
+  width: auto;
+  background: #D6D6D6;
+}
+
+.hr-2-v {
+  width: 2px;
+  height: auto;
+}
+
+.hr-3 {
+  height: 3px;
+  width: auto;
+  background: #D6D6D6;
+}
+
+.hr-3-v {
+  width: 3px;
+  height: auto;
+}
+
+.hr-4 {
+  height: 4px;
+  width: auto;
+  background: #D6D6D6;
+}
+
+.hr-4-v {
+  width: 4px;
+  height: auto;
+}
+
+.hr-5 {
+  height: 5px;
+  width: auto;
+  background: #D6D6D6;
+}
+
+.hr-5-v {
+  width: 5px;
+  height: auto;
+}
+
+.hr-6 {
+  height: 6px;
+  width: auto;
+  background: #D6D6D6;
+}
+
+.hr-6-v {
+  width: 6px;
+  height: auto;
+}
+
+.hr-6 {
+  height: 6px;
+  width: auto;
+  background: #D6D6D6;
+}
+
+.hr-6-v {
+  width: 6px;
+  height: auto;
+}
+
+.hr-7 {
+  height: 7px;
+  width: auto;
+  background: #D6D6D6;
+}
+
+.hr-7-v {
+  width: 7px;
+  height: auto;
+}
+
+.hr-8 {
+  height: 8px;
+  width: auto;
+  background: #D6D6D6;
+}
+
+.hr-8-v {
+  width: 8px;
+  height: auto;
+}
+
+[class^="column-"]>ul,
+[class*=" column-"]>ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+
+  [class^="column-"]>ul,
+  [class*=" column-"]>ul {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+}
+
+.column-1 ul li,
+.column-2 ul li,
+.column-3 ul li,
+.column-4 ul li,
+.column-5 ul li,
+.column-6 ul li,
+.column-7 ul li,
+.column-8 ul li,
+.column-9 ul li,
+.column-10 ul li,
+.column-11 ul li,
+.column-12 ul li,
+.column ul li,
+.column-auto ul li,
+.column-sm-1 ul li,
+.column-sm-2 ul li,
+.column-sm-3 ul li,
+.column-sm-4 ul li,
+.column-sm-5 ul li,
+.column-sm-6 ul li,
+.column-sm-7 ul li,
+.column-sm-8 ul li,
+.column-sm-9 ul li,
+.column-sm-10 ul li,
+.column-sm-11 ul li,
+.column-sm-12 ul li,
+.column-sm ul li,
+.column-sm-auto ul li,
+.column-md-1 ul li,
+.column-md-2 ul li,
+.column-md-3 ul li,
+.column-md-4 ul li,
+.column-md-5 ul li,
+.column-md-6 ul li,
+.column-md-7 ul li,
+.column-md-8 ul li,
+.column-md-9 ul li,
+.column-md-10 ul li,
+.column-md-11 ul li,
+.column-md-12 ul li,
+.column-md ul li,
+.column-md-auto ul li,
+.column-lg-1 ul li,
+.column-lg-2 ul li,
+.column-lg-3 ul li,
+.column-lg-4 ul li,
+.column-lg-5 ul li,
+.column-lg-6 ul li,
+.column-lg-7 ul li,
+.column-lg-8 ul li,
+.column-lg-9 ul li,
+.column-lg-10 ul li,
+.column-lg-11 ul li,
+.column-lg-12 ul li,
+.column-lg ul li,
+.column-lg-auto ul li,
+.column-xl-1 ul li,
+.column-xl-2 ul li,
+.column-xl-3 ul li,
+.column-xl-4 ul li,
+.column-xl-5 ul li,
+.column-xl-6 ul li,
+.column-xl-7 ul li,
+.column-xl-8 ul li,
+.column-xl-9 ul li,
+.column-xl-10 ul li,
+.column-xl-11 ul li,
+.column-xl-12 ul li,
+.column-xl ul li,
+.column-xl-auto ul li {
+  position: relative;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+
+  .column-1 ul li,
+  .column-2 ul li,
+  .column-3 ul li,
+  .column-4 ul li,
+  .column-5 ul li,
+  .column-6 ul li,
+  .column-7 ul li,
+  .column-8 ul li,
+  .column-9 ul li,
+  .column-10 ul li,
+  .column-11 ul li,
+  .column-12 ul li,
+  .column ul li,
+  .column-auto ul li,
+  .column-sm-1 ul li,
+  .column-sm-2 ul li,
+  .column-sm-3 ul li,
+  .column-sm-4 ul li,
+  .column-sm-5 ul li,
+  .column-sm-6 ul li,
+  .column-sm-7 ul li,
+  .column-sm-8 ul li,
+  .column-sm-9 ul li,
+  .column-sm-10 ul li,
+  .column-sm-11 ul li,
+  .column-sm-12 ul li,
+  .column-sm ul li,
+  .column-sm-auto ul li,
+  .column-md-1 ul li,
+  .column-md-2 ul li,
+  .column-md-3 ul li,
+  .column-md-4 ul li,
+  .column-md-5 ul li,
+  .column-md-6 ul li,
+  .column-md-7 ul li,
+  .column-md-8 ul li,
+  .column-md-9 ul li,
+  .column-md-10 ul li,
+  .column-md-11 ul li,
+  .column-md-12 ul li,
+  .column-md ul li,
+  .column-md-auto ul li,
+  .column-lg-1 ul li,
+  .column-lg-2 ul li,
+  .column-lg-3 ul li,
+  .column-lg-4 ul li,
+  .column-lg-5 ul li,
+  .column-lg-6 ul li,
+  .column-lg-7 ul li,
+  .column-lg-8 ul li,
+  .column-lg-9 ul li,
+  .column-lg-10 ul li,
+  .column-lg-11 ul li,
+  .column-lg-12 ul li,
+  .column-lg ul li,
+  .column-lg-auto ul li,
+  .column-xl-1 ul li,
+  .column-xl-2 ul li,
+  .column-xl-3 ul li,
+  .column-xl-4 ul li,
+  .column-xl-5 ul li,
+  .column-xl-6 ul li,
+  .column-xl-7 ul li,
+  .column-xl-8 ul li,
+  .column-xl-9 ul li,
+  .column-xl-10 ul li,
+  .column-xl-11 ul li,
+  .column-xl-12 ul li,
+  .column-xl ul li,
+  .column-xl-auto ul li {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.column ul li {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.row-cols-1>* {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.row-cols-2>* {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.row-cols-3>* {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.33333%;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+
+.row-cols-4>* {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.row-cols-5>* {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.row-cols-6>* {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 16.66667%;
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+}
+
+.column-auto ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.column-1 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 8.33333%;
+  flex: 0 0 8.33333%;
+  max-width: 8.33333%;
+  margin-bottom: 20px;
+}
+
+.column-2 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 16.66667%;
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+  margin-bottom: 20px;
+}
+
+.column-3 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  margin-bottom: 20px;
+}
+
+.column-4 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.33333%;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+  margin-bottom: 20px;
+}
+
+.column-5 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 41.66667%;
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+  margin-bottom: 20px;
+}
+
+.column-6 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-bottom: 20px;
+}
+
+.column-7 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 58.33333%;
+  flex: 0 0 58.33333%;
+  max-width: 58.33333%;
+  margin-bottom: 20px;
+}
+
+.column-8 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 66.66667%;
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+  margin-bottom: 20px;
+}
+
+.column-9 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
+  margin-bottom: 20px;
+}
+
+.column-10 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 83.33333%;
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+  margin-bottom: 20px;
+}
+
+.column-11 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 91.66667%;
+  flex: 0 0 91.66667%;
+  max-width: 91.66667%;
+  margin-bottom: 20px;
+}
+
+.column-12 ul li {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+html[dir='rtl'] .offset-1,
+.translated-rtl .offset-1 {
+  margin-right: 8.33333%;
+  margin-left: auto;
+}
+
+html[dir='rtl'] .offset-2,
+.translated-rtl .offset-2 {
+  margin-right: 16.66667%;
+  margin-left: auto;
+}
+
+html[dir='rtl'] .offset-3,
+.translated-rtl .offset-3 {
+  margin-right: 25%;
+  margin-left: auto;
+}
+
+html[dir='rtl'] .offset-4,
+.translated-rtl .offset-4 {
+  margin-right: 33.33333%;
+  margin-left: auto;
+}
+
+html[dir='rtl'] .offset-5,
+.translated-rtl .offset-5 {
+  margin-right: 41.66667%;
+  margin-left: auto;
+}
+
+html[dir='rtl'] .offset-6,
+.translated-rtl .offset-6 {
+  margin-right: 50%;
+  margin-left: auto;
+}
+
+html[dir='rtl'] .offset-7,
+.translated-rtl .offset-7 {
+  margin-right: 58.33333%;
+  margin-left: auto;
+}
+
+html[dir='rtl'] .offset-8,
+.translated-rtl .offset-8 {
+  margin-right: 66.66667%;
+  margin-left: auto;
+}
+
+html[dir='rtl'] .offset-9,
+.translated-rtl .offset-9 {
+  margin-right: 75%;
+  margin-left: auto;
+}
+
+html[dir='rtl'] .offset-10,
+.translated-rtl .offset-10 {
+  margin-right: 83.33333%;
+  margin-left: auto;
+}
+
+html[dir='rtl'] .offset-11,
+.translated-rtl .offset-11 {
+  margin-right: 91.66667%;
+  margin-left: auto;
+}
+
+@media (min-width: 360px) {
+  .column-sm ul li {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .row-cols-sm-1>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .row-cols-sm-2>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .row-cols-sm-3>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .row-cols-sm-4>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .row-cols-sm-5>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
+  .row-cols-sm-6>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .column-sm-auto ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-1 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33333%;
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-2 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-3 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-4 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-5 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66667%;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-6 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-7 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.33333%;
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-8 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66667%;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-9 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-10 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.33333%;
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-11 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.66667%;
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-sm-12 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  html[dir='rtl'] .offset-sm-0,
+  .translated-rtl .offset-sm-0 {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-sm-1,
+  .translated-rtl .offset-sm-1 {
+    margin-right: 8.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-sm-2,
+  .translated-rtl .offset-sm-2 {
+    margin-right: 16.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-sm-3,
+  .translated-rtl .offset-sm-3 {
+    margin-right: 25%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-sm-4,
+  .translated-rtl .offset-sm-4 {
+    margin-right: 33.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-sm-5,
+  .translated-rtl .offset-sm-5 {
+    margin-right: 41.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-sm-6,
+  .translated-rtl .offset-sm-6 {
+    margin-right: 50%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-sm-7,
+  .translated-rtl .offset-sm-7 {
+    margin-right: 58.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-sm-8,
+  .translated-rtl .offset-sm-8 {
+    margin-right: 66.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-sm-9,
+  .translated-rtl .offset-sm-9 {
+    margin-right: 75%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-sm-10,
+  .translated-rtl .offset-sm-10 {
+    margin-right: 83.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-sm-11,
+  .translated-rtl .offset-sm-11 {
+    margin-right: 91.66667%;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .column-md ul li {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .row-cols-md-1>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .row-cols-md-2>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .row-cols-md-3>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .row-cols-md-4>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .row-cols-md-5>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
+  .row-cols-md-6>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .column-md-auto ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-1 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33333%;
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-2 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-3 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-4 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-5 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66667%;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-6 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-7 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.33333%;
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-8 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66667%;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-9 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-10 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.33333%;
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-11 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.66667%;
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-md-12 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  html[dir='rtl'] .offset-md-0,
+  .translated-rtl .offset-md-0 {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-md-1,
+  .translated-rtl .offset-md-1 {
+    margin-right: 8.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-md-2,
+  .translated-rtl .offset-md-2 {
+    margin-right: 16.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-md-3,
+  .translated-rtl .offset-md-3 {
+    margin-right: 25%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-md-4,
+  .translated-rtl .offset-md-4 {
+    margin-right: 33.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-md-5,
+  .translated-rtl .offset-md-5 {
+    margin-right: 41.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-md-6,
+  .translated-rtl .offset-md-6 {
+    margin-right: 50%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-md-7,
+  .translated-rtl .offset-md-7 {
+    margin-right: 58.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-md-8,
+  .translated-rtl .offset-md-8 {
+    margin-right: 66.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-md-9,
+  .translated-rtl .offset-md-9 {
+    margin-right: 75%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-md-10,
+  .translated-rtl .offset-md-10 {
+    margin-right: 83.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-md-11,
+  .translated-rtl .offset-md-11 {
+    margin-right: 91.66667%;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .column-lg ul li {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .row-cols-lg-1>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .row-cols-lg-2>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .row-cols-lg-3>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .row-cols-lg-4>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .row-cols-lg-5>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
+  .row-cols-lg-6>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .column-lg-auto ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-1 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33333%;
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-2 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-3 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-4 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-5 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66667%;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-6 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-7 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.33333%;
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-8 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66667%;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-9 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-10 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.33333%;
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-11 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.66667%;
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-lg-12 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  html[dir='rtl'] .offset-lg-0,
+  .translated-rtl .offset-lg-0 {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-lg-1,
+  .translated-rtl .offset-lg-1 {
+    margin-right: 8.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-lg-2,
+  .translated-rtl .offset-lg-2 {
+    margin-right: 16.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-lg-3,
+  .translated-rtl .offset-lg-3 {
+    margin-right: 25%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-lg-4,
+  .translated-rtl .offset-lg-4 {
+    margin-right: 33.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-lg-5,
+  .translated-rtl .offset-lg-5 {
+    margin-right: 41.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-lg-6,
+  .translated-rtl .offset-lg-6 {
+    margin-right: 50%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-lg-7,
+  .translated-rtl .offset-lg-7 {
+    margin-right: 58.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-lg-8,
+  .translated-rtl .offset-lg-8 {
+    margin-right: 66.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-lg-9,
+  .translated-rtl .offset-lg-9 {
+    margin-right: 75%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-lg-10,
+  .translated-rtl .offset-lg-10 {
+    margin-right: 83.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-lg-11,
+  .translated-rtl .offset-lg-11 {
+    margin-right: 91.66667%;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .column-xl ul li {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .row-cols-xl-1>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .row-cols-xl-2>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .row-cols-xl-3>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .row-cols-xl-4>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .row-cols-xl-5>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
+  .row-cols-xl-6>* {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .column-xl-auto ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-1 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33333%;
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-2 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-3 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-4 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-5 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66667%;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-6 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-7 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.33333%;
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-8 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66667%;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-9 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-10 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.33333%;
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-11 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.66667%;
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+    margin-bottom: 20px;
+  }
+
+  .column-xl-12 ul li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  html[dir='rtl'] .offset-xl-0,
+  .translated-rtl .offset-xl-0 {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-xl-1,
+  .translated-rtl .offset-xl-1 {
+    margin-right: 8.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-xl-2,
+  .translated-rtl .offset-xl-2 {
+    margin-right: 16.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-xl-3,
+  .translated-rtl .offset-xl-3 {
+    margin-right: 25%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-xl-4,
+  .translated-rtl .offset-xl-4 {
+    margin-right: 33.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-xl-5,
+  .translated-rtl .offset-xl-5 {
+    margin-right: 41.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-xl-6,
+  .translated-rtl .offset-xl-6 {
+    margin-right: 50%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-xl-7,
+  .translated-rtl .offset-xl-7 {
+    margin-right: 58.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-xl-8,
+  .translated-rtl .offset-xl-8 {
+    margin-right: 66.66667%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-xl-9,
+  .translated-rtl .offset-xl-9 {
+    margin-right: 75%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-xl-10,
+  .translated-rtl .offset-xl-10 {
+    margin-right: 83.33333%;
+    margin-left: auto;
+  }
+
+  html[dir='rtl'] .offset-xl-11,
+  .translated-rtl .offset-xl-11 {
+    margin-right: 91.66667%;
+    margin-left: auto;
+  }
+}
+
+.carousel-navigation .slick-slide {
+  padding: 10px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .carousel-navigation .slick-slide {
+    padding: 20px;
+  }
+}
+
+html[dir='rtl'] .carousel-navigation__navigations,
+.translated-rtl .carousel-navigation__navigations {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.carousel-navigation__prev,
+.carousel-navigation__next {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 43px;
+  height: 43px;
+  border: 2px solid #D6D6D6;
+  color: #000;
+  position: relative;
+  margin-left: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+html[dir='rtl'] .carousel-navigation__prev,
+.translated-rtl .carousel-navigation__prev,
+html[dir='rtl'] .carousel-navigation__next,
+.translated-rtl .carousel-navigation__next {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.carousel-navigation__prev:hover,
+.carousel-navigation__next:hover {
+  background-color: #0091C7;
+  color: #fff;
+  border-color: #0091C7;
+}
+
+.carousel-navigation__prev span,
+.carousel-navigation__next span {
+  position: absolute;
+  top: -webkit-calc(50% - 8px);
+  top: calc(50% - 8px);
+  left: -webkit-calc(50% - 4.5px);
+  left: calc(50% - 4.5px);
+}
+
+.carousel-navigation hr {
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.text-break {
+  word-wrap: break-word;
+}
+
+.black-white-img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.black-white-img--remove-on-hover:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #D6D6D6;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  outline: none;
+  border-radius: 4px;
+}
+
+.go-to-top {
+  display: none;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #0091C7;
+  font-size: 20px;
+  border-radius: 50%;
+  bottom: 100px;
+  cursor: pointer;
+  z-index: 10000;
+  right: 20px;
+}
+
+html[dir='rtl'] .go-to-top,
+.translated-rtl .go-to-top {
+  right: auto;
+  left: 20px;
+}
+
+.go-to-top>* {
+  line-height: 50px;
+}
+
+.color-primary {
+  color: #0091C7;
+}
+
+.color-secondary {
+  color: #FAA317;
+}
+
+.background-primary {
+  background-color: #0091C7;
+}
+
+.background-secondary {
+  background-color: #FAA317;
+}
+
+.font-weight-boldest {
+  font-weight: 900 !important;
+}
+
+@-moz-document url-prefix() {
+  .d-none-ff {
+    display: none !important;
+  }
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .d-none-ie {
+    display: none !important;
+  }
+}
+
+html[dir='rtl'] .d-none-rtl,
+.translated-rtl .d-none-rtl {
+  display: none !important;
+}
+
+html:not([dir='rtl']) .d-none-ltr,
+.translated-ltr .d-none-ltr {
+  display: none !important;
+}
+
+.disable-pointer {
+  pointer-events: none !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-indent {
+  text-indent: -9000px;
+  height: 0;
+  direction: ltr;
+}
+
+.stretched-link-field:hover {
+  color: #0091C7;
+}
+
+.stretched-link-field:hover [class^="icon-"],
+.stretched-link-field:hover [class*=" icon-"] {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.stretched-link-field a {
+  display: block;
+}
+
+.stretched-link-field a:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: transparent;
+}
+
+.on-page-editor .stretched-link-field a:after {
+  display: none;
+}
+
+.on-page-editor .stretched-link:after {
+  display: none;
+}
+
+.english-font {
+  font-family: "Roboto", Arial, sans-serif !important;
+}
+
+.arabic-font {
+  font-family: "NotoKufiArabic", Arial, sans-serif !important;
+}
+
+.flex-basis-0 {
+  -ms-flex-preferred-size: 0%;
+  flex-basis: 0%;
+}
+
+.bg-position-y--top {
+  background-position-y: top !important;
+}
+
+.bg-position-y--bottom {
+  background-position-y: bottom !important;
+}
+
+.bg-position-y--right {
+  background-position-y: right !important;
+}
+
+html[dir='rtl'] .bg-position-y--right,
+.translated-rtl .bg-position-y--right {
+  background-position-y: left !important;
+}
+
+.bg-position-y--left {
+  background-position-y: left !important;
+}
+
+html[dir='rtl'] .bg-position-y--left,
+.translated-rtl .bg-position-y--left {
+  background-position-y: right !important;
+}
+
+.bg-position-x--top {
+  background-position-x: top !important;
+}
+
+.bg-position-x--bottom {
+  background-position-x: bottom !important;
+}
+
+.bg-position-x--right {
+  background-position-x: right !important;
+}
+
+html[dir='rtl'] .bg-position-x--right,
+.translated-rtl .bg-position-x--right {
+  background-position-x: left !important;
+}
+
+.bg-position-x--left {
+  background-position-x: left !important;
+}
+
+html[dir='rtl'] .bg-position-x--left,
+.translated-rtl .bg-position-x--left {
+  background-position-x: right !important;
+}
+
+.bg-size-cover {
+  background-size: cover !important;
+}
+
+.bg-size-auto {
+  background-size: auto !important;
+}
+
+.bg-size-contain {
+  background-size: contain !important;
+}
+
+.bg-repeat-no {
+  background-repeat: no-repeat !important;
+}
+
+.bg-repeat-y {
+  background-repeat: repeat-y !important;
+}
+
+.bg-repeat-x {
+  background-repeat: repeat-x !important;
+}
+
+.sitecore-image>img {
+  width: 100%;
+}
+
+/***************************************************************************************************
+Extension Name: ex-layout 
+Extension Version:  
+File: Buttons
+Owner:  
+***************************************************************************************************/
+.button,
+.button>.component-content,
+a.button,
+a.button>.component-content {
+  border-radius: 3px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 900;
+  min-width: 160px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  background-color: #0091C7;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+
+  .button,
+  .button>.component-content,
+  a.button,
+  a.button>.component-content {
+    width: 100%;
+  }
+}
+
+html[dir='rtl'] .button [class*="icon-"],
+.translated-rtl .button [class*="icon-"],
+html[dir='rtl'] .button>.component-content [class*="icon-"],
+.translated-rtl .button>.component-content [class*="icon-"],
+html[dir='rtl'] a.button [class*="icon-"],
+.translated-rtl a.button [class*="icon-"],
+html[dir='rtl'] a.button>.component-content [class*="icon-"],
+.translated-rtl a.button>.component-content [class*="icon-"] {
+  margin-right: 10px;
+}
+
+html:not([dir='rtl']) .button [class*="icon-"],
+.translated-ltr .button [class*="icon-"],
+html:not([dir='rtl']) .button>.component-content [class*="icon-"],
+.translated-ltr .button>.component-content [class*="icon-"],
+html:not([dir='rtl']) a.button [class*="icon-"],
+.translated-ltr a.button [class*="icon-"],
+html:not([dir='rtl']) a.button>.component-content [class*="icon-"],
+.translated-ltr a.button>.component-content [class*="icon-"] {
+  margin-left: 10px;
+}
+
+.button,
+.button a,
+.button input,
+.button>.component-content,
+.button>.component-content a,
+.button>.component-content input,
+a.button,
+a.button a,
+a.button input,
+a.button>.component-content,
+a.button>.component-content a,
+a.button>.component-content input {
+  color: #ffffff;
+}
+
+.button:hover,
+.button:hover [class*=" icon-"],
+.button a:hover,
+.button a:hover [class*=" icon-"],
+.button input:hover,
+.button input:hover [class*=" icon-"],
+.button>.component-content:hover,
+.button>.component-content:hover [class*=" icon-"],
+.button>.component-content a:hover,
+.button>.component-content a:hover [class*=" icon-"],
+.button>.component-content input:hover,
+.button>.component-content input:hover [class*=" icon-"],
+a.button:hover,
+a.button:hover [class*=" icon-"],
+a.button a:hover,
+a.button a:hover [class*=" icon-"],
+a.button input:hover,
+a.button input:hover [class*=" icon-"],
+a.button>.component-content:hover,
+a.button>.component-content:hover [class*=" icon-"],
+a.button>.component-content a:hover,
+a.button>.component-content a:hover [class*=" icon-"],
+a.button>.component-content input:hover,
+a.button>.component-content input:hover [class*=" icon-"] {
+  color: #ffffff;
+}
+
+.button:hover,
+.button>.component-content:hover,
+a.button:hover,
+a.button>.component-content:hover {
+  background: #FAA317;
+}
+
+.button:hover,
+.button:hover a,
+.button:hover input,
+.button:hover [class*=" icon-"],
+.button>.component-content:hover,
+.button>.component-content:hover a,
+.button>.component-content:hover input,
+.button>.component-content:hover [class*=" icon-"],
+a.button:hover,
+a.button:hover a,
+a.button:hover input,
+a.button:hover [class*=" icon-"],
+a.button>.component-content:hover,
+a.button>.component-content:hover a,
+a.button>.component-content:hover input,
+a.button>.component-content:hover [class*=" icon-"] {
+  color: #ffffff;
+}
+
+.button a:focus,
+.button>.component-content a:focus,
+a.button a:focus,
+a.button>.component-content a:focus {
+  color: #ffffff;
+}
+
+.button:focus,
+.button>.component-content:focus,
+a.button:focus,
+a.button>.component-content:focus {
+  background: #45DDB4;
+}
+
+.button:focus,
+.button:focus a,
+.button:focus input,
+.button:focus [class*=" icon-"],
+.button>.component-content:focus,
+.button>.component-content:focus a,
+.button>.component-content:focus input,
+.button>.component-content:focus [class*=" icon-"],
+a.button:focus,
+a.button:focus a,
+a.button:focus input,
+a.button:focus [class*=" icon-"],
+a.button>.component-content:focus,
+a.button>.component-content:focus a,
+a.button>.component-content:focus input,
+a.button>.component-content:focus [class*=" icon-"] {
+  color: #ffffff;
+}
+
+.button--icononly>span,
+.button>.component-content--icononly>span,
+a.button--icononly>span,
+a.button>.component-content--icononly>span {
+  display: none !important;
+}
+
+.button--withouticon>i,
+.button>.component-content--withouticon>i,
+a.button--withouticon>i,
+a.button>.component-content--withouticon>i {
+  display: none !important;
+}
+
+.button--sharp,
+.button>.component-content--sharp,
+a.button--sharp,
+a.button>.component-content--sharp {
+  border-radius: 0;
+}
+
+.button--uppercase,
+.button>.component-content--uppercase,
+a.button--uppercase,
+a.button>.component-content--uppercase {
+  text-transform: uppercase;
+}
+
+.button--reverse,
+.button>.component-content--reverse,
+a.button--reverse,
+a.button>.component-content--reverse {
+  background-color: #3F3E45;
+}
+
+.button--reverse:hover,
+.button>.component-content--reverse:hover,
+a.button--reverse:hover,
+a.button>.component-content--reverse:hover {
+  background: #0091C7;
+}
+
+.button--invert,
+.button>.component-content--invert,
+a.button--invert,
+a.button>.component-content--invert {
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+  color: #0091C7;
+  border-color: #0091C7;
+}
+
+.button--invert:hover,
+.button>.component-content--invert:hover,
+a.button--invert:hover,
+a.button>.component-content--invert:hover {
+  background: transparent;
+  color: #3F3E45;
+  border-color: #3F3E45;
+}
+
+.button--invert--reverse,
+.button>.component-content--invert--reverse,
+a.button--invert--reverse,
+a.button>.component-content--invert--reverse {
+  color: #3F3E45;
+  border-color: #3F3E45;
+}
+
+.button--invert--reverse:hover,
+.button>.component-content--invert--reverse:hover,
+a.button--invert--reverse:hover,
+a.button>.component-content--invert--reverse:hover {
+  color: #0091C7;
+  border-color: #0091C7;
+}
+
+.button--invert--white-bg,
+.button>.component-content--invert--white-bg,
+a.button--invert--white-bg,
+a.button>.component-content--invert--white-bg {
+  background-color: #fff;
+}
+
+.button--invert--white,
+.button>.component-content--invert--white,
+a.button--invert--white,
+a.button>.component-content--invert--white {
+  color: #fff;
+  border-color: #fff;
+}
+
+.button--invert--white:hover,
+.button>.component-content--invert--white:hover,
+a.button--invert--white:hover,
+a.button>.component-content--invert--white:hover {
+  color: #0091C7;
+  border-color: #0091C7;
+}
+
+.button--normal,
+.button--normal:hover,
+.button>.component-content--normal,
+.button>.component-content--normal:hover,
+a.button--normal,
+a.button--normal:hover,
+a.button>.component-content--normal,
+a.button>.component-content--normal:hover {
+  background-color: transparent;
+  color: #3F3E45;
+  border: 2px solid #3F3E45;
+}
+
+.button--borderless,
+.button>.component-content--borderless,
+a.button--borderless,
+a.button>.component-content--borderless {
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button--reset,
+.button>.component-content--reset,
+a.button--reset,
+a.button>.component-content--reset {
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+
+.button--hoverline:hover:after,
+.button>.component-content--hoverline:hover:after,
+a.button--hoverline:hover:after,
+a.button>.component-content--hoverline:hover:after {
+  content: '';
+  width: 60%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+}
+
+.button--large,
+.button>.component-content--large,
+a.button--large,
+a.button>.component-content--large {
+  min-width: 200px;
+}
+
+@media screen and (max-device-width: 922px),
+screen and (max-width: 922px) {
+
+  .button--large .button--large--xs,
+  .button--large .button>.component-content--large--xs,
+  .button--large a.button--large--xs,
+  .button--large a.button>.component-content--large--xs,
+  .button>.component-content--large .button--large--xs,
+  .button>.component-content--large .button>.component-content--large--xs,
+  .button>.component-content--large a.button--large--xs,
+  .button>.component-content--large a.button>.component-content--large--xs,
+  a.button--large .button--large--xs,
+  a.button--large .button>.component-content--large--xs,
+  a.button--large a.button--large--xs,
+  a.button--large a.button>.component-content--large--xs,
+  a.button>.component-content--large .button--large--xs,
+  a.button>.component-content--large .button>.component-content--large--xs,
+  a.button>.component-content--large a.button--large--xs,
+  a.button>.component-content--large a.button>.component-content--large--xs {
+    width: 200px;
+  }
+}
+
+.button--sitecore a,
+.button>.component-content--sitecore a,
+a.button--sitecore a,
+a.button>.component-content--sitecore a {
+  color: inherit;
+  padding-right: 13px;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0;
+  text-transform: inherit;
+  background: transparent;
+}
+
+html[dir='rtl'] .button--sitecore a,
+.translated-rtl .button--sitecore a,
+html[dir='rtl'] .button>.component-content--sitecore a,
+.translated-rtl .button>.component-content--sitecore a,
+html[dir='rtl'] a.button--sitecore a,
+.translated-rtl a.button--sitecore a,
+html[dir='rtl'] a.button>.component-content--sitecore a,
+.translated-rtl a.button>.component-content--sitecore a {
+  padding-left: 13px;
+  padding-right: 0;
+}
+
+.button--sitecore a:hover,
+.button>.component-content--sitecore a:hover,
+a.button--sitecore a:hover,
+a.button>.component-content--sitecore a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.button--sitecore__icon,
+.button>.component-content--sitecore__icon,
+a.button--sitecore__icon,
+a.button>.component-content--sitecore__icon {
+  right: 10px;
+  top: -webkit-calc(50% - 8px);
+  top: calc(50% - 8px);
+  pointer-events: none;
+  font-size: 13px;
+}
+
+html[dir='rtl'] .button--sitecore__icon,
+.translated-rtl .button--sitecore__icon,
+html[dir='rtl'] .button>.component-content--sitecore__icon,
+.translated-rtl .button>.component-content--sitecore__icon,
+html[dir='rtl'] a.button--sitecore__icon,
+.translated-rtl a.button--sitecore__icon,
+html[dir='rtl'] a.button>.component-content--sitecore__icon,
+.translated-rtl a.button>.component-content--sitecore__icon {
+  right: auto;
+  left: 10px;
+}
+
+.button--sitecore.justify-content-start a,
+.button>.component-content--sitecore.justify-content-start a,
+a.button--sitecore.justify-content-start a,
+a.button>.component-content--sitecore.justify-content-start a {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.button--sitecore.justify-content-end a,
+.button>.component-content--sitecore.justify-content-end a,
+a.button--sitecore.justify-content-end a,
+a.button>.component-content--sitecore.justify-content-end a {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.button--sitecore.justify-content-center a,
+.button>.component-content--sitecore.justify-content-center a,
+a.button--sitecore.justify-content-center a,
+a.button>.component-content--sitecore.justify-content-center a {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.button--sitecore.justify-content-between a,
+.button>.component-content--sitecore.justify-content-between a,
+a.button--sitecore.justify-content-between a,
+a.button>.component-content--sitecore.justify-content-between a {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.button--sitecore.align-items-start a,
+.button>.component-content--sitecore.align-items-start a,
+a.button--sitecore.align-items-start a,
+a.button>.component-content--sitecore.align-items-start a {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.button--sitecore.align-items-end a,
+.button>.component-content--sitecore.align-items-end a,
+a.button--sitecore.align-items-end a,
+a.button>.component-content--sitecore.align-items-end a {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.button--sitecore.align-items-center a,
+.button>.component-content--sitecore.align-items-center a,
+a.button--sitecore.align-items-center a,
+a.button>.component-content--sitecore.align-items-center a {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.button--sitecore.font-weight-bold a,
+.button>.component-content--sitecore.font-weight-bold a,
+a.button--sitecore.font-weight-bold a,
+a.button>.component-content--sitecore.font-weight-bold a {
+  font-weight: bold;
+}
+
+.button--white,
+.button>.component-content--white,
+a.button--white,
+a.button>.component-content--white {
+  background-color: #ffffff;
+  color: #0091C7;
+}
+
+.button--white:hover,
+.button>.component-content--white:hover,
+a.button--white:hover,
+a.button>.component-content--white:hover {
+  color: #ffffff;
+  background: #0091C7;
+}
+
+.button__loadingicon,
+.button>.component-content__loadingicon,
+a.button__loadingicon,
+a.button>.component-content__loadingicon {
+  display: none;
+}
+
+.button--loader .button__loadingicon,
+.button--loader .button>.component-content__loadingicon,
+.button--loader a.button__loadingicon,
+.button--loader a.button>.component-content__loadingicon,
+.button>.component-content--loader .button__loadingicon,
+.button>.component-content--loader .button>.component-content__loadingicon,
+.button>.component-content--loader a.button__loadingicon,
+.button>.component-content--loader a.button>.component-content__loadingicon,
+a.button--loader .button__loadingicon,
+a.button--loader .button>.component-content__loadingicon,
+a.button--loader a.button__loadingicon,
+a.button--loader a.button>.component-content__loadingicon,
+a.button>.component-content--loader .button__loadingicon,
+a.button>.component-content--loader .button>.component-content__loadingicon,
+a.button>.component-content--loader a.button__loadingicon,
+a.button>.component-content--loader a.button>.component-content__loadingicon {
+  display: inline-block;
+}
+
+.button--reset-height,
+.button>.component-content--reset-height,
+a.button--reset-height,
+a.button>.component-content--reset-height {
+  height: auto;
+  min-height: auto;
+}
+
+.button--disabled,
+.button:disabled,
+.button>.component-content--disabled,
+.button>.component-content:disabled,
+a.button--disabled,
+a.button:disabled,
+a.button>.component-content--disabled,
+a.button>.component-content:disabled {
+  pointer-events: none;
+  cursor: pointer;
+  color: #ffffff;
+  background: #D6D6D6;
+}
+
+.button--sign,
+.button--sign:hover,
+.button>.component-content--sign,
+.button>.component-content--sign:hover,
+a.button--sign,
+a.button--sign:hover,
+a.button>.component-content--sign,
+a.button>.component-content--sign:hover {
+  background-color: transparent;
+}
+
+.button--sign span,
+.button--sign:hover span,
+.button>.component-content--sign span,
+.button>.component-content--sign:hover span,
+a.button--sign span,
+a.button--sign:hover span,
+a.button>.component-content--sign span,
+a.button>.component-content--sign:hover span {
+  color: #0081C6;
+  font-size: 16px;
+}
+
+.button--sign .circle,
+.button--sign:hover .circle,
+.button>.component-content--sign .circle,
+.button>.component-content--sign:hover .circle,
+a.button--sign .circle,
+a.button--sign:hover .circle,
+a.button>.component-content--sign .circle,
+a.button>.component-content--sign:hover .circle {
+  padding: 9px;
+  background: #0081C6;
+  border-radius: 50%;
+}
+
+.button--sign i,
+.button--sign:hover i,
+.button>.component-content--sign i,
+.button>.component-content--sign:hover i,
+a.button--sign i,
+a.button--sign:hover i,
+a.button>.component-content--sign i,
+a.button>.component-content--sign:hover i {
+  color: #ffffff;
+}
+
+.button--direction,
+.button>.component-content--direction,
+a.button--direction,
+a.button>.component-content--direction {
+  border: 2px solid #0091C7;
+  font-size: 16px;
+}
+
+.button--secondary,
+.button--secondary>.component-content,
+.button>.component-content--secondary,
+.button>.component-content--secondary>.component-content,
+a.button--secondary,
+a.button--secondary>.component-content,
+a.button>.component-content--secondary,
+a.button>.component-content--secondary>.component-content {
+  background-color: transparent;
+  border: 2px solid #3F3E45;
+  border-radius: 3px;
+}
+
+.button--secondary,
+.button--secondary a,
+.button--secondary input,
+.button--secondary [class*=" icon-"],
+.button--secondary>.component-content,
+.button--secondary>.component-content a,
+.button--secondary>.component-content input,
+.button--secondary>.component-content [class*=" icon-"],
+.button>.component-content--secondary,
+.button>.component-content--secondary a,
+.button>.component-content--secondary input,
+.button>.component-content--secondary [class*=" icon-"],
+.button>.component-content--secondary>.component-content,
+.button>.component-content--secondary>.component-content a,
+.button>.component-content--secondary>.component-content input,
+.button>.component-content--secondary>.component-content [class*=" icon-"],
+a.button--secondary,
+a.button--secondary a,
+a.button--secondary input,
+a.button--secondary [class*=" icon-"],
+a.button--secondary>.component-content,
+a.button--secondary>.component-content a,
+a.button--secondary>.component-content input,
+a.button--secondary>.component-content [class*=" icon-"],
+a.button>.component-content--secondary,
+a.button>.component-content--secondary a,
+a.button>.component-content--secondary input,
+a.button>.component-content--secondary [class*=" icon-"],
+a.button>.component-content--secondary>.component-content,
+a.button>.component-content--secondary>.component-content a,
+a.button>.component-content--secondary>.component-content input,
+a.button>.component-content--secondary>.component-content [class*=" icon-"] {
+  color: #3F3E45;
+}
+
+.button--secondary:hover,
+.button--secondary a:hover,
+.button--secondary input:hover,
+.button--secondary [class*=" icon-"]:hover,
+.button--secondary>.component-content:hover,
+.button--secondary>.component-content a:hover,
+.button--secondary>.component-content input:hover,
+.button--secondary>.component-content [class*=" icon-"]:hover,
+.button>.component-content--secondary:hover,
+.button>.component-content--secondary a:hover,
+.button>.component-content--secondary input:hover,
+.button>.component-content--secondary [class*=" icon-"]:hover,
+.button>.component-content--secondary>.component-content:hover,
+.button>.component-content--secondary>.component-content a:hover,
+.button>.component-content--secondary>.component-content input:hover,
+.button>.component-content--secondary>.component-content [class*=" icon-"]:hover,
+a.button--secondary:hover,
+a.button--secondary a:hover,
+a.button--secondary input:hover,
+a.button--secondary [class*=" icon-"]:hover,
+a.button--secondary>.component-content:hover,
+a.button--secondary>.component-content a:hover,
+a.button--secondary>.component-content input:hover,
+a.button--secondary>.component-content [class*=" icon-"]:hover,
+a.button>.component-content--secondary:hover,
+a.button>.component-content--secondary a:hover,
+a.button>.component-content--secondary input:hover,
+a.button>.component-content--secondary [class*=" icon-"]:hover,
+a.button>.component-content--secondary>.component-content:hover,
+a.button>.component-content--secondary>.component-content a:hover,
+a.button>.component-content--secondary>.component-content input:hover,
+a.button>.component-content--secondary>.component-content [class*=" icon-"]:hover {
+  color: #3F3E45;
+}
+
+.button--secondary:focus,
+.button--secondary a:focus,
+.button--secondary input:focus,
+.button--secondary [class*=" icon-"]:focus,
+.button--secondary>.component-content:focus,
+.button--secondary>.component-content a:focus,
+.button--secondary>.component-content input:focus,
+.button--secondary>.component-content [class*=" icon-"]:focus,
+.button>.component-content--secondary:focus,
+.button>.component-content--secondary a:focus,
+.button>.component-content--secondary input:focus,
+.button>.component-content--secondary [class*=" icon-"]:focus,
+.button>.component-content--secondary>.component-content:focus,
+.button>.component-content--secondary>.component-content a:focus,
+.button>.component-content--secondary>.component-content input:focus,
+.button>.component-content--secondary>.component-content [class*=" icon-"]:focus,
+a.button--secondary:focus,
+a.button--secondary a:focus,
+a.button--secondary input:focus,
+a.button--secondary [class*=" icon-"]:focus,
+a.button--secondary>.component-content:focus,
+a.button--secondary>.component-content a:focus,
+a.button--secondary>.component-content input:focus,
+a.button--secondary>.component-content [class*=" icon-"]:focus,
+a.button>.component-content--secondary:focus,
+a.button>.component-content--secondary a:focus,
+a.button>.component-content--secondary input:focus,
+a.button>.component-content--secondary [class*=" icon-"]:focus,
+a.button>.component-content--secondary>.component-content:focus,
+a.button>.component-content--secondary>.component-content a:focus,
+a.button>.component-content--secondary>.component-content input:focus,
+a.button>.component-content--secondary>.component-content [class*=" icon-"]:focus {
+  color: #3F3E45;
+}
+
+.button--secondary:hover,
+.button--secondary>.component-content:hover,
+.button>.component-content--secondary:hover,
+.button>.component-content--secondary>.component-content:hover,
+a.button--secondary:hover,
+a.button--secondary>.component-content:hover,
+a.button>.component-content--secondary:hover,
+a.button>.component-content--secondary>.component-content:hover {
+  border-color: #0091C7;
+  background: #0091C7;
+}
+
+.button--secondary:hover,
+.button--secondary:hover a,
+.button--secondary:hover input,
+.button--secondary:hover [class*=" icon-"],
+.button--secondary>.component-content:hover,
+.button--secondary>.component-content:hover a,
+.button--secondary>.component-content:hover input,
+.button--secondary>.component-content:hover [class*=" icon-"],
+.button>.component-content--secondary:hover,
+.button>.component-content--secondary:hover a,
+.button>.component-content--secondary:hover input,
+.button>.component-content--secondary:hover [class*=" icon-"],
+.button>.component-content--secondary>.component-content:hover,
+.button>.component-content--secondary>.component-content:hover a,
+.button>.component-content--secondary>.component-content:hover input,
+.button>.component-content--secondary>.component-content:hover [class*=" icon-"],
+a.button--secondary:hover,
+a.button--secondary:hover a,
+a.button--secondary:hover input,
+a.button--secondary:hover [class*=" icon-"],
+a.button--secondary>.component-content:hover,
+a.button--secondary>.component-content:hover a,
+a.button--secondary>.component-content:hover input,
+a.button--secondary>.component-content:hover [class*=" icon-"],
+a.button>.component-content--secondary:hover,
+a.button>.component-content--secondary:hover a,
+a.button>.component-content--secondary:hover input,
+a.button>.component-content--secondary:hover [class*=" icon-"],
+a.button>.component-content--secondary>.component-content:hover,
+a.button>.component-content--secondary>.component-content:hover a,
+a.button>.component-content--secondary>.component-content:hover input,
+a.button>.component-content--secondary>.component-content:hover [class*=" icon-"] {
+  color: #ffffff;
+}
+
+.button--secondary:focus,
+.button--secondary>.component-content:focus,
+.button>.component-content--secondary:focus,
+.button>.component-content--secondary>.component-content:focus,
+a.button--secondary:focus,
+a.button--secondary>.component-content:focus,
+a.button>.component-content--secondary:focus,
+a.button>.component-content--secondary>.component-content:focus {
+  border-color: #ffffff;
+  background: #000;
+}
+
+.button--secondary:focus,
+.button--secondary:focus a,
+.button--secondary:focus input,
+.button--secondary:focus [class*=" icon-"],
+.button--secondary>.component-content:focus,
+.button--secondary>.component-content:focus a,
+.button--secondary>.component-content:focus input,
+.button--secondary>.component-content:focus [class*=" icon-"],
+.button>.component-content--secondary:focus,
+.button>.component-content--secondary:focus a,
+.button>.component-content--secondary:focus input,
+.button>.component-content--secondary:focus [class*=" icon-"],
+.button>.component-content--secondary>.component-content:focus,
+.button>.component-content--secondary>.component-content:focus a,
+.button>.component-content--secondary>.component-content:focus input,
+.button>.component-content--secondary>.component-content:focus [class*=" icon-"],
+a.button--secondary:focus,
+a.button--secondary:focus a,
+a.button--secondary:focus input,
+a.button--secondary:focus [class*=" icon-"],
+a.button--secondary>.component-content:focus,
+a.button--secondary>.component-content:focus a,
+a.button--secondary>.component-content:focus input,
+a.button--secondary>.component-content:focus [class*=" icon-"],
+a.button>.component-content--secondary:focus,
+a.button>.component-content--secondary:focus a,
+a.button>.component-content--secondary:focus input,
+a.button>.component-content--secondary:focus [class*=" icon-"],
+a.button>.component-content--secondary>.component-content:focus,
+a.button>.component-content--secondary>.component-content:focus a,
+a.button>.component-content--secondary>.component-content:focus input,
+a.button>.component-content--secondary>.component-content:focus [class*=" icon-"] {
+  color: #ffffff;
+}
+
+.button--secondary.button--disabled,
+.button--secondary:disabled,
+.button--secondary>.component-content.button--disabled,
+.button--secondary>.component-content:disabled,
+.button>.component-content--secondary.button--disabled,
+.button>.component-content--secondary:disabled,
+.button>.component-content--secondary>.component-content.button--disabled,
+.button>.component-content--secondary>.component-content:disabled,
+a.button--secondary.button--disabled,
+a.button--secondary:disabled,
+a.button--secondary>.component-content.button--disabled,
+a.button--secondary>.component-content:disabled,
+a.button>.component-content--secondary.button--disabled,
+a.button>.component-content--secondary:disabled,
+a.button>.component-content--secondary>.component-content.button--disabled,
+a.button>.component-content--secondary>.component-content:disabled {
+  border-color: #D6D6D6;
+  background: transparent;
+}
+
+.button--secondary.button--disabled,
+.button--secondary.button--disabled a,
+.button--secondary.button--disabled input,
+.button--secondary.button--disabled [class*=" icon-"],
+.button--secondary:disabled,
+.button--secondary:disabled a,
+.button--secondary:disabled input,
+.button--secondary:disabled [class*=" icon-"],
+.button--secondary>.component-content.button--disabled,
+.button--secondary>.component-content.button--disabled a,
+.button--secondary>.component-content.button--disabled input,
+.button--secondary>.component-content.button--disabled [class*=" icon-"],
+.button--secondary>.component-content:disabled,
+.button--secondary>.component-content:disabled a,
+.button--secondary>.component-content:disabled input,
+.button--secondary>.component-content:disabled [class*=" icon-"],
+.button>.component-content--secondary.button--disabled,
+.button>.component-content--secondary.button--disabled a,
+.button>.component-content--secondary.button--disabled input,
+.button>.component-content--secondary.button--disabled [class*=" icon-"],
+.button>.component-content--secondary:disabled,
+.button>.component-content--secondary:disabled a,
+.button>.component-content--secondary:disabled input,
+.button>.component-content--secondary:disabled [class*=" icon-"],
+.button>.component-content--secondary>.component-content.button--disabled,
+.button>.component-content--secondary>.component-content.button--disabled a,
+.button>.component-content--secondary>.component-content.button--disabled input,
+.button>.component-content--secondary>.component-content.button--disabled [class*=" icon-"],
+.button>.component-content--secondary>.component-content:disabled,
+.button>.component-content--secondary>.component-content:disabled a,
+.button>.component-content--secondary>.component-content:disabled input,
+.button>.component-content--secondary>.component-content:disabled [class*=" icon-"],
+a.button--secondary.button--disabled,
+a.button--secondary.button--disabled a,
+a.button--secondary.button--disabled input,
+a.button--secondary.button--disabled [class*=" icon-"],
+a.button--secondary:disabled,
+a.button--secondary:disabled a,
+a.button--secondary:disabled input,
+a.button--secondary:disabled [class*=" icon-"],
+a.button--secondary>.component-content.button--disabled,
+a.button--secondary>.component-content.button--disabled a,
+a.button--secondary>.component-content.button--disabled input,
+a.button--secondary>.component-content.button--disabled [class*=" icon-"],
+a.button--secondary>.component-content:disabled,
+a.button--secondary>.component-content:disabled a,
+a.button--secondary>.component-content:disabled input,
+a.button--secondary>.component-content:disabled [class*=" icon-"],
+a.button>.component-content--secondary.button--disabled,
+a.button>.component-content--secondary.button--disabled a,
+a.button>.component-content--secondary.button--disabled input,
+a.button>.component-content--secondary.button--disabled [class*=" icon-"],
+a.button>.component-content--secondary:disabled,
+a.button>.component-content--secondary:disabled a,
+a.button>.component-content--secondary:disabled input,
+a.button>.component-content--secondary:disabled [class*=" icon-"],
+a.button>.component-content--secondary>.component-content.button--disabled,
+a.button>.component-content--secondary>.component-content.button--disabled a,
+a.button>.component-content--secondary>.component-content.button--disabled input,
+a.button>.component-content--secondary>.component-content.button--disabled [class*=" icon-"],
+a.button>.component-content--secondary>.component-content:disabled,
+a.button>.component-content--secondary>.component-content:disabled a,
+a.button>.component-content--secondary>.component-content:disabled input,
+a.button>.component-content--secondary>.component-content:disabled [class*=" icon-"] {
+  color: #b2b2b5;
+}
+
+.button--tertiary,
+.button--tertiary>.component-content,
+.button>.component-content--tertiary,
+.button>.component-content--tertiary>.component-content,
+a.button--tertiary,
+a.button--tertiary>.component-content,
+a.button>.component-content--tertiary,
+a.button>.component-content--tertiary>.component-content {
+  background-color: #6C6B70;
+  color: #ffffff;
+}
+
+.button--tertiary,
+.button--tertiary a,
+.button--tertiary input,
+.button--tertiary [class*=" icon-"],
+.button--tertiary>.component-content,
+.button--tertiary>.component-content a,
+.button--tertiary>.component-content input,
+.button--tertiary>.component-content [class*=" icon-"],
+.button>.component-content--tertiary,
+.button>.component-content--tertiary a,
+.button>.component-content--tertiary input,
+.button>.component-content--tertiary [class*=" icon-"],
+.button>.component-content--tertiary>.component-content,
+.button>.component-content--tertiary>.component-content a,
+.button>.component-content--tertiary>.component-content input,
+.button>.component-content--tertiary>.component-content [class*=" icon-"],
+a.button--tertiary,
+a.button--tertiary a,
+a.button--tertiary input,
+a.button--tertiary [class*=" icon-"],
+a.button--tertiary>.component-content,
+a.button--tertiary>.component-content a,
+a.button--tertiary>.component-content input,
+a.button--tertiary>.component-content [class*=" icon-"],
+a.button>.component-content--tertiary,
+a.button>.component-content--tertiary a,
+a.button>.component-content--tertiary input,
+a.button>.component-content--tertiary [class*=" icon-"],
+a.button>.component-content--tertiary>.component-content,
+a.button>.component-content--tertiary>.component-content a,
+a.button>.component-content--tertiary>.component-content input,
+a.button>.component-content--tertiary>.component-content [class*=" icon-"] {
+  color: #ffffff;
+}
+
+.button--tertiary:hover,
+.button--tertiary a:hover,
+.button--tertiary input:hover,
+.button--tertiary [class*=" icon-"]:hover,
+.button--tertiary>.component-content:hover,
+.button--tertiary>.component-content a:hover,
+.button--tertiary>.component-content input:hover,
+.button--tertiary>.component-content [class*=" icon-"]:hover,
+.button>.component-content--tertiary:hover,
+.button>.component-content--tertiary a:hover,
+.button>.component-content--tertiary input:hover,
+.button>.component-content--tertiary [class*=" icon-"]:hover,
+.button>.component-content--tertiary>.component-content:hover,
+.button>.component-content--tertiary>.component-content a:hover,
+.button>.component-content--tertiary>.component-content input:hover,
+.button>.component-content--tertiary>.component-content [class*=" icon-"]:hover,
+a.button--tertiary:hover,
+a.button--tertiary a:hover,
+a.button--tertiary input:hover,
+a.button--tertiary [class*=" icon-"]:hover,
+a.button--tertiary>.component-content:hover,
+a.button--tertiary>.component-content a:hover,
+a.button--tertiary>.component-content input:hover,
+a.button--tertiary>.component-content [class*=" icon-"]:hover,
+a.button>.component-content--tertiary:hover,
+a.button>.component-content--tertiary a:hover,
+a.button>.component-content--tertiary input:hover,
+a.button>.component-content--tertiary [class*=" icon-"]:hover,
+a.button>.component-content--tertiary>.component-content:hover,
+a.button>.component-content--tertiary>.component-content a:hover,
+a.button>.component-content--tertiary>.component-content input:hover,
+a.button>.component-content--tertiary>.component-content [class*=" icon-"]:hover {
+  color: #3F3E45;
+}
+
+.button--tertiary:hover,
+.button--tertiary>.component-content:hover,
+.button>.component-content--tertiary:hover,
+.button>.component-content--tertiary>.component-content:hover,
+a.button--tertiary:hover,
+a.button--tertiary>.component-content:hover,
+a.button>.component-content--tertiary:hover,
+a.button>.component-content--tertiary>.component-content:hover {
+  background: #b2b2b5;
+}
+
+.button--tertiary:hover,
+.button--tertiary:hover a,
+.button--tertiary:hover input,
+.button--tertiary:hover [class*=" icon-"],
+.button--tertiary>.component-content:hover,
+.button--tertiary>.component-content:hover a,
+.button--tertiary>.component-content:hover input,
+.button--tertiary>.component-content:hover [class*=" icon-"],
+.button>.component-content--tertiary:hover,
+.button>.component-content--tertiary:hover a,
+.button>.component-content--tertiary:hover input,
+.button>.component-content--tertiary:hover [class*=" icon-"],
+.button>.component-content--tertiary>.component-content:hover,
+.button>.component-content--tertiary>.component-content:hover a,
+.button>.component-content--tertiary>.component-content:hover input,
+.button>.component-content--tertiary>.component-content:hover [class*=" icon-"],
+a.button--tertiary:hover,
+a.button--tertiary:hover a,
+a.button--tertiary:hover input,
+a.button--tertiary:hover [class*=" icon-"],
+a.button--tertiary>.component-content:hover,
+a.button--tertiary>.component-content:hover a,
+a.button--tertiary>.component-content:hover input,
+a.button--tertiary>.component-content:hover [class*=" icon-"],
+a.button>.component-content--tertiary:hover,
+a.button>.component-content--tertiary:hover a,
+a.button>.component-content--tertiary:hover input,
+a.button>.component-content--tertiary:hover [class*=" icon-"],
+a.button>.component-content--tertiary>.component-content:hover,
+a.button>.component-content--tertiary>.component-content:hover a,
+a.button>.component-content--tertiary>.component-content:hover input,
+a.button>.component-content--tertiary>.component-content:hover [class*=" icon-"] {
+  color: #3F3E45;
+}
+
+.button--tertiary:focus,
+.button--tertiary>.component-content:focus,
+.button>.component-content--tertiary:focus,
+.button>.component-content--tertiary>.component-content:focus,
+a.button--tertiary:focus,
+a.button--tertiary>.component-content:focus,
+a.button>.component-content--tertiary:focus,
+a.button>.component-content--tertiary>.component-content:focus {
+  background: #3F3E45;
+}
+
+.button--tertiary:focus,
+.button--tertiary:focus a,
+.button--tertiary:focus input,
+.button--tertiary:focus [class*=" icon-"],
+.button--tertiary>.component-content:focus,
+.button--tertiary>.component-content:focus a,
+.button--tertiary>.component-content:focus input,
+.button--tertiary>.component-content:focus [class*=" icon-"],
+.button>.component-content--tertiary:focus,
+.button>.component-content--tertiary:focus a,
+.button>.component-content--tertiary:focus input,
+.button>.component-content--tertiary:focus [class*=" icon-"],
+.button>.component-content--tertiary>.component-content:focus,
+.button>.component-content--tertiary>.component-content:focus a,
+.button>.component-content--tertiary>.component-content:focus input,
+.button>.component-content--tertiary>.component-content:focus [class*=" icon-"],
+a.button--tertiary:focus,
+a.button--tertiary:focus a,
+a.button--tertiary:focus input,
+a.button--tertiary:focus [class*=" icon-"],
+a.button--tertiary>.component-content:focus,
+a.button--tertiary>.component-content:focus a,
+a.button--tertiary>.component-content:focus input,
+a.button--tertiary>.component-content:focus [class*=" icon-"],
+a.button>.component-content--tertiary:focus,
+a.button>.component-content--tertiary:focus a,
+a.button>.component-content--tertiary:focus input,
+a.button>.component-content--tertiary:focus [class*=" icon-"],
+a.button>.component-content--tertiary>.component-content:focus,
+a.button>.component-content--tertiary>.component-content:focus a,
+a.button>.component-content--tertiary>.component-content:focus input,
+a.button>.component-content--tertiary>.component-content:focus [class*=" icon-"] {
+  color: #ffffff;
+}
+
+.button--tertiary.button--disabled,
+.button--tertiary:disabled,
+.button--tertiary>.component-content.button--disabled,
+.button--tertiary>.component-content:disabled,
+.button>.component-content--tertiary.button--disabled,
+.button>.component-content--tertiary:disabled,
+.button>.component-content--tertiary>.component-content.button--disabled,
+.button>.component-content--tertiary>.component-content:disabled,
+a.button--tertiary.button--disabled,
+a.button--tertiary:disabled,
+a.button--tertiary>.component-content.button--disabled,
+a.button--tertiary>.component-content:disabled,
+a.button>.component-content--tertiary.button--disabled,
+a.button>.component-content--tertiary:disabled,
+a.button>.component-content--tertiary>.component-content.button--disabled,
+a.button>.component-content--tertiary>.component-content:disabled {
+  background: #D6D6D6;
+}
+
+.button--tertiary.button--disabled,
+.button--tertiary.button--disabled a,
+.button--tertiary.button--disabled input,
+.button--tertiary.button--disabled [class*=" icon-"],
+.button--tertiary:disabled,
+.button--tertiary:disabled a,
+.button--tertiary:disabled input,
+.button--tertiary:disabled [class*=" icon-"],
+.button--tertiary>.component-content.button--disabled,
+.button--tertiary>.component-content.button--disabled a,
+.button--tertiary>.component-content.button--disabled input,
+.button--tertiary>.component-content.button--disabled [class*=" icon-"],
+.button--tertiary>.component-content:disabled,
+.button--tertiary>.component-content:disabled a,
+.button--tertiary>.component-content:disabled input,
+.button--tertiary>.component-content:disabled [class*=" icon-"],
+.button>.component-content--tertiary.button--disabled,
+.button>.component-content--tertiary.button--disabled a,
+.button>.component-content--tertiary.button--disabled input,
+.button>.component-content--tertiary.button--disabled [class*=" icon-"],
+.button>.component-content--tertiary:disabled,
+.button>.component-content--tertiary:disabled a,
+.button>.component-content--tertiary:disabled input,
+.button>.component-content--tertiary:disabled [class*=" icon-"],
+.button>.component-content--tertiary>.component-content.button--disabled,
+.button>.component-content--tertiary>.component-content.button--disabled a,
+.button>.component-content--tertiary>.component-content.button--disabled input,
+.button>.component-content--tertiary>.component-content.button--disabled [class*=" icon-"],
+.button>.component-content--tertiary>.component-content:disabled,
+.button>.component-content--tertiary>.component-content:disabled a,
+.button>.component-content--tertiary>.component-content:disabled input,
+.button>.component-content--tertiary>.component-content:disabled [class*=" icon-"],
+a.button--tertiary.button--disabled,
+a.button--tertiary.button--disabled a,
+a.button--tertiary.button--disabled input,
+a.button--tertiary.button--disabled [class*=" icon-"],
+a.button--tertiary:disabled,
+a.button--tertiary:disabled a,
+a.button--tertiary:disabled input,
+a.button--tertiary:disabled [class*=" icon-"],
+a.button--tertiary>.component-content.button--disabled,
+a.button--tertiary>.component-content.button--disabled a,
+a.button--tertiary>.component-content.button--disabled input,
+a.button--tertiary>.component-content.button--disabled [class*=" icon-"],
+a.button--tertiary>.component-content:disabled,
+a.button--tertiary>.component-content:disabled a,
+a.button--tertiary>.component-content:disabled input,
+a.button--tertiary>.component-content:disabled [class*=" icon-"],
+a.button>.component-content--tertiary.button--disabled,
+a.button>.component-content--tertiary.button--disabled a,
+a.button>.component-content--tertiary.button--disabled input,
+a.button>.component-content--tertiary.button--disabled [class*=" icon-"],
+a.button>.component-content--tertiary:disabled,
+a.button>.component-content--tertiary:disabled a,
+a.button>.component-content--tertiary:disabled input,
+a.button>.component-content--tertiary:disabled [class*=" icon-"],
+a.button>.component-content--tertiary>.component-content.button--disabled,
+a.button>.component-content--tertiary>.component-content.button--disabled a,
+a.button>.component-content--tertiary>.component-content.button--disabled input,
+a.button>.component-content--tertiary>.component-content.button--disabled [class*=" icon-"],
+a.button>.component-content--tertiary>.component-content:disabled,
+a.button>.component-content--tertiary>.component-content:disabled a,
+a.button>.component-content--tertiary>.component-content:disabled input,
+a.button>.component-content--tertiary>.component-content:disabled [class*=" icon-"] {
+  color: #b2b2b5;
+}
+
+.button--quaternary,
+.button--quaternary>.component-content,
+.button>.component-content--quaternary,
+.button>.component-content--quaternary>.component-content,
+a.button--quaternary,
+a.button--quaternary>.component-content,
+a.button>.component-content--quaternary,
+a.button>.component-content--quaternary>.component-content {
+  background-color: transparent;
+  border: 2px solid #3F3E45;
+  border-radius: 3px;
+}
+
+.button--quaternary,
+.button--quaternary a,
+.button--quaternary input,
+.button--quaternary [class*=" icon-"],
+.button--quaternary>.component-content,
+.button--quaternary>.component-content a,
+.button--quaternary>.component-content input,
+.button--quaternary>.component-content [class*=" icon-"],
+.button>.component-content--quaternary,
+.button>.component-content--quaternary a,
+.button>.component-content--quaternary input,
+.button>.component-content--quaternary [class*=" icon-"],
+.button>.component-content--quaternary>.component-content,
+.button>.component-content--quaternary>.component-content a,
+.button>.component-content--quaternary>.component-content input,
+.button>.component-content--quaternary>.component-content [class*=" icon-"],
+a.button--quaternary,
+a.button--quaternary a,
+a.button--quaternary input,
+a.button--quaternary [class*=" icon-"],
+a.button--quaternary>.component-content,
+a.button--quaternary>.component-content a,
+a.button--quaternary>.component-content input,
+a.button--quaternary>.component-content [class*=" icon-"],
+a.button>.component-content--quaternary,
+a.button>.component-content--quaternary a,
+a.button>.component-content--quaternary input,
+a.button>.component-content--quaternary [class*=" icon-"],
+a.button>.component-content--quaternary>.component-content,
+a.button>.component-content--quaternary>.component-content a,
+a.button>.component-content--quaternary>.component-content input,
+a.button>.component-content--quaternary>.component-content [class*=" icon-"] {
+  color: #3F3E45;
+}
+
+.button--quaternary:hover,
+.button--quaternary a:hover,
+.button--quaternary input:hover,
+.button--quaternary [class*=" icon-"]:hover,
+.button--quaternary>.component-content:hover,
+.button--quaternary>.component-content a:hover,
+.button--quaternary>.component-content input:hover,
+.button--quaternary>.component-content [class*=" icon-"]:hover,
+.button>.component-content--quaternary:hover,
+.button>.component-content--quaternary a:hover,
+.button>.component-content--quaternary input:hover,
+.button>.component-content--quaternary [class*=" icon-"]:hover,
+.button>.component-content--quaternary>.component-content:hover,
+.button>.component-content--quaternary>.component-content a:hover,
+.button>.component-content--quaternary>.component-content input:hover,
+.button>.component-content--quaternary>.component-content [class*=" icon-"]:hover,
+a.button--quaternary:hover,
+a.button--quaternary a:hover,
+a.button--quaternary input:hover,
+a.button--quaternary [class*=" icon-"]:hover,
+a.button--quaternary>.component-content:hover,
+a.button--quaternary>.component-content a:hover,
+a.button--quaternary>.component-content input:hover,
+a.button--quaternary>.component-content [class*=" icon-"]:hover,
+a.button>.component-content--quaternary:hover,
+a.button>.component-content--quaternary a:hover,
+a.button>.component-content--quaternary input:hover,
+a.button>.component-content--quaternary [class*=" icon-"]:hover,
+a.button>.component-content--quaternary>.component-content:hover,
+a.button>.component-content--quaternary>.component-content a:hover,
+a.button>.component-content--quaternary>.component-content input:hover,
+a.button>.component-content--quaternary>.component-content [class*=" icon-"]:hover {
+  color: #3F3E45;
+}
+
+.button--quaternary:focus,
+.button--quaternary a:focus,
+.button--quaternary input:focus,
+.button--quaternary [class*=" icon-"]:focus,
+.button--quaternary>.component-content:focus,
+.button--quaternary>.component-content a:focus,
+.button--quaternary>.component-content input:focus,
+.button--quaternary>.component-content [class*=" icon-"]:focus,
+.button>.component-content--quaternary:focus,
+.button>.component-content--quaternary a:focus,
+.button>.component-content--quaternary input:focus,
+.button>.component-content--quaternary [class*=" icon-"]:focus,
+.button>.component-content--quaternary>.component-content:focus,
+.button>.component-content--quaternary>.component-content a:focus,
+.button>.component-content--quaternary>.component-content input:focus,
+.button>.component-content--quaternary>.component-content [class*=" icon-"]:focus,
+a.button--quaternary:focus,
+a.button--quaternary a:focus,
+a.button--quaternary input:focus,
+a.button--quaternary [class*=" icon-"]:focus,
+a.button--quaternary>.component-content:focus,
+a.button--quaternary>.component-content a:focus,
+a.button--quaternary>.component-content input:focus,
+a.button--quaternary>.component-content [class*=" icon-"]:focus,
+a.button>.component-content--quaternary:focus,
+a.button>.component-content--quaternary a:focus,
+a.button>.component-content--quaternary input:focus,
+a.button>.component-content--quaternary [class*=" icon-"]:focus,
+a.button>.component-content--quaternary>.component-content:focus,
+a.button>.component-content--quaternary>.component-content a:focus,
+a.button>.component-content--quaternary>.component-content input:focus,
+a.button>.component-content--quaternary>.component-content [class*=" icon-"]:focus {
+  color: #3F3E45;
+}
+
+.button--quaternary:hover,
+.button--quaternary>.component-content:hover,
+.button>.component-content--quaternary:hover,
+.button>.component-content--quaternary>.component-content:hover,
+a.button--quaternary:hover,
+a.button--quaternary>.component-content:hover,
+a.button>.component-content--quaternary:hover,
+a.button>.component-content--quaternary>.component-content:hover {
+  border-color: #3F3E45;
+  background: #3F3E45;
+}
+
+.button--quaternary:hover,
+.button--quaternary:hover a,
+.button--quaternary:hover input,
+.button--quaternary:hover [class*=" icon-"],
+.button--quaternary>.component-content:hover,
+.button--quaternary>.component-content:hover a,
+.button--quaternary>.component-content:hover input,
+.button--quaternary>.component-content:hover [class*=" icon-"],
+.button>.component-content--quaternary:hover,
+.button>.component-content--quaternary:hover a,
+.button>.component-content--quaternary:hover input,
+.button>.component-content--quaternary:hover [class*=" icon-"],
+.button>.component-content--quaternary>.component-content:hover,
+.button>.component-content--quaternary>.component-content:hover a,
+.button>.component-content--quaternary>.component-content:hover input,
+.button>.component-content--quaternary>.component-content:hover [class*=" icon-"],
+a.button--quaternary:hover,
+a.button--quaternary:hover a,
+a.button--quaternary:hover input,
+a.button--quaternary:hover [class*=" icon-"],
+a.button--quaternary>.component-content:hover,
+a.button--quaternary>.component-content:hover a,
+a.button--quaternary>.component-content:hover input,
+a.button--quaternary>.component-content:hover [class*=" icon-"],
+a.button>.component-content--quaternary:hover,
+a.button>.component-content--quaternary:hover a,
+a.button>.component-content--quaternary:hover input,
+a.button>.component-content--quaternary:hover [class*=" icon-"],
+a.button>.component-content--quaternary>.component-content:hover,
+a.button>.component-content--quaternary>.component-content:hover a,
+a.button>.component-content--quaternary>.component-content:hover input,
+a.button>.component-content--quaternary>.component-content:hover [class*=" icon-"] {
+  color: #ffffff;
+}
+
+.button--quaternary:focus,
+.button--quaternary>.component-content:focus,
+.button>.component-content--quaternary:focus,
+.button>.component-content--quaternary>.component-content:focus,
+a.button--quaternary:focus,
+a.button--quaternary>.component-content:focus,
+a.button>.component-content--quaternary:focus,
+a.button>.component-content--quaternary>.component-content:focus {
+  border-color: #ffffff;
+  background: #000;
+}
+
+.button--quaternary:focus,
+.button--quaternary:focus a,
+.button--quaternary:focus input,
+.button--quaternary:focus [class*=" icon-"],
+.button--quaternary>.component-content:focus,
+.button--quaternary>.component-content:focus a,
+.button--quaternary>.component-content:focus input,
+.button--quaternary>.component-content:focus [class*=" icon-"],
+.button>.component-content--quaternary:focus,
+.button>.component-content--quaternary:focus a,
+.button>.component-content--quaternary:focus input,
+.button>.component-content--quaternary:focus [class*=" icon-"],
+.button>.component-content--quaternary>.component-content:focus,
+.button>.component-content--quaternary>.component-content:focus a,
+.button>.component-content--quaternary>.component-content:focus input,
+.button>.component-content--quaternary>.component-content:focus [class*=" icon-"],
+a.button--quaternary:focus,
+a.button--quaternary:focus a,
+a.button--quaternary:focus input,
+a.button--quaternary:focus [class*=" icon-"],
+a.button--quaternary>.component-content:focus,
+a.button--quaternary>.component-content:focus a,
+a.button--quaternary>.component-content:focus input,
+a.button--quaternary>.component-content:focus [class*=" icon-"],
+a.button>.component-content--quaternary:focus,
+a.button>.component-content--quaternary:focus a,
+a.button>.component-content--quaternary:focus input,
+a.button>.component-content--quaternary:focus [class*=" icon-"],
+a.button>.component-content--quaternary>.component-content:focus,
+a.button>.component-content--quaternary>.component-content:focus a,
+a.button>.component-content--quaternary>.component-content:focus input,
+a.button>.component-content--quaternary>.component-content:focus [class*=" icon-"] {
+  color: #ffffff;
+}
+
+.button--quaternary.button--disabled,
+.button--quaternary:disabled,
+.button--quaternary>.component-content.button--disabled,
+.button--quaternary>.component-content:disabled,
+.button>.component-content--quaternary.button--disabled,
+.button>.component-content--quaternary:disabled,
+.button>.component-content--quaternary>.component-content.button--disabled,
+.button>.component-content--quaternary>.component-content:disabled,
+a.button--quaternary.button--disabled,
+a.button--quaternary:disabled,
+a.button--quaternary>.component-content.button--disabled,
+a.button--quaternary>.component-content:disabled,
+a.button>.component-content--quaternary.button--disabled,
+a.button>.component-content--quaternary:disabled,
+a.button>.component-content--quaternary>.component-content.button--disabled,
+a.button>.component-content--quaternary>.component-content:disabled {
+  border-color: #D6D6D6;
+  background: transparent;
+}
+
+.button--quaternary.button--disabled,
+.button--quaternary.button--disabled a,
+.button--quaternary.button--disabled input,
+.button--quaternary.button--disabled [class*=" icon-"],
+.button--quaternary:disabled,
+.button--quaternary:disabled a,
+.button--quaternary:disabled input,
+.button--quaternary:disabled [class*=" icon-"],
+.button--quaternary>.component-content.button--disabled,
+.button--quaternary>.component-content.button--disabled a,
+.button--quaternary>.component-content.button--disabled input,
+.button--quaternary>.component-content.button--disabled [class*=" icon-"],
+.button--quaternary>.component-content:disabled,
+.button--quaternary>.component-content:disabled a,
+.button--quaternary>.component-content:disabled input,
+.button--quaternary>.component-content:disabled [class*=" icon-"],
+.button>.component-content--quaternary.button--disabled,
+.button>.component-content--quaternary.button--disabled a,
+.button>.component-content--quaternary.button--disabled input,
+.button>.component-content--quaternary.button--disabled [class*=" icon-"],
+.button>.component-content--quaternary:disabled,
+.button>.component-content--quaternary:disabled a,
+.button>.component-content--quaternary:disabled input,
+.button>.component-content--quaternary:disabled [class*=" icon-"],
+.button>.component-content--quaternary>.component-content.button--disabled,
+.button>.component-content--quaternary>.component-content.button--disabled a,
+.button>.component-content--quaternary>.component-content.button--disabled input,
+.button>.component-content--quaternary>.component-content.button--disabled [class*=" icon-"],
+.button>.component-content--quaternary>.component-content:disabled,
+.button>.component-content--quaternary>.component-content:disabled a,
+.button>.component-content--quaternary>.component-content:disabled input,
+.button>.component-content--quaternary>.component-content:disabled [class*=" icon-"],
+a.button--quaternary.button--disabled,
+a.button--quaternary.button--disabled a,
+a.button--quaternary.button--disabled input,
+a.button--quaternary.button--disabled [class*=" icon-"],
+a.button--quaternary:disabled,
+a.button--quaternary:disabled a,
+a.button--quaternary:disabled input,
+a.button--quaternary:disabled [class*=" icon-"],
+a.button--quaternary>.component-content.button--disabled,
+a.button--quaternary>.component-content.button--disabled a,
+a.button--quaternary>.component-content.button--disabled input,
+a.button--quaternary>.component-content.button--disabled [class*=" icon-"],
+a.button--quaternary>.component-content:disabled,
+a.button--quaternary>.component-content:disabled a,
+a.button--quaternary>.component-content:disabled input,
+a.button--quaternary>.component-content:disabled [class*=" icon-"],
+a.button>.component-content--quaternary.button--disabled,
+a.button>.component-content--quaternary.button--disabled a,
+a.button>.component-content--quaternary.button--disabled input,
+a.button>.component-content--quaternary.button--disabled [class*=" icon-"],
+a.button>.component-content--quaternary:disabled,
+a.button>.component-content--quaternary:disabled a,
+a.button>.component-content--quaternary:disabled input,
+a.button>.component-content--quaternary:disabled [class*=" icon-"],
+a.button>.component-content--quaternary>.component-content.button--disabled,
+a.button>.component-content--quaternary>.component-content.button--disabled a,
+a.button>.component-content--quaternary>.component-content.button--disabled input,
+a.button>.component-content--quaternary>.component-content.button--disabled [class*=" icon-"],
+a.button>.component-content--quaternary>.component-content:disabled,
+a.button>.component-content--quaternary>.component-content:disabled a,
+a.button>.component-content--quaternary>.component-content:disabled input,
+a.button>.component-content--quaternary>.component-content:disabled [class*=" icon-"] {
+  color: #b2b2b5;
+}
+
+.button--medium,
+.button--medium>.component-content,
+.button>.component-content--medium,
+.button>.component-content--medium>.component-content,
+a.button--medium,
+a.button--medium>.component-content,
+a.button>.component-content--medium,
+a.button>.component-content--medium>.component-content {
+  height: 40px;
+}
+
+.button--small,
+.button--small>.component-content,
+.button>.component-content--small,
+.button>.component-content--small>.component-content,
+a.button--small,
+a.button--small>.component-content,
+a.button>.component-content--small,
+a.button>.component-content--small>.component-content {
+  height: 28px;
+  font-size: 12px;
+  padding: 0 10px 0 10px;
+  width: auto;
+  min-width: auto;
+}
+
+html:not([dir='rtl']) .button--small i:first-child,
+.translated-ltr .button--small i:first-child,
+html:not([dir='rtl']) .button--small>.component-content i:first-child,
+.translated-ltr .button--small>.component-content i:first-child,
+html:not([dir='rtl']) .button>.component-content--small i:first-child,
+.translated-ltr .button>.component-content--small i:first-child,
+html:not([dir='rtl']) .button>.component-content--small>.component-content i:first-child,
+.translated-ltr .button>.component-content--small>.component-content i:first-child,
+html:not([dir='rtl']) a.button--small i:first-child,
+.translated-ltr a.button--small i:first-child,
+html:not([dir='rtl']) a.button--small>.component-content i:first-child,
+.translated-ltr a.button--small>.component-content i:first-child,
+html:not([dir='rtl']) a.button>.component-content--small i:first-child,
+.translated-ltr a.button>.component-content--small i:first-child,
+html:not([dir='rtl']) a.button>.component-content--small>.component-content i:first-child,
+.translated-ltr a.button>.component-content--small>.component-content i:first-child {
+  margin-right: 10px;
+}
+
+html[dir='rtl'] .button--small i:first-child,
+.translated-rtl .button--small i:first-child,
+html[dir='rtl'] .button--small>.component-content i:first-child,
+.translated-rtl .button--small>.component-content i:first-child,
+html[dir='rtl'] .button>.component-content--small i:first-child,
+.translated-rtl .button>.component-content--small i:first-child,
+html[dir='rtl'] .button>.component-content--small>.component-content i:first-child,
+.translated-rtl .button>.component-content--small>.component-content i:first-child,
+html[dir='rtl'] a.button--small i:first-child,
+.translated-rtl a.button--small i:first-child,
+html[dir='rtl'] a.button--small>.component-content i:first-child,
+.translated-rtl a.button--small>.component-content i:first-child,
+html[dir='rtl'] a.button>.component-content--small i:first-child,
+.translated-rtl a.button>.component-content--small i:first-child,
+html[dir='rtl'] a.button>.component-content--small>.component-content i:first-child,
+.translated-rtl a.button>.component-content--small>.component-content i:first-child {
+  margin-left: 10px;
+}
+
+html:not([dir='rtl']) .button--small i:last-child,
+.translated-ltr .button--small i:last-child,
+html:not([dir='rtl']) .button--small>.component-content i:last-child,
+.translated-ltr .button--small>.component-content i:last-child,
+html:not([dir='rtl']) .button>.component-content--small i:last-child,
+.translated-ltr .button>.component-content--small i:last-child,
+html:not([dir='rtl']) .button>.component-content--small>.component-content i:last-child,
+.translated-ltr .button>.component-content--small>.component-content i:last-child,
+html:not([dir='rtl']) a.button--small i:last-child,
+.translated-ltr a.button--small i:last-child,
+html:not([dir='rtl']) a.button--small>.component-content i:last-child,
+.translated-ltr a.button--small>.component-content i:last-child,
+html:not([dir='rtl']) a.button>.component-content--small i:last-child,
+.translated-ltr a.button>.component-content--small i:last-child,
+html:not([dir='rtl']) a.button>.component-content--small>.component-content i:last-child,
+.translated-ltr a.button>.component-content--small>.component-content i:last-child {
+  margin-left: 10px;
+}
+
+html[dir='rtl'] .button--small i:last-child,
+.translated-rtl .button--small i:last-child,
+html[dir='rtl'] .button--small>.component-content i:last-child,
+.translated-rtl .button--small>.component-content i:last-child,
+html[dir='rtl'] .button>.component-content--small i:last-child,
+.translated-rtl .button>.component-content--small i:last-child,
+html[dir='rtl'] .button>.component-content--small>.component-content i:last-child,
+.translated-rtl .button>.component-content--small>.component-content i:last-child,
+html[dir='rtl'] a.button--small i:last-child,
+.translated-rtl a.button--small i:last-child,
+html[dir='rtl'] a.button--small>.component-content i:last-child,
+.translated-rtl a.button--small>.component-content i:last-child,
+html[dir='rtl'] a.button>.component-content--small i:last-child,
+.translated-rtl a.button>.component-content--small i:last-child,
+html[dir='rtl'] a.button>.component-content--small>.component-content i:last-child,
+.translated-rtl a.button>.component-content--small>.component-content i:last-child {
+  margin-right: 10px;
+}
+
+.button--inverted,
+.button--inverted>.component-content,
+.button>.component-content--inverted,
+.button>.component-content--inverted>.component-content,
+a.button--inverted,
+a.button--inverted>.component-content,
+a.button>.component-content--inverted,
+a.button>.component-content--inverted>.component-content {
+  background-color: transparent;
+  border: 1px solid #3F3E45;
+  border-radius: 3px;
+}
+
+.button--inverted,
+.button--inverted a,
+.button--inverted input,
+.button--inverted [class*=" icon-"],
+.button--inverted>.component-content,
+.button--inverted>.component-content a,
+.button--inverted>.component-content input,
+.button--inverted>.component-content [class*=" icon-"],
+.button>.component-content--inverted,
+.button>.component-content--inverted a,
+.button>.component-content--inverted input,
+.button>.component-content--inverted [class*=" icon-"],
+.button>.component-content--inverted>.component-content,
+.button>.component-content--inverted>.component-content a,
+.button>.component-content--inverted>.component-content input,
+.button>.component-content--inverted>.component-content [class*=" icon-"],
+a.button--inverted,
+a.button--inverted a,
+a.button--inverted input,
+a.button--inverted [class*=" icon-"],
+a.button--inverted>.component-content,
+a.button--inverted>.component-content a,
+a.button--inverted>.component-content input,
+a.button--inverted>.component-content [class*=" icon-"],
+a.button>.component-content--inverted,
+a.button>.component-content--inverted a,
+a.button>.component-content--inverted input,
+a.button>.component-content--inverted [class*=" icon-"],
+a.button>.component-content--inverted>.component-content,
+a.button>.component-content--inverted>.component-content a,
+a.button>.component-content--inverted>.component-content input,
+a.button>.component-content--inverted>.component-content [class*=" icon-"] {
+  color: #3F3E45;
+}
+
+.button--inverted:hover,
+.button--inverted a:hover,
+.button--inverted input:hover,
+.button--inverted [class*=" icon-"]:hover,
+.button--inverted>.component-content:hover,
+.button--inverted>.component-content a:hover,
+.button--inverted>.component-content input:hover,
+.button--inverted>.component-content [class*=" icon-"]:hover,
+.button>.component-content--inverted:hover,
+.button>.component-content--inverted a:hover,
+.button>.component-content--inverted input:hover,
+.button>.component-content--inverted [class*=" icon-"]:hover,
+.button>.component-content--inverted>.component-content:hover,
+.button>.component-content--inverted>.component-content a:hover,
+.button>.component-content--inverted>.component-content input:hover,
+.button>.component-content--inverted>.component-content [class*=" icon-"]:hover,
+a.button--inverted:hover,
+a.button--inverted a:hover,
+a.button--inverted input:hover,
+a.button--inverted [class*=" icon-"]:hover,
+a.button--inverted>.component-content:hover,
+a.button--inverted>.component-content a:hover,
+a.button--inverted>.component-content input:hover,
+a.button--inverted>.component-content [class*=" icon-"]:hover,
+a.button>.component-content--inverted:hover,
+a.button>.component-content--inverted a:hover,
+a.button>.component-content--inverted input:hover,
+a.button>.component-content--inverted [class*=" icon-"]:hover,
+a.button>.component-content--inverted>.component-content:hover,
+a.button>.component-content--inverted>.component-content a:hover,
+a.button>.component-content--inverted>.component-content input:hover,
+a.button>.component-content--inverted>.component-content [class*=" icon-"]:hover {
+  color: #3F3E45;
+}
+
+.button--inverted:hover,
+.button--inverted:focus,
+.button--inverted>.component-content:hover,
+.button--inverted>.component-content:focus,
+.button>.component-content--inverted:hover,
+.button>.component-content--inverted:focus,
+.button>.component-content--inverted>.component-content:hover,
+.button>.component-content--inverted>.component-content:focus,
+a.button--inverted:hover,
+a.button--inverted:focus,
+a.button--inverted>.component-content:hover,
+a.button--inverted>.component-content:focus,
+a.button>.component-content--inverted:hover,
+a.button>.component-content--inverted:focus,
+a.button>.component-content--inverted>.component-content:hover,
+a.button>.component-content--inverted>.component-content:focus {
+  border-color: #0091C7;
+  background: transparent;
+}
+
+.button--inverted:hover,
+.button--inverted:hover a,
+.button--inverted:hover input,
+.button--inverted:hover [class*=" icon-"],
+.button--inverted:focus,
+.button--inverted:focus a,
+.button--inverted:focus input,
+.button--inverted:focus [class*=" icon-"],
+.button--inverted>.component-content:hover,
+.button--inverted>.component-content:hover a,
+.button--inverted>.component-content:hover input,
+.button--inverted>.component-content:hover [class*=" icon-"],
+.button--inverted>.component-content:focus,
+.button--inverted>.component-content:focus a,
+.button--inverted>.component-content:focus input,
+.button--inverted>.component-content:focus [class*=" icon-"],
+.button>.component-content--inverted:hover,
+.button>.component-content--inverted:hover a,
+.button>.component-content--inverted:hover input,
+.button>.component-content--inverted:hover [class*=" icon-"],
+.button>.component-content--inverted:focus,
+.button>.component-content--inverted:focus a,
+.button>.component-content--inverted:focus input,
+.button>.component-content--inverted:focus [class*=" icon-"],
+.button>.component-content--inverted>.component-content:hover,
+.button>.component-content--inverted>.component-content:hover a,
+.button>.component-content--inverted>.component-content:hover input,
+.button>.component-content--inverted>.component-content:hover [class*=" icon-"],
+.button>.component-content--inverted>.component-content:focus,
+.button>.component-content--inverted>.component-content:focus a,
+.button>.component-content--inverted>.component-content:focus input,
+.button>.component-content--inverted>.component-content:focus [class*=" icon-"],
+a.button--inverted:hover,
+a.button--inverted:hover a,
+a.button--inverted:hover input,
+a.button--inverted:hover [class*=" icon-"],
+a.button--inverted:focus,
+a.button--inverted:focus a,
+a.button--inverted:focus input,
+a.button--inverted:focus [class*=" icon-"],
+a.button--inverted>.component-content:hover,
+a.button--inverted>.component-content:hover a,
+a.button--inverted>.component-content:hover input,
+a.button--inverted>.component-content:hover [class*=" icon-"],
+a.button--inverted>.component-content:focus,
+a.button--inverted>.component-content:focus a,
+a.button--inverted>.component-content:focus input,
+a.button--inverted>.component-content:focus [class*=" icon-"],
+a.button>.component-content--inverted:hover,
+a.button>.component-content--inverted:hover a,
+a.button>.component-content--inverted:hover input,
+a.button>.component-content--inverted:hover [class*=" icon-"],
+a.button>.component-content--inverted:focus,
+a.button>.component-content--inverted:focus a,
+a.button>.component-content--inverted:focus input,
+a.button>.component-content--inverted:focus [class*=" icon-"],
+a.button>.component-content--inverted>.component-content:hover,
+a.button>.component-content--inverted>.component-content:hover a,
+a.button>.component-content--inverted>.component-content:hover input,
+a.button>.component-content--inverted>.component-content:hover [class*=" icon-"],
+a.button>.component-content--inverted>.component-content:focus,
+a.button>.component-content--inverted>.component-content:focus a,
+a.button>.component-content--inverted>.component-content:focus input,
+a.button>.component-content--inverted>.component-content:focus [class*=" icon-"] {
+  color: #0091C7;
+}
+
+.button--inverted.button--disabled,
+.button--inverted:disabled,
+.button--inverted>.component-content.button--disabled,
+.button--inverted>.component-content:disabled,
+.button>.component-content--inverted.button--disabled,
+.button>.component-content--inverted:disabled,
+.button>.component-content--inverted>.component-content.button--disabled,
+.button>.component-content--inverted>.component-content:disabled,
+a.button--inverted.button--disabled,
+a.button--inverted:disabled,
+a.button--inverted>.component-content.button--disabled,
+a.button--inverted>.component-content:disabled,
+a.button>.component-content--inverted.button--disabled,
+a.button>.component-content--inverted:disabled,
+a.button>.component-content--inverted>.component-content.button--disabled,
+a.button>.component-content--inverted>.component-content:disabled {
+  border-color: #D6D6D6;
+  background: transparent;
+}
+
+.button--inverted.button--disabled,
+.button--inverted.button--disabled a,
+.button--inverted.button--disabled input,
+.button--inverted.button--disabled [class*=" icon-"],
+.button--inverted:disabled,
+.button--inverted:disabled a,
+.button--inverted:disabled input,
+.button--inverted:disabled [class*=" icon-"],
+.button--inverted>.component-content.button--disabled,
+.button--inverted>.component-content.button--disabled a,
+.button--inverted>.component-content.button--disabled input,
+.button--inverted>.component-content.button--disabled [class*=" icon-"],
+.button--inverted>.component-content:disabled,
+.button--inverted>.component-content:disabled a,
+.button--inverted>.component-content:disabled input,
+.button--inverted>.component-content:disabled [class*=" icon-"],
+.button>.component-content--inverted.button--disabled,
+.button>.component-content--inverted.button--disabled a,
+.button>.component-content--inverted.button--disabled input,
+.button>.component-content--inverted.button--disabled [class*=" icon-"],
+.button>.component-content--inverted:disabled,
+.button>.component-content--inverted:disabled a,
+.button>.component-content--inverted:disabled input,
+.button>.component-content--inverted:disabled [class*=" icon-"],
+.button>.component-content--inverted>.component-content.button--disabled,
+.button>.component-content--inverted>.component-content.button--disabled a,
+.button>.component-content--inverted>.component-content.button--disabled input,
+.button>.component-content--inverted>.component-content.button--disabled [class*=" icon-"],
+.button>.component-content--inverted>.component-content:disabled,
+.button>.component-content--inverted>.component-content:disabled a,
+.button>.component-content--inverted>.component-content:disabled input,
+.button>.component-content--inverted>.component-content:disabled [class*=" icon-"],
+a.button--inverted.button--disabled,
+a.button--inverted.button--disabled a,
+a.button--inverted.button--disabled input,
+a.button--inverted.button--disabled [class*=" icon-"],
+a.button--inverted:disabled,
+a.button--inverted:disabled a,
+a.button--inverted:disabled input,
+a.button--inverted:disabled [class*=" icon-"],
+a.button--inverted>.component-content.button--disabled,
+a.button--inverted>.component-content.button--disabled a,
+a.button--inverted>.component-content.button--disabled input,
+a.button--inverted>.component-content.button--disabled [class*=" icon-"],
+a.button--inverted>.component-content:disabled,
+a.button--inverted>.component-content:disabled a,
+a.button--inverted>.component-content:disabled input,
+a.button--inverted>.component-content:disabled [class*=" icon-"],
+a.button>.component-content--inverted.button--disabled,
+a.button>.component-content--inverted.button--disabled a,
+a.button>.component-content--inverted.button--disabled input,
+a.button>.component-content--inverted.button--disabled [class*=" icon-"],
+a.button>.component-content--inverted:disabled,
+a.button>.component-content--inverted:disabled a,
+a.button>.component-content--inverted:disabled input,
+a.button>.component-content--inverted:disabled [class*=" icon-"],
+a.button>.component-content--inverted>.component-content.button--disabled,
+a.button>.component-content--inverted>.component-content.button--disabled a,
+a.button>.component-content--inverted>.component-content.button--disabled input,
+a.button>.component-content--inverted>.component-content.button--disabled [class*=" icon-"],
+a.button>.component-content--inverted>.component-content:disabled,
+a.button>.component-content--inverted>.component-content:disabled a,
+a.button>.component-content--inverted>.component-content:disabled input,
+a.button>.component-content--inverted>.component-content:disabled [class*=" icon-"] {
+  color: #b2b2b5;
+}
+
+/***************************************************************************************************
+Extension Name: ex-layout 
+Extension Version:  
+File: Headings
+Owner:  
+***************************************************************************************************/
+h1,
+.title {
+  font-family: inherit;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+
+  h1,
+  .title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+h2,
+.sub-title {
+  font-family: inherit;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+
+  h2,
+  .sub-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+h3,
+.side-menu-text {
+  font-family: inherit;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+
+  h3,
+  .side-menu-text {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+h4,
+.small-title {
+  font-family: inherit;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+
+  h4,
+  .small-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+h5 {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  h5 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+h6,
+.card-text {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+
+  h6,
+  .card-text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+p,
+.paragraph {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.display-1 {
+  font-weight: 900;
+  font-size: 62px;
+  line-height: 62px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .display-1 {
+    font-size: 44px;
+    line-height: 44px;
+  }
+}
+
+.display-2 {
+  font-weight: 400;
+  font-size: 62px;
+  line-height: 62px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .display-2 {
+    font-size: 44px;
+    line-height: 44px;
+  }
+}
+
+.display-3 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .display-3 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.display-4 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@media screen and (max-device-width: 576px),
+screen and (max-width: 576px) {
+  .display-4 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.display-5 {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .display-5 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.display-6 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .display-6 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
+
+caption,
+.caption {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media screen and (max-device-width: 922px),
+screen and (max-width: 922px) {
+
+  caption,
+  .caption {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-device-width: 922px),
+screen and (max-width: 922px) {
+
+  caption,
+  .caption {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+label,
+.small-text {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+html[dir='rtl'] label,
+.translated-rtl label,
+html[dir='rtl'] .small-text,
+.translated-rtl .small-text {
+  letter-spacing: 0;
+}
+
+@media screen and (max-device-width: 922px),
+screen and (max-width: 922px) {
+
+  label,
+  .small-text {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+@media screen and (min-device-width: 1200px),
+screen and (min-width: 1200px) {
+
+  label,
+  .small-text {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.tags {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.tiny-text {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.title-block--white {
+  color: #fff;
+}
+
+.title-block--primary {
+  color: #0091C7;
+}
+
+.title-block--secondary {
+  color: #FAA317;
+}
+
+b,
+strong {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 900;
+}
+
+html[dir='rtl'] b,
+.translated-rtl b,
+html[dir='rtl'] strong,
+.translated-rtl strong {
+  font-family: "NotoKufiArabic", Arial, sans-serif;
+  font-weight: 900;
+}
+
+/***************************************************************************************************
+Extension Name: ex-layout 
+Extension Version:  
+File: Accessibility styles
+Owner:  
+***************************************************************************************************/
+.high-contrast iframe[title="recaptcha challenge"],
+.high-contrast .fancybox-video,
+.high-contrast .fancybox-iframe {
+  -webkit-filter: grayscale(1) invert(100%);
+  filter: grayscale(1) invert(100%);
+}
+
+.high-contrast,
+.high-contrast .high-contrast--forced {
+  -webkit-filter: grayscale(0) invert(100%);
+  filter: grayscale(0) invert(100%);
+}
+
+.high-contrast [style^="background-image:"],
+.high-contrast .high-contrast--forced [style^="background-image:"] {
+  -webkit-filter: grayscale(1) invert(1);
+  filter: grayscale(1) invert(1);
+}
+
+.high-contrast img,
+.high-contrast .high-contrast--forced img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.high-contrast #wrapper {
+  background-color: #fff;
+}
+
+.high-contrast--revert {
+  color: #fff;
+}
+
+.high-contrast--reset {
+  -webkit-filter: grayscale(0) !important;
+  filter: grayscale(0) !important;
+}
+
+body.zoom-in-x1 {
+  zoom: 1.1;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  body.zoom-in-x1 {
+    zoom: 0 !important;
+    -ms-transform: scale(1.1, 1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1, 1.1);
+    /* Safari, Opera */
+    transform: scale(1.1, 1.1);
+  }
+}
+
+@-moz-document url-prefix() {
+  body.zoom-in-x1 {
+    -moz-transform: scale(1.1, 1.1);
+  }
+}
+
+@-moz-document url-prefix() {
+
+  html:not([dir='rtl'])>body.zoom-in-x1,
+  .translated-ltr>body.zoom-in-x1 {
+    -moz-transform-origin: top left;
+  }
+
+  html[dir='rtl']>body.zoom-in-x1,
+  .translated-rtl>body.zoom-in-x1 {
+    -moz-transform-origin: top right;
+  }
+}
+
+body.zoom-in-x2 {
+  zoom: 1.2;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  body.zoom-in-x2 {
+    zoom: 0 !important;
+    -ms-transform: scale(1.2, 1.2);
+    /* IE 9 */
+    -webkit-transform: scale(1.2, 1.2);
+    /* Safari, Opera */
+    transform: scale(1.2, 1.2);
+  }
+}
+
+@-moz-document url-prefix() {
+  body.zoom-in-x2 {
+    -moz-transform: scale(1.2, 1.2);
+  }
+}
+
+@-moz-document url-prefix() {
+
+  html:not([dir='rtl'])>body.zoom-in-x2,
+  .translated-ltr>body.zoom-in-x2 {
+    -moz-transform-origin: top left;
+  }
+
+  html[dir='rtl']>body.zoom-in-x2,
+  .translated-rtl>body.zoom-in-x2 {
+    -moz-transform-origin: top right;
+  }
+}
+
+body.zoom-out-x1 {
+  zoom: 0.9;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  body.zoom-out-x1 {
+    zoom: 0 !important;
+    -ms-transform: scale(0.9, 0.9);
+    /* IE 9 */
+    -webkit-transform: scale(0.9, 0.9);
+    /* Safari, Opera */
+    transform: scale(0.9, 0.9);
+  }
+}
+
+@-moz-document url-prefix() {
+  body.zoom-out-x1 {
+    -moz-transform: scale(0.9, 0.9);
+  }
+}
+
+@-moz-document url-prefix() {
+
+  html:not([dir='rtl'])>body.zoom-out-x1,
+  .translated-ltr>body.zoom-out-x1 {
+    -moz-transform-origin: top center;
+  }
+
+  html[dir='rtl']>body.zoom-out-x1,
+  .translated-rtl>body.zoom-out-x1 {
+    -moz-transform-origin: top center;
+  }
+}
+
+body.zoom-out-x2 {
+  zoom: 0.8;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  body.zoom-out-x2 {
+    zoom: 0 !important;
+    -ms-transform: scale(0.8, 0.8);
+    /* IE 9 */
+    -webkit-transform: scale(0.8, 0.8);
+    /* Safari, Opera */
+    transform: scale(0.8, 0.8);
+  }
+}
+
+@-moz-document url-prefix() {
+  body.zoom-out-x2 {
+    -moz-transform: scale(0.8, 0.8);
+  }
+}
+
+@-moz-document url-prefix() {
+
+  html:not([dir='rtl'])>body.zoom-out-x2,
+  .translated-ltr>body.zoom-out-x2 {
+    -moz-transform-origin: top center;
+  }
+
+  html[dir='rtl']>body.zoom-out-x2,
+  .translated-rtl>body.zoom-out-x2 {
+    -moz-transform-origin: top center;
+  }
+}
+
+.on-page-editor .on-page-editor--reset-height {
+  height: auto !important;
+}
+
+/***************************************************************************************************
+Extension Name: ex-layout 
+Extension Version:  
+File: Utilities
+Owner:  
+***************************************************************************************************/
+.message-block--icon {
+  color: #ffffff;
+  min-width: 0;
+  border-radius: 50%;
+  background-clip: padding-box;
+  width: 48px;
+  height: 48px;
+  font-size: 25px;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .message-block--icon {
+    width: 45px;
+    height: 40px;
+  }
+}
+
+.message-block--error .message-block--icon {
+  background-color: #FF5F60;
+}
+
+.message-block--success .message-block--icon {
+  background-color: #86C083;
+}
+
+.alert {
+  padding: 10px;
+}
+
+.alert__indicator-icon {
+  font-size: 24px;
+}
+
+.alert-info {
+  background-color: #D6D6D6;
+}
+
+.alert-info i {
+  color: #AFAFAF;
+}
+
+.alert-success {
+  background-color: #86C083;
+}
+
+.alert-success i {
+  color: #87C084;
+}
+
+.alert-warning {
+  background-color: #FDE3B9;
+}
+
+.alert-warning i {
+  color: #FAA317;
+}
+
+.alert-error {
+  background-color: #FF5F60;
+}
+
+.alert-error i {
+  color: #FF6060;
+}
+
+.dialog-component {
+  max-width: 600px;
+  overflow: hidden;
+}
+
+html[dir='rtl'] .dialog-component,
+.translated-rtl .dialog-component {
+  direction: rtl;
+  text-align: right;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .dialog-component {
+    max-width: 100%;
+  }
+}
+
+.dialog-component__header {
+  max-height: 70px;
+  padding: 20px 30px;
+  border-bottom: 1px solid #D6D6D6;
+}
+
+.dialog-component__close {
+  color: #000;
+  position: absolute;
+  right: 33px;
+  top: 28px;
+  cursor: pointer;
+}
+
+html[dir='rtl'] .dialog-component__close,
+.translated-rtl .dialog-component__close {
+  right: auto;
+  left: 33px;
+}
+
+.dialog-component__close:hover {
+  color: #0091C7;
+}
+
+.dialog-component__message {
+  max-height: 530px;
+  overflow: auto;
+}
+
+.dialog-component__message p {
+  margin: 30px;
+}
+
+.dialog-component__message__image {
+  height: 260px;
+  background-size: cover;
+}
+
+.dialog-component__message__image img {
+  display: none;
+}
+
+.on-page-editor .dialog-component__message__image img {
+  display: block;
+}
+
+.dialog-component__message__image i {
+  color: #000;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  font-size: 28px;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  margin: auto;
+}
+
+.dialog-component__footer {
+  margin: 30px;
+  max-height: 100px;
+}
+
+.dialog-component__footer__button {
+  border: 1px solid #AFAFAF;
+  border-radius: 4px;
+  background: #0091C7;
+  color: #ffffff;
+}
+
+.goog-te-gadget {
+  height: 28px;
+  overflow: hidden;
+}
+
+.goog-te-gadget>div:first-child {
+  position: relative;
+  height: 100%;
+}
+
+.goog-te-gadget>div:first-child:before {
+  content: '';
+  display: block;
+  background-repeat: no-repeat;
+  background-image: url(../images/glogo.png);
+  background-size: contain;
+  width: 17px;
+  height: 17px;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  left: 8px;
+}
+
+.goog-te-gadget>div:first-child:after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%) rotate(45deg);
+  -ms-transform: translate(0, -50%) rotate(45deg);
+  transform: translate(0, -50%) rotate(45deg);
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  pointer-events: none;
+}
+
+.goog-te-gadget select.goog-te-combo {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #3F3E45;
+  margin: 0;
+  border-radius: 3px;
+  font-weight: 900;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 26px;
+  color: #3F3E45;
+  padding-left: 30px;
+  padding-right: 5px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.goog-te-gadget select.goog-te-combo::-ms-expand {
+  display: none;
+}
+
+.goog-te-gadget-simple {
+  padding: 10px 20px !important;
+  border-radius: 5px !important;
+}
+
+.goog-te-gadget-simple[style] {
+  border: 2px solid #3F3E45;
+}
+
+html[dir='rtl'] .goog-te-gadget-simple .goog-te-menu-value span:first-child,
+.translated-rtl .goog-te-gadget-simple .goog-te-menu-value span:first-child {
+  font-size: 0;
+}
+
+html[dir='rtl'] .goog-te-gadget-simple .goog-te-menu-value span:first-child:after,
+.translated-rtl .goog-te-gadget-simple .goog-te-menu-value span:first-child:after {
+  content: "تحديد اللغة";
+  font-size: 16px;
+}
+
+.call-to-action {
+  background: #0091C7;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #0091C7 0%, #45DDB4 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#0091C7), to(#45DDB4));
+  background: linear-gradient(to bottom, #0091C7 0%, #45DDB4 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0091C7, endColorstr=#45DDB4, GradientType=0);
+  /* IE6-9 */
+  color: #ffffff;
+}
+
+.call-to-action div.button {
+  background-color: #ffffff;
+  border: none;
+  height: 40px;
+}
+
+.call-to-action div.button:hover {
+  background-color: #3F3E45;
+  color: #ffffff;
+}
+
+.call-to-action__separator {
+  height: 50px;
+  border-left: 1px solid #fff;
+  opacity: 50%;
+}
+
+.call-to-action__text {
+  z-index: 1;
+}
+
+.call-to-action__bg-img {
+  left: 0;
+  top: 0;
+  background-size: cover;
+}
+
+.call-to-action__number {
+  z-index: 1;
+}
+
+.call-to-action__number a {
+  color: #ffffff;
+}
+
+.call-to-action__number img {
+  width: 30px;
+}
+
+.call-to-action__button-holder {
+  z-index: 1;
+}
+
+@media screen and (max-device-width: 767px),
+screen and (max-width: 767px) {
+  .call-to-action__button-holder {
+    width: 295px;
+  }
+}
+
+.call-to-action--alt {
+  background-color: #F5F5F7;
+  color: #3F3E45;
+}
+
+.call-to-action--alt .call-to-action__separator {
+  border-left-color: #AFAFAF;
+}
+
+.privacy-warning.permisive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 25px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  background-color: rgba(0, 145, 199, 0.95);
+  box-shadow: 0 0 5px 0 #000;
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+.privacy-warning.permisive a,
+.privacy-warning.permisive a:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.privacy-warning.permisive .close {
+  opacity: 1;
+  position: absolute;
+  height: 20px;
+  z-index: 10001;
+  right: 35px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.privacy-warning.permisive .submit a {
+  margin: 10px 30px;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  padding: 10px;
+}
+
+.privacy-warning.permisive .info {
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .privacy-warning.permisive {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+}
+
+/***************************************************************************************************
+Extension Name: ex-layout 
+Extension Version:  
+File: Colors
+Owner:  
+***************************************************************************************************/
+html,
+body,
+button,
+input,
+select,
+textarea {
+  color: #3F3E45;
+}
+
+a {
+  color: #0091C7;
+}
+
+a:hover {
+  color: #0091C7;
+}
+
+a:focus {
+  color: #0091C7;
+}
+
+a.disabled {
+  color: #b2b2b5;
+}
+
+label,
+.label {
+  color: #89888C;
+}

@@ -1,0 +1,46 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+$ex-data-grid-search-button-a-height: 50px !default;
+$ex-data-grid-search-button-a-border-radius: 2px !default;
+$ex-data-grid-search-button-a-border: solid 1px $grey-200 !default;
+$ex-data-grid-search-button-a-background-color: color-opacity($grey-400 , 0.5) !default;
+
+$ex-data-grid-search-box-input-padding: 5px 15px !default;
+$ex-data-grid-search-box-input-font-size: 16px !default;
+$ex-data-grid-search-box-input-font-weight: normal !default;
+$ex-data-grid-search-box-input-line-height: normal !default;
+$ex-data-grid-search-box-input-letter-spacing: normal !default;
+$ex-data-grid-search-box-input-color: $grey-600 !default;
+
+
+$ex-data-grid-search-button-a-cursor: pointer !default;
+$ex-data-grid-search-button-a-font-size: 26px !default;
+$ex-data-grid-search-button-a-padding: 10px 15px !default;
+
+$ex-data-grid-dropdown-select-padding: 10px 10px !default;
+
+$ex-data-grid-label-color: $black-color !default;
+$ex-data-grid-label-opacity: 0.56 !default;
+$ex-data-grid-label-font-size: 12px !default;
+$ex-data-grid-label-letter-spacing: 1.09px !default;
+
+$ex-data-grid-total-results-text-font-size: 16px !default;
+$ex-data-grid-total-results-text-font-size-line-height: 1.5 !default;
+$ex-data-grid-total-results-text-font-size-color: $grey-900 !default;
+$ex-data-grid-total-results-text-font-size-font-weight: normal !default;
+$ex-data-grid-total-results-text-font-size-letter-spacing: normal !default;
+
+$ex-data-grid-table-responsive-thead-th-font-size: 16px !default;
+$ex-data-grid-table-responsive-thead-th-color: $grey-900 !default;
+$ex-data-grid-table-responsive-thead-th-font-weight: 900 !default;
+$ex-data-grid-table-responsive-thead-th-line-height: 1.5 !default;
+$ex-data-grid-table-responsive-thead-th-letter-spacing: normal !default;
+$ex-data-grid-table-responsive-thead-th-border-top: none !default;
+$ex-data-grid-table-responsive-thead-th-border-bottom: 2px solid $grey-100 !default;
+
+$ex-data-grid-table-responsive-td-line-height: 1.5 !default;
+$ex-data-grid-table-responsive-td-font-size:16px !default;

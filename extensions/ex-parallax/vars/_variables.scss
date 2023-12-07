@@ -1,0 +1,30 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+
+
+
+$parallax-section-default-bg-color : $grey-100 !default;
+$parallax-section-min-height : 600px !default;
+$parallax-section-bg-effect-background-color:$primary-color !default;
+$parallax-section-before-background-color:$white-color !default;
+$parallax-section-before-height: 50px !default;
+$parallax-section-before-width : 1px !default;
+$parallax-section-before-circle-width : 10px !default;
+
+$parallax-tabs-inactive-slide-opactiy:0.5 !default;
+$parallax-tabs-inactive-slide-opactiy-ie:opacity=50 !default;
+$parallax-tabs-active-slide-opactiy:1 !default;
+$parallax-tabs-inactive-title-margin:0 auto !default;
+$parallax-section-overlay-bg-color : color-opacity($black-color , 0.5) !default;
+// no override 
+$parallax-section-white-bg-color : $white-color !default;
+
+$parallax-Links-numbers-separator-opacity: 0.5 !default;
+$parallax-Links-numbers-separator-height: 130px !default;
+$parallax-Links-numbers-separator-border: 1px solid $white-color !default;
+$parallax-Links-numbers-img-width: 60px !default;
+$parallax-Links-numbers-links-colors: $white-color !default; 
+$parallax-Links-numbers-links-hover-colors: $primary-color !default; 

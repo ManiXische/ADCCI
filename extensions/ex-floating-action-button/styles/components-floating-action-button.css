@@ -1,0 +1,111 @@
+/***************************************************************************************************
+Extension Name: ex-floating-action-button 
+Extension Version:  
+File: base file
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-floating-action-button 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-floating-action-button 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+.ex-floating-action-button {
+  top: -webkit-calc(50% - 25px);
+  top: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  background: #006195;
+  border-radius: 8px;
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+  z-index: 9;
+}
+
+html[lang*='en'] .ex-floating-action-button,
+html[class*='translated-ltr'] .ex-floating-action-button {
+  right: 5px;
+}
+
+html[lang*='ar'] .ex-floating-action-button,
+html[class*='translated-rtl'] .ex-floating-action-button {
+  left: 5px;
+}
+
+.ex-floating-action-button__elements-container {
+  height: 107%;
+  top: -3px;
+  background: #0081C6;
+}
+
+html[lang*='en'] .ex-floating-action-button__elements-container,
+html[class*='translated-ltr'] .ex-floating-action-button__elements-container {
+  border-top-left-radius: 29px;
+}
+
+html[lang*='ar'] .ex-floating-action-button__elements-container,
+html[class*='translated-rtl'] .ex-floating-action-button__elements-container {
+  border-top-right-radius: 29px;
+}
+
+.ex-floating-action-button__elements-container img {
+  width: 35px;
+  height: 35px;
+  margin: 12px 8px 8px 8px;
+}
+
+.ex-floating-action-button__elements-container__label {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 14px 0;
+  margin: 4px 0 0 0;
+}
+
+.ex-floating-action-button:hover {
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+}
+
+html[lang*='en'] .ex-floating-action-button:hover,
+html[class*='translated-ltr'] .ex-floating-action-button:hover {
+  width: 183px;
+}
+
+html[lang*='ar'] .ex-floating-action-button:hover,
+html[class*='translated-rtl'] .ex-floating-action-button:hover {
+  width: 183px;
+}
+
+.ex-floating-action-button:hover .ex-floating-action-button__elements-container {
+  background: #006195;
+}

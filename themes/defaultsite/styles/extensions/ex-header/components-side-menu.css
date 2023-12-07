@@ -1,0 +1,269 @@
+/***************************************************************************************************
+Extension Name: ex-header 
+File: All Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: All Shared Exports
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: Shared Mixins
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+File: Variables
+Owner:  
+***************************************************************************************************/
+/***************************************************************************************************
+Extension Name: ex-header 
+File: Overrides 
+Author: TAMM
+***************************************************************************************************/
+/***************************************************************************************************
+File: ADGE Default Palette
+Owner:  
+***************************************************************************************************/
+/* Primary */
+/* Secondary */
+/* Inverted */
+/* Teritary */
+/* highlight */
+/* Label */
+/* Links */
+/* Separators colors */
+/* Section title */
+/***************************************************************************************************
+Extension Name: ex-header 
+File: Variables
+Author: TAMM
+***************************************************************************************************/
+/***Sidebar style******/
+.sidemenu {
+  top: 0;
+  height: 100vh;
+  z-index: 999;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  box-shadow: 3px 3px 3px rgba(63, 62, 69, 0.2);
+  width: 375px;
+  background-color: #ffffff;
+}
+
+html[lang*='en'] .sidemenu,
+html[class*='translated-ltr'] .sidemenu {
+  left: -375px;
+}
+
+html[lang*='ar'] .sidemenu,
+html[class*='translated-rtl'] .sidemenu {
+  right: -375px;
+}
+
+html[lang*='en'] .sidemenu--active,
+html[class*='translated-ltr'] .sidemenu--active {
+  left: 0;
+}
+
+html[lang*='ar'] .sidemenu--active,
+html[class*='translated-rtl'] .sidemenu--active {
+  right: 0;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .sidemenu--active {
+    overflow: auto;
+  }
+}
+
+.sidemenu__header {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.sidemenu__dismiss-menu {
+  cursor: pointer;
+}
+
+.sidemenu ul {
+  padding: 0 30px;
+  color: #3F3E45;
+}
+
+.sidemenu ul li {
+  border-bottom: 1px solid #F5F5F7;
+}
+
+html[lang*='ar'] .sidemenu ul li,
+html[class*='translated-rtl'] .sidemenu ul li {
+  text-align: right;
+}
+
+.sidemenu ul li a {
+  text-decoration: none;
+  color: #3F3E45;
+  font-size: 16px;
+  display: block;
+  padding: 16px 0;
+  line-height: 23px;
+}
+
+.sidemenu ul li a:hover {
+  color: #FF8D00;
+}
+
+.sidemenu ul li.submenu .navigation-title {
+  position: relative;
+}
+
+.expanding-navigation.sidemenu ul li + .expanded-menu {
+  margin-top: 0px;
+}
+
+.sidemenu ul li.submenu > .navigation-title > a {
+  pointer-events: none;
+}
+
+.sidemenu ul li.submenu ul {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  border: none;
+  height: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+html[lang*='en'] .sidemenu ul li.submenu ul,
+html[class*='translated-ltr'] .sidemenu ul li.submenu ul {
+  margin-left: 10px;
+}
+
+html[lang*='ar'] .sidemenu ul li.submenu ul,
+html[class*='translated-rtl'] .sidemenu ul li.submenu ul {
+  margin-right: 10px;
+}
+
+.sidemenu ul li.submenu ul li {
+  border-bottom: none;
+}
+
+.sidemenu ul li.submenu ul li a {
+  padding: 10px 0;
+}
+
+.sidemenu ul li.submenu ul .expanded {
+  height: 100px;
+}
+
+.sidemenu ul li.submenu .expand-icon {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  top: 11px;
+  border-radius: 50%;
+  padding-right: 5px;
+  text-align: right;
+  top: 0;
+  right: 0;
+}
+
+html[lang*='ar'] .sidemenu ul li.submenu .expand-icon,
+html[class*='translated-rtl'] .sidemenu ul li.submenu .expand-icon {
+  right: initial;
+  left: 0;
+  text-align: left;
+  padding-right: initial;
+  padding-left: 5px;
+}
+
+.sidemenu ul li.submenu .expand-icon::before {
+  display: inline-block;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 10px;
+  height: 10px;
+}
+
+html[lang*='ar'] .sidemenu ul li.submenu .expand-icon::before,
+html[class*='translated-rtl'] .sidemenu ul li.submenu .expand-icon::before {
+  left: 5px;
+  right: auto;
+}
+
+.sidemenu ul li.submenu .expand-icon.toggled::before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.sidemenu__sidebar-header {
+  padding: 20px;
+  margin-bottom: 40px;
+  color: #3F3E45;
+  background-color: transparent;
+}
+
+.sidemenu .lang-switch--small-screen {
+  border-radius: 2px;
+  background-color: #FF8D00;
+}
+
+.sidemenu .lang-switch--small-screen .language-switcher a {
+  display: block;
+  padding: 6px 18px;
+  color: #ffffff;
+}
+
+html[lang*='en'] .sidemenu .lang-switch--small-screen .language-switcher a,
+html[class*='translated-ltr'] .sidemenu .lang-switch--small-screen .language-switcher a {
+  font-family: "NotoKufiArabic", Arial, sans-serif;
+}
+
+html[lang*='ar'] .sidemenu .lang-switch--small-screen .language-switcher a,
+html[class*='translated-rtl'] .sidemenu .lang-switch--small-screen .language-switcher a {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.sidemenu .lang-switch--small-screen .language-switcher a:hover {
+  color: #3F3E45;
+  text-decoration: none;
+}
+
+.sidemenu .settings-icon {
+  width: auto;
+  padding-left: 20px;
+}
+
+html[lang*='ar'] .sidemenu .settings-icon,
+html[class*='translated-rtl'] .sidemenu .settings-icon {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(63, 62, 69, 0.7);
+  z-index: 998;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.overlay--active {
+  display: block;
+  opacity: 1;
+  top: 0;
+}

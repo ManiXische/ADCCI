@@ -1,0 +1,20 @@
+/***************************************************************************************************
+Extension Name: #{$ProjectName} 
+Extension Version: #{$ProjectVersion} 
+File: base file
+Owner: #{$ProjectOwner} 
+***************************************************************************************************/
+
+// vars
+@import '../vars/_all';
+
+
+// Internal components
+@import "components/Fonts-Components.scss";
+@import "components/Reset-Defaults.scss";
+@import "components/Helpers-Component.scss";
+@import "components/Button-Component.scss";
+@import "components/Heading-Component.scss";
+@import "components/Accessibility-Components.scss";
+@import "components/Utilities-Components.scss";
+@import "components/Colors-Components.scss";
